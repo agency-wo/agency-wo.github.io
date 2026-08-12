@@ -1,0 +1,18 @@
+/* MINARANK — self-hosted variable fonts (Fontshare, ITF Free Font License).
+   Subset to Latin + brand glyphs (↗ — ·), woff2 only. Both preloaded in <head>. */
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("/assets/fonts/clash-display-var.woff2") format("woff2");
+  font-weight: 200 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/assets/fonts/satoshi-var.woff2") format("woff2");
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}

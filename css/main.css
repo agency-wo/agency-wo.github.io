@@ -1,0 +1,247 @@
+/* ==========================================================================
+   MINARANK — homepage
+   One idea everywhere: ascension = ranking. Coral appears only at payoff.
+   Motion is transform/opacity only; every animated element's FINAL state is
+   the CSS default, so no-JS, crawlers and reduced-motion see the finished
+   page. Start-states live inside the no-preference media block, guarded
+   by .js on <html>.
+   ========================================================================== */
+
+/* -- shell ---------------------------------------------------------------- */
+.wrap { max-width: var(--page-max); margin-inline: auto; padding-inline: var(--margin); }
+.grid { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--gutter); }
+
+.skip { position: absolute; left: var(--margin); top: -100%; z-index: 10;
+  background: var(--ink); color: var(--paper); padding: var(--s-3) var(--s-4);
+  text-decoration: none; }
+.skip:focus { top: 0; }
+
+.eyebrow { font-size: var(--fs-label); letter-spacing: var(--track-label);
+  text-transform: uppercase; color: var(--slate); font-weight: 500;
+  margin-bottom: var(--s-4); }
+h2 { font-family: var(--font-display); font-weight: 500; font-size: var(--fs-h2);
+  line-height: 1.05; letter-spacing: 0.005em; text-wrap: balance; }
+.sec-head { margin-bottom: var(--s-9); }
+section { padding-block: calc(var(--section-pad) / 2); }
+
+/* -- header ---------------------------------------------------------------- */
+.site-head { position: sticky; top: 0; z-index: 5; background: var(--paper); }
+.site-head::after { content: ""; display: block; height: 1px; background: var(--bone);
+  opacity: 0; transition: opacity 0.3s ease; }
+.site-head.scrolled::after { opacity: 1; }
+.head-row { display: flex; align-items: center; justify-content: space-between;
+  height: 72px; }
+.head-logo { display: block; padding: 4px; margin: -4px; /* 44px touch target */ }
+.head-nav { display: flex; align-items: center; gap: var(--s-6); }
+.head-nav a { font-size: var(--fs-small); font-weight: 500; text-decoration: none;
+  padding-block: 12px; margin-block: -12px; /* 44px touch target, no visual change */ }
+.head-nav a:hover { color: var(--slate); }
+.head-cta { text-decoration: underline !important;
+  text-underline-offset: 4px; text-decoration-thickness: 2px; }
+.head-cta:hover { color: var(--ink) !important; text-decoration-color: var(--coral) !important; }
+
+/* -- hero ------------------------------------------------------------------ */
+.hero { min-height: 88vh; display: flex; align-items: center;
+  padding-block: var(--s-8) var(--s-9); }
+.hero .wrap { width: 100%; }
+
+.hero-title { font-family: var(--font-display); font-weight: 500;
+  font-size: var(--fs-hero); line-height: 1; letter-spacing: 0.01em;
+  padding-top: 0.22em; /* headroom for the climb — reserves layout, zero CLS */ }
+.wm { display: inline-block; white-space: nowrap; }
+.wm .l { display: inline-block;
+  transform: translateY(calc(var(--i) * -1 * var(--rise-step))); }
+.wm .k { color: var(--coral); margin-left: -0.012em; /* optical pair fix, mirrors the logo */ }
+
+/* stepped baseline: geometry derived from the wordmark glyph advances
+   (580-unit viewBox, baselines 160 → 136.5). Width is em-tied to the h1
+   so the steps track the letters at every viewport. */
+.baseline { width: 4.825em; max-width: 100%; height: auto;
+  font-size: var(--fs-hero); margin-top: -0.32em; display: block; }
+
+.hero-grid { margin-top: var(--s-8); row-gap: var(--s-7); align-items: start; }
+.hero-dek { grid-column: 1 / 7; font-size: var(--fs-lead); color: var(--slate);
+  max-width: 34ch; text-wrap: pretty; }
+.hero-dek strong { color: var(--ink); font-weight: 700; }
+
+.acro { grid-column: 10 / 13; margin: 0; }
+.acro-row { display: flex; align-items: baseline; gap: var(--s-4);
+  border-top: 1px solid var(--bone); padding-block: var(--s-2); }
+.acro-row:last-child { border-bottom: 1px solid var(--bone); }
+.acro dt { font-family: var(--font-display); font-weight: 600;
+  font-size: 1.25rem; min-width: 1.2em; }
+.acro dd { margin: 0; font-size: var(--fs-label); letter-spacing: var(--track-label);
+  text-transform: uppercase; color: var(--slate); font-weight: 500; }
+
+.hero-cta-row { grid-column: 1 / 7; }
+.cta { font-family: var(--font-display); font-weight: 500; font-size: var(--fs-h3);
+  text-decoration: none; border-bottom: 2px solid var(--ink); padding-bottom: 2px;
+  position: relative; }
+.cta::after, .mail::after { content: ""; position: absolute; inset: -10px -6px;
+  /* invisible 44px+ touch extension */ }
+.cta:hover { border-bottom-color: var(--coral); }
+.arrow { color: var(--coral); }
+.cta:hover .arrow, .mail:hover .arrow { color: var(--amber); }
+
+/* -- services: the staircase ---------------------------------------------- */
+.svc-grid { row-gap: var(--s-9); }
+.svc { position: relative; padding-top: var(--s-5);
+  grid-column: var(--col) / span 7; }
+.svc::before { content: ""; position: absolute; top: 0; left: 0; right: 0;
+  height: 1px; background: var(--bone); }
+.svc h3 { font-family: var(--font-display); font-weight: 500;
+  font-size: var(--fs-h2); line-height: 1.05; position: relative; z-index: 1; }
+.svc-num { position: absolute; top: -0.18em; left: 0; z-index: 0;
+  font-family: var(--font-display); font-weight: 600; font-size: var(--fs-num);
+  line-height: 1; color: rgba(27, 31, 59, 0.1); letter-spacing: -0.02em;
+  transform: translateX(-0.25em); }
+.svc-desc { color: var(--slate); max-width: 46ch; margin-top: var(--s-4);
+  text-wrap: pretty; }
+.payoff { margin-top: var(--s-5); font-weight: 700; display: flex;
+  align-items: center; gap: var(--s-3); }
+.tick { width: 12px; height: 12px; flex: none; }
+
+/* -- method: the literal ascent -------------------------------------------- */
+.method .sec-head { margin-bottom: calc(var(--s-9) + 84px); }
+.steps { list-style: none; margin: 0; padding: 0; display: grid;
+  grid-template-columns: repeat(4, 1fr); column-gap: var(--gutter); }
+.steps li { border-top: 1px solid var(--bone); padding-top: var(--s-5); }
+.step-num { font-family: var(--font-display); font-weight: 600;
+  font-size: 0.8125rem; letter-spacing: 0.06em; color: var(--slate);
+  margin-bottom: var(--s-3); }
+.steps h3 { font-family: var(--font-display); font-weight: 500;
+  font-size: var(--fs-h3); margin-bottom: var(--s-3); }
+.steps p:not(.step-num) { color: var(--slate); font-size: var(--fs-small); }
+.step-rank .step-num { color: var(--coral); }
+.steps li.step-rank { border-top-color: var(--coral); } /* must outrank .steps li */
+
+/* -- proof ------------------------------------------------------------------ */
+.proof-left { grid-column: 1 / 6; }
+.proof-note { color: var(--slate); margin-top: var(--s-5); max-width: 44ch;
+  text-wrap: pretty; }
+.claims { grid-column: 7 / 13; list-style: none; margin: 0; padding: 0;
+  align-self: end; }
+.claims li { border-top: 1px solid var(--bone); padding-block: var(--s-5);
+  color: var(--slate); max-width: 52ch; }
+.claims li:last-child { border-bottom: 1px solid var(--bone); }
+.claim-exhibit { color: var(--ink) !important; display: flex;
+  align-items: baseline; gap: var(--s-3); }
+.claim-exhibit .tick { position: relative; top: 1px; }
+
+/* -- the single ink band: CTA + footer -------------------------------------- */
+.band { background: var(--ink); color: var(--paper);
+  padding-block: var(--section-pad) var(--s-7); margin-top: calc(var(--section-pad) / 2); }
+.band-cta h2 { font-size: clamp(3rem, 7vw, 6.5rem); /* the climax speaks louder */ }
+.band-note { color: var(--bone); margin-top: var(--s-5); max-width: 46ch;
+  text-wrap: pretty; }
+.mail { display: inline-block; margin-top: var(--s-7);
+  font-family: var(--font-display); font-weight: 500; font-size: var(--fs-h3);
+  color: var(--coral); text-decoration: none; border-bottom: 2px solid transparent;
+  position: relative; }
+.mail:hover { border-bottom-color: var(--coral); }
+
+.site-foot { margin-top: var(--s-9); border-top: 1px solid var(--ink-2);
+  padding-top: var(--s-6); }
+.foot-row { display: flex; align-items: center; justify-content: space-between;
+  gap: var(--s-6); flex-wrap: wrap; }
+.foot-logo { height: 22px; width: auto; }
+.foot-nav { display: flex; gap: var(--s-6); }
+.foot-nav a { color: var(--paper); font-size: var(--fs-small); font-weight: 500;
+  text-decoration: none; padding-block: 12px; margin-block: -12px; }
+.foot-nav a:hover { color: var(--bone); }
+.foot-meta { display: flex; justify-content: space-between; gap: var(--s-6);
+  flex-wrap: wrap; margin-top: var(--s-7); }
+.foot-acro { color: var(--bone); font-size: var(--fs-label);
+  letter-spacing: var(--track-label); text-transform: uppercase; }
+.foot-copy { color: var(--bone); font-size: var(--fs-label);
+  letter-spacing: var(--track-label); text-transform: uppercase; }
+
+/* ==========================================================================
+   MOTION — start-states + animations. Everything in here is opt-in:
+   requires .js on <html> AND no reduced-motion preference. The defaults
+   above are the finished page.
+   ========================================================================== */
+@media (prefers-reduced-motion: no-preference) {
+
+  /* hero letters: rise from +0.5em below their climbed position */
+  .js .wm .l { opacity: 0; }
+  .play .wm .l {
+    animation: rise 650ms var(--ease-rise) both;
+    animation-delay: calc(90ms + var(--i) * 70ms);
+  }
+  @keyframes rise {
+    from { opacity: 0;
+      transform: translateY(calc(var(--i) * -1 * var(--rise-step) + 0.5em)); }
+    to   { opacity: 1;
+      transform: translateY(calc(var(--i) * -1 * var(--rise-step))); }
+  }
+
+  /* the payoff beat: k lands ink at ~1230ms, turns coral at 1350ms */
+  .play .wm .k {
+    animation: rise 650ms var(--ease-rise) both,
+               kshift 400ms ease both;
+    animation-delay: calc(90ms + var(--i) * 70ms), 1350ms;
+  }
+  @keyframes kshift {
+    from { color: var(--ink); }
+    to   { color: var(--coral); }
+  }
+
+  /* stepped baseline draws left→right while the letters land */
+  .js .baseline path { stroke-dasharray: 1; stroke-dashoffset: 1; }
+  .play .baseline path { animation: draw 900ms var(--ease-reveal) 200ms both; }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+
+  /* supporting content: nobody waits on the k */
+  .js .hero-rest { opacity: 0; transform: translateY(12px); }
+  .play .hero-rest { animation: rest-in 400ms var(--ease-reveal) 900ms both; }
+  @keyframes rest-in { to { opacity: 1; transform: none; } }
+
+  /* scroll reveals: rise 16px + fade, staggered by --row; rules draw scaleX */
+  .js [data-reveal] { opacity: 0; transform: translateY(16px);
+    transition: opacity 0.5s var(--ease-reveal), transform 0.5s var(--ease-reveal);
+    transition-delay: calc(var(--row, 0) * 80ms); }
+  .js [data-reveal].in-view { opacity: 1; transform: none; }
+
+  .js .svc::before { transform: scaleX(0); transform-origin: left;
+    transition: transform 0.6s var(--ease-reveal) calc(var(--row, 0) * 80ms); }
+  .js .svc.in-view::before { transform: scaleX(1); }
+  .js .svc .payoff { opacity: 0; transition: opacity 0.3s ease
+    calc(var(--row, 0) * 80ms + 600ms); }
+  .js .svc.in-view .payoff { opacity: 1; }
+}
+
+/* method steps: the upward stagger is layout, not motion — desktop only */
+@media (min-width: 1000px) {
+  .steps li { transform: translateY(calc(var(--i) * -28px)); }
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+@media (max-width: 999px) {
+  .hero-dek { grid-column: 1 / 8; }
+  .acro { grid-column: 9 / 13; }
+  .hero-cta-row { grid-column: 1 / 8; }
+  .proof-left { grid-column: 1 / 13; margin-bottom: var(--s-7); }
+  .claims { grid-column: 1 / 13; }
+  .steps { grid-template-columns: repeat(2, 1fr); row-gap: var(--s-7); }
+  .method .sec-head { margin-bottom: var(--s-9); }
+}
+
+@media (max-width: 719px) {
+  .hero { min-height: 72vh; }
+  .hero-grid { row-gap: var(--s-6); }
+  .hero-dek, .hero-cta-row { grid-column: 1 / 13; }
+  .acro { grid-column: 1 / 13; max-width: 320px; }
+  /* staircase collapses: plain stacked rows, hairlines carry the rhythm */
+  .svc { grid-column: 1 / 13 !important; }
+  .svc-num { position: static; transform: none; font-size: 1rem;
+    color: var(--slate); letter-spacing: 0.06em; margin-bottom: var(--s-2); }
+  .svc h3 { font-size: var(--fs-h3); } /* restore hierarchy once staircase is gone */
+  .svc-grid { row-gap: var(--s-7); }
+  .steps { grid-template-columns: 1fr; }
+  .head-nav { gap: var(--s-4); }
+  .head-nav a:not(.head-cta) { display: none; } /* mobile: logo + Start a project */
+  .foot-row, .foot-meta { flex-direction: column; align-items: flex-start; }
+}
