@@ -120,10 +120,10 @@ systems_body = f'''
           </ul>
 
           <h2>The one we built, and which parts are yours</h2>
-          <p>A watch shop in Durres runs on a system we built. It has 50 screens, holds
-            398 stock items grouped into 20 cards, keeps money in 4 separate lines, and
-            works with no signal in a back room with thick walls. It costs nothing per
-            month to run.</p>
+          <p><a href="/work/iglisi-watch/">Iglisi Watch</a> in Durres runs on a system
+            we built. It has 50 screens, holds 398 stock items grouped into 20 cards,
+            keeps money in 4 separate lines, and works with no signal in a back room
+            with thick walls. It costs nothing per month to run.</p>
           <p><strong>The parts every business needs</strong> are the ones above: jobs,
             stock, customers, money, staff, reports. That skeleton is the same whether
             you repair watches, fit kitchens or run a bakery.</p>

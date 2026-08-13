@@ -72,6 +72,26 @@ def whatsapp():
             f'</a>' + chr(10))
 
 
+def client_mark(c):
+    """One business in the homepage logo row.
+
+    The mark is a CSS mask painted with currentColor, so four logos drawn by
+    four different people in four different colours arrive as one set, and the
+    whole row goes red on hover with no second asset.
+
+    The URL and the box live in `css/main.css` as `.mark-<slug>`, not in a
+    style attribute, because the CSP is `style-src 'self'` with no
+    unsafe-inline. Gate check 18 fails the build if that rule is missing.
+
+    The name is real text inside the link, hidden visually. With CSS off the
+    row degrades to a plain list of business names, which is what it is.
+    """
+    return (f'          <li><a class="mark-link" href="https://{c["site"]}" '
+            f'target="_blank" rel="noopener">'
+            f'<span class="mark mark-{c["slug"]}" aria-hidden="true"></span>'
+            f'<span class="sr-only">{c["name"]}</span></a></li>')
+
+
 def head(page):
     url = SITE + page["url"]
     return f'''<!DOCTYPE html>

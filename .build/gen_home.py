@@ -1,10 +1,12 @@
 """Emit index.html. The homepage was hand-authored and drifted; now it comes
 from the same shell as every other page.
 
-Structure follows what respected small-studio sites actually converge on:
-one sentence saying what we do, then the work taking roughly half the page,
-then who we are, then something dated that proves a person is here, then one
-call to action. No values section, no process diagram, no stats bar.
+Six blocks: what we do, the proof, the five doors, the businesses, the refusal,
+one CTA. No values section, no process diagram, no stats bar.
+
+Every service row leads with what the reader ends up with and puts the method
+on the line underneath, which is also the line that makes the row read as a
+door rather than a paragraph. Rule 35.
 
 Run from the project root:  python .build/gen_home.py
 """
@@ -24,25 +26,26 @@ NL = chr(10)
 # maintain is worth more than any amount of copy.
 AVAILABILITY = "Taking on new work from September."
 
+# (href, name, what you end up with, what the page holds)
+# The third field is also the Service description in the JSON-LD, so it has to
+# stand on its own away from the page.
 SERVICES = [
     ("/seo/", "SEO and local search",
-     "Getting found on Google, both in the results and on the map. On-page work "
-     "on the site itself, off-page work everywhere else, and your Google Business "
-     "Profile set up properly."),
+     "Be the shop that comes up when somebody nearby searches for what you sell.",
+     "On the results page and on the map. On-page, off-page, and your Google "
+     "Business Profile"),
     ("/geo/", "AI search",
-     "When somebody asks ChatGPT or Gemini for a shop like yours, it names two or "
-     "three. This is the work of being one of them."),
+     "Ask ChatGPT for a shop like yours and it names two or three. Be one of them.",
+     "How a machine decides which businesses to name"),
     ("/web-design/", "Websites",
-     "Fast, clear sites that a machine can read and a customer can buy from. "
-     "Usually in English, Italian and Albanian."),
+     "A site your customer can buy from, in the language they searched in.",
+     "English, Italian and Albanian, and quick on a phone"),
     ("/meta-ads/", "Meta ads",
-     "Facebook and Instagram, for customers this week while the slower work "
-     "builds up. A flat fee, never a percentage of your budget."),
+     "Customers this week, while the slow work builds underneath.",
+     "A flat fee, never a cut of what you spend"),
     ("/systems/", "Custom software",
-     "The system your business runs on, built to fit. Jobs, stock, customers, staff "
-     "hours, suppliers, and what each part of the business earned this month. If "
-     "that lives in a notebook, a spreadsheet and somebody's head today, this is "
-     "what replaces all 3."),
+     "On the 1st of the month, the numbers are already there.",
+     "Stock, jobs, customers, payroll, and what each part of the business earned"),
 ]
 
 
@@ -64,7 +67,7 @@ def jsonld():
                 {"@type": "Offer", "url": S + href,
                  "itemOffered": {"@type": "Service", "name": name, "description": desc,
                                  "provider": {"@id": S + "/#org"}}}
-                for href, name, desc in SERVICES],
+                for href, name, desc, _ in SERVICES],
         },
     }
     site = {"@type": "WebSite", "@id": S + "/#website", "url": S + "/",
@@ -88,45 +91,21 @@ def render():
         for i, ch in enumerate("minarank"))
     rules = "".join(f'<i style="--r:{i}" data-n="{i + 1}"></i>' for i in range(10))
 
-    def svc_row(href, name, desc, wide):
-        """The fifth row is the only one-column row on the list. The copy fix and
-        the pattern break are the same edit."""
-        cls = ' class="svc-wide"' if wide else ""
-        spec = ""
-        if wide:
-            d = shell.DOT
-            spec = (NL + '                <p class="spec">Running today in a Durres '
-                    f'watch shop: 50 screens {d} 398 items grouped into 20 cards {d} '
-                    f'money kept in 4 separate lines {d} works with no signal in the '
-                    f'back room {d} no monthly fee</p>')
-        return (f'            <li{cls}>' + NL +
-                f'              <h3><a href="{href}">{name}</a></h3>' + NL +
-                f'              <div><p>{desc}</p>{spec}</div>' + NL +
+    def svc_row(href, name, outcome, door):
+        """The whole row is the link surface. Nothing in the nav points at these
+        five pages, so the list has to look like five doors."""
+        return (f'            <li>' + NL +
+                f'              <a href="{href}">' + NL +
+                f'                <h3>{name}</h3>' + NL +
+                f'                <div>' + NL +
+                f'                  <p class="svc-say">{outcome}</p>' + NL +
+                f'                  <p class="svc-go">{door} {shell.ARROW}</p>' + NL +
+                f'                </div>' + NL +
+                f'              </a>' + NL +
                 '            </li>')
 
-    svc = NL.join(svc_row(h, n, d, h == "/systems/") for h, n, d in SERVICES)
-
-    # Two clients on the homepage. A short uneven list reads as editing;
-    # four of visibly graded quality reads as scraping the barrel.
-    shown = [CLIENTS[0], CLIENTS[1]]
-    cases = NL.join(f'''            <li>
-              <div class="case-grid">
-                <div>
-                  <h3 class="case-name"><a href="/work/{c["slug"]}/">{c["name"]}</a></h3>
-                  <p class="case-where">{c["where"]}. {c["trade"]}.</p>
-                  <p class="case-said">{c["home_line"]}</p>
-                </div>
-                <figure class="plate"><img src="/assets/plates/{c["plate"][0]}"
-                  width="{c["plate"][1]}" height="{c["plate"][2]}" alt="{c["plate"][3]}"
-                  loading="lazy" decoding="async"></figure>
-              </div>
-            </li>''' for c in shown)
-
-    sheet = NL.join(f'''          <li><figure>
-            <img src="/assets/plates/{c["plate"][0]}" width="{c["plate"][1]}"
-              height="{c["plate"][2]}" alt="{c["plate"][3]}" loading="lazy" decoding="async">
-            <figcaption>{c["name"]}</figcaption>
-          </figure></li>''' for c in CLIENTS)
+    svc = NL.join(svc_row(*s) for s in SERVICES)
+    marks = NL.join(shell.client_mark(c) for c in CLIENTS)
     ARROW = shell.ARROW
 
     body = f'''
@@ -157,10 +136,11 @@ def render():
       <div class="wrap">
         <div class="proof-body">
           <p class="eyebrow">Proof</p>
-          <h2 id="proof-h">One shop, three months, from zero.</h2>
-          <p class="proof-lead">Iglisi Watch is a family watch shop in Durres.
-            Before we built watch.al they had no website, so the starting number
-            here is genuinely zero. This is their Google Search Console.</p>
+          <h2 id="proof-h">Nobody paid for these 560 visits.</h2>
+          <p class="proof-lead">Iglisi Watch sells and repairs watches on Rruga
+            Aleksander Goga in Durres. In May there was no website at all, so the
+            starting number really is zero. Every visit on this chart came from
+            Google, not from an ad budget.</p>
 
           <ul class="stat-strip">
             <li><span class="stat-n">560</span><span class="stat-l">visits from Google</span></li>
@@ -178,10 +158,10 @@ def render():
               blue line is how many people clicked.</figcaption>
           </figure>
 
-          <p>Average position 8.4 is the bottom of the first page, and a 1% click
-            rate is about what the bottom of the first page pays. We have left both
-            numbers in the picture. They are also the reason there is still work to
-            do here.</p>
+          <p>Ads stop the day you stop paying for them. This does not: the shop was
+            put on the map once, and Google has been sending people ever since.</p>
+          <p>Position 8.4 is the bottom of the first page. Moving it up is the next
+            job, and it is where the rest of the growth is.</p>
           <div class="check">
             <p>Ask ChatGPT where to get a watch repaired in Durres, and see whose
               name comes back.</p>
@@ -194,26 +174,29 @@ def render():
 
     <section class="services" id="services" aria-labelledby="services-h">
       <div class="wrap">
-        <div class="sec-head" data-reveal>
+        <div class="sec-head">
           <p class="eyebrow">What we do</p>
           <h2 id="services-h">Five ways to be easier to find.</h2>
         </div>
-        <ul class="svc-list" data-reveal>
+        <ul class="svc-list">
 {svc}
         </ul>
       </div>
     </section>
 
     <section class="ask" aria-labelledby="ask-h">
-      <div class="wrap ask-row">
-        <div>
-          <h2 class="ask-q" id="ask-h">Want to see proof of our work?</h2>
-          <p class="ask-note">All 4 sites are live, and 3 of them are shops in Durres
-            up against much bigger names.</p>
+      <div class="wrap">
+        <div class="ask-row">
+          <div>
+            <h2 class="ask-q" id="ask-h">Want to see proof of our work?</h2>
+            <p class="ask-note">These are the businesses we build for. Every one of
+              these sites is live, so the logos go to them and the button goes to what
+              we built.</p>
+          </div>
           <p class="ask-go"><a class="btn" href="/work/">See the work {ARROW}</a></p>
         </div>
-        <ul class="sheet">
-{sheet}
+        <ul class="marks">
+{marks}
         </ul>
       </div>
     </section>

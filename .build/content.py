@@ -7,6 +7,9 @@ than an attitude. A shop owner has to follow every line.
 The four pages deliberately do not share a skeleton. Each fills its middle
 with something different: SEO has cost and timeline, GEO has a refusal list,
 web design has a claim you can check on the page, Meta ads has pricing.
+
+Every page names a client and links to their page. A service page that cannot
+point at a business it did this for is a brochure.
 """
 
 SERVICES = [
@@ -16,7 +19,7 @@ SERVICES = [
         "nav": "SEO",
         "schema_name": "Search engine optimisation and local search",
         "title": "Getting found on Google",
-        "h1": "Getting found on Google, and on the map.",
+        "h1": "Get found by people who don't know your name yet.",
         "standfirst": "Two different jobs. The map listing decides who gets phoned "
                       "today. The results underneath decide who gets found next year.",
         "description": "SEO and local search for small businesses: your Google "
@@ -69,17 +72,17 @@ SERVICES = [
             ]),
         ],
         "ledger": [
-            ("The Google Business Profile", "Categories, services, hours, photos, the "
-             "description, the questions people ask, and posts. In all three "
-             "languages."),
-            ("The site itself", "What each page is for, whether it answers the "
-             "question, how it's built, how fast it loads. Often the quickest win is "
-             "merging two pages that are competing with each other."),
-            ("Everywhere else", "The directories your competitors are in and you "
-             "aren't, your name and address written identically everywhere, and a "
-             "sensible way of asking for reviews."),
-            ("Reporting you can read", "What moved, what didn't, what we're doing "
-             "next. If a month goes badly you'll hear it from us first.", True),
+            ("The listing that gets you phoned", "Categories, services, hours, "
+             "photos, the description, the questions people ask, and posts. In all "
+             "three languages."),
+            ("Pages that answer what was typed", "What each page is for, whether it "
+             "answers the question, how it's built, how fast it loads. Often the "
+             "quickest win is merging two pages competing with each other."),
+            ("Proof that happens off your site", "The directories your competitors "
+             "are in and you aren't, your name and address written identically "
+             "everywhere, and a sensible way of asking for reviews."),
+            ("You hear the bad months first", "What moved, what didn't, what we're "
+             "doing next. A month where nothing improved gets reported as one.", True),
         ],
         "faq": [
             ("Do I need this if I already have customers?",
@@ -103,7 +106,7 @@ SERVICES = [
                       "phrases: 6 to 12 months. We'd rather lose the job than agree to "
                       "a date we don't believe."),
         "related": [("/geo/", "AI search"), ("/web-design/", "Websites")],
-        "payoff": "Found by people who don't know your name yet.",
+        "payoff": "Phoned by somebody 400 metres away.",
         "tail": "Find out what's holding the site back.",
     },
 
@@ -113,7 +116,7 @@ SERVICES = [
         "nav": "AI search",
         "schema_name": "Generative engine optimisation",
         "title": "Getting named when someone asks an AI",
-        "h1": "Getting named when somebody asks an AI.",
+        "h1": "Be one of the 3 businesses the answer names.",
         "standfirst": "Ask ChatGPT for a watch repair shop in Durres and it names two "
                       "or three. Being one of them isn't luck.",
         "description": "AI search, sometimes called GEO. Becoming one of the few "
@@ -160,10 +163,9 @@ SERVICES = [
             ]),
         ],
         "ledger": [
-            ("Read your site the way an assistant does", "We strip it down and read "
-             "what's left. It's usually an uncomfortable document, because the answer "
-             "to why nobody names you is often that the part which matters is a "
-             "picture."),
+            ("Find out why nobody names you", "We strip the site down and read what "
+             "an assistant would read. It's usually an uncomfortable document, because "
+             "the part that matters most often turns out to be a picture."),
             ("Make the business easy to identify", "One version of who you are, "
              "written the same way everywhere, backed up by places you don't control. "
              "What other sites say about you counts for more than what yours says."),
@@ -215,9 +217,9 @@ SERVICES = [
         "nav": "Websites",
         "schema_name": "Web design and development",
         "title": "Websites built to be found and to sell",
-        "h1": "You're standing inside the example.",
-        "standfirst": "Every claim on this page can be checked on this page, in about "
-                      "30 seconds, without taking our word for anything.",
+        "h1": "A site that loads before your customer gives up.",
+        "standfirst": "You're standing inside the example. Every claim on this page "
+                      "can be checked on this page, in about 30 seconds.",
         "description": "Websites for small businesses: fast, clear, readable by "
                        "machines, usually in three languages. Built without frameworks "
                        "or third-party scripts.",
@@ -238,18 +240,33 @@ SERVICES = [
                 "readable by the systems on <a href=\"/geo/\">the AI search page</a>. "
                 "You don't have to choose between them.</p>",
             ]),
+            ("Two shops in Durres run their own websites", [
+                "<p>Victoria Boutique brings Greek labels into Albania and changes "
+                "stock with the season. She photographs a piece, adds it from her "
+                "phone, and it's on the site in about a minute, in Albanian, Italian "
+                "and English. Nothing to license and no monthly fee. "
+                "<a href=\"/work/victoria-boutique/\">How that was built</a>.</p>",
+                "<p>Intimo Bruna sells the way her customers already buy, which is by "
+                "message. Each product page hands off to WhatsApp with the item "
+                "already named, so the owner isn't asking which one you mean. "
+                "<a href=\"/work/intimo-bruna/\">How that was built</a>.</p>",
+                "<p>Both sites are live and in 3 languages. Go and use them: that's "
+                "the whole argument.</p>",
+            ]),
         ],
         "ledger": [
-            ("Work out what the page is arguing", "What it claims, in what order, and "
-             "where somebody is meant to act. Then the layout serves that."),
+            ("Decide what the page has to make happen", "What it claims, in what "
+             "order, and where somebody is meant to act. Then the layout serves "
+             "that."),
             ("Make it fast on a bad phone", "Fonts served from your own domain, no "
              "framework, images sized properly, nothing blocking the first paint. Not "
              "for a score out of 100, but so somebody on mobile data on the bus "
              "actually sees it."),
-            ("Three languages if you need them", "Albanian, Italian and English, each a "
-             "real page rather than a machine translation bolted on, with the tags that "
-             "tell Google which is which."),
-            ("Hand you the keys", "Where it suits the project you get a panel and "
+            ("Your customer reads it in their own language", "Albanian, Italian and "
+             "English, each a real page rather than a machine translation bolted on, "
+             "with the tags that tell Google which is which."),
+            ("You publish it, without ringing anybody", "Where it suits the project "
+             "you get a panel and "
              "publish from your phone, with nothing to license and nobody to ring when a "
              "price changes. See <a href=\"/systems/\">custom software</a>.", True),
         ],
@@ -260,9 +277,10 @@ SERVICES = [
              "crawl after. Rankings usually get lost because somebody quietly cut half "
              "the words to make the design tidier."),
             ("Do we get to edit it ourselves?",
-             "Where it suits the project, yes. Three of our clients publish to their "
-             "own sites from a phone with no monthly fee. Victoria Boutique adds a new "
-             "piece in about a minute."),
+             "Where it suits the project, yes. Victoria Boutique and Intimo Bruna both "
+             "run their own sites from a phone. If a project doesn't need a panel we "
+             "don't build one, because an unused panel is just another thing to keep "
+             "working."),
             ("Is a site without a framework limiting?",
              "For a shop, a catalogue, or a business that mainly needs to be found, "
              "it's faster, cheaper to host and has almost nothing to hack. When a "
@@ -284,49 +302,59 @@ SERVICES = [
         "nav": "Meta ads",
         "schema_name": "Meta advertising",
         "title": "Facebook and Instagram ads",
-        "h1": "Ads buy attention. They don't buy patience.",
-        "standfirst": "Customers this week, while the slower work builds underneath. "
-                      "The two need each other.",
+        "h1": "Get customers this week.",
+        "standfirst": "Paid social is the fastest way to find out whether your offer "
+                      "works, and the fastest way to spend money proving it doesn't.",
         "description": "Facebook and Instagram advertising for small businesses. A flat "
                        "monthly fee, never a percentage of what you spend.",
         "og_desc": "A flat fee, never a percentage of your budget.",
-        "lead": "Paid social is the fastest way to find out whether your offer works. "
-                "It's also the fastest way to spend money proving it doesn't. The "
-                "difference is almost never the targeting: it's the offer, the picture, "
-                "and what happens in the 90 seconds after somebody taps.",
+        "lead": "Which of those two you get is almost never down to the targeting. "
+                "It's the offer, the picture, and what happens in the 90 seconds after "
+                "somebody taps. Ads carry the weeks while the slower work underneath "
+                "builds up, and the two need each other.",
         "sections": [
             ("How we charge, and why it matters to you", [
-                "<p>Most agencies take a percentage of what you spend. Think about what "
-                "that pays them to recommend. Every conversation about your budget is "
-                "also a conversation about their invoice, and they're sitting on the "
-                "other side of it.</p>",
-                "<p>We charge a flat monthly fee for the work. So if the honest advice "
-                "is to spend less this month, or to stop and fix the offer first, that "
-                "advice costs us nothing to give. You should expect to hear it at some "
-                "point.</p>",
+                "<p>Most agencies take a percentage of what you spend, so every "
+                "conversation about your budget is also a conversation about their "
+                "invoice.</p>",
+                "<p>We charge a flat monthly fee for the work. That means advice to "
+                "spend less this month, or to stop and fix the offer first, costs us "
+                "nothing to give. Expect to hear it at some point.</p>",
             ]),
             ("WhatsApp and cash on delivery", [
                 "<p>Most advice written in English assumes a checkout and a card. "
                 "Around here the sale usually happens in a WhatsApp conversation and "
                 "the money changes hands at the door.</p>",
-                "<p>That changes the ad, not just the page it lands on. The picture has "
-                "to make somebody comfortable starting a conversation, the message has "
-                "to arrive with the product already named so the owner isn't asking "
-                "which one, and the measurement has to cope with a sale that finishes "
-                "offline. We build for that because it's what our clients actually "
-                "do.</p>",
+                "<p>That changes the ad, not just the page it lands on. The picture "
+                "has to make somebody comfortable starting a conversation, and the "
+                "message has to arrive with the product already named so the owner "
+                "isn't asking which one.</p>",
+                "<p>Then the measurement has to cope with a sale that finishes "
+                "offline, which most setups quietly don't. We build for that because "
+                "it's what our clients actually do.</p>",
+            ]),
+            ("The trade where the fastest reply wins", [
+                "<p>Heating and cooling is a trade where the job goes to whoever "
+                "answers first. A homeowner with no heating rings 3 numbers and books "
+                "the one that picks up, and nobody in that situation is comparing "
+                "photographs of boilers.</p>",
+                "<p>So the site we built for Pro Affy argues about response time "
+                "instead of craftsmanship, states its guarantee on the page rather "
+                "than in the terms, and keeps the path from enquiry to booked visit "
+                "short enough to survive somebody cold and annoyed. "
+                "<a href=\"/work/pro-affy/\">How that was built</a>.</p>",
             ]),
         ],
         "ledger": [
-            ("The offer, before the budget", "Most underperforming accounts get called "
-             "a targeting problem and are actually an offer problem. We look at what "
-             "you're selling and to whom before anything is spent."),
+            ("We look at the offer before you spend", "Most underperforming accounts "
+             "get called a targeting problem and are actually an offer problem. We "
+             "look at what you're selling and to whom before anything is spent."),
             ("Pictures that earn the stop", "Several angles, tested honestly, killed "
              "quickly. The creative is the targeting now: the platform finds the "
              "audience if the ad shows it who to look for."),
-            ("Where the tap lands", "An ad is only as good as the 90 seconds after it. "
-             "Most accounts we inherit are paying for taps to a page that was never "
-             "built to receive them."),
+            ("What happens after somebody taps", "An ad is only as good as the 90 "
+             "seconds after it. Most accounts we inherit are paying for taps to a page "
+             "that was never built to receive them."),
             ("Numbers you can act on", "What's trackable, what isn't, and what the "
              "platform is quietly taking credit for. Then one number you can make a "
              "decision with.", True),
@@ -350,7 +378,7 @@ SERVICES = [
                       "A flat monthly fee for the work. Never a percentage of what you "
                       "spend, because that pays an agency to tell you to spend more."),
         "related": [("/web-design/", "Websites"), ("/seo/", "SEO and local search")],
-        "payoff": "Customers this week.",
+        "payoff": "A budget set by your margins, not our invoice.",
         "tail": "Tell us what you sell and who should be buying it.",
     },
 ]

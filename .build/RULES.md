@@ -94,5 +94,23 @@ everything checkable is checked by `verify.py`, which fails the build.
 34. Build order: `gen_pages`, `gen_docs`, `gen_cases`, `gen_home`,
     `gen_headers`, `gen_sitemap` last, then `verify`.
 
+## Writing, again
+
+35. **Lead with what the reader ends up with.** Then one sentence of
+    mechanism, never three. The sibling of rule 13: never explain an absence,
+    and never explain a mechanism at length. Outcomes are stated as
+    deliverables and states of the world, never as ranking promises, so this
+    never overrides rules 21 to 23. The gate measures the symptom: a
+    paragraph over 55 words warns, over 85 fails. The median here is 19.
+36. **No verbless heading.** "One shop, three months, from zero." is the
+    shape a machine writes, and the founder spotted it in a screenshot. An
+    `h1` or `h2` with 2 commas and no verb fails; 1 comma and no verb warns.
+37. **Every service page names a client and links to their page.** A service
+    page that cannot point at a business it did this for is a brochure.
+38. **Client marks are one ink colour, from the client's own material.** Two
+    of the four have no logo file at all, so their wordmark is outlined from
+    the webfont their own site serves, at their own weight and tracking.
+    Reproduction, not invention. `assets/logo/build_client_marks.py`.
+
 **Never loosen a check to make it pass.** A gate that can be talked into
 passing is decoration.

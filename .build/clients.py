@@ -12,6 +12,7 @@ the verb does the work. Nothing here is padded and nothing is invented.
 CLIENTS = [
     {
         "slug": "iglisi-watch",
+        "mark": ("iglisi-watch.png", 195, 22),
         "name": "Iglisi Watch",
         "where": "Durres, Albania",
         "trade": "Watch sales and repair",
@@ -21,10 +22,8 @@ CLIENTS = [
                        "after launch Google sent it 560 visitors, and AI assistants "
                        "name the shop when you ask where to repair a watch.",
         "og_desc": "From no website to first for watch repair in Durres.",
-        "summary": "First for watch repair in Durres, in three languages, and the "
-                   "shop AI assistants name when you ask.",
-        "home_line": "No website at all in May. By August, 560 visits a quarter from "
-                     "Google and first place for watch repair in the town.",
+        "summary": "Search for watch repair in Durres and this shop comes back "
+                   "first, in all 3 languages, and ChatGPT names it too.",
         "started": [
             "A family watch shop on Rruga Aleksander Goga. They repair watches, and "
             "they sell them. Both halves of that were invisible outside Durres, "
@@ -45,7 +44,7 @@ CLIENTS = [
             "offered on the website about a minute later, without anyone touching a "
             "computer.",
         ],
-        "changed": "Three months, from zero",
+        "changed": "Where the shop shows up now",
         "changed_blocks": [
             "Search for watch repair in Durres in English, Albanian or Italian and "
             "they come back first, usually holding the top three results outright.",
@@ -68,6 +67,7 @@ CLIENTS = [
     },
     {
         "slug": "victoria-boutique",
+        "mark": ("victoria-boutique.svg", 346, 22),
         "name": "Victoria Boutique",
         "where": "Durres, Albania",
         "trade": "Fashion",
@@ -79,8 +79,6 @@ CLIENTS = [
         "og_desc": "The owner runs the site herself, from her phone.",
         "summary": "The owner puts a new piece on the site from her phone, and pays "
                    "nobody a monthly fee to do it.",
-        "home_line": "Greek labels, an Albanian shop, three languages, and an owner who "
-                     "updates it herself between customers.",
         "started": [
             "A boutique that brings Greek labels into Albania, changing stock with "
             "the season. The clothes were the whole business and none of them were "
@@ -113,6 +111,7 @@ CLIENTS = [
     },
     {
         "slug": "intimo-bruna",
+        "mark": ("intimo-bruna.svg", 200, 26),
         "name": "Intimo Bruna",
         "where": "Durres, Albania",
         "trade": "Lingerie",
@@ -124,8 +123,6 @@ CLIENTS = [
         "og_desc": "Built for how this market actually buys: WhatsApp.",
         "summary": "Every order starts as a WhatsApp message, because that's how "
                    "this market actually buys.",
-        "home_line": "Built around WhatsApp, because that is where these customers "
-                     "already are.",
         "started": [
             "A lingerie shop where customers already messaged rather than filled in "
             "forms. Sending them to a checkout would have been designing for a habit "
@@ -157,6 +154,7 @@ CLIENTS = [
     },
     {
         "slug": "pro-affy",
+        "mark": ("pro-affy.png", 44, 44),
         "name": "Pro Affy",
         "where": "English language",
         "trade": "Heating and cooling",
@@ -168,7 +166,6 @@ CLIENTS = [
         "og_desc": "Heating firms lose jobs to whoever answers first.",
         "summary": "Heating firms don't lose jobs because the website is ugly. They "
                    "lose them because somebody else answered first.",
-        "home_line": "A site built to win the callback rather than the compliment.",
         "started": [
             "Heating and cooling is a trade where the job usually goes to whoever "
             "replies first. A homeowner with no heating calls three numbers and "

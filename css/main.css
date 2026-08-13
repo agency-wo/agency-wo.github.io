@@ -103,17 +103,30 @@ h3, .faq-q, .ledger h3, .cta, .mail {
 
 /* -- services -------------------------------------------------------------- */
 .services { padding-block: var(--pad-major); border-top: 1px solid var(--rule); }
+/* Five doors, not five paragraphs. Nothing in the nav points at the service
+   pages, so the whole row is the link surface and the arrow says so. */
 .svc-list { list-style: none; margin: 0; padding: 0; }
-.svc-list li { border-top: 1px solid var(--rule); padding-block: var(--s-6);
-  display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
-  gap: var(--s-6); align-items: baseline; }
-.svc-list li:first-child { border-top: 0; padding-top: 0; }
+.svc-list li { border-top: 1px solid var(--rule); }
+.svc-list li:first-child { border-top: 0; }
+/* 5/7, not 7/5: the name is short and the sell is the long half */
+.svc-list a { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: var(--s-6); align-items: baseline; padding-block: var(--s-6);
+  text-decoration: none; color: inherit; }
+.svc-list li:first-child a { padding-top: 0; }
 .svc-list h3 { font-family: var(--font-display); font-weight: 500;
   font-size: clamp(1.75rem, 2.8vw, 2.5rem); letter-spacing: var(--track-display);
-  line-height: 1.1; }
-.svc-list h3 a { text-decoration: none; }
-.svc-list h3 a:hover { color: var(--red); }
+  line-height: 1.1; transition: color 160ms ease; }
 .svc-list p { text-wrap: pretty; }
+.svc-say { font-size: var(--fs-lead); line-height: 1.35; }
+.svc-go { margin-top: var(--s-4); font-size: var(--fs-small); color: var(--slate);
+  max-width: 46ch; }
+/* inline, not flex: a wrapped door line must not strand the arrow to the right */
+.svc-go .arrow { width: 0.75em; height: 0.75em; vertical-align: -0.05em;
+  margin-left: 0.4em; transition: transform 160ms var(--ease-rise); }
+.svc-list a:hover h3 { color: var(--red); }
+.svc-list a:hover .svc-go { color: var(--ink); }
+.svc-list a:hover .svc-go .arrow { transform: translate(2px, -2px); }
+.svc-list a:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
 
 /* -- proof ----------------------------------------------------------------- */
 .proof { padding-block: var(--pad-major); border-top: 1px solid var(--rule); }
@@ -322,7 +335,7 @@ h3, .faq-q, .ledger h3, .cta, .mail {
 }
 
 @media (max-width: 719px) {
-  .svc-list li { grid-template-columns: 1fr; gap: var(--s-4); }
+  .svc-list a { grid-template-columns: 1fr; gap: var(--s-4); }
   .stat-strip { grid-template-columns: 1fr; gap: var(--s-5); }
   .hero-wrap::before, .hero-wrap::after { display: none; }
   .serp i { right: 0; }
@@ -359,21 +372,14 @@ h3, .faq-q, .ledger h3, .cta, .mail {
 /* the chart is the widest element on the page */
 .gsc { max-width: none; }
 
-/* one wide service row: the copy fix and the pattern break are one edit */
-.svc-list li.svc-wide { grid-template-columns: 1fr; gap: var(--s-4); }
-.svc-list li.svc-wide p { max-width: 74ch; }
-.spec { margin-top: var(--s-5); padding-top: var(--s-3);
-  border-top: 1px solid var(--rule); font-size: var(--fs-small);
-  color: var(--slate); font-variant-numeric: tabular-nums; max-width: 74ch; }
-
-/* the ask: one question, one button, a contact sheet that earns the click */
+/* the ask: one question, one button, then the businesses themselves */
 .ask { border-top: 2px solid var(--ink); padding-block: var(--pad-major); }
 .ask-row { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
   column-gap: var(--s-9); align-items: end; }
 .ask-q { font-size: clamp(2.25rem, 4.6vw, 3.75rem); line-height: 1.04;
   max-width: 15ch; }
-.ask-note { margin-top: var(--s-5); max-width: 42ch; text-wrap: pretty; }
-.ask-go { margin-top: var(--s-7); }
+.ask-note { margin-top: var(--s-5); max-width: 46ch; text-wrap: pretty; }
+.ask-go { justify-self: end; }
 
 .btn { display: inline-flex; align-items: center; gap: 0.55em;
   font-weight: 700; font-size: var(--fs-lead); line-height: 1;
@@ -383,13 +389,42 @@ h3, .faq-q, .ledger h3, .cta, .mail {
 .btn:hover { background: var(--ink); color: var(--paper); }
 .btn .arrow { color: currentColor; }
 
-.sheet { list-style: none; margin: 0; padding: 0; display: grid;
-  grid-template-columns: repeat(2, 1fr); gap: var(--s-5) var(--s-4); }
-.sheet figure { margin: 0; }
-.sheet img { width: 100%; height: auto; aspect-ratio: 4 / 3;
-  object-fit: cover; object-position: 0 0; border: 1px solid var(--rule); }
-.sheet figcaption { margin-top: var(--s-2); font-size: var(--fs-label);
-  color: var(--slate); }
+/* -- the client marks ------------------------------------------------------
+   Four logos drawn by four different people, in four different colours, two of
+   them reproduced from the client's own webfont because no logo file exists.
+   Each is a mask painted with currentColor, so the row arrives as one set and
+   goes red together on hover. Widths are the true aspect at the chosen height,
+   so nothing is squashed; the heights differ because cap heights differ.
+   Adding a business is one file and one rule. Gate check 18 enforces it.     */
+.marks { list-style: none; margin: var(--s-9) 0 0; padding: var(--s-8) 0 0;
+  border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap;
+  align-items: center; justify-content: space-between; gap: var(--s-6) var(--s-7); }
+.mark-link { display: block; color: var(--ink); text-decoration: none;
+  transition: color 160ms ease; }
+.mark-link:hover { color: var(--red); }
+.mark-link:focus-visible { outline: 2px solid var(--ink); outline-offset: 10px; }
+.mark { display: block; background: currentColor;
+  width: calc(var(--mw) * var(--mscale, 1));
+  height: calc(var(--mh) * var(--mscale, 1));
+  -webkit-mask: var(--mark) no-repeat center / contain;
+          mask: var(--mark) no-repeat center / contain; }
+
+.mark-iglisi-watch      { --mark: url("/assets/logo/clients/iglisi-watch.png");
+                          --mw: 195px; --mh: 22px; }
+.mark-victoria-boutique { --mark: url("/assets/logo/clients/victoria-boutique.svg");
+                          --mw: 346px; --mh: 22px; }
+.mark-intimo-bruna      { --mark: url("/assets/logo/clients/intimo-bruna.svg");
+                          --mw: 200px; --mh: 26px; }
+.mark-pro-affy          { --mark: url("/assets/logo/clients/pro-affy.png");
+                          --mw: 44px;  --mh: 44px; }
+
+/* With no mask support an unmasked .mark is a solid ink block, which is worse
+   than nothing. Drop it and let the name that is already in the link show. */
+@supports not ((-webkit-mask-image: url("/favicon.svg")) or (mask-image: url("/favicon.svg"))) {
+  .mark { display: none; }
+  .mark-link .sr-only { position: static; width: auto; height: auto; margin: 0;
+    overflow: visible; clip: auto; font-weight: 700; }
+}
 
 /* who: asymmetric, column 7 deliberately empty, the refusal is the headline */
 .who-say { grid-column: 1 / 7; }
@@ -431,11 +466,17 @@ h3, .faq-q, .ledger h3, .cta, .mail {
 }
 
 @media (max-width: 999px) {
-  .ask-row { grid-template-columns: 1fr; row-gap: var(--s-8); }
+  .ask-row { grid-template-columns: 1fr; row-gap: var(--s-7); }
+  .ask-go { justify-self: start; }
   .who-say, .who-more { grid-column: 1 / 13; }
   .who-more { margin-top: var(--s-6); }
+  .marks { --mscale: 0.86; margin-top: var(--s-8); }
 }
 @media (max-width: 719px) {
-  .sheet { gap: var(--s-4) var(--s-3); }
   .check { padding-left: var(--s-4); }
+  .marks { --mscale: 0.72; gap: var(--s-6); justify-content: flex-start; }
+}
+/* the widest mark is 15.7:1, so a narrow phone needs it small or it overflows */
+@media (max-width: 419px) {
+  .marks { --mscale: 0.56; }
 }

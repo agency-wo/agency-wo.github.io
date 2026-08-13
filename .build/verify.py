@@ -267,15 +267,97 @@ for p in all_pages:
         if len(last.split()) >= 4 and not CONCRETE.search(last):
             warnings.append(f"[epigram?] {rel(p)}: {last[:70]}")
 
+# 18. every client mark resolves, and the row is complete ------------------
+sys.path.insert(0, os.path.join(ROOT, ".build"))
+from clients import CLIENTS  # noqa: E402
+
+css = read(os.path.join(ROOT, "css", "main.css"))
+home = read(os.path.join(ROOT, "index.html"))
+for c in CLIENTS:
+    fn = c["mark"][0]
+    if not os.path.exists(os.path.join(ROOT, "assets", "logo", "clients", fn)):
+        findings.append(f"[mark] {c['slug']}: assets/logo/clients/{fn} is missing")
+    # the URL lives in CSS, not a style attribute, because style-src is 'self'
+    rule = re.search(r"\.mark-" + re.escape(c["slug"]) + r"\s*\{(.*?)\}", css, re.S)
+    if not rule:
+        findings.append(f"[mark] css/main.css has no .mark-{c['slug']} rule")
+    elif fn not in rule.group(1):
+        findings.append(f"[mark] .mark-{c['slug']} does not point at {fn}")
+shown = len(re.findall(r'class="mark mark-', home))
+if shown != len(CLIENTS):
+    findings.append(f"[mark] homepage shows {shown} marks, {len(CLIENTS)} clients")
+
+# 19. every new tab is opened safely ---------------------------------------
+# noopener only. It is the security property: without it the opened page can
+# reach back through window.opener. noreferrer is NOT required, because on an
+# outbound client link the referrer is the point: it is how the client sees in
+# their own analytics that we sent them the visit. Referrer-Policy already
+# trims it to the bare origin.
+for p in all_pages:
+    for tag in re.findall(r"<a\b[^>]*target=\"_blank\"[^>]*>", read(p)):
+        rl = re.search(r'rel="([^"]*)"', tag)
+        if "noopener" not in (rl.group(1) if rl else "").split():
+            href = re.search(r'href="([^"]*)"', tag)
+            findings.append(f"[rel] {rel(p)}: {href.group(1) if href else tag[:40]} "
+                            f"opens a new tab without noopener")
+
+# 20. the verbless fragment headline cannot come back ----------------------
+# "One shop, three months, from zero." was the shape the founder called out.
+# Two commas and no verb is that shape and nothing else on this site.
+VERBS = re.compile(
+    r"\b(is|are|was|were|be|been|am|do|does|did|has|have|had|can|will|would|should|"
+    r"get|gets|got|go|goes|come|comes|came|make|makes|made|take|takes|took|give|"
+    r"gives|find|finds|found|know|knows|knew|think|see|sees|say|says|said|tell|"
+    r"tells|told|ask|asks|want|wants|need|needs|work|works|worked|build|builds|"
+    r"built|run|runs|ran|sell|sells|sold|buy|buys|bought|pay|pays|paid|send|sends|"
+    r"sent|show|shows|shown|read|reads|write|writes|written|answer|answers|name|"
+    r"names|named|rank|ranks|load|loads|cost|costs|change|changes|changed|start|"
+    r"starts|stop|stops|keep|keeps|kept|hold|holds|held|live|lives|lose|loses|"
+    r"lost|win|wins|won|spend|spends|spent|decide|decides|argue|argues|matter|"
+    r"matters|happen|happens|use|uses|add|adds|put|puts|publish|hear|look|looks|"
+    r"turn|turns|move|moves|owe|owes|call|calls|reply|replies|earn|earns|"
+    r"\w+ing)\b", re.I)
+for p in all_pages:
+    body = re.sub(r"(?s)<!-- SHARED:FOOTER -->.*?<!-- /SHARED:FOOTER -->", " ", read(p))
+    for m in re.findall(r"<h[12][^>]*>(.*?)</h[12]>", body, re.S):
+        t = re.sub(r"\s+", " ", re.sub(r"(?s)<[^>]+>", "", m)).strip()
+        if not t or VERBS.search(t):
+            continue
+        if t.count(",") >= 2:
+            findings.append(f"[fragment] {rel(p)}: verbless heading {t!r}")
+        elif "," in t:
+            warnings.append(f"[fragment?] {rel(p)}: {t[:70]}")
+
+# 21. paragraphs stay short ------------------------------------------------
+# Rule 35. Over-explaining shows up as length before it shows up as anything
+# else. Measured: median 19 words, p90 43, longest good paragraph 73.
+P_WARN, P_FAIL = 55, 85
+for p in all_pages:
+    for para in re.findall(r"<p[^>]*>(.*?)</p>", read(p), re.S):
+        plain = re.sub(r"\s+", " ", re.sub(r"(?s)<[^>]+>", "", para)).strip()
+        n = len(plain.split())
+        if n > P_FAIL:
+            findings.append(f"[long] {rel(p)}: {n}-word paragraph, {plain[:60]}")
+        elif n > P_WARN:
+            warnings.append(f"[long?] {rel(p)}: {n} words, {plain[:60]}")
+
 # ------------------------------------------------------------------- report
 print(f"pages checked: {len(all_pages)}")
 print(f"first load:    {kb:.1f} KB")
 if warnings:
-    print(f"\n{len(warnings)} paragraph ending(s) with nothing concrete:")
-    for w in warnings[:12]:
-        print("  ", w)
-    if len(warnings) > 12:
-        print(f"   ... and {len(warnings) - 12} more")
+    # Bucket by kind. 120 epigram warnings used to bury every other sort, and a
+    # warning nobody reads is not a warning.
+    buckets = {}
+    for w in warnings:
+        buckets.setdefault(re.match(r"\[([^\]]+)\]", w).group(1), []).append(w)
+    print()
+    for kind in sorted(buckets, key=lambda k: -len(buckets[k])):
+        rows = buckets[kind]
+        print(f"{len(rows)} [{kind}]:")
+        for w in rows[:6]:
+            print("  ", w[len(kind) + 3:])
+        if len(rows) > 6:
+            print(f"   ... and {len(rows) - 6} more")
 if findings:
     print(f"\nGATE FAIL: {len(findings)} finding(s)\n")
     for f in findings:
