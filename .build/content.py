@@ -63,7 +63,7 @@ SERVICES = [
                 "<p>Technical fixes can move things within weeks. A new site competing "
                 "for the phrases people actually buy on is a 6 to 12 month job. Anyone "
                 "promising faster is describing paid ads.</p>",
-                "<p>watch.al went from no website at all to 560 visits from Google in "
+                "<p>watch.al went from no website at all to 560 clicks from Google in "
                 "3 months. You can see the chart on "
                 "<a href=\"/work/iglisi-watch/\">their page</a>. That's a real timeline "
                 "for a business starting from zero in a town where the competition has "
@@ -199,7 +199,7 @@ SERVICES = [
             ("How would I know if it's working?",
              "Ask it. That's genuinely the honest answer today. Try the questions your "
              "customers would ask, in the languages they'd ask them in, and write down "
-             "what comes back. We do that monthly and show you the answers."),
+             "what comes back, then do it again next month, because the answers move."),
         ],
         "fig": "citation",
         "side_note": ("What to expect",

@@ -136,18 +136,21 @@ def render():
       <div class="wrap">
         <div class="proof-body">
           <p class="eyebrow">Proof</p>
-          <h2 id="proof-h">Nobody paid for these 560 visits.</h2>
-          <p class="proof-lead">Iglisi Watch sells and repairs watches on Rruga
-            Aleksander Goga in Durres. In May there was no website at all, so the
-            starting number really is zero. Every visit on this chart came from
-            Google, not from an ad budget.</p>
+          <h2 id="proof-h">Three months ago, Google had never heard of this
+            shop.</h2>
+          <p class="proof-lead">Iglisi Watch repairs watches and sells them, on
+            Rruga Aleksander Goga in Durres. In May there was no website at all,
+            so the starting number really is zero. Everything on this chart came
+            from search, not from an ad budget.</p>
 
           <ul class="stat-strip">
-            <li><span class="stat-n">560</span><span class="stat-l">visits from Google</span></li>
-            <li><span class="stat-n">57,600</span><span class="stat-l">times shown</span></li>
+            <li><span class="stat-n">560</span><span class="stat-l">clicks from Google</span></li>
+            <li><span class="stat-n">57.6k</span><span class="stat-l">times shown</span></li>
             <li><span class="stat-n">8.4</span><span class="stat-l">average position</span></li>
+            <li><span class="stat-n">1%</span><span class="stat-l">click rate</span></li>
           </ul>
-          <p class="stat-note">Three months, 12 May to 9 August 2026.</p>
+          <p class="stat-note">Three months, 12 May to 9 August 2026. Search
+            Console reports clicks, which is not the same as people.</p>
 
           <figure class="gsc" data-reveal>
             <img src="/assets/proof/watch-al-3-months.webp" width="1440" height="592"
@@ -158,13 +161,16 @@ def render():
               blue line is how many people clicked.</figcaption>
           </figure>
 
-          <p>Ads stop the day you stop paying for them. This does not: the shop was
-            put on the map once, and Google has been sending people ever since.</p>
-          <p>Position 8.4 is the bottom of the first page. Moving it up is the next
-            job, and it is where the rest of the growth is.</p>
+          <p>Ads stop the day you stop paying for them. This does not: the shop
+            was put on the map once, and search has been sending people ever
+            since.</p>
+          <p>Position 8.4 is the bottom of the first page and a 1% click rate is
+            about what the bottom of the first page pays. Moving that up is the
+            next job, and it is where the rest of the growth is.</p>
           <div class="check">
-            <p>Ask ChatGPT where to get a watch repaired in Durres, and see whose
-              name comes back.</p>
+            <p>Search for watch repair in Durres. Then search for a watch shop in
+              Durres. Then ask ChatGPT both questions, and see whose name keeps
+              coming back.</p>
             <p class="taken">Taken August 2026. Rankings move, so the chart will look
               different by the time you read this.</p>
           </div>

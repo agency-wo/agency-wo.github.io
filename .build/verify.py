@@ -55,8 +55,16 @@ def rel(p):
     return os.path.relpath(p, ROOT).replace(os.sep, "/")
 
 
+_READ_CACHE = {}
+
+
 def read(p):
-    return io.open(p, encoding="utf-8").read()
+    """Memoised. The gate makes roughly 30 passes over every page and check 9
+    alone reads each one 16 times; at 13 pages that is invisible and at 60 it
+    is not. Safe because nothing here writes."""
+    if p not in _READ_CACHE:
+        _READ_CACHE[p] = io.open(p, encoding="utf-8").read()
+    return _READ_CACHE[p]
 
 
 def text_of(html):
@@ -586,9 +594,16 @@ for d, dirs, files in os.walk(ROOT):
 # and 301 the whole github.io host to it. Do that before the domain resolves
 # and the preview goes offline, which is exactly what happened. So CNAME and
 # robots.txt are one decision, owned by PREVIEW in gen_launch.py.
-import gen_launch as _launch  # noqa: E402
+# Read the flag, do NOT import the module: gen_launch has no __main__ guard,
+# so importing it writes robots.txt and can delete CNAME. A gate that says
+# "read-only" in its own docstring must not edit the tree it is judging.
+_launch_src = read(os.path.join(ROOT, ".build", "gen_launch.py"))
+_preview = re.search(r"^PREVIEW = (True|False)$", _launch_src, re.M)
+assert _preview, "gen_launch.py has no PREVIEW flag"
+PREVIEW = _preview.group(1) == "True"
+
 cname_p = os.path.join(ROOT, "CNAME")
-if _launch.PREVIEW:
+if PREVIEW:
     if os.path.exists(cname_p):
         findings.append("[domain] CNAME exists while PREVIEW is on. GitHub "
                         "Pages will 301 the preview host to a domain that "

@@ -121,8 +121,8 @@ systems_body = f'''
 
           <h2>The one we built, and which parts are yours</h2>
           <p><a href="/work/iglisi-watch/">Iglisi Watch</a> in Durres runs on a system
-            we built. It has 50 screens, holds 398 stock items grouped into 20 cards,
-            keeps money in 4 separate lines, and works with no signal in a back room
+            we built. It has 50 panels, holds 443 stock sizes grouped into 25 cards,
+            keeps money in 5 separate lines, and works with no signal in a back room
             with thick walls. It costs nothing per month to run.</p>
           <p><strong>The parts every business needs</strong> are the ones above: jobs,
             stock, customers, money, staff, reports. That skeleton is the same whether
@@ -150,8 +150,8 @@ systems_body = f'''
             <div class="faq-item">
               <h3 class="faq-q">What does it cost to run?</h3>
               <p>The system described above costs nothing per month. We build on free
-                infrastructure with the spending limit written into the code, so a
-                mistake cannot turn into a bill. A busy system eventually costs
+                infrastructure, and the public route is rate limited in the code so a
+                runaway script cannot spend the free tier for you. A busy system eventually costs
                 something, and you will know the number before we build.</p>
             </div>
             <div class="faq-item">
@@ -200,7 +200,7 @@ systems_ld = graph(
         {"@type": "Question", "name": "Isn't this what a spreadsheet is for?",
          "acceptedAnswer": {"@type": "Answer", "text": "For a while, yes, and if a spreadsheet is working then keep it. It stops working when two people need it at once, when it lives on one laptop, or when the answer you need takes 20 minutes of sorting."}},
         {"@type": "Question", "name": "What does it cost to run?",
-         "acceptedAnswer": {"@type": "Answer", "text": "The system described costs nothing per month. We build on free infrastructure with the spending limit written into the code, so a mistake cannot turn into a bill. A busy system eventually costs something, and you will know the number before we build."}},
+         "acceptedAnswer": {"@type": "Answer", "text": "The system described costs nothing per month. We build on free infrastructure, and the public route is rate limited in the code so a runaway script cannot spend the free tier for you. A busy system eventually costs something, and you will know the number before we build."}},
         {"@type": "Question", "name": "My business is nothing like a watch shop.",
          "acceptedAnswer": {"@type": "Answer", "text": "Most are not. A bakery with daily specials, a boutique with sizes, a garage with jobs and a dealer with one-off stock all have the same shape of problem: something changes, and several other places need to know."}},
         {"@type": "Question", "name": "Do I own it?",

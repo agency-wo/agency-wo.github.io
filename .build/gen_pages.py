@@ -11,6 +11,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import shell  # noqa: E402
 from content import SERVICES  # noqa: E402
+from posts import POSTS  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 NL = chr(10)
@@ -140,6 +141,18 @@ def render(svc):
     note_h, note_b = svc["side_note"]
     a(f'          <div class="side-block">\n            <p class="side-h">{note_h}</p>\n')
     a(f'            <p>{note_b}</p>\n          </div>\n\n')
+    mine = [p for p in POSTS if p["service"][0] == "/" + svc["slug"] + "/"]
+    if mine:
+        # Derived from posts.py, never typed: a post names its service and
+        # wires itself back here. A blog nothing links into is dead weight.
+        a('          <div class="side-block">\n')
+        a('            <p class="side-h">Written about this</p>\n')
+        a('            <ul class="side-list">\n')
+        for post in sorted(mine, key=lambda x: (x["date"], x["slug"])):
+            a(f'              <li><a href="/blog/{post["slug"]}/">'
+              f'{post["title"]}</a></li>\n')
+        a('            </ul>\n          </div>\n\n')
+
     a('          <div class="side-block">\n            <p class="side-h">Also</p>\n')
     a('            <ul class="side-list">\n')
     for href, label in svc["related"]:

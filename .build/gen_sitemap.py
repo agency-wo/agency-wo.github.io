@@ -24,7 +24,7 @@ SKIP = {".git", ".claude", ".build", "assets", "node_modules"}
 
 # Editorial priority: the money pages first, then the rest.
 ORDER = ["/", "/geo/", "/seo/", "/web-design/", "/meta-ads/", "/systems/",
-         "/work/", "/studio/", "/start/"]
+         "/work/", "/blog/", "/studio/", "/start/"]
 
 
 def git_date(path):
@@ -67,7 +67,11 @@ def rank(loc):
     # belong to somebody else, so shell.SITE is the one place that says it and
     # gate check 29 fails if anything retypes a retired host.
     path = loc.replace(shell.SITE, "") or "/"
-    return ORDER.index(path) if path in ORDER else len(ORDER)
+    if path in ORDER:
+        return ORDER.index(path)
+    # posts trail as one contiguous block rather than interleaving with the
+    # client pages, which is the only reason this is not just len(ORDER)
+    return len(ORDER) + 1 if path.startswith("/blog/") else len(ORDER)
 
 
 entries.sort(key=lambda e: (rank(e[0]), e[0]))

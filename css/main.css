@@ -147,8 +147,10 @@ h3, .faq-q, .ledger h3, .cta {
 .proof-body > p { max-width: 62ch; margin-bottom: var(--s-5); }
 .proof-lead { font-size: var(--fs-lead); }
 
+/* flex-wrap, not a fixed column count: the strip grew from 3 stats to 4 when
+   the click rate went back in, and a hard-coded repeat(3) silently stacked it */
 .stat-strip { list-style: none; margin: var(--s-7) 0 var(--s-3); padding: var(--s-5) 0 0;
-  display: grid; grid-template-columns: repeat(3, max-content); gap: var(--s-8);
+  display: flex; flex-wrap: wrap; gap: var(--s-6) var(--s-8);
   border-top: 1px solid var(--rule); }
 .stat-n { display: block; font-family: var(--font-display); font-weight: 500;
   font-size: clamp(2rem, 3.6vw, 3.25rem); line-height: 1;

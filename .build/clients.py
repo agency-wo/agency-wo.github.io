@@ -18,12 +18,12 @@ CLIENTS = [
         "trade": "Watch sales and repair",
         "site": "watch.al",
         "title": "Iglisi Watch",
-        "description": "A family watch shop in Durres with no website. Three months "
-                       "after launch Google sent it 560 visitors, and AI assistants "
-                       "name the shop when you ask where to repair a watch.",
-        "og_desc": "From no website to first for watch repair in Durres.",
-        "summary": "Search for watch repair in Durres and this shop comes back "
-                   "first, in all 3 languages, and ChatGPT names it too.",
+        "description": "A family watch shop in Durres with no website at all. Three "
+                       "months after launch Google was sending it 560 clicks a "
+                       "quarter, from a standing start.",
+        "og_desc": "From no website to 560 clicks a quarter, in 3 months.",
+        "summary": "No website in May. By August, 560 clicks a quarter from "
+                   "Google, in 3 languages.",
         "started": [
             "A family watch shop on Rruga Aleksander Goga. They repair watches, and "
             "they sell them. Both halves of that were invisible outside Durres, "
@@ -38,7 +38,7 @@ CLIENTS = [
             "list, the sitemap and every number written into the text all update "
             "together, in all three languages.",
             "A system for the workbench and the counter: repair jobs, stock, the "
-            "money across four parts of the business, and a reference library that "
+            "money kept in 5 separate lines, and a reference library that "
             "works with no signal in a back room.",
             "A link between the two, so a watch sold over the counter stops being "
             "offered on the website about a minute later, without anyone touching a "
@@ -46,19 +46,17 @@ CLIENTS = [
         ],
         "changed": "Where the shop shows up now",
         "changed_blocks": [
-            "Search for watch repair in Durres in English, Albanian or Italian and "
-            "they come back first, usually holding the top three results outright.",
-            "Ask ChatGPT, Claude or Perplexity where to get a watch repaired in "
-            "Durres and they name the shop, the street, the opening hours and the "
-            "WhatsApp number.",
-            "They're the only watch business in Durres with a website that ranks at "
-            "all. The competition is directory listings and Facebook pages. Worth "
-            "saying, because the opening was there and nobody had taken it.",
+            "Search for watch repair in Durres, then for a watch shop in Durres, "
+            "in English, Albanian or Italian. Then ask ChatGPT the same questions. "
+            "We would rather you checked than took our word for it.",
+            "The competition here is directory listings and Facebook pages. That "
+            "is worth saying, because the opening was there and nobody had taken "
+            "it.",
         ],
         "gsc": True,
-        "stats": [("560", "visits from Google"), ("57,600", "times shown"),
-                  ("8.4", "average position")],
-        "payoff": "First for watch repair in Durres.",
+        "stats": [("560", "clicks from Google"), ("57.6k", "times shown"),
+                  ("8.4", "average position"), ("1%", "click rate")],
+        "payoff": "From nothing to 560 clicks a quarter.",
         "plate": ("iglisi-shop.webp", 1120, 777,
                   "The Iglisi Watch shop page, showing watches for sale with prices "
                   "in euro and lek"),
@@ -141,8 +139,8 @@ CLIENTS = [
         "changed_blocks": [
             "In WhatsApp, deliberately. The site's job is to get someone there with "
             "the right item already in the message.",
-            "It also loads fast on a phone on mobile data, which is where nearly all "
-            "of this traffic is.",
+            "It also loads fast on a phone on mobile data, which is how most of these "
+            "customers will open it.",
         ],
         "gsc": False,
         "stats": [],

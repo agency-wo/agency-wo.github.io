@@ -52,6 +52,7 @@ FORM_REDIRECT = SITE + "/start/?sent=1#sent"
 NAV = [
     ("/work/", "Proof"),
     ("/#services", "Services"),
+    ("/blog/", "Writing"),
     ("/studio/", "Studio"),
 ]
 
@@ -63,7 +64,8 @@ FOOTER_COLS = [
               ("/work/victoria-boutique/", "Victoria Boutique"),
               ("/work/intimo-bruna/", "Intimo Bruna"),
               ("/work/pro-affy/", "ProAffy")]),
-    ("Studio", [("/studio/", "About"), ("/start/", "Start a project")]),
+    ("Studio", [("/studio/", "About"), ("/blog/", "Writing"),
+                ("/start/", "Start a project")]),
     ("Get in touch", [("mailto:" + EMAIL, EMAIL),
                       ("https://wa.me/" + WHATSAPP, "WhatsApp")]),
 ]
