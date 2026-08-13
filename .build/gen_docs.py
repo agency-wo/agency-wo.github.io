@@ -293,62 +293,55 @@ start_body = f'''
       <header class="page-head">
 {shell.crumbs("Start a project")}
         <h1 class="page-title">Tell us what you sell.</h1>
-        <p class="standfirst">Start with the free audit, or just write. It all reaches
-          the same person, and the answer comes {shell.TURNAROUND}.</p>
+        <p class="standfirst">Start with the free audit, or just write. It all
+          reaches the same person, and the audit comes back {shell.TURNAROUND}.</p>
       </header>
 
       <div class="grid">
         <div class="prose">
           <section class="audit" id="audit" aria-labelledby="audit-h">
-            <h2 id="audit-h">Send us your site. We'll send back an audit.</h2>
-            <p>Tell us where your site is and we will send back a PDF: what it does
-              well, where the gaps are, and what we would fix first. It is free, it is
-              yours whether you hire us or not, and it arrives {shell.TURNAROUND}.</p>
+            <h2 id="audit-h">Send us your site and we'll audit it free.</h2>
+            <p>You get a PDF: what the site does well, where the gaps are, and
+              what we'd fix first, in order. It's yours whether you hire us or
+              not, it's written in English, and it arrives {shell.TURNAROUND}.</p>
+
+            <div class="af-done" id="sent" tabindex="-1">
+              <h3>Sent. Your audit is on its way.</h3>
+              <p>It scores 6 areas, from the technical basics to how you stand
+                next to the businesses competing with you, and it ends with what
+                we'd fix first. The PDF arrives {shell.TURNAROUND}. If it hasn't,
+                write to <a href="mailto:{shell.EMAIL}">{shell.EMAIL}</a> and
+                we'll send it again.</p>
+            </div>
 
             <form class="af" id="audit-form" method="POST"
-              action="{shell.FORM_ENDPOINT}" novalidate>
+              action="{shell.FORM_ENDPOINT}">
               <input type="hidden" name="access_key" value="{shell.WEB3FORMS_KEY}">
-              <input type="hidden" name="subject" value="Free audit request">
-              <input type="hidden" name="from_name" value="minarank">
+              <input type="hidden" name="subject" value="Free audit request via minarank">
               <input type="hidden" name="redirect" value="{shell.FORM_REDIRECT}">
-              <div class="af-hp">
-                <label for="af-bot">Leave this one empty</label>
-                <input id="af-bot" type="checkbox" name="botcheck" tabindex="-1"
-                  autocomplete="off">
-              </div>
-
-              <div class="af-pair">
-                <p class="field">
-                  <label for="af-owner">Your name</label>
-                  <input id="af-owner" name="owner" type="text" autocomplete="name"
-                    required aria-describedby="af-owner-err">
-                  <span class="field-err" id="af-owner-err">We address the audit to
-                    somebody, so we need a name.</span>
-                </p>
-                <p class="field">
-                  <label for="af-name">Your business</label>
-                  <input id="af-name" name="name" type="text"
-                    autocomplete="organization" required aria-describedby="af-name-err">
-                  <span class="field-err" id="af-name-err">The name your customers know
-                    you by.</span>
-                </p>
-              </div>
+              <input type="hidden" name="source" value="start-audit">
+              <input class="af-hp" type="checkbox" name="botcheck" tabindex="-1"
+                autocomplete="off">
 
               <p class="field">
                 <label for="af-url">Your website</label>
-                <input id="af-url" name="url" type="url" inputmode="url"
-                  autocomplete="url" placeholder="https://" required
+                <input id="af-url" name="url" type="text" inputmode="url"
+                  autocomplete="url" autocapitalize="none" spellcheck="false"
+                  required placeholder="yourshop.al"
+                  pattern="(https?:\\/\\/)?[a-zA-Z0-9][a-zA-Z0-9.\\-]*\\.[a-zA-Z]{{2,}}(\\/\\S*)?"
+                  title="Your web address, for example yourshop.al"
                   aria-describedby="af-url-err">
-                <span class="field-err" id="af-url-err">The whole address, starting
-                  with https://</span>
+                <span class="field-err" id="af-url-err">Type your web address,
+                  like yourshop.al.</span>
               </p>
 
               <p class="field">
-                <label for="af-email">Email</label>
-                <input id="af-email" name="email" type="email" inputmode="email"
-                  autocomplete="email" required aria-describedby="af-email-err">
-                <span class="field-err" id="af-email-err">The audit goes here, so it
-                  has to be right.</span>
+                <label for="af-name">Your business</label>
+                <input id="af-name" name="name" type="text"
+                  autocomplete="organization" required
+                  aria-describedby="af-name-err">
+                <span class="field-err" id="af-name-err">The name your customers
+                  know you by.</span>
               </p>
 
               <div class="af-pair">
@@ -357,39 +350,52 @@ start_body = f'''
                     <span class="field-opt">optional</span></label>
                   <input id="af-category" name="category" type="text"
                     aria-describedby="af-category-hint">
-                  <span class="field-hint" id="af-category-hint">Watches, lingerie,
-                    heating. It sharpens the audit.</span>
+                  <span class="field-hint" id="af-category-hint">Watches,
+                    lingerie, heating. It tells us who to compare you
+                    against.</span>
                 </p>
                 <p class="field">
                   <label for="af-city">Town
                     <span class="field-opt">optional</span></label>
                   <input id="af-city" name="city" type="text"
                     autocomplete="address-level2" aria-describedby="af-city-hint">
-                  <span class="field-hint" id="af-city-hint">So we check the right
-                    map.</span>
+                  <span class="field-hint" id="af-city-hint">So we check the
+                    right map and the right listings.</span>
+                </p>
+              </div>
+
+              <div class="af-pair">
+                <p class="field">
+                  <label for="af-owner">Your name</label>
+                  <input id="af-owner" name="owner" type="text"
+                    autocomplete="name" required aria-describedby="af-owner-err">
+                  <span class="field-err" id="af-owner-err">We address the audit
+                    to somebody, so we need a name.</span>
+                </p>
+                <p class="field">
+                  <label for="af-email">Email</label>
+                  <input id="af-email" name="email" type="email" inputmode="email"
+                    autocomplete="email" autocapitalize="none" spellcheck="false"
+                    required aria-describedby="af-email-err">
+                  <span class="field-err" id="af-email-err">The audit goes here,
+                    so it has to be right.</span>
                 </p>
               </div>
 
               <p class="af-go">
-                <button class="btn" type="submit" id="af-send">Send it
-                  {shell.ARROW}</button>
+                <button class="btn" type="submit" id="af-send"><span
+                  id="af-send-text">Send it</span>{shell.ARROW}</button>
               </p>
-              <p class="af-fine">Your details go to us and to the service that delivers
-                the form, and nowhere else. We use them to send the audit. Ask and we
-                delete them.</p>
-              <p class="af-fail" id="af-fail" role="alert" tabindex="-1" hidden>That did not send.
-                Write to <a href="mailto:{shell.EMAIL}">{shell.EMAIL}</a> or
-                <a href="https://wa.me/{shell.WHATSAPP}">message on WhatsApp</a>, and we
-                will pick it up from there.</p>
+              <p class="af-say" id="af-say" role="status" aria-live="polite"></p>
+              <p class="af-alt">Rather not fill in a form? Write to
+                <a href="mailto:{shell.EMAIL}">{shell.EMAIL}</a> or
+                <a href="https://wa.me/{shell.WHATSAPP}">message on WhatsApp</a>.</p>
+              <p class="af-fine">We keep your name, email and website only to run
+                this audit and reply. The form runs on Web3Forms, we pass your
+                details to nobody else, and one line to
+                <a href="mailto:{shell.EMAIL}?subject=Delete%20my%20details">{shell.EMAIL}</a>
+                deletes them.</p>
             </form>
-
-            <div class="af-done" id="sent" role="status" tabindex="-1">
-              <h3>Sent. Your audit is on its way.</h3>
-              <p>It covers how your site looks to Google and to the assistants people
-                now ask instead, how it stands next to the businesses competing with
-                you, and what we would fix first. No obligation, and nobody will ring
-                you. The PDF arrives {shell.TURNAROUND}.</p>
-            </div>
           </section>
 
           <h2>Or email, with the questions already written</h2>

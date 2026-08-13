@@ -30,7 +30,7 @@ section { padding-block: var(--pad-section); }
 h2 { font-family: var(--font-display); font-weight: 500; font-size: var(--fs-h2);
   line-height: 1.06; letter-spacing: var(--track-display); text-wrap: balance; }
 
-h3, .faq-q, .ledger h3, .cta, .mail {
+h3, .faq-q, .ledger h3, .cta {
   font-family: var(--font-body); font-weight: 700; letter-spacing: -0.006em; }
 
 .sec-head { margin-bottom: var(--s-7); }
@@ -176,12 +176,6 @@ h3, .faq-q, .ledger h3, .cta, .mail {
   text-wrap: pretty; }
 .band-actions { margin-top: var(--s-7); display: flex; gap: var(--s-7);
   flex-wrap: wrap; align-items: baseline; }
-.mail { display: inline-block; font-size: var(--fs-h3); color: var(--red);
-  text-decoration: none; position: relative; }
-.mail::before { content: ""; position: absolute; left: 0; right: 0; bottom: -3px;
-  height: 2px; background: var(--red); transform: scaleX(0); transform-origin: left;
-  transition: transform 200ms var(--ease-reveal); }
-.mail:hover::before { transform: scaleX(1); }
 .band-alt { color: var(--rule); font-size: var(--fs-small); }
 .band-alt a { color: var(--rule); text-underline-offset: 4px; }
 .band-alt a:hover { color: var(--paper); }
@@ -457,11 +451,9 @@ h3, .faq-q, .ledger h3, .cta, .mail {
 .who-more { grid-column: 8 / 13; align-self: end; }
 .who-more p { font-size: var(--fs-small); max-width: 40ch; }
 
-/* The conversion point used to be this address, so it was sized up to match a
-   service heading. It is the audit button now, and two loud things in one band
-   is neither. The address steps back to its own size and keeps the red. */
-.mail { font-size: var(--fs-h3); }
-.mail::before { height: 2px; bottom: -4px; }
+/* .mail no longer appears in the band. Rule 20 is one CTA per page and the
+   audit link takes that slot rather than joining it, so the address and
+   WhatsApp sit together in .band-alt as the alternates they now are. */
 
 /* -- the free audit form ---------------------------------------------------
    The one place on the site that takes something rather than says something.
@@ -476,14 +468,15 @@ h3, .faq-q, .ledger h3, .cta, .mail {
 .audit { margin-bottom: var(--s-9); }
 .af { margin-top: var(--s-7); }
 
-/* the honeypot. Moved off-screen rather than display:none, because some bots
-   skip anything that is display:none, and it keeps a real label for the rare
-   screen reader that reaches it. */
-.af-hp { position: absolute; width: 1px; height: 1px; overflow: hidden;
-  clip: rect(0 0 0 0); white-space: nowrap; }
+/* The honeypot. display:none, NOT off-screen: an off-screen honeypot with a
+   label is reachable in a screen reader's browse mode, and a blind visitor who
+   ticks it gets their lead silently binned while the page says "Sent". This
+   takes it out of the accessibility tree, the tab order and axe's label rule
+   at once, and it is what Web3Forms' own documentation uses. */
+.af-hp { display: none; }
 
 .af-pair { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-5); }
-.field { display: block; margin-top: var(--s-5); }
+.field { display: block; margin-top: var(--s-5); margin-bottom: 0; }
 .field label { display: block; font-size: var(--fs-small); font-weight: 700;
   margin-bottom: var(--s-2); }
 .field-opt { font-weight: 400; color: var(--slate); }
@@ -496,23 +489,32 @@ h3, .faq-q, .ledger h3, .cta, .mail {
   border-color: var(--ink); }
 .field-hint { display: block; margin-top: var(--s-2);
   font-size: var(--fs-small); color: var(--slate); }
-.field-err { display: none; margin-top: var(--s-2);
+/* --red-dk, not --red: this is 15px body text and needs 4.5:1. Colour is
+   never the only signal; the sentence underneath is. */
+.field-err { display: none; margin-top: var(--s-2); font-weight: 700;
   font-size: var(--fs-small); color: var(--red-dk); }
 
 /* nothing turns red before the visitor has tried to send */
 .af.was-validated :invalid ~ .field-err { display: block; }
 .af.was-validated :invalid { border-color: var(--red-dk); }
 
-.af-go { margin-top: var(--s-6); }
+.af-go { margin-top: var(--s-6); margin-bottom: 0; }
 button.btn { font-family: inherit; background: none; cursor: pointer; }
 button.btn:disabled { opacity: 0.55; cursor: default; }
 button.btn:disabled:hover { background: none; color: var(--ink); }
 
-.af-fine { margin-top: var(--s-5); font-size: var(--fs-small);
+/* One line is always reserved, so the status can appear without pushing the
+   page around. While the button is disabled and focus has fallen to the body,
+   this is the only thing a screen reader hears. */
+.af-say { min-height: 1.6em; margin: var(--s-4) 0 0; font-size: var(--fs-small);
   color: var(--slate); max-width: 54ch; }
-.af-fail { margin-top: var(--s-5); padding-left: var(--s-5);
-  border-left: 3px solid var(--red); max-width: 54ch; }
-.af-fail[hidden] { display: none; }
+.af-say.is-err { color: var(--red-dk); font-weight: 700; }
+
+.af-alt { margin: var(--s-4) 0 0; font-size: var(--fs-small);
+  color: var(--slate); max-width: 54ch; }
+.af-fine { margin: var(--s-5) 0 0; padding-top: var(--s-4);
+  border-top: 1px solid var(--rule); font-size: var(--fs-small);
+  color: var(--slate); max-width: 54ch; }
 
 .af-done { display: none; padding-left: var(--s-5);
   border-left: 3px solid var(--red); }
@@ -520,11 +522,16 @@ button.btn:disabled:hover { background: none; color: var(--ink); }
   font-size: var(--fs-h2); line-height: 1.08;
   letter-spacing: var(--track-display); max-width: 18ch; }
 .af-done p { margin-top: var(--s-4); max-width: 54ch; text-wrap: pretty; }
-/* :target is the no-JS reveal, .is-sent is the scripted one. Without :has()
-   support both the form and the confirmation show, which is redundant but
-   never broken. */
-.af-done:target, .audit.is-sent .af-done { display: block; }
-.audit:has(.af-done:target) .af, .audit.is-sent .af { display: none; }
+/* :target is the no-JS reveal, .is-sent is the scripted one. The
+   confirmation sits BEFORE the form in the source, which is the only reason
+   this can be a plain sibling combinator rather than :has(): universal
+   support, and no fallback state where both show at once. */
+.af-done:target,       .audit.is-sent .af-done { display: block; }
+.af-done:target ~ .af, .audit.is-sent .af      { display: none; }
+.af-done:focus { outline: none; }
+.af-done:focus-visible { outline: 2px solid var(--ink); outline-offset: 6px; }
+/* the header is sticky, so both anchors need clearance */
+#audit, .af-done { scroll-margin-top: calc(72px + var(--s-6)); }
 
 /* the band's primary action, inverted against the ink */
 .band-cta { display: inline-flex; align-items: center; font-weight: 700;
@@ -574,7 +581,7 @@ button.btn:disabled:hover { background: none; color: var(--ink); }
   .check { padding-left: var(--s-4); }
   .marks { --mscale: 0.72; --mgap: var(--s-6); }
   .af-pair { grid-template-columns: 1fr; gap: 0; }
-  .af-done, .af-fail { padding-left: var(--s-4); }
+  .af-done { padding-left: var(--s-4); }
 }
 /* the widest mark is 15.7:1, so a narrow phone needs it small or it overflows */
 @media (max-width: 419px) {

@@ -111,16 +111,20 @@ everything checkable is checked by `verify.py`, which fails the build.
     `h1` or `h2` with 2 commas and no verb fails; 1 comma and no verb warns.
 37. **Every service page names a client and links to their page.** A service
     page that cannot point at a business it did this for is a brochure.
-38. **One promise, in one place.** The turnaround the audit form promises
-    is a single constant in `shell.py`. It was stated in 3 places once and
-    2 of them said something else. Gated.
-39. **The form must work with JavaScript off.** The native POST is the real
-    submit path and the script is an enhancement over it. Every form in this
-    workspace that hands off to WhatsApp is dead without JS; this one is not.
-40. **Client marks are one ink colour, from the client's own material.** Two
+38. **Client marks are one ink colour, from the client's own material.** Two
     of the four have no logo file at all, so their wordmark is outlined from
     the webfont their own site serves, at their own weight and tracking.
     Reproduction, not invention. `assets/logo/build_client_marks.py`.
+39. **One promise, in one place.** The turnaround the audit form promises is a
+    single constant in `shell.py`. It was stated in 3 places once and 2 of them
+    said something else. Gated.
+40. **The form must work with JavaScript off.** The native POST is the real
+    submit path; the script is an enhancement over it. So `novalidate` is set
+    from `js/main.js` and never from the markup, the redirect carries the
+    `#sent` fragment that reveals the confirmation with no script at all, and
+    the confirmation sits BEFORE the form in the source so a plain sibling
+    combinator can hide it. Every form in this workspace that hands off to
+    WhatsApp is dead without JS. This one is not.
 
 **Never loosen a check to make it pass.** A gate that can be talked into
 passing is decoration.

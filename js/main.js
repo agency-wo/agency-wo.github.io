@@ -75,60 +75,98 @@
   }
 
   /* ---- the free audit form ------------------------------------------------
-     Enhancement only. With this file blocked the form still works: it is a
-     native POST and Web3Forms returns the visitor to /start/#sent, where the
-     :target rule in main.css reveals the confirmation on its own. Everything
-     below exists so nobody has to leave the page. */
+     Two submit paths, one result.
+
+     No JS: a plain POST. Native validation runs, because novalidate is set
+     from HERE and never from the markup: in the markup it would let a JS-off
+     visitor send an empty form. Web3Forms returns to /start/?sent=1#sent and
+     the :target rule in main.css reveals the confirmation before first paint.
+
+     JS: intercept, post the same FormData, reveal the same panel in place.
+
+     Rule 30 holds. Nothing here runs on load except the ?sent= check, and the
+     request happens because somebody pressed a button. */
+  var audit = document.getElementById("audit");
   var af = document.getElementById("audit-form");
-  if (af && window.fetch && window.FormData) {
-    var section = document.getElementById("audit");
-    var done = document.getElementById("sent");
-    var fail = document.getElementById("af-fail");
+
+  /* the fragment should survive the redirect; this is the belt for when it
+     does not, which is why the redirect carries both */
+  if (audit && /[?&]sent=1(&|$)/.test(window.location.search)) {
+    audit.classList.add("is-sent");
+  }
+
+  if (af && audit && window.fetch && window.FormData && af.checkValidity) {
+    af.setAttribute("novalidate", "novalidate");
+
+    var doneEl = document.getElementById("sent");
+    var say = document.getElementById("af-say");
     var send = document.getElementById("af-send");
-    var label = send ? send.innerHTML : "";
+    var sendText = document.getElementById("af-send-text");
+    var sendLabel = sendText.textContent;  /* read once, never hardcoded twice */
+    var sending = false;
 
     var mark = function () {
-      /* aria-invalid per field, which no other form in this workspace sets */
-      var fields = af.querySelectorAll("input[required]");
-      for (var i = 0; i < fields.length; i++) {
-        fields[i].setAttribute("aria-invalid", fields[i].checkValidity() ? "false" : "true");
+      var req = af.querySelectorAll("input[required]");
+      for (var i = 0; i < req.length; i++) {
+        req[i].setAttribute("aria-invalid",
+          req[i].checkValidity() ? "false" : "true");
+      }
+    };
+
+    var settle = function (ok) {
+      sending = false;
+      send.disabled = false;
+      sendText.textContent = sendLabel;
+      if (ok) {
+        say.classList.remove("is-err");
+        say.textContent = "";
+        audit.classList.add("is-sent");
+        doneEl.focus();
+      } else {
+        /* never a dead button and never an alert(): name the other 2 ways */
+        say.classList.add("is-err");
+        say.textContent = "That did not send. Use the email or the WhatsApp " +
+          "link below and we will pick it up from there.";
+        send.focus();
       }
     };
 
     af.addEventListener("submit", function (e) {
       e.preventDefault();
-      if (fail) fail.hidden = true;
+      if (sending) return;
 
-      /* honeypot: a bot filled the field no human can see. Look sent, do
-         nothing, and never tell it why. */
-      var bot = af.querySelector('[name="botcheck"]');
-      if (bot && bot.checked) {
-        if (section) section.classList.add("is-sent");
-        return;
-      }
+      /* honeypot. Look sent, say nothing, never explain why. */
+      var bot = af.querySelector("[name=botcheck]");
+      if (bot && bot.checked) { audit.classList.add("is-sent"); return; }
 
       af.classList.add("was-validated");
       mark();
       if (!af.checkValidity()) {
+        /* no summary message: the focused field announces its own label and
+           its own error through aria-describedby, and 2 voices is noise */
         var bad = af.querySelector("input:invalid");
         if (bad) bad.focus();
         return;
       }
 
-      if (send) { send.disabled = true; send.textContent = "Sending"; }
-      fetch(af.action, { method: "POST", body: new FormData(af) })
-        .then(function (r) { return r.json(); })
-        .then(function (json) {
-          if (!json || !json.success) throw new Error("rejected");
-          if (section) section.classList.add("is-sent");
-          if (done) done.focus();
-        })
-        .catch(function () {
-          /* Never a dead button and never an alert(): the panel names the
-             two other ways to reach us. */
-          if (fail) { fail.hidden = false; fail.focus(); }
-          if (send) { send.disabled = false; send.innerHTML = label; }
-        });
+      sending = true;
+      send.disabled = true;
+      sendText.textContent = "Sending";
+      /* disabling the button drops focus to the body, so this live region is
+         the only thing telling a screen reader that anything happened */
+      say.classList.remove("is-err");
+      say.textContent = "Sending your details.";
+
+      window.fetch(af.getAttribute("action"), {
+        method: "POST",
+        body: new FormData(af)
+      }).then(function (r) {
+        return r.json();
+      }).then(function (json) {
+        settle(!!(json && json.success));
+      }).catch(function () {
+        settle(false);
+      });
     });
 
     /* clear the red the moment somebody starts fixing it */

@@ -30,12 +30,16 @@ AUDIT_URL = "/start/#audit"
 # form promised 24 hours. Changing the promise is this line and a rebuild.
 TURNAROUND = "within 24 hours"
 
-# The redirect is only used by the no-JS native POST. Web3Forms' free plan
-# redirects same-domain only, so this is derived from SITE rather than from the
-# host we happen to be previewing on: the day minarank.com is live it starts
-# working, with no edit. Until then a no-JS visitor lands on Web3Forms' own
-# thank-you page and their lead still arrives.
-FORM_REDIRECT = SITE + "/start/?sent=1"
+# The redirect is only used by the no-JS native POST, and the #sent fragment
+# IS the mechanism: :target reveals the confirmation before first paint, with
+# no script. Drop the fragment and a JS-off visitor comes back to a blank form
+# and sees nothing happen.
+#
+# Web3Forms' free plan redirects same-domain only, so this is derived from SITE
+# rather than the host we happen to be previewing on: the day minarank.com is
+# live it starts working, with no edit. Until then a no-JS visitor lands on
+# Web3Forms' own thank-you page and their lead still arrives.
+FORM_REDIRECT = SITE + "/start/?sent=1#sent"
 
 # Work first: there is proof now, and it should not be buried.
 NAV = [
@@ -198,9 +202,8 @@ def footer(cta_heading=None, cta_note=None):
         cta = f'''      <h2>{cta_heading}</h2>
       <p class="band-note">{cta_note}</p>
       <p class="band-actions">
-        <a class="band-cta" href="{AUDIT_URL}">Get a free audit</a>
-        <a class="mail" href="mailto:{EMAIL}">{EMAIL}</a>
-        <span class="band-alt">or <a href="https://wa.me/{WHATSAPP}">message on WhatsApp</a></span>
+        <a class="band-cta" href="{AUDIT_URL}">Get a free website audit</a>
+        <span class="band-alt"><a href="mailto:{EMAIL}">{EMAIL}</a> {DOT} <a href="https://wa.me/{WHATSAPP}">WhatsApp</a></span>
       </p>
 '''
 

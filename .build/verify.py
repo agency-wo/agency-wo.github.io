@@ -347,25 +347,46 @@ for p in all_pages:
         elif n > P_WARN:
             warnings.append(f"[long?] {rel(p)}: {n} words, {plain[:60]}")
 
-# 22. the form is wired to a real key --------------------------------------
-# A form that posts a placeholder collects nothing and says "Sent" anyway,
-# which is the worst possible failure: silent, and only the visitor loses.
-import shell  # noqa: E402
-if not re.fullmatch(r"[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}",
-                    shell.WEB3FORMS_KEY):
-    findings.append("[form] shell.WEB3FORMS_KEY is not a real access key yet")
+# ================================================ the free audit form ======
+# The only live third-party dependency on the site, and the only place where a
+# mistake is silent: the page renders, the button says Sent, and the lead is
+# gone. Every check below exists because that failure is invisible.
+import shell  # noqa: E402  (check 18 already put .build on sys.path)
+
+FORM_HOST = "https://api.web3forms.com"
+IGLISI_KEY = "b8cb1417-7408-4af4-a7da-9c2a163735fc"   # watch.al's. Not ours.
+KEY_RE = r"[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}"
+start_html = read(os.path.join(ROOT, "start", "index.html"))
+
+# 22. the key is real, is OURS, and actually reached the page ---------------
+if not re.fullmatch(KEY_RE, shell.WEB3FORMS_KEY, re.I):
+    findings.append("[form] shell.WEB3FORMS_KEY is still a placeholder. Create a "
+                    "key at web3forms.com for minarank and paste it into shell.py")
+elif shell.WEB3FORMS_KEY.lower() == IGLISI_KEY:
+    findings.append("[form] shell.WEB3FORMS_KEY is watch.al's key. One key, one "
+                    "form, one inbox: minarank needs its own")
+elif start_html.count('value="' + shell.WEB3FORMS_KEY + '"') != 1:
+    # set the constant, forget to rerun gen_docs, ship the placeholder
+    findings.append("[form] the key is in shell.py but not in the rendered page. "
+                    "Re-run gen_docs.py")
 
 # 23. every form control is labelled and described -------------------------
 for p in all_pages:
     html = read(p)
     ids = set(re.findall(r'\bid="([^"]+)"', html))
     for tag in re.findall(r"<input\b[^>]*>|<textarea\b[^>]*>|<select\b[^>]*>", html):
-        if re.search(r'type="(hidden|submit)"', tag):
+        if re.search(r'type="(hidden|submit|button)"', tag):
             continue
-        # botcheck is Web3Forms' fixed honeypot name. It still carries a real
-        # label, but there is nothing to describe: no human should reach it,
-        # and it has neither a hint nor an error state.
+        # The honeypot is display:none, so it is out of the accessibility tree
+        # and there is nothing to label. It must NEVER be merely off-screen:
+        # that version is reachable in a screen reader's browse mode, and a
+        # blind visitor who ticks it gets their lead binned silently.
         if 'name="botcheck"' in tag:
+            if "af-hp" not in tag:
+                findings.append(f"[form] {rel(p)}: the honeypot is not .af-hp")
+            if "style=" in tag:
+                findings.append(f"[form] {rel(p)}: the honeypot uses a style "
+                                f"attribute, which style-src 'self' blocks")
             continue
         fid = re.search(r'\bid="([^"]+)"', tag)
         if not fid:
@@ -382,29 +403,139 @@ for p in all_pages:
                     findings.append(f"[a11y] {rel(p)}: #{fid.group(1)} describes "
                                     f"#{ref}, which does not exist")
 
-# 24. the form's host is allowed in the CSP --------------------------------
-# Both directives, not one: form-action governs the no-JS native POST and
-# connect-src governs the fetch. Missing either kills one of the two paths.
+# 24. the CSP lets the form reach that host, in BOTH directives ------------
+# form-action governs the no-JS native POST and connect-src governs the fetch.
+# Missing either kills exactly one of the two paths, and it will be the one
+# nobody happens to be testing.
 headers = read(os.path.join(ROOT, "_headers"))
 for p in all_pages:
     for act in re.findall(r'<form\b[^>]*\baction="(https?://[^"/]+)', read(p)):
         for directive in ("form-action", "connect-src"):
             d = re.search(directive + r" ([^;]*);", headers)
-            if not d or act not in d.group(1):
-                findings.append(f"[csp] {act} is not allowed in {directive}")
+            if not d:
+                findings.append(f"[csp] _headers has no {directive}")
+            elif act not in d.group(1).split():
+                findings.append(f"[csp] {directive} does not allow {act}, so the "
+                                f"audit form is blocked")
 
-# 25. one promise, in one place -------------------------------------------
-# /start/ promised "a day or two" while the form promised 24 hours. The
-# turnaround is one constant now, and no page may state a different one.
-RIVALS = [r"a day or two", r"\bwithin \d+ hours\b", r"\bsame day\b",
-          r"\b\d+ working days?\b", r"\bnext day\b"]
+# 25. one promise, stated identically wherever it is claimed ---------------
+# /start/ promised "a day or two" in 2 places while the form promised 24
+# hours. text_of strips <svg>, so path data like "M8 24 H152" cannot match.
+RIVAL = re.compile(
+    r"\b(?:a day or two|a couple of days|same day|next day|by tomorrow|"
+    r"within \d+\s*(?:working |business )?(?:hour|day|week)s?|"
+    r"\d+\s*(?:working|business)\s*days?|\d+\s?h\b|"
+    r"(?:one|two|three|four|five)\s+(?:working |business )?(?:hours?|days?))", re.I)
 for p in all_pages:
-    body = text_of(read(p))
-    for pat in RIVALS:
-        for hit in re.findall(pat, body, re.I):
-            if hit.lower() not in shell.TURNAROUND.lower():
-                findings.append(f"[promise] {rel(p)} says {hit!r}, "
-                                f"but the turnaround is {shell.TURNAROUND!r}")
+    for m in RIVAL.finditer(text_of(read(p))):
+        if m.group(0).lower() != shell.TURNAROUND.lower():
+            findings.append(f"[promise] {rel(p)} says {m.group(0)!r}, and the site "
+                            f"promises {shell.TURNAROUND!r}")
+# and it must actually be stated: a page that quietly drops it also passes the
+# check above, which is the failure mode of every negative-only rule
+said = start_html.lower().count(shell.TURNAROUND.lower())
+if said < 3:
+    findings.append(f"[promise] start/index.html states the turnaround {said} "
+                    f"time(s). The standfirst, the offer and the confirmation "
+                    f"all need it")
+
+# 26. the shape of the form itself -----------------------------------------
+# Four defects shipped here once. Each line below is one of them.
+forms = re.findall(r"(?s)<form\b.*?</form>", start_html)
+if len(forms) != 1:
+    findings.append(f"[form] start/index.html has {len(forms)} forms, expected 1")
+else:
+    f = forms[0]
+    if 'method="POST"' not in f:
+        findings.append("[form] no method=POST, so a no-JS submit would put every "
+                        "field in the URL")
+    if "novalidate" in f:
+        findings.append("[form] novalidate is in the markup, so a JS-off visitor "
+                        "can post an empty form. js/main.js must set it instead")
+    if 'name="botcheck"' not in f:
+        findings.append("[form] no botcheck honeypot")
+    if 'name="website"' in f:
+        findings.append("[form] a field is named 'website', which one site in this "
+                        "workspace and half the spam filters read as a honeypot. "
+                        "Use 'url', which is also the CSV column")
+    for col in ("url", "name"):   # Minafy's batch skips any row missing either
+        if f'name="{col}"' not in f:
+            findings.append(f"[form] no '{col}' field. Minafy's batch CSV needs it")
+    order = re.findall(r'name="(url|name|category|city)"', f)
+    if order != ["url", "name", "category", "city"]:
+        findings.append(f"[form] field order is {order}. Web3Forms lists fields in "
+                        f"submission order, so this is what makes the notification "
+                        f"a paste-ready CSV row")
+    r = re.search(r'name="redirect" value="([^"]+)"', f)
+    if not r:
+        findings.append("[form] no redirect, so a no-JS visitor is left on "
+                        "Web3Forms' own thank-you page")
+    elif not r.group(1).endswith("#sent"):
+        findings.append(f"[form] the redirect is {r.group(1)}. Without the #sent "
+                        f"fragment the :target reveal never fires and a JS-off "
+                        f"visitor comes back to a blank form")
+    elif not r.group(1).startswith(shell.SITE):
+        findings.append(f"[form] the redirect leaves the site: {r.group(1)}")
+    if start_html.index("af-done") > start_html.index('class="af"'):
+        findings.append("[form] the confirmation comes after the form, so the "
+                        "no-JS reveal needs :has(). Put it before and use ~")
+
+    # Browsers compile a pattern attribute with the regex `v` flag, where an
+    # unescaped / or - inside a character class is a SYNTAX ERROR. A pattern
+    # that fails to compile is not reported: it is ignored, so the field
+    # silently accepts anything. This shipped once, accepting "not a website".
+    for pat in re.findall(r'\bpattern="([^"]+)"', f):
+        try:
+            re.compile(pat)
+        except re.error as e:
+            findings.append(f"[form] pattern does not compile at all: {e}")
+            continue
+        for cls in re.findall(r"\[\^?((?:\\.|[^\]\\])*)\]", pat):
+            # '/' is reserved in v mode wherever it appears in a class
+            if re.search(r"(?<!\\)/", cls):
+                findings.append(f"[form] pattern has an unescaped '/' inside "
+                                f"[{cls}]")
+            # a LITERAL '-' must be escaped; a-z is a range and is fine, so
+            # only leading, trailing and doubled dashes are the hazard
+            if re.match(r"-", cls) or re.search(r"(?<!\\)-$", cls) \
+                    or re.search(r"(?<!\\)--", cls):
+                findings.append(f"[form] pattern has a literal '-' inside "
+                                f"[{cls}] that is not escaped")
+
+# 27. the one CTA is identical on every banded page ------------------------
+# check 7 diffs the SHARED blocks and check 11 strips the band, so without
+# this nothing compares the 13 copies of the call to action.
+ref = re.search(r'(?s)<p class="band-actions">.*?</p>',
+                read(os.path.join(ROOT, "geo", "index.html")))
+if not ref or shell.AUDIT_URL not in ref.group(0):
+    findings.append(f"[band] geo's band CTA does not point at {shell.AUDIT_URL}")
+else:
+    for p in all_pages:
+        html = read(p)
+        if 'class="band' not in html:
+            continue                       # 404.html has no band, deliberately
+        got = re.search(r'(?s)<p class="band-actions">.*?</p>', html)
+        if not got:
+            findings.append(f"[band] {rel(p)} has a band with no band-actions")
+        elif got.group(0) != ref.group(0):
+            findings.append(f"[band] {rel(p)} band-actions differs from geo")
+
+# 28. the generator, the script and the sheet still agree ------------------
+# A rename in one of the three produces a page that looks finished and does
+# nothing at all.
+js_src = read(os.path.join(ROOT, "js", "main.js"))
+css_src = read(os.path.join(ROOT, "css", "main.css"))
+for hook, src, where in [("audit-form", js_src, "js/main.js"),
+                         ("af-send-text", js_src, "js/main.js"),
+                         ("sent=1", js_src, "js/main.js"),
+                         ("novalidate", js_src, "js/main.js"),
+                         ("af-say", js_src, "js/main.js"),
+                         (".af-done:target ~ .af", css_src, "css/main.css"),
+                         (".is-sent", css_src, "css/main.css"),
+                         (".af-hp { display: none; }", css_src, "css/main.css"),
+                         ("was-validated", css_src, "css/main.css")]:
+    if hook not in src:
+        findings.append(f"[form] {where} no longer mentions {hook!r}")
 
 # ------------------------------------------------------------------- report
 print(f"pages checked: {len(all_pages)}")
