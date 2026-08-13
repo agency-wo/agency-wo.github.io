@@ -11,6 +11,26 @@
    is fine for large type, the wordmark's last letter, and marks.
    ========================================================================== */
 
+/* Cross-document transitions. One at-rule, no JavaScript, no CSP allowance:
+   it is a CSS at-rule in a same-origin sheet, and a browser that does not know
+   it ignores it, so the degradation is literally nothing.
+
+   OPTED IN, not opted out. The blanket reduced-motion reset further down uses
+   *, *::before, *::after, which does NOT match ::view-transition-old(root) or
+   ::view-transition-new(root): those live in a separate pseudo tree on the
+   root. Declaring this unconditionally would animate for exactly the people
+   who asked it not to.
+
+   The header and the WhatsApp button are named because a sticky and a fixed
+   element are otherwise part of the root snapshot and cross-fade against
+   themselves, which is visible double-header ghosting for the whole
+   transition. */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition { navigation: auto; }
+  .site-head { view-transition-name: site-head; }
+  .wa { view-transition-name: wa; }
+}
+
 /* -- shell ---------------------------------------------------------------- */
 .wrap { max-width: var(--page-max); margin-inline: auto; padding-inline: var(--margin); }
 .grid { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--gutter); }
@@ -74,11 +94,20 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
 /* 404.html is hand-authored and carries no header, footer or band, which is
    why gate check 7 exempts it. Its styles were an inline <style> block until
    style-src 'self' was pointed at them. */
-.err { min-height: 88vh; display: flex; flex-direction: column;
-  justify-content: center; max-width: var(--page-max);
-  margin-inline: auto; padding-inline: var(--margin); }
+/* It has a header and a footer now, so it is a page rather than a splash: the
+   88vh centring it used to do would push the band off the bottom. */
+.err { max-width: var(--page-max); margin-inline: auto;
+  padding-inline: var(--margin); padding-block: var(--pad-hero) var(--pad-major); }
+/* The 404's ten results, with nothing on any of them. .serp is reused
+   verbatim: it needs a positioned ancestor and nothing else, so this box is
+   the entire cost and the hero's own rules cannot regress.
+
+   The min-height is in em and explicit, so the box does not depend on the
+   display font having loaded and cannot shift when it does. */
+.err-box { position: relative; min-height: 3.4em;
+  font-size: clamp(3rem, 10vw, 8rem); }
 .err h1 { font-family: var(--font-display); font-weight: 500;
-  font-size: clamp(3rem, 10vw, 8rem); line-height: 1; }
+  font-size: 1em; line-height: 1; position: relative; z-index: 1; }
 .err h1 span { color: var(--red); }
 .err p { color: var(--slate); margin-top: var(--s-5); max-width: 40ch; }
 .err a { color: var(--ink); font-weight: 700; }
@@ -826,3 +855,38 @@ button.btn:disabled:hover { background: none; color: var(--ink); }
 @media (max-width: 419px) {
   .marks { --mscale: 0.56; }
 }
+
+
+/* ==========================================================================
+   PRINT
+   This studio sends PDFs, so its own pages should survive being one. Last in
+   the file, so it wins on source order without a single !important.
+   ========================================================================== */
+@media print {
+  /* A green circle on every printed page is the worst thing here, and a nav
+     that cannot be clicked is the second. */
+  .wa, .site-head, .skip, .foot-index, .menu, .af, .side-toc { display: none; }
+
+  /* The ink band loses its background. A full-bleed #13161C rectangle across
+     a sheet of paper is toner nobody consented to. */
+  .band { background: none; color: var(--ink); margin-top: var(--s-8);
+    padding-block: var(--s-6) 0; }
+  .band-note, .band-alt, .band-alt a, .foot-meta { color: var(--slate); }
+  .band-cta { color: var(--ink); border: 0; padding: 0;
+    border-bottom: 1px solid var(--ink); }
+
+  /* The form goes but its alternatives stay: on paper the address and the
+     number are the only part anybody can act on. */
+  .af-h, .af-lead, .af-alt { display: block; }
+
+  /* External only. Every internal href is root-relative, so this costs
+     nothing to scope, and printing URLs after internal links would turn every
+     side list into parentheses. */
+  .prose a[href^="http"]::after, .band-alt a[href^="http"]::after {
+    content: " (" attr(href) ")"; font-size: 0.85em; color: var(--slate); }
+
+  .prose, .studio-prose, .side { grid-column: 1 / 13; }
+  .gsc, .plate { break-inside: avoid; }
+  h2, h3 { break-after: avoid; }
+}
+

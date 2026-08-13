@@ -51,6 +51,8 @@ SRC = {
     "BAND_CTA": "63be028a",
     "CRUMB_HOME": "8f3852d3",
     "ERR_BACK": "d7504791",
+    "ERR_BAND_H": "8500f0e4",
+    "ERR_BAND_NOTE": "184903aa",
     "ERR_SAY": "212d4f03",
     "ERR_TITLE": "8aa30e6c",
     "FOOT_COPYRIGHT": "387ea80f",
@@ -206,3 +208,5 @@ ERR_SAY = "Questa pagina non si è mai posizionata. Non esiste."
 # "In cima" is both the top of the page this link returns you to and the top of
 # the results the sentence above just denied, which is the pun the English has.
 ERR_BACK = "Torna in cima"
+ERR_BAND_H = "Cerchi qualcosa che costruiamo?"
+ERR_BAND_NOTE = "Mandaci il tuo indirizzo e ti rispondiamo con un audit."

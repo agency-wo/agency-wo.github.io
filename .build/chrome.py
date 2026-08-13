@@ -94,3 +94,8 @@ JS_ERROR = ("That did not send. Use the email or the WhatsApp link below and "
 ERR_TITLE = "404"
 ERR_SAY = "This page never ranked. It does not exist."
 ERR_BACK = "Back to the top"
+# The 404 carries the band like every other page: check 27 only skips a page
+# with no band at all, and somebody who is lost is exactly who should be
+# offered the audit rather than shown a dead end.
+ERR_BAND_H = "Looking for something we build?"
+ERR_BAND_NOTE = "Send us your address and we will send back an audit."

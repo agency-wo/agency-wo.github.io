@@ -169,13 +169,24 @@ def block(html, name):
     return m.group(1) if m else None
 
 
+# The language switcher lives INSIDE SHARED:FOOTER and is per-page by design:
+# it points at the equivalent page, so no two pages can carry the same one.
+# Byte-comparing the block without blanking it would fail all 51 pages the day
+# i18n.LANGS becomes 3 languages, which is a landmine this file laid for itself
+# and which shell.py's own docstring already claims is handled.
+_LANG_NAV = re.compile(r'(?s)<nav class="foot-lang".*?</nav>')
+
+
+def chrome_block(html, name):
+    b = block(html, name)
+    return None if b is None else _LANG_NAV.sub("", b)
+
+
 ref = read(os.path.join(ROOT, "geo", "index.html"))
 for name in ("HEADER", "FOOTER"):
-    want = block(ref, name)
+    want = chrome_block(ref, name)
     for p in all_pages:
-        if rel(p) == "404.html":
-            continue
-        got = block(read(p), name)
+        got = chrome_block(read(p), name)
         if got is None:
             findings.append(f"[shared] {rel(p)} has no SHARED:{name}")
         elif got != want:

@@ -52,6 +52,8 @@ SRC = {
     "BAND_CTA": "63be028a",
     "CRUMB_HOME": "8f3852d3",
     "ERR_BACK": "d7504791",
+    "ERR_BAND_H": "8500f0e4",
+    "ERR_BAND_NOTE": "184903aa",
     "ERR_SAY": "212d4f03",
     "ERR_TITLE": "8aa30e6c",
     "FOOT_COPYRIGHT": "387ea80f",
@@ -209,3 +211,5 @@ ERR_SAY = "Kjo faqe nuk u rendit kurrë. Nuk ekziston."
 # "Në krye" is both the top of the page this link returns you to and the top of
 # the results the sentence above just denied, which is the pun the English has.
 ERR_BACK = "Kthehu në krye"
+ERR_BAND_H = "Po kërkon diçka që e ndërtojmë ne?"
+ERR_BAND_NOTE = "Na dërgo adresën dhe të kthejmë një auditim."

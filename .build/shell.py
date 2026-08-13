@@ -233,9 +233,20 @@ def head(page, lang):
     construction rather than something a check has to hope for.
     """
     url = SITE + i18n.url_for(page["url"], lang)
-    alts = "".join(
+    # A noindex page gets NEITHER a canonical nor alternates. A canonical on a
+    # 404 is a real defect, and hreflang to /it/404.html would advertise files
+    # that do not exist: GitHub Pages serves one 404 per origin.
+    if page.get("noindex"):
+        head_url = (f'{NL}  <meta name="robots" content="noindex">')
+    else:
+        head_url = f'{NL}  <link rel="canonical" href="{url}">'
+    alts = "" if page.get("noindex") else "".join(
         f'{NL}  <link rel="alternate" hreflang="{hl}" href="{href}">'
         for hl, href in alternates(page["url"]))
+    # No JSON-LD at all rather than an empty block: check 4 pins a sha256 per
+    # inline ld+json, and a 404 must not carry structured data to be pinned.
+    ld = (f'{NL}  <script type="application/ld+json">{NL}{page["jsonld"]}{NL}'
+          f'  </script>{NL}') if page.get("jsonld") else ""
     return f'''<!DOCTYPE html>
 <html lang="{i18n.HTML_LANG[lang]}">
 <head>
@@ -243,7 +254,7 @@ def head(page, lang):
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{page["title"]}</title>
   <meta name="description" content="{page["description"]}">
-  <link rel="canonical" href="{url}">{alts}
+{head_url}{alts}
   <meta name="theme-color" content="#F0F1F3">
 
   <meta property="og:type" content="website">
@@ -265,10 +276,7 @@ def head(page, lang):
   <link rel="stylesheet" href="/css/fonts.css">
   <link rel="stylesheet" href="/css/main.css">
 
-  <script type="application/ld+json">
-{page["jsonld"]}
-  </script>
-</head>
+{ld}</head>
 <body>
   <a class="skip" href="#main">{ch(lang).SKIP}</a>
 '''
@@ -329,6 +337,8 @@ NL = chr(10)
 
 
 def switcher(lang, page_url):
+    # page_url is None on the 404, which has no equivalent in another language
+    # and must not link at one.
     """The language switcher, from the SAME alternates() the head used.
 
     Static <a> elements, no script: the CSP has no unsafe-inline and rule 32
@@ -341,6 +351,8 @@ def switcher(lang, page_url):
     The current language is a span, not a link. A link to the page you are on
     is furniture.
     """
+    if page_url is None or len(i18n.LANGS) < 2:
+        return ""
     c = ch(lang)
     items = []
     for lg, href in alternates(page_url):
@@ -352,14 +364,12 @@ def switcher(lang, page_url):
             items.append(f'            <span aria-current="page">{name}</span>')
         else:
             items.append(f'            <a href="{path}" hreflang="{lg}">{name}</a>')
-    if len(i18n.LANGS) < 2:
-        return ""
     inner = NL.join(items)
     return (f'          <nav class="foot-lang" aria-label="{c.ARIA_LANG}">{NL}'
             f'{inner}{NL}          </nav>{NL}')
 
 
-def footer(lang, page_url, cta_heading=None, cta_note=None):
+def footer(lang, page_url=None, cta_heading=None, cta_note=None):
     """The single ink band: the closing CTA, the site index and the language
     switcher, so a page has exactly one dark block and exactly one ask."""
     NL = chr(10)
