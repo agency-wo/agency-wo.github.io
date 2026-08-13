@@ -689,3 +689,53 @@ body::after { content: ""; position: fixed; inset: 0; z-index: 99;
   .workshop-copy { grid-column: 1 / 13; }
   .workshop-fig { grid-column: 1 / 13; max-width: 170px; margin-top: var(--s-6); }
 }
+
+/* -- PLATES · real screenshots, framed in the print language ---------------- */
+.plate { margin: 0; position: relative; }
+.plate-frame { position: relative; display: block; border: 1px solid var(--bone);
+  padding: 8px; background: var(--paper); }
+/* corner registration ticks, same 6px language as the drawn figure plates */
+.plate-frame::before, .plate-frame::after { content: ""; position: absolute;
+  width: 6px; height: 6px; pointer-events: none; }
+.plate-frame::before { top: -1px; left: -7px; border-top: 1px solid var(--bone);
+  border-left: 1px solid var(--bone); }
+.plate-frame::after { bottom: -1px; right: -7px;
+  border-bottom: 1px solid var(--bone); border-right: 1px solid var(--bone); }
+.plate img { width: 100%; height: auto; display: block; }
+.plate figcaption { margin-top: var(--s-3); font-size: 0.625rem;
+  letter-spacing: var(--track-label); text-transform: uppercase;
+  color: var(--slate); font-weight: 500; }
+.plate figcaption b { color: var(--ink); font-weight: 500; }
+
+/* the proof block: the one concrete result, on the homepage */
+.result { border-top: 2px solid var(--ink); padding-top: var(--s-6);
+  margin-top: var(--s-8); }
+.result-grid { align-items: start; row-gap: var(--s-7); }
+.result-copy { grid-column: 1 / 7; }
+.result-plate { grid-column: 8 / 13; }
+.result h3 { font-family: var(--font-display); font-weight: 500;
+  font-size: var(--fs-h3); margin-bottom: var(--s-4); max-width: 20ch; }
+.result p { color: var(--slate); margin-bottom: var(--s-4); text-wrap: pretty; }
+.result p strong { color: var(--ink); }
+.result-try { border-left: 2px solid var(--coral); padding-left: var(--s-4);
+  margin-top: var(--s-5); }
+.result-try p { margin-bottom: 0; color: var(--ink); }
+.result-stamp { font-size: var(--fs-label); letter-spacing: var(--track-label);
+  text-transform: uppercase; color: var(--slate); margin-top: var(--s-4); }
+
+/* work page: a plate per client */
+.case { border-top: 1px solid var(--bone); padding-top: var(--s-6);
+  margin-top: var(--s-9); }
+.case:first-of-type { margin-top: var(--s-7); }
+.case-grid { align-items: start; row-gap: var(--s-6); }
+.case-copy { grid-column: 1 / 7; }
+.case-plate { grid-column: 8 / 13; }
+.case h2 { font-size: clamp(1.75rem, 3.2vw, 2.75rem); margin-bottom: var(--s-2); }
+.case-meta { font-size: var(--fs-label); letter-spacing: var(--track-label);
+  text-transform: uppercase; color: var(--slate); margin-bottom: var(--s-5); }
+.case p { color: var(--slate); margin-bottom: var(--s-4); text-wrap: pretty; }
+.case p strong { color: var(--ink); }
+
+@media (max-width: 999px) {
+  .result-copy, .result-plate, .case-copy, .case-plate { grid-column: 1 / 13; }
+}

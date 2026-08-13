@@ -15,9 +15,21 @@ from gen_pages import write  # noqa: E402
 S = shell.SITE
 TICK = shell.TICK
 
+
+def plate(src, w, h, alt, label, sub_label, eager=False):
+    """A real screenshot, framed in the same print language as the drawings."""
+    loading = "" if eager else ' loading="lazy" decoding="async"'
+    return (f'<figure class="plate">'
+            f'<span class="plate-frame">'
+            f'<img src="/assets/plates/{src}" width="{w}" height="{h}" '
+            f'alt="{alt}"{loading}>'
+            f'</span>'
+            f'<figcaption><b>{label}</b> &#183; {sub_label}</figcaption>'
+            f'</figure>')
+
 # TODO(founder): confirm the founder's name and the profile URLs below before
 # this ships. sameAs pointing at profiles that do not exist is inert.
-FOUNDER_NAME = "Essi Papajorgji"
+FOUNDER_NAME = "Henri Sila"
 FOUNDER_SAMEAS = []  # e.g. ["https://www.linkedin.com/in/...", "https://github.com/..."]
 
 
@@ -60,10 +72,10 @@ systems_body = f'''
 
       <p class="finding">
         <span class="finding-label">The finding</span>
-        Most small businesses run on software that was built for a different business.
-        The gap gets filled by hand: a notebook, a spreadsheet, a message to yourself,
-        somebody remembering. That filler is invisible on any balance sheet and it is
-        usually the most expensive thing in the building.
+        Most small businesses run on software built for a different business. The gap
+        gets filled by hand: a notebook, a spreadsheet, a message to yourself, somebody
+        remembering. Nobody puts that on a balance sheet, and it is usually the most
+        expensive thing in the building.
       </p>
 
       <div class="grid">
@@ -420,10 +432,9 @@ start_body = f'''
             A paragraph is plenty.</p>
 
           <h2>WhatsApp</h2>
-          <!-- TODO(founder): add the WhatsApp number, digits only with country code -->
           <p>If it is easier to type than to write an email, message the studio directly.
             Reply times are the same.</p>
-          <p><a class="cta" href="https://wa.me/">Message on WhatsApp <span class="arrow" aria-hidden="true">&#8599;</span></a></p>
+          <p><a class="cta" href="https://wa.me/355675716090">Message on WhatsApp <span class="arrow" aria-hidden="true">&#8599;</span></a></p>
 
           <h2>Rather talk?</h2>
           <p>Twenty minutes, no slides, no obligation. Bring the site and the problem.
@@ -502,95 +513,118 @@ work_body = f'''
       <header class="page-head">
 {shell.crumbs("Work")}
         <p class="eyebrow">Work</p>
-        <h1 class="page-title">Named clients, and what was actually built.</h1>
-        <p class="standfirst"><strong>Rankings and ad accounts stay confidential.</strong>
-          What is built in public can be shown in public, so this page shows the
-          engineering rather than the dashboards.</p>
+        <h1 class="page-title">Four businesses, named, with what we built.</h1>
+        <p class="standfirst"><strong>Rankings and ad accounts stay private.</strong>
+          What is built in public can be shown in public, so this page shows the sites
+          themselves, and the one result we can prove.</p>
       </header>
+
+      <article class="case">
+        <div class="grid case-grid">
+          <div class="case-copy">
+            <h2>Iglisi Watch</h2>
+            <p class="case-meta">Durres, Albania &#183; watch.al &#183; Site, shop and shop software</p>
+            <p>A family watch shop that repairs and sells. They had a trade, a workshop
+              and no way for anyone outside Durres to find them.</p>
+            <p><strong>Search for watch repair in Durres, in English, Albanian or
+              Italian, and they come back first.</strong> Usually they hold the top three
+              results outright. Ask ChatGPT, Claude or Perplexity the same question and
+              those name the shop too, with the street, the hours and the WhatsApp
+              number.</p>
+            <p>They are the only watch business in Durres with a website that ranks at
+              all. The competition is directory listings and Facebook pages. We say that
+              plainly because it is the useful part: the opening was sitting there and
+              nobody had taken it.</p>
+            <p>The site runs in three languages and looks after itself. Add one watch and
+              the product pages, the shop, the sitemap and every number written into the
+              text all update together, in all three languages. Behind it there is a
+              system for the workshop and the counter, and a wire between the two so a
+              watch sold over the counter stops being offered on the website.</p>
+            <p class="payoff">{TICK}
+              First for watch repair in Durres, and the answer the AI assistants give.</p>
+            <p class="result-stamp">Checked August 2026. Rankings move, so check it
+              yourself: ask an AI assistant where to repair a watch in Durres.</p>
+          </div>
+          <div class="case-plate">
+            {plate("iglisi-shop.webp", 1120, 777,
+                   "The Iglisi Watch shop page, showing watches for sale with prices in euro and lek",
+                   "PLATE 01", "IGLISI WATCH &#183; WATCH.AL", eager=True)}
+          </div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="grid case-grid">
+          <div class="case-copy">
+            <h2>Victoria Boutique</h2>
+            <p class="case-meta">Durres, Albania &#183; victoriaboutique.org &#183; Site and self-publishing</p>
+            <p>A fashion boutique bringing Greek labels into Albania. The site is built
+              around the clothes and the shop itself rather than around stock photography,
+              and it runs in Albanian, English and Italian.</p>
+            <p>The owner adds and edits pieces herself, from a phone, with no monthly
+              licence and nobody to call. This is the deployment where a one-off build
+              became something we could give the next client.</p>
+          </div>
+          <div class="case-plate">
+            {plate("victoria-home.webp", 900, 625,
+                   "The Victoria Boutique homepage, an editorial layout with the shop window photographed",
+                   "PLATE 02", "VICTORIA BOUTIQUE &#183; VICTORIABOUTIQUE.ORG")}
+          </div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="grid case-grid">
+          <div class="case-copy">
+            <h2>Intimo Bruna</h2>
+            <p class="case-meta">Durres, Albania &#183; intimobruna.com &#183; Site and self-publishing</p>
+            <p>A lingerie shop. Hand-built in three languages, with the fonts served from
+              its own domain so nothing waits on anybody else, and a language switcher
+              that still works with JavaScript turned off.</p>
+            <p>Orders arrive by WhatsApp, which is how this market actually buys, so the
+              site is built to get someone into that conversation rather than through a
+              checkout they will abandon.</p>
+          </div>
+          <div class="case-plate">
+            {plate("bruna-home.webp", 900, 625,
+                   "The Intimo Bruna homepage, showing product categories with photography",
+                   "PLATE 03", "INTIMO BRUNA &#183; INTIMOBRUNA.COM")}
+          </div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="grid case-grid">
+          <div class="case-copy">
+            <h2>Pro Affy</h2>
+            <p class="case-meta">English language &#183; proaffy.com &#183; Lead generation and copy</p>
+            <p>Different work from the other three: this one is about words and follow-up
+              rather than pictures. Heating and cooling firms do not lose jobs because
+              their website is ugly, they lose them because somebody else answered the
+              phone first.</p>
+            <p>So the site sells a system rather than a service, states a guarantee
+              plainly, and is built to turn an enquiry into a booked visit quickly.</p>
+          </div>
+          <div class="case-plate">
+            {plate("proaffy-home.webp", 900, 625,
+                   "The Pro Affy homepage, a conversion-focused layout for HVAC lead generation",
+                   "PLATE 04", "PRO AFFY &#183; PROAFFY.COM")}
+          </div>
+        </div>
+      </article>
 
       <div class="grid">
         <div class="prose">
-
-          <ol class="ledger">
-            <li>
-              <span class="ledger-n">01</span>
-              <div>
-                <h3>Iglisi Watch</h3>
-                <p>A watch repair and resale business in Albania. A catalogue site in
-                  English, Italian and Albanian that maintains itself: add one watch and
-                  the product pages, shop indexes, brand pages, sitemap and every
-                  catalogue-derived number in the prose update together, in three
-                  languages, with reciprocal language tags.</p>
-                <p>Behind it, an operations system for the workshop and counter, and a
-                  wire between the two so a watch sold over the counter stops being
-                  offered on the website.</p>
-                <p><strong>Evidenced:</strong> 494 pages, 469 sitemap URLs with 1,872
-                  language alternates checked reciprocal on every build, 631 published
-                  price pairs verified against the real catalogue, 450 movements
-                  available offline at the bench.</p>
-                <p class="payoff">{TICK}
-                  A site that cannot go stale about its own inventory.</p>
-              </div>
-            </li>
-            <li>
-              <span class="ledger-n">02</span>
-              <div>
-                <h3>Intimo Bruna</h3>
-                <p>A lingerie retailer. A trilingual site in Albanian, Italian and
-                  English, hand-built, no framework, with self-hosted fonts and a
-                  language switcher that works with JavaScript turned off. Publishing is
-                  done by the owner from a phone panel.</p>
-              </div>
-            </li>
-            <li>
-              <span class="ledger-n">03</span>
-              <div>
-                <h3>Victoria Boutique</h3>
-                <p>A fashion boutique running the same self-publishing panel, extended
-                  with edit and remove as well as add. This is the deployment that turned
-                  a bespoke build into a repeatable product.</p>
-              </div>
-            </li>
-            <li>
-              <span class="ledger-n">04</span>
-              <div>
-                <h3>Pro Affy</h3>
-                <p>Lead generation for HVAC companies, in English. A conversion-led site
-                  with a published guarantee, a blog, and a funnel built around fast
-                  response rather than volume.</p>
-              </div>
-            </li>
-          </ol>
-
-          <!-- TODO(founder): confirm in writing what each client permits published.
-               Add per-client deep pages at /work/<slug>/ once agreed. -->
-
           <h2>Why there are no dashboards here</h2>
-          <p>Ranking positions, ad accounts and analytics belong to the client and stay
+          <p>Ranking charts, ad accounts and analytics belong to the client and stay
             behind their login. We could describe them, but a number nobody can check is
-            worth less than nothing on a site whose whole argument is proof. So this
-            page lists what was built, which you can go and look at, and the
-            <a href="/">homepage</a> carries the rest of the argument.</p>
+            worth less than nothing on a site whose whole argument is proof.</p>
+          <p>So this page shows the sites, which you can go and look at, and the one
+            result you can verify in about ten seconds from where you are sitting.</p>
           <p>References available on request, from clients who have agreed to give them.</p>
-
         </div>
-
-        <aside class="side" aria-label="At a glance">
-          <div class="side-block">
-            <p class="side-h">Common thread</p>
-            <p>Every one of these is a small business that now updates its own website,
-              in its own languages, without calling anybody.</p>
-          </div>
-          <div class="side-block">
-            <p class="side-h">Related</p>
-            <ul class="side-list">
-              <li><a href="/systems/">Systems: how these are built</a></li>
-              <li><a href="/web-design/">Web design: the sites in front</a></li>
-            </ul>
-          </div>
-        </aside>
       </div>
-{shell.tail("Your business, running itself a little more.")}'''
+{shell.tail("Your business, easier to find than it was.")}'''
 
 work_ld = graph(
     {"@type": "CollectionPage", "@id": WORK_URL + "#webpage", "url": WORK_URL,

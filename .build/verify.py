@@ -142,6 +142,17 @@ for name in ("HEADER", "FOOTER"):
         elif got != want:
             findings.append(f"[shared] {rel(p)} SHARED:{name} differs from geo/index.html")
 
+# 7b. every img carries width, height and non-empty alt (no CLS, no silence)
+for p in all_pages:
+    html = read(p)
+    for tag in re.findall(r"<img[^>]*>", html):
+        for attr in ("width", "height"):
+            if not re.search(attr + r'="\d+"', tag):
+                findings.append(f"[img] {rel(p)} img missing {attr}: {tag[:70]}")
+        m = re.search(r'alt="([^"]*)"', tag)
+        if not m or not m.group(1).strip():
+            findings.append(f"[img] {rel(p)} img missing alt text: {tag[:70]}")
+
 # 8. weight budget ---------------------------------------------------------
 core = ["index.html", "css/tokens.css", "css/fonts.css", "css/main.css", "js/main.js",
         "assets/fonts/clash-display-var.woff2", "assets/fonts/satoshi-var.woff2",

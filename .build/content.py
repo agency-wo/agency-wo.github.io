@@ -111,29 +111,46 @@ SERVICES = [
                        "systems that write answers. What an AI engine actually reads, what we "
                        "change, and what nobody can promise.",
         "og_desc": "When an AI answers, it cites someone. The work of being that someone.",
-        "finding": "Generative engine optimization is the work of making your expertise legible "
-                   "to the systems that write answers. An answer engine does not read your page. "
-                   "It reads a flattened extraction of it: text in document order, headings as "
-                   "structure, structured data as assertions, links as corroboration. Everything "
-                   "else is discarded.",
+        "finding": "Ask ChatGPT for a good watch repair shop in Durres and it names two or "
+                   "three. Being one of them is not luck. These systems read a website in a "
+                   "very particular way, and most sites are invisible to them for reasons "
+                   "that are boring and fixable. That is the whole job.",
         "sections": [
-            ("What actually survives extraction", [
-                "<p>Most of what a designer labours over does not reach the model. Position, "
-                "colour, spacing and interaction carry meaning to a human and nothing at all to "
-                "a retrieval system. What survives, roughly in order of weight:</p>",
+            ("We have already done this once", [
+                "<p>Iglisi Watch is a small watch shop in Durres. Ask ChatGPT, Claude or "
+                "Perplexity where to get a watch repaired there and they name it, with the "
+                "street, the opening hours and the WhatsApp number. Search the same thing in "
+                "English, Albanian or Italian and it comes back first, usually holding the "
+                "top three results outright.</p>",
+                "<p>It is the only watch business in Durres with a website that ranks at "
+                "all. The competition is directory listings and Facebook pages. That is "
+                "worth saying plainly, because it is the real lesson: the opening was "
+                "sitting there and nobody had taken it. Most towns and most trades are "
+                "exactly the same today.</p>",
+                '<p><a href="/work/">See what we built for them</a>.</p>',
+            ]),
+            ("What these systems actually read", [
+                "<p>Most of what a designer labours over never reaches the machine. "
+                "Position, colour, spacing and anything that needs a click carry meaning to "
+                "a person and nothing at all to software. What gets through, roughly in "
+                "order of importance:</p>",
                 "<ul>"
-                "<li>The first hundred words under the heading that poses the question.</li>"
-                "<li>The heading tree, read as an outline of the argument.</li>"
-                "<li>Short declarative sentences that name their own subject, rather than "
-                "relying on a pronoun to point at something three paragraphs up.</li>"
-                "<li>Tables and lists, which survive flattening better than prose.</li>"
-                "<li>Structured data, read as assertions about entities.</li>"
-                "<li>Alt text, and the anchor text of outbound links.</li>"
+                "<li>The first hundred words underneath the heading that asks the "
+                "question.</li>"
+                "<li>Your headings, read as an outline of the argument.</li>"
+                "<li>Short, plain sentences that name their own subject, instead of leaning "
+                "on a pronoun and expecting the reader to remember what it meant.</li>"
+                "<li>Tables and lists, which survive better than long paragraphs.</li>"
+                "<li>The hidden labels that tell a machine what your business is, where it "
+                "is and what it sells. In the trade these are called schema.</li>"
+                "<li>The words describing your images, and the words you link out with.</li>"
                 "</ul>",
-                "<p>What does not survive: content injected after load, text baked into images, "
-                "meaning carried only by layout, anything behind a click. Most retrieval "
-                "fetchers do not execute JavaScript, which is the entire argument on our "
-                '<a href="/web-design/">web design page</a> restated as mechanism.</p>',
+                "<p>What does not get through: anything loaded in after the page appears, "
+                "words sitting inside a picture, meaning carried only by where things sit on "
+                "screen, and anything behind a click. Most of these systems never run the "
+                "code that builds a modern site, so whatever your page assembles on the fly "
+                "is simply not there. That is the same argument as our "
+                '<a href="/web-design/">web design page</a>, seen from the other side.</p>',
             ]),
         ],
         "ledger": [
@@ -288,27 +305,26 @@ SERVICES = [
         "schema_name": "Meta Ads Management",
         "title": "Meta ads: demand today while the rankings compound",
         "h1": "Ads buy attention. They do not buy patience.",
-        "standfirst": "<strong>Paid reach while organic compounds.</strong> Including the two "
-                      "numbers most agencies will not put in writing: the minimum spend below "
-                      "which hiring anyone is irrational, and what we charge.",
+        "standfirst": "<strong>Customers this week, while the slow work compounds.</strong> "
+                      "Ads find people now. Everything else on this site is playing a longer "
+                      "game, and the two need each other.",
         "description": "Meta ads for small businesses: creative, targeting and measurement on "
-                       "Facebook and Instagram, with a published minimum spend and a flat fee.",
+                       "Facebook and Instagram, charged as a flat fee and never a percentage.",
         "og_desc": "Demand today, rankings tomorrow. With the numbers most agencies hide.",
         "finding": "Paid social is the fastest way to find out whether your offer works. It is "
                    "also the fastest way to spend money proving that it does not. The difference "
                    "is almost never the targeting. It is the offer, the creative, and what "
                    "happens in the ninety seconds after someone clicks.",
         "sections": [
-            ("The two numbers nobody publishes", [
-                "<p><strong>A minimum that makes sense.</strong> Below roughly 300 euro a month "
-                "in ad spend, hiring anyone to manage it is irrational: the management fee eats "
-                "the budget, and there is not enough data to learn from. At that level, run it "
-                "yourself and spend the money on the offer instead. We will tell you that for "
-                "free rather than take the account.</p>",
-                "<p><strong>A flat fee, not a percentage.</strong> Percentage-of-spend pricing "
-                "pays the agency to recommend spending more, which is a conflict of interest "
-                "dressed as alignment. We charge a flat monthly fee for the work, so the advice "
-                "to spend less costs us nothing.</p>",
+            ("How we charge, and why it matters to you", [
+                "<p>Most agencies take a percentage of what you spend. Think about what that "
+                "pays them to recommend. Every conversation about your budget is also a "
+                "conversation about their own invoice, and they are sitting on the other "
+                "side of it.</p>",
+                "<p><strong>We charge a flat monthly fee for the work.</strong> So if the "
+                "honest advice is to spend less this month, or to pause altogether and fix "
+                "the offer first, that advice costs us nothing to give. You should expect to "
+                "hear it at some point, because it is sometimes true.</p>",
             ]),
         ],
         "ledger": [
@@ -327,8 +343,8 @@ SERVICES = [
         ],
         "exclusions": [
             "We do not charge a percentage of your ad spend.",
-            "We do not take accounts below the minimum where our fee would be a tax on a budget "
-            "too small to learn from.",
+            "We do not take on an account where our fee would swallow the budget. If that is "
+            "your situation we will say so, and tell you what to do instead.",
             "We do not claim credit for sales the platform would have gotten anyway. Attribution "
             "is genuinely hard and we would rather explain the uncertainty than hide it.",
             "We do not run ads to a page that will waste the click. We will fix the page first "
@@ -336,10 +352,10 @@ SERVICES = [
         ],
         "faq": [
             ("How much should I spend?",
-             "Enough that the platform can learn, which in practice means a few hundred euro a "
-             "month minimum for a local business, plus whatever the offer justifies once it is "
-             "working. Start small enough that a failed test is survivable and large enough that "
-             "the result means something."),
+             "Start small enough that a bad month does not hurt, and large enough that the "
+             "result tells you something. We work that out with you against your margins and "
+             "what a customer is actually worth, rather than quoting a number before we know "
+             "anything about your business."),
             ("Do ads help my SEO?",
              "Not directly. There is no ranking benefit from spending money with an advertising "
              "platform. Indirectly they help a great deal: traffic, brand searches and the "
@@ -352,9 +368,9 @@ SERVICES = [
         ],
         "fig": "crossover",
         "fig_cap": "FIG. 04 &#183; THE CROSSOVER",
-        "side_note": ("Published, not negotiated",
-                      "Minimum sensible spend: about 300 euro a month. Our fee: flat, monthly, "
-                      "never a percentage of what you spend."),
+        "side_note": ("How we charge",
+                      "A flat monthly fee for the work. Never a percentage of what you "
+                      "spend, because that pays an agency to tell you to spend more."),
         "related": [("/seo/", "SEO: the compounding half"),
                     ("/web-design/", "Web design: where the click lands")],
         "payoff": "Demand today, rankings tomorrow.",
