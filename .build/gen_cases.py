@@ -7,10 +7,10 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import i18n  # noqa: E402
+import l10n  # noqa: E402
 import shell  # noqa: E402
-from clients import CLIENTS  # noqa: E402
-from gen_pages import write  # noqa: E402
-from posts import POSTS  # noqa: E402
+from gen_pages import out, write  # noqa: E402
 
 S = shell.SITE
 NL = chr(10)
@@ -47,19 +47,20 @@ def gsc_figure():
             '</figure>')
 
 
-def writing(c):
+def writing(c, posts, lang):
     """Posts that use this client, derived from posts.py rather than typed.
     Returns "" when there are none, which is why the caller gives it its own
     line: it costs nothing on a client nobody has written about yet."""
-    mine = sorted((p for p in POSTS if p["work"] == c["slug"]),
+    mine = sorted((p for p in posts if p["work"] == c["slug"]),
                   key=lambda p: (p["date"], p["slug"]))
     if not mine:
         return ""
     items = NL.join(
-        f'              <li><a href="/blog/{p["slug"]}/">{p["title"]}</a></li>'
+        f'              <li><a href="'
+        f'{shell.localise("/blog/" + p["slug"] + "/", lang)}">{p["title"]}</a></li>'
         for p in mine)
     return f'''          <div class="side-block">
-            <p class="side-h">Written about this</p>
+            <p class="side-h">{shell.ch(lang).SIDE_WRITTEN}</p>
             <ul class="side-list">
 {items}
             </ul>
@@ -67,9 +68,16 @@ def writing(c):
 '''
 
 
-def stats(rows):
+def stats(rows, lang):
+    """The separator is moved here and the figure is never re-derived.
+
+    A translator is told to leave these alone precisely so this can do it: a
+    number typed twice is a number that disagrees with itself, and 57,6k on
+    one Italian page beside 57.6k on the next is the watch.al bug l10n.py was
+    written to end.
+    """
     items = NL.join(
-        f'            <li><span class="stat-n">{n}</span>'
+        f'            <li><span class="stat-n">{l10n.dec(n, lang)}</span>'
         f'<span class="stat-l">{l}</span></li>' for n, l in rows)
     return f'''          <ul class="stat-strip">
 {items}
@@ -78,18 +86,29 @@ def stats(rows):
 
 # ------------------------------------------------------------------ client --
 
-def client_page(c, nxt):
+def client_page(c, nxt, posts, lang):
+    ch = shell.ch(lang)
     url = f"/work/{c['slug']}/"
+    # Every @id hangs off the page's own localised address, so the 3 language
+    # versions of one client are 3 nodes and not 3 claims about one node.
+    full = S + shell.localise(url, lang)
+    home = S + shell.localise("/", lang)
+    work = S + shell.localise("/work/", lang)
     graph = [
-        {"@type": "CreativeWork", "@id": S + url + "#work",
+        {"@type": "CreativeWork", "@id": full + "#work",
          "name": c["name"] + ", " + c["trade"].lower(),
-         "about": c["name"], "creator": {"@id": S + "/#org"},
-         "url": S + url, "inLanguage": "en"},
-        {"@type": "BreadcrumbList", "@id": S + url + "#crumbs",
+         "about": c["name"], "creator": {"@id": home + "#org"},
+         "url": full, "inLanguage": lang},
+        {"@type": "BreadcrumbList", "@id": full + "#crumbs",
          "itemListElement": [
-             {"@type": "ListItem", "position": 1, "name": "Home", "item": S + "/"},
-             {"@type": "ListItem", "position": 2, "name": "Work", "item": S + "/work/"},
-             {"@type": "ListItem", "position": 3, "name": c["name"], "item": S + url}]},
+             {"@type": "ListItem", "position": 1, "name": ch.CRUMB_HOME,
+              "item": home},
+             # TODO(chrome): "Work" has no key in chrome.py, so it stays
+             # English in all 3. It wants a CRUMB_WORK beside CRUMB_HOME, and
+             # that file belongs to somebody else.
+             {"@type": "ListItem", "position": 2, "name": "Work", "item": work},
+             {"@type": "ListItem", "position": 3, "name": c["name"],
+              "item": full}]},
     ]
     page = {"url": url,
             "title": f'{c["name"]} {shell.DOT} {shell.BRAND}',
@@ -98,21 +117,28 @@ def client_page(c, nxt):
             "jsonld": json.dumps({"@context": "https://schema.org", "@graph": graph},
                                  indent=2, ensure_ascii=False)}
 
-    started = NL.join(f'          <p>{p}</p>' for p in c["started"])
-    built = NL.join(f'            <li>{b}</li>' for b in c["built"])
-    changed = NL.join(f'          <p>{p}</p>' for p in c["changed_blocks"])
-    svc = NL.join(f'              <li><a href="{h}">{t}</a></li>'
+    started = NL.join(f'          <p>{shell.localise_html(p, lang)}</p>'
+                      for p in c["started"])
+    built = NL.join(f'            <li>{shell.localise_html(b, lang)}</li>'
+                    for b in c["built"])
+    changed = NL.join(f'          <p>{shell.localise_html(p, lang)}</p>'
+                      for p in c["changed_blocks"])
+    svc = NL.join(f'              <li><a href="{shell.localise(h, lang)}">{t}</a></li>'
                   for h, t in c["services"])
 
     proof = ""
     if c["gsc"]:
-        proof = (stats(c["stats"]) + NL + "          " + gsc_figure() + NL +
+        proof = (stats(c["stats"], lang) + NL + "          " + gsc_figure() + NL +
                  '          <p class="taken">Taken August 2026. Rankings move, so it '
                  'will look different when you check.</p>' + NL)
 
+    # TODO(chrome): "Where this started", "What we built" and "What we did" are
+    # the last visible English left in this file's own markup. They are section
+    # headings rather than copy records, so they belong beside SIDE_NEXT in
+    # chrome.py, which is another agent's file.
     body = f'''
       <header class="page-head">
-{shell.crumbs(("Work", "/work/"), c["name"])}
+{shell.crumbs(lang, ("Work", shell.localise("/work/", lang)), c["name"])}
         <h1 class="page-title">{c["name"]}</h1>
         <p class="standfirst">{c["where"]}. {c["trade"]}.
           <a href="https://{c["site"]}" target="_blank" rel="noopener">{c["site"]}</a></p>
@@ -130,10 +156,10 @@ def client_page(c, nxt):
 
           <h2>{c["changed"]}</h2>
 {changed}
-          <p class="payoff">{shell.TICK}{c["payoff"]}</p>
+          <p class="payoff">{shell.TICK}{shell.localise_html(c["payoff"], lang)}</p>
         </div>
 
-        <aside class="side" aria-label="Details">
+        <aside class="side" aria-label="{ch.ARIA_DETAILS}">
           <div class="side-block">
             {plate(c, eager=True)}
           </div>
@@ -143,36 +169,39 @@ def client_page(c, nxt):
 {svc}
             </ul>
           </div>
-{writing(c)}          <div class="side-block">
-            <p class="side-h">Next</p>
+{writing(c, posts, lang)}          <div class="side-block">
+            <p class="side-h">{ch.SIDE_NEXT}</p>
             <ul class="side-list">
-              <li><a href="/work/{nxt["slug"]}/">{nxt["name"]}</a></li>
-              <li><a href="/work/">All four</a></li>
+              <li><a href="{shell.localise("/work/" + nxt["slug"] + "/", lang)}">{nxt["name"]}</a></li>
+              <li><a href="{shell.localise("/work/", lang)}">{ch.SIDE_ALL_FOUR}</a></li>
             </ul>
           </div>
         </aside>
       </div>
 {proof and '      <div class="proof-body">' + NL + proof + '      </div>' or ''}
 '''
-    return (shell.head(page) + shell.header() +
+    return (shell.head(page, lang) + shell.header(lang) +
             '\n  <main id="main">\n    <div class="wrap">\n' + body +
             '\n    </div>\n  </main>\n' +
-            shell.footer("Want the same for your shop?",
+            shell.footer(lang, url, "Want the same for your shop?",
                          "Tell us what you sell and where you want to be found. "
                          "We answer with a plan."))
 
 
 # ------------------------------------------------------------------- index --
 
-def work_index():
+def work_index(clients, lang):
     url = "/work/"
+    full = S + shell.localise(url, lang)
+    home = S + shell.localise("/", lang)
     graph = [
-        {"@type": "CollectionPage", "@id": S + url + "#page", "url": S + url,
-         "name": "Work", "about": {"@id": S + "/#org"}},
-        {"@type": "BreadcrumbList", "@id": S + url + "#crumbs",
+        {"@type": "CollectionPage", "@id": full + "#page", "url": full,
+         "name": "Work", "about": {"@id": home + "#org"}},
+        {"@type": "BreadcrumbList", "@id": full + "#crumbs",
          "itemListElement": [
-             {"@type": "ListItem", "position": 1, "name": "Home", "item": S + "/"},
-             {"@type": "ListItem", "position": 2, "name": "Work", "item": S + url}]},
+             {"@type": "ListItem", "position": 1,
+              "name": shell.ch(lang).CRUMB_HOME, "item": home},
+             {"@type": "ListItem", "position": 2, "name": "Work", "item": full}]},
     ]
     page = {"url": url, "title": f"Work {shell.DOT} {shell.BRAND}",
             "description": "Four businesses in Albania and beyond, what we built for "
@@ -182,14 +211,15 @@ def work_index():
                                  indent=2, ensure_ascii=False)}
 
     rows = []
-    for c in CLIENTS:
+    for c in clients:
+        href = shell.localise("/work/" + c["slug"] + "/", lang)
         rows.append(f'''          <li>
             <div class="case-grid">
               <div>
-                <h2 class="case-name"><a href="/work/{c["slug"]}/">{c["name"]}</a></h2>
+                <h2 class="case-name"><a href="{href}">{c["name"]}</a></h2>
                 <p class="case-where">{c["where"]}. {c["trade"]}.</p>
-                <p class="case-said">{c["summary"]}</p>
-                <p class="case-said"><a href="/work/{c["slug"]}/">What we built {shell.ARROW}</a></p>
+                <p class="case-said">{shell.localise_html(c["summary"], lang)}</p>
+                <p class="case-said"><a href="{href}">What we built {shell.ARROW}</a></p>
               </div>
               {plate(c)}
             </div>
@@ -198,7 +228,7 @@ def work_index():
 
     body = f'''
       <header class="page-head">
-{shell.crumbs("Work")}
+{shell.crumbs(lang, "Work")}
         <h1 class="page-title">Four businesses, and what changed.</h1>
         <p class="standfirst">One is a watch shop in Durres that nobody outside the
           town could find. Three months after launch, Google was sending it 560
@@ -217,19 +247,26 @@ def work_index():
         </ul>
       </section>
 '''
-    return (shell.head(page) + shell.header() +
+    return (shell.head(page, lang) + shell.header(lang) +
             '\n  <main id="main">\n    <div class="wrap">\n' + body +
             '\n    </div>\n  </main>\n' +
-            shell.footer("Your business, easier to find.",
+            shell.footer(lang, url, "Your business, easier to find.",
                          "Tell us what you sell and where you want to be found."))
 
 
 if __name__ == "__main__":
-    changed = 0
-    if write(os.path.join("work", "index.html"), work_index()):
-        changed += 1
-    for i, c in enumerate(CLIENTS):
-        nxt = CLIENTS[(i + 1) % len(CLIENTS)]
-        if write(os.path.join("work", c["slug"], "index.html"), client_page(c, nxt)):
+    changed = total = 0
+    for lg in i18n.LANGS:
+        clients = i18n.load("clients", "CLIENTS", lg)
+        posts = i18n.load("posts", "POSTS", lg)
+        if write(out(os.path.join("work", "index.html"), lg),
+                 work_index(clients, lg)):
             changed += 1
-    print(f"{changed} page(s) changed of {len(CLIENTS) + 1}")
+        total += 1
+        for i, c in enumerate(clients):
+            nxt = clients[(i + 1) % len(clients)]
+            if write(out(os.path.join("work", c["slug"], "index.html"), lg),
+                     client_page(c, nxt, posts, lg)):
+                changed += 1
+            total += 1
+    print(f"{changed} page(s) changed of {total}")

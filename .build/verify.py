@@ -78,6 +78,7 @@ all_pages = sorted(pages())
 # shell.SITE, never retype it. Check 29 enforces that.
 sys.path.insert(0, os.path.join(ROOT, ".build"))
 import shell as _shell  # noqa: E402
+import chrome as _chrome  # noqa: E402
 _SITE = _shell.SITE
 
 # 1. no em-dashes -----------------------------------------------------------
@@ -482,21 +483,21 @@ RIVAL = re.compile(
     r"(?:one|two|three|four|five)\s+(?:working |business )?(?:hours?|days?))", re.I)
 for p in all_pages:
     for m in RIVAL.finditer(text_of(read(p))):
-        if m.group(0).lower() != shell.TURNAROUND.lower():
+        if m.group(0).lower() != shell.turnaround("en").lower():
             findings.append(f"[promise] {rel(p)} says {m.group(0)!r}, and the site "
-                            f"promises {shell.TURNAROUND!r}")
+                            f"promises {shell.turnaround("en")!r}")
 # and it must actually be stated: a page that quietly drops it also passes the
 # check above, which is the failure mode of every negative-only rule
-said = start_html.lower().count(shell.TURNAROUND.lower())
+said = start_html.lower().count(shell.turnaround("en").lower())
 if said < 3:
     findings.append(f"[promise] start/index.html states the turnaround {said} "
                     f"time(s). The standfirst, the offer and the confirmation "
                     f"all need it")
 # a form that asks for an email without saying when the answer comes is a leak
 for p in form_pages:
-    if shell.TURNAROUND.lower() not in text_of(read(p)).lower():
+    if shell.turnaround("en").lower() not in text_of(read(p)).lower():
         findings.append(f"[promise] {rel(p)} carries the audit form and never "
-                        f"states {shell.TURNAROUND!r}")
+                        f"states {shell.turnaround("en")!r}")
 
 # 26. the shape of EVERY form on EVERY page --------------------------------
 # Four defects shipped on /start/ once and each line below is one of them. They
@@ -785,7 +786,7 @@ for p in all_pages:
 # The <details> menu is the fix; these 3 checks are what stops it being quietly
 # deleted or, worse, half-deleted.
 ref_head = block(read(os.path.join(ROOT, "geo", "index.html")), "HEADER") or ""
-for _href, _t in shell.NAV:
+for _href in _shell.NAV_PATHS:
     n = ref_head.count(f'href="{_href}"')
     if n != 2:
         findings.append(f"[nav] the header names {_href} {n} time(s). It needs one "

@@ -17,9 +17,9 @@ import sys
 from urllib.parse import quote
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import docs  # noqa: E402
+import i18n  # noqa: E402
 import shell  # noqa: E402
-from gen_pages import strip_tags, write  # noqa: E402
+from gen_pages import form_source, out, strip_tags, write  # noqa: E402
 
 S = shell.SITE
 NL = chr(10)
@@ -48,29 +48,49 @@ def enc(text, safe=""):
 
 
 EMAIL_LINK = f'<a href="mailto:{shell.EMAIL}">{shell.EMAIL}</a>'
-DELETE_LINK = (f'<a href="mailto:{shell.EMAIL}'
-               f'?subject={enc(docs.MAIL_SUBJECTS["delete"])}">{shell.EMAIL}</a>')
-
-# The facts a sentence is allowed to name without retyping them. A whole <a>
-# where the label is the address itself, since that is the same word in every
-# language; a bare href where the label is copy and the translator writes it.
-TOKENS = {
-    "{brand}": shell.BRAND,
-    "{founder}": shell.FOUNDER,
-    "{turnaround}": shell.TURNAROUND,
-    "{email}": EMAIL_LINK,
-    "{email_delete}": DELETE_LINK,
-    "{wa_href}": "https://wa.me/" + shell.WHATSAPP,
-}
 
 
-def fill(s):
-    for k, v in TOKENS.items():
+def delete_link(lang):
+    """The address plus the subject line that says why you are writing.
+
+    The subject is a sentence, so it belongs to the language of the page the
+    link sits on: a reader of the Albanian privacy page should not have to send
+    an English subject line to have his details deleted.
+    """
+    subject = i18n.load("docs", "MAIL_SUBJECTS", lang)["delete"]
+    return (f'<a href="mailto:{shell.EMAIL}'
+            f'?subject={enc(subject)}">{shell.EMAIL}</a>')
+
+
+def tokens(lang):
+    """The facts a sentence is allowed to name without retyping them. A whole
+    <a> where the label is the address itself, since that is the same word in
+    every language; a bare href where the label is copy and the translator
+    writes it.
+
+    It is a function rather than the constant it used to be because two of the
+    six now differ per language, and a dict built once at import would have
+    served the first language's turnaround to all three.
+    """
+    return {
+        "{brand}": shell.BRAND,
+        "{founder}": shell.FOUNDER,
+        "{turnaround}": shell.turnaround(lang),
+        "{email}": EMAIL_LINK,
+        "{email_delete}": delete_link(lang),
+        "{wa_href}": "https://wa.me/" + shell.WHATSAPP,
+    }
+
+
+def fill(s, lang):
+    for k, v in tokens(lang).items():
         s = s.replace(k, v)
-    return s
+    # After the tokens, never before: {email} expands to a whole <a>, and a
+    # copy string is allowed to carry its own link into a page of this site.
+    return shell.localise_html(s, lang)
 
 
-def txt(indent, s):
+def txt(indent, s, lang):
     """One copy string, ready to drop into markup at `indent`.
 
     A newline in a copy string is a soft wrap and nothing else: it says where
@@ -78,12 +98,12 @@ def txt(indent, s):
     the whole reason the prose could leave the f-strings at all, because the
     wraps in this site were made by hand and no rule reproduces them.
     """
-    return (NL + " " * indent).join(fill(s).split(NL))
+    return (NL + " " * indent).join(fill(s, lang).split(NL))
 
 
-def flat(s):
+def flat(s, lang):
     """A copy string as JSON-LD wants it: one line, no tags."""
-    return strip_tags(" ".join(fill(s).split(NL)))
+    return strip_tags(" ".join(fill(s, lang).split(NL)))
 
 
 # ---------------------------------------------------------------- blocks ----
@@ -93,73 +113,84 @@ def flat(s):
 BREAK_BEFORE = ("h2", "who")
 
 
-def block(indent, b):
+def block(indent, b, lang):
     kind = b[0]
     pad = " " * indent
     if kind == "h2":
-        return f'{pad}<h2>{fill(b[1])}</h2>'
+        return f'{pad}<h2>{fill(b[1], lang)}</h2>'
     if kind == "lead":
-        return f'{pad}<p class="lead">{txt(indent + 2, b[1])}</p>'
+        return f'{pad}<p class="lead">{txt(indent + 2, b[1], lang)}</p>'
     if kind == "p":
-        return f'{pad}<p>{txt(indent + 2, b[1])}</p>'
+        return f'{pad}<p>{txt(indent + 2, b[1], lang)}</p>'
     if kind == "who":
-        return f'{pad}<p class="hero-who">{txt(indent + 2, b[1])}</p>'
+        return f'{pad}<p class="hero-who">{txt(indent + 2, b[1], lang)}</p>'
     if kind == "ul":
-        out = [pad + "<ul>"]
+        rows = [pad + "<ul>"]
         for item in b[1]:
-            out.append(f'{pad}  <li>{txt(indent + 4, item)}</li>')
-        out.append(pad + "</ul>")
-        return NL.join(out)
+            rows.append(f'{pad}  <li>{txt(indent + 4, item, lang)}</li>')
+        rows.append(pad + "</ul>")
+        return NL.join(rows)
     if kind == "ledger":
-        out = [pad + '<ol class="ledger">']
+        rows = [pad + '<ol class="ledger">']
         for heading, bodytext in b[1]:
-            out.append(pad + "  <li>")
-            out.append(f'{pad}    <h3>{txt(indent + 6, heading)}</h3>')
-            out.append(f'{pad}    <p>{txt(indent + 6, bodytext)}</p>')
-            out.append(pad + "  </li>")
-        out.append(pad + "</ol>")
-        return NL.join(out)
+            rows.append(pad + "  <li>")
+            rows.append(f'{pad}    <h3>{txt(indent + 6, heading, lang)}</h3>')
+            rows.append(f'{pad}    <p>{txt(indent + 6, bodytext, lang)}</p>')
+            rows.append(pad + "  </li>")
+        rows.append(pad + "</ol>")
+        return NL.join(rows)
     if kind == "links":
-        out = [pad + '<ul class="side-list">']
+        rows = [pad + '<ul class="side-list">']
         for href, label in b[1]:
-            out.append(f'{pad}  <li><a href="{href}">{fill(label)}</a></li>')
-        out.append(pad + "</ul>")
-        return NL.join(out)
+            rows.append(f'{pad}  <li><a href="{shell.localise(href, lang)}">'
+                        f'{fill(label, lang)}</a></li>')
+        rows.append(pad + "</ul>")
+        return NL.join(rows)
     if kind == "cta":
         lines = []
         if b[2] in CTA_NOTE:
             lines.append(pad + CTA_NOTE[b[2]].replace(NL, NL + pad))
-        lines.append(f'{pad}<p><a class="cta" href="{CTA_HREF[b[2]]}">'
-                     f'{fill(b[1])} {shell.ARROW}</a></p>')
+        lines.append(f'{pad}<p><a class="cta" href="{cta_href(lang)[b[2]]}">'
+                     f'{fill(b[1], lang)} {shell.ARROW}</a></p>')
         return NL.join(lines)
     raise AssertionError("no such block kind: " + kind)
 
 
-def blocks(indent, items):
+def blocks(indent, items, lang):
     """Returns chunks, not one string, so the caller can drop a leading blank.
 
     A page whose prose opens with an h2 still wants no blank line above it,
     and /start/ opens with the audit form and then an h2 that does.
     """
-    out = []
+    rows = []
     for b in items:
         if b[0] in BREAK_BEFORE:
-            out.append("")
-        out.append(block(indent, b))
-    return out
+            rows.append("")
+        rows.append(block(indent, b, lang))
+    return rows
 
 
 # ------------------------------------------------------------- addresses ----
 
-# Where each /start/ call to action points. The label is copy; the address is
-# protocol and is assembled here, so translating a page cannot break a mailto.
-CTA_HREF = {
-    "brief": ("mailto:" + shell.EMAIL +
-              "?subject=" + enc(docs.MAIL_SUBJECTS["brief"]) +
-              "&amp;body=" + enc(fill(docs.BRIEF).replace(NL, CRLF), safe=" ,:")),
-    "whatsapp": "https://wa.me/" + shell.WHATSAPP,
-    "call": "mailto:" + shell.EMAIL + "?subject=" + enc(docs.MAIL_SUBJECTS["call"]),
-}
+def cta_href(lang):
+    """Where each /start/ call to action points. The label is copy; the address
+    is protocol and is assembled here, so translating a page cannot break a
+    mailto.
+
+    Both the subject and the brief inside the body ARE copy, which is why this
+    is derived per language: a prefilled mail nobody can read is a prefilled
+    mail nobody sends.
+    """
+    subjects = i18n.load("docs", "MAIL_SUBJECTS", lang)
+    brief = i18n.load("docs", "BRIEF", lang)
+    return {
+        "brief": ("mailto:" + shell.EMAIL +
+                  "?subject=" + enc(subjects["brief"]) +
+                  "&amp;body=" + enc(fill(brief, lang).replace(NL, CRLF),
+                                     safe=" ,:")),
+        "whatsapp": "https://wa.me/" + shell.WHATSAPP,
+        "call": "mailto:" + shell.EMAIL + "?subject=" + enc(subjects["call"]),
+    }
 
 # Addressed to whoever opens the booking account, not to a reader, so it is a
 # note in the markup rather than a line of copy in docs.py.
@@ -172,36 +203,36 @@ CTA_NOTE = {
 
 # ------------------------------------------------------------- the parts ----
 
-def faq_section(indent, rec):
+def faq_section(indent, rec, lang):
     pad = " " * indent
-    out = [pad + '<section class="faq">',
-           f'{pad}  <h2>{fill(rec["faq_h"])}</h2>']
+    rows = [pad + '<section class="faq">',
+            f'{pad}  <h2>{fill(rec["faq_h"], lang)}</h2>']
     for q, a in rec["faq"]:
-        out.append(pad + '  <div class="faq-item">')
-        out.append(f'{pad}    <h3 class="faq-q">{txt(indent + 6, q)}</h3>')
-        out.append(f'{pad}    <p>{txt(indent + 6, a)}</p>')
-        out.append(pad + "  </div>")
-    out.append(pad + "</section>")
-    return NL.join(out)
+        rows.append(pad + '  <div class="faq-item">')
+        rows.append(f'{pad}    <h3 class="faq-q">{txt(indent + 6, q, lang)}</h3>')
+        rows.append(f'{pad}    <p>{txt(indent + 6, a, lang)}</p>')
+        rows.append(pad + "  </div>")
+    rows.append(pad + "</section>")
+    return NL.join(rows)
 
 
-def aside(indent, spec):
+def aside(indent, spec, lang):
     """An aria-label is read aloud, so it is copy. aria-describedby is wiring,
     so it is not, and it never leaves this file."""
     label, side_blocks = spec
     pad = " " * indent
-    out = [f'{pad}<aside class="side" aria-label="{fill(label)}">']
+    rows = [f'{pad}<aside class="side" aria-label="{fill(label, lang)}">']
     for heading, items in side_blocks:
-        out.append(pad + '  <div class="side-block">')
-        out.append(f'{pad}    <p class="side-h">{fill(heading)}</p>')
+        rows.append(pad + '  <div class="side-block">')
+        rows.append(f'{pad}    <p class="side-h">{fill(heading, lang)}</p>')
         for b in items:
-            out.append(block(indent + 4, b))
-        out.append(pad + "  </div>")
-    out.append(pad + "</aside>")
-    return NL.join(out)
+            rows.append(block(indent + 4, b, lang))
+        rows.append(pad + "  </div>")
+    rows.append(pad + "</aside>")
+    return NL.join(rows)
 
 
-def audit_section(rec):
+def audit_section(rec, lang):
     """The long audit form, at /start/. Six fields, against the homepage
     hero's four.
 
@@ -213,82 +244,82 @@ def audit_section(rec):
     """
     f = rec["form"]
     return f'''          <section class="audit" id="audit" aria-labelledby="audit-h">
-            <h2 id="audit-h">{fill(f["h"])}</h2>
-            <p>{txt(14, f["lead"])}</p>
+            <h2 id="audit-h">{fill(f["h"], lang)}</h2>
+            <p>{txt(14, f["lead"], lang)}</p>
 
             <div class="af-done" id="sent" tabindex="-1">
-              <h3>{fill(f["done_h"])}</h3>
-              <p>{txt(16, f["done"])}</p>
+              <h3>{fill(f["done_h"], lang)}</h3>
+              <p>{txt(16, f["done"], lang)}</p>
             </div>
 
             <form class="af" id="audit-form" method="POST"
               action="{shell.FORM_ENDPOINT}">
               <input type="hidden" name="access_key" value="{shell.WEB3FORMS_KEY}">
-              <input type="hidden" name="subject" value="{fill(f["subject"])}">
-              <input type="hidden" name="redirect" value="{shell.form_redirect("/start/")}">
-              <input type="hidden" name="source" value="start-audit">
+              <input type="hidden" name="subject" value="{fill(f["subject"], lang)}">
+              <input type="hidden" name="redirect" value="{shell.form_redirect(shell.localise(rec["url"], lang))}">
+              <input type="hidden" name="source" value="{form_source("start-audit", lang)}">
               <input class="af-hp" type="checkbox" name="botcheck" tabindex="-1"
                 autocomplete="off">
 
               <p class="field">
-                <label for="af-url">{fill(f["url_label"])}</label>
+                <label for="af-url">{fill(f["url_label"], lang)}</label>
                 <input id="af-url" name="url" type="text" inputmode="url"
                   autocomplete="url" autocapitalize="none" spellcheck="false"
-                  required placeholder="{fill(f["url_placeholder"])}"
+                  required placeholder="{fill(f["url_placeholder"], lang)}"
                   pattern="(https?:\\/\\/)?[a-zA-Z0-9][a-zA-Z0-9.\\-]*\\.[a-zA-Z]{{2,}}(\\/\\S*)?"
-                  title="{fill(f["url_title"])}"
+                  title="{fill(f["url_title"], lang)}"
                   aria-describedby="af-url-err">
-                <span class="field-err" id="af-url-err">{txt(18, f["url_err"])}</span>
+                <span class="field-err" id="af-url-err">{txt(18, f["url_err"], lang)}</span>
               </p>
 
               <p class="field">
-                <label for="af-name">{fill(f["name_label"])}</label>
+                <label for="af-name">{fill(f["name_label"], lang)}</label>
                 <input id="af-name" name="name" type="text"
                   autocomplete="organization" required
                   aria-describedby="af-name-err">
-                <span class="field-err" id="af-name-err">{txt(18, f["name_err"])}</span>
+                <span class="field-err" id="af-name-err">{txt(18, f["name_err"], lang)}</span>
               </p>
 
               <div class="af-pair">
                 <p class="field">
-                  <label for="af-category">{fill(f["category_label"])}
-                    <span class="field-opt">{fill(f["optional"])}</span></label>
+                  <label for="af-category">{fill(f["category_label"], lang)}
+                    <span class="field-opt">{fill(f["optional"], lang)}</span></label>
                   <input id="af-category" name="category" type="text"
                     aria-describedby="af-category-hint">
-                  <span class="field-hint" id="af-category-hint">{txt(20, f["category_hint"])}</span>
+                  <span class="field-hint" id="af-category-hint">{txt(20, f["category_hint"], lang)}</span>
                 </p>
                 <p class="field">
-                  <label for="af-city">{fill(f["city_label"])}
-                    <span class="field-opt">{fill(f["optional"])}</span></label>
+                  <label for="af-city">{fill(f["city_label"], lang)}
+                    <span class="field-opt">{fill(f["optional"], lang)}</span></label>
                   <input id="af-city" name="city" type="text"
                     autocomplete="address-level2" aria-describedby="af-city-hint">
-                  <span class="field-hint" id="af-city-hint">{txt(20, f["city_hint"])}</span>
+                  <span class="field-hint" id="af-city-hint">{txt(20, f["city_hint"], lang)}</span>
                 </p>
               </div>
 
               <div class="af-pair">
                 <p class="field">
-                  <label for="af-owner">{fill(f["owner_label"])}</label>
+                  <label for="af-owner">{fill(f["owner_label"], lang)}</label>
                   <input id="af-owner" name="owner" type="text"
                     autocomplete="name" required aria-describedby="af-owner-err">
-                  <span class="field-err" id="af-owner-err">{txt(20, f["owner_err"])}</span>
+                  <span class="field-err" id="af-owner-err">{txt(20, f["owner_err"], lang)}</span>
                 </p>
                 <p class="field">
-                  <label for="af-email">{fill(f["email_label"])}</label>
+                  <label for="af-email">{fill(f["email_label"], lang)}</label>
                   <input id="af-email" name="email" type="email" inputmode="email"
                     autocomplete="email" autocapitalize="none" spellcheck="false"
                     required aria-describedby="af-email-err">
-                  <span class="field-err" id="af-email-err">{txt(20, f["email_err"])}</span>
+                  <span class="field-err" id="af-email-err">{txt(20, f["email_err"], lang)}</span>
                 </p>
               </div>
 
               <p class="af-go">
                 <button class="btn" type="submit" id="af-send"><span
-                  id="af-send-text">{fill(f["send"])}</span>{shell.ARROW}</button>
+                  id="af-send-text">{fill(f["send"], lang)}</span>{shell.ARROW}</button>
               </p>
               <p class="af-say" id="af-say" role="status" aria-live="polite"></p>
-              <p class="af-alt">{txt(16, f["alt"])}</p>
-              <p class="af-fine">{txt(16, f["fine"])}</p>
+              <p class="af-alt">{txt(16, f["alt"], lang)}</p>
+              <p class="af-fine">{txt(16, f["fine"], lang)}</p>
             </form>
           </section>'''
 
@@ -300,16 +331,20 @@ def graph(*nodes):
                       indent=2, ensure_ascii=False)
 
 
-def crumb_node(url, name):
+def crumb_node(url, name, lang):
+    # The root crumb comes from chrome.py, which is where the visible one comes
+    # from too, so a language cannot say Ballina in the trail and Home in the
+    # markup a machine reads.
+    home = S + shell.localise("/", lang)
     return {"@type": "BreadcrumbList", "@id": url + "#crumbs",
             "itemListElement": [
-                {"@type": "ListItem", "position": 1, "name": docs.HOME_CRUMB,
-                 "item": S + "/"},
+                {"@type": "ListItem", "position": 1,
+                 "name": shell.ch(lang).CRUMB_HOME, "item": home},
                 {"@type": "ListItem", "position": 2, "name": name, "item": url}]}
 
 
-def systems_ld(rec):
-    url = S + rec["url"]
+def systems_ld(rec, lang):
+    url = S + shell.localise(rec["url"], lang)
     sc = rec["schema"]
     # The FAQPage is DERIVED from the visible answers, the way gen_pages.py
     # already derives its own. It used to be a second copy typed underneath
@@ -322,20 +357,21 @@ def systems_ld(rec):
          "name": sc["name"],
          "serviceType": sc["type"],
          "description": sc["description"],
-         "url": url, "provider": {"@id": S + "/#org"},
+         "url": url, "provider": {"@id": S + shell.localise("/", lang) + "#org"},
          "areaServed": ["AL", "IT", "Worldwide"]},
         {"@type": "FAQPage", "@id": url + "#faq", "mainEntity": [
-            {"@type": "Question", "name": flat(q),
-             "acceptedAnswer": {"@type": "Answer", "text": flat(a)}}
+            {"@type": "Question", "name": flat(q, lang),
+             "acceptedAnswer": {"@type": "Answer", "text": flat(a, lang)}}
             for q, a in rec["faq"]]},
-        crumb_node(url, rec["nav"]))
+        crumb_node(url, rec["nav"], lang))
 
 
-def studio_ld(rec):
-    url = S + rec["url"]
+def studio_ld(rec, lang):
+    url = S + shell.localise(rec["url"], lang)
+    org = S + shell.localise("/", lang) + "#org"
     person = {"@type": "Person", "@id": url + "#founder", "name": shell.FOUNDER,
               "jobTitle": rec["schema"]["job_title"],
-              "worksFor": {"@id": S + "/#org"},
+              "worksFor": {"@id": org},
               "knowsLanguage": ["en", "it", "sq"],
               "knowsAbout": rec["schema"]["knows_about"],
               "url": url}
@@ -343,17 +379,17 @@ def studio_ld(rec):
         person["sameAs"] = FOUNDER_SAMEAS
     return graph(
         {"@type": "AboutPage", "@id": url + "#page", "url": url,
-         "name": rec["nav"], "about": {"@id": S + "/#org"},
+         "name": rec["nav"], "about": {"@id": org},
          "mainEntity": {"@id": url + "#founder"}},
-        person, crumb_node(url, rec["nav"]))
+        person, crumb_node(url, rec["nav"], lang))
 
 
-def start_ld(rec):
-    url = S + rec["url"]
+def start_ld(rec, lang):
+    url = S + shell.localise(rec["url"], lang)
     return graph(
         {"@type": "ContactPage", "@id": url + "#page", "url": url,
-         "name": rec["nav"], "about": {"@id": S + "/#org"}},
-        crumb_node(url, rec["nav"]))
+         "name": rec["nav"], "about": {"@id": S + shell.localise("/", lang) + "#org"}},
+        crumb_node(url, rec["nav"], lang))
 
 
 # A service, a person and a way of getting in touch are three different things
@@ -364,12 +400,12 @@ LD = {"/systems/": systems_ld, "/studio/": studio_ld, "/start/": start_ld}
 
 # ------------------------------------------------------------------ emit ----
 
-def render(rec):
+def render(rec, lang):
     p = {"url": rec["url"],
          "title": rec["title"] + " " + shell.DOT + " " + shell.BRAND,
          "description": rec["description"],
          "og_desc": rec.get("og_desc", rec["description"]),
-         "jsonld": LD[rec["url"]](rec)}
+         "jsonld": LD[rec["url"]](rec, lang)}
 
     # .studio-prose is the wider column, and the page that gets it is the page
     # with nothing beside it. Deriving the class from the absence of an aside
@@ -378,9 +414,9 @@ def render(rec):
 
     parts = ["",
              '      <header class="page-head">',
-             shell.crumbs(rec["nav"]),
-             f'        <h1 class="page-title">{fill(rec["h1"])}</h1>',
-             f'        <p class="standfirst">{txt(10, rec["standfirst"])}</p>',
+             shell.crumbs(lang, rec["nav"]),
+             f'        <h1 class="page-title">{fill(rec["h1"], lang)}</h1>',
+             f'        <p class="standfirst">{txt(10, rec["standfirst"], lang)}</p>',
              "      </header>",
              "",
              '      <div class="grid">',
@@ -388,27 +424,33 @@ def render(rec):
 
     chunks = []
     if rec.get("form"):
-        chunks.append(audit_section(rec))
-    chunks += blocks(10, rec["blocks"])
+        chunks.append(audit_section(rec, lang))
+    chunks += blocks(10, rec["blocks"], lang)
     if rec.get("faq"):
-        chunks += ["", faq_section(10, rec)]
+        chunks += ["", faq_section(10, rec, lang)]
     if chunks and chunks[0] == "":
         chunks.pop(0)
 
     parts += chunks
     parts.append("        </div>")
     if rec.get("aside"):
-        parts += ["", aside(8, rec["aside"])]
+        parts += ["", aside(8, rec["aside"], lang)]
     parts += ["      </div>", ""]
     body = NL.join(parts)
 
-    return (shell.head(p) + shell.header() +
+    return (shell.head(p, lang) + shell.header(lang) +
             '\n  <main id="main">\n    <div class="wrap">\n' + body +
             '\n    </div>\n  </main>\n' +
-            shell.footer(fill(rec["cta"]), fill(rec["cta_note"])))
+            shell.footer(lang, rec["url"], fill(rec["cta"], lang),
+                         fill(rec["cta_note"], lang)))
 
 
 if __name__ == "__main__":
-    changed = sum(1 for rec in docs.PAGES
-                  if write(rec["url"].strip("/") + "/index.html", render(rec)))
-    print(f"{changed} page(s) changed of {len(docs.PAGES)}")
+    changed = total = 0
+    for lg in i18n.LANGS:
+        for rec in i18n.load("docs", "PAGES", lg):
+            if write(out(rec["url"].strip("/") + "/index.html", lg),
+                     render(rec, lg)):
+                changed += 1
+            total += 1
+    print(f"{changed} page(s) changed of {total}")

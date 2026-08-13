@@ -1,11 +1,35 @@
-"""MINARANK page shell. One source for head, header, footer.
+"""MINARANK page shell. One source for head, header, footer, in 3 languages.
 
-Every page gets byte-identical chrome, so the SHARED blocks cannot drift the
-way hand-copied ones do. The gate compares them byte for byte.
+Every page in a language gets byte-identical chrome, so the SHARED blocks
+cannot drift the way hand-copied ones do. Gate check 7 compares them byte for
+byte within a language, and across languages after every word is blanked, so
+the 3 headers may differ only in their words and never in their structure.
+
+Structure lives here, words live in chrome.py and its 2 twins. Nothing in this
+file is a sentence, and nothing in those files is a tag.
 
 No em-dashes anywhere. The arrow is an inline SVG because Archivo has no
 U+2197, and because a drawn arrow beats a font-dependent one.
 """
+import os
+import re
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import chrome  # noqa: E402
+import chrome_it  # noqa: E402
+import chrome_sq  # noqa: E402
+import i18n  # noqa: E402
+
+_CHROME = {"en": chrome, "it": chrome_it, "sq": chrome_sq}
+
+# Checked here rather than in a gate, because a chrome file short one nav label
+# should fail the moment anything imports it, not 8 generators later with a
+# KeyError that names no language.
+for _lg, _mod in _CHROME.items():
+    if _lg != "en":
+        for _a in [a for a in dir(chrome) if a.isupper() and not a.startswith("_")]:
+            i18n.same_shape(getattr(chrome, _a), getattr(_mod, _a), _lg, _a)
 
 SITE = "https://minarankstudio.com"
 DOT = "·"
@@ -32,10 +56,12 @@ WEB3FORMS_KEY = "PASTE-MINARANK-ACCESS-KEY-HERE"
 FORM_ENDPOINT = "https://api.web3forms.com/submit"
 AUDIT_URL = "/start/#audit"
 
-# Stated ONCE. Gate check 25 fails the build if any page claims a different
-# time, which is exactly how /start/ came to promise "a day or two" while the
-# form promised 24 hours. Changing the promise is this line and a rebuild.
-TURNAROUND = "within 24 hours"
+# Stated ONCE PER LANGUAGE, and only in chrome.py. It lived here as well for a
+# while, with the same value and no link between the two, which is precisely
+# the failure rule 39 exists to prevent: whichever copy gate check 25 read, the
+# other could drift and nothing would say so.
+def turnaround(lang):
+    return ch(lang).TURNAROUND
 
 # The redirect is only used by the no-JS native POST, and the #sent fragment
 # IS the mechanism: :target reveals the confirmation before first paint, with
@@ -56,27 +82,79 @@ def form_redirect(page_url):
     """page_url is the page's own URL: "/" or "/start/"."""
     return SITE + page_url + "?sent=1#sent"
 
+# PATHS HERE, LABELS IN chrome.py, same order and same length. A translator
+# never sees an href, so a translator cannot break a link, and same_shape()
+# fails at import if a nav translation is short one item.
+#
 # Work first: there is proof now, and it should not be buried.
-NAV = [
-    ("/work/", "Proof"),
-    ("/#services", "Services"),
-    ("/blog/", "Writing"),
-    ("/studio/", "Studio"),
-]
+NAV_PATHS = ["/work/", "/#services", "/blog/", "/studio/"]
 
-FOOTER_COLS = [
-    ("What we do", [("/seo/", "SEO and local search"), ("/geo/", "AI search"),
-                    ("/web-design/", "Websites"), ("/meta-ads/", "Meta ads"),
-                    ("/systems/", "Custom software")]),
-    ("Work", [("/work/iglisi-watch/", "Iglisi Watch"),
-              ("/work/victoria-boutique/", "Victoria Boutique"),
-              ("/work/intimo-bruna/", "Intimo Bruna"),
-              ("/work/pro-affy/", "ProAffy")]),
-    ("Studio", [("/studio/", "About"), ("/blog/", "Writing"),
-                ("/start/", "Start a project")]),
-    ("Get in touch", [("mailto:" + EMAIL, EMAIL),
-                      ("https://wa.me/" + WHATSAPP, "WhatsApp")]),
+FOOT_PATHS = [
+    ["/seo/", "/geo/", "/web-design/", "/meta-ads/", "/systems/"],
+    ["/work/iglisi-watch/", "/work/victoria-boutique/",
+     "/work/intimo-bruna/", "/work/pro-affy/"],
+    ["/studio/", "/blog/", "/start/"],
+    # The last column's labels ARE its destinations, so chrome.py holds an
+    # empty list for it and this is the one place they are written.
+    ["mailto:" + EMAIL, "https://wa.me/" + WHATSAPP],
 ]
+FOOT_LAST = [EMAIL, "WhatsApp"]
+
+
+def ch(lang):
+    """That language's chrome module. Shape-checked once, at import."""
+    return _CHROME[lang]
+
+
+def localise(path, lang):
+    """An internal path, prefixed for this language. External hrefs pass through.
+
+    Every href in the chrome and every href inside a translated sentence goes
+    through here, which is why a translator can be told to leave hrefs alone
+    and be believed.
+    """
+    if not path.startswith("/"):
+        return path                      # mailto:, https://, tel:
+    if path.startswith("/#"):
+        # "/#services" is the homepage plus a fragment, so the prefix lands
+        # before the slash: /it/#services, never /it#services.
+        return path if lang == "en" else "/" + lang + "/" + path[1:]
+    return i18n.url_for(path, lang)
+
+
+_HREF = re.compile(r'href="(/[^"]*)"')
+
+
+def localise_html(s, lang):
+    """Rewrite every root-relative href inside a copy string.
+
+    Copy strings carry links, and the translators keep the English path because
+    they were told the href is not theirs. This is the promise being kept.
+    """
+    if lang == "en":
+        return s
+    return _HREF.sub(lambda m: 'href="' + localise(m.group(1), lang) + '"', s)
+
+
+def alternates(path):
+    """The 4 (hreflang, url) pairs, derived from the English path.
+
+    Called by head() for the link tags AND by footer() for the switcher, so the
+    two cannot disagree about where a language lives. watch.al parses its own
+    emitted hreflang to build its switcher, because its slugs are localised and
+    nothing else knows the target. Ours are not, so this is a derivation, and a
+    generator that parses its own output to produce that output is a cycle that
+    buys nothing. Gate check 36 re-reads both out of the HTML and compares.
+
+    x-default is the English URL and never self-referential. 8 of watch.al's
+    legal pages once declared themselves their own x-default and orphaned the
+    English page from a cluster it belonged to.
+    """
+    if len(i18n.LANGS) < 2:
+        return []          # one language is not a cluster, and says so by silence
+    out = [(lg, SITE + i18n.url_for(path, lg)) for lg in i18n.LANGS]
+    out.append(("x-default", SITE + i18n.url_for(path, "en")))
+    return out
 
 ARROW = ('<svg class="arrow" viewBox="0 0 12 12" aria-hidden="true">'
          '<path d="M3 9L9 3M9 3H4M9 3V8" fill="none" stroke="currentColor" '
@@ -107,11 +185,14 @@ WA_PATH = ("M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 
            "118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z")
 
 # The href works with JS off; js/main.js upgrades it with a prefilled message.
-def whatsapp():
+def whatsapp(lang):
+    """The floating button. Its 3 strings are all attributes, so nothing that
+    walks the DOM for text would ever find them untranslated."""
+    c = ch(lang)
     return (f'  <a class="wa" href="https://wa.me/{WHATSAPP}" target="_blank" '
-            f'rel="noopener noreferrer" aria-label="Message us on WhatsApp" '
-            f'title="Message us on WhatsApp" '
-            f'data-wa="Hello {BRAND}, I have a question about my website.">'
+            f'rel="noopener noreferrer" aria-label="{c.WA_LABEL}" '
+            f'title="{c.WA_LABEL}" '
+            f'data-wa="{c.WA_PREFILL.replace("{brand}", BRAND)}">'
             f'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="{WA_PATH}"/></svg>'
             f'</a>' + chr(10))
 
@@ -143,20 +224,31 @@ def client_mark(c):
             f'<span class="sr-only">{c["name"]}</span></a></li>')
 
 
-def head(page):
-    url = SITE + page["url"]
+def head(page, lang):
+    """page["url"] is always the ENGLISH path. The language is applied here.
+
+    Nothing upstream composes a translated URL, so nothing upstream can compose
+    a wrong one. The canonical is self-referential per language and the 4
+    alternates are byte-identical across the 3, which makes reciprocity true by
+    construction rather than something a check has to hope for.
+    """
+    url = SITE + i18n.url_for(page["url"], lang)
+    alts = "".join(
+        f'{NL}  <link rel="alternate" hreflang="{hl}" href="{href}">'
+        for hl, href in alternates(page["url"]))
     return f'''<!DOCTYPE html>
-<html lang="en">
+<html lang="{i18n.HTML_LANG[lang]}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{page["title"]}</title>
   <meta name="description" content="{page["description"]}">
-  <link rel="canonical" href="{url}">
+  <link rel="canonical" href="{url}">{alts}
   <meta name="theme-color" content="#F0F1F3">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="{BRAND}">
+  <meta property="og:locale" content="{i18n.OG_LOCALE[lang]}">
   <meta property="og:title" content="{page["title"]}">
   <meta property="og:description" content="{page.get("og_desc", page["description"])}">
   <meta property="og:url" content="{url}">
@@ -178,11 +270,11 @@ def head(page):
   </script>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
+  <a class="skip" href="#main">{ch(lang).SKIP}</a>
 '''
 
 
-def header():
+def header(lang):
     """The nav links are emitted TWICE, once per width, both from NAV.
 
     Below 720px the row hides everything but the CTA, which meant Proof,
@@ -204,20 +296,24 @@ def header():
     No aria-expanded (<summary> supplies it, and a hand-written one goes
     stale), no role="button" (it destroys the disclosure), no role="menu".
     """
-    links = "\n".join(f'        <a href="{h}">{t}</a>' for h, t in NAV)
-    menu = "\n".join(f'            <a href="{h}">{t}</a>' for h, t in NAV)
+    c = ch(lang)
+    pairs = list(zip(NAV_PATHS, c.NAV))
+    links = "\n".join(f'        <a href="{localise(h, lang)}">{t}</a>'
+                      for h, t in pairs)
+    menu = "\n".join(f'            <a href="{localise(h, lang)}">{t}</a>'
+                     for h, t in pairs)
     return f'''
   <!-- SHARED:HEADER -->
   <header class="site-head">
     <div class="wrap head-row">
-      <a class="head-logo" href="/" aria-label="{BRAND} home">
+      <a class="head-logo" href="{localise("/", lang)}" aria-label="{c.ARIA_HOME.replace("{brand}", BRAND)}">
         {LOGO}
       </a>
-      <nav class="head-nav" aria-label="Primary">
+      <nav class="head-nav" aria-label="{c.ARIA_PRIMARY}">
 {links}
-        <a class="head-cta" href="/start/">Start a project</a>
+        <a class="head-cta" href="{localise("/start/", lang)}">{c.HEAD_CTA}</a>
         <details class="menu">
-          <summary>Menu</summary>
+          <summary>{c.MENU}</summary>
           <div class="menu-panel">
 {menu}
           </div>
@@ -229,13 +325,50 @@ def header():
 '''
 
 
-def footer(cta_heading=None, cta_note=None):
-    """The single ink band. It carries the closing CTA and the site index, so
-    a page has exactly one dark block and exactly one call to action."""
+NL = chr(10)
+
+
+def switcher(lang, page_url):
+    """The language switcher, from the SAME alternates() the head used.
+
+    Static <a> elements, no script: the CSP has no unsafe-inline and rule 32
+    wants the finished state to be the CSS default. And it points at the
+    EQUIVALENT page, not at a language's home page. watch.al's static footer
+    switcher hardcodes href="/sq/", so with JS off a visitor reading a product
+    page is dumped on the Albanian homepage; the version that follows the
+    reader is its JavaScript one, which its own CSP would now block.
+
+    The current language is a span, not a link. A link to the page you are on
+    is furniture.
+    """
+    c = ch(lang)
+    items = []
+    for lg, href in alternates(page_url):
+        if lg == "x-default":
+            continue
+        name = i18n.AUTONYM[lg]
+        path = href[len(SITE):]
+        if lg == lang:
+            items.append(f'            <span aria-current="page">{name}</span>')
+        else:
+            items.append(f'            <a href="{path}" hreflang="{lg}">{name}</a>')
+    if len(i18n.LANGS) < 2:
+        return ""
+    inner = NL.join(items)
+    return (f'          <nav class="foot-lang" aria-label="{c.ARIA_LANG}">{NL}'
+            f'{inner}{NL}          </nav>{NL}')
+
+
+def footer(lang, page_url, cta_heading=None, cta_note=None):
+    """The single ink band: the closing CTA, the site index and the language
+    switcher, so a page has exactly one dark block and exactly one ask."""
     NL = chr(10)
+    c = ch(lang)
     cols = []
-    for title, links in FOOTER_COLS:
-        items = NL.join(f'            <a href="{h}">{t}</a>' for h, t in links)
+    labels = list(c.FOOT_LABELS[:3]) + [FOOT_LAST]
+    for title, paths, texts in zip(c.FOOT_HEADINGS, FOOT_PATHS, labels):
+        items = NL.join(f'            <a href="{localise(h, lang)}">{t}</a>'
+                        for h, t in zip(paths, texts))
         cols.append(f'''          <div class="foot-col">
             <p class="foot-h">{title}</p>
 {items}
@@ -247,7 +380,7 @@ def footer(cta_heading=None, cta_note=None):
         cta = f'''      <h2>{cta_heading}</h2>
       <p class="band-note">{cta_note}</p>
       <p class="band-actions">
-        <a class="band-cta" href="{AUDIT_URL}">Get a free website audit</a>
+        <a class="band-cta" href="{localise(AUDIT_URL, lang)}">{c.BAND_CTA}</a>
         <span class="band-alt"><a href="mailto:{EMAIL}">{EMAIL}</a> {DOT} <a href="https://wa.me/{WHATSAPP}">WhatsApp</a></span>
       </p>
 '''
@@ -261,24 +394,24 @@ def footer(cta_heading=None, cta_note=None):
 {cols}
         </nav>
         <div class="foot-meta">
-          <p>{BRAND} {DOT} Durres, Albania {DOT} We work in English, Italian and Albanian</p>
-          <p>&#169; 2026 {BRAND}</p>
-        </div>
+          <p>{c.FOOT_META.replace("{brand}", BRAND).replace("{dot}", DOT)}</p>
+          <p>{c.FOOT_COPYRIGHT.replace("{brand}", BRAND)}</p>
+{switcher(lang, page_url)}        </div>
       </footer>
       <!-- /SHARED:FOOTER -->
     </div>
   </div>
 
-{whatsapp()}  <script src="/js/main.js" defer></script>
+{whatsapp(lang)}  <script src="/js/main.js" defer></script>
 </body>
 </html>
 '''
 
 
-def crumbs(*trail):
-    """crumbs('Work') or crumbs(('Work', '/work/'), 'Iglisi Watch')"""
-    parts = ['        <nav class="crumbs" aria-label="Breadcrumb">',
-             f'          <a href="/">{BRAND}</a>']
+def crumbs(lang, *trail):
+    """crumbs(lang, 'Work') or crumbs(lang, ('Work', '/work/'), 'Iglisi Watch')"""
+    parts = [f'        <nav class="crumbs" aria-label="{ch(lang).ARIA_CRUMBS}">',
+             f'          <a href="{localise("/", lang)}">{BRAND}</a>']
     for item in trail:
         parts.append('          <span aria-hidden="true">/</span>')
         if isinstance(item, tuple):

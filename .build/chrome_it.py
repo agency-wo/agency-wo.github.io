@@ -37,6 +37,49 @@ Accented letters are literal too ("attività"), never HTML entities.
 # thing you will find instead of the act of making it, which is the move the
 # footer already makes in English when it calls the same section Work and the
 # nav calls it Proof. It also avoids "Blog", which was the point.
+# Stamps for every chrome string. These are bare strings and lists, so
+# none of them can hold a "src" key of its own. Edit an English chrome
+# string and i18n.load() names the one that went stale.
+SRC = {
+    "ARIA_CRUMBS": "3a789919",
+    "ARIA_DETAILS": "e32297d7",
+    "ARIA_GLANCE": "0777be04",
+    "ARIA_HOME": "cf4a8ec2",
+    "ARIA_INDEX": "e082d483",
+    "ARIA_LANG": "7936076a",
+    "ARIA_PRIMARY": "e68bd589",
+    "BAND_CTA": "63be028a",
+    "CRUMB_HOME": "8f3852d3",
+    "ERR_BACK": "d7504791",
+    "ERR_SAY": "212d4f03",
+    "ERR_TITLE": "8aa30e6c",
+    "FOOT_COPYRIGHT": "387ea80f",
+    "FOOT_HEADINGS": "8a193087",
+    "FOOT_LABELS": "2ffcd722",
+    "FOOT_META": "77f25e44",
+    "HEAD_CTA": "50bb03ab",
+    "JS_ERROR": "e3741a63",
+    "JS_SENDING": "29167c1d",
+    "JS_SENDING_SAY": "21151b65",
+    "MENU": "c784aaa3",
+    "NAV": "0aed4a3d",
+    "QUESTIONS": "1579db95",
+    "READ_IT": "89d4581e",
+    "READ_NEXT": "3715bfd2",
+    "SIDE_ALL_FOUR": "6c234522",
+    "SIDE_ALSO": "e4144fc8",
+    "SIDE_BUSINESS": "af808825",
+    "SIDE_NEXT": "8f2cb6c0",
+    "SIDE_SERVICE": "0b639228",
+    "SIDE_WRITTEN": "4bf5b84e",
+    "SKIP": "f3ac6901",
+    "TURNAROUND": "5b80e988",
+    "WA_LABEL": "515b82d6",
+    "WA_PREFILL": "d28f915d",
+    "WHAT_WE_DO": "bc3cba50",
+    "WHAT_WE_DONT": "5eba3082",
+}
+
 NAV = ["Prove", "Servizi", "Articoli", "Studio"]
 
 # The 4 footer columns: a heading, then a label per link. Lengths must match

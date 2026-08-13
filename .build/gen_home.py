@@ -17,35 +17,42 @@ import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import home  # noqa: E402
+import i18n  # noqa: E402
+import l10n  # noqa: E402
 import shell  # noqa: E402
-from clients import CLIENTS  # noqa: E402
-from gen_pages import write  # noqa: E402
+from gen_pages import form_source, out, write  # noqa: E402
 
 S = shell.SITE
 NL = chr(10)
-H = home.PAGE
+
 
 # The facts a sentence names without retyping them, as in gen_docs.py. The two
 # generators keep their own copy of this and of txt() below rather than sharing
 # one: gen_docs.py renders three unrelated pages, and importing it to borrow
 # four lines would make building the homepage build /systems/ as a side effect.
-TOKENS = {
-    "{brand}": shell.BRAND,
-    "{turnaround}": shell.TURNAROUND,
-    "{email}": f'<a href="mailto:{shell.EMAIL}">{shell.EMAIL}</a>',
-    "{email_href}": "mailto:" + shell.EMAIL,
-    "{wa_href}": "https://wa.me/" + shell.WHATSAPP,
-}
+#
+# It is a function and not the constant it was because {turnaround} is stated
+# once per language now, and a dict built at import would have served the first
+# language's promise to all three.
+def tokens(lang):
+    return {
+        "{brand}": shell.BRAND,
+        "{turnaround}": shell.turnaround(lang),
+        "{email}": f'<a href="mailto:{shell.EMAIL}">{shell.EMAIL}</a>',
+        "{email_href}": "mailto:" + shell.EMAIL,
+        "{wa_href}": "https://wa.me/" + shell.WHATSAPP,
+    }
 
 
-def fill(s):
-    for k, v in TOKENS.items():
+def fill(s, lang):
+    for k, v in tokens(lang).items():
         s = s.replace(k, v)
-    return s
+    # After the tokens and never before: {email} expands to a whole <a>, and a
+    # sentence on this page is allowed to carry its own link into the site.
+    return shell.localise_html(s, lang)
 
 
-def txt(indent, s):
+def txt(indent, s, lang):
     """One copy string, ready to drop into markup at `indent`.
 
     A newline in a copy string is a soft wrap: it says where the emitted line
@@ -53,37 +60,41 @@ def txt(indent, s):
     were made by hand and no rule reproduces them, which is why they travel
     with the sentence instead of being recomputed.
     """
-    return (NL + " " * indent).join(fill(s).split(NL))
+    return (NL + " " * indent).join(fill(s, lang).split(NL))
 
 
-def jsonld():
+def jsonld(h, services, lang):
+    # The organisation is one node per language, hung off that language's home
+    # page, because every other page in it points here for its provider and a
+    # shared @id would make 3 pages claim to describe the same document.
+    home = S + shell.localise("/", lang)
     org = {
         "@type": "ProfessionalService",
-        "@id": S + "/#org",
+        "@id": home + "#org",
         "name": shell.BRAND,
-        "description": H["org_desc"],
-        "url": S + "/",
+        "description": h["org_desc"],
+        "url": home,
         "email": shell.EMAIL,
-        "founder": {"@id": S + "/studio/#founder"},
+        "founder": {"@id": S + shell.localise("/studio/", lang) + "#founder"},
         "areaServed": ["AL", "IT", "Worldwide"],
         "knowsLanguage": ["en", "it", "sq"],
         "hasOfferCatalog": {
-            "@type": "OfferCatalog", "name": H["catalogue"],
+            "@type": "OfferCatalog", "name": h["catalogue"],
             "itemListElement": [
-                {"@type": "Offer", "url": S + href,
+                {"@type": "Offer", "url": S + shell.localise(href, lang),
                  "itemOffered": {"@type": "Service", "name": name, "description": desc,
-                                 "provider": {"@id": S + "/#org"}}}
-                for href, name, desc, _ in home.SERVICES],
+                                 "provider": {"@id": home + "#org"}}}
+                for href, name, desc, _ in services],
         },
     }
-    site = {"@type": "WebSite", "@id": S + "/#website", "url": S + "/",
-            "name": shell.BRAND, "inLanguage": "en",
-            "publisher": {"@id": S + "/#org"}}
+    site = {"@type": "WebSite", "@id": home + "#website", "url": home,
+            "name": shell.BRAND, "inLanguage": lang,
+            "publisher": {"@id": home + "#org"}}
     return json.dumps({"@context": "https://schema.org", "@graph": [org, site]},
                       indent=2, ensure_ascii=False)
 
 
-def audit_form():
+def audit_form(f, lang):
     """The homepage's ask, in the hero beside the copy.
 
     Four fields, against /start/'s six. It is the fast path: somebody who wants
@@ -108,75 +119,81 @@ def audit_form():
     error there, and a pattern that fails to compile is IGNORED rather than
     reported. That shipped once, accepting "not a website".
     """
-    f = home.FORM
     return f'''          <div class="audit hero-af" id="audit">
-            <h2 class="af-h" id="audit-h">{fill(f["h"])}</h2>
-            <p class="af-lead">{txt(14, f["lead"])}</p>
+            <h2 class="af-h" id="audit-h">{fill(f["h"], lang)}</h2>
+            <p class="af-lead">{txt(14, f["lead"], lang)}</p>
 
             <div class="af-done" id="sent" tabindex="-1">
-              <h3>{fill(f["done_h"])}</h3>
-              <p>{txt(16, f["done"])}</p>
+              <h3>{fill(f["done_h"], lang)}</h3>
+              <p>{txt(16, f["done"], lang)}</p>
             </div>
 
             <form class="af" id="audit-form" method="POST"
               action="{shell.FORM_ENDPOINT}" aria-labelledby="audit-h">
               <input type="hidden" name="access_key" value="{shell.WEB3FORMS_KEY}">
-              <input type="hidden" name="subject" value="{fill(f["subject"])}">
-              <input type="hidden" name="redirect" value="{shell.form_redirect("/")}">
-              <input type="hidden" name="source" value="home-hero">
+              <input type="hidden" name="subject" value="{fill(f["subject"], lang)}">
+              <input type="hidden" name="redirect" value="{shell.form_redirect(shell.localise("/", lang))}">
+              <input type="hidden" name="source" value="{form_source("home-hero", lang)}">
               <input class="af-hp" type="checkbox" name="botcheck" tabindex="-1"
                 autocomplete="off">
 
               <p class="field">
-                <label for="af-url">{fill(f["url_label"])}</label>
+                <label for="af-url">{fill(f["url_label"], lang)}</label>
                 <input id="af-url" name="url" type="text" inputmode="url"
                   autocomplete="url" autocapitalize="none" spellcheck="false"
-                  required placeholder="{fill(f["url_placeholder"])}"
+                  required placeholder="{fill(f["url_placeholder"], lang)}"
                   pattern="(https?:\\/\\/)?[a-zA-Z0-9][a-zA-Z0-9.\\-]*\\.[a-zA-Z]{{2,}}(\\/\\S*)?"
-                  title="{fill(f["url_title"])}"
+                  title="{fill(f["url_title"], lang)}"
                   aria-describedby="af-url-err">
-                <span class="field-err" id="af-url-err">{txt(18, f["url_err"])}</span>
+                <span class="field-err" id="af-url-err">{txt(18, f["url_err"], lang)}</span>
               </p>
 
               <p class="field">
-                <label for="af-owner">{fill(f["owner_label"])}</label>
+                <label for="af-owner">{fill(f["owner_label"], lang)}</label>
                 <input id="af-owner" name="owner" type="text" autocomplete="name"
                   required aria-describedby="af-owner-err">
-                <span class="field-err" id="af-owner-err">{txt(18, f["owner_err"])}</span>
+                <span class="field-err" id="af-owner-err">{txt(18, f["owner_err"], lang)}</span>
               </p>
 
               <p class="field">
-                <label for="af-email">{fill(f["email_label"])}</label>
+                <label for="af-email">{fill(f["email_label"], lang)}</label>
                 <input id="af-email" name="email" type="email" inputmode="email"
                   autocomplete="email" autocapitalize="none" spellcheck="false"
                   required aria-describedby="af-email-err">
-                <span class="field-err" id="af-email-err">{txt(18, f["email_err"])}</span>
+                <span class="field-err" id="af-email-err">{txt(18, f["email_err"], lang)}</span>
               </p>
 
               <p class="field">
-                <label for="af-category">{fill(f["category_label"])}</label>
+                <label for="af-category">{fill(f["category_label"], lang)}</label>
                 <input id="af-category" name="category" type="text" required
                   aria-describedby="af-category-err">
-                <span class="field-err" id="af-category-err">{txt(18, f["category_err"])}</span>
+                <span class="field-err" id="af-category-err">{txt(18, f["category_err"], lang)}</span>
               </p>
 
               <p class="af-go">
                 <button class="btn" type="submit" id="af-send"><span
-                  id="af-send-text">{fill(f["send"])}</span>{shell.ARROW}</button>
+                  id="af-send-text">{fill(f["send"], lang)}</span>{shell.ARROW}</button>
               </p>
               <p class="af-say" id="af-say" role="status" aria-live="polite"></p>
-              <p class="af-alt">{txt(16, f["alt"])}</p>
-              <p class="af-fine">{fill(f["fine"])}</p>
+              <p class="af-alt">{txt(16, f["alt"], lang)}</p>
+              <p class="af-fine">{fill(f["fine"], lang)}</p>
             </form>
           </div>'''
 
 
-def render():
+def render(lang):
+    # One load per language rather than per slot: i18n.load() shape-checks the
+    # whole record every call, and the homepage would otherwise pay for that
+    # 30 times to answer 30 questions about the same dict.
+    h = i18n.load("home", "PAGE", lang)
+    services = i18n.load("home", "SERVICES", lang)
+    clients = i18n.load("clients", "CLIENTS", lang)
+
     page = {"url": "/",
-            "title": shell.BRAND + " " + shell.DOT + " " + H["title"],
-            "description": H["description"],
-            "og_desc": H["og_desc"],
-            "jsonld": jsonld()}
+            "title": shell.BRAND + " " + shell.DOT + " " + h["title"],
+            "description": h["description"],
+            "og_desc": h["og_desc"],
+            "jsonld": jsonld(h, services, lang)}
 
     # The climb index and the result index live in the sheet, as :nth-child
     # rules, because style-src is 'self' and that blocks an inline style
@@ -194,22 +211,24 @@ def render():
         """The whole row is the link surface. Nothing in the nav points at these
         five pages, so the list has to look like five doors."""
         return (f'            <li>' + NL +
-                f'              <a href="{href}">' + NL +
-                f'                <h3>{fill(name)}</h3>' + NL +
+                f'              <a href="{shell.localise(href, lang)}">' + NL +
+                f'                <h3>{fill(name, lang)}</h3>' + NL +
                 f'                <div>' + NL +
-                f'                  <p class="svc-say">{fill(outcome)}</p>' + NL +
-                f'                  <p class="svc-go">{fill(door)} {shell.ARROW}</p>' + NL +
+                f'                  <p class="svc-say">{fill(outcome, lang)}</p>' + NL +
+                f'                  <p class="svc-go">{fill(door, lang)} {shell.ARROW}</p>' + NL +
                 f'                </div>' + NL +
                 f'              </a>' + NL +
                 '            </li>')
 
-    svc = NL.join(svc_row(*s) for s in home.SERVICES)
-    stats = NL.join(f'            <li><span class="stat-n">{n}</span>'
-                    f'<span class="stat-l">{fill(label)}</span></li>'
-                    for n, label in home.STATS)
-    marks = NL.join(shell.client_mark(c) for c in CLIENTS)
+    svc = NL.join(svc_row(*s) for s in services)
+    # Same 4 figures as the Iglisi Watch page, and localised the same way, so
+    # the homepage and /work/iglisi-watch/ cannot print one number 2 ways.
+    stats = NL.join(f'            <li><span class="stat-n">{l10n.dec(n, lang)}</span>'
+                    f'<span class="stat-l">{fill(label, lang)}</span></li>'
+                    for n, label in i18n.load("home", "STATS", lang))
+    marks = NL.join(shell.client_mark(c) for c in clients)
     ARROW = shell.ARROW
-    audit = audit_form()
+    audit = audit_form(i18n.load("home", "FORM", lang), lang)
 
     body = f'''
     <section class="hero">
@@ -223,11 +242,11 @@ def render():
         </h1>
         <div class="hero-split">
           <div class="hero-rest">
-            <p class="hero-say">{txt(14, H["hero_say"])}</p>
-            <p class="hero-sub">{txt(14, H["hero_sub"])}</p>
-            <p class="hero-who">{txt(14, H["hero_who"])}</p>
+            <p class="hero-say">{txt(14, h["hero_say"], lang)}</p>
+            <p class="hero-sub">{txt(14, h["hero_sub"], lang)}</p>
+            <p class="hero-who">{txt(14, h["hero_who"], lang)}</p>
             <p class="status"><span class="dot" aria-hidden="true"></span>
-              {fill(home.AVAILABILITY)}</p>
+              {fill(i18n.load("home", "AVAILABILITY", lang), lang)}</p>
           </div>
 {audit}
         </div>
@@ -237,27 +256,27 @@ def render():
     <section class="proof" aria-labelledby="proof-h">
       <div class="wrap">
         <div class="proof-body">
-          <p class="eyebrow">{fill(H["proof_eyebrow"])}</p>
-          <h2 id="proof-h">{txt(12, H["proof_h"])}</h2>
-          <p class="proof-lead">{txt(12, H["proof_lead"])}</p>
+          <p class="eyebrow">{fill(h["proof_eyebrow"], lang)}</p>
+          <h2 id="proof-h">{txt(12, h["proof_h"], lang)}</h2>
+          <p class="proof-lead">{txt(12, h["proof_lead"], lang)}</p>
 
           <ul class="stat-strip">
 {stats}
           </ul>
-          <p class="stat-note">{txt(12, H["stat_note"])}</p>
+          <p class="stat-note">{txt(12, h["stat_note"], lang)}</p>
 
           <figure class="gsc" data-reveal>
             <img src="/assets/proof/watch-al-3-months.webp" width="1440" height="592"
-              alt="{txt(14, H["fig_alt"])}"
+              alt="{txt(14, h["fig_alt"], lang)}"
               loading="lazy" decoding="async">
-            <figcaption>{txt(14, H["fig_caption"])}</figcaption>
+            <figcaption>{txt(14, h["fig_caption"], lang)}</figcaption>
           </figure>
 
-          <p>{txt(12, H["proof_p1"])}</p>
-          <p>{txt(12, H["proof_p2"])}</p>
+          <p>{txt(12, h["proof_p1"], lang)}</p>
+          <p>{txt(12, h["proof_p2"], lang)}</p>
           <div class="check">
-            <p>{txt(14, H["check"])}</p>
-            <p class="taken">{txt(14, H["taken"])}</p>
+            <p>{txt(14, h["check"], lang)}</p>
+            <p class="taken">{txt(14, h["taken"], lang)}</p>
           </div>
         </div>
       </div>
@@ -266,8 +285,8 @@ def render():
     <section class="services" id="services" aria-labelledby="services-h">
       <div class="wrap">
         <div class="sec-head">
-          <p class="eyebrow">{fill(H["services_eyebrow"])}</p>
-          <h2 id="services-h">{txt(10, H["services_h"])}</h2>
+          <p class="eyebrow">{fill(h["services_eyebrow"], lang)}</p>
+          <h2 id="services-h">{txt(10, h["services_h"], lang)}</h2>
         </div>
         <ul class="svc-list">
 {svc}
@@ -279,10 +298,10 @@ def render():
       <div class="wrap">
         <div class="ask-row">
           <div>
-            <h2 class="ask-q" id="ask-h">{txt(14, H["ask_h"])}</h2>
-            <p class="ask-note">{txt(14, H["ask_note"])}</p>
+            <h2 class="ask-q" id="ask-h">{txt(14, h["ask_h"], lang)}</h2>
+            <p class="ask-note">{txt(14, h["ask_note"], lang)}</p>
           </div>
-          <p class="ask-go"><a class="btn" href="/work/">{fill(H["ask_go"])} {ARROW}</a></p>
+          <p class="ask-go"><a class="btn" href="{shell.localise("/work/", lang)}">{fill(h["ask_go"], lang)} {ARROW}</a></p>
         </div>
         <ul class="marks">
 {marks}
@@ -292,8 +311,8 @@ def render():
 
     <section class="place" aria-labelledby="place-h">
       <div class="wrap">
-        <h2 class="place-say" id="place-h">{txt(10, H["place_h"])}</h2>
-        <p class="place-more">{txt(10, H["place_more"])}</p>
+        <h2 class="place-say" id="place-h">{txt(10, h["place_h"], lang)}</h2>
+        <p class="place-more">{txt(10, h["place_more"], lang)}</p>
       </div>
     </section>
 
@@ -301,22 +320,23 @@ def render():
       <div class="wrap">
         <div class="grid">
           <div class="who-say">
-            <h2 id="who-h">{txt(12, H["who_h"])}</h2>
+            <h2 id="who-h">{txt(12, h["who_h"], lang)}</h2>
           </div>
           <div class="who-more">
-            <p>{txt(14, H["who_more"])}</p>
-            <p><a href="/studio/">{fill(H["who_go"])} {ARROW}</a></p>
+            <p>{txt(14, h["who_more"], lang)}</p>
+            <p><a href="{shell.localise("/studio/", lang)}">{fill(h["who_go"], lang)} {ARROW}</a></p>
           </div>
         </div>
       </div>
     </section>
 '''
-    return (shell.head(page) + shell.header() +
+    return (shell.head(page, lang) + shell.header(lang) +
             '\n  <main id="main">\n' + body + '\n  </main>\n' +
-            shell.footer(fill(H["cta"]), fill(H["cta_note"])))
+            shell.footer(lang, page["url"], fill(h["cta"], lang),
+                         fill(h["cta_note"], lang)))
 
 
-def check(html):
+def check(html, lang):
     """Fail here, in English, rather than at the gate as a line number.
 
     The homepage now carries the audit form as well as the argument, and both
@@ -327,7 +347,12 @@ def check(html):
         r"(?s)<script.*?</script>|<style.*?</style>|<svg.*?</svg>", " ", html)))
     words = len(text.split())
     secs = len(re.findall(r"<section", html))
-    assert words <= 900, (
+    # English only. 900 is a budget on what the founder wrote, and Italian and
+    # Albanian need the same 25% headroom for grammar that check 21 gives every
+    # other page: failing a faithful translation for being Italian would tell
+    # the translator to cut a sentence the English keeps, which is the one
+    # thing TRANSLATING.md forbids.
+    assert lang != "en" or words <= 900, (
         f"the homepage is {words} words, max 900. The audit form's copy counts, "
         f"and so does the confirmation panel nobody sees until they send")
     assert secs <= 7, (
@@ -345,6 +370,11 @@ def check(html):
 
 
 if __name__ == "__main__":
-    html = render()
-    check(html)
-    write("index.html", html)
+    changed = total = 0
+    for lg in i18n.LANGS:
+        page_html = render(lg)
+        check(page_html, lg)
+        if write(out("index.html", lg), page_html):
+            changed += 1
+        total += 1
+    print(f"{changed} page(s) changed of {total}")

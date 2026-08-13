@@ -1,7 +1,11 @@
-"""Emit the four service pages from content.py through shell.py.
+"""Emit the four service pages from content.py through shell.py, once per language.
 
 Run from the project root:  python .build/gen_pages.py
 Writes only when bytes change, so a second run reports nothing.
+
+The copy is never imported from content.py directly. i18n.load() is the only
+door, because it is the thing that shape-checks a translation and raises on a
+missing key rather than quietly serving the English one.
 """
 import io
 import json
@@ -9,9 +13,8 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import i18n  # noqa: E402
 import shell  # noqa: E402
-from content import SERVICES  # noqa: E402
-from posts import POSTS  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 NL = chr(10)
@@ -66,14 +69,18 @@ def strip_tags(s):
     return "".join(out)
 
 
-def jsonld(svc):
-    url = shell.SITE + "/" + svc["slug"] + "/"
+def jsonld(svc, lang):
+    # Every @id is built from this page's own localised URL. Three languages
+    # sharing one @id would be three documents claiming to be the same node,
+    # and the last one crawled would win.
+    url = shell.SITE + shell.localise("/" + svc["slug"] + "/", lang)
+    home = shell.SITE + shell.localise("/", lang)
     graph = [
         {"@type": "Service", "@id": url + "#service",
          "name": svc.get("schema_name", svc["nav"]),
          "serviceType": svc.get("schema_name", svc["nav"]),
          "description": svc["description"], "url": url,
-         "provider": {"@id": shell.SITE + "/#org"},
+         "provider": {"@id": home + "#org"},
          "areaServed": ["AL", "IT", "Worldwide"],
          "availableLanguage": ["en", "it", "sq"]},
         {"@type": "FAQPage", "@id": url + "#faq",
@@ -82,44 +89,46 @@ def jsonld(svc):
                         for q, a in svc["faq"]]},
         {"@type": "BreadcrumbList", "@id": url + "#crumbs",
          "itemListElement": [
-             {"@type": "ListItem", "position": 1, "name": "Home", "item": shell.SITE + "/"},
+             {"@type": "ListItem", "position": 1,
+              "name": shell.ch(lang).CRUMB_HOME, "item": home},
              {"@type": "ListItem", "position": 2, "name": svc["nav"], "item": url}]},
     ]
     return json.dumps({"@context": "https://schema.org", "@graph": graph},
                       indent=2, ensure_ascii=False)
 
 
-def render(svc):
+def render(svc, posts, lang):
+    c = shell.ch(lang)
     url = "/" + svc["slug"] + "/"
     page = {"url": url,
             "title": svc["title"] + " " + shell.DOT + " " + shell.BRAND,
             "description": svc["description"],
             "og_desc": svc.get("og_desc", svc["description"]),
-            "jsonld": jsonld(svc)}
+            "jsonld": jsonld(svc, lang)}
 
-    parts = [shell.head(page), shell.header()]
+    parts = [shell.head(page, lang), shell.header(lang)]
     a = parts.append
     a('\n  <main id="main">\n    <div class="wrap">\n')
     a('      <header class="page-head">\n')
-    a(shell.crumbs(svc["nav"]) + "\n")
+    a(shell.crumbs(lang, svc["nav"]) + "\n")
     a(f'        <h1 class="page-title">{svc["h1"]}</h1>\n')
-    a(f'        <p class="standfirst">{svc["standfirst"]}</p>\n')
+    a(f'        <p class="standfirst">{shell.localise_html(svc["standfirst"], lang)}</p>\n')
     a('      </header>\n\n')
     a('      <div class="grid">\n        <div class="prose">\n')
-    a(f'          <p class="lead">{svc["lead"]}</p>\n\n')
+    a(f'          <p class="lead">{shell.localise_html(svc["lead"], lang)}</p>\n\n')
 
     for heading, blocks in svc["sections"]:
         a(f'          <h2>{heading}</h2>\n')
         for b in blocks:
-            a(f'          {b}\n')
+            a(f'          {shell.localise_html(b, lang)}\n')
         a("\n")
 
-    a('          <h2>What we do</h2>\n          <ol class="ledger">\n')
+    a(f'          <h2>{c.WHAT_WE_DO}</h2>\n          <ol class="ledger">\n')
     for item in svc["ledger"]:
         title, bodytext = item[0], item[1]
         a('            <li>\n')
         a(f'              <h3>{title}</h3>\n')
-        a(f'              <p>{bodytext}</p>\n')
+        a(f'              <p>{shell.localise_html(bodytext, lang)}</p>\n')
         if len(item) > 2 and item[2]:
             a(f'              <p class="payoff">{shell.TICK}{svc["payoff"]}</p>\n')
         a('            </li>\n')
@@ -127,48 +136,72 @@ def render(svc):
 
     if svc.get("exclusions"):
         a('          <section class="exclusions">\n')
-        a('            <h2>What we do not do</h2>\n            <ul>\n')
+        a(f'            <h2>{c.WHAT_WE_DONT}</h2>\n            <ul>\n')
         for x in svc["exclusions"]:
-            a(f'              <li>{x}</li>\n')
+            a(f'              <li>{shell.localise_html(x, lang)}</li>\n')
         a('            </ul>\n          </section>\n\n')
 
-    a('          <section class="faq">\n            <h2>Questions worth asking</h2>\n')
+    a(f'          <section class="faq">\n            <h2>{c.QUESTIONS}</h2>\n')
     for q, ans in svc["faq"]:
         a('            <div class="faq-item">\n')
         a(f'              <h3 class="faq-q">{q}</h3>\n')
-        a(f'              <p>{ans}</p>\n')
+        a(f'              <p>{shell.localise_html(ans, lang)}</p>\n')
         a('            </div>\n')
     a('          </section>\n        </div>\n\n')
 
-    a('        <aside class="side" aria-label="At a glance">\n')
+    a(f'        <aside class="side" aria-label="{c.ARIA_GLANCE}">\n')
     a('          <figure class="fig">\n')
     a('            <svg viewBox="0 0 160 160" aria-hidden="true">\n              ')
     a(FIGS[svc["fig"]] + "\n            </svg>\n          </figure>\n\n")
     note_h, note_b = svc["side_note"]
     a(f'          <div class="side-block">\n            <p class="side-h">{note_h}</p>\n')
-    a(f'            <p>{note_b}</p>\n          </div>\n\n')
-    mine = [p for p in POSTS if p["service"][0] == "/" + svc["slug"] + "/"]
+    a(f'            <p>{shell.localise_html(note_b, lang)}</p>\n          </div>\n\n')
+    # A post names its service in its own record, and the slug is not
+    # translated, so this wiring survives the language it is read in.
+    mine = [p for p in posts if p["service"][0] == "/" + svc["slug"] + "/"]
     if mine:
         # Derived from posts.py, never typed: a post names its service and
         # wires itself back here. A blog nothing links into is dead weight.
         a('          <div class="side-block">\n')
-        a('            <p class="side-h">Written about this</p>\n')
+        a(f'            <p class="side-h">{c.SIDE_WRITTEN}</p>\n')
         a('            <ul class="side-list">\n')
         for post in sorted(mine, key=lambda x: (x["date"], x["slug"])):
-            a(f'              <li><a href="/blog/{post["slug"]}/">'
+            a(f'              <li><a href="'
+              f'{shell.localise("/blog/" + post["slug"] + "/", lang)}">'
               f'{post["title"]}</a></li>\n')
         a('            </ul>\n          </div>\n\n')
 
-    a('          <div class="side-block">\n            <p class="side-h">Also</p>\n')
+    a(f'          <div class="side-block">\n            <p class="side-h">{c.SIDE_ALSO}</p>\n')
     a('            <ul class="side-list">\n')
     for href, label in svc["related"]:
-        a(f'              <li><a href="{href}">{label}</a></li>\n')
+        a(f'              <li><a href="{shell.localise(href, lang)}">{label}</a></li>\n')
     a('            </ul>\n          </div>\n        </aside>\n      </div>\n')
     a('\n    </div>\n  </main>\n')
-    a(shell.footer(svc["tail"],
+    a(shell.footer(lang, url, svc["tail"],
                    "Tell us what you sell and where you want to be found. "
                    "We answer with a plan and a straight price."))
     return "".join(parts)
+
+
+def out(path, lang):
+    """Where the file lands: English at the root, every other language under
+    its own directory.
+
+    The path handed in is the English one, the way page["url"] is, so no caller
+    ever composes a localised path and no caller can compose a wrong one.
+    """
+    return path if lang == "en" else os.path.join(lang, path)
+
+
+def form_source(name, lang):
+    """The hidden `source` field on a form, which is per form AND per language.
+
+    Two forms sharing one value already fails gate check 26. The reason it is
+    worth failing over is downstream of the gate: `source` is the column the
+    founder sorts the inbox by, so a shared value merges the homepage's leads
+    into /start/'s and nothing in the mail says which page was read.
+    """
+    return name if lang == "en" else name + "-" + lang
 
 
 def write(path, content):
@@ -187,6 +220,16 @@ def write(path, content):
 
 
 if __name__ == "__main__":
-    changed = sum(1 for s in SERVICES
-                  if write(os.path.join(s["slug"], "index.html"), render(s)))
-    print(f"{changed} page(s) changed of {len(SERVICES)}")
+    # The copy is loaded once per language rather than once per page, because
+    # i18n.load() shape-checks and stamp-checks the whole module every call and
+    # 4 pages would pay for that 4 times over for one answer.
+    changed = total = 0
+    for lg in i18n.LANGS:
+        services = i18n.load("content", "SERVICES", lg)
+        posts = i18n.load("posts", "POSTS", lg)
+        for s in services:
+            if write(out(os.path.join(s["slug"], "index.html"), lg),
+                     render(s, posts, lg)):
+                changed += 1
+            total += 1
+    print(f"{changed} page(s) changed of {total}")

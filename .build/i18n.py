@@ -33,7 +33,16 @@ NL = chr(10)
 # English is the source and the x-default. It is at the root, not /en/, which
 # is a decision rather than an accident: moving it to /en/ later would be 51
 # redirects on a host that cannot serve them.
-LANGS = ("en", "it", "sq")
+ALL = ("en", "it", "sq")
+
+# THE SWITCH. Everything downstream reads LANGS: what gets built, what the
+# sitemap lists, and how many hreflang tags a page carries. It stays ("en",)
+# until every translation module exists, because a site that advertises an
+# Italian alternate it has not written is a site with 17 dead links in its
+# head, and check 2 would be right to fail it.
+#
+# Flipping this to ALL is the one edit that turns the site trilingual.
+LANGS = ("en",)
 PREFIX = {"en": "", "it": "/it", "sq": "/sq"}
 HTML_LANG = {"en": "en", "it": "it", "sq": "sq"}
 # Only what the share card declares. hreflang stays the plain language code, so
@@ -90,6 +99,12 @@ def same_shape(en, tr, lang, where="<root>"):
             same_shape(a, b, lang, f"{where}[{i}]")
 
     elif isinstance(en, str):
+        # An English string that is only whitespace is a formatting constant,
+        # not copy: home.py defines NL = chr(10) at module level and any pass
+        # that walks a module's uppercase names finds it. Requiring a
+        # non-empty translation of a newline fails every correct file.
+        if not en.strip():
+            return
         assert tr.strip(), f"{lang}:{where} is empty"
         assert not tr.strip().upper().startswith("TODO"), (
             f"{lang}:{where} is still a stub: {tr[:40]!r}")
@@ -144,15 +159,38 @@ def load(module, attr, lang):
 
     same_shape(en, tr, lang, attr)
 
-    # Records are stamped individually, so an edit to one service page does not
-    # invalidate the other 3.
-    if isinstance(en, dict) and all(isinstance(v, dict) for v in en.values()):
+    # A record that CAN hold a "src" key is stamped inline, individually, so an
+    # edit to one service page does not invalidate the other 3. Anything that
+    # cannot hold a key (a list of tuples, a bare string) is stamped by name in
+    # a module-level SRC dict instead. Those were the one shape in the corpus
+    # that could go stale in English and never say so.
+    if isinstance(en, dict) and en and all(isinstance(v, dict) for v in en.values()):
         for key in en:
             check_stamp(en[key], tr[key], lang, f"{module}/{key}")
-    elif isinstance(en, (list, tuple)) and all(isinstance(v, dict) for v in en):
+    elif isinstance(en, dict):
+        check_stamp(en, tr, lang, f"{module}/{attr}")
+    elif isinstance(en, (list, tuple)) and en and all(isinstance(v, dict) for v in en):
         for i, rec in enumerate(en):
             slug = rec.get("slug", i)
             check_stamp(rec, tr[i], lang, f"{module}/{slug}")
+
+    else:
+        # A list of tuples has nowhere to put a "src" key, so the stamp for the
+        # whole attribute lives in a module-level SRC dict. Without this branch
+        # those lists were the one shape in the corpus that could go stale in
+        # English and never say so, which is the exact failure the stamp exists
+        # to prevent.
+        src = getattr(importlib.import_module(name), "SRC", {})
+        want = stamp(en)
+        got = src.get(attr)
+        assert got, (
+            f'{name}.py has no SRC entry for {attr}. Add SRC = {{"{attr}": '
+            f'"{want}"}} at module level: a list of tuples has no record to '
+            f"stamp, so the attribute is stamped instead")
+        assert got == want, (
+            f"{module}.{attr} changed in English (stamp was {got}, is now "
+            f"{want}) and {name}.py still claims {got}. Re-translate, then "
+            f"re-stamp.")
 
     return tr
 
