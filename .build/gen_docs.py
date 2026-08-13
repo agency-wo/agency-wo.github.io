@@ -19,11 +19,19 @@ from urllib.parse import quote
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import i18n  # noqa: E402
 import shell  # noqa: E402
-from gen_pages import form_source, out, strip_tags, write  # noqa: E402
+from gen_pages import Contents, form_source, out, strip_tags, write  # noqa: E402
 
 S = shell.SITE
 NL = chr(10)
 CRLF = chr(13) + chr(10)
+
+# /start/ has an aside and 5 h2, so counting alone would give it a contents
+# list. It is excluded by construction instead, and here rather than in the
+# threshold, because the page has exactly one job: rule 20 gives it a single
+# ask and the audit form is it. A jump list beside that form is a second thing
+# to decide about before answering the first, and it would sit above the block
+# that carries the address and the number somebody came here for.
+NO_CONTENTS = ("/start/",)
 
 # TODO(founder): add profile URLs. sameAs pointing at nothing does nothing.
 FOUNDER_SAMEAS = []
@@ -113,11 +121,17 @@ def flat(s, lang):
 BREAK_BEFORE = ("h2", "who")
 
 
-def block(indent, b, lang):
+def block(indent, b, lang, en=None, toc=None):
     kind = b[0]
     pad = " " * indent
     if kind == "h2":
-        return f'{pad}<h2>{fill(b[1], lang)}</h2>'
+        text = fill(b[1], lang)
+        # A heading gets an id only where something links to it. On a page with
+        # no contents list this emits the byte it emitted before, so /studio/
+        # and /start/ are untouched by any of this.
+        if toc is None:
+            return f'{pad}<h2>{text}</h2>'
+        return f'{pad}<h2 id="{toc.add(en[1], text)}">{text}</h2>'
     if kind == "lead":
         return f'{pad}<p class="lead">{txt(indent + 2, b[1], lang)}</p>'
     if kind == "p":
@@ -156,17 +170,21 @@ def block(indent, b, lang):
     raise AssertionError("no such block kind: " + kind)
 
 
-def blocks(indent, items, lang):
+def blocks(indent, items, en_items, lang, toc):
     """Returns chunks, not one string, so the caller can drop a leading blank.
 
     A page whose prose opens with an h2 still wants no blank line above it,
     and /start/ opens with the audit form and then an h2 that does.
+
+    en_items is the same list in English, paired by index because that is the
+    pairing i18n.same_shape() has already proved. It is what the ids are cut
+    from, so a fragment means the same thing in all 3 languages.
     """
     rows = []
-    for b in items:
+    for b, en_b in zip(items, en_items):
         if b[0] in BREAK_BEFORE:
             rows.append("")
-        rows.append(block(indent, b, lang))
+        rows.append(block(indent, b, lang, en_b, toc))
     return rows
 
 
@@ -203,10 +221,16 @@ CTA_NOTE = {
 
 # ------------------------------------------------------------- the parts ----
 
-def faq_section(indent, rec, lang):
+def faq_section(indent, rec, en_rec, lang, toc):
+    """The FAQ heading is an h2 like any other and goes into the contents like
+    any other. It is emitted from here rather than from the block list, which
+    is exactly how a contents list built off rec["blocks"] would have missed
+    it and been quietly short by one on the only page that has one."""
     pad = " " * indent
+    h = fill(rec["faq_h"], lang)
+    hid = "" if toc is None else f' id="{toc.add(en_rec["faq_h"], h)}"'
     rows = [pad + '<section class="faq">',
-            f'{pad}  <h2>{fill(rec["faq_h"], lang)}</h2>']
+            f'{pad}  <h2{hid}>{h}</h2>']
     for q, a in rec["faq"]:
         rows.append(pad + '  <div class="faq-item">')
         rows.append(f'{pad}    <h3 class="faq-q">{txt(indent + 6, q, lang)}</h3>')
@@ -216,12 +240,18 @@ def faq_section(indent, rec, lang):
     return NL.join(rows)
 
 
-def aside(indent, spec, lang):
+def aside(indent, spec, lang, toc=None):
     """An aria-label is read aloud, so it is copy. aria-describedby is wiring,
     so it is not, and it never leaves this file."""
     label, side_blocks = spec
     pad = " " * indent
     rows = [f'{pad}<aside class="side" aria-label="{fill(label, lang)}">']
+    if toc is not None:
+        # Above the blocks that send a reader off the page, because it is the
+        # only one in the column that moves him around the page he is on.
+        contents = toc.markup(indent + 2)
+        if contents:
+            rows.append(contents)
     for heading, items in side_blocks:
         rows.append(pad + '  <div class="side-block">')
         rows.append(f'{pad}    <p class="side-h">{fill(heading, lang)}</p>')
@@ -400,7 +430,13 @@ LD = {"/systems/": systems_ld, "/studio/": studio_ld, "/start/": start_ld}
 
 # ------------------------------------------------------------------ emit ----
 
-def render(rec, lang):
+def render(rec, en_rec, lang):
+    # A contents list needs a column to sit in, so the aside is the structural
+    # half of the condition and the heading count inside Contents is the other.
+    # /studio/ has 6 h2 and no aside, and gets nothing.
+    wants_toc = rec.get("aside") and rec["url"] not in NO_CONTENTS
+    toc = Contents(lang) if wants_toc else None
+
     p = {"url": rec["url"],
          "title": rec["title"] + " " + shell.DOT + " " + shell.BRAND,
          "description": rec["description"],
@@ -425,16 +461,16 @@ def render(rec, lang):
     chunks = []
     if rec.get("form"):
         chunks.append(audit_section(rec, lang))
-    chunks += blocks(10, rec["blocks"], lang)
+    chunks += blocks(10, rec["blocks"], en_rec["blocks"], lang, toc)
     if rec.get("faq"):
-        chunks += ["", faq_section(10, rec, lang)]
+        chunks += ["", faq_section(10, rec, en_rec, lang, toc)]
     if chunks and chunks[0] == "":
         chunks.pop(0)
 
     parts += chunks
     parts.append("        </div>")
     if rec.get("aside"):
-        parts += ["", aside(8, rec["aside"], lang)]
+        parts += ["", aside(8, rec["aside"], lang, toc)]
     parts += ["      </div>", ""]
     body = NL.join(parts)
 
@@ -448,9 +484,13 @@ def render(rec, lang):
 if __name__ == "__main__":
     changed = total = 0
     for lg in i18n.LANGS:
-        for rec in i18n.load("docs", "PAGES", lg):
+        # The English record travels beside the localised one so the ids come
+        # off headings a translator never touched, paired by index because
+        # that is the pairing i18n.same_shape() guarantees.
+        en_pages = i18n.load("docs", "PAGES", "en")
+        for rec, en_rec in zip(i18n.load("docs", "PAGES", lg), en_pages):
             if write(out(rec["url"].strip("/") + "/index.html", lg),
-                     render(rec, lg)):
+                     render(rec, en_rec, lg)):
                 changed += 1
             total += 1
     print(f"{changed} page(s) changed of {total}")

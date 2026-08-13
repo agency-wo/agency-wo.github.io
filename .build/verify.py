@@ -113,6 +113,19 @@ for p in all_pages:
         if href not in targets:
             findings.append(f"[link] {rel(p)} -> {href} (no such page)")
 
+# 2b. in-page fragments resolve --------------------------------------------
+# Check 2's pattern is href="(/[^"#?]*), so a link that is ONLY a fragment is
+# skipped entirely and a #-target that does not exist has never been checked by
+# anything. The contents lists are built from headings and could not be wrong
+# today, but "could not be wrong today" is what every silent break was before
+# it broke.
+for p in all_pages:
+    html = read(p)
+    ids = set(re.findall(r'\bid="([^"]+)"', html))
+    for frag in set(re.findall(r'href="#([^"]+)"', html)):
+        if frag not in ids:
+            findings.append(f"[link] {rel(p)} -> #{frag} (no such id on the page)")
+
 # 3. one h1 -----------------------------------------------------------------
 for p in all_pages:
     n = len(re.findall(r"<h1[^>]*>", read(p)))
@@ -364,7 +377,7 @@ for p in all_pages:
 # Rule 35. Over-explaining shows up as length before it shows up as anything
 # else. Measured: median 19 words, p90 43, longest good paragraph 73.
 #
-# <p, not <p: [^>]* happily matches the "ath ..." of a <path> inside every
+# <p\b, not <p: [^>]* happily matches the "ath ..." of a <path> inside every
 # inline SVG on the site, so this and check 17 used to measure from the logo's
 # first path to the first real </p> and judged the header as a paragraph.
 P_WARN, P_FAIL = 55, 85

@@ -137,27 +137,27 @@
 
       <div class="grid">
         <div class="prose">
-          <h2>The short answer</h2>
+          <h2 id="s-the-short-answer">The short answer</h2>
           <p>Software a business runs on does not usually fail loudly. It fails by quietly leaving something out, and the business believes the number because it came off a screen.</p>
           <p>Here is one we found in our own build, what it cost, and why we now check for it differently.</p>
-          <h2>A chart that could not be wrong, and was</h2>
+          <h2 id="s-a-chart-that-could-not-be-wrong-and-was">A chart that could not be wrong, and was</h2>
           <p>The system tracks money in separate lines so the owner can see which part of the business actually earns. A 5th line was added, and 5 charts carried on summing 4.</p>
           <p>Nothing broke. Nothing looked odd. A stacked chart has no total of its own to disagree with, so the picture stayed plausible and the money quietly did not add up. It ran that way for a whole phase of work.</p>
-          <h2>The guard that found it, and the one it could not</h2>
+          <h2 id="s-the-guard-that-found-it-and-the-one-it">The guard that found it, and the one it could not</h2>
           <p>We wrote a check that searches the source for anywhere all 4 original lines are named together. It found the 5 charts immediately.</p>
           <p>It could not find the 6th problem. One function named the 4 lines as an object spread over 4 lines of code, which looks nothing like a list to a text search.</p>
           <p>The day a 5th line existed, that function threw and took the whole statistics panel down with it. A crawler that opens every screen and clicks everything found it in a minute. No amount of searching the text would have.</p>
           <p>The replacement check asks the functions themselves whether every row carries every line. It catches the shape rather than the words.</p>
-          <h2>Why this is the argument for custom software</h2>
+          <h2 id="s-why-this-is-the-argument-for-custom">Why this is the argument for custom software</h2>
           <p>The same shop had a second problem of the same family. Revenue and cash were the same number. They are not.</p>
           <p>Money is earned when the watch goes back to the customer, and received when they actually pay. A month of big handovers and slow payers prints as a triumph while the till is empty.</p>
           <p>A spreadsheet will never tell you that, because a spreadsheet has no opinion. It adds what you point it at.</p>
           <p>A third: a watch sold whose price never synced counted as one watch and zero money. Unknown is not zero, so the count of items with no price now travels alongside the total and gets printed next to it.</p>
-          <h2>What it does on an ordinary day</h2>
+          <h2 id="s-what-it-does-on-an-ordinary-day">What it does on an ordinary day</h2>
           <p>Stock, repair jobs, who owes what, and the month on one printable page. It works in a back room with thick walls and no signal, because the reference library is real pages rather than a call to a server. It costs nothing per month to run.</p>
           <p>And it is wired to the shop's website: sell a watch over the counter and the site stops offering it about a minute later, without anybody touching a computer. That minute is not a figure of speech. It is a 60 second cache, and there is a test that fails if it drifts.</p>
           <p>The whole build is on <a href="/work/iglisi-watch/">the Iglisi Watch page</a>, and what we would build for a different trade is on <a href="/systems/">the custom software page</a>.</p>
-          <h2>The part worth stealing</h2>
+          <h2 id="s-the-part-worth-stealing">The part worth stealing</h2>
           <p>If a number on your screen has never disagreed with anything, it has never been checked. Find the place your system adds something up, and go and add it up by hand once. That is a free afternoon and it is how we found ours.</p>
 
           <p class="payoff"><svg class="tick" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 11H5V7H9V3H11" fill="none" stroke="#D8232A" stroke-width="2"/></svg><span>Tell us what you still count by hand every week. We will tell you whether it is worth building something, and we will say so when it is not.
@@ -165,6 +165,17 @@
         </div>
 
         <aside class="side" aria-label="Details">
+          <nav class="side-block side-toc" aria-labelledby="toc-h">
+            <p class="side-h" id="toc-h">On this page</p>
+            <ul class="side-list">
+              <li><a href="#s-the-short-answer">The short answer</a></li>
+              <li><a href="#s-a-chart-that-could-not-be-wrong-and-was">A chart that could not be wrong, and was</a></li>
+              <li><a href="#s-the-guard-that-found-it-and-the-one-it">The guard that found it, and the one it could not</a></li>
+              <li><a href="#s-why-this-is-the-argument-for-custom">Why this is the argument for custom software</a></li>
+              <li><a href="#s-what-it-does-on-an-ordinary-day">What it does on an ordinary day</a></li>
+              <li><a href="#s-the-part-worth-stealing">The part worth stealing</a></li>
+            </ul>
+          </nav>
           <div class="side-block">
             <p class="side-h">The service</p>
             <ul class="side-list">

@@ -74,6 +74,10 @@ SIDE_SERVICE = "The service"
 SIDE_BUSINESS = "The business in this post"
 SIDE_NEXT = "Next"
 SIDE_ALL_FOUR = "All four"
+# The one sidebar heading that names the page you are on rather than the next
+# one. The list under it is built from the page's own h2 as they are written,
+# so this is the only part of it anybody ever types.
+SIDE_ON_THIS_PAGE = "On this page"
 READ_NEXT = "Read next"
 READ_IT = "Read it"
 WHAT_WE_DO = "What we do"

@@ -24,22 +24,29 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import i18n  # noqa: E402
 import l10n  # noqa: E402
 import shell  # noqa: E402
-from gen_pages import out, write  # noqa: E402
+from gen_pages import Contents, out, write  # noqa: E402
 
 S = shell.SITE
 NL = chr(10)
 BLOG = "/blog/"
 
 
-def newest_first(posts):
-    """A copy, never a sort in place: i18n.load() pairs a record to its
+def newest_first(pairs):
+    """Every post beside the English record it translates, newest first.
+
+    A copy, never a sort in place: i18n.load() pairs a record to its
     translation BY INDEX, and reordering only the English side would report a
     stamp mismatch against a translation that is perfectly correct, naming the
     wrong post while it did it.
 
+    The pair is made before the sort for the same reason. Index is the pairing
+    same_shape() proves, and it is the only one that cannot be broken by a
+    translated record carrying its own copy of a date.
+
     Newest first, so the founder can append a record rather than prepend one.
     """
-    return sorted(posts, key=lambda p: (p["date"], p["slug"]), reverse=True)
+    return sorted(pairs, key=lambda both: (both[0]["date"], both[0]["slug"]),
+                  reverse=True)
 
 
 def post_url(p):
@@ -48,7 +55,7 @@ def post_url(p):
 
 # ------------------------------------------------------------------- post --
 
-def post_page(p, nxt, by_slug, lang):
+def post_page(p, en_p, nxt, by_slug, lang):
     c = shell.ch(lang)
     url = S + shell.localise(post_url(p), lang)
     home = S + shell.localise("/", lang)
@@ -87,11 +94,22 @@ def post_page(p, nxt, by_slug, lang):
             "jsonld": json.dumps({"@context": "https://schema.org", "@graph": graph},
                                  indent=2, ensure_ascii=False)}
 
+    # A post is 6 to 8 sections of argument, which is the length at which a
+    # reader wants to see the shape before he commits to the first paragraph.
+    # The list is built here, off the same tuples the body is written from, so
+    # a heading cannot be renamed without its entry moving with it.
+    toc = Contents(lang)
     sections = []
-    for heading, blocks in p["body"]:
-        sections.append(f"          <h2>{heading}</h2>")
+    for (heading, blocks), (en_heading, _en_blocks) in zip(p["body"],
+                                                           en_p["body"]):
+        hid = toc.add(en_heading, heading)
+        sections.append(f'          <h2 id="{hid}">{heading}</h2>')
         sections.extend("          " + shell.localise_html(b, lang) for b in blocks)
     sections = NL.join(sections)
+
+    contents = toc.markup(10)
+    if contents:
+        contents += NL
 
     related = NL.join(f'              <li><a href="{shell.localise(h, lang)}">{t}</a></li>'
                       for h, t in p["related"])
@@ -117,7 +135,7 @@ def post_page(p, nxt, by_slug, lang):
         </div>
 
         <aside class="side" aria-label="{c.ARIA_DETAILS}">
-          <div class="side-block">
+{contents}          <div class="side-block">
             <p class="side-h">{c.SIDE_SERVICE}</p>
             <ul class="side-list">
               <li><a href="{shell.localise(svc_href, lang)}">{svc_name}</a></li>
@@ -270,17 +288,19 @@ def check(posts, by_slug):
 if __name__ == "__main__":
     changed = total = 0
     for lg in i18n.LANGS:
-        posts = newest_first(i18n.load("posts", "POSTS", lg))
+        pairs = newest_first(zip(i18n.load("posts", "POSTS", lg),
+                                 i18n.load("posts", "POSTS", "en")))
+        posts = [p for p, _en in pairs]
         by_slug = {c["slug"]: c for c in i18n.load("clients", "CLIENTS", lg)}
         check(posts, by_slug)
         if write(out(os.path.join("blog", "index.html"), lg),
                  blog_index(posts, lg)):
             changed += 1
         total += 1
-        for i, p in enumerate(posts):
+        for i, (p, en_p) in enumerate(pairs):
             nxt = posts[(i + 1) % len(posts)]
             if write(out(os.path.join("blog", p["slug"], "index.html"), lg),
-                     post_page(p, nxt, by_slug, lg)):
+                     post_page(p, en_p, nxt, by_slug, lg)):
                 changed += 1
             total += 1
     print(f"{changed} page(s) changed of {total}")

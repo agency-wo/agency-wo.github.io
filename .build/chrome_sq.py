@@ -73,6 +73,7 @@ SRC = {
     "SIDE_ALSO": "e4144fc8",
     "SIDE_BUSINESS": "af808825",
     "SIDE_NEXT": "8f2cb6c0",
+    "SIDE_ON_THIS_PAGE": "dfb82a23",
     "SIDE_SERVICE": "0b639228",
     "SIDE_WRITTEN": "4bf5b84e",
     "SKIP": "f3ac6901",
@@ -179,6 +180,10 @@ SIDE_NEXT = "Tjetri"
 # The collective numeral, which is how Albanian says "all four of them" without
 # repeating the noun the column above already listed 4 times.
 SIDE_ALL_FOUR = "Të katërt"
+# The demonstrative goes before the noun, so it is "në këtë faqe" and never
+# "në faqen këtë". The ë stays a literal letter, as everywhere else in this
+# file, because an entity here would land inside an aria-labelledby one day.
+SIDE_ON_THIS_PAGE = "Në këtë faqe"
 READ_NEXT = "Lexo më pas"
 READ_IT = "Lexoje"
 WHAT_WE_DO = "Çfarë bëjmë"        # identical to FOOT_HEADINGS[0], as in English

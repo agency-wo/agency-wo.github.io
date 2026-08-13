@@ -534,6 +534,11 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
 @media (max-width: 999px) {
   .prose, .studio-prose { grid-column: 1 / 13; }
   .side { grid-column: 1 / 13; position: static; margin-top: var(--s-8); }
+  /* Below 1000 the sidebar stops being sticky and lands under the article, so
+     an index you reach by scrolling past everything it indexes is furniture.
+     It is hidden rather than moved: .side is a single grid item, so a
+     grid-row on it would drag the other 3 blocks above the prose with it. */
+  .side-toc { display: none; }
   .case-grid, .post-row { grid-template-columns: 1fr; }
   .post-row > div + div { margin-top: var(--s-4); }
   .foot-index { grid-template-columns: repeat(2, 1fr); }

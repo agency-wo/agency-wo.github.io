@@ -72,6 +72,7 @@ SRC = {
     "SIDE_ALSO": "e4144fc8",
     "SIDE_BUSINESS": "af808825",
     "SIDE_NEXT": "8f2cb6c0",
+    "SIDE_ON_THIS_PAGE": "dfb82a23",
     "SIDE_SERVICE": "0b639228",
     "SIDE_WRITTEN": "4bf5b84e",
     "SKIP": "f3ac6901",
@@ -170,6 +171,10 @@ SIDE_SERVICE = "Il servizio"
 SIDE_BUSINESS = "L'attività di cui parliamo"
 SIDE_NEXT = "Prossimo"
 SIDE_ALL_FOUR = "Tutti e quattro"
+# "In questa pagina" is what an Italian contents list says, and it is 3
+# characters shorter than the literal "Su questa pagina", which reads as a
+# topic rather than as a place.
+SIDE_ON_THIS_PAGE = "In questa pagina"
 READ_NEXT = "Da leggere dopo"
 READ_IT = "Leggilo"
 WHAT_WE_DO = "Cosa facciamo"      # identical to FOOT_HEADINGS[0], as in English
