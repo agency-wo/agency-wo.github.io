@@ -203,17 +203,11 @@ def render():
 
     <section class="place" aria-labelledby="place-h">
       <div class="wrap">
-        <h2 class="place-say" id="place-h">We keep the same working hours as Milan.</h2>
-        <div class="place-more">
-          <p>Albania runs on the same clock as Italy and Germany, so a message
-            sent at 9 in the morning in Bologna arrives at 9 here. There's no
-            overnight handover and nobody waiting for another continent to wake
-            up. Tirana to Bari is 1 hour by plane.</p>
-          <p>The work costs less here than it would in either place, and the
-            reason is the rent. The standard is the part you can test: run any
-            speed or accessibility check you like on this page, on the same
-            phone you would use to find us on Google.</p>
-        </div>
+        <h2 class="place-say" id="place-h">We work to European standards and
+          charge Albanian prices.</h2>
+        <p class="place-more">Being in Durres is the whole reason, and it is the
+          only cheap thing about the work. You can test the standard on this
+          page before you believe a word of it.</p>
       </div>
     </section>
 

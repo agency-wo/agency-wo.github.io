@@ -434,17 +434,15 @@ h3, .faq-q, .ledger h3, .cta {
     overflow: visible; clip: auto; font-weight: 700; }
 }
 
-/* where we are. The only 2-column text on the site, because this is the one
-   block that states a situation rather than making an argument, and a reader
-   scanning for the money answer should find it in one glance. */
-.place { border-top: 1px solid var(--rule); padding-block: var(--pad-section); }
-.place-say { max-width: 20ch; }
-.place-more { margin-top: var(--s-7); columns: 2; column-gap: var(--s-9); }
-.place-more p { break-inside: avoid; text-wrap: pretty; }
-@media (max-width: 799px) {
-  .place-more { columns: 1; }
-  .place-more p + p { margin-top: var(--s-5); }
-}
+/* The claim. One sentence at display size and one underneath, because a
+   position you have to explain is not a position. It was 2 columns of
+   supporting detail once and read as an argument being made rather than a
+   fact being stated. */
+.place { border-top: 1px solid var(--rule); padding-block: var(--pad-major); }
+.place-say { font-size: clamp(2.25rem, 4.6vw, 3.75rem); line-height: 1.04;
+  max-width: 22ch; }
+.place-more { margin-top: var(--s-6); max-width: 50ch; font-size: var(--fs-lead);
+  text-wrap: pretty; }
 
 /* who: asymmetric, column 7 deliberately empty, the refusal is the headline */
 .who-say { grid-column: 1 / 7; }
