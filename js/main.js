@@ -73,4 +73,69 @@
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
   }
+
+  /* ---- the free audit form ------------------------------------------------
+     Enhancement only. With this file blocked the form still works: it is a
+     native POST and Web3Forms returns the visitor to /start/#sent, where the
+     :target rule in main.css reveals the confirmation on its own. Everything
+     below exists so nobody has to leave the page. */
+  var af = document.getElementById("audit-form");
+  if (af && window.fetch && window.FormData) {
+    var section = document.getElementById("audit");
+    var done = document.getElementById("sent");
+    var fail = document.getElementById("af-fail");
+    var send = document.getElementById("af-send");
+    var label = send ? send.innerHTML : "";
+
+    var mark = function () {
+      /* aria-invalid per field, which no other form in this workspace sets */
+      var fields = af.querySelectorAll("input[required]");
+      for (var i = 0; i < fields.length; i++) {
+        fields[i].setAttribute("aria-invalid", fields[i].checkValidity() ? "false" : "true");
+      }
+    };
+
+    af.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (fail) fail.hidden = true;
+
+      /* honeypot: a bot filled the field no human can see. Look sent, do
+         nothing, and never tell it why. */
+      var bot = af.querySelector('[name="botcheck"]');
+      if (bot && bot.checked) {
+        if (section) section.classList.add("is-sent");
+        return;
+      }
+
+      af.classList.add("was-validated");
+      mark();
+      if (!af.checkValidity()) {
+        var bad = af.querySelector("input:invalid");
+        if (bad) bad.focus();
+        return;
+      }
+
+      if (send) { send.disabled = true; send.textContent = "Sending"; }
+      fetch(af.action, { method: "POST", body: new FormData(af) })
+        .then(function (r) { return r.json(); })
+        .then(function (json) {
+          if (!json || !json.success) throw new Error("rejected");
+          if (section) section.classList.add("is-sent");
+          if (done) done.focus();
+        })
+        .catch(function () {
+          /* Never a dead button and never an alert(): the panel names the
+             two other ways to reach us. */
+          if (fail) { fail.hidden = false; fail.focus(); }
+          if (send) { send.disabled = false; send.innerHTML = label; }
+        });
+    });
+
+    /* clear the red the moment somebody starts fixing it */
+    af.addEventListener("input", function (e) {
+      if (af.classList.contains("was-validated") && e.target.checkValidity()) {
+        e.target.setAttribute("aria-invalid", "false");
+      }
+    });
+  }
 })();

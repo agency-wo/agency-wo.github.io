@@ -14,6 +14,29 @@ EMAIL = "hello@minarank.com"
 WHATSAPP = "355675716090"
 FOUNDER = "Henri Sila"
 
+# -- the free audit form ----------------------------------------------------
+# Web3Forms, the same service already running on watch.al. The access key is a
+# public write-only token: it can submit to this one form and do nothing else,
+# so it is safe in markup. It is not a secret and must not be treated as one.
+# TODO(founder): replace with the key for minarank's own form. Do not reuse
+# watch.al's: one key, one inbox, one form. Gate check 22 fails until this is
+# a real key.
+WEB3FORMS_KEY = "PASTE-MINARANK-ACCESS-KEY-HERE"
+FORM_ENDPOINT = "https://api.web3forms.com/submit"
+AUDIT_URL = "/start/#audit"
+
+# Stated ONCE. Gate check 25 fails the build if any page claims a different
+# time, which is exactly how /start/ came to promise "a day or two" while the
+# form promised 24 hours. Changing the promise is this line and a rebuild.
+TURNAROUND = "within 24 hours"
+
+# The redirect is only used by the no-JS native POST. Web3Forms' free plan
+# redirects same-domain only, so this is derived from SITE rather than from the
+# host we happen to be previewing on: the day minarank.com is live it starts
+# working, with no edit. Until then a no-JS visitor lands on Web3Forms' own
+# thank-you page and their lead still arrives.
+FORM_REDIRECT = SITE + "/start/?sent=1"
+
 # Work first: there is proof now, and it should not be buried.
 NAV = [
     ("/work/", "Proof"),
@@ -175,6 +198,7 @@ def footer(cta_heading=None, cta_note=None):
         cta = f'''      <h2>{cta_heading}</h2>
       <p class="band-note">{cta_note}</p>
       <p class="band-actions">
+        <a class="band-cta" href="{AUDIT_URL}">Get a free audit</a>
         <a class="mail" href="mailto:{EMAIL}">{EMAIL}</a>
         <span class="band-alt">or <a href="https://wa.me/{WHATSAPP}">message on WhatsApp</a></span>
       </p>

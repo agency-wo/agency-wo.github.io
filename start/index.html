@@ -93,13 +93,106 @@
           <span aria-current="page">Start a project</span>
         </nav>
         <h1 class="page-title">Tell us what you sell.</h1>
-        <p class="standfirst">Three ways to start. They all reach the same person, and
-          the reply takes a day or two because we look at your site first.</p>
+        <p class="standfirst">Start with the free audit, or just write. It all reaches
+          the same person, and the answer comes within 24 hours.</p>
       </header>
 
       <div class="grid">
         <div class="prose">
-          <h2>Email, with the questions already written</h2>
+          <section class="audit" id="audit" aria-labelledby="audit-h">
+            <h2 id="audit-h">Send us your site. We'll send back an audit.</h2>
+            <p>Tell us where your site is and we will send back a PDF: what it does
+              well, where the gaps are, and what we would fix first. It is free, it is
+              yours whether you hire us or not, and it arrives within 24 hours.</p>
+
+            <form class="af" id="audit-form" method="POST"
+              action="https://api.web3forms.com/submit" novalidate>
+              <input type="hidden" name="access_key" value="PASTE-MINARANK-ACCESS-KEY-HERE">
+              <input type="hidden" name="subject" value="Free audit request">
+              <input type="hidden" name="from_name" value="minarank">
+              <input type="hidden" name="redirect" value="https://minarank.com/start/?sent=1">
+              <div class="af-hp">
+                <label for="af-bot">Leave this one empty</label>
+                <input id="af-bot" type="checkbox" name="botcheck" tabindex="-1"
+                  autocomplete="off">
+              </div>
+
+              <div class="af-pair">
+                <p class="field">
+                  <label for="af-owner">Your name</label>
+                  <input id="af-owner" name="owner" type="text" autocomplete="name"
+                    required aria-describedby="af-owner-err">
+                  <span class="field-err" id="af-owner-err">We address the audit to
+                    somebody, so we need a name.</span>
+                </p>
+                <p class="field">
+                  <label for="af-name">Your business</label>
+                  <input id="af-name" name="name" type="text"
+                    autocomplete="organization" required aria-describedby="af-name-err">
+                  <span class="field-err" id="af-name-err">The name your customers know
+                    you by.</span>
+                </p>
+              </div>
+
+              <p class="field">
+                <label for="af-url">Your website</label>
+                <input id="af-url" name="url" type="url" inputmode="url"
+                  autocomplete="url" placeholder="https://" required
+                  aria-describedby="af-url-err">
+                <span class="field-err" id="af-url-err">The whole address, starting
+                  with https://</span>
+              </p>
+
+              <p class="field">
+                <label for="af-email">Email</label>
+                <input id="af-email" name="email" type="email" inputmode="email"
+                  autocomplete="email" required aria-describedby="af-email-err">
+                <span class="field-err" id="af-email-err">The audit goes here, so it
+                  has to be right.</span>
+              </p>
+
+              <div class="af-pair">
+                <p class="field">
+                  <label for="af-category">What you sell
+                    <span class="field-opt">optional</span></label>
+                  <input id="af-category" name="category" type="text"
+                    aria-describedby="af-category-hint">
+                  <span class="field-hint" id="af-category-hint">Watches, lingerie,
+                    heating. It sharpens the audit.</span>
+                </p>
+                <p class="field">
+                  <label for="af-city">Town
+                    <span class="field-opt">optional</span></label>
+                  <input id="af-city" name="city" type="text"
+                    autocomplete="address-level2" aria-describedby="af-city-hint">
+                  <span class="field-hint" id="af-city-hint">So we check the right
+                    map.</span>
+                </p>
+              </div>
+
+              <p class="af-go">
+                <button class="btn" type="submit" id="af-send">Send it
+                  <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+              </p>
+              <p class="af-fine">Your details go to us and to the service that delivers
+                the form, and nowhere else. We use them to send the audit. Ask and we
+                delete them.</p>
+              <p class="af-fail" id="af-fail" role="alert" tabindex="-1" hidden>That did not send.
+                Write to <a href="mailto:hello@minarank.com">hello@minarank.com</a> or
+                <a href="https://wa.me/355675716090">message on WhatsApp</a>, and we
+                will pick it up from there.</p>
+            </form>
+
+            <div class="af-done" id="sent" role="status" tabindex="-1">
+              <h3>Sent. Your audit is on its way.</h3>
+              <p>It covers how your site looks to Google and to the assistants people
+                now ask instead, how it stands next to the businesses competing with
+                you, and what we would fix first. No obligation, and nobody will ring
+                you. The PDF arrives within 24 hours.</p>
+            </div>
+          </section>
+
+          <h2>Or email, with the questions already written</h2>
           <p>This opens your email app with a short list of questions in it. Answer the
             ones that apply, delete the rest. The more you fill in, the more specific
             the reply.</p>
@@ -120,9 +213,9 @@
           <p><a class="cta" href="mailto:hello@minarank.com?subject=Booking%20a%20call">Ask for a time <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a></p>
 
           <h2>What happens next</h2>
-          <p>We read it, then look at your site, your competitors and what people are
-            searching for before replying. That's why it takes a day or two and why the
-            reply is worth reading.</p>
+          <p>We look at your site, your competitors and what people are searching
+            for before we answer. That is what takes the time, and it is why the answer
+            is worth reading.</p>
           <p>Then you get a straight answer: what we'd do, in what order, roughly what
             it costs, and whether it's worth doing at all. Only after that, a proposal
             on one page. No retainer you can't leave.</p>
@@ -155,6 +248,7 @@
       <h2>Or just say hello.</h2>
       <p class="band-note">A paragraph about what you sell is enough to start.</p>
       <p class="band-actions">
+        <a class="band-cta" href="/start/#audit">Get a free audit</a>
         <a class="mail" href="mailto:hello@minarank.com">hello@minarank.com</a>
         <span class="band-alt">or <a href="https://wa.me/355675716090">message on WhatsApp</a></span>
       </p>

@@ -457,9 +457,81 @@ h3, .faq-q, .ledger h3, .cta, .mail {
 .who-more { grid-column: 8 / 13; align-self: end; }
 .who-more p { font-size: var(--fs-small); max-width: 40ch; }
 
-/* the single conversion point should not be smaller than a service heading */
-.mail { font-size: clamp(1.375rem, 2.6vw, 1.875rem); }
-.mail::before { height: 3px; bottom: -5px; }
+/* The conversion point used to be this address, so it was sized up to match a
+   service heading. It is the audit button now, and two loud things in one band
+   is neither. The address steps back to its own size and keeps the red. */
+.mail { font-size: var(--fs-h3); }
+.mail::before { height: 2px; bottom: -4px; }
+
+/* -- the free audit form ---------------------------------------------------
+   The one place on the site that takes something rather than says something.
+
+   Two submit paths. Without JavaScript it is a native POST and Web3Forms sends
+   the visitor back to /start/#sent, where :target alone reveals the
+   confirmation: no script runs and the fallback still works, which is the one
+   thing every WhatsApp form in this workspace gets wrong. With JavaScript,
+   js/main.js intercepts and swaps in place.
+
+   Nothing here uses an inline style attribute, because style-src is 'self'.  */
+.audit { margin-bottom: var(--s-9); }
+.af { margin-top: var(--s-7); }
+
+/* the honeypot. Moved off-screen rather than display:none, because some bots
+   skip anything that is display:none, and it keeps a real label for the rare
+   screen reader that reaches it. */
+.af-hp { position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap; }
+
+.af-pair { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-5); }
+.field { display: block; margin-top: var(--s-5); }
+.field label { display: block; font-size: var(--fs-small); font-weight: 700;
+  margin-bottom: var(--s-2); }
+.field-opt { font-weight: 400; color: var(--slate); }
+.field input { width: 100%; font: inherit; font-size: var(--fs-body);
+  color: var(--ink); background: var(--paper); padding: 0.7em 0.8em;
+  border: 1px solid var(--rule); border-radius: 0;
+  transition: border-color 160ms ease; }
+.field input:hover { border-color: var(--slate); }
+.field input:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px;
+  border-color: var(--ink); }
+.field-hint { display: block; margin-top: var(--s-2);
+  font-size: var(--fs-small); color: var(--slate); }
+.field-err { display: none; margin-top: var(--s-2);
+  font-size: var(--fs-small); color: var(--red-dk); }
+
+/* nothing turns red before the visitor has tried to send */
+.af.was-validated :invalid ~ .field-err { display: block; }
+.af.was-validated :invalid { border-color: var(--red-dk); }
+
+.af-go { margin-top: var(--s-6); }
+button.btn { font-family: inherit; background: none; cursor: pointer; }
+button.btn:disabled { opacity: 0.55; cursor: default; }
+button.btn:disabled:hover { background: none; color: var(--ink); }
+
+.af-fine { margin-top: var(--s-5); font-size: var(--fs-small);
+  color: var(--slate); max-width: 54ch; }
+.af-fail { margin-top: var(--s-5); padding-left: var(--s-5);
+  border-left: 3px solid var(--red); max-width: 54ch; }
+.af-fail[hidden] { display: none; }
+
+.af-done { display: none; padding-left: var(--s-5);
+  border-left: 3px solid var(--red); }
+.af-done h3 { font-family: var(--font-display); font-weight: 500;
+  font-size: var(--fs-h2); line-height: 1.08;
+  letter-spacing: var(--track-display); max-width: 18ch; }
+.af-done p { margin-top: var(--s-4); max-width: 54ch; text-wrap: pretty; }
+/* :target is the no-JS reveal, .is-sent is the scripted one. Without :has()
+   support both the form and the confirmation show, which is redundant but
+   never broken. */
+.af-done:target, .audit.is-sent .af-done { display: block; }
+.audit:has(.af-done:target) .af, .audit.is-sent .af { display: none; }
+
+/* the band's primary action, inverted against the ink */
+.band-cta { display: inline-flex; align-items: center; font-weight: 700;
+  font-size: var(--fs-lead); line-height: 1; text-decoration: none;
+  padding: 0.85em 1.3em; background: var(--paper); color: var(--ink);
+  transition: background 160ms ease, color 160ms ease; }
+.band-cta:hover { background: var(--red); color: var(--paper); }
 
 /* -- floating WhatsApp ------------------------------------------------------
    Built from the client sites: Victoria's inline SVG and focus ring, Intimo
@@ -501,6 +573,8 @@ h3, .faq-q, .ledger h3, .cta, .mail {
 @media (max-width: 719px) {
   .check { padding-left: var(--s-4); }
   .marks { --mscale: 0.72; --mgap: var(--s-6); }
+  .af-pair { grid-template-columns: 1fr; gap: 0; }
+  .af-done, .af-fail { padding-left: var(--s-4); }
 }
 /* the widest mark is 15.7:1, so a narrow phone needs it small or it overflows */
 @media (max-width: 419px) {

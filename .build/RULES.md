@@ -86,7 +86,11 @@ everything checkable is checked by `verify.py`, which fails the build.
 ## Engineering
 
 30. Static HTML, CSS and vanilla JS. No build step at serve time, no
-    framework, **zero external requests**.
+    framework, **zero external requests on page load**. Loading the page
+    reaches nobody but us. A form POST is a different thing: it happens
+    only because a visitor pressed a button, and the host it goes to is
+    named in the CSP and checked by gate 24. Nothing may be fetched, and
+    no script, font, style or image may be loaded, from anybody else.
 31. Lighthouse 100s, CLS 0, WCAG AA.
 32. Every animation's final state is the CSS default, so no-JS, crawlers and
     reduced-motion get the finished page.
@@ -107,7 +111,13 @@ everything checkable is checked by `verify.py`, which fails the build.
     `h1` or `h2` with 2 commas and no verb fails; 1 comma and no verb warns.
 37. **Every service page names a client and links to their page.** A service
     page that cannot point at a business it did this for is a brochure.
-38. **Client marks are one ink colour, from the client's own material.** Two
+38. **One promise, in one place.** The turnaround the audit form promises
+    is a single constant in `shell.py`. It was stated in 3 places once and
+    2 of them said something else. Gated.
+39. **The form must work with JavaScript off.** The native POST is the real
+    submit path and the script is an enhancement over it. Every form in this
+    workspace that hands off to WhatsApp is dead without JS; this one is not.
+40. **Client marks are one ink colour, from the client's own material.** Two
     of the four have no logo file at all, so their wordmark is outlined from
     the webfont their own site serves, at their own weight and tracking.
     Reproduction, not invention. `assets/logo/build_client_marks.py`.

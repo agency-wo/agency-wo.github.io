@@ -347,6 +347,65 @@ for p in all_pages:
         elif n > P_WARN:
             warnings.append(f"[long?] {rel(p)}: {n} words, {plain[:60]}")
 
+# 22. the form is wired to a real key --------------------------------------
+# A form that posts a placeholder collects nothing and says "Sent" anyway,
+# which is the worst possible failure: silent, and only the visitor loses.
+import shell  # noqa: E402
+if not re.fullmatch(r"[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}",
+                    shell.WEB3FORMS_KEY):
+    findings.append("[form] shell.WEB3FORMS_KEY is not a real access key yet")
+
+# 23. every form control is labelled and described -------------------------
+for p in all_pages:
+    html = read(p)
+    ids = set(re.findall(r'\bid="([^"]+)"', html))
+    for tag in re.findall(r"<input\b[^>]*>|<textarea\b[^>]*>|<select\b[^>]*>", html):
+        if re.search(r'type="(hidden|submit)"', tag):
+            continue
+        # botcheck is Web3Forms' fixed honeypot name. It still carries a real
+        # label, but there is nothing to describe: no human should reach it,
+        # and it has neither a hint nor an error state.
+        if 'name="botcheck"' in tag:
+            continue
+        fid = re.search(r'\bid="([^"]+)"', tag)
+        if not fid:
+            findings.append(f"[a11y] {rel(p)}: form control with no id: {tag[:60]}")
+            continue
+        if f'for="{fid.group(1)}"' not in html:
+            findings.append(f"[a11y] {rel(p)}: no label for #{fid.group(1)}")
+        desc = re.search(r'aria-describedby="([^"]+)"', tag)
+        if not desc:
+            findings.append(f"[a11y] {rel(p)}: #{fid.group(1)} has no aria-describedby")
+        else:
+            for ref in desc.group(1).split():
+                if ref not in ids:
+                    findings.append(f"[a11y] {rel(p)}: #{fid.group(1)} describes "
+                                    f"#{ref}, which does not exist")
+
+# 24. the form's host is allowed in the CSP --------------------------------
+# Both directives, not one: form-action governs the no-JS native POST and
+# connect-src governs the fetch. Missing either kills one of the two paths.
+headers = read(os.path.join(ROOT, "_headers"))
+for p in all_pages:
+    for act in re.findall(r'<form\b[^>]*\baction="(https?://[^"/]+)', read(p)):
+        for directive in ("form-action", "connect-src"):
+            d = re.search(directive + r" ([^;]*);", headers)
+            if not d or act not in d.group(1):
+                findings.append(f"[csp] {act} is not allowed in {directive}")
+
+# 25. one promise, in one place -------------------------------------------
+# /start/ promised "a day or two" while the form promised 24 hours. The
+# turnaround is one constant now, and no page may state a different one.
+RIVALS = [r"a day or two", r"\bwithin \d+ hours\b", r"\bsame day\b",
+          r"\b\d+ working days?\b", r"\bnext day\b"]
+for p in all_pages:
+    body = text_of(read(p))
+    for pat in RIVALS:
+        for hit in re.findall(pat, body, re.I):
+            if hit.lower() not in shell.TURNAROUND.lower():
+                findings.append(f"[promise] {rel(p)} says {hit!r}, "
+                                f"but the turnaround is {shell.TURNAROUND!r}")
+
 # ------------------------------------------------------------------- report
 print(f"pages checked: {len(all_pages)}")
 print(f"first load:    {kb:.1f} KB")
