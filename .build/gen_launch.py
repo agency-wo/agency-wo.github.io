@@ -1,18 +1,29 @@
-"""Own the two files that flip on launch day: robots.txt and CNAME.
+"""Own the two files that decide who can reach this site: CNAME and robots.txt.
 
-They belong together because they are the same decision, and separating them
-broke the site once. Committing a CNAME makes GitHub Pages activate the custom
-domain IMMEDIATELY and 301 the whole github.io host to it, so adding CNAME
-before the domain resolves takes the preview offline. That happened. Hence one
-flag owning both.
+TWO FLAGS, and it used to be one. The one flag existed because separating them
+broke the site once: committing a CNAME makes GitHub Pages activate the custom
+domain IMMEDIATELY and 301 the whole github.io host to it, so a CNAME written
+before the domain resolved took the preview offline.
 
-PREVIEW = True   robots.txt blocks everybody, and there is no CNAME, so the
-                 site stays reachable at agency-wo.github.io.
-PREVIEW = False  robots.txt opens, CNAME appears, GitHub Pages serves the
-                 custom domain.
+That hazard is real and it is one-directional. It is about shipping CNAME too
+EARLY. It says nothing about the other order, and the other order is the one
+that matters now: the domain resolves, so serving it costs nothing, while
+opening robots.txt invites Google into a site whose 6 forms all reach nobody
+because the Web3Forms key is still a placeholder. Being indexed with dead forms
+is worse than being indexed a week later.
 
-TODO(founder): set PREVIEW = False on the day minarankstudio.com resolves and
-its DNS points at GitHub Pages. Not before, and not in two steps.
+So the old docstring's "not in two steps" was answering a question nobody is
+asking any more, and holding to it would keep the domain dark for a reason that
+has already been solved.
+
+DOMAIN_LIVE       CNAME is written and GitHub Pages serves minarankstudio.com.
+                  Only ever True once the A records actually resolve: check,
+                  do not assume.
+OPEN_TO_CRAWLERS  robots.txt allows everybody and names the sitemap.
+                  TODO(founder): set this True the day the Web3Forms key is
+                  real. Until then every form on the site is decoration.
+
+Gate check 30 holds both to the files on disk.
 
 Run from the project root:  python .build/gen_launch.py
 """
@@ -26,17 +37,18 @@ import shell  # noqa: E402
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 NL = chr(10)
 
-PREVIEW = True
+DOMAIN_LIVE = True
+OPEN_TO_CRAWLERS = False
 
 HOST = shell.SITE.split("//", 1)[-1]
 
-if PREVIEW:
-    robots = f"""# PREVIEW. This build is served from a temporary github.io URL, so crawlers
-# are blocked: indexing it under the wrong host is far more work to undo than
-# to prevent, and the JSON-LD identifiers are keyed to {shell.SITE}.
+if not OPEN_TO_CRAWLERS:
+    robots = f"""# CLOSED ON PURPOSE. Every form here posts to a Web3Forms key that is still a
+# placeholder, so a visitor who filled one in would reach nobody. Being indexed
+# with dead forms is worse than being indexed a week later.
 #
-# To open the site: set PREVIEW = False in .build/gen_launch.py and rebuild.
-# That also writes CNAME. Do it on the day the domain resolves, not before.
+# The domain is live; this is the other half. Set OPEN_TO_CRAWLERS = True in
+# .build/gen_launch.py on the day the Web3Forms key is real, and rebuild.
 
 User-agent: *
 Disallow: /
@@ -60,16 +72,16 @@ def write_if_changed(path, body):
     return "written"
 
 
-print("robots.txt %s (preview: %s)"
-      % (write_if_changed(os.path.join(ROOT, "robots.txt"), robots), PREVIEW))
+print("robots.txt %s (open to crawlers: %s)"
+      % (write_if_changed(os.path.join(ROOT, "robots.txt"), robots),
+         OPEN_TO_CRAWLERS))
 
 cname = os.path.join(ROOT, "CNAME")
-if PREVIEW:
-    if os.path.exists(cname):
-        os.remove(cname)
-        print("CNAME removed: it would 301 the preview host to a domain that "
-              "does not resolve yet")
-    else:
-        print("CNAME absent, as it must be while PREVIEW is on")
-else:
+if DOMAIN_LIVE:
     print("CNAME %s (%s)" % (write_if_changed(cname, HOST + NL), HOST))
+elif os.path.exists(cname):
+    os.remove(cname)
+    print("CNAME removed: it would 301 the preview host at a domain that does "
+          "not resolve yet")
+else:
+    print("CNAME absent, as it must be until the domain resolves")

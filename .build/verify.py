@@ -1199,34 +1199,51 @@ for d, dirs, files in os.walk(ROOT):
                     findings.append(f"[domain] {rel(p)}:{i} still says {dead}, "
                                     f"which is not ours. The site is {host}")
 
-# 30. CNAME agrees with the launch flag ------------------------------------
-# Committing a CNAME makes GitHub Pages activate the custom domain IMMEDIATELY
-# and 301 the whole github.io host to it. Do that before the domain resolves
-# and the preview goes offline, which is exactly what happened. So CNAME and
-# robots.txt are one decision, owned by PREVIEW in gen_launch.py.
-# Read the flag, do NOT import the module: gen_launch has no __main__ guard,
+# 30. CNAME and robots agree with the launch flags -------------------------
+# Read the flags, do NOT import the module: gen_launch has no __main__ guard,
 # so importing it writes robots.txt and can delete CNAME. A gate that says
 # "read-only" in its own docstring must not edit the tree it is judging.
+#
+# 2 flags now, because they answer 2 different questions. CNAME is safe the
+# moment the A records resolve; robots is safe the moment somebody can actually
+# be reached through a form. Holding the first hostage to the second kept the
+# domain dark for no reason.
 _launch_src = read(os.path.join(ROOT, ".build", "gen_launch.py"))
-_preview = re.search(r"^PREVIEW = (True|False)$", _launch_src, re.M)
-assert _preview, "gen_launch.py has no PREVIEW flag"
-PREVIEW = _preview.group(1) == "True"
+
+
+def _flag(name):
+    m = re.search(r"^" + name + r" = (True|False)$", _launch_src, re.M)
+    assert m, f"gen_launch.py has no {name} flag"
+    return m.group(1) == "True"
+
+
+DOMAIN_LIVE = _flag("DOMAIN_LIVE")
+OPEN_TO_CRAWLERS = _flag("OPEN_TO_CRAWLERS")
 
 cname_p = os.path.join(ROOT, "CNAME")
-if PREVIEW:
-    if os.path.exists(cname_p):
-        findings.append("[domain] CNAME exists while PREVIEW is on. GitHub "
-                        "Pages will 301 the preview host to a domain that "
-                        "does not resolve yet, taking the site offline")
-    if "Disallow: /" not in read(os.path.join(ROOT, "robots.txt")):
-        findings.append("[domain] PREVIEW is on but robots.txt does not block")
-else:
+host = _SITE.split("//", 1)[-1]
+if DOMAIN_LIVE:
     if not os.path.exists(cname_p):
-        findings.append("[domain] PREVIEW is off but there is no CNAME, so "
+        findings.append("[domain] DOMAIN_LIVE is on but there is no CNAME, so "
                         "GitHub Pages cannot serve the custom domain")
     elif read(cname_p).strip() != host:
         findings.append(f"[domain] CNAME says {read(cname_p).strip()!r}, "
                         f"shell.SITE says {host!r}")
+elif os.path.exists(cname_p):
+    findings.append("[domain] a CNAME exists while DOMAIN_LIVE is off. It 301s "
+                    "the whole github.io host at a domain that may not resolve")
+
+robots = read(os.path.join(ROOT, "robots.txt"))
+if OPEN_TO_CRAWLERS:
+    if "Disallow: /" in robots:
+        findings.append("[domain] OPEN_TO_CRAWLERS is on and robots.txt still "
+                        "says Disallow: /")
+    if _SITE + "/sitemap.xml" not in robots:
+        findings.append("[domain] robots.txt is open and does not name the "
+                        "sitemap, which is the one line a crawler wants")
+elif "Disallow: /" not in robots:
+    findings.append("[domain] OPEN_TO_CRAWLERS is off but robots.txt does not "
+                    "block anybody")
 
 # 31. every asset colour is a token ----------------------------------------
 # The favicon, both monograms, both wordmarks and the OG card sat on the dead

@@ -1,9 +1,9 @@
-# PREVIEW. This build is served from a temporary github.io URL, so crawlers
-# are blocked: indexing it under the wrong host is far more work to undo than
-# to prevent, and the JSON-LD identifiers are keyed to https://minarankstudio.com.
+# CLOSED ON PURPOSE. Every form here posts to a Web3Forms key that is still a
+# placeholder, so a visitor who filled one in would reach nobody. Being indexed
+# with dead forms is worse than being indexed a week later.
 #
-# To open the site: set PREVIEW = False in .build/gen_launch.py and rebuild.
-# That also writes CNAME. Do it on the day the domain resolves, not before.
+# The domain is live; this is the other half. Set OPEN_TO_CRAWLERS = True in
+# .build/gen_launch.py on the day the Web3Forms key is real, and rebuild.
 
 User-agent: *
 Disallow: /
