@@ -86,8 +86,20 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
    .head-cta below, and the colour is not the only signal. */
 .head-nav a:hover { text-decoration: underline; text-underline-offset: 4px;
   text-decoration-thickness: 2px; text-decoration-color: var(--red); }
-.head-nav a[aria-current="true"] { font-weight: 700; }
-.head-cta { text-decoration: underline !important; text-underline-offset: 4px;
+/* The page you are on is marked by a rule under it rather than by weight
+   alone. Bold was the only signal and it is nearly invisible at 15px against
+   the 500 the others carry: 2 of the 5 nav items are one word long and there
+   is nothing to compare the weight against. Ink, not red, so it cannot be
+   confused with the red hover on any other item. */
+.head-nav a[aria-current="true"] { font-weight: 700;
+  box-shadow: inset 0 -2px 0 0 var(--ink); }
+
+/* The CTA is an action, not a fifth destination, and it used to sit in the row
+   at the same gap and the same weight as the four links beside it. A hairline
+   separates the places you can go from the thing you can do. */
+.head-cta { margin-left: var(--s-2); padding-left: var(--s-6);
+  border-left: 1px solid var(--edge); font-weight: 700 !important;
+  text-decoration: underline !important; text-underline-offset: 4px;
   text-decoration-thickness: 2px; }
 .head-cta:hover { text-decoration-color: var(--red) !important; }
 
@@ -582,6 +594,9 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
      build if this stops being a child combinator. */
   .head-nav > a:not(.head-cta) { display: none; }
   .menu { display: block; }
+  /* the CTA is the only item left in the row here, so it has nothing to be
+     divided from and the hairline would read as a stray mark */
+  .head-cta { margin-left: 0; padding-left: 0; border-left: 0; }
   .foot-index { grid-template-columns: 1fr; }
   .foot-meta { flex-direction: column; }
   .band-actions { flex-direction: column; gap: var(--s-5); }
