@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>og harness</title>
+<!--
+  The share card, as a page rather than as a PNG somebody once exported.
+
+  The old card had no generator anywhere in git history, so when the brand
+  changed it could not be regenerated, only recreated. It was still navy and
+  coral, still set in Clash Display, still carried a strapline that had been
+  cut from the site, and still listed 4 services out of 5. Every share showed a
+  brand that no longer existed.
+
+  This uses the site's own tokens and its own self-hosted faces, so it cannot
+  drift from the site again without somebody noticing.
+
+  TO REGENERATE:
+    python -m http.server 8099          # from the project root
+    then screenshot http://localhost:8099/assets/og/og-harness.html
+    at exactly 1200x630, deviceScaleFactor 1, and save it over og-image.png.
+  Any headless browser will do. There is deliberately no node dependency here.
+-->
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/fonts.css">
+<style>
+  html, body { margin: 0; padding: 0; background: var(--paper); }
+  .card { position: relative; width: 1200px; height: 630px; overflow: hidden;
+    background: var(--paper); display: flex; flex-direction: column;
+    justify-content: center; padding: 0 84px; box-sizing: border-box; }
+
+  /* the same ten results the hero climbs, at the same 6% ink */
+  .serp { position: absolute; left: 84px; right: 84px; top: 128px; height: 300px; }
+  .serp i { position: absolute; left: 0; right: 46px; height: 1px;
+    background: rgba(19, 22, 28, 0.06); }
+  .serp i::after { content: attr(data-n); position: absolute; right: -34px;
+    top: -8px; width: 28px; text-align: right; font-family: var(--font-body);
+    font-variant-numeric: tabular-nums; font-size: 13px; letter-spacing: 0.06em;
+    color: rgba(90, 96, 112, 0.5); }
+
+  /* the lockup is inline-block so "studio" can right-align to the wordmark's
+     own edge rather than to the card, which is what puts it in the wedge the
+     climb opens under the risen k */
+  .lock { position: relative; z-index: 1; display: inline-block; }
+  .wm { font-family: var(--font-display); font-weight: 500; font-size: 200px;
+    line-height: 1; letter-spacing: -0.03em; color: var(--ink);
+    white-space: nowrap; }
+  .wm span { display: inline-block; }
+  .wm .k { color: var(--red); margin-left: -0.012em; }
+
+  .studio { display: block; text-align: right; margin-top: -0.06em;
+    font-family: var(--font-body); font-weight: 500; font-size: 34px;
+    letter-spacing: 0.34em; text-indent: 0.34em; color: var(--slate);
+    line-height: 1; }
+
+  .rule { position: absolute; left: 84px; right: 84px; bottom: 112px;
+    height: 1px; background: var(--rule); }
+  .svcs { position: absolute; left: 84px; bottom: 62px;
+    font-family: var(--font-body); font-weight: 600; font-size: 21px;
+    letter-spacing: 0.055em; color: var(--ink); }
+  .svcs b { font-weight: 600; color: var(--slate); padding: 0 10px; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="serp">
+      <i style="top:0"   data-n="1"></i><i style="top:33px"  data-n="2"></i>
+      <i style="top:66px" data-n="3"></i><i style="top:99px"  data-n="4"></i>
+      <i style="top:132px" data-n="5"></i><i style="top:165px" data-n="6"></i>
+      <i style="top:198px" data-n="7"></i><i style="top:231px" data-n="8"></i>
+      <i style="top:264px" data-n="9"></i><i style="top:297px" data-n="10"></i>
+    </div>
+
+    <div class="lock">
+      <div class="wm">
+        <span style="transform:translateY(0em)">m</span><span style="transform:translateY(-0.028em)">i</span><span style="transform:translateY(-0.056em)">n</span><span style="transform:translateY(-0.084em)">a</span><span style="transform:translateY(-0.112em)">r</span><span style="transform:translateY(-0.14em)">a</span><span style="transform:translateY(-0.168em)">n</span><span class="k" style="transform:translateY(-0.196em)">k</span>
+      </div>
+      <div class="studio">studio</div>
+    </div>
+
+    <div class="rule"></div>
+    <div class="svcs">SEO<b>&middot;</b>AI search<b>&middot;</b>Websites<b>&middot;</b>Meta ads<b>&middot;</b>Custom software</div>
+  </div>
+</body>
+</html>

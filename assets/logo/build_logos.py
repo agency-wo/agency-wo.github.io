@@ -16,7 +16,7 @@ from fontTools.misc.transform import Transform
 # extract, and point MINARANK_FONTS_DIR at the folder holding both family dirs.
 SC = os.environ.get("MINARANK_FONTS_DIR") or os.path.dirname(os.path.abspath(__file__))
 OUT = r"c:\Users\aceto\OneDrive\Desktop\web and apps\MINA RANK\assets\logo"
-INK, INK2, CORAL, PAPER = "#1B1F3B", "#2E3358", "#FF6B4A", "#F7F5F2"
+INK, INK2, CORAL, PAPER = "#13161C", "#262B35", "#D8232A", "#F0F1F3"
 
 def load(path, wght):
     f = TTFont(path)

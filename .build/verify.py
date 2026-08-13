@@ -66,8 +66,8 @@ def text_of(html):
 
 all_pages = sorted(pages())
 
-# The domain is not bought. minarank.com turned out to be a live company, so
-# the canonical host WILL change: read it, never retype it.
+# The canonical host has already changed once and will again: read it from
+# shell.SITE, never retype it. Check 29 enforces that.
 sys.path.insert(0, os.path.join(ROOT, ".build"))
 import shell as _shell  # noqa: E402
 _SITE = _shell.SITE
@@ -543,26 +543,80 @@ for hook, src, where in [("audit-form", js_src, "js/main.js"),
     if hook not in src:
         findings.append(f"[form] {where} no longer mentions {hook!r}")
 
-# 29. the domain is said once ----------------------------------------------
-# minarank.com is a live Hangzhou company, so this domain WILL change. Two
-# places used to hardcode it and would not have followed shell.SITE: the
-# sitemap's sort key and this file's own canonical check. Both derived now,
-# and nothing may retype it. shell.py line 1 is the single source.
+# 29. no retired domain survives anywhere ---------------------------------
+# The first domain this site claimed was never ours: it belongs to a company
+# trading under the same word. Renaming is not the risky part; the leftovers
+# are. An explicit list is the only thing that can catch them, because a check
+# searching for the CURRENT host goes blind to the old one the moment you
+# rename. Add a line below every time a host is retired.
+RETIRED_HOSTS = ["minarank.com"]
+SKIP_SCAN = {".git", "node_modules", "__pycache__", ".claude"}
+
 host = _SITE.split("//", 1)[-1]
-for d, _n, files in os.walk(os.path.join(ROOT, ".build")):
-    if "__pycache__" in d:
-        continue
+mail_host = _shell.EMAIL.split("@", 1)[-1]
+
+# B: the two constants must agree. Changing one and not the other is the
+# single likeliest way to ship a rename half-done, and it used to pass.
+if mail_host != host:
+    findings.append(f"[domain] shell.EMAIL is @{mail_host} but shell.SITE is "
+                    f"{host}. One of the 2 was not changed")
+
+# C and D: the whole repo, comments included.
+for d, dirs, files in os.walk(ROOT):
+    dirs[:] = [x for x in dirs if x not in SKIP_SCAN]
     for fn in sorted(files):
-        if not fn.endswith(".py"):
+        if fn.endswith((".png", ".ico", ".woff2", ".webp", ".jpeg", ".jpg", ".pyc")):
             continue
-        src = read(os.path.join(d, fn))
-        for i, line in enumerate(src.split(chr(10)), 1):
-            if host not in line or line.lstrip().startswith("#"):
+        p = os.path.join(d, fn)
+        try:
+            src = read(p)
+        except (UnicodeDecodeError, PermissionError):
+            continue
+        for dead in RETIRED_HOSTS:
+            if dead == host:
                 continue
-            if fn == "shell.py" and ("SITE = " in line or "EMAIL = " in line):
-                continue      # the 2 constants that are allowed to say it
-            findings.append(f"[domain] .build/{fn}:{i} hardcodes {host}. Derive "
-                            f"it from shell.SITE so the switch stays one edit")
+            for i, line in enumerate(src.split(chr(10)), 1):
+                # the declaration below is the one place allowed to name it
+                if dead in line and "RETIRED_HOSTS" not in line:
+                    findings.append(f"[domain] {rel(p)}:{i} still says {dead}, "
+                                    f"which is not ours. The site is {host}")
+
+# 30. the CNAME is the domain -----------------------------------------------
+# GitHub Pages will not serve a custom domain without this file, and nothing
+# else in the build knows it exists.
+cname_p = os.path.join(ROOT, "CNAME")
+if not os.path.exists(cname_p):
+    findings.append("[domain] no CNAME file, so GitHub Pages cannot serve the "
+                    "custom domain")
+elif read(cname_p).strip() != host:
+    findings.append(f"[domain] CNAME says {read(cname_p).strip()!r}, "
+                    f"shell.SITE says {host!r}")
+
+# 31. every asset colour is a token ----------------------------------------
+# The favicon, both monograms, both wordmarks and the OG card sat on the dead
+# navy-and-coral palette through an entire rebrand, because nothing on this
+# site ever compared a pixel to a token. The tab icon and the header logo were
+# different colours from each other on all 13 pages.
+tokens = read(os.path.join(ROOT, "css", "tokens.css"))
+ALLOWED = {m.upper() for m in re.findall(r"#[0-9A-Fa-f]{6}", tokens)}
+ALLOWED |= {"#000000", "#FFFFFF"}
+for rel_p in ["favicon.svg", "assets/logo/build_logos.py",
+              "assets/logo/build_icons.py"] + \
+             [f"assets/logo/{f}" for f in sorted(os.listdir(
+                 os.path.join(ROOT, "assets", "logo"))) if f.endswith(".svg")]:
+    p = os.path.join(ROOT, rel_p.replace("/", os.sep))
+    if not os.path.exists(p):
+        continue
+    for hexv in re.findall(r"#[0-9A-Fa-f]{6}", read(p)):
+        if hexv.upper() not in ALLOWED:
+            findings.append(f"[palette] {rel_p} uses {hexv}, which is not a "
+                            f"token in css/tokens.css")
+# build_icons.py writes its colours as byte triples, so check those too
+icons_src = read(os.path.join(ROOT, "assets", "logo", "build_icons.py"))
+for name, want in (("INK", "#13161C"), ("RED", "#D8232A"), ("PAPER", "#F0F1F3")):
+    trip = "(0x%s, 0x%s, 0x%s)" % (want[1:3], want[3:5], want[5:7])
+    if trip not in icons_src:
+        findings.append(f"[palette] build_icons.py {name} is not {want}")
 
 # ------------------------------------------------------------------- report
 print(f"pages checked: {len(all_pages)}")

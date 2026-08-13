@@ -79,6 +79,20 @@ h3, .faq-q, .ledger h3, .cta {
   font-size: 10px; letter-spacing: 0.06em; color: rgba(90, 96, 112, 0.5); }
 
 .wm { display: inline-block; white-space: nowrap; position: relative; z-index: 1; }
+
+/* The steady noun against the moving verb. "studio" does NOT climb: the climb
+   is the identity and the red k is red because it is last, so a 14-letter
+   lockup would put the accent on the 7th character and break rules 2 and 4 at
+   once. It sits in the wedge the climb opens under its high right end.
+
+   It lives INSIDE .wm, not beside it, so text-align right lands it under the
+   wordmark's own end. As a sibling it right-aligned to the whole page and
+   collided with the SERP numerals. */
+.wm-studio { display: block; text-align: right; margin-top: -0.14em;
+  font-family: var(--font-body); font-weight: 500;
+  font-size: clamp(0.85rem, 1.9vw, 1.5rem); letter-spacing: 0.34em;
+  text-indent: 0.34em; color: var(--slate); line-height: 1;
+  transform: none; }
 .wm .l { display: inline-block;
   transform: translateY(calc(var(--i) * -1 * var(--rise-step))); }
 .wm .k { color: var(--red); margin-left: -0.012em; }
@@ -213,17 +227,17 @@ h3, .faq-q, .ledger h3, .cta {
 .lead { font-size: var(--fs-lead); max-width: 60ch; margin-bottom: var(--s-6); }
 
 .prose { grid-column: 1 / 8; max-width: 62ch; }
-.prose h2 { font-size: clamp(1.75rem, 2.6vw, 2.25rem);
+.prose h2, .studio-prose h2 { font-size: clamp(1.75rem, 2.6vw, 2.25rem);
   margin-top: var(--s-8); margin-bottom: var(--s-4); }
-.prose h3 { font-size: var(--fs-h3); margin-top: var(--s-6); margin-bottom: var(--s-3); }
-.prose p { margin-bottom: var(--s-5); text-wrap: pretty; }
+.prose h3, .studio-prose h3 { font-size: var(--fs-h3); margin-top: var(--s-6); margin-bottom: var(--s-3); }
+.prose p, .studio-prose p { margin-bottom: var(--s-5); text-wrap: pretty; }
 .prose ul, .prose ol { margin: 0 0 var(--s-5); padding-left: 1.25em; }
 .prose li { margin-bottom: var(--s-3); text-wrap: pretty; }
 .prose li::marker { color: var(--slate); }
-.prose a { color: var(--ink); text-underline-offset: 3px;
+.prose a, .studio-prose a { color: var(--ink); text-underline-offset: 3px;
   text-decoration-thickness: 1px; text-decoration-color: var(--slate); }
-.prose a:hover { text-decoration-color: var(--red); }
-.prose > :first-child { margin-top: 0; }
+.prose a:hover, .studio-prose a:hover { text-decoration-color: var(--red); }
+.prose > :first-child, .studio-prose > :first-child { margin-top: 0; }
 .prose code { font-family: ui-monospace, "Cascadia Mono", Menlo, monospace;
   font-size: 0.9em; background: rgba(19, 22, 28, 0.06); padding: 1px 5px; }
 
@@ -235,8 +249,10 @@ h3, .faq-q, .ledger h3, .cta {
   margin-bottom: var(--s-3); font-weight: 700; }
 .side-block p, .side-block li { font-size: var(--fs-small); text-wrap: pretty; }
 .side-list { list-style: none; margin: 0; padding: 0; }
-.side-list li { padding-block: var(--s-2); border-bottom: 1px solid var(--rule); }
-.side-list a { text-decoration: none; }
+/* the padding moves from the li onto the a, so the whole row is the target
+   rather than a 16px strip of text inside it */
+.side-list li { border-bottom: 1px solid var(--rule); }
+.side-list a { display: block; padding-block: var(--s-3); text-decoration: none; }
 .side-list a:hover { color: var(--red); }
 
 .ledger { list-style: none; margin: var(--s-6) 0 0; padding: 0; }
@@ -246,11 +262,16 @@ h3, .faq-q, .ledger h3, .cta {
 .ledger p { text-wrap: pretty; }
 
 .exclusions { margin-top: var(--s-8); border-top: 1px solid var(--rule);
-  padding-top: var(--s-6); }
+  padding-top: var(--s-6); padding-bottom: 0; }
 .exclusions ul { list-style: none; margin: var(--s-4) 0 0; padding: 0; max-width: 62ch; }
 .exclusions li { padding-block: var(--s-3); }
 
-.faq { margin-top: var(--s-8); }
+/* Measured 191px between the last block and this heading, on a page whose
+   heading rhythm is 64: .faq's own margin, plus section{padding-block} landing
+   inside .prose, plus the h2's margin. 96 is a deliberate 1.5x step at the one
+   place the page genuinely changes register. */
+.faq { margin-top: var(--s-9); padding-block: 0; }
+.faq > h2 { margin-top: 0; }
 .faq-item { border-top: 1px solid var(--rule); padding-block: var(--s-5); max-width: 66ch; }
 .faq-item:last-child { border-bottom: 1px solid var(--rule); }
 .faq-q { font-size: var(--fs-h3); margin-bottom: var(--s-3); }
@@ -274,7 +295,9 @@ h3, .faq-q, .ledger h3, .cta {
   margin-left: 0.25em; color: var(--red); }
 
 /* /studio/ sits off the usual axis: the one page written as a person */
-.studio-prose { grid-column: 2 / 9; max-width: 62ch; }
+/* was grid-column 2/9, which indented the body 99px while the h1 stayed
+   flush left. An axis shift that moves half a page is a broken edge. */
+.studio-prose { grid-column: 1 / 9; max-width: 62ch; }
 
 /* ==========================================================================
    MOTION. Final states are the CSS default, so no-JS, crawlers and
@@ -397,14 +420,19 @@ h3, .faq-q, .ledger h3, .cta {
 .marks { --mgap: var(--s-8);
   list-style: none; margin: var(--s-9) 0 0; padding: var(--s-8) 0 0;
   border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap;
-  align-items: center; justify-content: flex-start; gap: var(--s-6) var(--mgap); }
+  align-items: center; justify-content: flex-start; gap: var(--s-4) var(--mgap); }
 /* Below the width where all four fit on one line, go 2 per row rather than
    letting the wrap strand the last one on a line of its own. Measured: four
    fit from 1063px up, so 1079 is the last width that needs this. */
 @media (max-width: 1079px) {
   .marks > li { flex: 0 0 calc(50% - var(--mgap) / 2); }
 }
+/* These were 12.3px tall at 390: four links to real businesses with no
+   vertical hit area at all. WCAG 2.5.8 wants 24. The padding comes out of the
+   row gap above, so the rendered row height is unchanged and the hand-tuned
+   two-per-row breakpoints still hold. */
 .mark-link { display: flex; align-items: center; gap: 8px;
+  padding-block: var(--s-3);
   color: var(--ink); text-decoration: none; transition: color 160ms ease; }
 .mark-link:hover { color: var(--red); }
 .mark-link:focus-visible { outline: 2px solid var(--ink); outline-offset: 10px; }
@@ -438,7 +466,11 @@ h3, .faq-q, .ledger h3, .cta {
    position you have to explain is not a position. It was 2 columns of
    supporting detail once and read as an argument being made rather than a
    fact being stated. */
-.place { border-top: 1px solid var(--rule); padding-block: var(--pad-major); }
+/* --pad-major fired 4 times consecutively on the homepage, against a token
+   file whose own comment says "three rhythm weights, not one". This is the
+   connective sentence between the proof and the refusal, not a third exhibit,
+   so it is the one section that can step down without losing status. */
+.place { border-top: 1px solid var(--rule); padding-block: var(--pad-section); }
 .place-say { font-size: clamp(2.25rem, 4.6vw, 3.75rem); line-height: 1.04;
   max-width: 22ch; }
 .place-more { margin-top: var(--s-6); max-width: 50ch; font-size: var(--fs-lead);
@@ -478,9 +510,12 @@ h3, .faq-q, .ledger h3, .cta {
 .field label { display: block; font-size: var(--fs-small); font-weight: 700;
   margin-bottom: var(--s-2); }
 .field-opt { font-weight: 400; color: var(--slate); }
+/* --rule on --paper is 1.22:1 and WCAG 1.4.11 wants 3:1 for the boundary of
+   a control. --slate is 5.56:1 and is already in the palette, so a box you can
+   type into finally looks like one. */
 .field input { width: 100%; font: inherit; font-size: var(--fs-body);
   color: var(--ink); background: var(--paper); padding: 0.7em 0.8em;
-  border: 1px solid var(--rule); border-radius: 0;
+  border: 1px solid var(--slate); border-radius: 0;
   transition: border-color 160ms ease; }
 .field input:hover { border-color: var(--slate); }
 .field input:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px;

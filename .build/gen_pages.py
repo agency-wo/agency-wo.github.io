@@ -85,7 +85,7 @@ def jsonld(svc):
 def render(svc):
     url = "/" + svc["slug"] + "/"
     page = {"url": url,
-            "title": svc["title"] + " " + shell.DOT + " minarank",
+            "title": svc["title"] + " " + shell.DOT + " " + shell.BRAND,
             "description": svc["description"],
             "og_desc": svc.get("og_desc", svc["description"]),
             "jsonld": jsonld(svc)}

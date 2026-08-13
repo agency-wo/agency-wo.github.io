@@ -53,7 +53,7 @@ def jsonld():
     org = {
         "@type": "ProfessionalService",
         "@id": S + "/#org",
-        "name": "minarank",
+        "name": shell.BRAND,
         "description": "Digital presence for small businesses: search, AI search, "
                        "websites, ads and custom software. English, Italian and Albanian.",
         "url": S + "/",
@@ -71,7 +71,7 @@ def jsonld():
         },
     }
     site = {"@type": "WebSite", "@id": S + "/#website", "url": S + "/",
-            "name": "minarank", "inLanguage": "en",
+            "name": shell.BRAND, "inLanguage": "en",
             "publisher": {"@id": S + "/#org"}}
     return json.dumps({"@context": "https://schema.org", "@graph": [org, site]},
                       indent=2, ensure_ascii=False)
@@ -79,7 +79,7 @@ def jsonld():
 
 def render():
     page = {"url": "/",
-            "title": "minarank " + shell.DOT + " digital presence for small businesses",
+            "title": shell.BRAND + " " + shell.DOT + " digital presence for small businesses",
             "description": "Somebody is searching for what you sell right now. We make "
                            "sure they find you on Google, on the map, and in what "
                            "ChatGPT says. Durres, Albania.",
@@ -88,7 +88,7 @@ def render():
 
     letters = "".join(
         f'<span class="l{" k" if ch == "k" else ""}" style="--i:{i}">{ch}</span>'
-        for i, ch in enumerate("minarank"))
+        for i, ch in enumerate(shell.WORDMARK))
     rules = "".join(f'<i style="--r:{i}" data-n="{i + 1}"></i>' for i in range(10))
 
     def svc_row(href, name, outcome, door):
@@ -112,10 +112,10 @@ def render():
     <section class="hero">
       <div class="wrap hero-wrap">
         <h1 class="hero-title">
-          <span class="sr-only">minarank</span>
+          <span class="sr-only">{shell.BRAND}</span>
           <span class="wm-box" aria-hidden="true">
             <span class="serp">{rules}</span>
-            <span class="wm">{letters}</span>
+            <span class="wm">{letters}<span class="wm-studio">studio</span></span>
           </span>
         </h1>
         <div class="hero-rest">
@@ -125,7 +125,7 @@ def render():
             when somebody asks for a shop like yours. Then the website itself, and the
             software behind it. We work in English, Italian and Albanian.</p>
           <p class="hero-who">You will not be handed to anybody else.
-            <strong>minarank is Henri&nbsp;Sila, working from Durres.</strong></p>
+            <strong>{shell.BRAND} is Henri&nbsp;Sila, working from Durres.</strong></p>
           <p class="status"><span class="dot" aria-hidden="true"></span>
             {AVAILABILITY}</p>
         </div>
@@ -203,11 +203,11 @@ def render():
 
     <section class="place" aria-labelledby="place-h">
       <div class="wrap">
-        <h2 class="place-say" id="place-h">We work to European standards and
-          charge Albanian prices.</h2>
-        <p class="place-more">Being in Durres is the whole reason, and it is the
-          only cheap thing about the work. You can test the standard on this
-          page before you believe a word of it.</p>
+        <h2 class="place-say" id="place-h">The standard does not move with the
+          price.</h2>
+        <p class="place-more">We build to European standards and quote
+          competitively. Test it on this page before you believe a word of
+          it.</p>
       </div>
     </section>
 

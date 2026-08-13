@@ -7,10 +7,17 @@ No em-dashes anywhere. The arrow is an inline SVG because Archivo has no
 U+2197, and because a drawn arrow beats a font-dependent one.
 """
 
-SITE = "https://minarank.com"
+SITE = "https://minarankstudio.com"
 DOT = "·"
 
-EMAIL = "hello@minarank.com"
+# The brand, in one place. The visible climbing wordmark stays the single word
+# "minarank": the final k is red BECAUSE it is last (rule 2) and the climb is
+# the identity (rule 4), so a 14-letter lockup would put the accent on the 7th
+# character and break both. "studio" is the steady noun set beside it.
+BRAND = "minarank studio"
+WORDMARK = "minarank"
+
+EMAIL = "hello@minarankstudio.com"
 WHATSAPP = "355675716090"
 FOUNDER = "Henri Sila"
 
@@ -18,7 +25,7 @@ FOUNDER = "Henri Sila"
 # Web3Forms, the same service already running on watch.al. The access key is a
 # public write-only token: it can submit to this one form and do nothing else,
 # so it is safe in markup. It is not a secret and must not be treated as one.
-# TODO(founder): replace with the key for minarank's own form. Do not reuse
+# TODO(founder): replace with the key for our own form. Do not reuse
 # watch.al's: one key, one inbox, one form. Gate check 22 fails until this is
 # a real key.
 WEB3FORMS_KEY = "PASTE-MINARANK-ACCESS-KEY-HERE"
@@ -36,9 +43,9 @@ TURNAROUND = "within 24 hours"
 # and sees nothing happen.
 #
 # Web3Forms' free plan redirects same-domain only, so this is derived from SITE
-# rather than the host we happen to be previewing on: the day minarank.com is
-# live it starts working, with no edit. Until then a no-JS visitor lands on
-# Web3Forms' own thank-you page and their lead still arrives.
+# rather than the host we are previewing on: the day the domain resolves this
+# starts working, with no edit. Until then a no-JS visitor lands on Web3Forms'
+# own thank-you page and their lead still arrives.
 FORM_REDIRECT = SITE + "/start/?sent=1#sent"
 
 # Work first: there is proof now, and it should not be buried.
@@ -94,7 +101,7 @@ def whatsapp():
     return (f'  <a class="wa" href="https://wa.me/{WHATSAPP}" target="_blank" '
             f'rel="noopener noreferrer" aria-label="Message us on WhatsApp" '
             f'title="Message us on WhatsApp" '
-            f'data-wa="Hello minarank, I have a question about my website.">'
+            f'data-wa="Hello {BRAND}, I have a question about my website.">'
             f'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="{WA_PATH}"/></svg>'
             f'</a>' + chr(10))
 
@@ -139,7 +146,7 @@ def head(page):
   <meta name="theme-color" content="#F0F1F3">
 
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="minarank">
+  <meta property="og:site_name" content="{BRAND}">
   <meta property="og:title" content="{page["title"]}">
   <meta property="og:description" content="{page.get("og_desc", page["description"])}">
   <meta property="og:url" content="{url}">
@@ -171,7 +178,7 @@ def header():
   <!-- SHARED:HEADER -->
   <header class="site-head">
     <div class="wrap head-row">
-      <a class="head-logo" href="/" aria-label="minarank home">
+      <a class="head-logo" href="/" aria-label="{BRAND} home">
         {LOGO}
       </a>
       <nav class="head-nav" aria-label="Primary">
@@ -216,8 +223,8 @@ def footer(cta_heading=None, cta_note=None):
 {cols}
         </nav>
         <div class="foot-meta">
-          <p>minarank {DOT} Durres, Albania {DOT} We work in English, Italian and Albanian</p>
-          <p>&#169; 2026 minarank</p>
+          <p>{BRAND} {DOT} Durres, Albania {DOT} We work in English, Italian and Albanian</p>
+          <p>&#169; 2026 {BRAND}</p>
         </div>
       </footer>
       <!-- /SHARED:FOOTER -->
@@ -233,7 +240,7 @@ def footer(cta_heading=None, cta_note=None):
 def crumbs(*trail):
     """crumbs('Work') or crumbs(('Work', '/work/'), 'Iglisi Watch')"""
     parts = ['        <nav class="crumbs" aria-label="Breadcrumb">',
-             '          <a href="/">minarank</a>']
+             f'          <a href="/">{BRAND}</a>']
     for item in trail:
         parts.append('          <span aria-hidden="true">/</span>')
         if isinstance(item, tuple):

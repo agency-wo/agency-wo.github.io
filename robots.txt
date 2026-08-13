@@ -1,14 +1,9 @@
-# PREVIEW MODE: this build is deployed to a temporary github.io URL.
-# Crawlers are blocked so the draft never gets indexed under the wrong domain.
+# PREVIEW. This build is served from a temporary github.io URL, so crawlers
+# are blocked: indexing it under the wrong host is far more work to undo than
+# to prevent, and the JSON-LD identifiers are keyed to https://minarankstudio.com.
 #
-# AT LAUNCH (once the real domain is live), replace this whole file with:
-#
-#   # minarank: everyone is welcome, including AI crawlers.
-#   # We are a GEO studio; being read by answer engines is the point.
-#   User-agent: *
-#   Allow: /
-#
-#   Sitemap: https://minarank.com/sitemap.xml
+# To open the site: set PREVIEW = False in .build/gen_robots.py and rebuild.
+# Do that on the day the domain serves, not before.
 
 User-agent: *
 Disallow: /

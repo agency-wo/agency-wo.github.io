@@ -63,9 +63,9 @@ assert len(locs) == len(set(locs)), "duplicate canonical: " + str(
 
 
 def rank(loc):
-    # derived, never typed: the domain is not bought yet and minarank.com turned
-    # out to belong to somebody else, so it WILL change. shell.SITE is the one
-    # place that says it. Gate check 29 fails if anything hardcodes a rival.
+    # derived, never typed. The first domain this site claimed turned out to
+    # belong to somebody else, so shell.SITE is the one place that says it and
+    # gate check 29 fails if anything retypes a retired host.
     path = loc.replace(shell.SITE, "") or "/"
     return ORDER.index(path) if path in ORDER else len(ORDER)
 

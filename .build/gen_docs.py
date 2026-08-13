@@ -220,7 +220,7 @@ studio_body = f'''
 
       <div class="grid">
         <div class="studio-prose">
-          <p class="lead">minarank works across search, AI search, websites, ads and
+          <p class="lead">{shell.BRAND} works across search, AI search, websites, ads and
             the software behind them, for small businesses in Albania, Italy and
             anywhere else the work fits.</p>
 
@@ -281,7 +281,7 @@ studio_ld = graph(
 # ================================================================ /start/ ===
 
 START_URL = S + "/start/"
-BRIEF = ("Hello minarank,%0D%0A%0D%0A"
+BRIEF = (f"Hello {shell.BRAND},%0D%0A%0D%0A"
          "What we sell:%0D%0A%0D%0A"
          "Where our customers are:%0D%0A%0D%0A"
          "Our website:%0D%0A%0D%0A"
@@ -317,7 +317,7 @@ start_body = f'''
             <form class="af" id="audit-form" method="POST"
               action="{shell.FORM_ENDPOINT}">
               <input type="hidden" name="access_key" value="{shell.WEB3FORMS_KEY}">
-              <input type="hidden" name="subject" value="Free audit request via minarank">
+              <input type="hidden" name="subject" value="Free audit request via {shell.BRAND}">
               <input type="hidden" name="redirect" value="{shell.FORM_REDIRECT}">
               <input type="hidden" name="source" value="start-audit">
               <input class="af-hp" type="checkbox" name="botcheck" tabindex="-1"
@@ -430,7 +430,7 @@ start_body = f'''
         <aside class="side" aria-label="Details">
           <div class="side-block">
             <p class="side-h">Studio</p>
-            <p>minarank, Durres, Albania<br>
+            <p>{shell.BRAND}, Durres, Albania<br>
               <a href="mailto:{shell.EMAIL}">{shell.EMAIL}</a><br>
               <a href="https://wa.me/{shell.WHATSAPP}">WhatsApp</a></p>
           </div>
@@ -456,7 +456,7 @@ start_ld = graph(
 
 PAGES = [
     ("systems/index.html", page(
-        "/systems/", "Custom business software for small shops " + shell.DOT + " minarank",
+        "/systems/", "Custom business software for small shops " + shell.DOT + " " + shell.BRAND,
         "Stock, jobs, customers and money in one place. We build the software small "
         "shops and trades actually run on, in Albania and Italy.",
         systems_ld, systems_body,
@@ -465,7 +465,7 @@ PAGES = [
         og_desc="Right now the system is a notebook.")),
 
     ("studio/index.html", page(
-        "/studio/", "Studio " + shell.DOT + " minarank",
+        "/studio/", "How we work " + shell.DOT + " " + shell.BRAND,
         "How we work: evidence before opinion, one plain document, built in house, "
         "and the things we will tell you for free even when it costs us the job.",
         studio_ld, studio_body,
@@ -474,7 +474,7 @@ PAGES = [
         og_desc="Everything here is written to be argued with.")),
 
     ("start/index.html", page(
-        "/start/", "Start a project " + shell.DOT + " minarank",
+        "/start/", "Start a project " + shell.DOT + " " + shell.BRAND,
         "Tell us what you sell and where you want to be found. Email, WhatsApp or a "
         "short call. We answer with a plan and a straight price.",
         start_ld, start_body,

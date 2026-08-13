@@ -71,7 +71,7 @@ def client_page(c, nxt):
              {"@type": "ListItem", "position": 3, "name": c["name"], "item": S + url}]},
     ]
     page = {"url": url,
-            "title": f'{c["name"]} {shell.DOT} minarank',
+            "title": f'{c["name"]} {shell.DOT} {shell.BRAND}',
             "description": c["description"],
             "og_desc": c.get("og_desc", c["description"]),
             "jsonld": json.dumps({"@context": "https://schema.org", "@graph": graph},
@@ -153,7 +153,7 @@ def work_index():
              {"@type": "ListItem", "position": 1, "name": "Home", "item": S + "/"},
              {"@type": "ListItem", "position": 2, "name": "Work", "item": S + url}]},
     ]
-    page = {"url": url, "title": f"Work {shell.DOT} minarank",
+    page = {"url": url, "title": f"Work {shell.DOT} {shell.BRAND}",
             "description": "Four businesses in Albania and beyond, what we built for "
                            "each, and the one result with published numbers behind it.",
             "og_desc": "Four businesses, and what changed.",
