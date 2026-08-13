@@ -47,98 +47,123 @@ SYSTEMS_URL = S + "/systems/"
 systems_body = f'''
       <header class="page-head">
 {shell.crumbs("Custom software")}
-        <h1 class="page-title">The software your shop is missing.</h1>
-        <p class="standfirst">Not every problem is a ranking problem. Some of them are
-          the hour you lose every evening and the stock count that's wrong by Friday.</p>
+        <h1 class="page-title">Right now the system is a notebook.</h1>
+        <p class="standfirst">We build the software a business actually runs on. Stock,
+          jobs, who owes you what, and the month's numbers, in one place you can open
+          at the counter or on your phone.</p>
       </header>
 
       <div class="grid">
         <div class="prose">
-          <p class="lead">Most small businesses run on software built for a different
-            business. The gap gets filled by hand: a notebook, a spreadsheet, a message
-            to yourself, somebody remembering. Nobody puts that on a balance sheet.</p>
+          <p class="lead">Every business already has a system. It holds together until
+            the day you need a number quickly and the only way to get it is to stop and
+            count. Right now that system is a notebook by the till, a spreadsheet
+            somebody set up 3 years ago, a drawer of receipts, and a lot of
+            remembering.</p>
+          <p>What we build is the same system, except the app does the counting. You
+            keep working the way you work. The difference is that on the 1st of the
+            month the numbers are already there.</p>
 
-          <h2>What this looked like in practice</h2>
-          <p>A repair shop and a counter. Two people, one of them not technical. The
-            stock lived in a notebook, the repairs lived in a diary, and what sold today
-            lived in somebody's head until the evening. The website was a separate
-            world: it kept offering watches that had sold weeks earlier, because keeping
-            it current was a second job nobody had time for.</p>
-          <p>We built them software. Then we watched the person at the counter use it,
-            and he told us it was one big unclear mess. He was right. We'd given him a
-            flat list of hundreds of separate items, when the way he thinks about his own
-            stock is "straps, black, 1,000 lek, sizes 14 to 20". Counting stock and
-            selling stock were on the same screen, so every tap risked being the wrong
-            one.</p>
-          <p>So we rebuilt it around how he describes the shop. 398 items became 20
-            cards, each one a group with a size and a price. Counting and selling became
-            two separate modes that are never both on. The reorder list writes itself
-            now, which was the whole point of the notebook.</p>
-
-          <h2>Three ways in</h2>
+          <h2>Which of these is yours?</h2>
+          <p>Nobody goes looking for software. People go looking for the end of one
+            annoyance, and these are the 5 we hear most.</p>
           <ol class="ledger">
             <li>
-              <h3>Publish your own site from your phone</h3>
-              <p>Photograph the product, price it, publish it. Live in about a minute,
-                in every language your site speaks. No licence, no monthly fee, nobody
-                to ring about a price change. Three of our clients run this today.</p>
+              <h3>"I don't know what I have in stock until I count it."</h3>
+              <p>So you re-order what is already in the back and run out of what
+                sells.</p>
             </li>
             <li>
-              <h3>Connect what you already have</h3>
-              <p>Sell something at the counter and the website knows. Most shops have a
-                till that has no idea the website exists, so the site keeps offering
-                things that are gone and somebody spends an evening reconciling two
-                lists.</p>
-              <p>We build the wire between them. It fails safely: if the connection
-                drops, nothing changes and we get told, rather than the site inventing
-                an answer.</p>
+              <h3>"I don't know who owes me, or how much."</h3>
+              <p>It is spread across a notebook, a phone, and what 2 people
+                remember.</p>
             </li>
             <li>
-              <h3>Build the thing that doesn't exist</h3>
-              <p>When the work genuinely doesn't fit anything you can buy. Jobs, stock,
-                money across several parts of the business, staff on phones, and it all
-                has to work with no signal in a back room with thick walls.</p>
-              <p>The one we built for the watch workshop holds 50 screens and a
-                reference library of 450 movements, and it turns the phone's microphone
-                into a timing instrument by listening to the watch. It runs offline and
-                costs nothing per month.</p>
-              <p class="payoff">{shell.TICK}Software that fits the shop.</p>
+              <h3>"The jobs are in a notebook, and the notebook is at home."</h3>
+              <p>Anything a customer rings to ask waits until you are back at the
+                counter.</p>
+            </li>
+            <li>
+              <h3>"Payroll takes me an evening, every month."</h3>
+              <p>Hours, days off and advances, added up by hand, from records you
+                already keep.</p>
+            </li>
+            <li>
+              <h3>"The website says we have it. We sold it 3 weeks ago."</h3>
+              <p>Somebody spends an evening making 2 lists agree, or the customer
+                finds out first.</p>
             </li>
           </ol>
 
-          <h2>How these are built</h2>
-          <p>The same way this website is: no framework, nothing that rots, and free
-            infrastructure with the spending limit written into the code so a mistake
-            can't turn into a bill.</p>
-          <p>Where these tools use AI, the numbers are checked by code before they reach
-            the screen. A model will happily state a total it has invented, so any figure
-            it gives is matched against the real data and the line is dropped if it
-            doesn't match.</p>
+          <h2>What we build</h2>
+          <p>Start from that list and the software stops being mysterious. People call
+            it a CRM, which just means one place that holds everything the business
+            knows and does the adding up for you. What goes in depends on your trade.
+            These are the jobs it usually ends up doing:</p>
+          <ul>
+            <li><strong>Stock and parts.</strong> What you have, what it cost, what is
+              running low, and a re-order list that writes itself.</li>
+            <li><strong>Jobs or orders.</strong> Who brought what in, what it needs,
+              what was promised and when, and what is late.</li>
+            <li><strong>Customers.</strong> Who they are, what they bought, what they
+              owe, and how to reach them without searching 3 phones.</li>
+            <li><strong>Money.</strong> Takings, costs and profit kept in separate
+              lines, so you can see which part of the business actually earns.</li>
+            <li><strong>Staff hours and payroll.</strong> Hours, days off and advances,
+              added up for you at the end of the month.</li>
+            <li><strong>Suppliers.</strong> Orders out, what arrived, and what you are
+              still waiting on.</li>
+            <li><strong>Reports.</strong> The month on one page, printable, without
+               anybody staying late to build it.</li>
+            <li><strong>Your website, connected.</strong> Sell something at the counter
+              and the site stops offering it. Publish a new product from your phone.</li>
+          </ul>
+
+          <h2>The one we built, and which parts are yours</h2>
+          <p>A watch shop in Durres runs on a system we built. It has 50 screens, holds
+            398 stock items grouped into 20 cards, keeps money in 4 separate lines, and
+            works with no signal in a back room with thick walls. It costs nothing per
+            month to run.</p>
+          <p><strong>The parts every business needs</strong> are the ones above: jobs,
+            stock, customers, money, staff, reports. That skeleton is the same whether
+            you repair watches, fit kitchens or run a bakery.</p>
+          <p><strong>The parts that are theirs alone</strong> are a 450-movement
+            reference library and a tool that measures a watch's timing through the
+            phone's microphone. You will not need those. You will need the equivalent
+            for your trade, and that is the part we design with you.</p>
+
+          <h2>About the AI bits</h2>
+          <p>Some screens use AI to summarise a day or read a supplier invoice from a
+            photo. The part worth knowing is what happens to the numbers: any figure
+            the model produces is checked against your real data before it reaches the
+            screen, and the line is dropped if it does not match.</p>
+          <p>A model will state a total it has invented. This one is not allowed to.</p>
 
           <section class="faq">
             <h2>Questions worth asking</h2>
             <div class="faq-item">
-              <h3 class="faq-q">Is this just an app?</h3>
-              <p>It's whatever removes the manual step. Sometimes that's one screen that
-                publishes a product. Sometimes it's the system your whole day runs
-                through. We start from the hour you're losing, not from a technology.</p>
+              <h3 class="faq-q">Isn't this what a spreadsheet is for?</h3>
+              <p>For a while, yes, and if a spreadsheet is working then keep it. It
+                stops working when 2 people need it at once, when it lives on one
+                laptop, or when the answer you need takes 20 minutes of sorting.</p>
             </div>
             <div class="faq-item">
               <h3 class="faq-q">What does it cost to run?</h3>
-              <p>The systems described here run on free infrastructure with caps written
-                into the code. A busy system eventually costs something, and we tell you
-                the running cost before we build.</p>
+              <p>The system described above costs nothing per month. We build on free
+                infrastructure with the spending limit written into the code, so a
+                mistake cannot turn into a bill. A busy system eventually costs
+                something, and you will know the number before we build.</p>
             </div>
             <div class="faq-item">
               <h3 class="faq-q">My business is nothing like a watch shop.</h3>
               <p>Most aren't. A bakery with daily specials, a boutique with sizes, a
-                dealer with one-off stock and a workshop with jobs all have the same
-                shape of problem: something changes in the real world and several other
-                places need to know.</p>
+                garage with jobs and a dealer with one-off stock all have the same
+                shape of problem: something changes, and several other places need to
+                know.</p>
             </div>
             <div class="faq-item">
               <h3 class="faq-q">Do I own it?</h3>
-              <p>Yes. The code is yours, it runs on your accounts, and it's documented
+              <p>Yes. The code is yours, it runs on your accounts, and it is documented
                 so somebody else could take it over.</p>
             </div>
           </section>
@@ -147,8 +172,9 @@ systems_body = f'''
         <aside class="side" aria-label="At a glance">
           <div class="side-block">
             <p class="side-h">Running today</p>
-            <p>Three shops publish their own websites from a phone. One has its counter
-              wired to its website. All of it costs nothing per month to run.</p>
+            <p>One full operations system in a Durres watch shop. Two shops publishing
+              their own websites from a phone. One till wired to a website. All of it
+              costs nothing per month.</p>
           </div>
           <div class="side-block">
             <p class="side-h">Also</p>
@@ -165,17 +191,18 @@ systems_ld = graph(
     {"@type": "Service", "@id": SYSTEMS_URL + "#service",
      "name": "Custom business software",
      "serviceType": "Custom software development",
-     "description": "Custom software for small businesses: self-publishing panels, "
-                    "till and website synchronisation, and bespoke operations systems.",
+     "description": "Stock, jobs, customers, money and monthly reports in one system, "
+                    "built around a single trade. Self-publishing panels, till and website "
+                    "links, and full operations systems for small businesses.",
      "url": SYSTEMS_URL, "provider": {"@id": S + "/#org"},
      "areaServed": ["AL", "IT", "Worldwide"]},
     {"@type": "FAQPage", "@id": SYSTEMS_URL + "#faq", "mainEntity": [
-        {"@type": "Question", "name": "Is this just an app?",
-         "acceptedAnswer": {"@type": "Answer", "text": "It is whatever removes the manual step. Sometimes one screen that publishes a product, sometimes the system your whole day runs through. We start from the hour you are losing, not from a technology."}},
+        {"@type": "Question", "name": "Isn't this what a spreadsheet is for?",
+         "acceptedAnswer": {"@type": "Answer", "text": "For a while, yes, and if a spreadsheet is working then keep it. It stops working when two people need it at once, when it lives on one laptop, or when the answer you need takes 20 minutes of sorting."}},
         {"@type": "Question", "name": "What does it cost to run?",
-         "acceptedAnswer": {"@type": "Answer", "text": "The systems described here run on free infrastructure with spending caps written into the code. A busy system eventually costs something, and we tell you the running cost before we build."}},
+         "acceptedAnswer": {"@type": "Answer", "text": "The system described costs nothing per month. We build on free infrastructure with the spending limit written into the code, so a mistake cannot turn into a bill. A busy system eventually costs something, and you will know the number before we build."}},
         {"@type": "Question", "name": "My business is nothing like a watch shop.",
-         "acceptedAnswer": {"@type": "Answer", "text": "A bakery with daily specials, a boutique with sizes, a dealer with one-off stock and a workshop with jobs all have the same shape of problem: something changes in the real world and several other places need to know."}},
+         "acceptedAnswer": {"@type": "Answer", "text": "Most are not. A bakery with daily specials, a boutique with sizes, a garage with jobs and a dealer with one-off stock all have the same shape of problem: something changes, and several other places need to know."}},
         {"@type": "Question", "name": "Do I own it?",
          "acceptedAnswer": {"@type": "Answer", "text": "Yes. The code is yours, it runs on your accounts, and it is documented so somebody else could take it over."}}]},
     crumb_node(SYSTEMS_URL, "Custom software"))
@@ -186,43 +213,51 @@ STUDIO_URL = S + "/studio/"
 studio_body = f'''
       <header class="page-head">
 {shell.crumbs("Studio")}
-        <h1 class="page-title">Run by one person, on purpose.</h1>
-        <p class="standfirst">The person who answers your first email is the person who
-          does the work.</p>
+        <h1 class="page-title">How we work, and what we will not do.</h1>
+        <p class="standfirst">Everything here is written to be argued with. If you
+          disagree with any of it, we are probably not the right studio for you.</p>
       </header>
 
       <div class="grid">
         <div class="studio-prose">
-          <p class="lead">minarank is {shell.FOUNDER}, working from Durres across
-            search, AI search, websites, ads and the software behind them, for small
-            businesses in Albania, Italy and anywhere the work fits.</p>
+          <p class="lead">minarank works across search, AI search, websites, ads and
+            the software behind them, for small businesses in Albania, Italy and
+            anywhere else the work fits.</p>
 
-          <h2>What being small actually means</h2>
-          <p>One disadvantage and several advantages. The disadvantage is capacity:
-            there are only so many jobs at once, and we say no rather than take work we
-            can't do properly.</p>
-          <p>The advantages are that nothing goes to a junior, you never explain
-            anything twice, and the person recommending the work is the person who has
-            to deliver it. That last one is a strong filter on recommending nonsense.</p>
+          <h2>Evidence before opinion</h2>
+          <p>Every job starts with the crawl, the code, the competitors and what people
+            are actually typing. Opinions are cheap and everyone in this industry has
+            several. We would rather show you the data that changed our mind.</p>
 
-          <h2>How a job runs</h2>
-          <p>It starts with evidence: the crawl, the code, the competitors, what people
-            are actually typing. Then one document in plain language saying what we'd
-            change and in what order. Then we build it, and report what moved and what
-            didn't. A month where nothing improved gets reported as a month where
-            nothing improved.</p>
+          <h2>One document, in plain language</h2>
+          <p>What we would change, in what order, and why it matters. If it takes a
+            glossary to read, it is written badly. You should be able to hand it to
+            somebody who does not work in marketing and have them follow it.</p>
 
-          <h2>What we'll tell you for free</h2>
-          <p>If your ad budget is too small to be worth managing, we'll say so instead
-            of taking it. If your platform makes the necessary fixes impossible, you'll
-            hear that before you pay for a month of workarounds. And if the honest
-            answer is that you need a better offer rather than better marketing, that's
-            the answer you'll get. It's the one that costs us the job most often.</p>
+          <h2>We build it ourselves</h2>
+          <p>Pages, schema, creative, software. Nothing gets handed to a third party
+            who loses 3 weeks and half the intent, and nothing gets handed to a junior
+            while you keep paying senior rates.</p>
+
+          <h2>Numbers that are true</h2>
+          <p>We report what moved and what did not. A month where nothing improved gets
+            reported as a month where nothing improved, with what we are changing
+            because of it.</p>
+
+          <h2>What we will tell you for free</h2>
+          <p>If your ad budget is too small to be worth managing, we will say so rather
+            than take it. If your platform makes the necessary fixes impossible, you
+            will hear that before you pay for a month of workarounds. And if the honest
+            answer is that you need a better offer rather than better marketing, that
+            is the answer you will get. It is the one that costs us the job most
+            often.</p>
 
           <h2>Languages</h2>
           <p>English, Italian and Albanian. Work is delivered in the language your
-            customers are actually searching in, which for most of our clients is not
-            English.</p>
+            customers are searching in, which for most of our clients is not English.</p>
+
+          <p class="hero-who">Written and built by <strong>{shell.FOUNDER}</strong> in
+            Durres. Questions go to <a href="mailto:{shell.EMAIL}">{shell.EMAIL}</a>.</p>
         </div>
       </div>
 '''
@@ -322,22 +357,22 @@ start_ld = graph(
 
 PAGES = [
     ("systems/index.html", page(
-        "/systems/", "Custom software for small businesses " + shell.DOT + " minarank",
-        "Custom software for small businesses: publish your own site from a phone, "
-        "connect your till to your website, or have the missing system built.",
+        "/systems/", "Custom business software for small shops " + shell.DOT + " minarank",
+        "Stock, jobs, customers and money in one place. We build the software small "
+        "shops and trades actually run on, in Albania and Italy.",
         systems_ld, systems_body,
-        "Tell us which hour you keep losing.",
-        "If there is a job you do by hand every week, there is probably a way to stop.",
-        og_desc="Not every problem is a ranking problem.")),
+        "Which of those 5 is yours?",
+        "Tell us the one that annoys you most and we will tell you what it takes to fix.",
+        og_desc="Right now the system is a notebook.")),
 
     ("studio/index.html", page(
         "/studio/", "Studio " + shell.DOT + " minarank",
-        "minarank is Henri Sila, working from Durres across search, AI search, "
-        "websites, ads and custom software for small businesses.",
+        "How we work: evidence before opinion, one plain document, built in house, "
+        "and the things we will tell you for free even when it costs us the job.",
         studio_ld, studio_body,
         "Start with a conversation.",
         "No slides, no proposal until you want one.",
-        og_desc="Run by one person, on purpose.")),
+        og_desc="Everything here is written to be argued with.")),
 
     ("start/index.html", page(
         "/start/", "Start a project " + shell.DOT + " minarank",

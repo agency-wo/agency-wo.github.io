@@ -39,8 +39,10 @@ SERVICES = [
      "Facebook and Instagram, for customers this week while the slower work "
      "builds up. A flat fee, never a percentage of your budget."),
     ("/systems/", "Custom software",
-     "The tool your business is missing. Update your own site from your phone, "
-     "connect the till to the website, or have the thing built that does not exist."),
+     "The system your business runs on, built to fit. Jobs, stock, customers, staff "
+     "hours, suppliers, and what each part of the business earned this month. If "
+     "that lives in a notebook, a spreadsheet and somebody's head today, this is "
+     "what replaces all 3."),
 ]
 
 
@@ -75,10 +77,10 @@ def jsonld():
 def render():
     page = {"url": "/",
             "title": "minarank " + shell.DOT + " digital presence for small businesses",
-            "description": "We make small businesses easier to find and better to "
-                           "arrive at. Search, AI search, websites, ads and custom "
-                           "software, in English, Italian and Albanian.",
-            "og_desc": "We make small businesses easier to find, and better to arrive at.",
+            "description": "Somebody is searching for what you sell right now. We make "
+                           "sure they find you on Google, on the map, and in what "
+                           "ChatGPT says. Durres, Albania.",
+            "og_desc": "Somebody is searching for what you sell right now.",
             "jsonld": jsonld()}
 
     letters = "".join(
@@ -86,10 +88,23 @@ def render():
         for i, ch in enumerate("minarank"))
     rules = "".join(f'<i style="--r:{i}" data-n="{i + 1}"></i>' for i in range(10))
 
-    svc = NL.join(f'''            <li>
-              <h3><a href="{href}">{name}</a></h3>
-              <p>{desc}</p>
-            </li>''' for href, name, desc in SERVICES)
+    def svc_row(href, name, desc, wide):
+        """The fifth row is the only one-column row on the list. The copy fix and
+        the pattern break are the same edit."""
+        cls = ' class="svc-wide"' if wide else ""
+        spec = ""
+        if wide:
+            d = shell.DOT
+            spec = (NL + '                <p class="spec">Running today in a Durres '
+                    f'watch shop: 50 screens {d} 398 items grouped into 20 cards {d} '
+                    f'money kept in 4 separate lines {d} works with no signal in the '
+                    f'back room {d} no monthly fee</p>')
+        return (f'            <li{cls}>' + NL +
+                f'              <h3><a href="{href}">{name}</a></h3>' + NL +
+                f'              <div><p>{desc}</p>{spec}</div>' + NL +
+                '            </li>')
+
+    svc = NL.join(svc_row(h, n, d, h == "/systems/") for h, n, d in SERVICES)
 
     # Two clients on the homepage. A short uneven list reads as editing;
     # four of visibly graded quality reads as scraping the barrel.
@@ -107,6 +122,13 @@ def render():
               </div>
             </li>''' for c in shown)
 
+    sheet = NL.join(f'''          <li><figure>
+            <img src="/assets/plates/{c["plate"][0]}" width="{c["plate"][1]}"
+              height="{c["plate"][2]}" alt="{c["plate"][3]}" loading="lazy" decoding="async">
+            <figcaption>{c["name"]}</figcaption>
+          </figure></li>''' for c in CLIENTS)
+    ARROW = shell.ARROW
+
     body = f'''
     <section class="hero">
       <div class="wrap hero-wrap">
@@ -118,11 +140,13 @@ def render():
           </span>
         </h1>
         <div class="hero-rest">
-          <p class="hero-say">We make small businesses easier to find, and better
-            to arrive at.</p>
-          <p class="hero-sub">Search, AI search, websites, ads, and the software
-            behind them. We work in English, Italian and Albanian, mostly for shops
-            and trades who are competing against businesses much larger than they are.</p>
+          <p class="hero-say">Somebody is searching for what you sell right now.
+            We make sure they find you on Google.</p>
+          <p class="hero-sub">Google, the map, and the answers ChatGPT and Gemini give
+            when somebody asks for a shop like yours. Then the website itself, and the
+            software behind it. We work in English, Italian and Albanian.</p>
+          <p class="hero-who">You will not be handed to anybody else.
+            <strong>minarank is Henri&nbsp;Sila, working from Durres.</strong></p>
           <p class="status"><span class="dot" aria-hidden="true"></span>
             {AVAILABILITY}</p>
         </div>
@@ -131,7 +155,7 @@ def render():
 
     <section class="proof" aria-labelledby="proof-h">
       <div class="wrap">
-        <div class="proof-body" data-reveal>
+        <div class="proof-body">
           <p class="eyebrow">Proof</p>
           <h2 id="proof-h">One shop, three months, from zero.</h2>
           <p class="proof-lead">Iglisi Watch is a family watch shop in Durres.
@@ -145,7 +169,7 @@ def render():
           </ul>
           <p class="stat-note">Three months, 12 May to 9 August 2026.</p>
 
-          <figure class="gsc">
+          <figure class="gsc" data-reveal>
             <img src="/assets/proof/watch-al-3-months.webp" width="1440" height="592"
               alt="Google Search Console for watch.al. Clicks and impressions both start
               near zero in mid May 2026 and climb through August."
@@ -158,9 +182,12 @@ def render():
             rate is about what the bottom of the first page pays. We have left both
             numbers in the picture. They are also the reason there is still work to
             do here.</p>
-          <p class="taken">Taken August 2026. Rankings move, so it will look
-            different by the time you read this. The quickest check is to ask an
-            assistant where to repair a watch in Durres.</p>
+          <div class="check">
+            <p>Ask ChatGPT where to get a watch repaired in Durres, and see whose
+              name comes back.</p>
+            <p class="taken">Taken August 2026. Rankings move, so the chart will look
+              different by the time you read this.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -177,33 +204,32 @@ def render():
       </div>
     </section>
 
-    <section aria-labelledby="work-h">
-      <div class="wrap">
-        <div class="sec-head" data-reveal>
-          <p class="eyebrow">Work</p>
-          <h2 id="work-h">Businesses you can go and look at.</h2>
+    <section class="ask" aria-labelledby="ask-h">
+      <div class="wrap ask-row">
+        <div>
+          <h2 class="ask-q" id="ask-h">Want to see proof of our work?</h2>
+          <p class="ask-note">All 4 sites are live, and 3 of them are shops in Durres
+            up against much bigger names.</p>
+          <p class="ask-go"><a class="btn" href="/work/">See the work {ARROW}</a></p>
         </div>
-        <ul class="cases" data-reveal>
-{cases}
+        <ul class="sheet">
+{sheet}
         </ul>
-        <p class="case-said" style="margin-top:var(--s-7)">
-          <a href="/work/">All four, and what we built {shell.ARROW}</a></p>
       </div>
     </section>
 
     <section aria-labelledby="who-h">
       <div class="wrap">
         <div class="grid">
-          <div class="prose" data-reveal>
-            <p class="eyebrow">Who we are</p>
-            <h2 id="who-h">Small, and that is the point.</h2>
-            <p>minarank is run by {shell.FOUNDER} from Durres. The person who answers
-              your first email is the person who does the work, which is why the
-              advice is specific and why we say no to things.</p>
-            <p>Most of our clients are shops and trades competing against businesses
-              with far bigger budgets. The way they win is by being genuinely easier
-              to find than the competition, in the language their customer is actually
-              searching in. <a href="/studio/">More about the studio</a>.</p>
+          <div class="who-say">
+            <h2 id="who-h">We will tell you when the answer is no.</h2>
+          </div>
+          <div class="who-more">
+            <p>If your ad budget is too small to be worth managing, we say so instead
+              of taking it. If the honest answer is that you need a better offer rather
+              than better marketing, that is the answer you get, and it is the one that
+              costs us the job most often.</p>
+            <p><a href="/studio/">How we work {ARROW}</a></p>
           </div>
         </div>
       </div>

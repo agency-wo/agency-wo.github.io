@@ -25,14 +25,25 @@ def plate(c, eager=False):
 
 
 def gsc_figure():
+    """Both views. The 3 months shows the shape, the 28 days shows it is still
+    happening. Together they answer 'is this a one-off spike'."""
     return ('<figure class="gsc">'
             '<img src="/assets/proof/watch-al-3-months.webp" width="1440" height="592" '
-            'alt="Google Search Console for watch.al. Clicks and impressions both '
-            'start near zero in mid May 2026 and climb through August." '
+            'alt="Google Search Console for watch.al over 3 months. Clicks and '
+            'impressions both start near zero in mid May 2026 and climb through '
+            'August." loading="lazy" decoding="async">'
+            '<figcaption>Three months: 12 May to 9 August 2026. 560 clicks, 57,600 '
+            'times shown.</figcaption>'
+            '</figure>'
+            '<figure class="gsc">'
+            '<img src="/assets/proof/watch-al-28-days.webp" width="1440" height="619" '
+            'alt="Google Search Console for watch.al over the last 28 days, showing '
+            'clicks and impressions holding steady through July and August 2026." '
             'loading="lazy" decoding="async">'
-            '<figcaption>Google Search Console for watch.al, 12 May to 9 August 2026. '
-            'The account belongs to the client and this is published with their '
-            'permission.</figcaption></figure>')
+            '<figcaption>The last 28 days on their own: 15 July to 11 August. 301 '
+            'clicks, 27,500 times shown. More than half the quarter landed in the '
+            'final 4 weeks.</figcaption>'
+            '</figure>')
 
 
 def stats(rows):

@@ -333,3 +333,109 @@ h3, .faq-q, .ledger h3, .cta, .mail {
   .foot-meta { flex-direction: column; }
   .band-actions { flex-direction: column; gap: var(--s-5); }
 }
+
+/* ==========================================================================
+   THE ASK, THE CHECK, AND THE WHATSAPP BUTTON
+   Four deliberate layout breaks on the homepage and no more: the ask row's
+   7/5, the who split's empty column, the one wide service row, and the
+   check block's red rule. A fifth would make the page a demo reel.
+   ========================================================================== */
+
+/* the hero byline: small type on a hairline, so the hero has three weights */
+.hero-who { margin-top: var(--s-6); padding-top: var(--s-4);
+  border-top: 1px solid var(--rule); max-width: 62ch;
+  font-size: var(--fs-small); color: var(--slate); text-wrap: pretty; }
+.hero-who strong { color: var(--ink); font-weight: 700; }
+
+/* the free way to check the claim, promoted out of 15px slate */
+.check { margin-top: var(--s-7); border-left: 2px solid var(--red);
+  padding: var(--s-2) 0 var(--s-2) var(--s-5); max-width: 54ch; }
+.check p { font-family: var(--font-display); font-weight: 500;
+  font-size: clamp(1.25rem, 2vw, 1.625rem); line-height: 1.25;
+  letter-spacing: var(--track-display); margin: 0; }
+.check .taken { font-family: var(--font-body); font-size: var(--fs-small);
+  color: var(--slate); margin-top: var(--s-3); letter-spacing: 0; }
+
+/* the chart is the widest element on the page */
+.gsc { max-width: none; }
+
+/* one wide service row: the copy fix and the pattern break are one edit */
+.svc-list li.svc-wide { grid-template-columns: 1fr; gap: var(--s-4); }
+.svc-list li.svc-wide p { max-width: 74ch; }
+.spec { margin-top: var(--s-5); padding-top: var(--s-3);
+  border-top: 1px solid var(--rule); font-size: var(--fs-small);
+  color: var(--slate); font-variant-numeric: tabular-nums; max-width: 74ch; }
+
+/* the ask: one question, one button, a contact sheet that earns the click */
+.ask { border-top: 2px solid var(--ink); padding-block: var(--pad-major); }
+.ask-row { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  column-gap: var(--s-9); align-items: end; }
+.ask-q { font-size: clamp(2.25rem, 4.6vw, 3.75rem); line-height: 1.04;
+  max-width: 15ch; }
+.ask-note { margin-top: var(--s-5); max-width: 42ch; text-wrap: pretty; }
+.ask-go { margin-top: var(--s-7); }
+
+.btn { display: inline-flex; align-items: center; gap: 0.55em;
+  font-weight: 700; font-size: var(--fs-lead); line-height: 1;
+  text-decoration: none; padding: 0.85em 1.3em;
+  border: 2px solid var(--ink); color: var(--ink);
+  transition: background 160ms ease, color 160ms ease; }
+.btn:hover { background: var(--ink); color: var(--paper); }
+.btn .arrow { color: currentColor; }
+
+.sheet { list-style: none; margin: 0; padding: 0; display: grid;
+  grid-template-columns: repeat(2, 1fr); gap: var(--s-5) var(--s-4); }
+.sheet figure { margin: 0; }
+.sheet img { width: 100%; height: auto; aspect-ratio: 4 / 3;
+  object-fit: cover; object-position: 0 0; border: 1px solid var(--rule); }
+.sheet figcaption { margin-top: var(--s-2); font-size: var(--fs-label);
+  color: var(--slate); }
+
+/* who: asymmetric, column 7 deliberately empty, the refusal is the headline */
+.who-say { grid-column: 1 / 7; }
+.who-more { grid-column: 8 / 13; align-self: end; }
+.who-more p { font-size: var(--fs-small); max-width: 40ch; }
+
+/* the single conversion point should not be smaller than a service heading */
+.mail { font-size: clamp(1.375rem, 2.6vw, 1.875rem); }
+.mail::before { height: 3px; bottom: -5px; }
+
+/* -- floating WhatsApp ------------------------------------------------------
+   Built from the client sites: Victoria's inline SVG and focus ring, Intimo
+   Bruna's safe-area insets, and a static anchor so it does not depend on JS
+   to exist. z-index sits under the sticky header (5) is wrong: it must clear
+   page content but never the nav, so 4 with the header at 5. */
+.wa { position: fixed; z-index: 4;
+  right: max(20px, env(safe-area-inset-right));
+  bottom: max(20px, env(safe-area-inset-bottom));
+  width: 56px; height: 56px; border-radius: 50%;
+  background: #25D366; display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 8px 24px rgba(19, 22, 28, 0.22);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+  -webkit-tap-highlight-color: transparent; }
+.wa svg { width: 30px; height: 30px; fill: #fff; }
+.wa:hover { transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 12px 30px rgba(19, 22, 28, 0.28); }
+.wa:focus-visible { outline: 3px solid var(--paper);
+  box-shadow: 0 0 0 6px var(--ink); outline-offset: 3px; }
+
+@media (max-width: 520px) {
+  .wa { width: 50px; height: 50px; }
+  .wa svg { width: 26px; height: 26px; }
+}
+/* landscape phones: none of the client sites handle this, and the button
+   lands on top of form controls */
+@media (max-height: 480px) {
+  .wa { width: 44px; height: 44px; bottom: max(12px, env(safe-area-inset-bottom)); }
+  .wa svg { width: 22px; height: 22px; }
+}
+
+@media (max-width: 999px) {
+  .ask-row { grid-template-columns: 1fr; row-gap: var(--s-8); }
+  .who-say, .who-more { grid-column: 1 / 13; }
+  .who-more { margin-top: var(--s-6); }
+}
+@media (max-width: 719px) {
+  .sheet { gap: var(--s-4) var(--s-3); }
+  .check { padding-left: var(--s-4); }
+}
