@@ -167,7 +167,7 @@ def post_page(p, en_p, nxt, by_slug, band, lang):
         </div>
       </div>
 '''
-    return (shell.head(page, lang) + shell.header(lang) +
+    return (shell.head(page, lang) + shell.header(lang, post_url(p)) +
             '\n  <main id="main">\n    <div class="wrap">\n' + body +
             '\n    </div>\n  </main>\n' +
             shell.footer(lang, post_url(p), band["h"], band["note"]))
@@ -229,7 +229,7 @@ def blog_index(posts, idx, lang):
         </ul>
       </section>
 '''
-    return (shell.head(page, lang) + shell.header(lang) +
+    return (shell.head(page, lang) + shell.header(lang, BLOG) +
             '\n  <main id="main">\n    <div class="wrap">\n' + body +
             '\n    </div>\n  </main>\n' +
             shell.footer(lang, BLOG, idx["band_h"], idx["band_note"]))

@@ -85,6 +85,11 @@
         <a href="/#services">Services</a>
         <a href="/blog/">Writing</a>
         <a href="/studio/">Studio</a>
+        <nav class="head-lang" aria-label="Language">
+          <span aria-current="page">English</span>
+          <a href="/it/start/" hreflang="it">Italiano</a>
+          <a href="/sq/start/" hreflang="sq">Shqip</a>
+        </nav>
         <a class="head-cta" href="/start/">Start a project</a>
         <details class="menu">
           <summary>Menu</summary>
@@ -93,6 +98,11 @@
             <a href="/#services">Services</a>
             <a href="/blog/">Writing</a>
             <a href="/studio/">Studio</a>
+            <nav class="head-lang" aria-label="Language">
+              <span aria-current="page">English</span>
+              <a href="/it/start/" hreflang="it">Italiano</a>
+              <a href="/sq/start/" hreflang="sq">Shqip</a>
+            </nav>
           </div>
         </details>
       </nav>
@@ -132,7 +142,10 @@
             </div>
 
             <form class="af" id="audit-form" method="POST"
-              action="https://api.web3forms.com/submit">
+              action="https://api.web3forms.com/submit"
+              data-sending="Sending"
+              data-sending-say="Sending your details."
+              data-error="That did not send. Use the email or the WhatsApp link below and we will pick it up from there.">
               <input type="hidden" name="access_key" value="PASTE-MINARANK-ACCESS-KEY-HERE">
               <input type="hidden" name="subject" value="Free audit request via minarank studio">
               <input type="hidden" name="redirect" value="https://minarankstudio.com/start/?sent=1#sent">

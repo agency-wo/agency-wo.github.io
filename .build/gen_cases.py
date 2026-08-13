@@ -182,7 +182,7 @@ def client_page(c, nxt, posts, band, lang):
       </div>
 {proof and '      <div class="proof-body">' + NL + proof + '      </div>' or ''}
 '''
-    return (shell.head(page, lang) + shell.header(lang) +
+    return (shell.head(page, lang) + shell.header(lang, url) +
             '\n  <main id="main">\n    <div class="wrap">\n' + body +
             '\n    </div>\n  </main>\n' +
             shell.footer(lang, url, band["h"], band["note"]))
@@ -244,7 +244,7 @@ def work_index(clients, idx, lang):
         </ul>
       </section>
 '''
-    return (shell.head(page, lang) + shell.header(lang) +
+    return (shell.head(page, lang) + shell.header(lang, url) +
             '\n  <main id="main">\n    <div class="wrap">\n' + body +
             '\n    </div>\n  </main>\n' +
             shell.footer(lang, url, idx["band_h"], idx["band_note"]))

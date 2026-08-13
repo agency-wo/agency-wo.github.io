@@ -82,6 +82,29 @@ def form_redirect(page_url):
     """page_url is the page's own URL: "/" or "/start/"."""
     return SITE + page_url + "?sent=1#sent"
 
+# The 3 sentences js/main.js says out loud, carried on the form it already
+# binds. They were English literals inside the script, which meant an Italian
+# visitor read Italian until the moment they pressed the button and then read
+# "Sending" and, on a failure, a whole English paragraph. Check 35 could never
+# see it: it scans HTML and those strings were in a .js file.
+#
+# Attributes rather than a {en,it,sq} table inside main.js, and the difference
+# matters. script-src has no unsafe-inline, so a per-language script is not an
+# option; and a table keyed off <html lang> falls back to English on a language
+# it has not been told about, which is the half-translated page check 35 exists
+# to catch, reintroduced one layer down where nothing looks.
+#
+# The page tells the script what to say. A form that carries none of them gets
+# no interception at all and keeps its native POST, which works and is already
+# in the right language. Check 28 fails the build long before that.
+def form_js(lang, indent=14):
+    """The 3 js/main.js strings, as data- attributes for one form tag."""
+    c = ch(lang)
+    pad = NL + " " * indent
+    return (f'data-sending="{c.JS_SENDING}"{pad}'
+            f'data-sending-say="{c.JS_SENDING_SAY}"{pad}'
+            f'data-error="{c.JS_ERROR}"')
+
 # PATHS HERE, LABELS IN chrome.py, same order and same length. A translator
 # never sees an href, so a translator cannot break a link, and same_shape()
 # fails at import if a nav translation is short one item.
@@ -282,7 +305,7 @@ def head(page, lang):
 '''
 
 
-def header(lang):
+def header(lang, page_url=None):
     """The nav links are emitted TWICE, once per width, both from NAV.
 
     Below 720px the row hides everything but the CTA, which meant Proof,
@@ -303,6 +326,25 @@ def header(lang):
 
     No aria-expanded (<summary> supplies it, and a hand-written one goes
     stale), no role="button" (it destroys the disclosure), no role="menu".
+
+    THE LANGUAGE SWITCHER IS EMITTED THE SAME WAY, once per width, and for the
+    same reason: below 720px the row keeps the CTA and nothing else, and 3 more
+    links in a 72px row that already holds a logo, a button and a disclosure is
+    not a phone header, it is a wrapped one. So the row copy hides with the nav
+    links and the panel copy takes over, under a hairline that separates where
+    you can go from what language you can read it in.
+
+    In the row it sits BETWEEN the nav links and the CTA rather than after it.
+    The CTA is the action and stays the last thing in the row; a switcher is
+    navigation, so it belongs on the navigation side of the hairline that
+    already divides the two. It gets a hairline of its own on the same
+    principle, in the same 1px --edge, which makes the row 3 declared groups
+    rather than 8 loose words.
+
+    page_url is the ENGLISH path, as everywhere else, and None on the 404: one
+    404 per origin, so it has no equivalent page in another language and must
+    not offer one. The header then carries no switcher at all, which is what
+    check 7 sees after it blanks the switcher out of every other page.
     """
     c = ch(lang)
     pairs = list(zip(NAV_PATHS, c.NAV))
@@ -319,12 +361,12 @@ def header(lang):
       </a>
       <nav class="head-nav" aria-label="{c.ARIA_PRIMARY}">
 {links}
-        <a class="head-cta" href="{localise("/start/", lang)}">{c.HEAD_CTA}</a>
+{switcher(lang, page_url, "head", 8)}        <a class="head-cta" href="{localise("/start/", lang)}">{c.HEAD_CTA}</a>
         <details class="menu">
           <summary>{c.MENU}</summary>
           <div class="menu-panel">
 {menu}
-          </div>
+{switcher(lang, page_url, "head", 12)}          </div>
         </details>
       </nav>
     </div>
@@ -336,7 +378,7 @@ def header(lang):
 NL = chr(10)
 
 
-def switcher(lang, page_url):
+def switcher(lang, page_url, place="foot", indent=10):
     # page_url is None on the 404, which has no equivalent in another language
     # and must not link at one.
     """The language switcher, from the SAME alternates() the head used.
@@ -350,10 +392,20 @@ def switcher(lang, page_url):
 
     The current language is a span, not a link. A link to the page you are on
     is furniture.
+
+    ONE FUNCTION, THREE PLACEMENTS. It was the footer's alone, which meant an
+    Italian reader who landed on an English page had to scroll the whole
+    document to get out of it: on /work/iglisi-watch/ that is 9 sections before
+    the one control that answers the only question he has. `place` is the class
+    prefix and `indent` is the column, and nothing else differs, so the header
+    copy cannot come to disagree with the footer copy about where Italian is.
+    Gate check 36 re-reads all 3 out of the finished HTML and compares each
+    against that page's own hreflang tags.
     """
     if page_url is None or len(i18n.LANGS) < 2:
         return ""
     c = ch(lang)
+    pad = " " * indent
     items = []
     for lg, href in alternates(page_url):
         if lg == "x-default":
@@ -361,12 +413,12 @@ def switcher(lang, page_url):
         name = i18n.AUTONYM[lg]
         path = href[len(SITE):]
         if lg == lang:
-            items.append(f'            <span aria-current="page">{name}</span>')
+            items.append(f'{pad}  <span aria-current="page">{name}</span>')
         else:
-            items.append(f'            <a href="{path}" hreflang="{lg}">{name}</a>')
+            items.append(f'{pad}  <a href="{path}" hreflang="{lg}">{name}</a>')
     inner = NL.join(items)
-    return (f'          <nav class="foot-lang" aria-label="{c.ARIA_LANG}">{NL}'
-            f'{inner}{NL}          </nav>{NL}')
+    return (f'{pad}<nav class="{place}-lang" aria-label="{c.ARIA_LANG}">{NL}'
+            f'{inner}{NL}{pad}</nav>{NL}')
 
 
 def footer(lang, page_url=None, cta_heading=None, cta_note=None):

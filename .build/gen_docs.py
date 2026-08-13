@@ -283,7 +283,8 @@ def audit_section(rec, lang):
             </div>
 
             <form class="af" id="audit-form" method="POST"
-              action="{shell.FORM_ENDPOINT}">
+              action="{shell.FORM_ENDPOINT}"
+              {shell.form_js(lang)}>
               <input type="hidden" name="access_key" value="{shell.WEB3FORMS_KEY}">
               <input type="hidden" name="subject" value="{fill(f["subject"], lang)}">
               <input type="hidden" name="redirect" value="{shell.form_redirect(shell.localise(rec["url"], lang))}">
@@ -474,7 +475,7 @@ def render(rec, en_rec, lang):
     parts += ["      </div>", ""]
     body = NL.join(parts)
 
-    return (shell.head(p, lang) + shell.header(lang) +
+    return (shell.head(p, lang) + shell.header(lang, rec["url"]) +
             '\n  <main id="main">\n    <div class="wrap">\n' + body +
             '\n    </div>\n  </main>\n' +
             shell.footer(lang, rec["url"], fill(rec["cta"], lang),

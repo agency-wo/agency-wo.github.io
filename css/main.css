@@ -79,8 +79,15 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
   height: 72px; gap: var(--s-5); }
 .head-logo { display: block; padding: 4px; margin: -4px; }
 .head-nav { display: flex; align-items: center; gap: var(--s-6); }
+/* nowrap, because a flex item shrinks before it overflows: with the switcher
+   in the row the Albanian CTA hit its min-content width at 720 and broke
+   "Nis një projekt" over 2 lines inside a row whose height is fixed at 72px.
+   Nothing then reported an overflow, because there was none. It stays one line
+   or the measurement is a lie. Below 720 they are display:none anyway. */
 .head-nav a { font-size: var(--fs-small); font-weight: 500; text-decoration: none;
-  padding-block: 12px; margin-block: -12px; }
+  padding-block: 12px; margin-block: -12px; white-space: nowrap; }
+/* except in the panel, where the 4 links are a column and may use 2 lines */
+.menu-panel a { white-space: normal; }
 /* was color: var(--slate), which DIMMED the link on hover: 15.9:1 down to
    5.56:1, so pointing at a nav item made it 3 times quieter. Same idiom as
    .head-cta below, and the colour is not the only signal. */
@@ -102,6 +109,50 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
   text-decoration: underline !important; text-underline-offset: 4px;
   text-decoration-thickness: 2px; }
 .head-cta:hover { text-decoration-color: var(--red) !important; }
+
+/* -- the language switcher, in the header --------------------------------
+   It lived only in the footer, so an Italian reader who landed on an English
+   page had to scroll the entire document to get out of it. Three static <a>
+   pointing at the equivalent page: no script, which is what the CSP and rule
+   32 both want, and what the footer copy already was.
+
+   No new vocabulary. The hairline is the CTA's hairline in the same 1px
+   --edge, and the language you are reading carries the same 2px ink rule as
+   the current nav item, so the row is three declared groups (where you can
+   go, what you can read it in, what you can do) rather than eight loose
+   words. It sits on the navigation side of the CTA's divider, because a
+   switcher is navigation and the CTA stays the last thing in the row.
+
+   Below 720px the row copy goes with the nav links and the copy inside
+   .menu-panel takes over: 3 more links in a 72px row that already holds a
+   logo, a button and a disclosure is not a phone header, it is a wrapped
+   one. Emitted twice for the same reason the nav links are, and by the same
+   function.                                                                */
+.head-lang { display: flex; align-items: center; gap: var(--s-4);
+  font-size: var(--fs-small); font-weight: 500; }
+.head-lang a { text-decoration: none; }
+.head-lang a:hover { text-decoration: underline; text-underline-offset: 4px;
+  text-decoration-thickness: 2px; text-decoration-color: var(--red); }
+/* the current language is a span, so it inherits none of .head-nav a's box */
+.head-lang [aria-current="page"] { font-weight: 700;
+  box-shadow: inset 0 -2px 0 0 var(--ink); }
+.head-nav > .head-lang { padding-left: var(--s-6);
+  border-left: 1px solid var(--edge); }
+.head-nav > .head-lang > * { padding-block: 12px; margin-block: -12px; }
+/* in the panel it is a column under a rule, which is the same hairline doing
+   the same job turned 90 degrees */
+.menu-panel .head-lang { flex-direction: column; align-items: stretch;
+  gap: 0; margin-top: var(--s-3); padding-top: var(--s-3);
+  border-top: 1px solid var(--edge); }
+/* block, so the span is a row like the links are and the whole width of each
+   is the target; margin-block: 0 for the same reason .menu-panel a has it */
+.menu-panel .head-lang > * { display: block; padding-block: var(--s-3);
+  margin-block: 0; }
+/* the rule under the current language would run the panel's full width here,
+   which reads as a divider rather than a mark. It underlines the word. */
+.menu-panel .head-lang [aria-current="page"] { box-shadow: none;
+  text-decoration: underline; text-underline-offset: 4px;
+  text-decoration-thickness: 2px; }
 
 /* 404.html is hand-authored and carries no header, footer or band, which is
    why gate check 7 exempts it. Its styles were an inline <style> block until
@@ -157,7 +208,12 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
   min-width: 12rem; display: flex; flex-direction: column;
   background: var(--paper); border: 1px solid var(--edge);
   padding: var(--s-3) var(--s-5) var(--s-4); }
-.menu-panel a { padding-block: var(--s-3); }
+/* margin-block: 0 UNDOES .head-nav a's -12px, which is right in a 72px row and
+   wrong in a stacked panel: it left each link a 48px box on a 24px pitch, so
+   consecutive links overlapped by half and the later one won every hit test.
+   Tapping the bottom half of the word "Proof" opened Services, on every phone,
+   on all 51 pages. Measured with elementFromPoint at 390px, not by eye. */
+.menu-panel a { padding-block: var(--s-3); margin-block: 0; }
 
 /* -- hero ------------------------------------------------------------------ */
 .hero { padding-block: var(--pad-hero) var(--pad-major); }
@@ -397,6 +453,19 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
 .foot-meta { display: flex; justify-content: space-between; gap: var(--s-6);
   flex-wrap: wrap; margin-top: var(--s-8); font-size: var(--fs-small);
   color: var(--ink-mute); }
+/* The footer switcher had no rules at all: 3 links laid out by .foot-meta's
+   flex, in the UA's underline, at the muted colour meant for captions. Same
+   shape as the header copy, in the ink band's colours: --paper for the links,
+   which is what every other link down here is, and the rule under the current
+   language in --paper too, because --ink on ink is a mark nobody can see. */
+.foot-lang { display: flex; align-items: center; gap: var(--s-4);
+  flex-wrap: wrap; font-weight: 500; }
+.foot-lang > * { padding-block: 5px; }
+.foot-lang a { color: var(--paper); text-decoration: none; }
+.foot-lang a:hover { text-decoration: underline; text-underline-offset: 4px;
+  text-decoration-color: var(--red); }
+.foot-lang [aria-current="page"] { color: var(--paper); font-weight: 700;
+  box-shadow: inset 0 -2px 0 0 var(--paper); }
 
 /* ==========================================================================
    SUBPAGES
@@ -544,6 +613,20 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
    RESPONSIVE
    ========================================================================== */
 @media (max-width: 999px) {
+  /* The row carries 3 groups now, and Albanian is the longest of the 3
+     languages in all of them: "Prova Shërbime Shkrime Studio", the switcher,
+     and "Nis një projekt". At 32px gaps that measured 724px against a 720px
+     viewport, a 4px horizontal scroll at the one width where the phone menu
+     has not taken over yet. The GAP is what gives. Not the type size, which is
+     already the smallest on the site, and not the words, which are the nav.
+
+     16px is what the row below 720 already uses, and the groups do not close
+     up with it: they are separated by a hairline and its own 24 and 32px of
+     padding, not by the gap. Measured at 720, the tightest width the row is
+     ever asked to hold everything at: Albanian is the longest of the 3 in all
+     3 groups and clears it with 32px to spare. */
+  .head-nav { gap: var(--s-4); }
+  .head-nav > .head-lang { padding-left: var(--s-5); gap: var(--s-3); }
   .prose, .studio-prose { grid-column: 1 / 13; }
   .side { grid-column: 1 / 13; position: static; margin-top: var(--s-8); }
   /* Below 1000 the sidebar stops being sticky and lands under the article, so
@@ -593,6 +676,9 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
      too, which is a menu that opens onto nothing. Gate check 33 fails the
      build if this stops being a child combinator. */
   .head-nav > a:not(.head-cta) { display: none; }
+  /* the row copy of the switcher goes with them, and the copy inside
+     .menu-panel is what a phone reaches. Same '>' for the same reason. */
+  .head-nav > .head-lang { display: none; }
   .menu { display: block; }
   /* the CTA is the only item left in the row here, so it has nothing to be
      divided from and the hairline would read as a stray mark */

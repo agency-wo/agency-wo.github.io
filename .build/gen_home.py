@@ -109,10 +109,15 @@ def audit_form(f, lang):
     that over every form on every page.
 
     The ids are /start/'s ids on purpose. This is a different document, so
-    there is no collision, and js/main.js binds every one of them with
-    getElementById and does sendText.textContent with no guard: miss
-    af-send-text and the whole script throws, taking the nav marking and the
-    header hairline down with the form.
+    there is no collision, and js/main.js binds every one of them by id. Miss
+    one and the script now declines the upgrade rather than throwing halfway
+    through it, which used to leave a form that still posted natively and had
+    had its native validation removed one line earlier.
+
+    The 3 data- attributes are the only thing telling that script what to say.
+    Without them the button says "Sending" in English on 34 translated pages,
+    and the gate cannot see it: check 35 reads HTML and those strings would be
+    in a .js file. Check 28 fails the build if a form drops one.
 
     The pattern is /start/'s pattern, copied not retyped: browsers compile it
     with the regex v flag, an unescaped / or - in a character class is a syntax
@@ -129,7 +134,8 @@ def audit_form(f, lang):
             </div>
 
             <form class="af" id="audit-form" method="POST"
-              action="{shell.FORM_ENDPOINT}" aria-labelledby="audit-h">
+              action="{shell.FORM_ENDPOINT}" aria-labelledby="audit-h"
+              {shell.form_js(lang)}>
               <input type="hidden" name="access_key" value="{shell.WEB3FORMS_KEY}">
               <input type="hidden" name="subject" value="{fill(f["subject"], lang)}">
               <input type="hidden" name="redirect" value="{shell.form_redirect(shell.localise("/", lang))}">
@@ -330,7 +336,7 @@ def render(lang):
       </div>
     </section>
 '''
-    return (shell.head(page, lang) + shell.header(lang) +
+    return (shell.head(page, lang) + shell.header(lang, page["url"]) +
             '\n  <main id="main">\n' + body + '\n  </main>\n' +
             shell.footer(lang, page["url"], fill(h["cta"], lang),
                          fill(h["cta_note"], lang)))

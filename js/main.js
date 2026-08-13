@@ -85,7 +85,17 @@
      JS: intercept, post the same FormData, reveal the same panel in place.
 
      Rule 30 holds. Nothing here runs on load except the ?sent= check, and the
-     request happens because somebody pressed a button. */
+     request happens because somebody pressed a button.
+
+     EVERY SENTENCE THIS SCRIPT SAYS COMES OFF THE FORM. There are three, and
+     they used to be English literals down there, so an Italian visitor read
+     Italian until the button was pressed and English afterwards. They are
+     data- attributes emitted by shell.form_js, not an {en,it,sq} table in
+     here: script-src has no unsafe-inline so a per-language script is out, and
+     a table falls back to English on a language nobody told it about, which is
+     the half-translated page the gate exists to catch. If any of the three is
+     missing this whole block does not run and the native POST stands, which
+     works and is already in the reader's language. */
   var audit = document.getElementById("audit");
   var af = document.getElementById("audit-form");
 
@@ -95,13 +105,25 @@
     audit.classList.add("is-sent");
   }
 
-  if (af && audit && window.fetch && window.FormData && af.checkValidity) {
+  var doneEl = document.getElementById("sent");
+  var say = document.getElementById("af-say");
+  var send = document.getElementById("af-send");
+  var sendText = document.getElementById("af-send-text");
+  /* the words, in the page's own language */
+  var T_SENDING = af && af.getAttribute("data-sending");
+  var T_SENDING_SAY = af && af.getAttribute("data-sending-say");
+  var T_ERROR = af && af.getAttribute("data-error");
+
+  /* Every hook and every string, tested BEFORE novalidate is set. This used to
+     read `af && audit && ...`, set novalidate, and then throw on the first
+     missing hook: that leaves a form which still posts natively AND has had
+     its native validation taken away, so an empty submit reaches Web3Forms.
+     A missing hook now costs the upgrade and nothing else. */
+  if (af && audit && doneEl && say && send && sendText &&
+      T_SENDING && T_SENDING_SAY && T_ERROR &&
+      window.fetch && window.FormData && af.checkValidity) {
     af.setAttribute("novalidate", "novalidate");
 
-    var doneEl = document.getElementById("sent");
-    var say = document.getElementById("af-say");
-    var send = document.getElementById("af-send");
-    var sendText = document.getElementById("af-send-text");
     var sendLabel = sendText.textContent;  /* read once, never hardcoded twice */
     var sending = false;
 
@@ -125,8 +147,7 @@
       } else {
         /* never a dead button and never an alert(): name the other 2 ways */
         say.classList.add("is-err");
-        say.textContent = "That did not send. Use the email or the WhatsApp " +
-          "link below and we will pick it up from there.";
+        say.textContent = T_ERROR;
         send.focus();
       }
     };
@@ -151,11 +172,11 @@
 
       sending = true;
       send.disabled = true;
-      sendText.textContent = "Sending";
+      sendText.textContent = T_SENDING;
       /* disabling the button drops focus to the body, so this live region is
          the only thing telling a screen reader that anything happened */
       say.classList.remove("is-err");
-      say.textContent = "Sending your details.";
+      say.textContent = T_SENDING_SAY;
 
       window.fetch(af.getAttribute("action"), {
         method: "POST",

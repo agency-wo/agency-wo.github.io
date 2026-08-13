@@ -370,7 +370,14 @@ def block(html, name):
 # switcher (the 404: there is one 404 per origin and it cannot link at an
 # equivalent page in another language) differed from every page that has one, by
 # 10 spaces nobody could see in the message.
-_LANG_NAV = re.compile(r'(?ms)^[ \t]*<nav class="foot-lang".*?</nav>[ \t]*\r?\n')
+#
+# BOTH prefixes, because the switcher is in the header now as well, twice: once
+# in the row and once inside the phone panel, exactly as the nav links are. All
+# 3 are per-page and all 3 have to go before either comparison, or check 7 would
+# fail all 51 pages for differing in the one part of the chrome that is SUPPOSED
+# to differ per page.
+_LANG_NAV = re.compile(
+    r'(?ms)^[ \t]*<nav class="(?:foot|head)-lang".*?</nav>[ \t]*\r?\n')
 
 # The reference page, resolved through the family rather than read from a path.
 # The Italian header is compared against the ITALIAN reference: 3 languages
@@ -1015,9 +1022,10 @@ for p in all_pages:
         sources[sc.group(1)] = key
 
     # The confirmation, and the ids js/main.js binds by getElementById. Miss one
-    # and sendText.textContent throws, which kills the WHOLE script on that
-    # page: no interception, no nav marking, no header hairline, and a form that
-    # posts away to Web3Forms' own page.
+    # and the script declines the upgrade: the form posts away to Web3Forms'
+    # own page and the visitor never sees the panel in place. It used to be
+    # worse, because sendText.textContent threw AFTER novalidate had been set,
+    # which killed the whole script and took native validation with it.
     done = re.search(r'<[^>]*\bclass="af-done"[^>]*>', html)
     if not done:
         findings.append(f"[form] {key}: no .af-done confirmation")
@@ -1106,12 +1114,52 @@ for hook, src, where in [("audit-form", js_src, "js/main.js"),
                          ("sent=1", js_src, "js/main.js"),
                          ("novalidate", js_src, "js/main.js"),
                          ("af-say", js_src, "js/main.js"),
+                         ("data-sending", js_src, "js/main.js"),
+                         ("data-sending-say", js_src, "js/main.js"),
+                         ("data-error", js_src, "js/main.js"),
                          (".af-done:target ~ .af", css_src, "css/main.css"),
                          (".is-sent", css_src, "css/main.css"),
                          (".af-hp { display: none; }", css_src, "css/main.css"),
                          ("was-validated", css_src, "css/main.css")]:
     if hook not in src:
         findings.append(f"[form] {where} no longer mentions {hook!r}")
+
+# The 3 sentences the script says are the one part of a translated page that
+# nothing above can see: check 35 reads HTML, and until now these lived in
+# js/main.js as English literals. So the form carries them and the script
+# reads them, which puts them back inside the gate's reach. Every form, every
+# language, and the value is compared against that language's chrome rather
+# than merely counted, because a generator emitting shell.ch("en") on an
+# Italian page produces three present, well-formed, English attributes.
+JS_SAYS = [("data-sending", "JS_SENDING"),
+           ("data-sending-say", "JS_SENDING_SAY"),
+           ("data-error", "JS_ERROR")]
+for p in form_pages:
+    lg = LANG[p]
+    f = re.search(r"(?s)<form\b.*?>", read(p))
+    for attr, key in JS_SAYS:
+        want = getattr(_shell.ch(lg), key)
+        got = re.search(attr + r'="([^"]*)"', f.group(0)) if f else None
+        if not got:
+            findings.append(f"[form] {rel(p)}: the form has no {attr}. "
+                            f"js/main.js reads what it says off the form, so "
+                            f"without it the button falls silent and the "
+                            f"submit is not intercepted at all")
+        elif got.group(1) != want:
+            findings.append(f"[form] {rel(p)}: {attr} is {got.group(1)!r} and "
+                            f"chrome_{lg}.py says {want!r}. The script would "
+                            f"speak the wrong language on a page that is "
+                            f"otherwise translated")
+
+# And the script must hold none of them itself. A literal left behind here is
+# the exact defect this pair of checks was written for, and it would be the
+# copy that wins the day somebody edits one of the two.
+for _, key in JS_SAYS:
+    if getattr(_chrome, key) in js_src:
+        findings.append(f"[form] js/main.js still contains chrome.{key} as an "
+                        f"English literal. It reads that string off the form: "
+                        f"a second copy in here is one that cannot be "
+                        f"translated and will not agree with the first")
 
 # 29. no retired domain survives anywhere ---------------------------------
 # The first domain this site claimed was never ours: it belongs to a company
@@ -1491,73 +1539,95 @@ for lg in i18n.LANGS:
 # so with JS off a reader on a product page is dumped on the Albanian homepage,
 # and the version that follows the reader is its JavaScript one, which its own
 # CSP now blocks. Both halves of that are checked here.
-_SW = re.compile(r'(?s)<nav class="foot-lang"[^>]*>(.*?)</nav>')
+#
+# EVERY COPY, not the first one found. There are 3 on an indexable page: the
+# header row, the header's phone panel, and the footer. Searching for one and
+# validating it would let the other 2 point anywhere at all, and the header pair
+# is the pair a reader actually uses, because it is the one they can see without
+# scrolling 9 sections first.
+_SW = re.compile(r'(?s)<nav class="(foot|head)-lang"[^>]*>(.*?)</nav>')
 _SW_ITEM = re.compile(r"(?s)<(a|span)\b([^>]*)>(.*?)</\1>")
 
-if "foot-lang" in js_src:
-    findings.append("[switcher] js/main.js mentions foot-lang. The switcher is "
-                    "static <a> elements: script-src has no unsafe-inline, and "
-                    "rule 32 wants the finished state to be the CSS default")
+# One in the row, one in the phone panel, one in the footer. The header pair is
+# the same "twice, once per width" the nav links are built with, and check 33
+# counts those the same way for the same reason: below 720px the row copy is
+# display:none and a single copy would be a switcher a phone cannot reach.
+WANT_SW = {"head": 2, "foot": 1}
+
+for _place in sorted(WANT_SW):
+    if _place + "-lang" in js_src:
+        findings.append(f"[switcher] js/main.js mentions {_place}-lang. The "
+                        f"switcher is static <a> elements: script-src has no "
+                        f"unsafe-inline, and rule 32 wants the finished state "
+                        f"to be the CSS default")
 
 for p in all_pages:
     html, lg = read(p), LANG[p]
-    sw = _SW.search(html)
+    sws = _SW.findall(html)
     alts = dict(_ALT.findall(html))
     # A page with no cluster must have no switcher. The 404 is the case: it has
     # no equivalent in another language and must not pretend to.
     if len(i18n.LANGS) < 2 or not indexable(html):
-        if sw:
-            findings.append(f"[switcher] {rel(p)} has a language switcher and "
-                            f"no alternates to build it from. It would link at "
-                            f"pages this host does not serve")
+        if sws:
+            findings.append(f"[switcher] {rel(p)} has {len(sws)} language "
+                            f"switcher(s) and no alternates to build them "
+                            f"from. They would link at pages this host does "
+                            f"not serve")
         continue
-    if not sw:
-        findings.append(f"[switcher] {rel(p)} has no .foot-lang switcher. A "
-                        f"reader who lands on the wrong language has no way "
-                        f"out of it")
-        continue
-    inner = sw.group(1)
-    for bad in ("<button", "<select", "<script", "onclick=", "onchange="):
-        if bad in inner:
-            findings.append(f"[switcher] {rel(p)}: the switcher contains "
-                            f"{bad!r}. It is static <a> elements, so it works "
-                            f"with JS off and needs no inline handler the CSP "
-                            f"would block anyway")
-    items = _SW_ITEM.findall(inner)
-    if len(items) != len(i18n.LANGS):
-        findings.append(f"[switcher] {rel(p)} offers {len(items)} languages, "
-                        f"the site builds {len(i18n.LANGS)}")
-        continue
-    for (tag, attrs, text), lg2 in zip(items, i18n.LANGS):
-        text = re.sub(r"\s+", " ", re.sub(r"(?s)<[^>]+>", "", text)).strip()
-        if text != i18n.AUTONYM[lg2]:
-            findings.append(f"[switcher] {rel(p)} names {text!r} where the "
-                            f"autonym for {lg2} is {i18n.AUTONYM[lg2]!r}. A "
-                            f"language named in a language you cannot read is "
-                            f"furniture")
-        if lg2 == lg:
-            if tag != "span" or 'aria-current="page"' not in attrs:
-                findings.append(f"[switcher] {rel(p)}: the current language is "
-                                f"a <{tag}>, and it is a span with "
-                                f'aria-current="page". A link to the page you '
-                                f"are on is furniture")
+    for place, want_n in sorted(WANT_SW.items()):
+        got_n = sum(1 for pl, _ in sws if pl == place)
+        if got_n != want_n:
+            findings.append(
+                f"[switcher] {rel(p)} has {got_n} .{place}-lang switcher(s), "
+                f"expected {want_n}. A reader who lands on the wrong language "
+                f"has to be able to leave it" + (
+                    ", at both widths: the row copy is hidden below 720px and "
+                    "the panel copy is hidden above it" if place == "head"
+                    else ""))
+    for place, inner in sws:
+        where = f"{rel(p)} .{place}-lang"
+        for bad in ("<button", "<select", "<script", "onclick=", "onchange="):
+            if bad in inner:
+                findings.append(f"[switcher] {where} contains "
+                                f"{bad!r}. It is static <a> elements, so it "
+                                f"works with JS off and needs no inline "
+                                f"handler the CSP would block anyway")
+        items = _SW_ITEM.findall(inner)
+        if len(items) != len(i18n.LANGS):
+            findings.append(f"[switcher] {where} offers {len(items)} "
+                            f"languages, the site builds {len(i18n.LANGS)}")
             continue
-        if tag != "a":
-            findings.append(f"[switcher] {rel(p)}: {lg2} is a <{tag}> and not "
-                            f"a link, so it cannot be reached")
-            continue
-        href = re.search(r'href="([^"]*)"', attrs)
-        want_href = alts.get(lg2, "")[len(_SITE):]
-        if not href or href.group(1) != want_href:
-            findings.append(f"[switcher] {rel(p)} sends {lg2} to "
-                            f"{href.group(1) if href else None!r}, and its own "
-                            f"head says the {lg2} alternate is {want_href!r}. "
-                            f"The switcher points at the EQUIVALENT page, not "
-                            f"at a language's home page")
-        if f'hreflang="{lg2}"' not in attrs:
-            findings.append(f"[switcher] {rel(p)}: the {lg2} link carries no "
-                            f"hreflang, so nothing but the word says what it "
-                            f"leads to")
+        for (tag, attrs, text), lg2 in zip(items, i18n.LANGS):
+            text = re.sub(r"\s+", " ", re.sub(r"(?s)<[^>]+>", "", text)).strip()
+            if text != i18n.AUTONYM[lg2]:
+                findings.append(f"[switcher] {where} names {text!r} where the "
+                                f"autonym for {lg2} is {i18n.AUTONYM[lg2]!r}. A "
+                                f"language named in a language you cannot read "
+                                f"is furniture")
+            if lg2 == lg:
+                if tag != "span" or 'aria-current="page"' not in attrs:
+                    findings.append(f"[switcher] {where}: the current language "
+                                    f"is a <{tag}>, and it is a span with "
+                                    f'aria-current="page". A link to the page '
+                                    f"you are on is furniture")
+                continue
+            if tag != "a":
+                findings.append(f"[switcher] {where}: {lg2} is a <{tag}> and "
+                                f"not a link, so it cannot be reached")
+                continue
+            href = re.search(r'href="([^"]*)"', attrs)
+            want_href = alts.get(lg2, "")[len(_SITE):]
+            if not href or href.group(1) != want_href:
+                findings.append(f"[switcher] {where} sends {lg2} to "
+                                f"{href.group(1) if href else None!r}, and its "
+                                f"own head says the {lg2} alternate is "
+                                f"{want_href!r}. The switcher points at the "
+                                f"EQUIVALENT page, not at a language's home "
+                                f"page")
+            if f'hreflang="{lg2}"' not in attrs:
+                findings.append(f"[switcher] {where}: the {lg2} link carries "
+                                f"no hreflang, so nothing but the word says "
+                                f"what it leads to")
 
 # 37. the page says what language it is, and agrees with where it lives ----
 # Everything else here derives the language from the directory. If the document

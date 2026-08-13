@@ -217,7 +217,7 @@ def render(svc, en_svc, posts, lang):
             "og_desc": svc.get("og_desc", svc["description"]),
             "jsonld": jsonld(svc, lang)}
 
-    parts = [shell.head(page, lang), shell.header(lang)]
+    parts = [shell.head(page, lang), shell.header(lang, url)]
     a = parts.append
     a('\n  <main id="main">\n    <div class="wrap">\n')
     a('      <header class="page-head">\n')

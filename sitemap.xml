@@ -1,173 +1,412 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://minarankstudio.com/</loc>
     <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/"/>
+  </url>
+  <url>
+    <loc>https://minarankstudio.com/it/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/"/>
+  </url>
+  <url>
+    <loc>https://minarankstudio.com/sq/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/"/>
   </url>
   <url>
     <loc>https://minarankstudio.com/geo/</loc>
     <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/geo/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/geo/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/geo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/geo/"/>
+  </url>
+  <url>
+    <loc>https://minarankstudio.com/it/geo/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/geo/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/geo/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/geo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/geo/"/>
+  </url>
+  <url>
+    <loc>https://minarankstudio.com/sq/geo/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/geo/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/geo/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/geo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/geo/"/>
   </url>
   <url>
     <loc>https://minarankstudio.com/seo/</loc>
     <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/seo/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/seo/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/seo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/seo/"/>
+  </url>
+  <url>
+    <loc>https://minarankstudio.com/it/seo/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/seo/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/seo/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/seo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/seo/"/>
+  </url>
+  <url>
+    <loc>https://minarankstudio.com/sq/seo/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/seo/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/seo/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/seo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/seo/"/>
   </url>
   <url>
     <loc>https://minarankstudio.com/web-design/</loc>
     <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/web-design/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/web-design/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/web-design/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/web-design/"/>
+  </url>
+  <url>
+    <loc>https://minarankstudio.com/it/web-design/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/web-design/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/web-design/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/web-design/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/web-design/"/>
+  </url>
+  <url>
+    <loc>https://minarankstudio.com/sq/web-design/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/web-design/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/web-design/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/web-design/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/web-design/"/>
   </url>
   <url>
     <loc>https://minarankstudio.com/meta-ads/</loc>
     <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/meta-ads/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/meta-ads/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/meta-ads/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/meta-ads/"/>
+  </url>
+  <url>
+    <loc>https://minarankstudio.com/it/meta-ads/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/meta-ads/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/meta-ads/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/meta-ads/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/meta-ads/"/>
+  </url>
+  <url>
+    <loc>https://minarankstudio.com/sq/meta-ads/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/meta-ads/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/meta-ads/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/meta-ads/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/meta-ads/"/>
   </url>
   <url>
     <loc>https://minarankstudio.com/systems/</loc>
     <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/systems/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/systems/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/systems/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/systems/"/>
+  </url>
+  <url>
+    <loc>https://minarankstudio.com/it/systems/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/systems/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/systems/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/systems/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/systems/"/>
+  </url>
+  <url>
+    <loc>https://minarankstudio.com/sq/systems/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/systems/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/systems/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/systems/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/systems/"/>
   </url>
   <url>
     <loc>https://minarankstudio.com/work/</loc>
     <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/work/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/work/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/work/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/work/"/>
+  </url>
+  <url>
+    <loc>https://minarankstudio.com/it/work/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/work/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/work/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/work/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/work/"/>
+  </url>
+  <url>
+    <loc>https://minarankstudio.com/sq/work/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/work/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/work/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/work/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/work/"/>
   </url>
   <url>
     <loc>https://minarankstudio.com/blog/</loc>
     <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/blog/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/blog/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/blog/"/>
+  </url>
+  <url>
+    <loc>https://minarankstudio.com/it/blog/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/blog/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/blog/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/blog/"/>
+  </url>
+  <url>
+    <loc>https://minarankstudio.com/sq/blog/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/blog/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/blog/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/blog/"/>
   </url>
   <url>
     <loc>https://minarankstudio.com/studio/</loc>
     <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/studio/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/studio/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/studio/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/studio/"/>
+  </url>
+  <url>
+    <loc>https://minarankstudio.com/it/studio/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/studio/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/studio/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/studio/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/studio/"/>
+  </url>
+  <url>
+    <loc>https://minarankstudio.com/sq/studio/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/studio/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/studio/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/studio/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/studio/"/>
   </url>
   <url>
     <loc>https://minarankstudio.com/start/</loc>
     <lastmod>2026-08-13</lastmod>
-  </url>
-  <url>
-    <loc>https://minarankstudio.com/it/</loc>
-  </url>
-  <url>
-    <loc>https://minarankstudio.com/it/blog/</loc>
-  </url>
-  <url>
-    <loc>https://minarankstudio.com/it/blog/four-lines-that-were-five/</loc>
-  </url>
-  <url>
-    <loc>https://minarankstudio.com/it/blog/map-listing-first/</loc>
-  </url>
-  <url>
-    <loc>https://minarankstudio.com/it/blog/what-nobody-can-promise-ai-search/</loc>
-  </url>
-  <url>
-    <loc>https://minarankstudio.com/it/geo/</loc>
-  </url>
-  <url>
-    <loc>https://minarankstudio.com/it/meta-ads/</loc>
-  </url>
-  <url>
-    <loc>https://minarankstudio.com/it/seo/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/start/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/start/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/start/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/start/"/>
   </url>
   <url>
     <loc>https://minarankstudio.com/it/start/</loc>
-  </url>
-  <url>
-    <loc>https://minarankstudio.com/it/studio/</loc>
-  </url>
-  <url>
-    <loc>https://minarankstudio.com/it/systems/</loc>
-  </url>
-  <url>
-    <loc>https://minarankstudio.com/it/web-design/</loc>
-  </url>
-  <url>
-    <loc>https://minarankstudio.com/it/work/</loc>
-  </url>
-  <url>
-    <loc>https://minarankstudio.com/it/work/iglisi-watch/</loc>
-  </url>
-  <url>
-    <loc>https://minarankstudio.com/it/work/intimo-bruna/</loc>
-  </url>
-  <url>
-    <loc>https://minarankstudio.com/it/work/pro-affy/</loc>
-  </url>
-  <url>
-    <loc>https://minarankstudio.com/it/work/victoria-boutique/</loc>
-  </url>
-  <url>
-    <loc>https://minarankstudio.com/sq/</loc>
-  </url>
-  <url>
-    <loc>https://minarankstudio.com/sq/blog/</loc>
-  </url>
-  <url>
-    <loc>https://minarankstudio.com/sq/blog/four-lines-that-were-five/</loc>
-  </url>
-  <url>
-    <loc>https://minarankstudio.com/sq/blog/map-listing-first/</loc>
-  </url>
-  <url>
-    <loc>https://minarankstudio.com/sq/blog/what-nobody-can-promise-ai-search/</loc>
-  </url>
-  <url>
-    <loc>https://minarankstudio.com/sq/geo/</loc>
-  </url>
-  <url>
-    <loc>https://minarankstudio.com/sq/meta-ads/</loc>
-  </url>
-  <url>
-    <loc>https://minarankstudio.com/sq/seo/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/start/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/start/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/start/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/start/"/>
   </url>
   <url>
     <loc>https://minarankstudio.com/sq/start/</loc>
-  </url>
-  <url>
-    <loc>https://minarankstudio.com/sq/studio/</loc>
-  </url>
-  <url>
-    <loc>https://minarankstudio.com/sq/systems/</loc>
-  </url>
-  <url>
-    <loc>https://minarankstudio.com/sq/web-design/</loc>
-  </url>
-  <url>
-    <loc>https://minarankstudio.com/sq/work/</loc>
-  </url>
-  <url>
-    <loc>https://minarankstudio.com/sq/work/iglisi-watch/</loc>
-  </url>
-  <url>
-    <loc>https://minarankstudio.com/sq/work/intimo-bruna/</loc>
-  </url>
-  <url>
-    <loc>https://minarankstudio.com/sq/work/pro-affy/</loc>
-  </url>
-  <url>
-    <loc>https://minarankstudio.com/sq/work/victoria-boutique/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/start/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/start/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/start/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/start/"/>
   </url>
   <url>
     <loc>https://minarankstudio.com/work/iglisi-watch/</loc>
     <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/work/iglisi-watch/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/work/iglisi-watch/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/work/iglisi-watch/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/work/iglisi-watch/"/>
+  </url>
+  <url>
+    <loc>https://minarankstudio.com/it/work/iglisi-watch/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/work/iglisi-watch/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/work/iglisi-watch/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/work/iglisi-watch/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/work/iglisi-watch/"/>
+  </url>
+  <url>
+    <loc>https://minarankstudio.com/sq/work/iglisi-watch/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/work/iglisi-watch/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/work/iglisi-watch/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/work/iglisi-watch/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/work/iglisi-watch/"/>
   </url>
   <url>
     <loc>https://minarankstudio.com/work/intimo-bruna/</loc>
     <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/work/intimo-bruna/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/work/intimo-bruna/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/work/intimo-bruna/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/work/intimo-bruna/"/>
+  </url>
+  <url>
+    <loc>https://minarankstudio.com/it/work/intimo-bruna/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/work/intimo-bruna/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/work/intimo-bruna/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/work/intimo-bruna/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/work/intimo-bruna/"/>
+  </url>
+  <url>
+    <loc>https://minarankstudio.com/sq/work/intimo-bruna/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/work/intimo-bruna/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/work/intimo-bruna/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/work/intimo-bruna/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/work/intimo-bruna/"/>
   </url>
   <url>
     <loc>https://minarankstudio.com/work/pro-affy/</loc>
     <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/work/pro-affy/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/work/pro-affy/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/work/pro-affy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/work/pro-affy/"/>
+  </url>
+  <url>
+    <loc>https://minarankstudio.com/it/work/pro-affy/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/work/pro-affy/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/work/pro-affy/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/work/pro-affy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/work/pro-affy/"/>
+  </url>
+  <url>
+    <loc>https://minarankstudio.com/sq/work/pro-affy/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/work/pro-affy/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/work/pro-affy/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/work/pro-affy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/work/pro-affy/"/>
   </url>
   <url>
     <loc>https://minarankstudio.com/work/victoria-boutique/</loc>
     <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/work/victoria-boutique/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/work/victoria-boutique/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/work/victoria-boutique/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/work/victoria-boutique/"/>
+  </url>
+  <url>
+    <loc>https://minarankstudio.com/it/work/victoria-boutique/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/work/victoria-boutique/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/work/victoria-boutique/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/work/victoria-boutique/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/work/victoria-boutique/"/>
+  </url>
+  <url>
+    <loc>https://minarankstudio.com/sq/work/victoria-boutique/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/work/victoria-boutique/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/work/victoria-boutique/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/work/victoria-boutique/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/work/victoria-boutique/"/>
   </url>
   <url>
     <loc>https://minarankstudio.com/blog/four-lines-that-were-five/</loc>
     <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/blog/four-lines-that-were-five/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/blog/four-lines-that-were-five/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/blog/four-lines-that-were-five/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/blog/four-lines-that-were-five/"/>
+  </url>
+  <url>
+    <loc>https://minarankstudio.com/it/blog/four-lines-that-were-five/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/blog/four-lines-that-were-five/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/blog/four-lines-that-were-five/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/blog/four-lines-that-were-five/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/blog/four-lines-that-were-five/"/>
+  </url>
+  <url>
+    <loc>https://minarankstudio.com/sq/blog/four-lines-that-were-five/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/blog/four-lines-that-were-five/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/blog/four-lines-that-were-five/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/blog/four-lines-that-were-five/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/blog/four-lines-that-were-five/"/>
   </url>
   <url>
     <loc>https://minarankstudio.com/blog/map-listing-first/</loc>
     <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/blog/map-listing-first/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/blog/map-listing-first/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/blog/map-listing-first/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/blog/map-listing-first/"/>
+  </url>
+  <url>
+    <loc>https://minarankstudio.com/it/blog/map-listing-first/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/blog/map-listing-first/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/blog/map-listing-first/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/blog/map-listing-first/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/blog/map-listing-first/"/>
+  </url>
+  <url>
+    <loc>https://minarankstudio.com/sq/blog/map-listing-first/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/blog/map-listing-first/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/blog/map-listing-first/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/blog/map-listing-first/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/blog/map-listing-first/"/>
   </url>
   <url>
     <loc>https://minarankstudio.com/blog/what-nobody-can-promise-ai-search/</loc>
     <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/blog/what-nobody-can-promise-ai-search/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/blog/what-nobody-can-promise-ai-search/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/blog/what-nobody-can-promise-ai-search/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/blog/what-nobody-can-promise-ai-search/"/>
+  </url>
+  <url>
+    <loc>https://minarankstudio.com/it/blog/what-nobody-can-promise-ai-search/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/blog/what-nobody-can-promise-ai-search/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/blog/what-nobody-can-promise-ai-search/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/blog/what-nobody-can-promise-ai-search/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/blog/what-nobody-can-promise-ai-search/"/>
+  </url>
+  <url>
+    <loc>https://minarankstudio.com/sq/blog/what-nobody-can-promise-ai-search/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/blog/what-nobody-can-promise-ai-search/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/blog/what-nobody-can-promise-ai-search/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/blog/what-nobody-can-promise-ai-search/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/blog/what-nobody-can-promise-ai-search/"/>
   </url>
 </urlset>
