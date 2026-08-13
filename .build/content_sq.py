@@ -36,7 +36,7 @@ SERVICES = [
     # ------------------------------------------------------------------ SEO --
     {
         "slug": "seo",
-        "src": "f38489c3",
+        "src": "c326ed3e",
         "nav": "SEO",
         "schema_name": "Optimizim për motorët e kërkimit dhe kërkim lokal",
         # 21 characters, 2 fewer than the English.
@@ -55,7 +55,7 @@ SERVICES = [
         "og_desc": "Harta të sjell telefonata sot. Rezultatet të bëjnë të "
                    "gjendesh vitin tjetër.",
         "lead": "Kërko një riparim orësh në Durrës dhe Google të shfaq një "
-                "hartë me tre dyqane para se të shfaqë një faqe të vetme. "
+                "hartë me 3 dyqane para se të shfaqë një faqe të vetme. "
                 "Shumica e bizneseve të vogla nuk janë në atë hartë, ose janë "
                 "me orare të gabuara dhe një foto nga viti 2019. Zakonisht "
                 "është gjëja më e lirë për t'u rregulluar dhe pothuajse askush "
@@ -164,7 +164,7 @@ SERVICES = [
     # ------------------------------------------------------------------ GEO --
     {
         "slug": "geo",
-        "src": "3ac8ecea",
+        "src": "1a23d388",
         # glossary.TERMS: AI search -> kërkimi me AI. Matches
         # chrome_sq.FOOT_LABELS[0][1] exactly.
         "nav": "Kërkimi me AI",
@@ -203,11 +203,11 @@ SERVICES = [
                 "gjithçka që shfaqet vetëm kur klikon hidhen tej para se t'i "
                 "mbërrijë.</p>",
                 "<p>Pra ajo që mbijeton është:</p>",
-                # 5 items, as in English. The English writes "hundred" as a
-                # word and this answers it with "njëqind": rule 11 forbids
-                # turning a digit into a word, not the reverse.
+                # 5 items, as in English. The English spelt "hundred" out and
+                # this answered it with "njëqind"; both were rule 11 defects
+                # and both are digits now.
                 "<ul>"
-                "<li>Njëqind fjalët e para poshtë titullit që bën "
+                "<li>100 fjalët e para poshtë titullit që bën "
                 "pyetjen.</li>"
                 "<li>Titujt e tu, të lexuar si skeleti i faqes.</li>"
                 "<li>Fjali të shkurtra e të thjeshta që e emërtojnë subjektin "

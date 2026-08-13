@@ -12,12 +12,20 @@ check_stamp() checks that the English has not moved under this file, but
 neither of them can tell a translated filename from a translated sentence, so
 the discipline is here rather than in the gate.
 
-NUMBERS ARE REFORMATTED, NEVER RE-DERIVED. 57.6k becomes 57,6k and 8.4 becomes
-8,4, and that is the whole of what happens to them. Only Iglisi has published
-figures, they come from the client's own Search Console with permission, and
-the two weak ones stay weak: position 8,4 is not rounded to 8 and a 1% click
-rate is not described as anything other than 1%. The other 3 clients have no
-numbers on purpose, and the Albanian must not invent the impression of one.
+NUMBERS ARE REFORMATTED, NEVER RE-DERIVED, AND `stats` IS NOT REFORMATTED HERE
+AT ALL. gen_cases.py runs that list through l10n.dec, which turns 57.6k into
+57,6k and 8.4 into 8,4 on its own, so the figures in it stay in their English
+form and this file owns only the labels. Writing 57,6k here as well gave the
+number 2 owners and l10n.dec read the comma as a thousands separator, printing
+57.6k on the Albanian page.
+
+The figures inside `charts` are prose: they sit mid-sentence, where l10n.dec
+cannot go without turning a full stop into a comma, so those are moved by hand.
+Only Iglisi has published figures, they come from the client's own Search
+Console with permission, and the two weak ones stay weak: position 8,4 is not
+rounded to 8 and a 1% click rate is not described as anything other than 1%.
+The other 3 clients have no numbers on purpose, and the Albanian must not
+invent the impression of one.
 
 Register is ti. The imperatives are singular: Kërko, Shto. There is no plural
 of politeness anywhere in the file.
@@ -28,10 +36,12 @@ written as an HTML entity: the neighbouring watch.al carries both forms across
 there are no em-dashes.
 """
 
+NL = chr(10)
+
 CLIENTS = [
     {
         "slug": "iglisi-watch",
-        "src": "714a546d",
+        "src": "cbb1f81d",
         # Not copy: the file and its 2 dimensions.
         "mark": [("iglisi-watch.png", 195, 22)],
         "name": "Iglisi Watch",
@@ -84,10 +94,38 @@ CLIENTS = [
             "nuk e kishte zënë.",
         ],
         "gsc": True,
-        # The 4 numbers are the English strings with the separator moved, and
-        # nothing else. 3 of the 4 labels are fixed by glossary.TERMS.
-        "stats": [("560", "klikime nga Google"), ("57,6k", "herë e shfaqur"),
-                  ("8,4", "pozicioni mesatar"), ("1%", "përqindja e klikimeve")],
+        # The 4 numbers are the English strings, untouched: l10n.dec moves the
+        # separator at render time. Only the labels are this file's, and 3 of
+        # the 4 are fixed by glossary.TERMS.
+        "stats": [("560", "klikime nga Google"), ("57.6k", "herë e shfaqur"),
+                  ("8.4", "pozicioni mesatar"), ("1%", "përqindja e klikimeve")],
+        # File, width and height are not copy. The alt and the caption are, and
+        # the figures inside them are moved by hand because they sit inside a
+        # sentence: 57,6k, 27,5k, 8,6.
+        #
+        # "pershtypje" is banned by glossary.py, so the alt says "herët e
+        # shfaqura", the plural of the glossary's "herë e shfaqur".
+        # home_sq.py's fig_alt makes the same move for the same sentence.
+        "charts": [
+            ("watch-al-3-months.webp", 1440, 592,
+             "Google Search Console për watch.al gjatë 3 muajve. Klikimet dhe "
+             "herët e shfaqura nisin të dyja afër zeros në mes të majit 2026 "
+             "dhe ngjiten gjatë gushtit.",
+             "Tre muaj: 12 maj deri më 9 gusht 2026. 560 klikime, 57,6k herë "
+             "e shfaqur, përqindje klikimesh 1%."),
+            ("watch-al-28-days.webp", 1440, 619,
+             "Google Search Console për watch.al gjatë 28 ditëve të fundit, "
+             "me klikimet dhe herët e shfaqura që qëndrojnë njësoj gjatë "
+             "korrikut dhe gushtit 2026.",
+             "28 ditët e fundit më vete: 15 korrik deri më 11 gusht. 301 "
+             "klikime, 27,5k herë e shfaqur, pozicion mesatar 8,6. Më shumë "
+             "se gjysma e klikimeve të tremujorit erdhën në 4 javët e fundit."),
+        ],
+        # Rule 23. It is deliberately not home_sq.py's version of this line:
+        # check 11 fails any sentence of 9 words or more that appears on 2
+        # pages, and the English keeps the 2 apart for the same reason.
+        "taken": "Marrë në gusht 2026. Renditja lëviz, ndaj do të duket "
+                 "ndryshe kur ta kontrollosh.",
         "payoff": "Nga asgjë te 560 klikime në tremujor.",
         # Only index 3 is copy. The alt says what is in the screenshot: the
         # cards carry a price in euro and the same price in lek beside it.
@@ -153,7 +191,7 @@ CLIENTS = [
     },
     {
         "slug": "intimo-bruna",
-        "src": "34354536",
+        "src": "5cd92e91",
         "mark": [("intimo-bruna.svg", 200, 26)],
         "name": "Intimo Bruna",
         "where": "Durrës, Shqipëri",
@@ -198,9 +236,14 @@ CLIENTS = [
         "gsc": False,
         "stats": [],
         "payoff": "Ndërtuar për mënyrën si blen ky treg.",
+        # The English used to claim this screenshot showed product categories
+        # and it does not. What is in it: a photograph taken inside the shop,
+        # the logo on a dark card over it, and a headline. "brenda dyqanit"
+        # rather than "e brendshme", which is this shop's own word for what it
+        # sells and would read as a photograph of the underwear.
         "plate": ("bruna-home.webp", 900, 625,
-                  "Ballina e Intimo Bruna, me kategoritë e produkteve dhe "
-                  "fotografitë"),
+                  "Ballina e Intimo Bruna, karta me logon dhe një titull mbi "
+                  "një fotografi brenda dyqanit"),
         "services": [("/web-design/", "Faqe interneti"),
                      ("/systems/", "Software me porosi")],
     },
@@ -252,3 +295,42 @@ CLIENTS = [
                      ("/web-design/", "Faqe interneti")],
     },
 ]
+
+# /work/, the index over those 4 records. The soft wraps are placed for this
+# text and not copied from the English: a newline here says where the emitted
+# line breaks and carries no meaning.
+WORK_INDEX = {
+    "src": "23770083",
+    # "Punët" is what chrome_sq.FOOT_HEADINGS[1] and CRUMB_WORK already call
+    # this section, so the tab, the crumb and the footer say one word.
+    "title": "Punët",
+    "description": "Katër biznese në Shqipëri e më gjerë, çfarë ndërtuam për "
+                   "secilin, dhe i vetmi rezultat me numra të publikuar pas "
+                   "tij.",
+    "og_desc": "Katër biznese, dhe çfarë ndryshoi.",
+    # The same sentence as og_desc, as in English.
+    "h1": "Katër biznese, dhe çfarë ndryshoi.",
+    "standfirst": "Njëri është një dyqan orësh në Durrës që askush" + NL +
+                  "jashtë qytetit nuk e gjente dot. Tre muaj pas nisjes, "
+                  "Google i" + NL +
+                  "dërgonte 560 klikime në tremujor.",
+    # "Tre të tjerët" spells the number out because the English spells it out.
+    # A translation answers the English; tidying it here and nowhere else is
+    # how one page ends up disagreeing with its own twin.
+    "proof": "Tre të tjerët janë më të rinj, ndaj aty ajo që merr është "
+             "vetë faqja" + NL +
+             "dhe çfarë bën, të cilën mund të shkosh ta shohësh. Llogaritë e "
+             "reklamave" + NL +
+             "dhe analitika mbeten te klienti, por gjithçka në këtë faqe "
+             "është publike dhe e verifikueshme.",
+    "band_h": "Biznesi yt, më i lehtë për t'u gjetur.",
+    "band_note": "Na thuaj çfarë shet dhe ku do të të gjejnë.",
+}
+
+# The ink band on all 4 client pages, written once, as in English.
+CLIENT_BAND = {
+    "src": "a0e39377",
+    "h": "Do të njëjtën gjë për dyqanin tënd?",
+    "note": "Na thuaj çfarë shet dhe ku do të të gjejnë. Të përgjigjemi me "
+            "një plan.",
+}

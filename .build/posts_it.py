@@ -21,7 +21,12 @@ reading Search Console, and this file only ever moved a separator.
 Register is tu. glossary.BANNED fails on "impressioni", so "times shown" is
 "volte mostrato" wherever the English says impressions, including the 2 places
 where it is the subject of the sentence.
+
+A newline inside a copy string is a soft wrap and carries no meaning, so the
+wraps below were placed for this text rather than copied from the English.
 """
+
+NL = chr(10)
 
 POSTS = [
     # ================================================================ SEO ===
@@ -129,7 +134,7 @@ POSTS = [
     # ================================================================ GEO ===
     {
         "slug": "what-nobody-can-promise-ai-search",
-        "src": "25bc88af",
+        "src": "2388a583",
         "date": "2026-08-14",
         "topic": "Ricerca AI",
         "work": "iglisi-watch",
@@ -339,3 +344,31 @@ POSTS = [
                     ("/web-design/", "Siti web")],
     },
 ]
+
+# /blog/, the index over those records. The soft wraps are placed for this text
+# and not copied from the English.
+BLOG_INDEX = {
+    "src": "ab37d23a",
+    # "Articoli" is what chrome_it.NAV[2] and CRUMB_WRITING already call this
+    # section, so the tab, the crumb and the nav say one word.
+    "title": "Articoli",
+    "description": "Quello che abbiamo imparato facendo ricerca, ricerca AI e "
+                   "software su misura per piccole attività a Durazzo, "
+                   "scritto in modo che tu possa verificarlo.",
+    "og_desc": "Ricerca, ricerca AI e software, scritto in modo che tu possa "
+               "verificarlo.",
+    "h1": "Scritto in modo che tu possa verificarlo.",
+    "standfirst": "Ogni articolo qui nomina un'attività, un numero o" + NL +
+                  "un errore che abbiamo fatto. Se non lo fa, non vale il tuo "
+                  "tempo.",
+    "band_h": "Comincia dall'audit gratuito.",
+    "band_note": "Leggiamo il tuo sito e ti rimandiamo cosa sistemeremmo per "
+                 "primo.",
+}
+
+# The ink band on every post, written once, as in English.
+POST_BAND = {
+    "src": "95e776cf",
+    "h": "Vuoi sapere quale di queste ti sta costando?",
+    "note": "Mandaci l'indirizzo e ti rimandiamo un audit.",
+}

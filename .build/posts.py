@@ -28,10 +28,16 @@ first new post and you would not know why:
 Also: no em-dashes, this file is scanned. Digits not words. Contractions on.
 Every heading needs a verb or fewer than 2 commas. "We", never "I".
 
+A newline inside a copy string is a soft wrap: it says where the emitted line
+breaks, and gen_blog.py re-indents it. It carries no meaning, so a translation
+places its own wraps rather than copying these.
+
 TO ADD A POST: copy a record, change every field, then run
   python .build/gen_blog.py && python .build/gen_headers.py
   && python .build/gen_sitemap.py && python .build/verify.py
 """
+
+NL = chr(10)
 
 POSTS = [
     # ================================================================ SEO ===
@@ -190,7 +196,7 @@ POSTS = [
             ]),
             ("The numbers move faster than the advice", [
                 "<p>Ahrefs measured how many AI Overview citations came from "
-                "Google's top 10 results. The figure was 76%. Seven months "
+                "Google's top 10 results. The figure was 76%. 7 months "
                 "later the same measurement gave 38%.</p>",
                 "<p>That is not a contradiction. It is the field moving under "
                 "everyone, and it is why we date what we publish and revise it "
@@ -325,6 +331,32 @@ POSTS = [
                     ("/web-design/", "Websites")],
     },
 ]
+
+# /blog/, the index over those records. It is a page and a page's copy is copy,
+# so it sits here rather than in gen_blog.py: a headline typed into a generator
+# is a headline that stays English on an Italian page, and nothing would say so.
+BLOG_INDEX = {
+    # 7 characters of the title budget's 52, because shell.head appends
+    # " · minarank studio" and check 6 fails a title over 70.
+    "title": "Writing",
+    "description": "What we have learned doing search, AI search and custom "
+                   "software for small businesses in Durres, written so you "
+                   "can check it.",
+    "og_desc": "Search, AI search and software, written so you can check it.",
+    "h1": "Written so you can check it.",
+    "standfirst": "Every post here names a business, a number or a" + NL +
+                  "mistake we made. If it does not, it is not worth your time.",
+    "band_h": "Start with the free audit.",
+    "band_note": "We read your site and send back what we would fix first.",
+}
+
+# The ink band on every post. One pair for all of them, so it is written once:
+# the band is chrome, check 11 strips it before it looks for a repeated
+# sentence, and a CTA retyped per post is a CTA that drifts per post.
+POST_BAND = {
+    "h": "Want to know which of these is costing you?",
+    "note": "Send us the address and we will send back an audit.",
+}
 
 # TODO(founder): one post a week. Copy a record above, change every field.
 # If a post needs a screenshot, it needs width, height and real alt text, and

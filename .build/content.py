@@ -26,7 +26,7 @@ SERVICES = [
                        "Business Profile, on-page work on the site, and off-page work "
                        "everywhere else. English, Italian and Albanian.",
         "og_desc": "The map gets you phoned today. The results get you found next year.",
-        "lead": "Search for a watch repair in Durres and Google shows a map with three "
+        "lead": "Search for a watch repair in Durres and Google shows a map with 3 "
                 "shops on it before it shows a single website. Most small businesses "
                 "aren't on that map, or they're on it with the wrong hours and a photo "
                 "from 2019. It's usually the cheapest thing to fix and almost nobody "
@@ -146,7 +146,7 @@ SERVICES = [
                 "gets there.</p>",
                 "<p>So what survives is:</p>",
                 "<ul>"
-                "<li>The first hundred words underneath the heading that asks the "
+                "<li>The first 100 words underneath the heading that asks the "
                 "question.</li>"
                 "<li>Your headings, read as an outline of the page.</li>"
                 "<li>Short, plain sentences that name their subject instead of saying "

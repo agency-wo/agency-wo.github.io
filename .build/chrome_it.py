@@ -48,8 +48,11 @@ SRC = {
     "ARIA_INDEX": "e082d483",
     "ARIA_LANG": "7936076a",
     "ARIA_PRIMARY": "e68bd589",
+    "AUDIT_LINK": "f2416589",
     "BAND_CTA": "63be028a",
     "CRUMB_HOME": "8f3852d3",
+    "CRUMB_WORK": "0571c47a",
+    "CRUMB_WRITING": "db632f4b",
     "ERR_BACK": "d7504791",
     "ERR_BAND_H": "8500f0e4",
     "ERR_BAND_NOTE": "184903aa",
@@ -68,9 +71,11 @@ SRC = {
     "QUESTIONS": "1579db95",
     "READ_IT": "89d4581e",
     "READ_NEXT": "3715bfd2",
+    "SERVICE_BAND_NOTE": "77d5f90b",
     "SIDE_ALL_FOUR": "6c234522",
     "SIDE_ALSO": "e4144fc8",
     "SIDE_BUSINESS": "af808825",
+    "SIDE_DID": "313785e9",
     "SIDE_NEXT": "8f2cb6c0",
     "SIDE_ON_THIS_PAGE": "dfb82a23",
     "SIDE_SERVICE": "0b639228",
@@ -81,6 +86,8 @@ SRC = {
     "WA_PREFILL": "d28f915d",
     "WHAT_WE_DO": "bc3cba50",
     "WHAT_WE_DONT": "5eba3082",
+    "WORK_BUILT": "9ce65dac",
+    "WORK_STARTED": "0409d547",
 }
 
 NAV = ["Prove", "Servizi", "Articoli", "Studio"]
@@ -146,6 +153,15 @@ WA_PREFILL = "Ciao {brand}, ho una domanda sul mio sito."
 # glossary.TERMS. "Chiedi" rather than the commercial "Richiedi", which is 2
 # characters longer and half a register more formal than the rest of the site.
 BAND_CTA = "Chiedi un audit gratuito"
+SERVICE_BAND_NOTE = ("Dicci cosa vendi e dove vuoi farti trovare. "
+                     "Ti rispondiamo con un piano e un prezzo chiaro.")
+# The same words as BAND_CTA above, and that is not a copy-paste. The English
+# separates the two by "website", which the Italian band had already dropped
+# because "audit gratuito" is the product's name in glossary.TERMS and the
+# button pays for every character. So the 2 strings converge here and stay 2
+# keys: the button's width budget must never reach a link sitting inside a
+# paragraph, which is what one shared key would arrange.
+AUDIT_LINK = "Chiedi un audit gratuito"
 # The city is Durazzo in Italian and glossary.BANNED fails on "Durres".
 #
 # RECOMMENDATION, not a silent decision: the language list leads with Italian.
@@ -171,6 +187,9 @@ SIDE_SERVICE = "Il servizio"
 SIDE_BUSINESS = "L'attività di cui parliamo"
 SIDE_NEXT = "Prossimo"
 SIDE_ALL_FOUR = "Tutti e quattro"
+# The past tense of WHAT_WE_DO, and a separate string from it for the same
+# reason the English keeps them apart: this one names what happened on one job.
+SIDE_DID = "Cosa abbiamo fatto"
 # "In questa pagina" is what an Italian contents list says, and it is 3
 # characters shorter than the literal "Su questa pagina", which reads as a
 # topic rather than as a place.
@@ -188,6 +207,24 @@ QUESTIONS = "Le domande giuste"
 # fully taken, not English that escaped translation, and check 35 will need to
 # know that.
 CRUMB_HOME = "Home"
+# "Lavori" is what FOOT_HEADINGS[1] already calls this section, so the crumb
+# and the footer column that leads to the same page say the same word. It is
+# deliberately not NAV[0]'s "Prove", exactly as the English crumb is not
+# "Proof": the nav sells the section and the crumb only says where you are.
+CRUMB_WORK = "Lavori"
+# "Articoli" matches NAV[2] and FOOT_LABELS[2][1]. Italian has no noun that
+# does what the English "Writing" does, so the reasoning behind the nav label
+# applies unchanged here: name the things, not the act of making them.
+CRUMB_WRITING = "Articoli"
+
+# The 2 prose headings on a client page. "Da dove è cominciato" keeps the
+# English shape, a question of place answered by the paragraphs under it, and
+# the masculine agrees with the unstated "questo". The noun phrase "Il punto di
+# partenza" was the alternative and it turns a heading with a verb into one
+# without, which rule 36 spends the whole site avoiding.
+WORK_STARTED = "Da dove è cominciato"
+# Also the link on /work/ that leads to this section, as in English.
+WORK_BUILT = "Cosa abbiamo costruito"
 
 # -- what js/main.js says, read from data- attributes ----------------------
 # They cannot be a table inside main.js: script-src has no unsafe-inline, and a

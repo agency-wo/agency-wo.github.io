@@ -400,7 +400,7 @@ def footer(lang, page_url=None, cta_heading=None, cta_note=None):
     <div class="wrap">
 {cta}      <!-- SHARED:FOOTER -->
       <footer class="site-foot">
-        <nav class="foot-index" aria-label="Site index">
+        <nav class="foot-index" aria-label="{c.ARIA_INDEX}">
 {cols}
         </nav>
         <div class="foot-meta">

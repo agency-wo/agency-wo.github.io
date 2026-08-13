@@ -49,8 +49,11 @@ SRC = {
     "ARIA_INDEX": "e082d483",
     "ARIA_LANG": "7936076a",
     "ARIA_PRIMARY": "e68bd589",
+    "AUDIT_LINK": "f2416589",
     "BAND_CTA": "63be028a",
     "CRUMB_HOME": "8f3852d3",
+    "CRUMB_WORK": "0571c47a",
+    "CRUMB_WRITING": "db632f4b",
     "ERR_BACK": "d7504791",
     "ERR_BAND_H": "8500f0e4",
     "ERR_BAND_NOTE": "184903aa",
@@ -69,9 +72,11 @@ SRC = {
     "QUESTIONS": "1579db95",
     "READ_IT": "89d4581e",
     "READ_NEXT": "3715bfd2",
+    "SERVICE_BAND_NOTE": "77d5f90b",
     "SIDE_ALL_FOUR": "6c234522",
     "SIDE_ALSO": "e4144fc8",
     "SIDE_BUSINESS": "af808825",
+    "SIDE_DID": "313785e9",
     "SIDE_NEXT": "8f2cb6c0",
     "SIDE_ON_THIS_PAGE": "dfb82a23",
     "SIDE_SERVICE": "0b639228",
@@ -82,6 +87,8 @@ SRC = {
     "WA_PREFILL": "d28f915d",
     "WHAT_WE_DO": "bc3cba50",
     "WHAT_WE_DONT": "5eba3082",
+    "WORK_BUILT": "9ce65dac",
+    "WORK_STARTED": "0409d547",
 }
 
 NAV = ["Prova", "Shërbime", "Shkrime", "Studio"]
@@ -152,6 +159,15 @@ WA_PREFILL = "Përshëndetje {brand}, kam një pyetje për faqen time të intern
 # singular imperative, and the whole button is 2 characters shorter than the
 # English it replaces.
 BAND_CTA = "Merr një auditim falas"
+SERVICE_BAND_NOTE = ("Na trego çfarë shet dhe ku do të të gjejnë. "
+                     "Të përgjigjemi me një plan dhe një çmim të qartë.")
+# The same words as BAND_CTA above, and that is not a copy-paste. The English
+# separates the two by "website", which the Albanian band could not carry:
+# glossary.BANNED fails on "auditim i faqes" and "auditim falas" is already the
+# product's name. So the 2 strings converge here and stay 2 keys: the button's
+# width budget must never reach a link sitting inside a paragraph, which is
+# what one shared key would arrange.
+AUDIT_LINK = "Merr një auditim falas"
 # The city is Durrës and the country Shqipëri, both with the ë that
 # glossary.BANNED fails on when it goes missing.
 #
@@ -180,6 +196,9 @@ SIDE_NEXT = "Tjetri"
 # The collective numeral, which is how Albanian says "all four of them" without
 # repeating the noun the column above already listed 4 times.
 SIDE_ALL_FOUR = "Të katërt"
+# The past tense of WHAT_WE_DO, and a separate string from it for the same
+# reason the English keeps them apart: this one names what happened on one job.
+SIDE_DID = "Çfarë bëmë"
 # The demonstrative goes before the noun, so it is "në këtë faqe" and never
 # "në faqen këtë". The ë stays a literal letter, as everywhere else in this
 # file, because an entity here would land inside an aria-labelledby one day.
@@ -193,6 +212,23 @@ WHAT_WE_DONT = "Çfarë nuk bëjmë"
 # in 10 characters fewer than the literal "Pyetje që ia vlen t'i bësh".
 QUESTIONS = "Pyetjet e duhura"
 CRUMB_HOME = "Ballina"
+# "Punët" is what FOOT_HEADINGS[1] already calls this section, so the crumb and
+# the footer column that leads to the same page say the same word. It is
+# deliberately not NAV[0]'s "Prova", exactly as the English crumb is not
+# "Proof": the nav sells the section and the crumb only says where you are.
+CRUMB_WORK = "Punët"
+# "Shkrime" matches NAV[2] and FOOT_LABELS[2][1]. Albanian does have the noun
+# the English "Writing" needs, so the crumb keeps it rather than trading it for
+# "Artikuj".
+CRUMB_WRITING = "Shkrime"
+
+# The 2 prose headings on a client page. "Nga nisi kjo" is a question of place
+# answered by the paragraphs under it, and it keeps the verb the English has:
+# the noun phrase "Pika e nisjes" was the alternative and it turns a heading
+# with a verb into one without, which rule 36 spends the whole site avoiding.
+WORK_STARTED = "Nga nisi kjo"
+# Also the link on /work/ that leads to this section, as in English.
+WORK_BUILT = "Çfarë ndërtuam"
 
 # -- what js/main.js says, read from data- attributes ----------------------
 # They cannot be a table inside main.js: script-src has no unsafe-inline, and a

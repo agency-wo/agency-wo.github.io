@@ -59,6 +59,16 @@ WA_PREFILL = "Hello {brand}, I have a question about my website."
 
 # -- the ink band and the footer meta --------------------------------------
 BAND_CTA = "Get a free website audit"
+# The note under the band heading on the 4 service pages. One key rather than
+# one per page, because all 4 pass the same sentence: it was hardcoded in
+# gen_pages.py and would have stayed English under /it/ and /sq/.
+SERVICE_BAND_NOTE = ("Tell us what you sell and where you want to be found. "
+                     "We answer with a plan and a straight price.")
+# The same offer named inside a sentence, at the end of a blog post's payoff
+# line. It is NOT BAND_CTA: that one is a filled block whose width is its own
+# text, so it carries a budget this link does not, and the day somebody widens
+# the button a shared string would drag a paragraph's last 4 words with it.
+AUDIT_LINK = "Get a free audit"
 # Durres is deliberately the plain form in English. Italian says Durazzo and
 # Albanian says Durrës, and both are in glossary.TERMS.
 FOOT_META = "{brand} {dot} Durres, Albania {dot} We work in English, Italian and Albanian"
@@ -74,6 +84,10 @@ SIDE_SERVICE = "The service"
 SIDE_BUSINESS = "The business in this post"
 SIDE_NEXT = "Next"
 SIDE_ALL_FOUR = "All four"
+# The sidebar on a client page, listing the services that client bought. It is
+# the past tense of WHAT_WE_DO and a different string from it: one names the
+# five doors this studio sells, the other names what happened on one job.
+SIDE_DID = "What we did"
 # The one sidebar heading that names the page you are on rather than the next
 # one. The list under it is built from the page's own h2 as they are written,
 # so this is the only part of it anybody ever types.
@@ -84,6 +98,20 @@ WHAT_WE_DO = "What we do"
 WHAT_WE_DONT = "What we do not do"
 QUESTIONS = "Questions worth asking"
 CRUMB_HOME = "Home"       # also the JSON-LD BreadcrumbList root
+# The other 2 crumbs, and both are also the name of the section's own node in
+# the JSON-LD, so the graph is in the page's language and not in English.
+# They are NOT a share of NAV[0] and NAV[2]: a nav label is measured against a
+# row that must not wrap at 1024px and a crumb is not, and the English already
+# calls one section Proof in the nav and Work in the footer.
+CRUMB_WORK = "Work"
+CRUMB_WRITING = "Writing"
+
+# The 2 prose headings every client page carries, in the order they appear.
+# The second is also the link on /work/ that leads to that section, so the
+# label the reader clicks and the heading he lands on are one string. Split
+# them the day either one needs to say something the other must not.
+WORK_STARTED = "Where this started"
+WORK_BUILT = "What we built"
 
 # -- what js/main.js says, read from data- attributes ----------------------
 # They cannot be a table inside main.js: script-src has no unsafe-inline, and a

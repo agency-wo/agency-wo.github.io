@@ -21,11 +21,13 @@ Accented characters are literal ("attività", "è"), never HTML entities, and
 apostrophes are ASCII ("l'audit", "nient'altro"), which is what elision costs
 in Italian and what rule 12 asks for.
 
-THE NUMBERS ARE MOVED, NEVER RECOMPUTED. 57.6k -> 57,6k and 8.4 -> 8,4, and
-that is the whole change. proof_p2 keeps position 8,4 and the 1% click rate as
-the bad news they are: rule 22 says the weak numbers stay visible, and a
-translation that softens them has edited a claim while appearing to translate
-one.
+THE NUMBERS ARE MOVED, NEVER RECOMPUTED, AND ONLY THE ONES IN PROSE ARE MOVED
+HERE. 57.6k -> 57,6k and 8.4 -> 8,4 is the whole change, and STATS does not get
+it: gen_home.py runs that list through l10n.dec, so the figures in it stay in
+their English form and this file owns only the labels. proof_p2 is prose and
+does the move by hand, keeping position 8,4 and the 1% click rate as the bad
+news they are: rule 22 says the weak numbers stay visible, and a translation
+that softens them has edited a claim while appearing to translate one.
 """
 
 # A list of tuples has no record to hold a "src" key, so the stamp for
@@ -79,13 +81,19 @@ SERVICES = [
 # STAMP: STATS is a list of tuples too, so "src": "dcfd8814" lives in this
 # comment for the same reason.
 #
-# Four figures from one Search Console export. Only the separators move:
-# 57.6k -> 57,6k and 8.4 -> 8,4, per l10n.DEC. The labels are the glossary's,
-# and "volte mostrato" is mandated because "impressioni" is a banned variant.
+# Four figures from one Search Console export. THE FIGURES ARE THE ENGLISH
+# ONES AND THEY STAY THAT WAY: gen_home.py puts every one of them through
+# l10n.dec, which turns 57.6k into 57,6k and 8.4 into 8,4 on its own. Writing
+# 57,6k here as well gave the number 2 owners, and l10n.dec read that comma as
+# a thousands separator and printed 57.6k on the Italian page: the exact
+# watch.al bug l10n.py exists to end, arrived at from the other direction.
+#
+# Only the labels are this file's. They are the glossary's words, and "volte
+# mostrato" is mandated because "impressioni" is a banned variant.
 STATS = [
     ("560", "clic da Google"),
-    ("57,6k", "volte mostrato"),
-    ("8,4", "posizione media"),
+    ("57.6k", "volte mostrato"),
+    ("8.4", "posizione media"),
     ("1%", "percentuale di clic"),
 ]
 

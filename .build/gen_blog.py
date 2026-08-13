@@ -31,6 +31,18 @@ NL = chr(10)
 BLOG = "/blog/"
 
 
+def txt(indent, s, lang):
+    """One copy string, ready to drop into markup at `indent`.
+
+    A newline in a copy string is a soft wrap: it says where the emitted line
+    breaks, and every leading space comes from here. gen_home.py and
+    gen_cases.py carry the same 3 lines rather than sharing them, for the
+    reason gen_home's own comment gives: importing one generator to borrow a
+    helper makes building /blog/ build the homepage as a side effect.
+    """
+    return (NL + " " * indent).join(shell.localise_html(s, lang).split(NL))
+
+
 def newest_first(pairs):
     """Every post beside the English record it translates, newest first.
 
@@ -55,7 +67,7 @@ def post_url(p):
 
 # ------------------------------------------------------------------- post --
 
-def post_page(p, en_p, nxt, by_slug, lang):
+def post_page(p, en_p, nxt, by_slug, band, lang):
     c = shell.ch(lang)
     url = S + shell.localise(post_url(p), lang)
     home = S + shell.localise("/", lang)
@@ -79,11 +91,7 @@ def post_page(p, en_p, nxt, by_slug, lang):
          "itemListElement": [
              {"@type": "ListItem", "position": 1, "name": c.CRUMB_HOME,
               "item": home},
-             # TODO(chrome): "Writing" has no key of its own. NAV[2] is the
-             # same word in English and Articoli in Italian, but a nav label
-             # and a breadcrumb are not the same string by rule, so this wants
-             # a CRUMB_WRITING and that file is somebody else's.
-             {"@type": "ListItem", "position": 2, "name": "Writing",
+             {"@type": "ListItem", "position": 2, "name": c.CRUMB_WRITING,
               "item": blog},
              {"@type": "ListItem", "position": 3, "name": p["title"], "item": url}]},
     ]
@@ -115,13 +123,9 @@ def post_page(p, en_p, nxt, by_slug, lang):
                       for h, t in p["related"])
     svc_href, svc_name = p["service"]
 
-    # TODO(chrome): "Get a free audit" below is the last visible English in
-    # this file. It is not BAND_CTA, which says "Get a free website audit" and
-    # is a button in the ink band with its own width budget, so it wants a key
-    # of its own in chrome.py rather than a share of that one.
     body = f'''
       <header class="page-head">
-{shell.crumbs(lang, ("Writing", shell.localise(BLOG, lang)), p["title"])}
+{shell.crumbs(lang, (c.CRUMB_WRITING, shell.localise(BLOG, lang)), p["title"])}
         <h1 class="page-title">{p["h1"]}</h1>
         <p class="standfirst">{shell.localise_html(p["standfirst"], lang)}</p>
       </header>
@@ -131,7 +135,7 @@ def post_page(p, en_p, nxt, by_slug, lang):
 {sections}
 
           <p class="payoff">{shell.TICK}<span>{shell.localise_html(p["payoff"], lang)}
-            <a href="{shell.localise(shell.AUDIT_URL, lang)}">Get a free audit</a>.</span></p>
+            <a href="{shell.localise(shell.AUDIT_URL, lang)}">{c.AUDIT_LINK}</a>.</span></p>
         </div>
 
         <aside class="side" aria-label="{c.ARIA_DETAILS}">
@@ -166,34 +170,32 @@ def post_page(p, en_p, nxt, by_slug, lang):
     return (shell.head(page, lang) + shell.header(lang) +
             '\n  <main id="main">\n    <div class="wrap">\n' + body +
             '\n    </div>\n  </main>\n' +
-            shell.footer(lang, post_url(p),
-                         "Want to know which of these is costing you?",
-                         "Send us the address and we will send back an audit."))
+            shell.footer(lang, post_url(p), band["h"], band["note"]))
 
 
 # ------------------------------------------------------------------ index --
 
-def blog_index(posts, lang):
+def blog_index(posts, idx, lang):
+    c = shell.ch(lang)
     url = S + shell.localise(BLOG, lang)
     home = S + shell.localise("/", lang)
     graph = [
         {"@type": "Blog", "@id": url + "#blog", "url": url,
-         "name": "Writing", "publisher": {"@id": home + "#org"},
+         "name": idx["title"], "publisher": {"@id": home + "#org"},
          "inLanguage": lang,
          "blogPost": [{"@id": S + shell.localise(post_url(p), lang) + "#post"}
                       for p in posts]},
         {"@type": "BreadcrumbList", "@id": url + "#crumbs",
          "itemListElement": [
              {"@type": "ListItem", "position": 1,
-              "name": shell.ch(lang).CRUMB_HOME, "item": home},
-             {"@type": "ListItem", "position": 2, "name": "Writing", "item": url}]},
+              "name": c.CRUMB_HOME, "item": home},
+             {"@type": "ListItem", "position": 2, "name": c.CRUMB_WRITING,
+              "item": url}]},
     ]
     page = {"url": BLOG,
-            "title": "Writing " + shell.DOT + " " + shell.BRAND,
-            "description": "What we have learned doing search, AI search and "
-                           "custom software for small businesses in Durres, "
-                           "written so you can check it.",
-            "og_desc": "Search, AI search and software, written so you can check it.",
+            "title": idx["title"] + " " + shell.DOT + " " + shell.BRAND,
+            "description": idx["description"],
+            "og_desc": idx["og_desc"],
             "jsonld": json.dumps({"@context": "https://schema.org", "@graph": graph},
                                  indent=2, ensure_ascii=False)}
 
@@ -216,10 +218,9 @@ def blog_index(posts, lang):
 
     body = f'''
       <header class="page-head">
-{shell.crumbs(lang, "Writing")}
-        <h1 class="page-title">Written so you can check it.</h1>
-        <p class="standfirst">Every post here names a business, a number or a
-          mistake we made. If it does not, it is not worth your time.</p>
+{shell.crumbs(lang, c.CRUMB_WRITING)}
+        <h1 class="page-title">{idx["h1"]}</h1>
+        <p class="standfirst">{txt(10, idx["standfirst"], lang)}</p>
       </header>
 
       <section>
@@ -231,8 +232,7 @@ def blog_index(posts, lang):
     return (shell.head(page, lang) + shell.header(lang) +
             '\n  <main id="main">\n    <div class="wrap">\n' + body +
             '\n    </div>\n  </main>\n' +
-            shell.footer(lang, BLOG, "Start with the free audit.",
-                         "We read your site and send back what we would fix first."))
+            shell.footer(lang, BLOG, idx["band_h"], idx["band_note"]))
 
 
 # ------------------------------------------------------------------ build --
@@ -292,15 +292,17 @@ if __name__ == "__main__":
                                  i18n.load("posts", "POSTS", "en")))
         posts = [p for p, _en in pairs]
         by_slug = {c["slug"]: c for c in i18n.load("clients", "CLIENTS", lg)}
+        idx = i18n.load("posts", "BLOG_INDEX", lg)
+        band = i18n.load("posts", "POST_BAND", lg)
         check(posts, by_slug)
         if write(out(os.path.join("blog", "index.html"), lg),
-                 blog_index(posts, lg)):
+                 blog_index(posts, idx, lg)):
             changed += 1
         total += 1
         for i, (p, en_p) in enumerate(pairs):
             nxt = posts[(i + 1) % len(posts)]
             if write(out(os.path.join("blog", p["slug"], "index.html"), lg),
-                     post_page(p, en_p, nxt, by_slug, lg)):
+                     post_page(p, en_p, nxt, by_slug, band, lg)):
                 changed += 1
             total += 1
     print(f"{changed} page(s) changed of {total}")

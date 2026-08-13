@@ -306,9 +306,7 @@ def render(svc, en_svc, posts, lang):
         a(f'              <li><a href="{shell.localise(href, lang)}">{label}</a></li>\n')
     a('            </ul>\n          </div>\n        </aside>\n      </div>\n')
     a('\n    </div>\n  </main>\n')
-    a(shell.footer(lang, url, svc["tail"],
-                   "Tell us what you sell and where you want to be found. "
-                   "We answer with a plan and a straight price."))
+    a(shell.footer(lang, url, svc["tail"], shell.ch(lang).SERVICE_BAND_NOTE))
     return "".join(parts)
 
 

@@ -16,6 +16,18 @@ S = shell.SITE
 NL = chr(10)
 
 
+def txt(indent, s, lang):
+    """One copy string, ready to drop into markup at `indent`.
+
+    A newline in a copy string is a soft wrap: it says where the emitted line
+    breaks, and every leading space comes from here. gen_home.py carries the
+    same 3 lines rather than sharing them, for the reason its own comment
+    gives: importing one generator to borrow a helper makes building /work/
+    build the homepage as a side effect.
+    """
+    return (NL + " " * indent).join(shell.localise_html(s, lang).split(NL))
+
+
 def plate(c, eager=False):
     src, w, h, alt = c["plate"]
     loading = "" if eager else ' loading="lazy" decoding="async"'
@@ -25,26 +37,22 @@ def plate(c, eager=False):
             f'<figcaption>{c["name"]}, {c["site"]}</figcaption></figure>')
 
 
-def gsc_figure():
+def gsc_figure(c):
     """Both views. The 3 months shows the shape, the 28 days shows it is still
-    happening. Together they answer 'is this a one-off spike'."""
-    return ('<figure class="gsc">'
-            '<img src="/assets/proof/watch-al-3-months.webp" width="1440" height="592" '
-            'alt="Google Search Console for watch.al over 3 months. Clicks and '
-            'impressions both start near zero in mid May 2026 and climb through '
-            'August." loading="lazy" decoding="async">'
-            '<figcaption>Three months: 12 May to 9 August 2026. 560 clicks, 57.6k '
-            'times shown, 1% click rate.</figcaption>'
-            '</figure>'
-            '<figure class="gsc">'
-            '<img src="/assets/proof/watch-al-28-days.webp" width="1440" height="619" '
-            'alt="Google Search Console for watch.al over the last 28 days, showing '
-            'clicks and impressions holding steady through July and August 2026." '
-            'loading="lazy" decoding="async">'
-            '<figcaption>The last 28 days on their own: 15 July to 11 August. 301 '
-            'clicks, 27.5k times shown, average position 8.6. More than half the '
-            'quarter&apos;s clicks landed in the final 4 weeks.</figcaption>'
-            '</figure>')
+    happening. Together they answer 'is this a one-off spike'.
+
+    The file, the 2 dimensions, the alt and the caption all come off the client
+    record. They were typed into this function once, which meant an Italian
+    reader got 2 charts captioned in English and nothing anywhere said so: a
+    generator is a place for markup and never a place for a sentence.
+    """
+    return "".join(
+        f'<figure class="gsc">'
+        f'<img src="/assets/proof/{src}" width="{w}" height="{h}" '
+        f'alt="{alt}" loading="lazy" decoding="async">'
+        f'<figcaption>{cap}</figcaption>'
+        f'</figure>'
+        for src, w, h, alt, cap in c["charts"])
 
 
 def writing(c, posts, lang):
@@ -86,7 +94,7 @@ def stats(rows, lang):
 
 # ------------------------------------------------------------------ client --
 
-def client_page(c, nxt, posts, lang):
+def client_page(c, nxt, posts, band, lang):
     ch = shell.ch(lang)
     url = f"/work/{c['slug']}/"
     # Every @id hangs off the page's own localised address, so the 3 language
@@ -103,10 +111,8 @@ def client_page(c, nxt, posts, lang):
          "itemListElement": [
              {"@type": "ListItem", "position": 1, "name": ch.CRUMB_HOME,
               "item": home},
-             # TODO(chrome): "Work" has no key in chrome.py, so it stays
-             # English in all 3. It wants a CRUMB_WORK beside CRUMB_HOME, and
-             # that file belongs to somebody else.
-             {"@type": "ListItem", "position": 2, "name": "Work", "item": work},
+             {"@type": "ListItem", "position": 2, "name": ch.CRUMB_WORK,
+              "item": work},
              {"@type": "ListItem", "position": 3, "name": c["name"],
               "item": full}]},
     ]
@@ -128,17 +134,13 @@ def client_page(c, nxt, posts, lang):
 
     proof = ""
     if c["gsc"]:
-        proof = (stats(c["stats"], lang) + NL + "          " + gsc_figure() + NL +
-                 '          <p class="taken">Taken August 2026. Rankings move, so it '
-                 'will look different when you check.</p>' + NL)
+        proof = (stats(c["stats"], lang) + NL + "          " + gsc_figure(c) + NL +
+                 '          <p class="taken">' +
+                 shell.localise_html(c["taken"], lang) + '</p>' + NL)
 
-    # TODO(chrome): "Where this started", "What we built" and "What we did" are
-    # the last visible English left in this file's own markup. They are section
-    # headings rather than copy records, so they belong beside SIDE_NEXT in
-    # chrome.py, which is another agent's file.
     body = f'''
       <header class="page-head">
-{shell.crumbs(lang, ("Work", shell.localise("/work/", lang)), c["name"])}
+{shell.crumbs(lang, (ch.CRUMB_WORK, shell.localise("/work/", lang)), c["name"])}
         <h1 class="page-title">{c["name"]}</h1>
         <p class="standfirst">{c["where"]}. {c["trade"]}.
           <a href="https://{c["site"]}" target="_blank" rel="noopener">{c["site"]}</a></p>
@@ -146,10 +148,10 @@ def client_page(c, nxt, posts, lang):
 
       <div class="grid">
         <div class="prose">
-          <h2>Where this started</h2>
+          <h2>{ch.WORK_STARTED}</h2>
 {started}
 
-          <h2>What we built</h2>
+          <h2>{ch.WORK_BUILT}</h2>
           <ul>
 {built}
           </ul>
@@ -164,7 +166,7 @@ def client_page(c, nxt, posts, lang):
             {plate(c, eager=True)}
           </div>
           <div class="side-block">
-            <p class="side-h">What we did</p>
+            <p class="side-h">{ch.SIDE_DID}</p>
             <ul class="side-list">
 {svc}
             </ul>
@@ -183,30 +185,29 @@ def client_page(c, nxt, posts, lang):
     return (shell.head(page, lang) + shell.header(lang) +
             '\n  <main id="main">\n    <div class="wrap">\n' + body +
             '\n    </div>\n  </main>\n' +
-            shell.footer(lang, url, "Want the same for your shop?",
-                         "Tell us what you sell and where you want to be found. "
-                         "We answer with a plan."))
+            shell.footer(lang, url, band["h"], band["note"]))
 
 
 # ------------------------------------------------------------------- index --
 
-def work_index(clients, lang):
+def work_index(clients, idx, lang):
+    ch = shell.ch(lang)
     url = "/work/"
     full = S + shell.localise(url, lang)
     home = S + shell.localise("/", lang)
     graph = [
         {"@type": "CollectionPage", "@id": full + "#page", "url": full,
-         "name": "Work", "about": {"@id": home + "#org"}},
+         "name": idx["title"], "about": {"@id": home + "#org"}},
         {"@type": "BreadcrumbList", "@id": full + "#crumbs",
          "itemListElement": [
              {"@type": "ListItem", "position": 1,
-              "name": shell.ch(lang).CRUMB_HOME, "item": home},
-             {"@type": "ListItem", "position": 2, "name": "Work", "item": full}]},
+              "name": ch.CRUMB_HOME, "item": home},
+             {"@type": "ListItem", "position": 2, "name": ch.CRUMB_WORK,
+              "item": full}]},
     ]
-    page = {"url": url, "title": f"Work {shell.DOT} {shell.BRAND}",
-            "description": "Four businesses in Albania and beyond, what we built for "
-                           "each, and the one result with published numbers behind it.",
-            "og_desc": "Four businesses, and what changed.",
+    page = {"url": url, "title": f'{idx["title"]} {shell.DOT} {shell.BRAND}',
+            "description": idx["description"],
+            "og_desc": idx["og_desc"],
             "jsonld": json.dumps({"@context": "https://schema.org", "@graph": graph},
                                  indent=2, ensure_ascii=False)}
 
@@ -219,7 +220,7 @@ def work_index(clients, lang):
                 <h2 class="case-name"><a href="{href}">{c["name"]}</a></h2>
                 <p class="case-where">{c["where"]}. {c["trade"]}.</p>
                 <p class="case-said">{shell.localise_html(c["summary"], lang)}</p>
-                <p class="case-said"><a href="{href}">What we built {shell.ARROW}</a></p>
+                <p class="case-said"><a href="{href}">{ch.WORK_BUILT} {shell.ARROW}</a></p>
               </div>
               {plate(c)}
             </div>
@@ -228,17 +229,13 @@ def work_index(clients, lang):
 
     body = f'''
       <header class="page-head">
-{shell.crumbs(lang, "Work")}
-        <h1 class="page-title">Four businesses, and what changed.</h1>
-        <p class="standfirst">One is a watch shop in Durres that nobody outside the
-          town could find. Three months after launch, Google was sending it 560
-          clicks a quarter.</p>
+{shell.crumbs(lang, ch.CRUMB_WORK)}
+        <h1 class="page-title">{idx["h1"]}</h1>
+        <p class="standfirst">{txt(10, idx["standfirst"], lang)}</p>
       </header>
 
       <div class="proof-body">
-        <p>The other three are newer, so what you get there is the site itself and
-          what it does, which you can go and look at. Ad accounts and analytics stay
-          with the client, but everything on this page is public and checkable.</p>
+        <p>{txt(10, idx["proof"], lang)}</p>
       </div>
 
       <section>
@@ -250,8 +247,7 @@ def work_index(clients, lang):
     return (shell.head(page, lang) + shell.header(lang) +
             '\n  <main id="main">\n    <div class="wrap">\n' + body +
             '\n    </div>\n  </main>\n' +
-            shell.footer(lang, url, "Your business, easier to find.",
-                         "Tell us what you sell and where you want to be found."))
+            shell.footer(lang, url, idx["band_h"], idx["band_note"]))
 
 
 if __name__ == "__main__":
@@ -259,14 +255,16 @@ if __name__ == "__main__":
     for lg in i18n.LANGS:
         clients = i18n.load("clients", "CLIENTS", lg)
         posts = i18n.load("posts", "POSTS", lg)
+        idx = i18n.load("clients", "WORK_INDEX", lg)
+        band = i18n.load("clients", "CLIENT_BAND", lg)
         if write(out(os.path.join("work", "index.html"), lg),
-                 work_index(clients, lg)):
+                 work_index(clients, idx, lg)):
             changed += 1
         total += 1
         for i, c in enumerate(clients):
             nxt = clients[(i + 1) % len(clients)]
             if write(out(os.path.join("work", c["slug"], "index.html"), lg),
-                     client_page(c, nxt, posts, lg)):
+                     client_page(c, nxt, posts, band, lg)):
                 changed += 1
             total += 1
     print(f"{changed} page(s) changed of {total}")

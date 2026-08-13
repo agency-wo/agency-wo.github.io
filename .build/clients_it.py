@@ -12,12 +12,20 @@ check_stamp() checks that the English has not moved under this file, but
 neither of them can tell a translated filename from a translated sentence, so
 the discipline is here rather than in the gate.
 
-NUMBERS ARE REFORMATTED, NEVER RE-DERIVED. 57.6k becomes 57,6k and 8.4 becomes
-8,4, and that is the whole of what happens to them. Only Iglisi has published
-figures, they come from the client's own Search Console with permission, and
-the two weak ones stay weak: position 8,4 is not rounded to 8 and a 1% click
-rate is not described as anything other than 1%. The other 3 clients have no
-numbers on purpose, and the Italian must not invent the impression of one.
+NUMBERS ARE REFORMATTED, NEVER RE-DERIVED, AND `stats` IS NOT REFORMATTED HERE
+AT ALL. gen_cases.py runs that list through l10n.dec, which turns 57.6k into
+57,6k and 8.4 into 8,4 on its own, so the figures in it stay in their English
+form and this file owns only the labels. Writing 57,6k here as well gave the
+number 2 owners and l10n.dec read the comma as a thousands separator, printing
+57.6k on the Italian page.
+
+The figures inside `charts` are prose: they sit mid-sentence, where l10n.dec
+cannot go without turning a full stop into a comma, so those are moved by hand.
+Only Iglisi has published figures, they come from the client's own Search
+Console with permission, and the two weak ones stay weak: position 8,4 is not
+rounded to 8 and a 1% click rate is not described as anything other than 1%.
+The other 3 clients have no numbers on purpose, and the Italian must not invent
+the impression of one.
 
 Register is tu, and the only second person in the file is the imperative in
 Iglisi's "Cerca riparazione orologi a Durazzo": the reader is being told to go
@@ -27,10 +35,12 @@ Accented letters are literal ("attività", "perché", "è"), never HTML entities
 The apostrophes are ASCII and there are no em-dashes.
 """
 
+NL = chr(10)
+
 CLIENTS = [
     {
         "slug": "iglisi-watch",
-        "src": "714a546d",
+        "src": "cbb1f81d",
         # Not copy: the file and its 2 dimensions.
         "mark": [("iglisi-watch.png", 195, 22)],
         "name": "Iglisi Watch",
@@ -84,10 +94,39 @@ CLIENTS = [
             "l'aveva preso.",
         ],
         "gsc": True,
-        # The 4 numbers are the English strings with the separator moved, and
-        # nothing else. 3 of the 4 labels are fixed by glossary.TERMS.
-        "stats": [("560", "clic da Google"), ("57,6k", "volte mostrato"),
-                  ("8,4", "posizione media"), ("1%", "percentuale di clic")],
+        # The 4 numbers are the English strings, untouched: l10n.dec moves the
+        # separator at render time. Only the labels are this file's, and 3 of
+        # the 4 are fixed by glossary.TERMS.
+        "stats": [("560", "clic da Google"), ("57.6k", "volte mostrato"),
+                  ("8.4", "posizione media"), ("1%", "percentuale di clic")],
+        # File, width and height are not copy. The alt and the caption are, and
+        # the figures inside them are moved by hand because they sit inside a
+        # sentence: 57,6k, 27,5k, 8,6.
+        #
+        # "impressioni" is banned by glossary.py, so the alt says "le volte in
+        # cui il sito è stato mostrato": the label form works as a label and
+        # needs a verb to work in prose. home_it.py's fig_alt makes the same
+        # move for the same sentence.
+        "charts": [
+            ("watch-al-3-months.webp", 1440, 592,
+             "Google Search Console per watch.al su 3 mesi. I clic e le volte "
+             "in cui il sito è stato mostrato partono entrambi quasi da zero "
+             "a metà maggio 2026 e salgono per tutto agosto.",
+             "Tre mesi: dal 12 maggio al 9 agosto 2026. 560 clic, 57,6k volte "
+             "mostrato, percentuale di clic dell'1%."),
+            ("watch-al-28-days.webp", 1440, 619,
+             "Google Search Console per watch.al negli ultimi 28 giorni, con "
+             "i clic e le volte in cui il sito è stato mostrato che restano "
+             "stabili per tutto luglio e agosto 2026.",
+             "Gli ultimi 28 giorni da soli: dal 15 luglio all'11 agosto. 301 "
+             "clic, 27,5k volte mostrato, posizione media 8,6. Più della metà "
+             "dei clic del trimestre è arrivata nelle ultime 4 settimane."),
+        ],
+        # Rule 23. It is deliberately not home_it.py's version of this line:
+        # check 11 fails any sentence of 9 words or more that appears on 2
+        # pages, and the English keeps the 2 apart for the same reason.
+        "taken": "Rilevato ad agosto 2026. Il posizionamento cambia, quindi "
+                 "sarà diverso quando controlli.",
         "payoff": "Da niente a 560 clic a trimestre.",
         # Only index 3 is copy. The alt says what is in the screenshot: the
         # cards carry a price in euro and the same price in lek beside it.
@@ -159,7 +198,7 @@ CLIENTS = [
     },
     {
         "slug": "intimo-bruna",
-        "src": "34354536",
+        "src": "5cd92e91",
         "mark": [("intimo-bruna.svg", 200, 26)],
         "name": "Intimo Bruna",
         "where": "Durazzo, Albania",
@@ -205,9 +244,12 @@ CLIENTS = [
         "gsc": False,
         "stats": [],
         "payoff": "Costruito per come compra questo mercato.",
+        # The English used to claim this screenshot showed product categories
+        # and it does not. What is in it: a photograph of the inside of the
+        # shop, the logo on a dark card over it, and a headline.
         "plate": ("bruna-home.webp", 900, 625,
-                  "La homepage di Intimo Bruna, con le categorie di prodotto e le "
-                  "fotografie"),
+                  "La homepage di Intimo Bruna, il riquadro con il logo e un "
+                  "titolo sopra la fotografia dell'interno del negozio"),
         "services": [("/web-design/", "Siti web"),
                      ("/systems/", "Software su misura")],
     },
@@ -272,3 +314,42 @@ CLIENTS = [
         "services": [("/meta-ads/", "Meta ads"), ("/web-design/", "Siti web")],
     },
 ]
+
+# /work/, the index over those 4 records. The soft wraps are placed for this
+# text and not copied from the English: a newline here says where the emitted
+# line breaks and carries no meaning.
+WORK_INDEX = {
+    "src": "23770083",
+    # "Lavori" is what chrome_it.FOOT_HEADINGS[1] and CRUMB_WORK already call
+    # this section, so the tab, the crumb and the footer say one word.
+    "title": "Lavori",
+    "description": "Quattro attività in Albania e altrove, cosa abbiamo "
+                   "costruito per ognuna, e l'unico risultato con numeri "
+                   "pubblicati dietro.",
+    "og_desc": "Quattro attività, e cosa è cambiato.",
+    # The same sentence as og_desc, as in English.
+    "h1": "Quattro attività, e cosa è cambiato.",
+    "standfirst": "Uno è un negozio di orologi a Durazzo che nessuno" + NL +
+                  "fuori città riusciva a trovare. Tre mesi dopo il lancio, "
+                  "Google gli" + NL +
+                  "mandava 560 clic a trimestre.",
+    # "Gli altri tre" spells the number out because the English spells it out.
+    # A translation answers the English; tidying it here and nowhere else is
+    # how one page ends up disagreeing with its own twin.
+    "proof": "Gli altri tre sono più recenti, quindi lì quello che ottieni "
+             "è il sito" + NL +
+             "stesso e quello che fa, che puoi andare a guardare. Gli account "
+             "pubblicitari" + NL +
+             "e le analitiche restano al cliente, ma tutto su questa pagina è "
+             "pubblico e verificabile.",
+    "band_h": "La tua attività, più facile da trovare.",
+    "band_note": "Dicci cosa vendi e dove vuoi farti trovare.",
+}
+
+# The ink band on all 4 client pages, written once, as in English.
+CLIENT_BAND = {
+    "src": "a0e39377",
+    "h": "Vuoi lo stesso per il tuo negozio?",
+    "note": "Dicci cosa vendi e dove vuoi farti trovare. Ti rispondiamo con "
+            "un piano.",
+}

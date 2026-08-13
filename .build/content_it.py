@@ -34,7 +34,7 @@ SERVICES = [
     # ------------------------------------------------------------------ SEO --
     {
         "slug": "seo",
-        "src": "f38489c3",
+        "src": "c326ed3e",
         "nav": "SEO",
         "schema_name": "Ottimizzazione per i motori di ricerca e ricerca locale",
         # 23 characters, the same as the English, and 41 with the suffix
@@ -55,7 +55,7 @@ SERVICES = [
         "og_desc": "La mappa ti fa squillare il telefono oggi. I risultati ti "
                    "fanno trovare l'anno prossimo.",
         "lead": "Cerca una riparazione di orologi a Durazzo e Google mostra una "
-                "mappa con tre negozi prima di mostrare un solo sito. La "
+                "mappa con 3 negozi prima di mostrare un solo sito. La "
                 "maggior parte delle piccole attività non è su quella mappa, "
                 "oppure c'è con gli orari sbagliati e una foto del 2019. Di "
                 "solito è la cosa più economica da sistemare e quasi nessuno "
@@ -167,7 +167,7 @@ SERVICES = [
     # ------------------------------------------------------------------ GEO --
     {
         "slug": "geo",
-        "src": "3ac8ecea",
+        "src": "1a23d388",
         # glossary.TERMS: AI search -> ricerca AI, and glossary.BANNED fails on
         # "IA", which reads as a translation artefact to the people who buy
         # this. Matches chrome_it.FOOT_LABELS[0][1] exactly.
@@ -208,11 +208,11 @@ SERVICES = [
                 "L'impaginazione, i colori e tutto quello che compare solo "
                 "quando clicchi vengono buttati via prima che ci arrivi.</p>",
                 "<p>Quindi quello che sopravvive è:</p>",
-                # 5 items, as in English. The English writes "hundred" as a
-                # word and this answers it with "cento": rule 11 forbids
-                # turning a digit into a word, not the reverse.
+                # 5 items, as in English. The English spelt "hundred" out and
+                # this answered it with "cento"; both were rule 11 defects and
+                # both are digits now.
                 "<ul>"
-                "<li>Le prime cento parole sotto il titolo che pone la "
+                "<li>Le prime 100 parole sotto il titolo che pone la "
                 "domanda.</li>"
                 "<li>I tuoi titoli, letti come la scaletta della pagina.</li>"
                 "<li>Frasi corte e semplici che nominano il loro soggetto "

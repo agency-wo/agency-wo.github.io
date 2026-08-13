@@ -21,7 +21,12 @@ reading Search Console, and this file only ever moved a separator.
 Register is ti: faqja jote, biznesi yt, adresën tënde, and every imperative is
 singular (kërko, bëje, rregullo, provoje, na thuaj). Every ë and ç is a real
 character: this file is UTF-8 and carries no HTML entity anywhere.
+
+A newline inside a copy string is a soft wrap and carries no meaning, so the
+wraps below were placed for this text rather than copied from the English.
 """
+
+NL = chr(10)
 
 POSTS = [
     # ================================================================ SEO ===
@@ -124,7 +129,7 @@ POSTS = [
     # ================================================================ GEO ===
     {
         "slug": "what-nobody-can-promise-ai-search",
-        "src": "25bc88af",
+        "src": "2388a583",
         "date": "2026-08-14",
         "topic": "Kërkimi me AI",
         "work": "iglisi-watch",
@@ -336,3 +341,36 @@ POSTS = [
                     ("/web-design/", "Faqe interneti")],
     },
 ]
+
+# /blog/, the index over those records. The soft wraps are placed for this text
+# and not copied from the English.
+BLOG_INDEX = {
+    "src": "ab37d23a",
+    # "Shkrime" is what chrome_sq.NAV[2] and CRUMB_WRITING already call this
+    # section, so the tab, the crumb and the nav say one word.
+    "title": "Shkrime",
+    "description": "Çfarë kemi mësuar duke bërë kërkim, kërkim me AI dhe "
+                   "software me porosi për biznese të vogla në Durrës, "
+                   "shkruar që ta kontrollosh vetë.",
+    "og_desc": "Kërkim, kërkim me AI dhe software, shkruar që ta kontrollosh "
+               "vetë.",
+    "h1": "Shkruar që ta kontrollosh vetë.",
+    "standfirst": "Çdo shkrim këtu përmend një biznes, një numër ose" + NL +
+                  "një gabim që bëmë. Nëse jo, nuk ia vlen koha jote.",
+    "band_h": "Nis me auditimin falas.",
+    "band_note": "Lexojmë faqen tënde dhe të kthejmë atë që do të rregullonim "
+                 "të parën.",
+}
+
+# The ink band on every post, written once, as in English.
+#
+# The note is byte-identical to chrome_sq.ERR_BAND_NOTE, and that is the
+# language rather than a copy-paste: the English pair differs only by "your"
+# against "the", and Albanian's definite "adresën" already carries both. They
+# stay 2 strings because they are 2 pages' bands, and the day either English
+# line changes only one of them moves.
+POST_BAND = {
+    "src": "95e776cf",
+    "h": "Do të dish cila prej tyre po të kushton?",
+    "note": "Na dërgo adresën dhe të kthejmë një auditim.",
+}

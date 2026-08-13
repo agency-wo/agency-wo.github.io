@@ -7,7 +7,13 @@ them against each other.
 
 Only Iglisi has published numbers. The others carry a change of state, and
 the verb does the work. Nothing here is padded and nothing is invented.
+
+A newline inside a copy string is a soft wrap: it says where the emitted line
+breaks, and gen_cases.py re-indents it. It carries no meaning, so a translation
+places its own wraps rather than copying these.
 """
+
+NL = chr(10)
 
 CLIENTS = [
     {
@@ -56,6 +62,43 @@ CLIENTS = [
         "gsc": True,
         "stats": [("560", "clicks from Google"), ("57.6k", "times shown"),
                   ("8.4", "average position"), ("1%", "click rate")],
+        # The 2 Search Console views printed under the stats, in order. The 3
+        # months shows the shape, the 28 days shows it is still happening, and
+        # together they answer "is this a one-off spike". Same tuple as
+        # `plate`, one field longer: file, width, height, alt, caption. The
+        # first 3 are not copy; the last 2 are, and they live beside the client
+        # they describe rather than in gen_cases.py, because a chart captioned
+        # in English on an Italian page is a chart nobody there can read.
+        #
+        # The figures in the captions sit mid-sentence, so l10n.dec cannot
+        # reach them: it would turn the full stop after 2026 into a comma.
+        # Reformatting them is the translator's, and the separator moves the
+        # same way it does in `stats`.
+        #
+        # The &apos; below is the only entity in this file, and it is an
+        # apostrophe rather than a letter. It is what shipped, and the ban is
+        # on spelling ë or à as an entity, not on escaping a quote inside a
+        # Python string that is already quoted twice.
+        "charts": [
+            ("watch-al-3-months.webp", 1440, 592,
+             "Google Search Console for watch.al over 3 months. Clicks and "
+             "impressions both start near zero in mid May 2026 and climb "
+             "through August.",
+             "Three months: 12 May to 9 August 2026. 560 clicks, 57.6k times "
+             "shown, 1% click rate."),
+            ("watch-al-28-days.webp", 1440, 619,
+             "Google Search Console for watch.al over the last 28 days, "
+             "showing clicks and impressions holding steady through July and "
+             "August 2026.",
+             "The last 28 days on their own: 15 July to 11 August. 301 clicks, "
+             "27.5k times shown, average position 8.6. More than half the "
+             "quarter&apos;s clicks landed in the final 4 weeks."),
+        ],
+        # Rule 23: a performance claim carries a date and a self-check. It is
+        # deliberately not the homepage's version of this line, because check
+        # 11 fails any sentence of 9 words or more that appears on 2 pages.
+        "taken": "Taken August 2026. Rankings move, so it will look different "
+                 "when you check.",
         "payoff": "From nothing to 560 clicks a quarter.",
         "plate": ("iglisi-shop.webp", 1120, 777,
                   "The Iglisi Watch shop page, showing watches for sale with prices "
@@ -145,9 +188,16 @@ CLIENTS = [
         "gsc": False,
         "stats": [],
         "payoff": "Built for how this market buys.",
+        # The old alt said "product categories with photography" and the
+        # screenshot has no categories in it. What is there: a photograph of
+        # the inside of the shop, the logo on a dark card over it, and a
+        # headline. The categories are a run of words inside one sub-headline,
+        # which is not a thing a visitor with images off needs told. Rule 33
+        # asks for real alt text and describing furniture that is not on the
+        # page is worse than describing nothing.
         "plate": ("bruna-home.webp", 900, 625,
-                  "The Intimo Bruna homepage, showing product categories with "
-                  "photography"),
+                  "The Intimo Bruna homepage, a logo card and a headline over "
+                  "a photograph of the inside of the shop"),
         "services": [("/web-design/", "Websites"), ("/systems/", "Custom software")],
     },
     {
@@ -194,6 +244,46 @@ CLIENTS = [
         "services": [("/meta-ads/", "Meta ads"), ("/web-design/", "Websites")],
     },
 ]
+
+# /work/, the index over those 4 records. It is a page and a page's copy is
+# copy, so it sits here rather than in gen_cases.py: a headline typed into a
+# generator is a headline that stays English on an Italian page, and nothing
+# would say so.
+WORK_INDEX = {
+    # 4 characters of the title budget's 52, because shell.head appends
+    # " · minarank studio" and check 6 fails a title over 70.
+    "title": "Work",
+    "description": "Four businesses in Albania and beyond, what we built for "
+                   "each, and the one result with published numbers behind it.",
+    "og_desc": "Four businesses, and what changed.",
+    # The same sentence as og_desc, on purpose: the share card and the page
+    # should not promise 2 different things.
+    "h1": "Four businesses, and what changed.",
+    "standfirst": "One is a watch shop in Durres that nobody outside the" + NL +
+                  "town could find. Three months after launch, Google was "
+                  "sending it 560" + NL +
+                  "clicks a quarter.",
+    # Rule 13, in one paragraph: the 3 clients with no published numbers get a
+    # line saying what you can check instead, and no apology.
+    "proof": "The other three are newer, so what you get there is the site "
+             "itself and" + NL +
+             "what it does, which you can go and look at. Ad accounts and "
+             "analytics stay" + NL +
+             "with the client, but everything on this page is public and "
+             "checkable.",
+    "band_h": "Your business, easier to find.",
+    "band_note": "Tell us what you sell and where you want to be found.",
+}
+
+# The ink band on all 4 client pages. One pair for 4 pages, so it is written
+# once: the band is chrome, check 11 strips it before it looks for a repeated
+# sentence, and 4 hand-typed copies of a CTA is how a studio ends up with 4
+# slightly different asks.
+CLIENT_BAND = {
+    "h": "Want the same for your shop?",
+    "note": "Tell us what you sell and where you want to be found. We answer "
+            "with a plan.",
+}
 
 # TODO(founder): confirm in writing what each client is happy to have published,
 # now that real screenshots and Iglisi's Search Console numbers are involved.

@@ -22,11 +22,13 @@ Every ë and ç is a real character and this file is UTF-8. None of them is ever
 written as an HTML entity: watch.al carries both forms across 151 files and
 calls it its worst remaining legacy. Apostrophes are ASCII ("S'ka", "t'ia").
 
-THE NUMBERS ARE MOVED, NEVER RECOMPUTED. 57.6k -> 57,6k and 8.4 -> 8,4, and
-that is the whole change. proof_p2 keeps position 8,4 and the 1% click rate as
-the bad news they are: rule 22 says the weak numbers stay visible, and a
-translation that softens them has edited a claim while appearing to translate
-one.
+THE NUMBERS ARE MOVED, NEVER RECOMPUTED, AND ONLY THE ONES IN PROSE ARE MOVED
+HERE. 57.6k -> 57,6k and 8.4 -> 8,4 is the whole change, and STATS does not get
+it: gen_home.py runs that list through l10n.dec, so the figures in it stay in
+their English form and this file owns only the labels. proof_p2 is prose and
+does the move by hand, keeping position 8,4 and the 1% click rate as the bad
+news they are: rule 22 says the weak numbers stay visible, and a translation
+that softens them has edited a claim while appearing to translate one.
 """
 
 # A list of tuples has no record to hold a "src" key, so the stamp for
@@ -79,13 +81,19 @@ SERVICES = [
 # STAMP: STATS is a list of tuples too, so "src": "dcfd8814" lives in this
 # comment for the same reason.
 #
-# Four figures from one Search Console export. Only the separators move:
-# 57.6k -> 57,6k and 8.4 -> 8,4, per l10n.DEC. The labels are the glossary's,
-# and "herë e shfaqur" is mandated because "pershtypje" is a banned variant.
+# Four figures from one Search Console export. THE FIGURES ARE THE ENGLISH
+# ONES AND THEY STAY THAT WAY: gen_home.py puts every one of them through
+# l10n.dec, which turns 57.6k into 57,6k and 8.4 into 8,4 on its own. Writing
+# 57,6k here as well gave the number 2 owners, and l10n.dec read that comma as
+# a thousands separator and printed 57.6k on the Albanian page: the exact
+# watch.al bug l10n.py exists to end, arrived at from the other direction.
+#
+# Only the labels are this file's. They are the glossary's words, and "herë e
+# shfaqur" is mandated because "pershtypje" is a banned variant.
 STATS = [
     ("560", "klikime nga Google"),
-    ("57,6k", "herë e shfaqur"),
-    ("8,4", "pozicioni mesatar"),
+    ("57.6k", "herë e shfaqur"),
+    ("8.4", "pozicioni mesatar"),
     ("1%", "përqindja e klikimeve"),
 ]
 
