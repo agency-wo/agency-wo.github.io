@@ -500,6 +500,28 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
      across the full measure. It stays above the fold's second screen, which is
      the whole point of it being in the hero. */
   .hero-split { grid-template-columns: 1fr; row-gap: var(--s-8); }
+  /* Stacked, the form stops being a column and inherits the whole measure: at
+     768 that gave it 691px-wide inputs, so "Your name" was a field you could
+     have written a paragraph in. A form needs a measure for the same reason
+     prose does. */
+  .hero-af { max-width: 30rem; }
+
+  /* Tighter, because it is stacked.
+     Beside the copy the form is a column and reads as one. Under the copy it
+     measured 731px against an 844px viewport, 0.87 of a screen, which made the
+     hero 1665px on a phone: 2 full screens before the proof section starts.
+
+     What changes is the rhythm BETWEEN the controls, never the controls. The
+     input stays above 44px because that is the target a thumb needs. */
+  .hero-split { row-gap: var(--s-6); }
+  .hero-af .field { margin-top: var(--s-3); }
+  .hero-af .field label { margin-bottom: 4px; }
+  .hero-af .field input { padding: 0.62em 0.7em; }
+  .hero-af .af-lead { margin-top: var(--s-2); }
+  .hero-af .af { margin-top: var(--s-4); }
+  .hero-af .af-go { margin-top: var(--s-5); }
+  .hero-af .af-say, .hero-af .af-alt { margin-top: var(--s-3); }
+  .hero-af .af-fine { margin-top: var(--s-4); padding-top: var(--s-3); }
 }
 
 @media (max-width: 719px) {
@@ -780,6 +802,13 @@ button.btn:disabled:hover { background: none; color: var(--ink); }
   .check { padding-left: var(--s-4); }
   .marks { --mscale: 0.72; --mgap: var(--s-6); }
   .af-pair { grid-template-columns: 1fr; gap: 0; }
+
+  /* 16px, not 18: iOS zooms the whole page when a focused input is smaller
+     than 16px, and a zoomed page is a worse bug than a tall form. This is the
+     only phone-specific rule the form needs; the rest of its rhythm belongs to
+     being stacked, which starts 280px earlier. */
+  .hero-af .field input { font-size: 1rem; }
+  .hero { padding-bottom: var(--pad-section); }
   .af-done { padding-left: var(--s-4); }
 }
 /* the widest mark is 15.7:1, so a narrow phone needs it small or it overflows */
