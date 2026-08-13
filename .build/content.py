@@ -281,6 +281,10 @@ SERVICES = [
              "run their own sites from a phone. If a project doesn't need a panel we "
              "don't build one, because an unused panel is just another thing to keep "
              "working."),
+            ("Does a lower price mean it breaks sooner?",
+             "What breaks in a cheap site is usually something rented: a theme licence "
+             "that lapses, or a plugin nobody updates any more. We don't rent anything, "
+             "so there is nothing to renew and nothing to expire in year 2."),
             ("Is a site without a framework limiting?",
              "For a shop, a catalogue, or a business that mainly needs to be found, "
              "it's faster, cheaper to host and has almost nothing to hack. When a "
@@ -338,7 +342,7 @@ SERVICES = [
                 "answers first. A homeowner with no heating rings 3 numbers and books "
                 "the one that picks up, and nobody in that situation is comparing "
                 "photographs of boilers.</p>",
-                "<p>So the site we built for Pro Affy argues about response time "
+                "<p>So the site we built for ProAffy argues about response time "
                 "instead of craftsmanship, states its guarantee on the page rather "
                 "than in the terms, and keeps the path from enquiry to booked visit "
                 "short enough to survive somebody cold and annoyed. "

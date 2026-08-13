@@ -28,7 +28,7 @@ FOOTER_COLS = [
     ("Work", [("/work/iglisi-watch/", "Iglisi Watch"),
               ("/work/victoria-boutique/", "Victoria Boutique"),
               ("/work/intimo-bruna/", "Intimo Bruna"),
-              ("/work/pro-affy/", "Pro Affy")]),
+              ("/work/pro-affy/", "ProAffy")]),
     ("Studio", [("/studio/", "About"), ("/start/", "Start a project")]),
     ("Get in touch", [("mailto:" + EMAIL, EMAIL),
                       ("https://wa.me/" + WHATSAPP, "WhatsApp")]),
@@ -75,20 +75,27 @@ def whatsapp():
 def client_mark(c):
     """One business in the homepage logo row.
 
-    The mark is a CSS mask painted with currentColor, so four logos drawn by
-    four different people in four different colours arrive as one set, and the
-    whole row goes red on hover with no second asset.
+    Each part is a CSS mask painted with currentColor, so logos drawn by four
+    different people in four different colours arrive as one set, and the whole
+    row goes red on hover with no second asset.
 
-    The URL and the box live in `css/main.css` as `.mark-<slug>`, not in a
+    A mark has more than one part when the business's symbol carries no text.
+    ProAffy's does not, so on a wrapped row it sat a word-space from the
+    IntimoBruna wordmark and read as a glyph belonging to it. Its own name
+    beside it ends that.
+
+    The URL and the box live in `css/main.css` as `.mark-<file stem>`, not in a
     style attribute, because the CSP is `style-src 'self'` with no
-    unsafe-inline. Gate check 18 fails the build if that rule is missing.
+    unsafe-inline. Gate check 18 fails the build if a rule is missing.
 
     The name is real text inside the link, hidden visually. With CSS off the
     row degrades to a plain list of business names, which is what it is.
     """
+    parts = "".join(
+        f'<span class="mark mark-{fn.rsplit(".", 1)[0]}" aria-hidden="true"></span>'
+        for fn, _w, _h in c["mark"])
     return (f'          <li><a class="mark-link" href="https://{c["site"]}" '
-            f'target="_blank" rel="noopener">'
-            f'<span class="mark mark-{c["slug"]}" aria-hidden="true"></span>'
+            f'target="_blank" rel="noopener">{parts}'
             f'<span class="sr-only">{c["name"]}</span></a></li>')
 
 

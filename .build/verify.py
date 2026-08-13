@@ -273,19 +273,25 @@ from clients import CLIENTS  # noqa: E402
 
 css = read(os.path.join(ROOT, "css", "main.css"))
 home = read(os.path.join(ROOT, "index.html"))
+parts = 0
 for c in CLIENTS:
-    fn = c["mark"][0]
-    if not os.path.exists(os.path.join(ROOT, "assets", "logo", "clients", fn)):
-        findings.append(f"[mark] {c['slug']}: assets/logo/clients/{fn} is missing")
-    # the URL lives in CSS, not a style attribute, because style-src is 'self'
-    rule = re.search(r"\.mark-" + re.escape(c["slug"]) + r"\s*\{(.*?)\}", css, re.S)
-    if not rule:
-        findings.append(f"[mark] css/main.css has no .mark-{c['slug']} rule")
-    elif fn not in rule.group(1):
-        findings.append(f"[mark] .mark-{c['slug']} does not point at {fn}")
+    for fn, _w, _h in c["mark"]:
+        parts += 1
+        stem = fn.rsplit(".", 1)[0]
+        if not os.path.exists(os.path.join(ROOT, "assets", "logo", "clients", fn)):
+            findings.append(f"[mark] {c['slug']}: assets/logo/clients/{fn} is missing")
+        # the URL lives in CSS, not a style attribute, because style-src is 'self'
+        rule = re.search(r"\.mark-" + re.escape(stem) + r"\s*\{(.*?)\}", css, re.S)
+        if not rule:
+            findings.append(f"[mark] css/main.css has no .mark-{stem} rule")
+        elif fn not in rule.group(1):
+            findings.append(f"[mark] .mark-{stem} does not point at {fn}")
 shown = len(re.findall(r'class="mark mark-', home))
-if shown != len(CLIENTS):
-    findings.append(f"[mark] homepage shows {shown} marks, {len(CLIENTS)} clients")
+if shown != parts:
+    findings.append(f"[mark] homepage shows {shown} mark parts, clients.py has {parts}")
+links = len(re.findall(r'class="mark-link"', home))
+if links != len(CLIENTS):
+    findings.append(f"[mark] homepage has {links} mark links, {len(CLIENTS)} clients")
 
 # 19. every new tab is opened safely ---------------------------------------
 # noopener only. It is the security property: without it the opened page can

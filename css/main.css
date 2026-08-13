@@ -390,17 +390,28 @@ h3, .faq-q, .ledger h3, .cta, .mail {
 .btn .arrow { color: currentColor; }
 
 /* -- the client marks ------------------------------------------------------
-   Four logos drawn by four different people, in four different colours, two of
-   them reproduced from the client's own webfont because no logo file exists.
-   Each is a mask painted with currentColor, so the row arrives as one set and
-   goes red together on hover. Widths are the true aspect at the chosen height,
-   so nothing is squashed; the heights differ because cap heights differ.
+   Logos drawn by four different people in four different colours. Each part is
+   a mask painted with currentColor, so the row arrives as one set and goes red
+   together on hover. Widths are the true aspect at the chosen height, so
+   nothing is squashed; heights differ because cap heights do.
+
+   justify-content is flex-start, NOT space-between. space-between spreads a
+   wrapped line to the container edges, which threw IGLISI and VICTORIA 523px
+   apart at 814 wide and read as a missing logo.
+
    Adding a business is one file and one rule. Gate check 18 enforces it.     */
-.marks { list-style: none; margin: var(--s-9) 0 0; padding: var(--s-8) 0 0;
+.marks { --mgap: var(--s-8);
+  list-style: none; margin: var(--s-9) 0 0; padding: var(--s-8) 0 0;
   border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap;
-  align-items: center; justify-content: space-between; gap: var(--s-6) var(--s-7); }
-.mark-link { display: block; color: var(--ink); text-decoration: none;
-  transition: color 160ms ease; }
+  align-items: center; justify-content: flex-start; gap: var(--s-6) var(--mgap); }
+/* Below the width where all four fit on one line, go 2 per row rather than
+   letting the wrap strand the last one on a line of its own. Measured: four
+   fit from 1063px up, so 1079 is the last width that needs this. */
+@media (max-width: 1079px) {
+  .marks > li { flex: 0 0 calc(50% - var(--mgap) / 2); }
+}
+.mark-link { display: flex; align-items: center; gap: 8px;
+  color: var(--ink); text-decoration: none; transition: color 160ms ease; }
 .mark-link:hover { color: var(--red); }
 .mark-link:focus-visible { outline: 2px solid var(--ink); outline-offset: 10px; }
 .mark { display: block; background: currentColor;
@@ -412,11 +423,14 @@ h3, .faq-q, .ledger h3, .cta, .mail {
 .mark-iglisi-watch      { --mark: url("/assets/logo/clients/iglisi-watch.png");
                           --mw: 195px; --mh: 22px; }
 .mark-victoria-boutique { --mark: url("/assets/logo/clients/victoria-boutique.svg");
-                          --mw: 346px; --mh: 22px; }
+                          --mw: 204px; --mh: 22px; }
 .mark-intimo-bruna      { --mark: url("/assets/logo/clients/intimo-bruna.svg");
                           --mw: 200px; --mh: 26px; }
+/* two parts: the symbol says nothing, so it gets its own name beside it */
 .mark-pro-affy          { --mark: url("/assets/logo/clients/pro-affy.png");
-                          --mw: 44px;  --mh: 44px; }
+                          --mw: 28px;  --mh: 28px; }
+.mark-pro-affy-word     { --mark: url("/assets/logo/clients/pro-affy-word.svg");
+                          --mw: 108px; --mh: 28px; }
 
 /* With no mask support an unmasked .mark is a solid ink block, which is worse
    than nothing. Drop it and let the name that is already in the link show. */
@@ -424,6 +438,18 @@ h3, .faq-q, .ledger h3, .cta, .mail {
   .mark { display: none; }
   .mark-link .sr-only { position: static; width: auto; height: auto; margin: 0;
     overflow: visible; clip: auto; font-weight: 700; }
+}
+
+/* where we are. The only 2-column text on the site, because this is the one
+   block that states a situation rather than making an argument, and a reader
+   scanning for the money answer should find it in one glance. */
+.place { border-top: 1px solid var(--rule); padding-block: var(--pad-section); }
+.place-say { max-width: 20ch; }
+.place-more { margin-top: var(--s-7); columns: 2; column-gap: var(--s-9); }
+.place-more p { break-inside: avoid; text-wrap: pretty; }
+@media (max-width: 799px) {
+  .place-more { columns: 1; }
+  .place-more p + p { margin-top: var(--s-5); }
 }
 
 /* who: asymmetric, column 7 deliberately empty, the refusal is the headline */
@@ -474,7 +500,7 @@ h3, .faq-q, .ledger h3, .cta, .mail {
 }
 @media (max-width: 719px) {
   .check { padding-left: var(--s-4); }
-  .marks { --mscale: 0.72; gap: var(--s-6); justify-content: flex-start; }
+  .marks { --mscale: 0.72; --mgap: var(--s-6); }
 }
 /* the widest mark is 15.7:1, so a narrow phone needs it small or it overflows */
 @media (max-width: 419px) {

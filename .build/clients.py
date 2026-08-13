@@ -12,7 +12,7 @@ the verb does the work. Nothing here is padded and nothing is invented.
 CLIENTS = [
     {
         "slug": "iglisi-watch",
-        "mark": ("iglisi-watch.png", 195, 22),
+        "mark": [("iglisi-watch.png", 195, 22)],
         "name": "Iglisi Watch",
         "where": "Durres, Albania",
         "trade": "Watch sales and repair",
@@ -67,7 +67,7 @@ CLIENTS = [
     },
     {
         "slug": "victoria-boutique",
-        "mark": ("victoria-boutique.svg", 346, 22),
+        "mark": [("victoria-boutique.svg", 204, 22)],
         "name": "Victoria Boutique",
         "where": "Durres, Albania",
         "trade": "Fashion",
@@ -111,7 +111,7 @@ CLIENTS = [
     },
     {
         "slug": "intimo-bruna",
-        "mark": ("intimo-bruna.svg", 200, 26),
+        "mark": [("intimo-bruna.svg", 200, 26)],
         "name": "Intimo Bruna",
         "where": "Durres, Albania",
         "trade": "Lingerie",
@@ -154,12 +154,12 @@ CLIENTS = [
     },
     {
         "slug": "pro-affy",
-        "mark": ("pro-affy.png", 44, 44),
-        "name": "Pro Affy",
+        "mark": [("pro-affy.png", 28, 28), ("pro-affy-word.svg", 108, 28)],
+        "name": "ProAffy",
         "where": "English language",
         "trade": "Heating and cooling",
         "site": "proaffy.com",
-        "title": "Pro Affy",
+        "title": "ProAffy",
         "description": "Lead generation for heating and cooling firms. A site built "
                        "around speed of response rather than looks, because that is "
                        "what decides who gets the job.",
@@ -191,7 +191,7 @@ CLIENTS = [
         "stats": [],
         "payoff": "Written to win the callback.",
         "plate": ("proaffy-home.webp", 900, 625,
-                  "The Pro Affy homepage, a conversion-focused layout for heating "
+                  "The ProAffy homepage, a conversion-focused layout for heating "
                   "and cooling lead generation"),
         "services": [("/meta-ads/", "Meta ads"), ("/web-design/", "Websites")],
     },

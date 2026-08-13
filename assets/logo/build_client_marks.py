@@ -1,24 +1,30 @@
-"""Build the four client marks for the homepage logo row.
+"""Build the client marks for the homepage logo row.
 
 Every mark ends up as a single-colour shape the page paints with currentColor,
 so the row reads as one set instead of four pasted screenshots. Two routes get
 there, because the source material is not the same shape:
 
-  SVG    Victoria Boutique and Intimo Bruna have no logo file anywhere. Their
-         mark is literally text set in their own site header. Both self-host
-         the webfont, so we outline the real letterforms at their own weight
-         and their own tracking. This is reproduction, not invention.
+  SVG    Three of the four have no logo file carrying their name. Their name
+         is TEXT, set on their own site in a named face at a named weight and
+         a named tracking, so we outline the real letterforms at exactly those
+         settings. Reproduction, not invention: each one cites the file and
+         line it came from, and if you cannot cite it, do not ship it.
 
-  PNG    Iglisi Watch and Pro Affy have real artwork. We keep only the alpha
-         channel. Iglisi's wordmark is white on transparent, so its alpha is
-         already the shape we want. Pro Affy sits on a flat near-white ground
-         that has to be knocked out first, which also opens the white gaps
-         between the blobs. That is correct: the gaps should read as paper.
+  PNG    Iglisi Watch and ProAffy have real artwork. Iglisi's wordmark is
+         white on transparent, so its alpha is already the shape we want.
+         ProAffy's symbol sits on a flat near-white ground that has to be
+         knocked out first, which also opens the white gaps between the
+         blobs. That is correct: the gaps should read as paper.
 
-All four are consumed the same way, as a CSS mask painted with currentColor,
+ProAffy is the only mark in 2 parts, and that is the fix for a real bug. Their
+symbol carries no text at all, so when the row wrapped it sat a word-space from
+the IntimoBruna wordmark and read as a glyph belonging to it. A symbol with its
+own name beside it cannot borrow anybody else's.
+
+Every part is consumed the same way, as a CSS mask painted with currentColor,
 so the row inherits one ink colour and one hover colour. They stay separate
-files rather than inline SVG because Cormorant's serifs alone are 14 KB of
-path data, which does not belong in every byte of the homepage.
+files rather than inline SVG because the outlines are KBs of path data that do
+not belong in every byte of the homepage.
 
 Run from the project root:  python assets/logo/build_client_marks.py
 
@@ -52,7 +58,12 @@ def rel(*parts):
 
 def load(path, wght):
     f = TTFont(path)
-    instantiateVariableFont(f, {"wght": wght}, inplace=True)
+    if "fvar" in f:
+        instantiateVariableFont(f, {"wght": wght}, inplace=True)
+    else:
+        # a static face already IS the weight; refuse a silent mismatch
+        got = f["OS/2"].usWeightClass
+        assert got == wght, f"{path}: static weight {got}, wanted {wght}"
     return f
 
 
@@ -150,12 +161,18 @@ def main():
     os.makedirs(SRC, exist_ok=True)
     report = []
 
-    # Victoria Boutique. Her own footer lockup: Cormorant Garamond 500 at
-    # 0.2em, charcoal. butik Viktoria/styles.css line 171.
+    # Victoria Boutique. Her nav mark, on all 12 pages of her site and not
+    # restyled at any breakpoint: the single word VICTORIA, Cormorant Garamond
+    # 500, 0.2em. butik Viktoria/styles.css:171.
+    #
+    # We shipped "VICTORIA BOUTIQUE" at these settings once. That took the text
+    # from her footer (.footer-logo, styles.css:913, weight 300 at 0.22em, gold)
+    # and set it at the nav's weight and tracking. The combination is on no page
+    # she owns, which makes it an invention. Rule 38.
     svg, size = wordmark(
         rel("butik Viktoria", "assets", "fonts",
             "CormorantGaramond-500-normal-latin.woff2"),
-        500, "VICTORIA BOUTIQUE", 0.20)
+        500, "VICTORIA", 0.20)
     io.open(os.path.join(OUT, "victoria-boutique.svg"), "w",
             encoding="utf-8", newline=NL).write(svg)
     report.append(("victoria-boutique.svg", f"{size[0]:.0f}x{size[1]:.0f}", len(svg)))
@@ -176,7 +193,21 @@ def main():
     size, nbytes = save_mask(iglisi, "iglisi-watch.png", 440)
     report.append(("iglisi-watch.png", f"{size[0]}x{size[1]}", nbytes))
 
-    # Pro Affy. Symbol on a flat #F7F7F7 ground, knocked out to alpha.
+    # ProAffy. Their homepage h1 IS the brand name, set in Space Grotesk 700
+    # at -0.02em (proaffy.com assets/css/styles.css:353-359, --font-accent
+    # defined line 33). Same class of evidence as the other two: a named face,
+    # a named weight, a named tracking, on the brand name at display size.
+    #
+    # Space Grotesk is SIL OFL and is NOT in their repo, which we do not hold,
+    # so the face itself is committed under clients/source/ rather than read
+    # out of a client checkout like the other two.
+    svg, size = wordmark(
+        os.path.join(SRC, "SpaceGrotesk-700.ttf"), 700, "ProAffy", -0.02)
+    io.open(os.path.join(OUT, "pro-affy-word.svg"), "w",
+            encoding="utf-8", newline=NL).write(svg)
+    report.append(("pro-affy-word.svg", f"{size[0]:.0f}x{size[1]:.0f}", len(svg)))
+
+    # The symbol. Flat #F7F7F7 ground, knocked out to alpha.
     affy_src = os.path.join(HERE, "..", "..", "proaffy logo.jpeg")
     if os.path.exists(affy_src):
         kept = os.path.join(SRC, "proaffy-logo.jpeg")
