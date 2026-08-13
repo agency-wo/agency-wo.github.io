@@ -13,6 +13,10 @@ import io
 import os
 import re
 import subprocess
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import shell  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 NL = chr(10)
@@ -59,7 +63,10 @@ assert len(locs) == len(set(locs)), "duplicate canonical: " + str(
 
 
 def rank(loc):
-    path = loc.replace("https://minarank.com", "") or "/"
+    # derived, never typed: the domain is not bought yet and minarank.com turned
+    # out to belong to somebody else, so it WILL change. shell.SITE is the one
+    # place that says it. Gate check 29 fails if anything hardcodes a rival.
+    path = loc.replace(shell.SITE, "") or "/"
     return ORDER.index(path) if path in ORDER else len(ORDER)
 
 

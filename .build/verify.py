@@ -66,6 +66,12 @@ def text_of(html):
 
 all_pages = sorted(pages())
 
+# The domain is not bought. minarank.com turned out to be a live company, so
+# the canonical host WILL change: read it, never retype it.
+sys.path.insert(0, os.path.join(ROOT, ".build"))
+import shell as _shell  # noqa: E402
+_SITE = _shell.SITE
+
 # 1. no em-dashes -----------------------------------------------------------
 for dirpath, dirnames, filenames in os.walk(ROOT):
     dirnames[:] = [d for d in dirnames
@@ -125,7 +131,7 @@ for p in all_pages:
     if 'content="noindex"' in html:
         continue
     m = re.search(r'<link rel="canonical" href="([^"]+)"', html)
-    want = "https://minarank.com/" + rel(p).replace("index.html", "")
+    want = _SITE + "/" + rel(p).replace("index.html", "")
     if not m:
         findings.append(f"[canonical] {rel(p)} has none")
     elif m.group(1) != want:
@@ -536,6 +542,27 @@ for hook, src, where in [("audit-form", js_src, "js/main.js"),
                          ("was-validated", css_src, "css/main.css")]:
     if hook not in src:
         findings.append(f"[form] {where} no longer mentions {hook!r}")
+
+# 29. the domain is said once ----------------------------------------------
+# minarank.com is a live Hangzhou company, so this domain WILL change. Two
+# places used to hardcode it and would not have followed shell.SITE: the
+# sitemap's sort key and this file's own canonical check. Both derived now,
+# and nothing may retype it. shell.py line 1 is the single source.
+host = _SITE.split("//", 1)[-1]
+for d, _n, files in os.walk(os.path.join(ROOT, ".build")):
+    if "__pycache__" in d:
+        continue
+    for fn in sorted(files):
+        if not fn.endswith(".py"):
+            continue
+        src = read(os.path.join(d, fn))
+        for i, line in enumerate(src.split(chr(10)), 1):
+            if host not in line or line.lstrip().startswith("#"):
+                continue
+            if fn == "shell.py" and ("SITE = " in line or "EMAIL = " in line):
+                continue      # the 2 constants that are allowed to say it
+            findings.append(f"[domain] .build/{fn}:{i} hardcodes {host}. Derive "
+                            f"it from shell.SITE so the switch stays one edit")
 
 # ------------------------------------------------------------------- report
 print(f"pages checked: {len(all_pages)}")
