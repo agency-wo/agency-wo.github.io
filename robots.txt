@@ -1,9 +1,9 @@
-# ⚠ PREVIEW MODE — this build is deployed to a temporary github.io URL.
+# PREVIEW MODE: this build is deployed to a temporary github.io URL.
 # Crawlers are blocked so the draft never gets indexed under the wrong domain.
 #
 # AT LAUNCH (once the real domain is live), replace this whole file with:
 #
-#   # minarank — everyone is welcome, including AI crawlers.
+#   # minarank: everyone is welcome, including AI crawlers.
 #   # We are a GEO studio; being read by answer engines is the point.
 #   User-agent: *
 #   Allow: /

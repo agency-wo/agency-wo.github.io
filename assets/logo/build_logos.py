@@ -12,7 +12,9 @@ from fontTools.pens.transformPen import TransformPen
 from fontTools.pens.boundsPen import BoundsPen
 from fontTools.misc.transform import Transform
 
-SC = os.path.dirname(os.path.abspath(__file__))
+# Font packs are NOT committed. Download Clash Display + Satoshi from fontshare.com,
+# extract, and point MINARANK_FONTS_DIR at the folder holding both family dirs.
+SC = os.environ.get("MINARANK_FONTS_DIR") or os.path.dirname(os.path.abspath(__file__))
 OUT = r"c:\Users\aceto\OneDrive\Desktop\web and apps\MINA RANK\assets\logo"
 INK, INK2, CORAL, PAPER = "#1B1F3B", "#2E3358", "#FF6B4A", "#F7F5F2"
 
@@ -107,22 +109,31 @@ for i, h in enumerate((20, 30, 42, 56)):
 barsig_body = wordmark_body(flat, INK, INK) + "\n" + "\n".join(bars)
 write("minarank-barsig.svg", svg(f"0 {ftop:.0f} {wF + PADX:.0f} {248 - ftop:.0f}", barsig_body, "minarank"))
 
-# ---- D. lockup (ascending wordmark + DESIGN — RANKING tagline) ------------
-TAG = "DESIGN \u2014 RANKING"
+# ---- D. lockup (ascending wordmark + DESIGN [tick] RANKING tagline) -------
+# The separator is the brand's own 12x12 stepped tick at cap height, coral.
+# No em-dash anywhere in the suite (brand rule).
 TAG_BASE = 202  # was 208; at 208 the tagline floats off the wordmark
 # Optically align the tagline's D ink-left with the m's ink-left (their
 # sidebearings differ), instead of sharing the raw pen origin.
 d_lsb = set_text(satoshi, "D", 26, 0.0, lambda i: 0)[0][0]["inkl"]
-tag, wT = set_text(satoshi, TAG, 26, 0.14, lambda i: TAG_BASE, x0=asc[0]["inkl"] - d_lsb)
+tag1, w1 = set_text(satoshi, "DESIGN", 26, 0.14, lambda i: TAG_BASE, x0=asc[0]["inkl"] - d_lsb)
+CAP = 19.0            # Satoshi cap height at 26 units
+TICK = 14.0           # tick square, optically centered on the cap band
+tick_x = w1 + 9.0
+tick_y = TAG_BASE - CAP + (CAP - TICK) / 2.0
+tick_s = TICK / 12.0
+tag2, w2 = set_text(satoshi, "RANKING", 26, 0.14, lambda i: TAG_BASE, x0=tick_x + TICK + 9.0)
 tag_paths = []
-for g in tag:
-    if g["ch"] == "\u2014":
-        tag_paths.append(f'  <path fill="{CORAL}" d="{g["d"]}"/>')
-    elif g["ch"] != " ":
+for g in tag1 + tag2:
+    if g["ch"] != " ":
         tag_paths.append(f'  <path fill="{INK2}" d="{g["d"]}"/>')
-tag_bot = max(g["bot"] for g in tag) + PADY
-lockup_body = wordmark_body(asc, INK, CORAL) + "\n" + "\n".join(tag_paths)
-write("minarank-lockup.svg", svg(f"0 {top:.0f} {W:.0f} {tag_bot - top:.0f}", lockup_body, "minarank — design, ranking"))
+tag_paths.append(
+    f'  <path transform="translate({tick_x:.2f} {tick_y:.2f}) scale({tick_s:.4f})" '
+    f'fill="none" stroke="{CORAL}" stroke-width="1.72" d="M1 11H5V7H9V3H11"/>')
+tag_bot = max(g["bot"] for g in tag1 + tag2) + PADY
+NL = chr(10)
+lockup_body = wordmark_body(asc, INK, CORAL) + NL + NL.join(tag_paths)
+write("minarank-lockup.svg", svg(f"0 {top:.0f} {W:.0f} {tag_bot - top:.0f}", lockup_body, "minarank: design becomes ranking"))
 
 # ---- B. monogram (hand geometry, 8-unit grid, reads at 32px) --------------
 def monogram(ink, coral):
@@ -132,7 +143,7 @@ def monogram(ink, coral):
             f'stroke-miterlimit="2" stroke-linecap="butt" d="M14 54 L14 18 L32 42 L50 18 L50 54" class="ink"/>\n'
             f'  <path fill="none" stroke="{coral}" stroke-width="7" stroke-linecap="butt" '
             f'd="M53 14 L60.5 4"/>')
-# Monogram files are owned by a concurrent agent — do not write them from here.
+# Monogram files were hand-finished after design review; do not regenerate them here.
 # write("minarank-monogram.svg", svg("0 0 64 64", monogram(INK, CORAL), "minarank monogram"))
 # write("minarank-monogram-mono.svg", svg("0 0 64 64", monogram("currentColor", "currentColor"), "minarank monogram"))
 

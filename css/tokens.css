@@ -1,9 +1,9 @@
 /* ==========================================================================
-   MINARANK — design tokens
+   MINARANK · design tokens
    Shared by every page on the site, including the future /blog/.
    Palette source: brand concept PDF ("Color scheme", p.3).
-   Design law: work happens in ink; coral marks where ranking — the
-   payoff — appears. Coral is scarce. Amber is interaction-only.
+   Design law: work happens in ink; coral marks where ranking, the payoff,
+   appears. Coral is scarce. Amber is interaction-only.
    ========================================================================== */
 
 :root {
@@ -48,6 +48,11 @@
   --ease-rise:   cubic-bezier(0.16, 1, 0.3, 1);   /* hero letters */
   --ease-reveal: cubic-bezier(0.22, 1, 0.36, 1);  /* scroll reveals */
   --rise-step: 0.028em;                            /* the climb, per letter */
+
+  /* -- texture ------------------------------------------------------------ */
+  /* paper grain: one 256px SVG noise tile, rasterized once by the browser.
+     Applied at 2.5% multiply on paper, 6% soft-light on ink. */
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='256'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 /* Reset (minimal, intentional) */
