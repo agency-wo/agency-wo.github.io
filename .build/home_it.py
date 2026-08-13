@@ -43,7 +43,7 @@ NL = chr(10)
 AVAILABILITY = "Prendiamo nuovi lavori da settembre."
 
 # (href, name, what you end up with, what the page holds)
-# STAMP: SERVICES is a list of tuples and has nowhere to put "src": "b417d875".
+# STAMP: SERVICES is a list of tuples and has nowhere to put "src": "b5bb98c5".
 # It is recorded here instead, and check_stamp does not run on this record.
 #
 # The 5 names are byte-identical to chrome_it.FOOT_LABELS[0]: the footer and
@@ -230,7 +230,7 @@ PAGE = {
 # panel is narrow, the 4 error messages are read aloud when a field is invalid,
 # and each one says what to do rather than what went wrong.
 FORM = {
-    "src": "61457a9f",
+    "src": "b5bb98c5",
 
     # Not chrome_it.BAND_CTA ("Chiedi un audit gratuito"), which is a different
     # string on the same page, exactly as in English.
@@ -257,9 +257,9 @@ FORM = {
     "email_label": "Email",
     "email_err": "Il PDF arriva a questo" + NL +
                  "indirizzo.",
-    "category_label": "Cosa vendi",
-    "category_err": "Orologi, cucine," + NL +
-                    "torte. Basta una parola.",
+    "category_label": "Di cosa ti occupi",
+    "category_err": "Orologi, parrucchiere," + NL +
+                    "riscaldamento. Basta una parola.",
     # 5 characters, the same width as chrome_it.JS_SENDING ("Invio"), which
     # replaces it mid-submit. The button cannot jump under the cursor.
     "send": "Invia",

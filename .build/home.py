@@ -174,9 +174,9 @@ FORM = {
     "email_label": "Email",
     "email_err": "The PDF goes to this" + NL +
                  "address.",
-    "category_label": "What you sell",
-    "category_err": "Watches, kitchens," + NL +
-                    "cakes. One word is enough.",
+    "category_label": "What you do",
+    "category_err": "Watches, haircuts," + NL +
+                    "heating. One word is enough.",
     "send": "Send it",
     "alt": "Or <a href=\"{email_href}\">email us</a>, or" + NL +
            "<a href=\"{wa_href}\">WhatsApp</a>.",

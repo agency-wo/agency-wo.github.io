@@ -226,9 +226,21 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
   color: var(--slate); max-width: 34ch; text-wrap: pretty; }
 /* the hero form is 4 stacked fields in a 5fr column, so the two-up pair and
    the 54ch measures the /start/ form uses would both overflow it */
-.hero-af .field { margin-top: var(--s-4); }
+/* Shorter than the /start/ form, at every width. In the 5fr column the form
+   was 741px against copy that ends near 500, so it overhung by a third of its
+   own height and the hero read bottom-heavy on the right. What gives is the
+   space between the controls; the input keeps a 44px thumb target. */
+.hero-af .field { margin-top: var(--s-3); }
+.hero-af .field label { margin-bottom: 4px; }
+.hero-af .field input { padding: 0.58em 0.75em; }
 .hero-af .af-say, .hero-af .af-alt, .hero-af .af-fine { max-width: none; }
 .hero-af .af-go { margin-top: var(--s-5); }
+/* The divider under the button, gone. .af-alt and .af-fine are 2 separate
+   keys in 6 modules and /start/'s "fine" is a 4-clause privacy sentence naming
+   Web3Forms and a deletion address, so the COPY is never merged. Only the
+   boxes are, and only here. */
+.hero-af .af-fine { margin-top: var(--s-2); padding-top: 0; border-top: 0; }
+.hero-af .af-say { margin-top: var(--s-3); }
 .hero-af .af-done { padding-left: 0; border-left: 0; }
 .hero-af .af-done h3 { font-size: clamp(1.25rem, 2vw, 1.625rem); }
 
@@ -521,7 +533,6 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
   .hero-af .af { margin-top: var(--s-4); }
   .hero-af .af-go { margin-top: var(--s-5); }
   .hero-af .af-say, .hero-af .af-alt { margin-top: var(--s-3); }
-  .hero-af .af-fine { margin-top: var(--s-4); padding-top: var(--s-3); }
 }
 
 @media (max-width: 719px) {

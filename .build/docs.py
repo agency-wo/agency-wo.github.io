@@ -351,9 +351,9 @@ PAGES = [
             "name_err": "The name your customers" + NL +
                         "know you by.",
             "optional": "optional",
-            "category_label": "What you sell",
+            "category_label": "What you do",
             "category_hint": "Watches," + NL +
-                             "lingerie, heating. It tells us who to compare you" + NL +
+                             "haircuts, heating. It tells us who to compare you" + NL +
                              "against.",
             "city_label": "Town",
             "city_hint": "So we check the" + NL +

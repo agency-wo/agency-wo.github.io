@@ -44,7 +44,7 @@ NL = chr(10)
 AVAILABILITY = "Marrim punë të reja nga shtatori."
 
 # (href, name, what you end up with, what the page holds)
-# STAMP: SERVICES is a list of tuples and has nowhere to put "src": "b417d875".
+# STAMP: SERVICES is a list of tuples and has nowhere to put "src": "b5bb98c5".
 # It is recorded here instead, and check_stamp does not run on this record.
 #
 # The 5 names are byte-identical to chrome_sq.FOOT_LABELS[0]: the footer and
@@ -223,7 +223,7 @@ PAGE = {
 # panel is narrow, the 4 error messages are read aloud when a field is invalid,
 # and each one says what to do rather than what went wrong.
 FORM = {
-    "src": "61457a9f",
+    "src": "b5bb98c5",
 
     # "auditim i faqes" is banned, so the audit is named and its object follows
     # separately. This is also NOT chrome_sq.BAND_CTA ("Merr një auditim
@@ -250,9 +250,9 @@ FORM = {
     "email_label": "Email",
     "email_err": "PDF-ja vjen te kjo" + NL +
                  "adresë.",
-    "category_label": "Çfarë shet",
-    "category_err": "Orë, kuzhina," + NL +
-                    "torta. Mjafton një fjalë.",
+    "category_label": "Me çfarë merresh",
+    "category_err": "Orë, parukeri," + NL +
+                    "ngrohje. Mjafton një fjalë.",
     # 7 characters, shorter than the 11 of chrome_sq.JS_SENDING ("Po
     # dërgohet") which replaces it mid-submit, so the button only ever grows
     # once and by the width chrome_sq.py already accepted.

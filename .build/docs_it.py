@@ -333,7 +333,7 @@ PAGES = [
     # ---------------------------------------------------------------- START --
     {
         "url": "/start/",
-     "src": "c5346298",
+     "src": "cfd2facd",
         "nav": "Inizia un progetto",
         "title": "Inizia un progetto",
         "description": "Dicci cosa vendi e dove vuoi farti trovare. Email, WhatsApp o "
@@ -376,9 +376,9 @@ PAGES = [
             "name_err": "Il nome con cui ti" + NL +
                         "conoscono i clienti.",
             "optional": "facoltativo",
-            "category_label": "Cosa vendi",
+            "category_label": "Di cosa ti occupi",
             "category_hint": "Orologi," + NL +
-                             "intimo, riscaldamento. Ci dice con chi" + NL +
+                             "parrucchiere, riscaldamento. Ci dice con chi" + NL +
                              "confrontarti.",
             "city_label": "Città",
             "city_hint": "Così controlliamo la" + NL +

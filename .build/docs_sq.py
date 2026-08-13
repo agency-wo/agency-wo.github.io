@@ -326,7 +326,7 @@ PAGES = [
     # ---------------------------------------------------------------- START --
     {
         "url": "/start/",
-     "src": "c5346298",
+     "src": "cfd2facd",
         "nav": "Nis një projekt",
         "title": "Nis një projekt",
         "description": "Na thuaj çfarë shet dhe ku do të të gjejnë. Email, WhatsApp ose "
@@ -370,9 +370,9 @@ PAGES = [
             "name_err": "Emri me të cilin të" + NL +
                         "njohin klientët.",
             "optional": "opsionale",
-            "category_label": "Çfarë shet",
+            "category_label": "Me çfarë merresh",
             "category_hint": "Orë," + NL +
-                             "të brendshme, ngrohje. Na tregon me kë të të" + NL +
+                             "parukeri, ngrohje. Na tregon me kë të të" + NL +
                              "krahasojmë.",
             "city_label": "Qyteti",
             "city_hint": "Që të kontrollojmë hartën" + NL +
