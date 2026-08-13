@@ -100,6 +100,9 @@ BANNED = [
 # or markup. i18n.AUTONYM is kept out of this file for the same reason.
 IDENTICAL_BY_DESIGN = {
     "Menu", "Studio", "Home", "404", "Meta ads", "SEO", "AI search",
+    # The form control label. Italian and Albanian both write "Email" on a
+    # form, and check 35 would otherwise fail 8 correct pages for it.
+    "Email",
     "Iglisi Watch", "Victoria Boutique", "Intimo Bruna", "ProAffy",
 }
 

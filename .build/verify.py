@@ -1,14 +1,22 @@
-"""MINARANK gate. 33 checks. Read-only. Exit 1 on any finding.
+"""MINARANK gate. 41 checks. Read-only. Exit 1 on any finding.
 
 Run from the project root:  python .build/verify.py
 
 Half of these checks exist because a rule given in conversation gets applied
 from memory and drifts. Rules that can be checked are checked. See RULES.md.
 
+Checks 34 to 41 exist because the site is trilingual and 34 of its 51 pages are
+in a language this file used to be unable to read. Before them, flipping
+i18n.LANGS to ALL trebled the page count and the gate reported PASS on the two
+thirds it had never looked at: every path-keyed check went on reading
+index.html, and every English word list went on finding nothing in Italian.
+A gate that passes more pages by being shown more pages is decoration.
+
 Never loosen a check to make it pass.
 """
 import base64
 import hashlib
+import html as _entities  # noqa: N812  (check 40 only. "html" is a local here)
 import io
 import json
 import os
@@ -26,13 +34,47 @@ CORE = ["index.html", "css/tokens.css", "css/fonts.css", "css/main.css", "js/mai
         "favicon.svg"]
 
 # Rule 6: plain language. Each term needs a plain gloss in the same sentence.
-JARGON = ["extraction layer", "retrieval fetcher", "corroboration",
-          "machine-resolvable", "isochronism", "structured data assertion",
-          "entity clarity", "citation hierarchy", "answer-shaped"]
+#
+# Per language, because a word list that only reads English bans nothing on two
+# thirds of the site. Each row is the same concept in the form that language's
+# trade press would actually reach for, not a machine translation of the
+# English: the point is to catch the word a translator would write, and a term
+# with no natural equivalent is left out rather than invented. Anything in
+# glossary.KEEP_ENGLISH stays English in all 3 and is not jargon.
+JARGON = {
+    "en": ["extraction layer", "retrieval fetcher", "corroboration",
+           "machine-resolvable", "isochronism", "structured data assertion",
+           "entity clarity", "citation hierarchy", "answer-shaped"],
+    "it": ["livello di estrazione", "fetcher di recupero", "corroborazione",
+           "risolvibile dalla macchina", "isocronismo",
+           "asserzione di dati strutturati", "chiarezza dell'entita",
+           "chiarezza dell'entità", "gerarchia delle citazioni",
+           "a forma di risposta"],
+    "sq": ["shtresa e nxjerrjes", "marresi i rikuperimit",
+           "marrësi i rikuperimit", "korroborim", "i zgjidhshem nga makina",
+           "i zgjidhshëm nga makina", "izokronizem", "izokronizëm",
+           "pohim i te dhenave te strukturuara",
+           "pohim i të dhënave të strukturuara", "qartesi e entitetit",
+           "qartësi e entitetit", "hierarki e citimeve",
+           "ne forme pergjigjeje", "në formë përgjigjeje"],
+}
 
-# Rule 11: never explain an absence.
-APOLOGY = ["we can't show", "we cannot show", "cannot be shown", "redacted",
-           "confidential by contract", "no dashboards", "values redacted"]
+# Rule 11: never explain an absence. Same reasoning as JARGON: the apology is a
+# turn of phrase, and it survives translation as a turn of phrase. Both accented
+# and unaccented spellings are listed for Albanian and Italian, because an
+# author who has just typed one of these has already stopped proofreading.
+APOLOGY = {
+    "en": ["we can't show", "we cannot show", "cannot be shown", "redacted",
+           "confidential by contract", "no dashboards", "values redacted"],
+    "it": ["non possiamo mostrare", "non puo essere mostrato",
+           "non può essere mostrato", "non possiamo condividere", "oscurato",
+           "riservato per contratto", "niente dashboard", "valori oscurati"],
+    "sq": ["nuk mund te tregojme", "nuk mund të tregojmë",
+           "nuk mund te tregohet", "nuk mund të tregohet",
+           "nuk mund te ndajme", "nuk mund të ndajmë", "e censuruar",
+           "konfidenciale me kontrate", "konfidenciale me kontratë",
+           "pa panele", "vlera te fshehura", "vlera të fshehura"],
+}
 
 # The costume must not reassemble.
 BANNED_CLASSES = ["fig-cap", "case-label", "finding-label", "result-stamp",
@@ -79,7 +121,121 @@ all_pages = sorted(pages())
 sys.path.insert(0, os.path.join(ROOT, ".build"))
 import shell as _shell  # noqa: E402
 import chrome as _chrome  # noqa: E402
+import chrome_it as _chrome_it  # noqa: E402
+import chrome_sq as _chrome_sq  # noqa: E402
+import glossary  # noqa: E402
+import i18n  # noqa: E402
 _SITE = _shell.SITE
+
+# ======================================================= language scaffolding
+# Every path-keyed check below used to name a file: "index.html", "start/
+# index.html", "geo/index.html". With one language that reads as precision.
+# With three it reads as a blind spot, because the Italian twin of a named page
+# is a different path and no check went looking for it. So nothing here names a
+# file. A check names an ENGLISH page and gets the whole family, or names a
+# language and gets that language's pages.
+#
+# The lang of a page is its directory, derived from i18n.PREFIX rather than
+# from the literals "it" and "sq", so a fourth language is one edit in i18n.py
+# and none here.
+_PFX = {lg: i18n.PREFIX[lg].strip("/") for lg in i18n.ALL}
+
+
+def lang_of(r):
+    top = r.split("/", 1)[0]
+    for lg, px in _PFX.items():
+        if px and top == px:
+            return lg
+    return "en"
+
+
+def en_of(r):
+    """The English twin's relative path. it/seo/index.html -> seo/index.html."""
+    lg = lang_of(r)
+    return r if lg == "en" else r[len(_PFX[lg]) + 1:]
+
+
+def url_of(en_rel):
+    """The English URL path, the shape shell.head and i18n.url_for both take."""
+    return "/" + en_rel.replace("index.html", "")
+
+
+def rel_for(en_rel, lang):
+    """seo/index.html + it -> it/seo/index.html. The inverse of en_of."""
+    return f"{_PFX[lang]}/{en_rel}" if _PFX[lang] else en_rel
+
+
+LANG = {p: lang_of(rel(p)) for p in all_pages}
+# english rel -> {lang: abs path}. A family is complete when it has one member
+# per built language; check 34 is the thing that says so, once, rather than 8
+# path-keyed checks each reporting the same absence in its own words.
+FAMILY = {}
+for _p in all_pages:
+    FAMILY.setdefault(en_of(rel(_p)), {})[LANG[_p]] = _p
+
+TRANSLATED = [p for p in all_pages if LANG[p] != "en"]
+
+
+def in_lang(lang):
+    return [p for p in all_pages if LANG[p] == lang]
+
+
+def twin(en_rel, lang):
+    """One member of a family, or None. None is never a finding here: it is
+    check 34's finding, and reporting it twice trains people to skim."""
+    return FAMILY.get(en_rel, {}).get(lang)
+
+
+def indexable(html):
+    return 'content="noindex"' not in html
+
+
+# Check 11 fails any sentence of 9 words or more that appears on 2 pages, and an
+# untranslated paragraph is byte-identical to its English twin, so it already
+# catches half the English-left-behind problem and catches it for free. 9 is
+# therefore where check 35 starts reading: below it, check 11 sees nothing.
+#
+# Not a clean partition, and check 35 does not pretend it is one. Check 11
+# strips the band before it compares, so the whole footer is outside both bounds
+# whatever its length, and it never reads an attribute at all. That is why
+# check 35's chrome arm has no length limit and only its copy arm uses this.
+SHORT = 9
+
+_ATTR_COPY = re.compile(r'\b(?:alt|aria-label|title|data-wa)="([^"]*)"')
+_META_COPY = re.compile(
+    r'<meta (?:name|property)="(?:description|og:title|og:description)"'
+    r' content="([^"]*)"')
+
+
+def copy_text(html):
+    """Everything on a page a reader can end up reading, attributes included.
+
+    text_of alone sees only text nodes, and chrome.py's own docstring counts 8
+    aria-labels, 2 title attributes and the WhatsApp prefill that a pass over
+    text nodes would miss. The share card and the description are copy too: a
+    banned term or an English apology in a meta description ships just as far.
+    SVG goes first and scripts go with text_of, so path data and the JSON-LD
+    cannot contribute a word or a decimal point to any of this."""
+    nosvg = re.sub(r"(?s)<svg.*?</svg>", " ", html)
+    return " ".join([text_of(nosvg)] + _META_COPY.findall(nosvg)
+                    + _ATTR_COPY.findall(nosvg))
+
+
+def short_runs(html):
+    """Every text node under 9 words, as a set. Check 35's unit.
+
+    One text node, not one sentence: a heading, a button, a nav label and a
+    <title> are each exactly one, and each is the sort of string a translation
+    pass walks past. A sentence split does not find them, because most of them
+    never end in a full stop."""
+    body = re.sub(r"(?s)<script.*?</script>|<style.*?</style>|<svg.*?</svg>",
+                  " ", html)
+    out = set()
+    for t in re.split(r"(?s)<[^>]+>", body):
+        t = re.sub(r"\s+", " ", t).strip()
+        if t and len(t.split()) < SHORT:
+            out.add(t)
+    return out
 
 # 1. no em-dashes -----------------------------------------------------------
 for dirpath, dirnames, filenames in os.walk(ROOT):
@@ -160,20 +316,41 @@ for p in all_pages:
         findings.append(f"[canonical] {rel(p)} says {m.group(1)}, expected {want}")
 
 # 6. title and description --------------------------------------------------
+# The English ceilings measure a physical constraint: Google truncates a title
+# around 600 pixels and a description around 160 characters, so 70 and 175 are
+# not opinions. But the same sentence in Italian or Albanian runs 15 to 25
+# percent longer, and on the 17 pages here the worst title ratio is 1.21 and the
+# worst description ratio 1.25. A flat 70 would therefore fail a correct
+# Albanian title whose English twin already sits at 61, and the only way a
+# translator could pass it is by dropping a word of meaning. That is the gate
+# editing the copy, which is not its job.
+#
+# The allowance is 25 percent of the TRANSLATABLE part only. shell.head appends
+# " {dot} minarank studio" to every title and those 18 characters are the brand,
+# identical in all 3 languages, so they get no headroom. 52 translatable
+# characters plus 25 percent, plus the suffix, is 83.
+TITLE_MAX, DESC_MIN, DESC_MAX = 70, 50, 175
+LONGER = {"en": 1.0, "it": 1.25, "sq": 1.25}
+_BRAND_SUFFIX = len(f" {_shell.DOT} {_shell.BRAND}")
+
 for p in all_pages:
-    html = read(p)
+    html, lg = read(p), LANG[p]
+    t_cap = _BRAND_SUFFIX + round((TITLE_MAX - _BRAND_SUFFIX) * LONGER[lg])
+    d_cap = round(DESC_MAX * LONGER[lg])
     t = re.search(r"<title>(.*?)</title>", html, re.S)
     d = re.search(r'<meta name="description" content="([^"]*)"', html)
     if not t or not t.group(1).strip():
         findings.append(f"[title] {rel(p)} missing")
-    elif len(t.group(1)) > 70:
-        findings.append(f"[title] {rel(p)} is {len(t.group(1))} chars (over 70)")
-    if "noindex" in html:
+    elif len(t.group(1)) > t_cap:
+        findings.append(f"[title] {rel(p)} is {len(t.group(1))} chars "
+                        f"(over {t_cap} for {lg})")
+    if not indexable(html):
         continue
     if not d or not d.group(1).strip():
         findings.append(f"[description] {rel(p)} missing")
-    elif not (50 <= len(d.group(1)) <= 175):
-        findings.append(f"[description] {rel(p)} is {len(d.group(1))} chars (want 50 to 175)")
+    elif not (DESC_MIN <= len(d.group(1)) <= d_cap):
+        findings.append(f"[description] {rel(p)} is {len(d.group(1))} chars "
+                        f"(want {DESC_MIN} to {d_cap} for {lg})")
 
 # 7. shared blocks have not drifted ----------------------------------------
 def block(html, name):
@@ -187,7 +364,19 @@ def block(html, name):
 # Byte-comparing the block without blanking it would fail all 51 pages the day
 # i18n.LANGS becomes 3 languages, which is a landmine this file laid for itself
 # and which shell.py's own docstring already claims is handled.
-_LANG_NAV = re.compile(r'(?s)<nav class="foot-lang".*?</nav>')
+#
+# It swallows its own line, indentation and trailing newline. Blanking the tag
+# alone left the leading spaces behind, so a page that legitimately has NO
+# switcher (the 404: there is one 404 per origin and it cannot link at an
+# equivalent page in another language) differed from every page that has one, by
+# 10 spaces nobody could see in the message.
+_LANG_NAV = re.compile(r'(?ms)^[ \t]*<nav class="foot-lang".*?</nav>[ \t]*\r?\n')
+
+# The reference page, resolved through the family rather than read from a path.
+# The Italian header is compared against the ITALIAN reference: 3 languages
+# cannot be byte-identical, and a check that demanded it would fail 34 correct
+# pages on the day the site became trilingual.
+REF_PAGE = "geo/index.html"
 
 
 def chrome_block(html, name):
@@ -195,15 +384,45 @@ def chrome_block(html, name):
     return None if b is None else _LANG_NAV.sub("", b)
 
 
-ref = read(os.path.join(ROOT, "geo", "index.html"))
+def skeleton(b):
+    """A chrome block with every word and every path removed.
+
+    shell.py owns the structure and chrome.py owns the words, so the 3 headers
+    may differ in their words and never in their tags. Comparing byte for byte
+    WITHIN a language cannot see an Italian header that lost its <details> or
+    gained a div, because every Italian page would have lost it together. Only
+    the tag sequences, compared across languages, can: without this the phone
+    menu could exist in English alone and 34 pages would agree with each other
+    about being wrong.
+    """
+    return "|".join(re.sub(r"\s+", " ", re.sub(r'="[^"]*"', "=", t))
+                    for t in re.findall(r"<[^>]+>", b))
+
+
 for name in ("HEADER", "FOOTER"):
-    want = chrome_block(ref, name)
-    for p in all_pages:
-        got = chrome_block(read(p), name)
-        if got is None:
-            findings.append(f"[shared] {rel(p)} has no SHARED:{name}")
-        elif got != want:
-            findings.append(f"[shared] {rel(p)} SHARED:{name} differs from geo")
+    for lg in i18n.LANGS:
+        ref_p = twin(REF_PAGE, lg)
+        if ref_p is None:
+            continue                  # check 34 owns a missing family member
+        want = chrome_block(read(ref_p), name)
+        for p in in_lang(lg):
+            got = chrome_block(read(p), name)
+            if got is None:
+                findings.append(f"[shared] {rel(p)} has no SHARED:{name}")
+            elif got != want:
+                findings.append(f"[shared] {rel(p)} SHARED:{name} differs from "
+                                f"{rel(ref_p)}")
+    en_ref = twin(REF_PAGE, "en")
+    want_shape = skeleton(chrome_block(read(en_ref), name) or "") if en_ref else None
+    for lg in i18n.LANGS:
+        ref_p = twin(REF_PAGE, lg)
+        if lg == "en" or ref_p is None or want_shape is None:
+            continue
+        if skeleton(chrome_block(read(ref_p), name) or "") != want_shape:
+            findings.append(f"[shared] the {lg} SHARED:{name} is a different "
+                            f"shape from the English one. shell.py owns the "
+                            f"structure and chrome_{lg}.py owns the words, so "
+                            f"the 2 may differ only in their words")
 
 # 8. images carry width, height and alt -------------------------------------
 for p in all_pages:
@@ -249,54 +468,125 @@ for p in all_pages:
             seen.setdefault(key, rel(p))
 
 # 12. plain language --------------------------------------------------------
+# Each page is read against its OWN language's list. Reading an Italian page
+# against the English one is how a jargon ban comes to cover 17 pages out of 51
+# while printing the same PASS it printed when it covered all of them.
 for p in all_pages:
-    low = text_of(read(p)).lower()
-    for term in JARGON:
+    low = copy_text(read(p)).lower()
+    for term in JARGON[LANG[p]]:
         if term in low:
             findings.append(f"[jargon] {rel(p)} uses '{term}' with no plain gloss")
 
 # 13. never explain an absence ---------------------------------------------
 for p in all_pages:
-    low = text_of(read(p)).lower()
-    for phrase in APOLOGY:
+    low = copy_text(read(p)).lower()
+    for phrase in APOLOGY[LANG[p]]:
         if phrase in low:
             findings.append(f"[apology] {rel(p)} contains '{phrase}'")
 
 # 14. the facts that must be present ----------------------------------------
-home = read(os.path.join(ROOT, "index.html"))
-seo = read(os.path.join(ROOT, "seo", "index.html"))
-studio = read(os.path.join(ROOT, "studio", "index.html"))
-for label, hay, needle in [
-        ("founder name", studio, "Henri Sila"),
-        ("whatsapp", read(os.path.join(ROOT, "start", "index.html")), "wa.me/355675716090"),
-        ("on-page", seo.lower(), "on-page"),
-        ("off-page", seo.lower(), "off-page"),
-        ("google business profile", seo.lower(), "google business profile")]:
-    if needle.lower() not in hay.lower():
-        findings.append(f"[content] {label} missing: expected '{needle}'")
+# Named by ENGLISH page and run over the whole family. The old version read
+# "seo/index.html" and passed while the Italian service page said nothing at all
+# about the Google Business Profile: rule 26 is a promise about what the site
+# says it does, and a promise kept in one language out of 3 is not kept.
+#
+# Nothing here is a typed word. The founder, the number and the term for the
+# business profile are read from shell.py and glossary.TERMS, so the day the
+# glossary changes its mind about a word this follows it.
+_LG_IDX = {"en": 0, "it": 1, "sq": 2}
+
+
+def term(concept, lang):
+    """The one word this site uses for a concept, in one language."""
+    return glossary.TERMS[concept][_LG_IDX[lang]]
+
+
+FACTS = [
+    # english page          label                     what must appear
+    ("studio/index.html", "founder name", lambda lg: _shell.FOUNDER),
+    ("start/index.html", "whatsapp", lambda lg: "wa.me/" + _shell.WHATSAPP),
+    # on-page and off-page are in glossary.KEEP_ENGLISH: they are the trade's
+    # own words in Italian and Albanian too, and rule 26 names them.
+    ("seo/index.html", "on-page", lambda lg: "on-page"),
+    ("seo/index.html", "off-page", lambda lg: "off-page"),
+    ("seo/index.html", "google business profile",
+     lambda lg: term("business profile", lg)),
+]
+for _en_page, _label, _want in FACTS:
+    for _lg, _p in sorted(FAMILY.get(_en_page, {}).items()):
+        _needle = _want(_lg)
+        if _needle.lower() not in read(_p).lower():
+            findings.append(f"[content] {rel(_p)}: {_label} missing, "
+                            f"expected {_needle!r}")
 
 # 15. homepage stays compact ------------------------------------------------
-hw = len(text_of(home).split())
-hs = len(re.findall(r"<section", home))
-if hw > MAX_HOME_WORDS:
-    findings.append(f"[homepage] {hw} words (max {MAX_HOME_WORDS})")
-if hs > MAX_HOME_SECTIONS:
-    findings.append(f"[homepage] {hs} sections (max {MAX_HOME_SECTIONS})")
+# The 900 words are an EDITORIAL budget on the English, which is the copy
+# somebody writes. Grading a translation against it would be grading grammar:
+# Italian carries the same argument in more words and there is nothing a
+# translator could do about it but cut a fact. Check 38 is what holds the
+# translated homepages, as a ratio against their English twin, which is the
+# honest form of the same rule.
+#
+# The section count is different. It is structure, not prose, so it is an
+# EQUALITY across the family rather than a ceiling applied 3 times. "All 3
+# homepages have the same 7 sections" is a strictly stronger statement than
+# "each of the 3 has at most 7", and it is the one that catches a translated
+# homepage quietly shipping 6.
+HOME = "index.html"
+_home_fam = FAMILY.get(HOME, {})
+if "en" in _home_fam:
+    hw = len(text_of(read(_home_fam["en"])).split())
+    if hw > MAX_HOME_WORDS:
+        findings.append(f"[homepage] {hw} words in English (max {MAX_HOME_WORDS})")
+_secs = {lg: len(re.findall(r"<section", read(p)))
+         for lg, p in sorted(_home_fam.items())}
+if _secs.get("en", 0) > MAX_HOME_SECTIONS:
+    findings.append(f"[homepage] {_secs['en']} sections (max {MAX_HOME_SECTIONS})")
+for _lg, _n in _secs.items():
+    if _lg != "en" and _n != _secs.get("en"):
+        findings.append(f"[homepage] the {_lg} homepage has {_n} sections and the "
+                        f"English one has {_secs.get('en')}. A translation "
+                        f"answers the English, it does not restructure it")
 
 # 16. the stated weight must be the measured weight ------------------------
+# Rule 24. "Under 60 KB" is a claim in whatever language it is made in, so the
+# patterns are per language and every one of them runs over every page. That is
+# deliberate: a claim phrased in Italian is still a claim if it turns up on the
+# English page, and measuring it costs nothing. Matching only the page's own
+# language would have let the Italian and Albanian versions of this sentence
+# say any number they liked, which is the failure rule 24 exists to stop and
+# the reason it is gated at all.
+#
+# Nothing on the site makes this claim today. That is exactly when a check is
+# worth widening: after the copy carries it, the first person to notice the
+# Italian was never measured is the reader who measures it.
+WEIGHT_CLAIM = [r"under (\d+)\s*KB",
+                r"sotto (?:i |ai )?(\d+)\s*KB",
+                r"meno di (\d+)\s*KB",
+                r"n[eë]n (\d+)\s*KB",
+                r"m[eë] pak se (\d+)\s*KB"]
 total = sum(os.path.getsize(os.path.join(ROOT, f)) for f in CORE)
 kb = total / 1024
 for p in all_pages:
-    for claim in re.findall(r"[Uu]nder (\d+)\s*KB", read(p)):
-        if kb > int(claim):
-            findings.append(f"[claim] {rel(p)} says under {claim}KB, "
-                            f"measured {kb:.1f}KB")
+    for pat in WEIGHT_CLAIM:
+        for claim in re.findall(pat, read(p), re.I):
+            if kb > int(claim):
+                findings.append(f"[claim] {rel(p)} claims {claim}KB, "
+                                f"measured {kb:.1f}KB")
 if total > 200 * 1024:
     findings.append(f"[weight] first load {kb:.1f}KB exceeds 200KB")
 
 # 17. epigram heuristic (warning, printed every build) ----------------------
-CONCRETE = re.compile(r"\d|Google|ChatGPT|Claude|Perplexity|Durres|Albania|Italy|"
-                      r"WhatsApp|Iglisi|Victoria|Bruna|Affy|minarank|euro|lek", re.I)
+# The place names come out of glossary.TERMS rather than being typed, because
+# this list had "Durres" in it and neither "Durazzo" nor "Durres" with the ë.
+# Every Italian and Albanian paragraph that ends by naming the city was
+# therefore reported as an epigram candidate, and a warning list that is mostly
+# false is a warning list nobody reads. re.I does not fold ë to e, so all 3
+# spellings have to be present and all 3 are, by derivation.
+_PLACES = sorted({v for c in ("Durres", "Albania") for v in glossary.TERMS[c]})
+CONCRETE = re.compile(r"\d|Google|ChatGPT|Claude|Perplexity|WhatsApp|Iglisi|"
+                      r"Victoria|Bruna|Affy|minarank|euro|lek|Ital(?:y|ia)|" +
+                      "|".join(re.escape(x) for x in _PLACES), re.I)
 for p in all_pages:
     for para in re.findall(r"<p\b[^>]*>(.*?)</p>", read(p), re.S):
         plain = re.sub(r"\s+", " ", re.sub(r"(?s)<[^>]+>", "", para)).strip()
@@ -311,7 +601,6 @@ sys.path.insert(0, os.path.join(ROOT, ".build"))
 from clients import CLIENTS  # noqa: E402
 
 css = read(os.path.join(ROOT, "css", "main.css"))
-home = read(os.path.join(ROOT, "index.html"))
 parts = 0
 for c in CLIENTS:
     for fn, _w, _h in c["mark"]:
@@ -325,12 +614,21 @@ for c in CLIENTS:
             findings.append(f"[mark] css/main.css has no .mark-{stem} rule")
         elif fn not in rule.group(1):
             findings.append(f"[mark] .mark-{stem} does not point at {fn}")
-shown = len(re.findall(r'class="mark mark-', home))
-if shown != parts:
-    findings.append(f"[mark] homepage shows {shown} mark parts, clients.py has {parts}")
-links = len(re.findall(r'class="mark-link"', home))
-if links != len(CLIENTS):
-    findings.append(f"[mark] homepage has {links} mark links, {len(CLIENTS)} clients")
+# The marks are drawn assets and the row is the site's only proof above the
+# fold, so every homepage carries all of it. Rule 38 says the marks are
+# reproduction rather than invention, which makes them one of the few things on
+# this site that does not change between languages: a row that is complete in
+# English and short one client in Albanian is a client dropped from the proof.
+for _lg, _p in sorted(FAMILY.get(HOME, {}).items()):
+    _h = read(_p)
+    shown = len(re.findall(r'class="mark mark-', _h))
+    if shown != parts:
+        findings.append(f"[mark] {rel(_p)} shows {shown} mark parts, "
+                        f"clients.py has {parts}")
+    links = len(re.findall(r'class="mark-link"', _h))
+    if links != len(CLIENTS):
+        findings.append(f"[mark] {rel(_p)} has {links} mark links, "
+                        f"{len(CLIENTS)} clients")
 
 # 19. every new tab is opened safely ---------------------------------------
 # noopener only. It is the security property: without it the opened page can
@@ -362,16 +660,61 @@ VERBS = re.compile(
     r"matters|happen|happens|use|uses|add|adds|put|puts|publish|hear|look|looks|"
     r"turn|turns|move|moves|owe|owes|call|calls|reply|replies|earn|earns|"
     r"\w+ing)\b", re.I)
-for p in all_pages:
-    body = re.sub(r"(?s)<!-- SHARED:FOOTER -->.*?<!-- /SHARED:FOOTER -->", " ", read(p))
-    for m in re.findall(r"<h[12][^>]*>(.*?)</h[12]>", body, re.S):
-        t = re.sub(r"\s+", " ", re.sub(r"(?s)<[^>]+>", "", m)).strip()
+
+# THE VERB LIST IS ENGLISH AND STAYS ENGLISH. This is a decision, not an
+# oversight, and here is the reasoning so nobody has to guess.
+#
+# The list works in English because English verbs barely inflect: 5 forms and a
+# closed set of auxiliaries covers a heading. Italian conjugates one verb into
+# roughly 50 forms and Albanian more, so a list of the same 120 entries would
+# recognise a few percent of the verbs a translator can write. The failures
+# would land on CORRECT headings, and a gate that fails correct work teaches
+# people to argue with it. That is worse than not checking.
+#
+# So the translated side is checked structurally instead, which is available
+# here and is not available in English. A translation answers the English
+# heading for heading, and the fragment shape rule 36 bans is a COMMA shape:
+# "One shop, three months, from zero." The English twin has already been
+# through the verb test, so a translated heading that has gained a comma has
+# changed the shape it inherited, and that is exactly the drift worth catching.
+#
+# Commas immediately followed by a digit are separators, not punctuation. This
+# is why: the Italian for "Why position 8.4 is the honest headline" writes 8,4,
+# and counting that as punctuation reported a correct heading as a fragment.
+def real_commas(t):
+    return len(re.findall(r",(?!\d)", t))
+
+
+def headings(p):
+    body = re.sub(r"(?s)<!-- SHARED:FOOTER -->.*?<!-- /SHARED:FOOTER -->",
+                  " ", read(p))
+    return [re.sub(r"\s+", " ", re.sub(r"(?s)<[^>]+>", "", m)).strip()
+            for m in re.findall(r"<h[12][^>]*>(.*?)</h[12]>", body, re.S)]
+
+
+for p in in_lang("en"):
+    for t in headings(p):
         if not t or VERBS.search(t):
             continue
-        if t.count(",") >= 2:
+        if real_commas(t) >= 2:
             findings.append(f"[fragment] {rel(p)}: verbless heading {t!r}")
-        elif "," in t:
+        elif real_commas(t):
             warnings.append(f"[fragment?] {rel(p)}: {t[:70]}")
+
+for p in TRANSLATED:
+    en_p = twin(en_of(rel(p)), "en")
+    if en_p is None:
+        continue
+    en_h, tr_h = headings(en_p), headings(p)
+    if len(en_h) != len(tr_h):
+        continue                  # check 38 owns a page that lost a heading
+    for _a, _b in zip(en_h, tr_h):
+        if real_commas(_b) > real_commas(_a):
+            findings.append(f"[fragment] {rel(p)}: {_b!r} has "
+                            f"{real_commas(_b)} commas and the English it "
+                            f"answers has {real_commas(_a)}: {_a!r}. Rule 36's "
+                            f"fragment is a comma shape, and a translation "
+                            f"does not get to add one")
 
 # 21. paragraphs stay short ------------------------------------------------
 # Rule 35. Over-explaining shows up as length before it shows up as anything
@@ -380,14 +723,25 @@ for p in all_pages:
 # <p\b, not <p: [^>]* happily matches the "ath ..." of a <path> inside every
 # inline SVG on the site, so this and check 17 used to measure from the logo's
 # first path to the first real </p> and judged the header as a paragraph.
+#
+# The same 25 percent LONGER allowance check 6 uses, and TRANSLATING.md states
+# it to the translators as a number they write to: 85 English words times 1.25.
+# It is headroom for grammar, not for explanation. Italian needs more words for
+# the same sentence and cannot be told to stop needing them; what it may not do
+# is add a clause, and check 38's word ratio is what says so. Measured on the
+# 34 translated pages: the longest Albanian paragraph is 77 words against an
+# English longest of 73, so this is headroom that is nearly all unused.
 P_WARN, P_FAIL = 55, 85
 for p in all_pages:
+    warn_at = round(P_WARN * LONGER[LANG[p]])
+    fail_at = round(P_FAIL * LONGER[LANG[p]])
     for para in re.findall(r"<p\b[^>]*>(.*?)</p>", read(p), re.S):
         plain = re.sub(r"\s+", " ", re.sub(r"(?s)<[^>]+>", "", para)).strip()
         n = len(plain.split())
-        if n > P_FAIL:
-            findings.append(f"[long] {rel(p)}: {n}-word paragraph, {plain[:60]}")
-        elif n > P_WARN:
+        if n > fail_at:
+            findings.append(f"[long] {rel(p)}: {n}-word paragraph "
+                            f"(max {fail_at}), {plain[:60]}")
+        elif n > warn_at:
             warnings.append(f"[long?] {rel(p)}: {n} words, {plain[:60]}")
 
 # ================================================ the free audit form ======
@@ -399,7 +753,7 @@ import shell  # noqa: E402  (check 18 already put .build on sys.path)
 FORM_HOST = "https://api.web3forms.com"
 IGLISI_KEY = "b8cb1417-7408-4af4-a7da-9c2a163735fc"   # watch.al's. Not ours.
 KEY_RE = r"[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}"
-start_html = read(os.path.join(ROOT, "start", "index.html"))
+START = "start/index.html"
 
 # The shape of every form, DECLARED. Checks 22 and 26 used to read start_html
 # and were keyed to start/index.html by name, so the day a second form appeared
@@ -411,12 +765,30 @@ start_html = read(os.path.join(ROOT, "start", "index.html"))
 # has 4 fields and no business-name field by design, so its rows get completed
 # by hand from the URL. Declared here rather than discovered by the batch 3
 # weeks later.
-FORM_SHAPES = {
-    #  page                (visible field names, in source order),   csv_ready
+#
+# Declared against the ENGLISH page and expanded across i18n.LANGS, so with 3
+# languages the table below holds 6 entries: index.html, it/index.html,
+# sq/index.html and the 3 for /start/. Expanded rather than 6 rows typed by
+# hand, and the reason is the opposite of convenience. Field names are protocol,
+# not copy: they are the CSV columns Minafy's batch reads and the keys Web3Forms
+# puts in the notification. TRANSLATING.md tells translators they are
+# untouchable. A hand-copied Italian row could disagree with the English one,
+# and the gate would then ENFORCE the disagreement, because a declaration is
+# what it trusts. Derived, "all 3 forms have the same fields in the same order"
+# is true by construction.
+#
+# The property that matters is untouched: a page with a form and no entry here
+# is still a failure, so a genuinely new form still cannot ship until somebody
+# writes down what shape it is meant to be.
+FORM_SHAPES_EN = {
+    #  english page        (visible field names, in source order),   csv_ready
     "index.html":       (("url", "owner", "email", "category"),          False),
-    "start/index.html": (("url", "name", "category", "city",
+    START:              (("url", "name", "category", "city",
                           "owner", "email"),                             True),
 }
+FORM_SHAPES = {rel_for(_en, _lg): _shape
+               for _en, _shape in FORM_SHAPES_EN.items()
+               for _lg in i18n.LANGS}
 
 
 def visible_fields(f):
@@ -500,28 +872,72 @@ for p in all_pages:
 # 25. one promise, stated identically wherever it is claimed ---------------
 # /start/ promised "a day or two" in 2 places while the form promised 24
 # hours. text_of strips <svg>, so path data like "M8 24 H152" cannot match.
-RIVAL = re.compile(
-    r"\b(?:a day or two|a couple of days|same day|next day|by tomorrow|"
-    r"within \d+\s*(?:working |business )?(?:hour|day|week)s?|"
-    r"\d+\s*(?:working|business)\s*days?|\d+\s?h\b|"
-    r"(?:one|two|three|four|five)\s+(?:working |business )?(?:hours?|days?))", re.I)
+#
+# ONE PATTERN PER LANGUAGE. The English one cannot see "un giorno o due" or
+# "brenda 2 ditësh", so with a single regex the Italian and Albanian pages could
+# promise anything at all and the only thing that would fire is the positive
+# half below, and only because "within 24 hours" is absent from a page that was
+# never going to say it. Worse, the comparison is against shell.turnaround(lang)
+# now: an Italian page correctly promising "entro 24 ore" was reported as a
+# rival promise by the version of this check that knew only the English
+# constant, which is a correct page failed for being correct.
+#
+# Each language's own promise has to MATCH its own pattern or the negative half
+# checks nothing: "entro 24 ore" is caught by "entro \d+ ore" and then compared
+# equal, which is the whole mechanism.
+RIVAL = {
+    "en": re.compile(
+        r"\b(?:a day or two|a couple of days|same day|next day|by tomorrow|"
+        r"within \d+\s*(?:working |business )?(?:hour|day|week)s?|"
+        r"\d+\s*(?:working|business)\s*days?|\d+\s?h\b|"
+        r"(?:one|two|three|four|five)\s+(?:working |business )?"
+        r"(?:hours?|days?))", re.I),
+    "it": re.compile(
+        r"\b(?:un giorno o due|un paio di giorni|in giornata|entro domani|"
+        r"entro \d+\s*(?:giorni|giorno|settimane|settimana|ore|ora)|"
+        r"\d+\s*giorni lavorativi|\d+\s?h\b|"
+        r"entro\s+(?:un'|un |uno |due |tre |quattro |cinque )"
+        r"\s*(?:giorni|giorno|ore|ora))", re.I),
+    # The longer inflection has to come first in each alternation or the regex
+    # matches "orë" out of "orëve" and then compares a truncated promise
+    # against the whole one and fails a correct page.
+    #
+    # THE SPELLED-OUT NUMERAL NEEDS ITS PREPOSITION HERE, and it is not
+    # pedantry. "një" is also the indefinite article, and "orë" is Albanian for
+    # both "hour" and "watch". "riparosh një orë" is "repair a watch" and it is
+    # on 6 pages of a site written for a watch shop. A bare numeral clause
+    # reported every one of them as a rival promise to "brenda 24 orëve", which
+    # is 11 correct pages failed by a check reading a dictionary it did not
+    # have. "brenda" is the word the site's own promise uses and the only one
+    # that means within; "në një ditë" is "on an ordinary day" and it is on 2
+    # pages. So the spelled-out numeral needs "brenda" in front of it.
+    "sq": re.compile(
+        r"\b(?:nj[eë] dit[eë] a dy|nj[eë] a dy dit[eë]|brenda dit[eë]s|"
+        r"brenda \d+\s*(?:or[eë]ve|or[eë]sh|or[eë]|dit[eë]ve|dit[eë]sh|dit[eë]|"
+        r"jav[eë]ve|jav[eë]sh|jav[eë])|"
+        r"\d+\s*dit[eë] pune|\d+\s?h\b|"
+        r"brenda\s+(?:nj[eë]|dy|tre|kat[eë]r|pes[eë])\s+"
+        r"(?:or[eë]sh|or[eë]ve|or[eë]|dit[eë]sh|dit[eë]ve|dit[eë]))", re.I),
+}
 for p in all_pages:
-    for m in RIVAL.finditer(text_of(read(p))):
-        if m.group(0).lower() != shell.turnaround("en").lower():
-            findings.append(f"[promise] {rel(p)} says {m.group(0)!r}, and the site "
-                            f"promises {shell.turnaround("en")!r}")
+    lg = LANG[p]
+    for m in RIVAL[lg].finditer(text_of(read(p))):
+        if m.group(0).lower() != shell.turnaround(lg).lower():
+            findings.append(f"[promise] {rel(p)} says {m.group(0)!r}, and the "
+                            f"site promises {shell.turnaround(lg)!r} in {lg}")
 # and it must actually be stated: a page that quietly drops it also passes the
 # check above, which is the failure mode of every negative-only rule
-said = start_html.lower().count(shell.turnaround("en").lower())
-if said < 3:
-    findings.append(f"[promise] start/index.html states the turnaround {said} "
-                    f"time(s). The standfirst, the offer and the confirmation "
-                    f"all need it")
+for lg, p in sorted(FAMILY.get(START, {}).items()):
+    said = read(p).lower().count(shell.turnaround(lg).lower())
+    if said < 3:
+        findings.append(f"[promise] {rel(p)} states the turnaround {said} "
+                        f"time(s). The standfirst, the offer and the "
+                        f"confirmation all need it")
 # a form that asks for an email without saying when the answer comes is a leak
 for p in form_pages:
-    if shell.turnaround("en").lower() not in text_of(read(p)).lower():
+    if shell.turnaround(LANG[p]).lower() not in text_of(read(p)).lower():
         findings.append(f"[promise] {rel(p)} carries the audit form and never "
-                        f"states {shell.turnaround("en")!r}")
+                        f"states {shell.turnaround(LANG[p])!r}")
 
 # 26. the shape of EVERY form on EVERY page --------------------------------
 # Four defects shipped on /start/ once and each line below is one of them. They
@@ -651,20 +1067,34 @@ for p in all_pages:
 # 27. the one CTA is identical on every banded page ------------------------
 # check 7 diffs the SHARED blocks and check 11 strips the band, so without
 # this nothing compares the 13 copies of the call to action.
-ref = re.search(r'(?s)<p class="band-actions">.*?</p>',
-                read(os.path.join(ROOT, "geo", "index.html")))
-if not ref or shell.AUDIT_URL not in ref.group(0):
-    findings.append(f"[band] geo's band CTA does not point at {shell.AUDIT_URL}")
-else:
-    for p in all_pages:
+#
+# Per language, and the destination is localised through shell.localise rather
+# than compared as a bare constant. An Italian band pointing at /start/#audit
+# instead of /it/start/#audit sends a reader who has just decided to buy out of
+# the language the site spent 17 pages arguing it works in. The old substring
+# test would have passed it, because /start/#audit is a substring of
+# /it/start/#audit.
+_BAND = re.compile(r'(?s)<p class="band-actions">.*?</p>')
+for lg in i18n.LANGS:
+    ref_p = twin(REF_PAGE, lg)
+    if ref_p is None:
+        continue
+    want_href = f'href="{_shell.localise(shell.AUDIT_URL, lg)}"'
+    ref_band = _BAND.search(read(ref_p))
+    if not ref_band or want_href not in ref_band.group(0):
+        findings.append(f"[band] {rel(ref_p)}'s band CTA does not point at "
+                        f"{_shell.localise(shell.AUDIT_URL, lg)}")
+        continue
+    for p in in_lang(lg):
         html = read(p)
         if 'class="band' not in html:
             continue                       # 404.html has no band, deliberately
-        got = re.search(r'(?s)<p class="band-actions">.*?</p>', html)
+        got = _BAND.search(html)
         if not got:
             findings.append(f"[band] {rel(p)} has a band with no band-actions")
-        elif got.group(0) != ref.group(0):
-            findings.append(f"[band] {rel(p)} band-actions differs from geo")
+        elif got.group(0) != ref_band.group(0):
+            findings.append(f"[band] {rel(p)} band-actions differs from "
+                            f"{rel(ref_p)}")
 
 # 28. the generator, the script and the sheet still agree ------------------
 # A rename in one of the three produces a page that looks finished and does
@@ -809,19 +1239,485 @@ for p in all_pages:
 # Services, Writing and Studio were unreachable from a phone on all 18 pages.
 # The <details> menu is the fix; these 3 checks are what stops it being quietly
 # deleted or, worse, half-deleted.
-ref_head = block(read(os.path.join(ROOT, "geo", "index.html")), "HEADER") or ""
-for _href in _shell.NAV_PATHS:
-    n = ref_head.count(f'href="{_href}"')
-    if n != 2:
-        findings.append(f"[nav] the header names {_href} {n} time(s). It needs one "
-                        f"copy for the row and one for the phone menu")
-if "<details" not in ref_head or "<summary" not in ref_head:
-    findings.append("[nav] the header has no <details> menu, so below 720px only "
-                    ".head-cta is reachable")
+#
+# The hrefs are localised, because /work/ and /it/work/ are different pages and
+# an Italian phone menu full of English links is the same unreachable-navigation
+# bug wearing a different hat. shell.localise is the function that built them,
+# so it is the function that says what they should be.
+for lg in i18n.LANGS:
+    _ref_p = twin(REF_PAGE, lg)
+    if _ref_p is None:
+        continue
+    ref_head = block(read(_ref_p), "HEADER") or ""
+    for _href in _shell.NAV_PATHS:
+        _want = _shell.localise(_href, lg)
+        n = ref_head.count(f'href="{_want}"')
+        if n != 2:
+            findings.append(f"[nav] the {lg} header names {_want} {n} time(s). "
+                            f"It needs one copy for the row and one for the "
+                            f"phone menu")
+    if "<details" not in ref_head or "<summary" not in ref_head:
+        findings.append(f"[nav] the {lg} header has no <details> menu, so below "
+                        f"720px only .head-cta is reachable")
 if ".head-nav > a:not(.head-cta)" not in css:
     findings.append("[nav] main.css hides the header links with a descendant "
                     "selector, which hides the phone menu's copies too. It has to "
                     "be a child combinator, or the menu opens onto nothing")
+
+# ================================================ the trilingual contract ==
+# Checks 34 to 41. Everything above this line judges a page. Everything below
+# it judges a page AGAINST ITS TWIN, which is the only way most of these
+# failures can be seen at all: a dropped list item, a merged paragraph and an
+# English heading that never got translated are all perfectly valid HTML, and
+# every check above would pass them without a word.
+
+# 34. every hreflang cluster is complete, reciprocal and re-derived --------
+# Re-derived from the path, never parsed and trusted. shell.alternates() builds
+# these and shell.switcher() reuses the same function, so a bug in it would
+# produce a head and a switcher that agree with each other and with nothing
+# else. This derives the answer independently and compares.
+#
+# Reciprocity is the property Google actually requires: if the English page
+# names the Italian one, the Italian one has to name the English one back, or
+# the whole cluster is dropped and each page is treated as unrelated. Because
+# every member's list is compared against the same derived list, reciprocity
+# holds by construction once this passes, rather than being hoped for.
+_ALT = re.compile(r'<link rel="alternate" hreflang="([^"]+)" href="([^"]+)">')
+
+for en_rel, fam in sorted(FAMILY.items()):
+    en_p = fam.get("en")
+    if en_p is None:
+        findings.append(f"[hreflang] {en_rel} exists in "
+                        f"{sorted(fam)} and not in English. English is the "
+                        f"source and the x-default: there is no cluster "
+                        f"without it")
+        continue
+    if not indexable(read(en_p)):
+        # A noindex page gets NEITHER a canonical nor alternates. There is one
+        # 404 per origin on GitHub Pages, so advertising /it/404.html would
+        # point 2 hreflang tags at files that will never exist.
+        for lg, p in sorted(fam.items()):
+            if _ALT.search(read(p)):
+                findings.append(f"[hreflang] {rel(p)} is noindex and still "
+                                f"carries alternates, which advertise pages "
+                                f"this host does not serve")
+        continue
+
+    url = url_of(en_rel)
+    # One language is not a cluster, and shell.alternates() says so by emitting
+    # nothing. So does this. A single-language site that declared hreflang="en"
+    # and an x-default pointing at itself would be advertising a choice it does
+    # not offer, and every page would carry 2 tags that mean nothing until the
+    # day i18n.LANGS changes.
+    want = ([] if len(i18n.LANGS) < 2 else
+            [(lg, _SITE + i18n.url_for(url, lg)) for lg in i18n.LANGS]
+            + [("x-default", _SITE + i18n.url_for(url, "en"))])
+    stale = [lg for lg in fam if lg not in i18n.LANGS]
+    if stale:
+        findings.append(f"[hreflang] {en_rel} has {stale} on disk and "
+                        f"i18n.LANGS is {list(i18n.LANGS)}. Those files are "
+                        f"served, indexable and named by nothing")
+    for lg in i18n.LANGS:
+        p = fam.get(lg)
+        if p is None:
+            findings.append(f"[hreflang] {en_rel} has no {lg} page. A family is "
+                            f"{len(i18n.LANGS)} members or it is not a family, "
+                            f"and the other members already link at this one")
+            continue
+        got = _ALT.findall(read(p))
+        if len(got) != len(want):
+            findings.append(
+                f"[hreflang] {rel(p)} declares {len(got)} alternates, expected "
+                f"{len(want)}" + (": one per language plus x-default" if want
+                                  else ". i18n.LANGS has one language, and one "
+                                       "language is not a cluster"))
+        if not want:
+            continue
+        own = _SITE + i18n.url_for(url, lg)
+        if own not in [h for _, h in got]:
+            findings.append(f"[hreflang] {rel(p)} does not name itself among "
+                            f"its own alternates. A cluster whose members do "
+                            f"not include themselves is not a cluster")
+        xd = [h for hl, h in got if hl == "x-default"]
+        if xd != [_SITE + i18n.url_for(url, "en")]:
+            findings.append(f"[hreflang] {rel(p)} says x-default is {xd}, and "
+                            f"it is the English URL "
+                            f"{_SITE + i18n.url_for(url, 'en')}. A translation "
+                            f"declaring itself the x-default orphans the "
+                            f"English page from the cluster it belongs to")
+        if got != want:
+            findings.append(f"[hreflang] {rel(p)} alternates are {got}, "
+                            f"re-derived from the path they are {want}")
+
+# 35. no English left behind ------------------------------------------------
+# The half of the translation problem check 11 cannot see. Check 11 fails any
+# 9-word sentence that appears on 2 pages, and an untranslated paragraph is
+# byte-identical to its English twin, so the long stuff is already covered and
+# covered for free. What it cannot see is everything SHORTER: a nav label, a
+# sidebar heading, a button, an aria-label. Those are the strings a translation
+# pass misses, because most of them are not text nodes at all.
+#
+# Two arms, and they catch different mistakes. The first reads the chrome
+# modules and fails a source file that never got translated. The second reads
+# the pages and fails a GENERATOR that emitted the English string even though
+# the translation exists, which is a bug no amount of reading chrome_it.py
+# would find.
+_CHROME_MOD = {"en": _chrome, "it": _chrome_it, "sq": _chrome_sq}
+
+# Longest first, so "Iglisi Watch" is removed before "Iglisi" can be. Case
+# insensitive, because the same proper noun is title case in a heading and lower
+# case mid-sentence: "on-page" is in KEEP_ENGLISH and the Italian service page
+# opens a section with "On-page", which a case-sensitive list reported as
+# English left behind on a page that is doing exactly what it was told.
+#
+# Bounded, and that is not decoration either. "AI" is in KEEP_ENGLISH and
+# unbounded it eats the "ai" out of half the Italian words on the page, which
+# would quietly make real findings look like proper nouns.
+#
+# Host names are the FIRST alternative rather than a second pass, and that is
+# the whole reason this is one regex. The work index lists proaffy.com beside
+# ProAffy, and the address is hello@ the site's own host. Strip proper nouns
+# first and ".com" is left over as a word; strip hosts first and "hello@" is.
+# Alternation is leftmost-first, so the host branch takes proaffy.com whole and
+# declines hello@..., where the address branch then takes the lot.
+_NOT_COPY = re.compile(
+    r"\b(?:[\w-]+(?:\.[\w-]+)+|" + "|".join(re.escape(w) for w in sorted(
+        set(glossary.KEEP_ENGLISH) | set(glossary.IDENTICAL_BY_DESIGN)
+        | set(i18n.AUTONYM.values())
+        | {_shell.BRAND, _shell.WORDMARK, _shell.EMAIL, _shell.FOUNDER},
+        key=len, reverse=True)) + r")\b", re.I)
+
+
+def translatable(s):
+    """Is there a word in here that a translator would have changed?
+
+    A proper noun is not English left behind: it is the same string in all 3
+    languages on purpose, and glossary.KEEP_ENGLISH is the list of them. Nor is
+    a host name, a number, a symbol entity or a slash. What is left after those
+    come out is the question, and 3 letters is the shortest thing this site
+    translates.
+    """
+    s = _NOT_COPY.sub(" ", s)
+    s = re.sub(r"&#?\w+;", " ", s)          # the copyright sign is not a word
+    s = re.sub(r"\d+", " ", s)
+    return any(len(re.sub(r"[^A-Za-zÀ-ÿ]", "", t)) >= 3 for t in s.split())
+
+
+def chrome_values(mod):
+    """{attribute: [strings]} for one chrome module, tokens filled as shell fills
+    them. Lists are flattened: FOOT_LABELS is a list of lists."""
+    def flat(v):
+        if isinstance(v, str):
+            return [v.replace("{brand}", _shell.BRAND).replace("{dot}", _shell.DOT)]
+        if isinstance(v, (list, tuple)):
+            return [s for x in v for s in flat(x)]
+        return []
+    return {a: flat(getattr(mod, a)) for a in dir(mod)
+            if a.isupper() and not a.startswith("_")}
+
+
+_EN_CHROME = chrome_values(_chrome)
+# One finding per page per string. "Writing" is both a nav label and a footer
+# label, and arms 2 and 3 both see it, so without this the same sentence is
+# printed 3 times and the reader learns to skim the section.
+_SAID_ENGLISH = set()
+
+for lg in i18n.LANGS:
+    if lg == "en":
+        continue
+    mine = chrome_values(_CHROME_MOD[lg])
+    own_strings = {s for vals in mine.values() for s in vals}
+    for attr, en_vals in sorted(_EN_CHROME.items()):
+        tr_vals = mine.get(attr, [])
+        for i, en_s in enumerate(en_vals):
+            if i >= len(tr_vals):
+                continue           # shell.py's import-time same_shape owns this
+            tr_s = tr_vals[i]
+            where = f"{attr}[{i}]" if len(en_vals) > 1 else attr
+            if en_s in glossary.IDENTICAL_BY_DESIGN or not translatable(en_s):
+                continue
+            # arm 1: the source file itself never got translated
+            if tr_s == en_s:
+                findings.append(f"[english] chrome_{lg}.py {where} is still "
+                                f"the English {en_s!r}. If it is meant to be "
+                                f"the same word in all 3, it belongs in "
+                                f"glossary.IDENTICAL_BY_DESIGN with a reason")
+                continue
+            # arm 2: a generator emitted the English one anyway.
+            #
+            # NO LENGTH LIMIT HERE, unlike arm 3. Check 11 strips the band
+            # before it compares sentences, and the band contains the whole
+            # footer, so FOOT_META's 13 words are invisible to it however many
+            # pages they appear on. The other 2 long chrome strings are the
+            # WhatsApp prefill and the send error, and both live in attributes,
+            # which check 11 never reads either. Deferring to it here would
+            # defer to nothing.
+            pat = re.compile(r"(?<![A-Za-zÀ-ÿ])" + re.escape(en_s)
+                             + r"(?![A-Za-zÀ-ÿ])")
+            for p in in_lang(lg):
+                if pat.search(read(p)) and (rel(p), en_s) not in _SAID_ENGLISH:
+                    _SAID_ENGLISH.add((rel(p), en_s))
+                    findings.append(f"[english] {rel(p)} carries the English "
+                                    f"chrome string {en_s!r} while "
+                                    f"chrome_{lg}.py says {tr_s!r}. A generator "
+                                    f"is reading chrome.py instead of "
+                                    f"shell.ch(lang)")
+
+    # arm 3: anything short that a translated page and its English twin both
+    # say. This is the one that finds copy rather than chrome, and it is how
+    # "Get a free audit", hardcoded in gen_blog.py, and a whole untranslated
+    # <title> turn up at all. Anything the page's own chrome legitimately says
+    # in English is skipped: arm 1 has already judged those.
+    for p in in_lang(lg):
+        en_p = twin(en_of(rel(p)), "en")
+        if en_p is None:
+            continue
+        for s in sorted(short_runs(read(p)) & short_runs(read(en_p))):
+            if s in own_strings or s in glossary.IDENTICAL_BY_DESIGN:
+                continue
+            if not translatable(s) or (rel(p), s) in _SAID_ENGLISH:
+                continue
+            _SAID_ENGLISH.add((rel(p), s))
+            findings.append(f"[english] {rel(p)} and its English twin both say "
+                            f"{s!r}, word for word. Either it was never "
+                            f"translated, or it is the same in both by design "
+                            f"and belongs in glossary.IDENTICAL_BY_DESIGN")
+
+# 36. the language switcher agrees with the head ---------------------------
+# shell.alternates() feeds head() and footer() both, so the generator cannot
+# make them disagree. That is exactly why this re-reads them out of the FINISHED
+# HTML rather than asking shell: a check that trusts the same function the page
+# trusted has proved nothing. watch.al's static switcher hardcodes href="/sq/",
+# so with JS off a reader on a product page is dumped on the Albanian homepage,
+# and the version that follows the reader is its JavaScript one, which its own
+# CSP now blocks. Both halves of that are checked here.
+_SW = re.compile(r'(?s)<nav class="foot-lang"[^>]*>(.*?)</nav>')
+_SW_ITEM = re.compile(r"(?s)<(a|span)\b([^>]*)>(.*?)</\1>")
+
+if "foot-lang" in js_src:
+    findings.append("[switcher] js/main.js mentions foot-lang. The switcher is "
+                    "static <a> elements: script-src has no unsafe-inline, and "
+                    "rule 32 wants the finished state to be the CSS default")
+
+for p in all_pages:
+    html, lg = read(p), LANG[p]
+    sw = _SW.search(html)
+    alts = dict(_ALT.findall(html))
+    # A page with no cluster must have no switcher. The 404 is the case: it has
+    # no equivalent in another language and must not pretend to.
+    if len(i18n.LANGS) < 2 or not indexable(html):
+        if sw:
+            findings.append(f"[switcher] {rel(p)} has a language switcher and "
+                            f"no alternates to build it from. It would link at "
+                            f"pages this host does not serve")
+        continue
+    if not sw:
+        findings.append(f"[switcher] {rel(p)} has no .foot-lang switcher. A "
+                        f"reader who lands on the wrong language has no way "
+                        f"out of it")
+        continue
+    inner = sw.group(1)
+    for bad in ("<button", "<select", "<script", "onclick=", "onchange="):
+        if bad in inner:
+            findings.append(f"[switcher] {rel(p)}: the switcher contains "
+                            f"{bad!r}. It is static <a> elements, so it works "
+                            f"with JS off and needs no inline handler the CSP "
+                            f"would block anyway")
+    items = _SW_ITEM.findall(inner)
+    if len(items) != len(i18n.LANGS):
+        findings.append(f"[switcher] {rel(p)} offers {len(items)} languages, "
+                        f"the site builds {len(i18n.LANGS)}")
+        continue
+    for (tag, attrs, text), lg2 in zip(items, i18n.LANGS):
+        text = re.sub(r"\s+", " ", re.sub(r"(?s)<[^>]+>", "", text)).strip()
+        if text != i18n.AUTONYM[lg2]:
+            findings.append(f"[switcher] {rel(p)} names {text!r} where the "
+                            f"autonym for {lg2} is {i18n.AUTONYM[lg2]!r}. A "
+                            f"language named in a language you cannot read is "
+                            f"furniture")
+        if lg2 == lg:
+            if tag != "span" or 'aria-current="page"' not in attrs:
+                findings.append(f"[switcher] {rel(p)}: the current language is "
+                                f"a <{tag}>, and it is a span with "
+                                f'aria-current="page". A link to the page you '
+                                f"are on is furniture")
+            continue
+        if tag != "a":
+            findings.append(f"[switcher] {rel(p)}: {lg2} is a <{tag}> and not "
+                            f"a link, so it cannot be reached")
+            continue
+        href = re.search(r'href="([^"]*)"', attrs)
+        want_href = alts.get(lg2, "")[len(_SITE):]
+        if not href or href.group(1) != want_href:
+            findings.append(f"[switcher] {rel(p)} sends {lg2} to "
+                            f"{href.group(1) if href else None!r}, and its own "
+                            f"head says the {lg2} alternate is {want_href!r}. "
+                            f"The switcher points at the EQUIVALENT page, not "
+                            f"at a language's home page")
+        if f'hreflang="{lg2}"' not in attrs:
+            findings.append(f"[switcher] {rel(p)}: the {lg2} link carries no "
+                            f"hreflang, so nothing but the word says what it "
+                            f"leads to")
+
+# 37. the page says what language it is, and agrees with where it lives ----
+# Everything else here derives the language from the directory. If the document
+# itself disagrees, a screen reader announces Albanian in an English voice and
+# Google reads the whole cluster as duplicates of one language. Nothing checked
+# this: a page could have shipped with lang="en" under /sq/ and 6 checks above
+# would have gone on comparing it against the right twin regardless.
+for p in all_pages:
+    html, lg = read(p), LANG[p]
+    m = re.search(r'<html lang="([^"]+)"', html)
+    if not m or m.group(1) != i18n.HTML_LANG[lg]:
+        findings.append(f"[lang] {rel(p)} declares lang="
+                        f"{m.group(1) if m else None!r} and lives in {lg}")
+    o = re.search(r'<meta property="og:locale" content="([^"]+)"', html)
+    if not o or o.group(1) != i18n.OG_LOCALE[lg]:
+        findings.append(f"[lang] {rel(p)} declares og:locale "
+                        f"{o.group(1) if o else None!r}, expected "
+                        f"{i18n.OG_LOCALE[lg]!r}")
+    for v in re.findall(r'"inLanguage":\s*"([^"]+)"', html):
+        if v != i18n.HTML_LANG[lg]:
+            findings.append(f"[lang] {rel(p)} JSON-LD says inLanguage {v!r} and "
+                            f"the page is {i18n.HTML_LANG[lg]!r}")
+
+# 38. a translation keeps the skeleton -------------------------------------
+# i18n.same_shape() enforces this on the RECORDS, at import, and it is the
+# better place to catch it because the message names the key. It cannot see the
+# other half: a generator that drops an element while rendering a correct
+# record, or a translator who moved a sentence from one paragraph into the one
+# above it INSIDE a single string, where the record shape never changes.
+#
+# Element counts are exact. There is no allowance and there should not be one:
+# a translation answers the English list item for list item, and a page with 11
+# <li> where the English has 12 has lost a service, a promise or a client.
+#
+# The word ratio is the loose half, and it is loose on purpose. Italian runs
+# longer and Albanian shorter, measured here at 0.96 to 1.06 across all 34
+# pages, so 0.75 to 1.35 is far outside anything grammar produces. Landing
+# outside it means prose was added or dropped, which is what neither a word cap
+# nor an element count can see.
+PARITY_TAGS = ("h1", "h2", "h3", "h4", "p", "li", "ul", "ol", "a", "strong",
+               "em", "img", "section", "table", "tr", "th", "td", "dl", "dt",
+               "dd", "form", "input", "label", "blockquote", "figure",
+               "details", "summary", "nav")
+W_LO, W_HI = 0.75, 1.35
+for p in TRANSLATED:
+    en_p = twin(en_of(rel(p)), "en")
+    if en_p is None:
+        continue               # check 34 owns a page with no English twin
+    src, tr = read(en_p), read(p)
+    for t in PARITY_TAGS:
+        na = len(re.findall(r"<" + t + r"\b", src))
+        nb = len(re.findall(r"<" + t + r"\b", tr))
+        if na != nb:
+            findings.append(f"[parity] {rel(p)} has {nb} <{t}> and "
+                            f"{rel(en_p)} has {na}. A translation answers the "
+                            f"English: never merge 2 paragraphs, never drop a "
+                            f"list item, never add one")
+    wa, wb = len(text_of(src).split()), len(text_of(tr).split())
+    ratio = wb / wa if wa else 0
+    if not (W_LO <= ratio <= W_HI):
+        findings.append(f"[parity] {rel(p)} is {wb} words against {wa} in "
+                        f"{rel(en_p)}, a ratio of {ratio:.2f} (want "
+                        f"{W_LO} to {W_HI}). Grammar does not do that: "
+                        f"something was explained, or something was cut")
+
+# 39. one word per concept -------------------------------------------------
+# glossary.BANNED is the enforcement half of the glossary and this is the only
+# thing that reads it. Every entry is a word somebody would reasonably reach
+# for and that we decided against, so the finding carries the reason: a gate
+# that says "do not write that" without saying what to write instead gets
+# argued with, and it should be.
+#
+# Case-sensitive, deliberately. The patterns say [Ss] where they mean either,
+# so folding case here would override an author who was specific on purpose and
+# would make "IA" match "ia" inside half the Italian words on the page.
+for lg, pat, why in glossary.BANNED:
+    if lg not in i18n.LANGS:
+        continue
+    rx = re.compile(pat)
+    for p in in_lang(lg):
+        m = rx.search(copy_text(read(p)))
+        if m:
+            findings.append(f"[glossary] {rel(p)} says {m.group(0)!r}: {why}")
+
+# 40. one encoding, and it is UTF-8 ----------------------------------------
+# A letter written as an entity is the same letter to a browser and a different
+# one to everything else: a grep, a find-and-replace, a word count, a diff, and
+# the gate above. watch.al carries 151 files with both forms of the Albanian
+# e-diaeresis in the same document and its own notes call it the worst legacy
+# in that repo, because every sweep since has had to match both spellings or
+# report a corrupt corpus clean. This site is new enough to never have it.
+#
+# The test is the letter, not a list of entity names. Anything that decodes to
+# a single alphabetic character belongs in the file as that character. The
+# copyright sign decodes to a symbol and stays; the 5 markup entities are
+# structurally required and stay.
+_ENTITY = re.compile(r"&(?:#\d+|#[xX][0-9A-Fa-f]+|[A-Za-z][A-Za-z0-9]*);")
+_MARKUP = {"&amp;", "&lt;", "&gt;", "&quot;", "&apos;",
+           "&#38;", "&#60;", "&#62;", "&#34;", "&#39;"}
+_SRC_FILES = [os.path.join(ROOT, ".build", f)
+              for f in sorted(os.listdir(os.path.join(ROOT, ".build")))
+              if f.endswith(".py")]
+for p in all_pages + _SRC_FILES:
+    for m in _ENTITY.finditer(read(p)):
+        if m.group(0) in _MARKUP:
+            continue
+        ch = _entities.unescape(m.group(0))
+        if len(ch) == 1 and ch.isalpha():
+            findings.append(f"[encoding] {rel(p)} writes {m.group(0)} where "
+                            f"the literal {ch} belongs. Files are UTF-8 and a "
+                            f"letter is a letter")
+
+# 41. the separators moved -------------------------------------------------
+# Rule 21 says only what is evidenced gets published, and every number here was
+# typed by a person reading Search Console. Italian and Albanian both write a
+# comma for the decimal and a dot for thousands, so 8.4 is 8,4 and 137,210 is
+# 137.210. l10n.dec() does this for the numbers a generator emits; the ones
+# sitting mid-sentence in prose are the translator's to move, and those are the
+# ones that survive.
+#
+# Two arms, because neither is enough alone.
+#
+# The first reads the number: a dot with anything other than exactly 3 digits
+# after it is a decimal point, and a decimal point is English here. Exactly 3
+# is left alone because 137.210 is a correct Italian thousands group and the
+# gate has no way to know it is not 137 and a bit.
+#
+# That ambiguity is why the second arm exists. A number carrying a separator
+# that is byte-identical on the page and on its English twin was not
+# reformatted, whichever separator it is, and no dictionary is needed to say
+# so. It is the arm that catches the thousands comma the first one has to let
+# through.
+#
+# One finding per number per page. The same 8.4 is both an English decimal point
+# and identical to its twin, and a gate that says so twice is a gate somebody
+# starts skimming.
+_SEPARATED = re.compile(r"\d[\d.,]*[.,]\d+")
+for p in TRANSLATED:
+    body = text_of(read(p))
+    en_p = twin(en_of(rel(p)), "en")
+    en_nums = ({m.group(0) for m in _SEPARATED.finditer(text_of(read(en_p)))}
+               if en_p else set())
+    said = set()
+    for m in _SEPARATED.finditer(body):
+        n = m.group(0)
+        if n in said:
+            continue
+        frac = re.search(r"\.(\d+)$", n)
+        if frac and len(frac.group(1)) != 3:
+            said.add(n)
+            findings.append(f"[number] {rel(p)} writes {n!r} with an English "
+                            f"decimal point. {LANG[p]} writes the decimal with "
+                            f"a comma: move the separator, never recompute the "
+                            f"number")
+        elif n in en_nums:
+            said.add(n)
+            findings.append(f"[number] {rel(p)} and {rel(en_p)} both write "
+                            f"{n!r}. A number carrying a separator cannot be "
+                            f"identical in English and {LANG[p]}: this one "
+                            f"never got reformatted")
 
 # ------------------------------------------------------------------- report
 print(f"pages checked: {len(all_pages)}")

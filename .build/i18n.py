@@ -42,7 +42,7 @@ ALL = ("en", "it", "sq")
 # head, and check 2 would be right to fail it.
 #
 # Flipping this to ALL is the one edit that turns the site trilingual.
-LANGS = ("en",)
+LANGS = ALL
 PREFIX = {"en": "", "it": "/it", "sq": "/sq"}
 HTML_LANG = {"en": "en", "it": "it", "sq": "sq"}
 # Only what the share card declares. hreflang stays the plain language code, so
