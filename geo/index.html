@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GEO: generative engine optimization · minarank</title>
+  <meta name="description" content="Generative engine optimization: making your expertise legible to the systems that write answers. What an AI engine actually reads, what we change, and what nobody can promise.">
+  <link rel="canonical" href="https://minarank.com/geo/">
+  <meta name="theme-color" content="#F7F5F2">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="minarank">
+  <meta property="og:title" content="GEO: generative engine optimization · minarank">
+  <meta property="og:description" content="When an AI answers, it cites someone. The work of being that someone.">
+  <meta property="og:url" content="https://minarank.com/geo/">
+  <meta property="og:image" content="https://minarank.com/assets/og/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link rel="preload" href="/assets/fonts/clash-display-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/satoshi-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/fonts.css">
+  <link rel="stylesheet" href="/css/main.css">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://minarank.com/geo/#service",
+      "name": "Generative Engine Optimization",
+      "serviceType": "Generative Engine Optimization",
+      "description": "Generative engine optimization: making your expertise legible to the systems that write answers. What an AI engine actually reads, what we change, and what nobody can promise.",
+      "url": "https://minarank.com/geo/",
+      "provider": {
+        "@id": "https://minarank.com/#org"
+      },
+      "areaServed": [
+        "AL",
+        "IT",
+        "Worldwide"
+      ],
+      "availableLanguage": [
+        "en",
+        "it",
+        "sq"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://minarank.com/geo/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is GEO just SEO with a new name?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, though they overlap heavily. SEO competes for a position in a list of links. GEO competes to be the source a generated answer draws from and attributes. The same technical foundations serve both, but the unit of success differs: a ranking versus a citation. A page can rank well and never be cited, and a page can be cited without ranking first."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you guarantee that ChatGPT will recommend my business?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, and neither can anyone else. Generated answers vary by model, by phrasing, by date and by user. What can be done is raise the probability: make the expertise extractable, make the entity resolvable, and make the claims corroborated off-site. Anyone offering a guaranteed placement in an AI answer is selling something that does not exist."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does llms.txt actually work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "As a citation mechanism, currently close to nothing. No major provider has been shown to consume it. It costs one file, so it is worth shipping, but it should never be sold as a ranking lever. Anyone charging meaningfully for llms.txt is charging for a text file."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need GEO if my site already ranks well?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ranking well is the strongest starting position, because retrieval frequently draws from pages that already rank. But ranking does not guarantee extraction. If the substance of a page lives in an image, in a script-rendered widget, or behind an interaction, it can rank and still be invisible to the system writing the answer."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://minarank.com/geo/#crumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://minarank.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "GEO",
+          "item": "https://minarank.com/geo/"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- SHARED:HEADER -->
+  <header class="site-head">
+    <div class="wrap head-row">
+      <a class="head-logo" href="/" aria-label="minarank home">
+        <svg viewBox="0 0 64 64" width="36" height="36" aria-hidden="true">
+          <path fill="none" stroke="#1B1F3B" stroke-width="8" stroke-linejoin="miter" stroke-miterlimit="2" stroke-linecap="butt" d="M14 54 L14 18 L32 42 L50 18 L50 54"/>
+          <path fill="none" stroke="#FF6B4A" stroke-width="7" stroke-linecap="butt" d="M53 14 L60.5 4"/>
+        </svg>
+      </a>
+      <nav class="head-nav" aria-label="Primary">
+        <a href="/#services">Services</a>
+        <a href="/systems/">Systems</a>
+        <a href="/work/">Work</a>
+        <a href="/studio/">Studio</a>
+        <a class="head-cta" href="/start/">Start a project</a>
+      </nav>
+    </div>
+  </header>
+  <!-- /SHARED:HEADER -->
+
+  <main id="main">
+    <div class="wrap">
+      <header class="page-head">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="/">minarank</a>
+          <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1 11H5V7H9V3H11" fill="none" stroke="#5B5F7A" stroke-width="2"/></svg>
+          <span aria-current="page">GEO</span>
+        </nav>
+        <p class="eyebrow">Service 02</p>
+        <h1 class="page-title">When an AI answers, it cites someone.</h1>
+        <p class="standfirst"><strong>Make it you.</strong> Buyers now ask a model before they ask a search box. The answer they get names a handful of sources. This is the work of becoming one of them.</p>
+      </header>
+
+      <p class="finding">
+        <span class="finding-label">The finding</span>
+        Generative engine optimization is the work of making your expertise legible to the systems that write answers. An answer engine does not read your page. It reads a flattened extraction of it: text in document order, headings as structure, structured data as assertions, links as corroboration. Everything else is discarded.
+      </p>
+
+      <div class="grid">
+        <div class="prose">
+
+          <h2>What actually survives extraction</h2>
+          <p>Most of what a designer labours over does not reach the model. Position, colour, spacing and interaction carry meaning to a human and nothing at all to a retrieval system. What survives, roughly in order of weight:</p>
+          <ul><li>The first hundred words under the heading that poses the question.</li><li>The heading tree, read as an outline of the argument.</li><li>Short declarative sentences that name their own subject, rather than relying on a pronoun to point at something three paragraphs up.</li><li>Tables and lists, which survive flattening better than prose.</li><li>Structured data, read as assertions about entities.</li><li>Alt text, and the anchor text of outbound links.</li></ul>
+          <p>What does not survive: content injected after load, text baked into images, meaning carried only by layout, anything behind a click. Most retrieval fetchers do not execute JavaScript, which is the entire argument on our <a href="/web-design/">web design page</a> restated as mechanism.</p>
+
+          <h2>What we do</h2>
+          <ol class="ledger">
+            <li>
+              <span class="ledger-n">01</span>
+              <div>
+                <h3>Extraction audit</h3>
+                <p>We flatten your key pages the way a retrieval system does and read what is left. It is usually the most uncomfortable document a client receives, because the answer to why nobody cites you is often that the part which matters is a picture.</p>
+              </div>
+            </li>
+            <li>
+              <span class="ledger-n">02</span>
+              <div>
+                <h3>Entity clarity</h3>
+                <p>One machine-resolvable identity for the business and the people in it, stated the same way everywhere, and corroborated by sources you do not control. Off-site corroboration outranks on-site assertion in every citation hierarchy worth trusting.</p>
+              </div>
+            </li>
+            <li>
+              <span class="ledger-n">03</span>
+              <div>
+                <h3>Answer-shaped structure</h3>
+                <p>A self-contained answer of forty to sixty words directly under the heading that asks the question, naming its own subject. This is the single highest-leverage change available, and almost nobody does it, because it reads as redundant to a human skimming the page.</p>
+              </div>
+            </li>
+            <li>
+              <span class="ledger-n">04</span>
+              <div>
+                <h3>Structured data that asserts something true</h3>
+                <p>Schema is a set of claims made in the one format where a machine takes you literally. We mark up what exists and nothing that does not. Declaring a search box you do not have, or reviews you wrote yourself, is a false statement to the only audience that cannot detect tone.</p>
+              </div>
+            </li>
+            <li>
+              <span class="ledger-n">05</span>
+              <div>
+                <h3>Crawler access</h3>
+                <p>The robots rules that decide whether any of the above is ever seen. Which AI crawlers you allow is a commercial decision, not a technical default, and most businesses have never made it deliberately. We make it explicit, in writing.</p>
+                <p class="payoff"><svg class="tick" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 11H5V7H9V3H11" fill="none" stroke="#FF6B4A" stroke-width="2"/></svg>
+                  Your name inside the answer.</p>
+              </div>
+            </li>
+          </ol>
+
+          <section class="exclusions">
+            <h2>What we do not do</h2>
+            <ul>
+              <li>We do not sell <code>llms.txt</code> as a ranking lever. We ship the file because it costs one file, and we tell you plainly that no major provider has been shown to consume it.</li>
+              <li>We do not add FAQ markup to pages that contain no questions. It is the most over-used and worst-implemented tactic in this field.</li>
+              <li>We do not promise a placement in a generated answer. Nobody can, and the promise is how you identify who is guessing.</li>
+              <li>We do not produce content at volume to feed a model. Answer engines are selecting for substance and corroboration, which volume actively works against.</li>
+            </ul>
+          </section>
+
+          <section class="faq">
+            <h2>Questions worth asking</h2>
+            <div class="faq-item">
+              <h3 class="faq-q">Is GEO just SEO with a new name?</h3>
+              <p class="faq-a">No, though they overlap heavily. SEO competes for a position in a list of links. GEO competes to be the source a generated answer draws from and attributes. The same technical foundations serve both, but the unit of success differs: a ranking versus a citation. A page can rank well and never be cited, and a page can be cited without ranking first.</p>
+            </div>
+            <div class="faq-item">
+              <h3 class="faq-q">Can you guarantee that ChatGPT will recommend my business?</h3>
+              <p class="faq-a">No, and neither can anyone else. Generated answers vary by model, by phrasing, by date and by user. What can be done is raise the probability: make the expertise extractable, make the entity resolvable, and make the claims corroborated off-site. Anyone offering a guaranteed placement in an AI answer is selling something that does not exist.</p>
+            </div>
+            <div class="faq-item">
+              <h3 class="faq-q">Does llms.txt actually work?</h3>
+              <p class="faq-a">As a citation mechanism, currently close to nothing. No major provider has been shown to consume it. It costs one file, so it is worth shipping, but it should never be sold as a ranking lever. Anyone charging meaningfully for llms.txt is charging for a text file.</p>
+            </div>
+            <div class="faq-item">
+              <h3 class="faq-q">Do I need GEO if my site already ranks well?</h3>
+              <p class="faq-a">Ranking well is the strongest starting position, because retrieval frequently draws from pages that already rank. But ranking does not guarantee extraction. If the substance of a page lives in an image, in a script-rendered widget, or behind an interaction, it can rank and still be invisible to the system writing the answer.</p>
+            </div>
+          </section>
+
+        </div>
+
+        <aside class="side" aria-label="At a glance">
+          <figure class="fig fig-lead">
+            <svg viewBox="-10 -10 180 180" aria-hidden="true">
+              <path class="pl-reg" d="M0 -8 V-3 M-8 0 H-3 M160 -8 V-3 M168 0 H163 M0 168 V163 M-8 160 H-3 M160 168 V163 M168 160 H163" fill="none" stroke="#E4E1D9" stroke-width="1"/>
+              <rect class="pl-frame" x="0.5" y="0.5" width="159" height="159" fill="none" stroke="#E4E1D9" stroke-width="1"/>
+              <rect x="8" y="8" width="144" height="64" rx="8" fill="none" stroke="#5B5F7A" stroke-width="1.5"/>
+              <rect x="22" y="22" width="100" height="5" fill="#E4E1D9"/>
+              <rect x="22" y="34" width="116" height="5" fill="#E4E1D9"/>
+              <rect x="22" y="46" width="84" height="5" fill="#E4E1D9"/>
+              <path class="pl-subject" pathLength="1" fill="none" stroke="#1B1F3B" stroke-width="2" d="M24 72 V92 H62 V112 H100 V126"/>
+              <rect x="100" y="126" width="44" height="18" fill="none" stroke="#1B1F3B" stroke-width="2"/>
+              <path class="pl-coral" fill="none" stroke="#FF6B4A" stroke-width="2" d="M140 122 H144 V118 H148 V114 H152"/>
+            </svg>
+            <figcaption class="fig-cap">FIG. 02 &#183; THE CITATION</figcaption>
+          </figure>
+
+          <div class="side-block">
+            <p class="side-h">Honest expectations</p>
+            <p>Citations move slower than rankings and are harder to attribute. Expect the first signals in months, not weeks, and expect them to be uneven across engines.</p>
+          </div>
+
+          <div class="side-block">
+            <p class="side-h">Related</p>
+            <ul class="side-list">
+              <li><a href="/seo/">SEO: the other endpoint of this argument</a></li>
+              <li><a href="/web-design/">Web design: why the build decides the ceiling</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+
+      <section class="tail">
+        <div class="tail-inner">
+          <h2>Find out what an engine currently sees.</h2>
+          <a class="cta" href="/start/">Start a project <span class="arrow" aria-hidden="true">&#8599;</span></a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <div class="band on-ink">
+    <div class="wrap band-inner">
+      <!-- SHARED:FOOTER -->
+      <footer class="site-foot" id="sitemap">
+        <div class="foot-row">
+          <span class="foot-logo-wrap">
+            <img src="/assets/logo/minarank-wordmark-paper.svg" alt="minarank" width="106" height="22" class="foot-logo">
+          </span>
+        </div>
+        <nav class="foot-index" aria-label="Site index">
+          <div class="foot-col">
+            <p class="foot-h">The climb</p>
+            <a href="/seo/">SEO</a>
+            <a href="/geo/">GEO</a>
+            <a href="/web-design/">Web Design</a>
+            <a href="/meta-ads/">Meta Ads</a>
+          </div>
+          <div class="foot-col">
+            <p class="foot-h">The workshop</p>
+            <a href="/systems/">Systems</a>
+            <a href="/work/">Work</a>
+          </div>
+          <div class="foot-col">
+            <p class="foot-h">Studio</p>
+            <a href="/studio/">About the studio</a>
+            <a href="/start/">Start a project</a>
+            <a href="mailto:hello@minarank.com">hello@minarank.com</a>
+          </div>
+        </nav>
+        <div class="foot-meta">
+          <p class="foot-acro">mina: Marketing&nbsp;· Interface&nbsp;· Navigation&nbsp;· Analytics.&nbsp;
+            rank: what follows.</p>
+          <p class="foot-copy">&#169; 2026 minarank</p>
+        </div>
+        <p class="colophon">Set in Clash Display and Satoshi · Two inks on paper · Built by hand, no frameworks · Under 100KB</p>
+      </footer>
+      <!-- /SHARED:FOOTER -->
+    </div>
+  </div>
+
+  <script src="/js/main.js" defer></script>
+</body>
+</html>

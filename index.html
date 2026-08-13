@@ -30,23 +30,47 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "minarank",
-    "alternateName": "MINA RANK",
-    "slogan": "Design becomes ranking.",
-    "description": "Four-discipline studio: SEO, GEO (generative engine optimization), web design and Meta ads. MINA stands for Marketing, Interface, Navigation, Analytics.",
-    "url": "https://minarank.com/",
-    "email": "hello@minarank.com",
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Services",
-      "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SEO", "description": "Technical SEO, content architecture and links that compound." } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "GEO", "description": "Generative engine optimization: visibility inside AI answers." } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Web Design", "description": "Fast, legible sites designed as ranking instruments." } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Meta Ads", "description": "Creative, targeting and measurement on Facebook and Instagram." } }
-      ]
-    }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://minarank.com/#org",
+        "name": "minarank",
+        "alternateName": "MINA RANK",
+        "slogan": "Design becomes ranking.",
+        "description": "Five-discipline studio: SEO, GEO (generative engine optimization), web design, Meta ads and custom business software. MINA stands for Marketing, Interface, Navigation, Analytics.",
+        "url": "https://minarank.com/",
+        "email": "hello@minarank.com",
+        "founder": { "@id": "https://minarank.com/studio/#founder" },
+        "knowsLanguage": ["en", "it", "sq"],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Services",
+          "itemListElement": [
+            { "@type": "Offer", "url": "https://minarank.com/seo/", "itemOffered": { "@type": "Service", "name": "SEO", "description": "Technical SEO, content architecture and links that compound.", "provider": { "@id": "https://minarank.com/#org" } } },
+            { "@type": "Offer", "url": "https://minarank.com/geo/", "itemOffered": { "@type": "Service", "name": "GEO", "description": "Generative engine optimization: visibility inside AI answers.", "provider": { "@id": "https://minarank.com/#org" } } },
+            { "@type": "Offer", "url": "https://minarank.com/web-design/", "itemOffered": { "@type": "Service", "name": "Web Design", "description": "Fast, legible sites designed as ranking instruments.", "provider": { "@id": "https://minarank.com/#org" } } },
+            { "@type": "Offer", "url": "https://minarank.com/meta-ads/", "itemOffered": { "@type": "Service", "name": "Meta Ads", "description": "Creative, targeting and measurement on Facebook and Instagram.", "provider": { "@id": "https://minarank.com/#org" } } },
+            { "@type": "Offer", "url": "https://minarank.com/systems/", "itemOffered": { "@type": "Service", "name": "Systems", "description": "Custom software for businesses whose work does not fit off-the-shelf tools.", "provider": { "@id": "https://minarank.com/#org" } } }
+          ]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://minarank.com/#website",
+        "url": "https://minarank.com/",
+        "name": "minarank",
+        "inLanguage": "en",
+        "publisher": { "@id": "https://minarank.com/#org" }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://minarank.com/#webpage",
+        "url": "https://minarank.com/",
+        "name": "minarank · SEO, GEO, Web Design & Meta Ads Studio",
+        "isPartOf": { "@id": "https://minarank.com/#website" },
+        "about": { "@id": "https://minarank.com/#org" }
+      }
+    ]
   }
   </script>
 </head>
@@ -66,7 +90,7 @@
     <span class="rail-arrow">↗</span>
   </div>
 
-  <!-- SHARED:HEADER · copy this block verbatim into future /blog/ pages -->
+  <!-- SHARED:HEADER -->
   <header class="site-head">
     <div class="wrap head-row">
       <a class="head-logo" href="/" aria-label="minarank home">
@@ -76,10 +100,11 @@
         </svg>
       </a>
       <nav class="head-nav" aria-label="Primary">
-        <a href="#services" data-spy="services">Services</a>
-        <a href="#method" data-spy="method">Method</a>
-        <a href="#contact" data-spy="contact">Contact</a>
-        <a class="head-cta" href="#contact">Start a project</a>
+        <a href="/#services">Services</a>
+        <a href="/systems/">Systems</a>
+        <a href="/work/">Work</a>
+        <a href="/studio/">Studio</a>
+        <a class="head-cta" href="/start/">Start a project</a>
       </nav>
     </div>
   </header>
@@ -134,7 +159,7 @@
             </div>
           </dl>
           <p class="hero-cta-row">
-            <a class="cta" href="#contact">Start a project <span class="arrow" aria-hidden="true">↗</span></a>
+            <a class="cta" href="/start/">Start a project <span class="arrow" aria-hidden="true">↗</span></a>
           </p>
         </div>
       </div>
@@ -156,6 +181,7 @@
               Pages built the way search engines wish everyone built them.</p>
             <p class="payoff"><svg class="tick" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 11H5V7H9V3H11" fill="none" stroke="#FF6B4A" stroke-width="2"/></svg>
               Pages that outrank incumbents.</p>
+            <p class="svc-more"><a href="/seo/">Read the SEO method <span class="arrow-sm" aria-hidden="true">↗</span></a></p>
           </article>
           <figure class="fig" style="--row:0" data-reveal>
             <svg viewBox="-10 -10 180 180" aria-hidden="true">
@@ -177,6 +203,7 @@
               someone. We structure your expertise so it's you.</p>
             <p class="payoff"><svg class="tick" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 11H5V7H9V3H11" fill="none" stroke="#FF6B4A" stroke-width="2"/></svg>
               Your name inside the AI answer.</p>
+            <p class="svc-more"><a href="/geo/">Read the GEO method <span class="arrow-sm" aria-hidden="true">↗</span></a></p>
           </article>
           <figure class="fig" style="--row:1" data-reveal>
             <svg viewBox="-10 -10 180 180" aria-hidden="true">
@@ -201,6 +228,7 @@
               Good enough that people link to them.</p>
             <p class="payoff"><svg class="tick" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 11H5V7H9V3H11" fill="none" stroke="#FF6B4A" stroke-width="2"/></svg>
               A site that sells while it climbs.</p>
+            <p class="svc-more"><a href="/web-design/">Read the web design method <span class="arrow-sm" aria-hidden="true">↗</span></a></p>
           </article>
           <figure class="fig" style="--row:2" data-reveal>
             <svg viewBox="-10 -10 180 180" aria-hidden="true">
@@ -224,6 +252,7 @@
               measurement across Facebook and Instagram.</p>
             <p class="payoff"><svg class="tick" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 11H5V7H9V3H11" fill="none" stroke="#FF6B4A" stroke-width="2"/></svg>
               Demand today, rankings tomorrow.</p>
+            <p class="svc-more"><a href="/meta-ads/">Read the Meta ads method <span class="arrow-sm" aria-hidden="true">↗</span></a></p>
           </article>
           <figure class="fig" style="--row:3" data-reveal>
             <svg viewBox="-10 -10 180 180" aria-hidden="true">
@@ -235,6 +264,47 @@
               <rect class="pl-coral-fill" x="84" y="78" width="4" height="4" fill="#FF6B4A"/>
             </svg>
             <figcaption class="fig-cap">FIG. 04 · THE CROSSOVER</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ THE WORKSHOP · second movement, what we build ============ -->
+    <section class="workshop" id="workshop" aria-labelledby="workshop-h">
+      <div class="wrap">
+        <header class="sec-head" data-reveal>
+          <p class="eyebrow">The workshop</p>
+          <h2 id="workshop-h">Not every problem is a ranking problem.</h2>
+        </header>
+        <div class="grid workshop-grid">
+          <div class="workshop-copy" data-reveal>
+            <p class="workshop-lead">Some of them are the hour you lose every evening,
+              the stock count that is wrong by Friday, the website that says a thing is
+              available when it sold three days ago.</p>
+            <p class="workshop-body">We build the software small businesses are missing.
+              Publish your own site from a phone. Connect the counter to the website so
+              selling something updates both. Or have the system built that does not
+              exist yet, because your work does not fit anything off the shelf.</p>
+            <p class="payoff"><svg class="tick" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 11H5V7H9V3H11" fill="none" stroke="#FF6B4A" stroke-width="2"/></svg>
+              Four businesses run this today.</p>
+            <p class="svc-more"><a href="/systems/">See the workshop <span class="arrow-sm" aria-hidden="true">&#8599;</span></a></p>
+          </div>
+          <figure class="fig workshop-fig" data-reveal>
+            <svg viewBox="-10 -10 180 180" aria-hidden="true">
+              <path class="pl-reg" d="M0 -8 V-3 M-8 0 H-3 M160 -8 V-3 M168 0 H163 M0 168 V163 M-8 160 H-3 M160 168 V163 M168 160 H163" fill="none" stroke="#E4E1D9" stroke-width="1"/>
+              <rect class="pl-frame" x="0.5" y="0.5" width="159" height="159" fill="none" stroke="#E4E1D9" stroke-width="1"/>
+              <rect x="24" y="16" width="52" height="36" fill="none" stroke="#1B1F3B" stroke-width="2"/>
+              <rect x="96" y="16" width="40" height="36" fill="none" stroke="#5B5F7A" stroke-width="1.5"/>
+              <rect x="24" y="76" width="112" height="28" fill="none" stroke="#1B1F3B" stroke-width="2"/>
+              <rect x="24" y="124" width="36" height="20" fill="none" stroke="#5B5F7A" stroke-width="1.5"/>
+              <rect x="76" y="124" width="60" height="20" fill="none" stroke="#5B5F7A" stroke-width="1.5"/>
+              <path fill="none" stroke="#1B1F3B" stroke-width="2" d="M50 52 V64 H110 V76"/>
+              <path fill="none" stroke="#1B1F3B" stroke-width="2" d="M116 52 V64"/>
+              <path fill="none" stroke="#1B1F3B" stroke-width="2" d="M42 104 V124"/>
+              <path fill="none" stroke="#1B1F3B" stroke-width="2" d="M106 104 V124"/>
+              <path class="pl-coral" fill="none" stroke="#FF6B4A" stroke-width="2" d="M136 90 H144 V82 H152"/>
+            </svg>
+            <figcaption class="fig-cap">FIG. 05 &#183; THE ASSEMBLY</figcaption>
           </figure>
         </div>
       </div>
@@ -293,10 +363,10 @@
             you are reading, and references on request.</p>
         </div>
         <ul class="claims" data-reveal>
-          <!-- VERIFY WITH FOUNDER: every claim below is metric-shaped and must be checked or replaced before launch -->
+          <!-- Every claim below is evidenced in shipped code. Do not add one that cannot be demonstrated. -->
           <li>
             <span class="case-label" aria-hidden="true">CASE&nbsp;01</span>
-            <span class="claim-text">A local-service client's money keyword: page&nbsp;4 to page&nbsp;1 in five months.</span>
+            <span class="claim-text">A client catalogue of 494 pages in three languages, where every number in the prose is owned by a script and cannot drift.</span>
             <svg class="spark" viewBox="0 0 72 28" aria-hidden="true">
               <rect x="2" y="2" width="16" height="5" fill="#1B1F3B"/><rect x="22" y="2" width="10" height="5" fill="#E4E1D9"/>
               <path fill="none" stroke="#1B1F3B" stroke-width="2" d="M2 25 H18 V19 H34 V15 H50 V8 H70"/>
@@ -304,7 +374,7 @@
           </li>
           <li>
             <span class="case-label" aria-hidden="true">CASE&nbsp;02</span>
-            <span class="claim-text">A trilingual retail site rebuilt to sub-second loads, then double-digit organic growth.</span>
+            <span class="claim-text">Four businesses publish to their own sites from a phone. No CMS, no monthly licence.</span>
             <svg class="spark" viewBox="0 0 72 28" aria-hidden="true">
               <rect x="2" y="2" width="12" height="5" fill="#1B1F3B"/><rect x="18" y="2" width="16" height="5" fill="#1B1F3B"/>
               <path fill="none" stroke="#1B1F3B" stroke-width="2" d="M2 22 H14 V24 H26 V16 H42 V12 H56 V7 H70"/>
@@ -312,7 +382,7 @@
           </li>
           <li>
             <span class="case-label" aria-hidden="true">CASE&nbsp;03</span>
-            <span class="claim-text">Ad creative that cut a client's cost per lead by a third.</span>
+            <span class="claim-text">469 URLs and 1,872 language alternates, checked reciprocal on every build.</span>
             <svg class="spark" viewBox="0 0 72 28" aria-hidden="true">
               <rect x="2" y="2" width="20" height="5" fill="#1B1F3B"/><rect x="26" y="2" width="8" height="5" fill="#E4E1D9"/>
               <path fill="none" stroke="#1B1F3B" stroke-width="2" d="M2 8 H18 V14 H34 V13 H46 V20 H58 V24 H70"/>
@@ -363,26 +433,44 @@
         <h2 id="contact-h">Ready when you are.</h2>
         <p class="band-note">Tell us what you sell and where you want to be found.
           We'll answer with a plan, not a pitch deck.</p>
+        <p class="band-actions">
+          <a class="mail" href="/start/">Start a project <span class="arrow" aria-hidden="true">↗</span></a>
+        </p>
         <!-- TODO(founder): confirm contact email -->
-        <a class="mail" href="mailto:hello@minarank.com">hello@minarank.com <span class="arrow" aria-hidden="true">↗</span></a>
+        <p class="band-alt">Or write straight to <a href="mailto:hello@minarank.com">hello@minarank.com</a></p>
       </section>
 
-      <!-- SHARED:FOOTER · copy this block verbatim into future /blog/ pages -->
-      <footer class="site-foot">
+      <!-- SHARED:FOOTER -->
+      <footer class="site-foot" id="sitemap">
         <div class="foot-row">
           <span class="foot-logo-wrap">
             <img src="/assets/logo/minarank-wordmark-paper.svg" alt="minarank" width="106" height="22" class="foot-logo">
           </span>
-          <nav class="foot-nav" aria-label="Footer">
-            <a href="#services">Services</a>
-            <a href="#method">Method</a>
-            <a href="#contact">Contact</a>
-          </nav>
         </div>
+        <nav class="foot-index" aria-label="Site index">
+          <div class="foot-col">
+            <p class="foot-h">The climb</p>
+            <a href="/seo/">SEO</a>
+            <a href="/geo/">GEO</a>
+            <a href="/web-design/">Web Design</a>
+            <a href="/meta-ads/">Meta Ads</a>
+          </div>
+          <div class="foot-col">
+            <p class="foot-h">The workshop</p>
+            <a href="/systems/">Systems</a>
+            <a href="/work/">Work</a>
+          </div>
+          <div class="foot-col">
+            <p class="foot-h">Studio</p>
+            <a href="/studio/">About the studio</a>
+            <a href="/start/">Start a project</a>
+            <a href="mailto:hello@minarank.com">hello@minarank.com</a>
+          </div>
+        </nav>
         <div class="foot-meta">
           <p class="foot-acro">mina: Marketing&nbsp;· Interface&nbsp;· Navigation&nbsp;· Analytics.&nbsp;
             rank: what follows.</p>
-          <p class="foot-copy">© 2026 minarank</p>
+          <p class="foot-copy">&#169; 2026 minarank</p>
         </div>
         <p class="colophon">Set in Clash Display and Satoshi · Two inks on paper · Built by hand, no frameworks · Under 100KB</p>
       </footer>

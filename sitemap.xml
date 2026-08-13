@@ -1,8 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- TODO(founder): confirm final domain -->
   <url>
     <loc>https://minarank.com/</loc>
     <lastmod>2026-08-13</lastmod>
+  </url>
+  <url>
+    <loc>https://minarank.com/geo/</loc>
+  </url>
+  <url>
+    <loc>https://minarank.com/seo/</loc>
+  </url>
+  <url>
+    <loc>https://minarank.com/web-design/</loc>
+  </url>
+  <url>
+    <loc>https://minarank.com/meta-ads/</loc>
+  </url>
+  <url>
+    <loc>https://minarank.com/systems/</loc>
+  </url>
+  <url>
+    <loc>https://minarank.com/work/</loc>
+  </url>
+  <url>
+    <loc>https://minarank.com/studio/</loc>
+  </url>
+  <url>
+    <loc>https://minarank.com/start/</loc>
   </url>
 </urlset>

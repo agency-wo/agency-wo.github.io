@@ -79,10 +79,18 @@
     }
   }
 
-  /* scroll-spy: a quiet middot marks where you are */
+  /* nav state: mark the current section (homepage) or the current page.
+     data-spy links observe their section; path links match the URL. */
+  var here = window.location.pathname.replace(/index\.html$/, "");
+  document.querySelectorAll(".head-nav a[href^='/']").forEach(function (a) {
+    var href = a.getAttribute("href");
+    if (href.length > 1 && href.indexOf("#") === -1 && here.indexOf(href) === 0) {
+      a.setAttribute("aria-current", "true");
+    }
+  });
+
   var spyLinks = document.querySelectorAll(".head-nav a[data-spy]");
   if (spyLinks.length && "IntersectionObserver" in window) {
-    var spyMap = { services: "services", method: "method", contact: "contact" };
     var spy = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
         if (!e.isIntersecting) return;
@@ -92,7 +100,7 @@
         });
       });
     }, { rootMargin: "-30% 0px -55% 0px" });
-    Object.keys(spyMap).forEach(function (id) {
+    ["services", "method", "proof"].forEach(function (id) {
       var el = document.getElementById(id);
       if (el) spy.observe(el);
     });
