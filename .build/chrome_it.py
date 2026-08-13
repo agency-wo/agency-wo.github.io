@@ -68,6 +68,7 @@ SRC = {
     "JS_SENDING_SAY": "21151b65",
     "MENU": "c784aaa3",
     "NAV": "0aed4a3d",
+    "OG_ALT": "4ccf3412",
     "QUESTIONS": "1579db95",
     "READ_IT": "89d4581e",
     "READ_NEXT": "3715bfd2",
@@ -82,6 +83,7 @@ SRC = {
     "SIDE_WRITTEN": "4bf5b84e",
     "SKIP": "f3ac6901",
     "TURNAROUND": "5b80e988",
+    "UPDATED": "c15f9b45",
     "WA_LABEL": "515b82d6",
     "WA_PREFILL": "d28f915d",
     "WHAT_WE_DO": "bc3cba50",
@@ -142,6 +144,11 @@ ARIA_GLANCE = "In sintesi"
 ARIA_DETAILS = "Dettagli"
 ARIA_LANG = "Lingua"
 WA_LABEL = "Scrivici su WhatsApp"
+# The share card's alt text: it describes the image, not the page, because one
+# card serves all 17 Italian pages. "logotipo" rather than "logo", which in
+# Italian names the mark alone; this one is the word climbing the results.
+OG_ALT = ("Il logotipo minarank che sale su 10 risultati di ricerca numerati, "
+          "sopra i 5 servizi")
 # What actually arrives on the founder's phone. It is a data- attribute read by
 # js/main.js, so nothing that walks the DOM for text will find it.
 WA_PREFILL = "Ciao {brand}, ho una domanda sul mio sito."
@@ -196,6 +203,11 @@ SIDE_DID = "Cosa abbiamo fatto"
 SIDE_ON_THIS_PAGE = "In questa pagina"
 READ_NEXT = "Da leggere dopo"
 READ_IT = "Leggilo"
+# "Aggiornato il 13 agosto 2026". The article is required in Italian in front of
+# a date and the English has nothing to put there, so it lives in this string
+# rather than in l10n.human, which formats a date and knows nothing about the
+# sentence around it.
+UPDATED = "Aggiornato il {date}"
 WHAT_WE_DO = "Cosa facciamo"      # identical to FOOT_HEADINGS[0], as in English
 WHAT_WE_DONT = "Cosa non facciamo"
 # "Le domande giuste" carries the claim the English makes with "worth asking",

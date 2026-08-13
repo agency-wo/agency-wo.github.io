@@ -32,8 +32,9 @@ POSTS = [
     # ================================================================ SEO ===
     {
         "slug": "map-listing-first",
-        "src": "9d95c579",
+        "src": "06c4fb36",
         "date": "2026-08-14",
+        "updated": "2026-08-14",
         "topic": "Kërkim lokal",
         "work": "iglisi-watch",
         "service": ("/seo/", "SEO dhe kërkim lokal"),
@@ -129,8 +130,9 @@ POSTS = [
     # ================================================================ GEO ===
     {
         "slug": "what-nobody-can-promise-ai-search",
-        "src": "2388a583",
+        "src": "cbee899e",
         "date": "2026-08-14",
+        "updated": "2026-08-14",
         "topic": "Kërkimi me AI",
         "work": "iglisi-watch",
         "service": ("/geo/", "Kërkimi me AI"),
@@ -163,22 +165,29 @@ POSTS = [
             ]),
             ("Shifra 40% nuk do të thotë atë që të thanë", [
                 "<p>Pothuajse çdo agjenci që shet kërkim me AI citon një rritje "
-                "dukshmërie prej 40% nga punimi origjinal GEO i 2024-s. Një "
-                "vështrim kritik i 2026-s mbi gjithë fushën shpjegon çfarë "
-                "përshkruan ai numër: një fitim relativ brenda një simulatori "
-                "ku 5 dokumente janë vendosur tashmë në kontekstin e "
-                "modelit.</p>",
+                "dukshmërie prej 40% nga punimi origjinal GEO i 2024-s. "
+                "<a href=\"https://arxiv.org/abs/2607.14035\" "
+                "target=\"_blank\" rel=\"noopener\">Vështrimi kritik mbi 45 "
+                "studime GEO</a> i Olivier Martinez, nga korriku i 2026-s, "
+                "shpjegon çfarë përshkruan ai numër: një fitim relativ brenda "
+                "një simulatori ku 5 dokumente janë vendosur tashmë në "
+                "kontekstin e modelit.</p>",
                 "<p>Nuk është zbulim që rishkrimi i faqes tënde të bën të "
                 "gjendesh 40% më shpesh. Kush e citon sikur të ishte, nuk ka "
                 "lexuar përtej abstraktit.</p>",
             ]),
             ("97% e skedarëve llms.txt nuk janë lexuar kurrë", [
                 "<p>Shembulli më i pastër i një taktike që shitet pa asgjë "
-                "prapa. Ahrefs kontrolloi 137.210 domene. Rreth 28% publikojnë "
-                "një skedar llms.txt, dhe 97% e atyre skedarëve morën zero "
-                "kërkesa në një muaj. Nga 3%-shi që u tërhoq, pjesa më e madhe "
-                "e trafikut ishin mjete auditimi SEO, jo crawler-a të AI.</p>",
-                "<p>Google ka thënë se nuk ka plane ta mbështesë. Skedarin e "
+                "prapa. <a href=\"https://ahrefs.com/blog/llmstxt-study/\" "
+                "target=\"_blank\" rel=\"noopener\">Ahrefs kontrolloi 137.210 "
+                "domene</a> gjatë majit 2026. Rreth 28% publikojnë një skedar "
+                "llms.txt, dhe 97% e atyre skedarëve morën zero kërkesa në një "
+                "muaj. Nga 3%-shi që u tërhoq, pjesa më e madhe e trafikut "
+                "ishin mjete auditimi SEO, jo crawler-a të AI.</p>",
+                "<p>Gary Illyes i Google "
+                "<a href=\"https://www.seroundtable.com/openai-crawling-llms-txt-files-39811.html\" "
+                "target=\"_blank\" rel=\"noopener\">tha se Google nuk e "
+                "mbështet dhe nuk ka plane ta bëjë</a>. Skedarin e "
                 "shtojmë njësoj, sepse nuk kushton asgjë, dhe e themi qartë te "
                 "<a href=\"/geo/\">faqja e kërkimit me AI</a> se asnjë ofrues i "
                 "madh nuk del ta lexojë.</p>",
@@ -186,7 +195,10 @@ POSTS = [
             ("Pjesa më e madhe e punës nuk është te faqja jote", [
                 "<p>Kjo është e pakëndshmja. Në studimet për atë që citojnë "
                 "asistentët e AI, përmbajtja në faqen e vetë biznesit zë rreth "
-                "2% të citimeve. Në shërbimet profesionale, listat e palëve të "
+                "2% të citimeve. AI Search Lab i Wix Studio "
+                "<a href=\"https://www.wix.com/studio/ai-search-lab/research/content-types-most-cited-by-llms\" "
+                "target=\"_blank\" rel=\"noopener\">lexoi 1 milion "
+                "citime</a>: në shërbimet profesionale, listat e palëve të "
                 "treta morën 80,9% të citimeve kundrejt 19,1% për faqen e vetë "
                 "kompanisë.</p>",
                 "<p>Pra puna me leverdinë më të madhe është kryesisht të "
@@ -196,8 +208,13 @@ POSTS = [
             ]),
             ("Numrat lëvizin më shpejt se këshillat", [
                 "<p>Ahrefs mati sa citime të AI Overview vinin nga 10 rezultatet "
-                "e para të Google. Shifra ishte 76%. 7 muaj më vonë e njëjta "
-                "matje dha 38%.</p>",
+                "e para të Google. Në "
+                "<a href=\"https://ahrefs.com/blog/search-rankings-ai-citations\" "
+                "target=\"_blank\" rel=\"noopener\">korrik 2025 shifra ishte "
+                "76%</a>. 7 muaj më vonë "
+                "<a href=\"https://ahrefs.com/blog/ai-overview-citations-top-10\" "
+                "target=\"_blank\" rel=\"noopener\">e njëjta matje dha "
+                "38%</a>.</p>",
                 "<p>Kjo nuk është kundërthënie. Është fusha që lëviz nën këmbët "
                 "e të gjithëve, dhe prandaj e datojmë atë që publikojmë dhe e "
                 "rishikojmë në vend që ta lëmë aty.</p>",
@@ -242,8 +259,9 @@ POSTS = [
     # =========================================================== SOFTWARE ===
     {
         "slug": "four-lines-that-were-five",
-        "src": "1b484a2d",
+        "src": "34478d13",
         "date": "2026-08-14",
+        "updated": "2026-08-14",
         "topic": "Software me porosi",
         "work": "iglisi-watch",
         "service": ("/systems/", "Software me porosi"),

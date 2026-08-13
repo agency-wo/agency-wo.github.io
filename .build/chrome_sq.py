@@ -69,6 +69,7 @@ SRC = {
     "JS_SENDING_SAY": "21151b65",
     "MENU": "c784aaa3",
     "NAV": "0aed4a3d",
+    "OG_ALT": "4ccf3412",
     "QUESTIONS": "1579db95",
     "READ_IT": "89d4581e",
     "READ_NEXT": "3715bfd2",
@@ -83,6 +84,7 @@ SRC = {
     "SIDE_WRITTEN": "4bf5b84e",
     "SKIP": "f3ac6901",
     "TURNAROUND": "5b80e988",
+    "UPDATED": "c15f9b45",
     "WA_LABEL": "515b82d6",
     "WA_PREFILL": "d28f915d",
     "WHAT_WE_DO": "bc3cba50",
@@ -144,6 +146,12 @@ ARIA_GLANCE = "Në pak fjalë"
 ARIA_DETAILS = "Detaje"
 ARIA_LANG = "Gjuha"
 WA_LABEL = "Na shkruaj në WhatsApp"
+# The share card's alt text: it describes the image, not the page, because one
+# card serves all 17 Albanian pages. "duke u ngjitur" is the climb, which is
+# the whole identity, and it is the participle Albanian uses for a thing in the
+# middle of doing something rather than a thing that has done it.
+OG_ALT = ("Logotipi minarank duke u ngjitur mbi 10 rezultate kërkimi të "
+          "numëruara, mbi 5 shërbimet")
 # What actually arrives on the founder's phone. It is a data- attribute read by
 # js/main.js, so nothing that walks the DOM for text will find it.
 #
@@ -205,6 +213,11 @@ SIDE_DID = "Çfarë bëmë"
 SIDE_ON_THIS_PAGE = "Në këtë faqe"
 READ_NEXT = "Lexo më pas"
 READ_IT = "Lexoje"
+# "Përditësuar më 13 gusht 2026". Albanian puts "më" in front of a date and the
+# English has nothing to put there, so it lives in this string rather than in
+# l10n.human, which formats a date and knows nothing about the sentence around
+# it. The month names are l10n.py's and are lower case, which is correct.
+UPDATED = "Përditësuar më {date}"
 WHAT_WE_DO = "Çfarë bëjmë"        # identical to FOOT_HEADINGS[0], as in English
 WHAT_WE_DONT = "Çfarë nuk bëjmë"
 # "Pyetjet e duhura" carries the claim the English makes with "worth asking",

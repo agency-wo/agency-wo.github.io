@@ -33,8 +33,10 @@ CRLF = chr(13) + chr(10)
 # that carries the address and the number somebody came here for.
 NO_CONTENTS = ("/start/",)
 
-# TODO(founder): add profile URLs. sameAs pointing at nothing does nothing.
-FOUNDER_SAMEAS = []
+# The founder's profiles live in shell.py beside the studio's, not here. They
+# are placeholders and the comment there says why they ship as placeholders
+# rather than as an empty list; what matters at this end is that one file
+# decides what this site claims to be the same entity as.
 
 
 # ----------------------------------------------------------- copy, filled ---
@@ -390,7 +392,11 @@ def systems_ld(rec, lang):
          "description": sc["description"],
          "url": url, "provider": {"@id": S + shell.localise("/", lang) + "#org"},
          "areaServed": ["AL", "IT", "Worldwide"]},
-        {"@type": "FAQPage", "@id": url + "#faq", "mainEntity": [
+        # inLanguage sits on the FAQPage rather than on the Service above, for
+        # the reason gen_pages.py gives at the same spot: a Service is an
+        # Intangible and inLanguage belongs to CreativeWork.
+        {"@type": "FAQPage", "@id": url + "#faq", "inLanguage": lang,
+         "mainEntity": [
             {"@type": "Question", "name": flat(q, lang),
              "acceptedAnswer": {"@type": "Answer", "text": flat(a, lang)}}
             for q, a in rec["faq"]]},
@@ -406,11 +412,15 @@ def studio_ld(rec, lang):
               "knowsLanguage": ["en", "it", "sq"],
               "knowsAbout": rec["schema"]["knows_about"],
               "url": url}
-    if FOUNDER_SAMEAS:
-        person["sameAs"] = FOUNDER_SAMEAS
+    # The founder's OWN profiles, not the studio's. They are 2 entities and a
+    # graph that hands one entity's accounts to the other says they are the
+    # same person, which is a claim nothing can correct from the outside.
+    if shell.FOUNDER_SAMEAS:
+        person["sameAs"] = shell.FOUNDER_SAMEAS
     return graph(
         {"@type": "AboutPage", "@id": url + "#page", "url": url,
          "name": rec["nav"], "about": {"@id": org},
+         "inLanguage": lang,
          "mainEntity": {"@id": url + "#founder"}},
         person, crumb_node(url, rec["nav"], lang))
 
@@ -419,7 +429,8 @@ def start_ld(rec, lang):
     url = S + shell.localise(rec["url"], lang)
     return graph(
         {"@type": "ContactPage", "@id": url + "#page", "url": url,
-         "name": rec["nav"], "about": {"@id": S + shell.localise("/", lang) + "#org"}},
+         "name": rec["nav"], "inLanguage": lang,
+         "about": {"@id": S + shell.localise("/", lang) + "#org"}},
         crumb_node(url, rec["nav"], lang))
 
 
@@ -467,6 +478,13 @@ def render(rec, en_rec, lang):
         chunks += ["", faq_section(10, rec, en_rec, lang, toc)]
     if chunks and chunks[0] == "":
         chunks.pop(0)
+
+    # Under everything else in the column, including /start/'s form. The copy on
+    # all 3 of these pages is docs.py's, so that is the file whose commit date
+    # this is, and "" when git has never seen it.
+    upd = shell.updated("docs", lang)
+    if upd:
+        chunks.append(upd)
 
     parts += chunks
     parts.append("        </div>")

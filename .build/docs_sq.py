@@ -71,7 +71,7 @@ PAGES = [
     # -------------------------------------------------------------- SYSTEMS --
     {
         "url": "/systems/",
-     "src": "c47d0cff",
+     "src": "cf23a60e",
         "nav": "Software me porosi",
         # 38 characters against the 52 the title budget leaves once shell.head
         # appends " · minarank studio".
@@ -111,8 +111,17 @@ PAGES = [
                   "numrat janë tashmë aty."),
 
             ("h2", "Cili nga këta është yti?"),
-            ("p", "Askush nuk kërkon software. Njerëzit kërkojnë t'i japin fund një" + NL +
-                  "bezdie, dhe këto janë 5 që dëgjojmë më shpesh."),
+            # 54 words against check 47's 40 to 60, which has no per-language
+            # allowance. glossary.TERMS: software me porosi, Durrës.
+            ("p", "Askush nuk kërkon software me porosi. Njerëzit kërkojnë t'i "
+                  "japin" + NL +
+                  "fund një bezdie, dhe këto janë 5 që dëgjojmë më shpesh. Secila "
+                  "është" + NL +
+                  "një pyetje së cilës i përgjigjesh duke ndaluar për të "
+                  "numëruar." + NL +
+                  "Sistemi që ndërtuam për Iglisi Watch në Durrës numëron për ty, "
+                  "në 50" + NL +
+                  "panele, dhe nuk kushton asgjë në muaj."),
             ("ledger", [
                 ("\"Nuk e di ç'kam në magazinë derisa ta numëroj.\"",
                  "Kështu porosit sërish atë që e ke në depo dhe të mbaron ajo" + NL +

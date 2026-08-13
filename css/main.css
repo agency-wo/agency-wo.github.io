@@ -539,6 +539,18 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
   align-items: center; gap: var(--s-3); }
 .tick { width: 12px; height: 12px; flex: none; }
 
+/* The last-updated line, at the foot of the prose on every page.
+
+   Slate at --fs-small, which is the same treatment .taken and .stat-note
+   already get, because it is the same kind of thing: rule 7 gives slate to
+   captions and metadata and this is metadata about the page rather than a
+   sentence in it. The gap above is --s-8 and not --s-5, so it reads as
+   something after the argument instead of the argument's last line. It is a
+   date. It is not allowed to compete with the payoff sitting a paragraph
+   above it. */
+.updated { margin-top: var(--s-8); font-size: var(--fs-small);
+  color: var(--slate); }
+
 .fig { margin: 0 0 var(--s-7); max-width: 240px; }
 .fig svg { width: 100%; height: auto; }
 

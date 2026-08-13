@@ -1,4 +1,4 @@
-"""MINARANK gate. 41 checks. Read-only. Exit 1 on any finding.
+"""MINARANK gate. 49 checks. Read-only. Exit 1 on any finding.
 
 Run from the project root:  python .build/verify.py
 
@@ -11,6 +11,14 @@ i18n.LANGS to ALL trebled the page count and the gate reported PASS on the two
 thirds it had never looked at: every path-keyed check went on reading
 index.html, and every English word list went on finding nothing in Italian.
 A gate that passes more pages by being shown more pages is decoration.
+
+Checks 43 to 49 are rules the site PUBLISHES and did not follow. Every one of
+them quotes the page or the RULES.md line it enforces, because a check whose
+reason has to be reconstructed is a check somebody argues with.
+
+The numbers run 1 to 49 with no 42. Check 2b has held that slot in the count
+since it was added, and renumbering to close a gap would break every message
+that names a check by number.
 
 Never loosen a check to make it pass.
 """
@@ -289,11 +297,15 @@ for p in all_pages:
         findings.append(f"[h1] {rel(p)} has {n} h1 elements")
 
 # 4. JSON-LD parses and its hash is pinned in _headers ----------------------
+# One pattern for every reader of the structured data. Checks 4, 44 and 48 all
+# want the same blocks, and a second copy of this regex is a place for the 3 to
+# disagree about what a JSON-LD block is.
+_LD = re.compile(r'<script type="application/ld\+json">(.*?)</script>', re.S)
+
 headers = read(os.path.join(ROOT, "_headers"))
 pinned = set(re.findall(r"'sha256-([A-Za-z0-9+/=]+)'", headers))
 for p in all_pages:
-    for block in re.findall(
-            r'<script type="application/ld\+json">(.*?)</script>', read(p), re.S):
+    for block in _LD.findall(read(p)):
         try:
             json.loads(block)
         except json.JSONDecodeError as e:
@@ -458,9 +470,35 @@ for p in all_pages:
 
 # 11. no duplicated sentences across pages ---------------------------------
 # The shared band and footer are chrome, not copy, so they are stripped first.
+#
+# The 3 chrome regions are named ONCE, here, because 4 checks now want them
+# gone and each one wants a different subset: check 11 wants the band, check 32
+# wants the header, checks 45 and 46 want all 3. They were being re-typed at
+# each site, and a re-typed pattern is a pattern that drifts. The band's
+# non-greedy tail swallows the footer with it on every page here, which is why
+# check 11 has always been right about the footer without ever naming it.
+_BAND = re.compile(r'(?s)<div class="band.*?</div>\s*</div>')
+_HEAD_BLOCK = re.compile(r"(?s)<!-- SHARED:HEADER -->.*?<!-- /SHARED:HEADER -->")
+_FOOT_BLOCK = re.compile(r"(?s)<!-- SHARED:FOOTER -->.*?<!-- /SHARED:FOOTER -->")
+
+
 def body_text(html):
-    html = re.sub(r'(?s)<div class="band.*?</div>\s*</div>', " ", html)
-    return text_of(html)
+    return text_of(_BAND.sub(" ", html))
+
+
+def prose_html(html):
+    """A page with the chrome removed, still as HTML. Checks 45 and 46.
+
+    body_text answers "what does this page SAY", so it hands back text. Those 2
+    ask what a page LINKS AT in its own words, and an href is not a text node,
+    so this stops one step earlier and hands back markup.
+
+    _FOOT_BLOCK runs even though _BAND already swallowed the footer on all 51
+    pages. It costs nothing and it is the difference, on the day a page carries
+    a footer with no band above it, between reading that page's own words and
+    reading 20 chrome links as editorial.
+    """
+    return _FOOT_BLOCK.sub(" ", _HEAD_BLOCK.sub(" ", _BAND.sub(" ", html)))
 
 
 seen = {}
@@ -1290,7 +1328,7 @@ for p in all_pages:
     n = len(re.findall(r"<form\b", html))
     if n > 1:
         findings.append(f"[ask] {rel(p)} has {n} forms. One ask per page")
-    body = re.sub(r"(?s)<!-- SHARED:HEADER -->.*?<!-- /SHARED:HEADER -->", " ", html)
+    body = _HEAD_BLOCK.sub(" ", html)
     body = re.sub(r'(?s)<p class="band-actions">.*?</p>', " ", body)
     for tag in re.findall(r'<a\b[^>]*\bclass="[^"]*\bbtn\b[^"]*"[^>]*>', body):
         href = re.search(r'href="([^"]*)"', tag)
@@ -1805,6 +1843,367 @@ for p in TRANSLATED:
                             f"{n!r}. A number carrying a separator cannot be "
                             f"identical in English and {LANG[p]}: this one "
                             f"never got reformatted")
+
+# ========================================= the rules the site publishes ====
+# Checks 43 to 49. There is no 42: check 2b has held that slot in the count
+# since it was added, and renumbering 40 comments to close a gap would break
+# every message that names a check by number.
+#
+# What these 7 have in common: the site already STATES every one of them, in
+# its own prose or in RULES.md, and nothing enforced any of them. An audit
+# found a dozen pages where the site does not do what it publishes. Rewriting
+# that copy is somebody else's afternoon. A rule with no check is a rule that
+# goes back to being wrong the next time anybody is in a hurry, which is the
+# same sentence RULES.md opens with.
+
+# 43. llms.txt exists, and names the sitemap -------------------------------
+# /geo/ tells every visitor, in all 3 languages, that we do not sell llms.txt
+# as a ranking trick and that "we'll add the file because it costs nothing"
+# (content.py, the GEO exclusions). The blog post says it a second time
+# (posts.py). A promise published twice and kept nowhere is the placeholder key
+# again: the page renders and the sentence is false.
+#
+# The sitemap URL is absolute and comes from shell.SITE, the way check 30 wants
+# it in robots.txt. llms.txt gets fetched on its own by something that was
+# handed a host and nothing else, so a relative /sitemap.xml names a file with
+# no base to resolve it against.
+_LLMS = os.path.join(ROOT, "llms.txt")
+_SITEMAP_URL = _SITE + "/sitemap.xml"
+if not os.path.exists(_LLMS):
+    findings.append("[llms] there is no llms.txt. /geo/ says in 3 languages "
+                    "that we add the file because it costs nothing, and the "
+                    "cheapest promise on the site is the worst one to break. "
+                    "gen_launch.py owns the file")
+elif not read(_LLMS).strip():
+    findings.append("[llms] llms.txt is empty. An empty file keeps the letter "
+                    "of the promise and none of it")
+elif _SITEMAP_URL not in read(_LLMS):
+    findings.append(f"[llms] llms.txt does not name {_SITEMAP_URL}. It is the "
+                    f"one line a crawler that fetched this file can act on, and "
+                    f"it has to be the absolute URL: nothing resolves a relative "
+                    f"path against a file somebody handed it")
+
+
+# 44. every JSON-LD graph says what language it is in -----------------------
+# Check 37 reads every inLanguage on a page and holds it to the directory that
+# page lives in. It has never required one to EXIST, so 24 of the 51 indexable
+# pages declare none and pass it in silence. A check that validates what is
+# present cannot see what is absent, and the 2 halves have to be written
+# separately or the second one never gets written at all.
+#
+# Presence only. The value is check 37's and stays there.
+def ld_nodes(html):
+    """Every JSON-LD object on the page, nested ones included."""
+    out = []
+
+    def walk(node):
+        if isinstance(node, dict):
+            out.append(node)
+            for v in node.values():
+                walk(v)
+        elif isinstance(node, list):
+            for v in node:
+                walk(v)
+
+    for raw in _LD.findall(html):
+        try:
+            walk(json.loads(raw))
+        except json.JSONDecodeError:
+            pass              # check 4 owns a block that does not parse
+    return out
+
+
+for p in all_pages:
+    html = read(p)
+    if not indexable(html):
+        continue              # the 404 carries no structured data, by design
+    nodes = ld_nodes(html)
+    if not nodes:
+        findings.append(f"[lang] {rel(p)} is indexable and carries no JSON-LD "
+                        f"at all, so nothing in its graph says what language "
+                        f"it is in")
+    elif not any("inLanguage" in nd for nd in nodes):
+        findings.append(f"[lang] {rel(p)} has a JSON-LD graph with no "
+                        f"inLanguage anywhere in it. Something reading the "
+                        f"graph alone cannot tell {i18n.HTML_LANG[LANG[p]]!r} "
+                        f"from the other 2, and 2 of the 3 are the same page")
+
+
+# 45. every service page links at a client page ----------------------------
+# RULES.md rule 37, written months ago and enforced by nothing: "Every service
+# page names a client and links to their page. A service page that cannot point
+# at a business it did this for is a brochure." /geo/ was a brochure in all 3
+# languages the whole time.
+#
+# The 5 pages come from home.SERVICES and the 4 clients from clients.CLIENTS,
+# so neither list is typed here and neither can go stale behind this file. The
+# count is held to rule 28's five, because a check that quietly covers 4 pages
+# instead of 5 prints exactly the same PASS as one that covers all of them.
+#
+# The chrome is the whole difficulty. The footer links at all 4 clients from
+# all 51 pages, so a grep for /work/ finds one on every page, brochure
+# included. prose_html is what makes the question answerable at all.
+import home as _home  # noqa: E402  (data module: gen_home.py is the generator)
+
+SERVICE_EN = [_u.strip("/") + "/index.html" for _u, *_rest in _home.SERVICES]
+if len(SERVICE_EN) != 5:
+    findings.append(f"[service] home.SERVICES names {len(SERVICE_EN)} services "
+                    f"and rule 28 names 5. Checks 45 and 47 read that list, so "
+                    f"a short one is a service page nobody is checking")
+
+for _en_page in SERVICE_EN:
+    for _lg, _p in sorted(FAMILY.get(_en_page, {}).items()):
+        _prose = prose_html(read(_p))
+        _client_hrefs = [_shell.localise("/work/" + _c["slug"] + "/", _lg)
+                         for _c in CLIENTS]
+        if not any(f'href="{_h}"' in _prose for _h in _client_hrefs):
+            findings.append(f"[service] {rel(_p)} links at no client page. Rule "
+                            f"37: a service page that cannot point at a "
+                            f"business it did this for is a brochure. The "
+                            f"footer's copy of the 4 links is chrome and does "
+                            f"not count")
+
+
+# 46. no page is reachable only from the chrome ----------------------------
+# /start/ is where every conversion on this site happens, and for a while not
+# one page's prose linked at it: the header link, the ink band and the footer
+# carried the entire funnel. A page like that is one a reader arrives at by
+# pressing chrome and never by being sent, and it is invisible to anything that
+# weighs a link by the sentence around it.
+#
+# Self-links do not count and neither does anything inside the chrome, which is
+# the only reason the answer is not "yes" for all 51 pages by way of the
+# footer. The 3 homepages are exempt: each is the root of its own tree, and the
+# only thing that links a language home is the switcher, which is chrome by
+# definition.
+_PAGE_URL = {rel(_p): "/" + rel(_p).replace("index.html", "") for _p in all_pages}
+_INBOUND = {_u: set() for _u in _PAGE_URL.values()}
+for p in all_pages:
+    _src = _PAGE_URL[rel(p)]
+    for _href in re.findall(r'href="(/[^"]*)"', prose_html(read(p))):
+        _href = re.split(r"[#?]", _href)[0]
+        if _href.endswith("index.html"):
+            _href = _href[: -len("index.html")]
+        if _href in _INBOUND and _href != _src:
+            _INBOUND[_href].add(_src)
+
+for p in all_pages:
+    _r = rel(p)
+    if not indexable(read(p)) or en_of(_r) == HOME:
+        continue
+    if not _INBOUND[_PAGE_URL[_r]]:
+        findings.append(f"[orphan] nothing links at {_PAGE_URL[_r]} except the "
+                        f"chrome. A page every visitor reaches by pressing the "
+                        f"header is a page no sentence on this site thought "
+                        f"worth sending anybody to")
+
+
+# 47. a service page answers a question first ------------------------------
+# The site states this twice and follows it on one page out of 5. /geo/ sells
+# it as a deliverable: "A 40 to 60 word answer directly under the heading that
+# asks it" (content.py, the GEO ledger). The blog post repeats it as advice:
+# "Answer the question in the first 100 words, under a heading that asks it"
+# (posts.py). Selling a discipline we do not practise is the kind of thing a
+# reader checks.
+#
+# Language-neutral, and genuinely rather than conveniently: a question mark is
+# a question mark in English, Italian and Albanian, and it is the only marker
+# any of the 3 needs.
+#
+# The 40 to 60 band gets no LONGER allowance, unlike checks 6 and 21, and the
+# measurement that decided it is worth writing down because it does NOT point
+# cleanly one way. On /seo/, the one page currently asking a question and
+# answering it in all 3, the answer runs 53 words in English, 58 in Albanian
+# and 64 in Italian. Italian is over, by 4.
+#
+# It stays flat anyway. Checks 6 and 21 give headroom because their limit is a
+# hard ceiling and the overshoot there is structural: a correct Albanian title
+# whose English twin already sits at 61 cannot get under 70 without losing a
+# word of meaning. This is not that. It is a 20-word band around a 50-word
+# target, an English answer at 53 is already carrying 7 words of the headroom,
+# and 4 Italian words at the far end are function words rather than a fact.
+# Raising the ceiling to 75 for Italian would let an Italian answer run longer
+# than any English answer we would accept, and "short enough for a machine to
+# lift whole" is not a property that changes by language.
+#
+# If this ever turns out to be systematic instead of one page by 4 words, the
+# honest fix is check 38's shape and not a bigger number: grade the English
+# against 40 to 60 and grade each translation against its own English twin.
+# That wants more than one page of evidence first.
+#
+# One finding per page, heading first. Where the heading asks nothing there is
+# no answer under it to measure, so counting the words of whatever paragraph
+# happens to sit there would report a second failure that is really the first
+# one wearing a hat.
+ANSWER_LO, ANSWER_HI = 40, 60
+for _en_page in SERVICE_EN:
+    for _lg, _p in sorted(FAMILY.get(_en_page, {}).items()):
+        _prose = prose_html(read(_p))
+        _h2 = re.search(r"(?s)<h2\b[^>]*>(.*?)</h2>", _prose)
+        if _h2 is None:
+            findings.append(f"[answer] {rel(_p)} has no h2 of its own outside "
+                            f"the chrome, so it asks nothing and answers "
+                            f"nothing")
+            continue
+        _heading = text_of(_h2.group(1))
+        if not _heading.rstrip().endswith("?"):
+            findings.append(f"[answer] {rel(_p)}: the first heading is "
+                            f"{_heading[:60]!r} and asks nothing. We sell "
+                            f"answering the question under the heading that "
+                            f"asks it, on this page")
+            continue
+        _para = re.search(r"(?s)<p\b[^>]*>(.*?)</p>", _prose[_h2.end():])
+        _answer = text_of(_para.group(1)) if _para else ""
+        _n = len(_answer.split())
+        if not (ANSWER_LO <= _n <= ANSWER_HI):
+            findings.append(f"[answer] {rel(_p)}: {_heading[:40]!r} is answered "
+                            f"in {_n} words (want {ANSWER_LO} to {ANSWER_HI}). "
+                            f"Under 40 is not an answer and over 60 is not "
+                            f"directly under the heading any more")
+
+
+# 48. the business entity is complete, and nothing guesses at a profile ----
+# The ProfessionalService node is what an assistant reads when it decides
+# whether this studio is a real business it can name. Rule 27 pins the founder
+# and the WhatsApp number in the copy and nothing pins anything in the graph,
+# so the node ships with a name, a URL and an email, and says where we are, how
+# to ring us and where else we exist nowhere at all.
+#
+# sameAs is the one that has to be checked for CONTENT rather than presence.
+# It is the field that says "these other profiles are also us", and a sameAs
+# pointing at a guess is worse than an empty one: an empty field says we have
+# not done it, and a wrong field is a claim about somebody else's page. A bare
+# host with no profile path is the same defect wearing a URL, because
+# facebook.com names Facebook, not us.
+#
+# TWO ARMS, and the second one is here because this check used to read one
+# page. ORG_FIELDS is a homepage question: the ProfessionalService node is
+# emitted once per language and asking /systems/ for a telephone it was never
+# meant to carry would be a finding about the check rather than about the site.
+#
+# sameAs is not a homepage question, and reading it as one was the hole.
+# gen_docs.py hangs shell.FOUNDER_SAMEAS on the Person node on /studio/, in all
+# 3 languages, and for as long as this loop walked FAMILY[HOME] that placeholder
+# shipped with nothing failing over it: the founder's LinkedIn was an assertion
+# about a stranger's profile, on 3 pages, under a gate that reported the entity
+# as complete as it could be. So the sameAs arm walks every node of every
+# indexable page's graph. A placeholder is a placeholder whether the node
+# holding it is the studio or the person who runs it.
+#
+# This is expected to stay red past this session, exactly like check 22's key,
+# and widening it makes it redder rather than greener. The founder has to
+# supply the real profile URLs and the real address, and nothing in this repo
+# can invent them.
+ORG_FIELDS = ("address", "telephone", "sameAs")
+_PLACEHOLDER = re.compile(
+    r"example\.(?:com|org|net)|your-?(?:business|company|profile|handle|page)|"
+    r"\b(?:todo|tbd|fixme|placeholder|changeme|username|handle|xxxx?)\b", re.I)
+
+
+def _types(node):
+    t = node.get("@type")
+    return t if isinstance(t, list) else [t]
+
+
+for _lg, _p in sorted(FAMILY.get(HOME, {}).items()):
+    _orgs = [_nd for _nd in ld_nodes(read(_p))
+             if "ProfessionalService" in _types(_nd)]
+    if not _orgs:
+        findings.append(f"[entity] {rel(_p)} has no ProfessionalService node. "
+                        f"It is the homepage: if the business is not described "
+                        f"here it is described nowhere, and this check would "
+                        f"have nothing left to read")
+        continue
+    for _nd in _orgs:
+        for _f in ORG_FIELDS:
+            if not _nd.get(_f):
+                findings.append(f"[entity] {rel(_p)}: the ProfessionalService "
+                                f"node has no {_f}. An assistant deciding "
+                                f"whether to name this business reads exactly "
+                                f"these fields")
+
+for p in all_pages:
+    _html = read(p)
+    if not indexable(_html):
+        continue              # the 404 carries no structured data, by design
+    for _nd in ld_nodes(_html):
+        _same = _nd.get("sameAs") or []
+        if isinstance(_same, str):
+            _same = [_same]
+        # The node type is in the message because the finding is now one of
+        # several a page can raise, and "which one of them" is the first thing
+        # anybody reading it asks.
+        _kind = next((_t for _t in _types(_nd) if _t), "untyped")
+        for _e in _same:
+            if not isinstance(_e, str) or not _e.startswith(("http://", "https://")):
+                findings.append(f"[entity] {rel(p)}: the {_kind} node's sameAs "
+                                f"holds {_e!r}, which is not a URL")
+            elif _PLACEHOLDER.search(_e):
+                findings.append(f"[entity] {rel(p)}: the {_kind} node's sameAs "
+                                f"points at {_e!r}, which is a placeholder. A "
+                                f"guess here is a claim about a page that is "
+                                f"not ours")
+            elif _e.split("//", 1)[-1].rstrip("/").count("/") == 0:
+                findings.append(f"[entity] {rel(p)}: the {_kind} node's sameAs "
+                                f"points at {_e!r}, which is a bare host and "
+                                f"names the network rather than us. sameAs "
+                                f"wants the profile")
+
+
+# 49. og:image is complete -------------------------------------------------
+# The share card is the only picture most people will ever see of this site,
+# and 3 tags decide whether it renders: without width and height the crawler
+# has to fetch and measure the file before it can lay the card out, and several
+# do not bother; without alt the card is a blank rectangle to a screen reader,
+# which is rule 33 again in the one place rule 33 never looked.
+#
+# The stated size is compared against the MEASURED size, which is rule 24's
+# shape applied to a picture instead of a page weight. Three tags that exist
+# and disagree with the file are worse than three that are missing: they are
+# believed. PNG header only, and no dependency: bytes 16 to 24 of an IHDR are
+# the dimensions, and if the file is not a PNG this arm stays quiet rather than
+# guessing.
+OG_IMAGE_PARTS = ("og:image:width", "og:image:height", "og:image:alt")
+
+
+def _prop(html, name):
+    m = re.search(r'<meta property="' + re.escape(name) + r'" content="([^"]*)"',
+                  html)
+    return m.group(1).strip() if m else None
+
+
+for p in all_pages:
+    html = read(p)
+    _img = _prop(html, "og:image")
+    if not _img:
+        findings.append(f"[og] {rel(p)} has no og:image, so every share of it "
+                        f"is a link with no picture")
+        continue
+    _missing = [_k for _k in OG_IMAGE_PARTS if not _prop(html, _k)]
+    if _missing:
+        findings.append(f"[og] {rel(p)} declares og:image and not {_missing}. "
+                        f"An image tag on its own makes the card the crawler's "
+                        f"problem, and the alt is somebody's only description")
+    if not _img.startswith(_SITE):
+        continue                  # rule 30: it cannot be anybody else's host
+    _local = os.path.join(ROOT, _img[len(_SITE):].lstrip("/").replace("/", os.sep))
+    if not os.path.exists(_local):
+        findings.append(f"[og] {rel(p)} points og:image at {_img}, and no such "
+                        f"file is in this repo. Check 2 reads hrefs and has "
+                        f"never read a meta tag")
+        continue
+    _png = io.open(_local, "rb").read(24)
+    if _png[12:16] != b"IHDR":
+        continue                  # not a PNG: nothing here can measure it
+    for _k, _real in (("og:image:width", int.from_bytes(_png[16:20], "big")),
+                      ("og:image:height", int.from_bytes(_png[20:24], "big"))):
+        _said = _prop(html, _k)
+        if _said and _said != str(_real):
+            findings.append(f"[og] {rel(p)} says {_k} is {_said} and the file "
+                            f"measures {_real}. A stated size that disagrees "
+                            f"with the file is believed, which is the one thing "
+                            f"worse than no size at all")
+
 
 # ------------------------------------------------------------------- report
 print(f"pages checked: {len(all_pages)}")

@@ -188,7 +188,16 @@ def jsonld(svc, lang):
          "provider": {"@id": home + "#org"},
          "areaServed": ["AL", "IT", "Worldwide"],
          "availableLanguage": ["en", "it", "sq"]},
-        {"@type": "FAQPage", "@id": url + "#faq",
+        # inLanguage goes HERE and not on the Service above it, and that is a
+        # schema decision rather than a placement. inLanguage is a property of
+        # CreativeWork; a Service is an Intangible and has availableLanguage,
+        # which is already on it and means something else entirely: what
+        # languages we can deliver the work in, not what language this document
+        # is written in. The FAQPage is the CreativeWork on this page, so it is
+        # the node that can answer the question. Check 37 validates the value
+        # and never required the property, which is how 24 pages passed for
+        # weeks while saying nothing at all about their own language.
+        {"@type": "FAQPage", "@id": url + "#faq", "inLanguage": lang,
          "mainEntity": [{"@type": "Question", "name": q,
                          "acceptedAnswer": {"@type": "Answer", "text": strip_tags(a)}}
                         for q, a in svc["faq"]]},
@@ -270,7 +279,15 @@ def render(svc, en_svc, posts, lang):
         a(f'              <h3 class="faq-q">{q}</h3>\n')
         a(f'              <p>{shell.localise_html(ans, lang)}</p>\n')
         a('            </div>\n')
-    a('          </section>\n        </div>\n\n')
+    a('          </section>\n')
+    # Last thing in the prose column, under the questions and above nothing.
+    # The copy on this page is content.py's, so that is the file whose commit
+    # date this is. An empty return means git has never seen the file, and then
+    # this emits no line at all rather than a blank one.
+    upd = shell.updated("content", lang)
+    if upd:
+        a(upd + NL)
+    a('        </div>\n\n')
 
     a(f'        <aside class="side" aria-label="{c.ARIA_GLANCE}">\n')
     a('          <figure class="fig">\n')

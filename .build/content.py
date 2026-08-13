@@ -10,6 +10,12 @@ web design has a claim you can check on the page, Meta ads has pricing.
 
 Every page names a client and links to their page. A service page that cannot
 point at a business it did this for is a brochure.
+
+The first section of every page is the shape /geo/ sells and none of the 4
+followed: a question somebody would actually type, and a 40 to 60 word answer
+directly under that heading, naming its own subject. A page that states the
+rule and breaks it is the one defect a reader can check without leaving the
+page the rule is stated on. The lead above it is untouched.
 """
 
 SERVICES = [
@@ -32,6 +38,18 @@ SERVICES = [
                 "from 2019. It's usually the cheapest thing to fix and almost nobody "
                 "fixes it.",
         "sections": [
+            # The answer, then the page. The link to /start/ is the only one on
+            # this site that reaches the audit from prose rather than from the
+            # ink band, and it is here because the answer ends where a shop
+            # owner has to choose between the two jobs and cannot yet.
+            ("How do I get my shop to show up on Google?", [
+                "<p>Showing up on Google is two jobs: the Google Business "
+                "Profile that puts your shop on the map, and a site that "
+                "answers what people type. watch.al started from no website "
+                "and reached 560 clicks a quarter in 3 months. The "
+                "<a href=\"/start/\">free audit</a> scores 6 areas and says "
+                "which job to do first.</p>",
+            ]),
             ("The map listing, first", [
                 "<p>That listing is a Google Business Profile. It's free, it takes an "
                 "afternoon to fill in properly, and it decides whether somebody 400 "
@@ -128,9 +146,25 @@ SERVICES = [
                 "were one of them. There's no ranking report for this yet, which is "
                 "exactly why it's still cheap to win.",
         "sections": [
+            # The answer names the client and then tells the reader to go and
+            # check it, which is the only proof this subject has: there is no
+            # ranking report for AI answers and the page says so 2 paragraphs
+            # later.
+            ("How do I get ChatGPT to recommend my business?", [
+                "<p>ChatGPT recommends businesses it can read and check "
+                "somewhere else. Answer the question plainly under the heading "
+                "that asks it, label the business so a machine knows what it "
+                "is, and get named on sites you don't own. Ask it for a watch "
+                "repair in Durres: it names Iglisi Watch.</p>",
+            ]),
             ("We've done this once already", [
+                # Rule 37: the client is named here and now linked here. The
+                # anchor is the name itself, on the one page whose whole
+                # argument is that a machine has to be able to tell what a
+                # string refers to.
                 "<p>Ask ChatGPT, Claude or Perplexity where to get a watch repaired in "
-                "Durres and they name Iglisi Watch, with the street, the opening hours "
+                "Durres and they name <a href=\"/work/iglisi-watch/\">Iglisi Watch</a>, "
+                "with the street, the opening hours "
                 "and the WhatsApp number. That's a client, and you can check it right "
                 "now.</p>",
                 "<p>They're also the only watch business in Durres with a website that "
@@ -228,6 +262,17 @@ SERVICES = [
                 "and let somebody act. Everything after that is decoration, and the way "
                 "it's built sets the ceiling on everything you might want to do later.",
         "sections": [
+            # The question a shop owner types before any other, and rule 25
+            # says no minimum budget is published, so the answer names what
+            # moves the price and hands the reader to the one page that can
+            # give him a number. That is where /start/ is earned here.
+            ("How much does a website cost?", [
+                "<p>A website costs what its parts cost: how many pages, how "
+                "many languages, whether stock changes weekly. "
+                "<a href=\"/start/\">Tell us what the site has to do</a> and "
+                "you get a plan and a straight price. Ours carry no theme "
+                "licence and no monthly fee, so nothing renews in year 2.</p>",
+            ]),
             ("Check this page yourself", [
                 "<p>This site loads nothing from anybody else. No font service, no "
                 "analytics, no tag manager, no framework. Open your browser's network "
@@ -317,6 +362,17 @@ SERVICES = [
                 "somebody taps. Ads carry the weeks while the slower work underneath "
                 "builds up, and the two need each other.",
         "sections": [
+            # A yes-or-no question gets a yes and a no, in that order. No
+            # /start/ link: the answer ends on what decides the result rather
+            # than on an ask, and a link added here would be a link the prose
+            # did not reach.
+            ("Are Meta ads worth it for a small shop?", [
+                "<p>Meta ads are worth it for a small shop when the offer "
+                "already works and somebody replies fast. They buy customers "
+                "this week while the slower search work builds. They are not a "
+                "fix for a weak offer, and most of the result is decided in "
+                "the 90 seconds after somebody taps.</p>",
+            ]),
             ("How we charge, and why it matters to you", [
                 "<p>Most agencies take a percentage of what you spend, so every "
                 "conversation about your budget is also a conversation about their "

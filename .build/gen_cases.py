@@ -159,6 +159,7 @@ def client_page(c, nxt, posts, band, lang):
           <h2>{c["changed"]}</h2>
 {changed}
           <p class="payoff">{shell.TICK}{shell.localise_html(c["payoff"], lang)}</p>
+{shell.updated("clients", lang)}
         </div>
 
         <aside class="side" aria-label="{ch.ARIA_DETAILS}">
@@ -197,7 +198,8 @@ def work_index(clients, idx, lang):
     home = S + shell.localise("/", lang)
     graph = [
         {"@type": "CollectionPage", "@id": full + "#page", "url": full,
-         "name": idx["title"], "about": {"@id": home + "#org"}},
+         "name": idx["title"], "inLanguage": lang,
+         "about": {"@id": home + "#org"}},
         {"@type": "BreadcrumbList", "@id": full + "#crumbs",
          "itemListElement": [
              {"@type": "ListItem", "position": 1,
@@ -243,6 +245,7 @@ def work_index(clients, idx, lang):
 {rows}
         </ul>
       </section>
+{shell.updated("clients", lang, 6)}
 '''
     return (shell.head(page, lang) + shell.header(lang, url) +
             '\n  <main id="main">\n    <div class="wrap">\n' + body +

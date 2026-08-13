@@ -71,7 +71,7 @@ PAGES = [
     # -------------------------------------------------------------- SYSTEMS --
     {
         "url": "/systems/",
-     "src": "c47d0cff",
+     "src": "cf23a60e",
         "nav": "Software su misura",
         # 37 characters against the 52 the title budget leaves once shell.head
         # appends " · minarank studio".
@@ -111,9 +111,20 @@ PAGES = [
                   "mese i numeri sono già lì."),
 
             ("h2", "Quale di questi è il tuo?"),
-            ("p", "Nessuno va in cerca di software. La gente va in cerca della fine di "
+            # 55 words against check 47's 40 to 60, which has no per-language
+            # allowance. "va in cerca di" became "cerca" in both halves: it kept
+            # the English echo across the 2 sentences and paid for the 2 facts
+            # the last one now carries. glossary.TERMS: software su misura,
+            # Durazzo.
+            ("p", "Nessuno cerca software su misura. La gente cerca la fine di "
                   "una" + NL +
-                  "seccatura, e queste sono le 5 che sentiamo di più."),
+                  "seccatura, e queste sono le 5 che sentiamo di più. Ognuna è "
+                  "una" + NL +
+                  "domanda a cui rispondi fermandoti a contare. Il sistema che "
+                  "abbiamo" + NL +
+                  "costruito per Iglisi Watch a Durazzo conta al posto tuo, su "
+                  "50" + NL +
+                  "pannelli, e non costa niente al mese."),
             ("ledger", [
                 ("\"Non so cosa ho in magazzino finché non lo conto.\"",
                  "Così riordini quello che hai già nel retro e resti senza quello" + NL +

@@ -101,9 +101,23 @@ PAGES = [
                   "month the numbers are already there."),
 
             ("h2", "Which of these is yours?"),
-            ("p", "Nobody goes looking for software. People go looking for the end of "
-                  "one" + NL +
-                  "annoyance, and these are the 5 we hear most."),
+            # The answer to the heading, and it is measured: check 47 wants 40
+            # to 60 words here, in all 3 languages, because /geo/ sells "a 40 to
+            # 60 word answer directly under the heading that asks it" and a page
+            # that sells it has to do it. It also has to name its own subject,
+            # since the thing that gets quoted is this paragraph on its own and
+            # "these are the 5 we hear most" names nothing when it is lifted out
+            # of the page. Italian is the long one at 55 words: adding a fact
+            # here costs about 4 words there.
+            ("p", "Nobody goes looking for custom software. People go looking for "
+                  "the" + NL +
+                  "end of one annoyance, and these are the 5 we hear most. Each is "
+                  "a" + NL +
+                  "question you answer by stopping to count. The system we built "
+                  "for" + NL +
+                  "Iglisi Watch in Durres does the counting, on 50 panels, and "
+                  "costs" + NL +
+                  "nothing per month."),
             ("ledger", [
                 ("\"I don't know what I have in stock until I count it.\"",
                  "So you re-order what is already in the back and run out of what" + NL +

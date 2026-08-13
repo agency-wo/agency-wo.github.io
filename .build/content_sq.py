@@ -36,7 +36,7 @@ SERVICES = [
     # ------------------------------------------------------------------ SEO --
     {
         "slug": "seo",
-        "src": "c326ed3e",
+        "src": "8b6d0e48",
         "nav": "SEO",
         "schema_name": "Optimizim për motorët e kërkimit dhe kërkim lokal",
         # 21 characters, 2 fewer than the English.
@@ -61,6 +61,18 @@ SERVICES = [
                 "është gjëja më e lirë për t'u rregulluar dhe pothuajse askush "
                 "nuk e rregullon.",
         "sections": [
+            # The opening question and its answer, and it stays a QUESTION in
+            # Albanian: the English answers something a shop owner types, and a
+            # heading turned into a topic label answers nobody. The href is not
+            # copy; "auditim falas" is glossary.TERMS.
+            ("Si bëj që dyqani im të dalë në Google?", [
+                "<p>Të gjendesh në Google do të thotë dy punë: Profili i "
+                "Biznesit në Google që e vë dyqanin tënd në hartë, dhe një "
+                "faqe që i përgjigjet asaj që shkruajnë njerëzit. watch.al "
+                "nisi pa asnjë faqe dhe arriti 560 klikime në tremujor për 3 "
+                "muaj. <a href=\"/start/\">Auditimi falas</a> vlerëson 6 fusha "
+                "dhe të thotë nga cila punë të fillosh.</p>",
+            ]),
             # The English heading is a verbless fragment with a comma in it,
             # which check 20 warns on. Albanian gets a verb for free here, so
             # it takes one.
@@ -164,7 +176,7 @@ SERVICES = [
     # ------------------------------------------------------------------ GEO --
     {
         "slug": "geo",
-        "src": "1a23d388",
+        "src": "c3060a20",
         # glossary.TERMS: AI search -> kërkimi me AI. Matches
         # chrome_sq.FOOT_LABELS[0][1] exactly.
         "nav": "Kërkimi me AI",
@@ -186,11 +198,22 @@ SERVICES = [
                 "s'ka raport renditjeje, dhe pikërisht prandaj fitorja "
                 "kushton ende pak.",
         "sections": [
+            ("Si bëj që ChatGPT të rekomandojë biznesin tim?", [
+                "<p>ChatGPT rekomandon biznese që mund t'i lexojë dhe t'i "
+                "verifikojë gjetkë. Përgjigju pyetjes thjesht poshtë titullit "
+                "që e bën, etiketo biznesin që një makinë ta dijë çfarë është, "
+                "dhe bëhu i përmendur në faqe që nuk i zotëron. Pyete për një "
+                "riparim ore në Durrës: përmend Iglisi Watch.</p>",
+            ]),
             ("E kemi bërë një herë tashmë", [
+                # The client name is the anchor, as in English. The href is
+                # not copy and the name is in glossary.KEEP_ENGLISH, so this
+                # link is byte-identical in all 3 languages by design.
                 "<p>Pyet ChatGPT, Claude ose Perplexity ku të riparosh një orë "
-                "në Durrës dhe përmendin Iglisi Watch, me rrugën, oraret e "
-                "hapjes dhe numrin e WhatsApp. Është klienti ynë, dhe mund ta "
-                "kontrollosh që tani.</p>",
+                "në Durrës dhe përmendin "
+                "<a href=\"/work/iglisi-watch/\">Iglisi Watch</a>, me rrugën, "
+                "oraret e hapjes dhe numrin e WhatsApp. Është klienti ynë, dhe "
+                "mund ta kontrollosh që tani.</p>",
                 "<p>Janë gjithashtu i vetmi biznes orësh në Durrës me një faqe "
                 "që renditet fare. Konkurrenca janë lista direktorish dhe faqe "
                 "Facebook. Shumica e qyteteve dhe e zanateve duket ende "
@@ -288,7 +311,7 @@ SERVICES = [
     # ---------------------------------------------------------- WEB DESIGN --
     {
         "slug": "web-design",
-        "src": "47b3668b",
+        "src": "3133ce47",
         "nav": "Faqe interneti",
         "schema_name": "Dizajn dhe zhvillim faqesh interneti",
         # 50 characters.
@@ -308,6 +331,16 @@ SERVICES = [
                 "është zbukurim, dhe mënyra si është ndërtuar vendos tavanin e "
                 "gjithçkaje që mund të duash të bësh më vonë.",
         "sections": [
+            # No figure here either: rule 25 publishes no minimum budget in any
+            # language, and the answer names what moves the price instead.
+            ("Sa kushton një faqe interneti?", [
+                "<p>Një faqe interneti kushton sa kushtojnë pjesët e saj: sa "
+                "faqe, sa gjuhë, a ndryshon stoku çdo javë. "
+                "<a href=\"/start/\">Na thuaj çfarë duhet të bëjë faqja</a> "
+                "dhe merr një plan dhe një çmim të qartë. Tonat nuk kanë "
+                "licencë teme dhe as tarifë mujore, ndaj s'ka çfarë rinovohet "
+                "në vitin 2.</p>",
+            ]),
             # The claim this page is built on, and it stays checkable in
             # Albanian: the reader is told to open the network tab, not told
             # that we are fast.
@@ -397,7 +430,7 @@ SERVICES = [
     # ------------------------------------------------------------ META ADS --
     {
         "slug": "meta-ads",
-        "src": "7e8c5b05",
+        "src": "09e11765",
         # In glossary.KEEP_ENGLISH, and identical in all 3 languages.
         "nav": "Meta ads",
         "schema_name": "Reklamim në Meta",
@@ -419,6 +452,14 @@ SERVICES = [
                 "ndërsa puna më e ngadaltë poshtë grumbullohet, dhe të dyja "
                 "kanë nevojë për njëra-tjetrën.",
         "sections": [
+            ("A ia vlejnë Meta ads për një dyqan të vogël?", [
+                "<p>Meta ads ia vlejnë për një dyqan të vogël kur oferta "
+                "tashmë funksionon dhe dikush përgjigjet shpejt. Blejnë "
+                "klientë këtë javë ndërsa puna më e ngadaltë e kërkimit "
+                "grumbullohet. Nuk janë zgjidhje për një ofertë të dobët, dhe "
+                "pjesa më e madhe e rezultatit vendoset në 90 sekondat pasi "
+                "dikush e prek.</p>",
+            ]),
             # Pricing first, as in English: it is what makes this page a
             # different shape from the other 3.
             ("Si paguhemi dhe pse ka rëndësi për ty", [

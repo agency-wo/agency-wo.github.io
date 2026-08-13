@@ -32,8 +32,9 @@ POSTS = [
     # ================================================================ SEO ===
     {
         "slug": "map-listing-first",
-        "src": "9d95c579",
+        "src": "06c4fb36",
         "date": "2026-08-14",
+        "updated": "2026-08-14",
         "topic": "Ricerca locale",
         "work": "iglisi-watch",
         "service": ("/seo/", "SEO e ricerca locale"),
@@ -134,8 +135,9 @@ POSTS = [
     # ================================================================ GEO ===
     {
         "slug": "what-nobody-can-promise-ai-search",
-        "src": "2388a583",
+        "src": "cbee899e",
         "date": "2026-08-14",
+        "updated": "2026-08-14",
         "topic": "Ricerca AI",
         "work": "iglisi-watch",
         "service": ("/geo/", "Ricerca AI"),
@@ -161,23 +163,30 @@ POSTS = [
             ]),
             ("Il dato del 40% non vuol dire quello che ti hanno detto", [
                 "<p>Quasi ogni agenzia che vende ricerca AI cita un aumento di "
-                "visibilità del 40% preso dal paper GEO originale del 2024. Una "
-                "rassegna critica del 2026 su tutto il campo spiega cosa "
-                "descrive quel numero: un guadagno relativo dentro un simulatore "
-                "dove 5 documenti sono già stati messi nel contesto del "
-                "modello.</p>",
+                "visibilità del 40% preso dal paper GEO originale del 2024. La "
+                "<a href=\"https://arxiv.org/abs/2607.14035\" "
+                "target=\"_blank\" rel=\"noopener\">rassegna critica di 45 "
+                "studi GEO</a> di Olivier Martinez, di luglio 2026, spiega "
+                "cosa descrive quel numero: un guadagno relativo dentro un "
+                "simulatore dove 5 documenti sono già stati messi nel contesto "
+                "del modello.</p>",
                 "<p>Non è la scoperta che riscrivere la tua pagina ti fa trovare "
                 "il 40% di volte in più. Chi lo cita come se lo fosse non ha "
                 "letto oltre l'abstract.</p>",
             ]),
             ("Il 97% dei file llms.txt non è mai stato letto", [
                 "<p>L'esempio più pulito di una tattica venduta senza niente "
-                "dietro. Ahrefs ha controllato 137.210 domini. Circa il 28% "
-                "pubblica un file llms.txt, e il 97% di quei file ha ricevuto "
-                "zero richieste in un mese. Del 3% che è stato scaricato, quasi "
+                "dietro. <a href=\"https://ahrefs.com/blog/llmstxt-study/\" "
+                "target=\"_blank\" rel=\"noopener\">Ahrefs ha controllato "
+                "137.210 domini</a> nel maggio 2026. Circa il 28% pubblica un "
+                "file llms.txt, e il 97% di quei file ha ricevuto zero "
+                "richieste in un mese. Del 3% che è stato scaricato, quasi "
                 "tutto il traffico era di strumenti di audit SEO, non di "
                 "crawler AI.</p>",
-                "<p>Google ha detto che non ha in programma di supportarlo. Il "
+                "<p>Gary Illyes di Google "
+                "<a href=\"https://www.seroundtable.com/openai-crawling-llms-txt-files-39811.html\" "
+                "target=\"_blank\" rel=\"noopener\">ha detto che Google non lo "
+                "supporta e non ha in programma di farlo</a>. Il "
                 "file lo aggiungiamo lo stesso, perché non costa niente, e "
                 "diciamo chiaramente su <a href=\"/geo/\">la pagina sulla "
                 "ricerca AI</a> che nessun grande fornitore risulta leggerlo.</p>",
@@ -185,9 +194,12 @@ POSTS = [
             ("Quasi tutto il lavoro non è sul tuo sito", [
                 "<p>Questa è quella scomoda. Negli studi su cosa citano gli "
                 "assistenti AI, i contenuti sul sito dell'attività stessa "
-                "valgono circa il 2% delle citazioni. Nei servizi professionali, "
-                "le liste di terze parti si sono prese l'80,9% delle citazioni "
-                "contro il 19,1% del sito dell'azienda.</p>",
+                "valgono circa il 2% delle citazioni. L'AI Search Lab di Wix "
+                "Studio <a href=\"https://www.wix.com/studio/ai-search-lab/research/content-types-most-cited-by-llms\" "
+                "target=\"_blank\" rel=\"noopener\">ha letto 1 milione di "
+                "citazioni</a>: nei servizi professionali, le liste di terze "
+                "parti si sono prese l'80,9% delle citazioni contro il 19,1% "
+                "del sito dell'azienda.</p>",
                 "<p>Quindi il lavoro che rende di più è quasi tutto farsi "
                 "nominare da un'altra parte: elenchi, stampa locale, una "
                 "classifica, un thread di forum, un video. Un'agenzia che ti "
@@ -196,8 +208,13 @@ POSTS = [
             ]),
             ("I numeri si muovono più veloci dei consigli", [
                 "<p>Ahrefs ha misurato quante citazioni degli AI Overview "
-                "venivano dai primi 10 risultati di Google. Il dato era il 76%. "
-                "7 mesi dopo la stessa misura ha dato il 38%.</p>",
+                "venivano dai primi 10 risultati di Google. A "
+                "<a href=\"https://ahrefs.com/blog/search-rankings-ai-citations\" "
+                "target=\"_blank\" rel=\"noopener\">luglio 2025 il dato era il "
+                "76%</a>. 7 mesi dopo "
+                "<a href=\"https://ahrefs.com/blog/ai-overview-citations-top-10\" "
+                "target=\"_blank\" rel=\"noopener\">la stessa misura ha dato "
+                "il 38%</a>.</p>",
                 "<p>Non è una contraddizione. È il campo che si muove sotto i "
                 "piedi di tutti, ed è per questo che datiamo quello che "
                 "pubblichiamo e lo rivediamo invece di lasciarlo lì.</p>",
@@ -240,8 +257,9 @@ POSTS = [
     # =========================================================== SOFTWARE ===
     {
         "slug": "four-lines-that-were-five",
-        "src": "1b484a2d",
+        "src": "34478d13",
         "date": "2026-08-14",
+        "updated": "2026-08-14",
         "topic": "Software su misura",
         "work": "iglisi-watch",
         "service": ("/systems/", "Software su misura"),

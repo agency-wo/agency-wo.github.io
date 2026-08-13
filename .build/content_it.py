@@ -34,7 +34,7 @@ SERVICES = [
     # ------------------------------------------------------------------ SEO --
     {
         "slug": "seo",
-        "src": "c326ed3e",
+        "src": "8b6d0e48",
         "nav": "SEO",
         "schema_name": "Ottimizzazione per i motori di ricerca e ricerca locale",
         # 23 characters, the same as the English, and 41 with the suffix
@@ -61,6 +61,26 @@ SERVICES = [
                 "solito è la cosa più economica da sistemare e quasi nessuno "
                 "la sistema.",
         "sections": [
+            # The opening question and its answer. It stays a QUESTION in
+            # Italian: the English is answering something a shop owner types,
+            # and a heading that turns it into a topic label answers nobody.
+            # The href is not copy; "audit gratuito" is glossary.TERMS.
+            ("Come faccio a far comparire il mio negozio su Google?", [
+                # 60 words against check 47's 40 to 60, which has no
+                # per-language allowance and is a band rather than a ceiling.
+                # It was 64. The 4 that went are function words and not a
+                # fact: "vuol dire" -> "significa", "da nessun sito" ->
+                # "senza sito", "ed è arrivato a" -> "e ha raggiunto", and the
+                # "tuo" in "il tuo negozio", which the "ti dice" at the end of
+                # the same paragraph carries anyway. Every number, the client
+                # and the 6 areas are still here.
+                "<p>Farsi trovare su Google significa due lavori: il Profilo "
+                "dell'attività su Google che mette il negozio sulla mappa, "
+                "e un sito che risponde a quello che la gente digita. watch.al "
+                "è partito senza sito e ha raggiunto 560 clic a trimestre "
+                "in 3 mesi. L'<a href=\"/start/\">audit gratuito</a> dà un "
+                "voto a 6 aree e ti dice da quale lavoro cominciare.</p>",
+            ]),
             # The English heading is a verbless fragment with a comma in it,
             # which check 20 warns on. Italian gets a verb for free here, so it
             # takes one.
@@ -167,7 +187,7 @@ SERVICES = [
     # ------------------------------------------------------------------ GEO --
     {
         "slug": "geo",
-        "src": "1a23d388",
+        "src": "c3060a20",
         # glossary.TERMS: AI search -> ricerca AI, and glossary.BANNED fails on
         # "IA", which reads as a translation artefact to the people who buy
         # this. Matches chrome_it.FOOT_LABELS[0][1] exactly.
@@ -190,11 +210,23 @@ SERVICES = [
                 "ancora un report di posizionamento, ed è esattamente per "
                 "questo che vincere costa ancora poco.",
         "sections": [
+            ("Come faccio a far consigliare la mia attività da ChatGPT?", [
+                "<p>ChatGPT consiglia attività che riesce a leggere e a "
+                "verificare altrove. Rispondi alla domanda in modo semplice "
+                "sotto il titolo che la pone, etichetta l'attività così una "
+                "macchina capisce cos'è, e fatti nominare su siti che non "
+                "controlli. Chiedigli una riparazione di orologi a Durazzo: "
+                "nomina Iglisi Watch.</p>",
+            ]),
             ("L'abbiamo già fatto una volta", [
+                # The client name is the anchor, as in English. The href is
+                # not copy and the name is in glossary.KEEP_ENGLISH, so this
+                # link is byte-identical in all 3 languages by design.
                 "<p>Chiedi a ChatGPT, Claude o Perplexity dove far riparare un "
-                "orologio a Durazzo e nominano Iglisi Watch, con la via, gli "
-                "orari di apertura e il numero WhatsApp. È un cliente nostro, "
-                "e puoi verificarlo adesso.</p>",
+                "orologio a Durazzo e nominano "
+                "<a href=\"/work/iglisi-watch/\">Iglisi Watch</a>, con la via, "
+                "gli orari di apertura e il numero WhatsApp. È un cliente "
+                "nostro, e puoi verificarlo adesso.</p>",
                 "<p>Sono anche l'unica attività di orologi a Durazzo con un "
                 "sito che si posiziona. La concorrenza è fatta di schede di "
                 "elenchi e pagine Facebook. La maggior parte delle città e dei "
@@ -299,7 +331,7 @@ SERVICES = [
     # ---------------------------------------------------------- WEB DESIGN --
     {
         "slug": "web-design",
-        "src": "47b3668b",
+        "src": "3133ce47",
         "nav": "Siti web",
         "schema_name": "Progettazione e sviluppo di siti web",
         # 42 characters.
@@ -319,6 +351,16 @@ SERVICES = [
                 "decorazione, e il modo in cui è costruito fissa il tetto di "
                 "tutto quello che vorrai fare dopo.",
         "sections": [
+            # No figure here either: rule 25 publishes no minimum budget in any
+            # language, and the answer names what moves the price instead.
+            ("Quanto costa un sito?", [
+                "<p>Un sito costa quanto costano le sue parti: quante pagine, "
+                "quante lingue, se il magazzino cambia ogni settimana. "
+                "<a href=\"/start/\">Dicci cosa deve fare il sito</a> e ricevi "
+                "un piano e un prezzo chiaro. I nostri non hanno licenze del "
+                "tema né canoni mensili, quindi non si rinnova niente "
+                "nell'anno 2.</p>",
+            ]),
             # The claim this page is built on, and it stays checkable in
             # Italian: the reader is told to open the network tab, not told
             # that we are fast.
@@ -409,7 +451,7 @@ SERVICES = [
     # ------------------------------------------------------------ META ADS --
     {
         "slug": "meta-ads",
-        "src": "7e8c5b05",
+        "src": "09e11765",
         # In glossary.KEEP_ENGLISH, and identical in all 3 languages.
         "nav": "Meta ads",
         "schema_name": "Pubblicità su Meta",
@@ -431,6 +473,14 @@ SERVICES = [
                 "settimane mentre il lavoro più lento sotto si accumula, e i "
                 "due hanno bisogno l'uno dell'altro.",
         "sections": [
+            ("Vale la pena fare Meta ads per un piccolo negozio?", [
+                "<p>Le Meta ads valgono per un piccolo negozio quando "
+                "l'offerta funziona già e qualcuno risponde in fretta. "
+                "Comprano clienti questa settimana mentre il lavoro più lento "
+                "sulla ricerca si accumula. Non sono una toppa per un'offerta "
+                "debole, e gran parte del risultato si decide nei 90 secondi "
+                "dopo che qualcuno ha toccato.</p>",
+            ]),
             # Pricing first, as in English: it is what makes this page a
             # different shape from the other 3.
             ("Come ci facciamo pagare e perché ti riguarda", [

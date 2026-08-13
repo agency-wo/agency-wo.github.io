@@ -11,8 +11,11 @@ file is a sentence, and nothing in those files is a tag.
 No em-dashes anywhere. The arrow is an inline SVG because Archivo has no
 U+2197, and because a drawn arrow beats a font-dependent one.
 """
+import io
 import os
 import re
+import struct
+import subprocess
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -20,6 +23,9 @@ import chrome  # noqa: E402
 import chrome_it  # noqa: E402
 import chrome_sq  # noqa: E402
 import i18n  # noqa: E402
+import l10n  # noqa: E402
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 _CHROME = {"en": chrome, "it": chrome_it, "sq": chrome_sq}
 
@@ -44,6 +50,135 @@ WORDMARK = "minarank"
 EMAIL = "hello@minarankstudio.com"
 WHATSAPP = "355675716090"
 FOUNDER = "Henri Sila"
+
+# -- sameAs -----------------------------------------------------------------
+# The accounts that are the same entity somewhere else. It is the one property
+# in an Organization that a search engine can CHECK: everything else on the
+# node is us describing ourselves, and this is the part that can be
+# corroborated against a profile somebody else hosts.
+#
+# PLACEHOLDERS, and deliberately unmistakable ones, exactly like
+# WEB3FORMS_KEY below. A sameAs pointing at a guess is worse than an empty one:
+# an empty sameAs says nothing, and a wrong one asserts that a stranger's
+# LinkedIn page is this studio. The gate fails while these read PASTE-, and it
+# is meant to. Do not delete them to make it pass and do not invent a URL that
+# looks plausible: create the accounts, then paste the real addresses in.
+#
+# TWO LISTS, because they describe 2 different entities. The studio's LinkedIn
+# company page is not the founder's LinkedIn profile, and a graph that says
+# they are the same node is wrong in a way no crawler can tell us about.
+# The word "placeholder" is in every one of them ON PURPOSE, and not as
+# decoration: a placeholder a placeholder-detector cannot recognise is one that
+# ships. Gate check 48 scans this list for exactly that word among others, so
+# the marker is the thing that makes the check work rather than something the
+# check happens to catch.
+SAMEAS = [
+    "https://www.linkedin.com/company/placeholder-paste-the-minarank-page",
+    "https://www.instagram.com/placeholder-paste-the-minarank-account",
+]
+FOUNDER_SAMEAS = [
+    "https://www.linkedin.com/in/placeholder-paste-the-founder-profile",
+]
+
+# -- the files structured data and the share card name ----------------------
+# A file named in JSON-LD or in an og: tag is a claim like any other, and it is
+# the cheapest sort to get wrong: nothing renders differently when the path
+# stops resolving. asset() is why every one of them is checked against the disk
+# at build time rather than at somebody else's crawl time.
+LOGO_FILE = "/assets/logo/minarank-monogram.svg"
+OG_IMAGE = "/assets/og/og-image.png"
+
+
+def asset(path):
+    """SITE + a path that has to exist in this repo."""
+    assert os.path.exists(os.path.join(ROOT, path.lstrip("/"))), (
+        path + " is named in the markup and is not in the repo")
+    return SITE + path
+
+
+def _png_size(path):
+    """(width, height) out of a PNG's IHDR, which is always its first chunk.
+
+    READ, never typed. Facebook, LinkedIn and X all reserve the card's space
+    before the image arrives and can only do that if the tags say how big it
+    is, so the 2 numbers have to be right; and assets/og/og-harness.html can
+    re-render this file at another size, at which point 2 typed numbers would
+    describe the previous one and nothing would say so.
+    """
+    with io.open(path, "rb") as fh:
+        head = fh.read(24)
+    assert head[:8] == b"\x89PNG\r\n\x1a\n" and head[12:16] == b"IHDR", (
+        path + " is not a PNG, so its size cannot be read from an IHDR")
+    return struct.unpack(">II", head[16:24])
+
+
+OG_W, OG_H = _png_size(os.path.join(ROOT, OG_IMAGE.lstrip("/")))
+
+# -- when the copy on a page last changed -----------------------------------
+# The site publishes that freshness by last-updated date is one of the few
+# signals that holds up, and carried no date on any of its 51 pages. This is
+# the date, and it is git's answer rather than the clock's: the build's own
+# date would restamp every page whenever anything anywhere changed, which is
+# the freshness signal a spammer fakes and half the reason the honest one is
+# discounted.
+#
+# THE ENGLISH SOURCE FILE, in all 3 languages. English is the source, and
+# i18n.check_stamp fails the build when an English record changes while its
+# translations still claim the old stamp, so an English edit drags the
+# translation along with it: content.py's commit date IS the date the Italian
+# service page's copy changed. Reading content_it.py instead would let one
+# document publish 3 different last-updated dates across its own hreflang
+# cluster, and would print a date on a page whose twin had none the day a
+# translation was written and not yet committed.
+#
+# File granularity, not record. Git can say when content.py changed and cannot
+# say which of the 4 service records inside it did, so a service page is as
+# fresh as the file its copy lives in. That overstates by days, never months,
+# and the alternative is a date nothing derives.
+_DATES = {}
+
+
+def git_date(path):
+    """The last commit date of one file as YYYY-MM-DD, or None.
+
+    None for a file git has never seen, and the caller then prints nothing.
+    A page claiming it was updated on a day nobody can check is worse than a
+    page that says nothing, which is rule 13 applied to a date.
+    """
+    if path not in _DATES:
+        d = None
+        try:
+            out = subprocess.run(["git", "log", "-1", "--format=%cs", "--", path],
+                                 cwd=ROOT, capture_output=True, text=True,
+                                 timeout=10)
+            got = out.stdout.strip()
+            d = got if re.fullmatch(r"\d{4}-\d{2}-\d{2}", got) else None
+        except Exception:
+            d = None
+        _DATES[path] = d
+    return _DATES[path]
+
+
+def updated(source, lang, indent=10):
+    """The quiet last-updated line, or "" when git has never seen the file.
+
+    `source` is the module a page's copy lives in, without the extension:
+    "content" for a service page, "posts" for a post, "clients" for a client.
+    The generator knows which one it read, so nothing here has to guess from a
+    URL.
+
+    The word is chrome and the date goes through l10n.human, so Italian reads
+    13 agosto and Albanian 13 gusht. The <time> wraps the date and not the
+    sentence, because the machine-readable half of this is the date: putting
+    the word inside the element would tell a parser that "Updated 13 August
+    2026" is a datetime, which it is not.
+    """
+    iso = git_date(".build/" + source + ".py")
+    if not iso:
+        return ""
+    stamp = f'<time datetime="{iso}">{l10n.human(iso, lang)}</time>'
+    return (" " * indent + '<p class="updated">'
+            + ch(lang).UPDATED.replace("{date}", stamp) + "</p>")
 
 # -- the free audit form ----------------------------------------------------
 # Web3Forms, the same service already running on watch.al. The access key is a
@@ -286,7 +421,10 @@ def head(page, lang):
   <meta property="og:title" content="{page["title"]}">
   <meta property="og:description" content="{page.get("og_desc", page["description"])}">
   <meta property="og:url" content="{url}">
-  <meta property="og:image" content="{SITE}/assets/og/og-image.png">
+  <meta property="og:image" content="{asset(OG_IMAGE)}">
+  <meta property="og:image:width" content="{OG_W}">
+  <meta property="og:image:height" content="{OG_H}">
+  <meta property="og:image:alt" content="{ch(lang).OG_ALT}">
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">

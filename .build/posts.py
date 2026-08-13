@@ -1,6 +1,6 @@
 """Writing. One record per post, one page per record.
 
-FIVE RULES, all of which exist because the gate would otherwise fail on your
+SEVEN RULES, all of which exist because the gate would otherwise fail on your
 first new post and you would not know why:
 
 1. `title` and `h1` are different strings, and both are required. `title` is
@@ -25,6 +25,18 @@ first new post and you would not know why:
    "in three days". Check 25 runs on every page and the site promises exactly
    one thing, in shell.TURNAROUND. Bare durations like "3 months" are fine.
 
+6. `date` is the day it went up and never moves. `updated` is the last day
+   somebody revised the words, and gen_blog.py emits it as `dateModified`.
+   Write it on every record: `p.get("updated", p["date"])` had every post
+   claiming it had never been touched, on a site that says in this very post
+   that it dates what it publishes and revises it. Move it when you edit copy.
+
+7. Every figure names its source in the sentence and links it. A number with
+   no link is the failure this site is written against, and the GEO post
+   argues that in so many words. An external link takes target="_blank"
+   rel="noopener" or check 19 fails, and its href is not copy: the 3 languages
+   carry the same URL and translate only the link text.
+
 Also: no em-dashes, this file is scanned. Digits not words. Contractions on.
 Every heading needs a verb or fewer than 2 commas. "We", never "I".
 
@@ -44,6 +56,7 @@ POSTS = [
     {
         "slug": "map-listing-first",
         "date": "2026-08-14",
+        "updated": "2026-08-14",
         "topic": "Local search",
         "work": "iglisi-watch",
         "service": ("/seo/", "SEO and local search"),
@@ -139,6 +152,7 @@ POSTS = [
     {
         "slug": "what-nobody-can-promise-ai-search",
         "date": "2026-08-14",
+        "updated": "2026-08-14",
         "topic": "AI search",
         "work": "iglisi-watch",
         "service": ("/geo/", "AI search"),
@@ -163,9 +177,11 @@ POSTS = [
             ]),
             ("The 40% figure does not mean what you were told", [
                 "<p>Almost every agency selling AI search quotes a 40% "
-                "visibility lift from the original 2024 GEO paper. A 2026 "
-                "critical survey of the whole field spells out what that "
-                "number describes: a relative gain inside a simulator where 5 "
+                "visibility lift from the original 2024 GEO paper. Olivier "
+                "Martinez's <a href=\"https://arxiv.org/abs/2607.14035\" "
+                "target=\"_blank\" rel=\"noopener\">critical survey of 45 GEO "
+                "studies</a>, from July 2026, spells out what that number "
+                "describes: a relative gain inside a simulator where 5 "
                 "documents have already been placed in the model's "
                 "context.</p>",
                 "<p>It is not a finding that rewriting your page gets you found "
@@ -174,21 +190,29 @@ POSTS = [
             ]),
             ("97% of llms.txt files have never been read", [
                 "<p>The tidiest example of a tactic sold with nothing behind "
-                "it. Ahrefs checked 137,210 domains. About 28% publish an "
-                "llms.txt file, and 97% of those files received zero requests "
-                "in a month. Of the 3% that were fetched, most of the traffic "
-                "was SEO audit tools, not AI crawlers.</p>",
-                "<p>Google has said it has no plans to support it. We still add "
-                "the file, because it costs nothing, and we say plainly on "
+                "it. <a href=\"https://ahrefs.com/blog/llmstxt-study/\" "
+                "target=\"_blank\" rel=\"noopener\">Ahrefs checked 137,210 "
+                "domains</a> over May 2026. About 28% publish an llms.txt "
+                "file, and 97% of those files received zero requests in a "
+                "month. Of the 3% that were fetched, most of the traffic was "
+                "SEO audit tools, not AI crawlers.</p>",
+                "<p>Google's Gary Illyes "
+                "<a href=\"https://www.seroundtable.com/openai-crawling-llms-txt-files-39811.html\" "
+                "target=\"_blank\" rel=\"noopener\">said Google does not "
+                "support it and has no plans to</a>. We still add the file, "
+                "because it costs nothing, and we say plainly on "
                 "<a href=\"/geo/\">the AI search page</a> that no major "
                 "provider has been shown to read it.</p>",
             ]),
             ("Most of the work is not on your website", [
                 "<p>This is the uncomfortable one. In studies of what AI "
                 "assistants cite, content on the business's own site accounts "
-                "for roughly 2% of citations. In professional services, "
-                "third-party listicles took 80.9% of citations against 19.1% "
-                "for a company's own.</p>",
+                "for roughly 2% of citations. Wix Studio's AI Search Lab "
+                "<a href=\"https://www.wix.com/studio/ai-search-lab/research/content-types-most-cited-by-llms\" "
+                "target=\"_blank\" rel=\"noopener\">read 1 million "
+                "citations</a>: in professional services, third-party "
+                "listicles took 80.9% of citations against 19.1% for a "
+                "company's own.</p>",
                 "<p>So the highest-leverage work is mostly getting named "
                 "somewhere else: directories, local press, a roundup, a forum "
                 "thread, a video. An agency that sells you AI search and only "
@@ -196,8 +220,13 @@ POSTS = [
             ]),
             ("The numbers move faster than the advice", [
                 "<p>Ahrefs measured how many AI Overview citations came from "
-                "Google's top 10 results. The figure was 76%. 7 months "
-                "later the same measurement gave 38%.</p>",
+                "Google's top 10 results. In "
+                "<a href=\"https://ahrefs.com/blog/search-rankings-ai-citations\" "
+                "target=\"_blank\" rel=\"noopener\">July 2025 the figure was "
+                "76%</a>. 7 months later "
+                "<a href=\"https://ahrefs.com/blog/ai-overview-citations-top-10\" "
+                "target=\"_blank\" rel=\"noopener\">the same measurement gave "
+                "38%</a>.</p>",
                 "<p>That is not a contradiction. It is the field moving under "
                 "everyone, and it is why we date what we publish and revise it "
                 "rather than leaving it up.</p>",
@@ -240,6 +269,7 @@ POSTS = [
     {
         "slug": "four-lines-that-were-five",
         "date": "2026-08-14",
+        "updated": "2026-08-14",
         "topic": "Custom software",
         "work": "iglisi-watch",
         "service": ("/systems/", "Custom software"),

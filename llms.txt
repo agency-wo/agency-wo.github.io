@@ -1,0 +1,40 @@
+# minarank studio
+
+> Somebody is searching for what you sell right now. We make sure they find
+> you on Google, on the map, and in what ChatGPT says. Durres, Albania.
+
+We publish this file because it costs nothing. No major provider has been
+shown to read one, and we say so on the AI search page rather than selling
+llms.txt as a ranking trick. It is a map, not a ranking factor. If nothing
+ever fetches it, we have lost one file and no reader has lost anything.
+
+These are the English pages. Every one of them is mirrored, record for record:
+Italiano at /it/, Shqip at /sq/. Every URL on the site, in all 3 languages and
+with its hreflang alternates, is in https://minarankstudio.com/sitemap.xml.
+
+## Home
+- [minarank studio · digital presence for small businesses](https://minarankstudio.com/): Somebody is searching for what you sell right now. We make sure they find you on Google, on the map, and in what ChatGPT says. Durres, Albania.
+
+## What we do
+- [Getting found on Google](https://minarankstudio.com/seo/): SEO and local search for small businesses: your Google Business Profile, on-page work on the site, and off-page work everywhere else. English, Italian and Albanian.
+- [Getting named when someone asks an AI](https://minarankstudio.com/geo/): AI search, sometimes called GEO. Becoming one of the few businesses an assistant names when a customer asks it for a recommendation.
+- [Websites built to be found and to sell](https://minarankstudio.com/web-design/): Websites for small businesses: fast, clear, readable by machines, usually in three languages. Built without frameworks or third-party scripts.
+- [Facebook and Instagram ads](https://minarankstudio.com/meta-ads/): Facebook and Instagram advertising for small businesses. A flat monthly fee, never a percentage of what you spend.
+- [Custom business software for small shops](https://minarankstudio.com/systems/): Stock, jobs, customers and money in one place. We build the software small shops and trades actually run on, in Albania and Italy.
+
+## Work
+- [Work](https://minarankstudio.com/work/): Four businesses in Albania and beyond, what we built for each, and the one result with published numbers behind it.
+- [Iglisi Watch](https://minarankstudio.com/work/iglisi-watch/): A family watch shop in Durres with no website at all. Three months after launch Google was sending it 560 clicks a quarter, from a standing start.
+- [Victoria Boutique](https://minarankstudio.com/work/victoria-boutique/): A Durres boutique bringing Greek labels into Albania. The owner adds new pieces from her phone, in three languages, with no monthly fee and nobody to call.
+- [Intimo Bruna](https://minarankstudio.com/work/intimo-bruna/): A Durres lingerie shop selling through WhatsApp, in Albanian, Italian and English, on a hand-built site with its own fonts and no third-party scripts.
+- [ProAffy](https://minarankstudio.com/work/pro-affy/): Lead generation for heating and cooling firms. A site built around speed of response rather than looks, because that is what decides who gets the job.
+
+## Writing
+- [Writing](https://minarankstudio.com/blog/): What we have learned doing search, AI search and custom software for small businesses in Durres, written so you can check it.
+- [What nobody can promise you about AI search](https://minarankstudio.com/blog/what-nobody-can-promise-ai-search/): A studio that sells AI search optimisation, on what the research actually shows: the misquoted 40%, the llms.txt files nobody reads, and where the real leverage is.
+- [What a new shop's first 3 months look like](https://minarankstudio.com/blog/map-listing-first/): The actual Search Console numbers from a Durres watch shop's first 3 months online, and what a local business should fix before it worries about rankings.
+- [The 4 money lines that were really 5](https://minarankstudio.com/blog/four-lines-that-were-five/): How a watch shop's own software came to add up 4 money lines when there were 5, why no test caught it, and what that means for a business run on a spreadsheet.
+
+## Studio
+- [How we work](https://minarankstudio.com/studio/): How we work: evidence before opinion, one plain document, built in house, and the things we will tell you for free even when it costs us the job.
+- [Start a project](https://minarankstudio.com/start/): Tell us what you sell and where you want to be found. Email, WhatsApp or a short call. We answer with a plan and a straight price.

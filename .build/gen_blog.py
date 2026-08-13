@@ -24,11 +24,30 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import i18n  # noqa: E402
 import l10n  # noqa: E402
 import shell  # noqa: E402
-from gen_pages import Contents, out, write  # noqa: E402
+from gen_pages import Contents, out, strip_tags, write  # noqa: E402
 
 S = shell.SITE
 NL = chr(10)
 BLOG = "/blog/"
+
+
+def word_count(p):
+    """The words a reader actually reads on a post, counted not estimated.
+
+    THE POST'S OWN WORDS AND NOTHING ELSE: the section headings, the paragraphs
+    under them, and the payoff sentence that closes them. The standfirst is in
+    the page head, the sidebar is navigation, and the audit link appended to the
+    payoff is chrome, so none of the 3 is the article. Counting the chrome would
+    add the same words to all 4 posts and make 4 different lengths agree.
+
+    Counted off the LOCALISED record, so the Italian post reports the Italian
+    figure. A single number copied across 3 languages would be wrong on 2 of
+    them, and wordCount exists to be compared with the page.
+    """
+    text = " ".join([h for h, _b in p["body"]]
+                    + [b for _h, blocks in p["body"] for b in blocks]
+                    + [p["payoff"]])
+    return len(strip_tags(text).split())
 
 
 def txt(indent, s, lang):
@@ -78,6 +97,15 @@ def post_page(p, en_p, nxt, by_slug, band, lang):
          "headline": p["h1"], "name": p["title"],
          "description": p["description"], "url": url,
          "mainEntityOfPage": {"@id": url + "#post"},
+         # The share card, which is the only image a post has. Google wants an
+         # image on an Article and there is no per-post artwork to give it, so
+         # this names the one that exists rather than a file we intend to draw.
+         # shell.asset() fails the build if it ever stops existing.
+         "image": shell.asset(shell.OG_IMAGE),
+         # Counted off the rendered body, never typed. A wordCount somebody
+         # types is a wordCount that is wrong by the second edit, and this one
+         # is a claim a machine can check against the page in one pass.
+         "wordCount": word_count(p),
          "datePublished": p["date"],
          "dateModified": p.get("updated", p["date"]),
          "author": {"@id": S + shell.localise("/studio/", lang) + "#founder"},
@@ -136,6 +164,7 @@ def post_page(p, en_p, nxt, by_slug, band, lang):
 
           <p class="payoff">{shell.TICK}<span>{shell.localise_html(p["payoff"], lang)}
             <a href="{shell.localise(shell.AUDIT_URL, lang)}">{c.AUDIT_LINK}</a>.</span></p>
+{shell.updated("posts", lang)}
         </div>
 
         <aside class="side" aria-label="{c.ARIA_DETAILS}">
@@ -228,6 +257,7 @@ def blog_index(posts, idx, lang):
 {rows}
         </ul>
       </section>
+{shell.updated("posts", lang, 6)}
 '''
     return (shell.head(page, lang) + shell.header(lang, BLOG) +
             '\n  <main id="main">\n    <div class="wrap">\n' + body +

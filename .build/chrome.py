@@ -53,6 +53,12 @@ ARIA_GLANCE = "At a glance"
 ARIA_DETAILS = "Details"
 ARIA_LANG = "Language"
 WA_LABEL = "Message us on WhatsApp"
+# The share card's alt text. One image on all 51 pages, so it describes the
+# card and never the page: it is what somebody using a screen reader hears in
+# place of a picture that was pasted into a chat, and "minarank studio" is
+# already the og:title beside it. Rule 11 applies here too, so it counts.
+OG_ALT = ("The minarank wordmark climbing 10 numbered search results, above "
+          "the 5 services")
 # What actually arrives on the founder's phone. It is a data- attribute read by
 # js/main.js, so nothing that walks the DOM for text will find it.
 WA_PREFILL = "Hello {brand}, I have a question about my website."
@@ -94,6 +100,11 @@ SIDE_DID = "What we did"
 SIDE_ON_THIS_PAGE = "On this page"
 READ_NEXT = "Read next"
 READ_IT = "Read it"
+# The last-updated line at the foot of the prose. {date} is a token and is
+# filled by shell.updated() with l10n.human's output, so this string never
+# carries a month name and a translator never types one: the 36 month names
+# live in l10n.py, in one place, and this is the word in front of them.
+UPDATED = "Updated {date}"
 WHAT_WE_DO = "What we do"
 WHAT_WE_DONT = "What we do not do"
 QUESTIONS = "Questions worth asking"

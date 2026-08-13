@@ -75,6 +75,31 @@ def jsonld(h, services, lang):
         "description": h["org_desc"],
         "url": home,
         "email": shell.EMAIL,
+        # THE CITY AND THE COUNTRY, AND NOTHING ELSE. A ProfessionalService is
+        # a LocalBusiness and every local pack in the world reads this node, so
+        # an address that is not there costs real ground. An invented street
+        # costs more: the founder declined to publish one, and a PostalAddress
+        # carrying a plausible street we made up would be a fact this site
+        # asserts and cannot support, which is rule 21 broken in the copy a
+        # machine reads. Locality and country are both true and both checkable.
+        # streetAddress goes in the day there is one to name.
+        "address": {"@type": "PostalAddress",
+                    "addressLocality": "Durres",
+                    "addressCountry": "AL"},
+        # The same number the WhatsApp button dials, in E.164 because that is
+        # the only form a machine can dial. Derived from the one constant, so
+        # the number cannot come to disagree with itself: rule 27 gates it in
+        # shell.py and this reads it rather than retyping it.
+        "telephone": "+" + shell.WHATSAPP,
+        # Both files are checked against the disk by shell.asset(). A logo or
+        # an image naming a path that 404s is the cheapest wrong claim on the
+        # site to make, because nothing on the page renders differently.
+        "logo": shell.asset(shell.LOGO_FILE),
+        "image": shell.asset(shell.OG_IMAGE),
+        # The one property here a search engine can corroborate against
+        # somebody else's server. Placeholders today, and shell.py says why
+        # they ship as placeholders rather than as an absent key.
+        "sameAs": shell.SAMEAS,
         "founder": {"@id": S + shell.localise("/studio/", lang) + "#founder"},
         "areaServed": ["AL", "IT", "Worldwide"],
         "knowsLanguage": ["en", "it", "sq"],
@@ -333,6 +358,7 @@ def render(lang):
             <p><a href="{shell.localise("/studio/", lang)}">{fill(h["who_go"], lang)} {ARROW}</a></p>
           </div>
         </div>
+{shell.updated("home", lang, 8)}
       </div>
     </section>
 '''
