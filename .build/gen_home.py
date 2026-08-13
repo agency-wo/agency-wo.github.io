@@ -1,12 +1,13 @@
-"""Emit index.html. The homepage was hand-authored and drifted; now it comes
-from the same shell as every other page.
+"""Emit index.html from home.py. The homepage was hand-authored and drifted;
+now it comes from the same shell as every other page.
 
 Six blocks: what we do, the proof, the five doors, the businesses, the refusal,
 one CTA. No values section, no process diagram, no stats bar.
 
-Every service row leads with what the reader ends up with and puts the method
-on the line underneath, which is also the line that makes the row read as a
-door rather than a paragraph. Rule 35.
+Every sentence lives in home.py so the page can be translated without anybody
+opening this file. What stays here is what a translator must not be able to
+touch: the elements, the classes, the ids, the form's field names, and the
+addresses.
 
 Run from the project root:  python .build/gen_home.py
 """
@@ -16,38 +17,43 @@ import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import home  # noqa: E402
 import shell  # noqa: E402
 from clients import CLIENTS  # noqa: E402
 from gen_pages import write  # noqa: E402
 
 S = shell.SITE
 NL = chr(10)
+H = home.PAGE
 
-# TODO(founder): keep this line true. It is here because a fact somebody has to
-# maintain is worth more than any amount of copy.
-AVAILABILITY = "Taking on new work from September."
+# The facts a sentence names without retyping them, as in gen_docs.py. The two
+# generators keep their own copy of this and of txt() below rather than sharing
+# one: gen_docs.py renders three unrelated pages, and importing it to borrow
+# four lines would make building the homepage build /systems/ as a side effect.
+TOKENS = {
+    "{brand}": shell.BRAND,
+    "{turnaround}": shell.TURNAROUND,
+    "{email}": f'<a href="mailto:{shell.EMAIL}">{shell.EMAIL}</a>',
+    "{email_href}": "mailto:" + shell.EMAIL,
+    "{wa_href}": "https://wa.me/" + shell.WHATSAPP,
+}
 
-# (href, name, what you end up with, what the page holds)
-# The third field is also the Service description in the JSON-LD, so it has to
-# stand on its own away from the page.
-SERVICES = [
-    ("/seo/", "SEO and local search",
-     "Be the shop that comes up when somebody nearby searches for what you sell.",
-     "On the results page and on the map. On-page, off-page, and your Google "
-     "Business Profile"),
-    ("/geo/", "AI search",
-     "Ask ChatGPT for a shop like yours and it names two or three. Be one of them.",
-     "How a machine decides which businesses to name"),
-    ("/web-design/", "Websites",
-     "A site your customer can buy from, in the language they searched in.",
-     "English, Italian and Albanian, and quick on a phone"),
-    ("/meta-ads/", "Meta ads",
-     "Customers this week, while the slow work builds underneath.",
-     "A flat fee, never a cut of what you spend"),
-    ("/systems/", "Custom software",
-     "On the 1st of the month, the numbers are already there.",
-     "Stock, jobs, customers, payroll, and what each part of the business earned"),
-]
+
+def fill(s):
+    for k, v in TOKENS.items():
+        s = s.replace(k, v)
+    return s
+
+
+def txt(indent, s):
+    """One copy string, ready to drop into markup at `indent`.
+
+    A newline in a copy string is a soft wrap: it says where the emitted line
+    breaks, and every leading space comes from here. The wraps on this page
+    were made by hand and no rule reproduces them, which is why they travel
+    with the sentence instead of being recomputed.
+    """
+    return (NL + " " * indent).join(fill(s).split(NL))
 
 
 def jsonld():
@@ -55,20 +61,19 @@ def jsonld():
         "@type": "ProfessionalService",
         "@id": S + "/#org",
         "name": shell.BRAND,
-        "description": "Digital presence for small businesses: search, AI search, "
-                       "websites, ads and custom software. English, Italian and Albanian.",
+        "description": H["org_desc"],
         "url": S + "/",
         "email": shell.EMAIL,
         "founder": {"@id": S + "/studio/#founder"},
         "areaServed": ["AL", "IT", "Worldwide"],
         "knowsLanguage": ["en", "it", "sq"],
         "hasOfferCatalog": {
-            "@type": "OfferCatalog", "name": "Services",
+            "@type": "OfferCatalog", "name": H["catalogue"],
             "itemListElement": [
                 {"@type": "Offer", "url": S + href,
                  "itemOffered": {"@type": "Service", "name": name, "description": desc,
                                  "provider": {"@id": S + "/#org"}}}
-                for href, name, desc, _ in SERVICES],
+                for href, name, desc, _ in home.SERVICES],
         },
     }
     site = {"@type": "WebSite", "@id": S + "/#website", "url": S + "/",
@@ -98,93 +103,79 @@ def audit_form():
     af-send-text and the whole script throws, taking the nav marking and the
     header hairline down with the form.
 
-    Every sentence is under 9 words. Check 11 fails a 9-word sentence that
-    appears on 2 pages, and /start/'s form copy is all longer than that, so
-    this is written fresh rather than trimmed. It is also just what hero
-    microcopy should be.
-
     The pattern is /start/'s pattern, copied not retyped: browsers compile it
     with the regex v flag, an unescaped / or - in a character class is a syntax
     error there, and a pattern that fails to compile is IGNORED rather than
     reported. That shipped once, accepting "not a website".
     """
+    f = home.FORM
     return f'''          <div class="audit hero-af" id="audit">
-            <h2 class="af-h" id="audit-h">Get a free audit of your site.</h2>
-            <p class="af-lead">A PDF {shell.TURNAROUND}. What's working, what's
-              not, what to fix first.</p>
+            <h2 class="af-h" id="audit-h">{fill(f["h"])}</h2>
+            <p class="af-lead">{txt(14, f["lead"])}</p>
 
             <div class="af-done" id="sent" tabindex="-1">
-              <h3>Sent. Check your inbox.</h3>
-              <p>The audit lands {shell.TURNAROUND}. Nothing there? One line to
-                <a href="mailto:{shell.EMAIL}">{shell.EMAIL}</a> and we'll
-                resend.</p>
+              <h3>{fill(f["done_h"])}</h3>
+              <p>{txt(16, f["done"])}</p>
             </div>
 
             <form class="af" id="audit-form" method="POST"
               action="{shell.FORM_ENDPOINT}" aria-labelledby="audit-h">
               <input type="hidden" name="access_key" value="{shell.WEB3FORMS_KEY}">
-              <input type="hidden" name="subject" value="Free audit request from the homepage of {shell.BRAND}">
-              <input type="hidden" name="redirect" value="{shell.form_redirect('/')}">
+              <input type="hidden" name="subject" value="{fill(f["subject"])}">
+              <input type="hidden" name="redirect" value="{shell.form_redirect("/")}">
               <input type="hidden" name="source" value="home-hero">
               <input class="af-hp" type="checkbox" name="botcheck" tabindex="-1"
                 autocomplete="off">
 
               <p class="field">
-                <label for="af-url">Your website</label>
+                <label for="af-url">{fill(f["url_label"])}</label>
                 <input id="af-url" name="url" type="text" inputmode="url"
                   autocomplete="url" autocapitalize="none" spellcheck="false"
-                  required placeholder="yourshop.al"
+                  required placeholder="{fill(f["url_placeholder"])}"
                   pattern="(https?:\\/\\/)?[a-zA-Z0-9][a-zA-Z0-9.\\-]*\\.[a-zA-Z]{{2,}}(\\/\\S*)?"
-                  title="Your web address, for example yourshop.al"
+                  title="{fill(f["url_title"])}"
                   aria-describedby="af-url-err">
-                <span class="field-err" id="af-url-err">A web address, like
-                  yourshop.al.</span>
+                <span class="field-err" id="af-url-err">{txt(18, f["url_err"])}</span>
               </p>
 
               <p class="field">
-                <label for="af-owner">Your name</label>
+                <label for="af-owner">{fill(f["owner_label"])}</label>
                 <input id="af-owner" name="owner" type="text" autocomplete="name"
                   required aria-describedby="af-owner-err">
-                <span class="field-err" id="af-owner-err">Who should we send it
-                  to?</span>
+                <span class="field-err" id="af-owner-err">{txt(18, f["owner_err"])}</span>
               </p>
 
               <p class="field">
-                <label for="af-email">Email</label>
+                <label for="af-email">{fill(f["email_label"])}</label>
                 <input id="af-email" name="email" type="email" inputmode="email"
                   autocomplete="email" autocapitalize="none" spellcheck="false"
                   required aria-describedby="af-email-err">
-                <span class="field-err" id="af-email-err">The PDF goes to this
-                  address.</span>
+                <span class="field-err" id="af-email-err">{txt(18, f["email_err"])}</span>
               </p>
 
               <p class="field">
-                <label for="af-category">What you sell</label>
+                <label for="af-category">{fill(f["category_label"])}</label>
                 <input id="af-category" name="category" type="text" required
                   aria-describedby="af-category-err">
-                <span class="field-err" id="af-category-err">Watches, kitchens,
-                  cakes. One word is enough.</span>
+                <span class="field-err" id="af-category-err">{txt(18, f["category_err"])}</span>
               </p>
 
               <p class="af-go">
                 <button class="btn" type="submit" id="af-send"><span
-                  id="af-send-text">Send it</span>{shell.ARROW}</button>
+                  id="af-send-text">{fill(f["send"])}</span>{shell.ARROW}</button>
               </p>
               <p class="af-say" id="af-say" role="status" aria-live="polite"></p>
-              <p class="af-alt">Or <a href="mailto:{shell.EMAIL}">email us</a>, or
-                <a href="https://wa.me/{shell.WHATSAPP}">WhatsApp</a>.</p>
-              <p class="af-fine">We use it for the audit, nothing else.</p>
+              <p class="af-alt">{txt(16, f["alt"])}</p>
+              <p class="af-fine">{fill(f["fine"])}</p>
             </form>
           </div>'''
 
 
 def render():
     page = {"url": "/",
-            "title": shell.BRAND + " " + shell.DOT + " digital presence for small businesses",
-            "description": "Somebody is searching for what you sell right now. We make "
-                           "sure they find you on Google, on the map, and in what "
-                           "ChatGPT says. Durres, Albania.",
-            "og_desc": "Somebody is searching for what you sell right now.",
+            "title": shell.BRAND + " " + shell.DOT + " " + H["title"],
+            "description": H["description"],
+            "og_desc": H["og_desc"],
             "jsonld": jsonld()}
 
     # The climb index and the result index live in the sheet, as :nth-child
@@ -204,15 +195,18 @@ def render():
         five pages, so the list has to look like five doors."""
         return (f'            <li>' + NL +
                 f'              <a href="{href}">' + NL +
-                f'                <h3>{name}</h3>' + NL +
+                f'                <h3>{fill(name)}</h3>' + NL +
                 f'                <div>' + NL +
-                f'                  <p class="svc-say">{outcome}</p>' + NL +
-                f'                  <p class="svc-go">{door} {shell.ARROW}</p>' + NL +
+                f'                  <p class="svc-say">{fill(outcome)}</p>' + NL +
+                f'                  <p class="svc-go">{fill(door)} {shell.ARROW}</p>' + NL +
                 f'                </div>' + NL +
                 f'              </a>' + NL +
                 '            </li>')
 
-    svc = NL.join(svc_row(*s) for s in SERVICES)
+    svc = NL.join(svc_row(*s) for s in home.SERVICES)
+    stats = NL.join(f'            <li><span class="stat-n">{n}</span>'
+                    f'<span class="stat-l">{fill(label)}</span></li>'
+                    for n, label in home.STATS)
     marks = NL.join(shell.client_mark(c) for c in CLIENTS)
     ARROW = shell.ARROW
     audit = audit_form()
@@ -229,16 +223,11 @@ def render():
         </h1>
         <div class="hero-split">
           <div class="hero-rest">
-            <p class="hero-say">Somebody is searching for what you sell right now.
-              We make sure they find you on Google.</p>
-            <p class="hero-sub">Google, the map, and the answers ChatGPT and Gemini give
-              when somebody asks for a shop like yours. Then the website itself, and the
-              software behind it. We work in English, Italian and Albanian.</p>
-            <p class="hero-who">You will not be handed to anybody else.
-              <strong>The person who reads your site is the person who builds
-              the fix.</strong></p>
+            <p class="hero-say">{txt(14, H["hero_say"])}</p>
+            <p class="hero-sub">{txt(14, H["hero_sub"])}</p>
+            <p class="hero-who">{txt(14, H["hero_who"])}</p>
             <p class="status"><span class="dot" aria-hidden="true"></span>
-              {AVAILABILITY}</p>
+              {fill(home.AVAILABILITY)}</p>
           </div>
 {audit}
         </div>
@@ -248,44 +237,27 @@ def render():
     <section class="proof" aria-labelledby="proof-h">
       <div class="wrap">
         <div class="proof-body">
-          <p class="eyebrow">Proof</p>
-          <h2 id="proof-h">Three months ago, Google had never heard of this
-            shop.</h2>
-          <p class="proof-lead">Iglisi Watch repairs watches and sells them, on
-            Rruga Aleksander Goga in Durres. In May there was no website at all,
-            so the starting number really is zero. Everything on this chart came
-            from search, not from an ad budget.</p>
+          <p class="eyebrow">{fill(H["proof_eyebrow"])}</p>
+          <h2 id="proof-h">{txt(12, H["proof_h"])}</h2>
+          <p class="proof-lead">{txt(12, H["proof_lead"])}</p>
 
           <ul class="stat-strip">
-            <li><span class="stat-n">560</span><span class="stat-l">clicks from Google</span></li>
-            <li><span class="stat-n">57.6k</span><span class="stat-l">times shown</span></li>
-            <li><span class="stat-n">8.4</span><span class="stat-l">average position</span></li>
-            <li><span class="stat-n">1%</span><span class="stat-l">click rate</span></li>
+{stats}
           </ul>
-          <p class="stat-note">Three months, 12 May to 9 August 2026. Search
-            Console reports clicks, which is not the same as people.</p>
+          <p class="stat-note">{txt(12, H["stat_note"])}</p>
 
           <figure class="gsc" data-reveal>
             <img src="/assets/proof/watch-al-3-months.webp" width="1440" height="592"
-              alt="Google Search Console for watch.al. Clicks and impressions both start
-              near zero in mid May 2026 and climb through August."
+              alt="{txt(14, H["fig_alt"])}"
               loading="lazy" decoding="async">
-            <figcaption>The purple line is how often the shop came up in Google. The
-              blue line is how many people clicked.</figcaption>
+            <figcaption>{txt(14, H["fig_caption"])}</figcaption>
           </figure>
 
-          <p>Ads stop the day you stop paying for them. This does not: the shop
-            was put on the map once, and search has been sending people ever
-            since.</p>
-          <p>Position 8.4 is the bottom of the first page and a 1% click rate is
-            about what the bottom of the first page pays. Moving that up is the
-            next job, and it is where the rest of the growth is.</p>
+          <p>{txt(12, H["proof_p1"])}</p>
+          <p>{txt(12, H["proof_p2"])}</p>
           <div class="check">
-            <p>Search for watch repair in Durres. Then search for a watch shop in
-              Durres. Then ask ChatGPT both questions, and see whose name keeps
-              coming back.</p>
-            <p class="taken">Taken August 2026. Rankings move, so the chart will look
-              different by the time you read this.</p>
+            <p>{txt(14, H["check"])}</p>
+            <p class="taken">{txt(14, H["taken"])}</p>
           </div>
         </div>
       </div>
@@ -294,8 +266,8 @@ def render():
     <section class="services" id="services" aria-labelledby="services-h">
       <div class="wrap">
         <div class="sec-head">
-          <p class="eyebrow">What we do</p>
-          <h2 id="services-h">Five ways to be easier to find.</h2>
+          <p class="eyebrow">{fill(H["services_eyebrow"])}</p>
+          <h2 id="services-h">{txt(10, H["services_h"])}</h2>
         </div>
         <ul class="svc-list">
 {svc}
@@ -307,12 +279,10 @@ def render():
       <div class="wrap">
         <div class="ask-row">
           <div>
-            <h2 class="ask-q" id="ask-h">Want to see proof of our work?</h2>
-            <p class="ask-note">These are the businesses we build for. Every one of
-              these sites is live, so the logos go to them and the button goes to what
-              we built.</p>
+            <h2 class="ask-q" id="ask-h">{txt(14, H["ask_h"])}</h2>
+            <p class="ask-note">{txt(14, H["ask_note"])}</p>
           </div>
-          <p class="ask-go"><a class="btn" href="/work/">See the work {ARROW}</a></p>
+          <p class="ask-go"><a class="btn" href="/work/">{fill(H["ask_go"])} {ARROW}</a></p>
         </div>
         <ul class="marks">
 {marks}
@@ -322,11 +292,8 @@ def render():
 
     <section class="place" aria-labelledby="place-h">
       <div class="wrap">
-        <h2 class="place-say" id="place-h">The standard does not move with the
-          price.</h2>
-        <p class="place-more">We build to European standards and quote
-          competitively. Test it on this page before you believe a word of
-          it.</p>
+        <h2 class="place-say" id="place-h">{txt(10, H["place_h"])}</h2>
+        <p class="place-more">{txt(10, H["place_more"])}</p>
       </div>
     </section>
 
@@ -334,14 +301,11 @@ def render():
       <div class="wrap">
         <div class="grid">
           <div class="who-say">
-            <h2 id="who-h">We will tell you when the answer is no.</h2>
+            <h2 id="who-h">{txt(12, H["who_h"])}</h2>
           </div>
           <div class="who-more">
-            <p>If your ad budget is too small to be worth managing, we say so instead
-              of taking it. If the honest answer is that you need a better offer rather
-              than better marketing, that is the answer you get, and it is the one that
-              costs us the job most often.</p>
-            <p><a href="/studio/">How we work {ARROW}</a></p>
+            <p>{txt(14, H["who_more"])}</p>
+            <p><a href="/studio/">{fill(H["who_go"])} {ARROW}</a></p>
           </div>
         </div>
       </div>
@@ -349,9 +313,7 @@ def render():
 '''
     return (shell.head(page) + shell.header() +
             '\n  <main id="main">\n' + body + '\n  </main>\n' +
-            shell.footer("Tell us what you sell.",
-                         "We answer with a plan and a straight price. If we are not "
-                         "the right people, we will say so."))
+            shell.footer(fill(H["cta"]), fill(H["cta_note"])))
 
 
 def check(html):

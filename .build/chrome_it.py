@@ -1,0 +1,165 @@
+"""Every string in the site chrome, in Italian. It mirrors chrome.py exactly.
+
+Register is tu, everywhere: "il tuo sito", never "il Suo sito", and no Lei or
+Voi hiding inside a polite imperative. glossary.BANNED fails the build on the
+slips a translator actually makes, but the rule is wider than its patterns.
+
+This is wave 0. These 78 words are pasted into every later Italian brief, so a
+term picked loosely here is a term 17 pages repeat, and the site reads like 7
+people wrote it: exactly what a one-person studio cannot look like.
+
+THE SHAPE IS NOT NEGOTIABLE. i18n.same_shape() compares this file against
+chrome.py at import, so a nav item merged into its neighbour or a footer link
+quietly dropped is a crash naming the path, not a gap somebody spots in a
+screenshot 3 weeks later.
+
+{brand} and {dot} are filled by the generator. They are written literally and
+never translated: expanding one is how a site ends up with 2 brand names.
+Accented letters are literal too ("attività"), never HTML entities.
+"""
+
+# Header nav. Same length and order as shell.NAV_PATHS. 26 characters across
+# all 4, which is the English count exactly, so the row cannot start wrapping
+# at 1024px for a reason that came from this file.
+#
+# All 4 are bare plurals, and that parallel is what keeps "Prove" readable:
+# alone it can be heard as rehearsals or exams, but standing beside Servizi and
+# Articoli it is the plural of prova, the evidence. "Proof" is just as odd a
+# word for a nav item in English, and it is odd on purpose. The alternative,
+# "Risultati", is rejected on the ground the English rejected "Results": /work/
+# holds 4 clients and only 1 publishes numbers, so it would over-promise on 3
+# of the 4 pages it leads to. If "Prove" ever reads as a rehearsal in the wild,
+# "Le prove" fixes it and costs 3 characters.
+#
+# "Articoli", not "Scritti". Italian has no noun that does what the English
+# "Writing" does, an activity used as a section name; "Scritti" is the literal
+# one and it belongs to a dead author's collected works. "Articoli" names the
+# thing you will find instead of the act of making it, which is the move the
+# footer already makes in English when it calls the same section Work and the
+# nav calls it Proof. It also avoids "Blog", which was the point.
+NAV = ["Prove", "Servizi", "Articoli", "Studio"]
+
+# The 4 footer columns: a heading, then a label per link. Lengths must match
+# shell.FOOT_PATHS exactly. The Work column is 4 client names, proper nouns and
+# byte-identical in all 3 languages, but they live here anyway so the shape is
+# uniform and same_shape has something to compare.
+#
+# "Scrivici" rather than the standard "Contatti": the column holds an email
+# address and WhatsApp, both of them writing, and the English heading is an
+# invitation rather than a noun. It is also 4 characters shorter.
+FOOT_HEADINGS = ["Cosa facciamo", "Lavori", "Studio", "Scrivici"]
+FOOT_LABELS = [
+    ["SEO e ricerca locale", "Ricerca AI", "Siti web", "Meta ads",
+     "Software su misura"],
+    ["Iglisi Watch", "Victoria Boutique", "Intimo Bruna", "ProAffy"],
+    ["Chi siamo", "Articoli", "Inizia un progetto"],   # Articoli matches NAV[2]
+    [],   # filled by shell: the email address and WhatsApp are not words
+]
+
+# Stated ONCE per language. Gate check 25 fails the build if any Italian page
+# claims a different time. It has to survive being dropped into a sentence
+# somebody else writes ("Ti rispondiamo entro 24 ore."), so it is a bare
+# adverbial with no verb and no punctuation of its own.
+TURNAROUND = "entro 24 ore"
+
+# -- the strings that are attributes, and would be missed by any pass that
+#    walks text nodes -------------------------------------------------------
+SKIP = "Vai al contenuto"
+# "Menu" is the Italian spelling used in interface copy, not English left
+# behind. The accented "Menù" belongs to a restaurant card.
+MENU = "Menu"
+# The header button. It is NOT the same string as the "Start a project"
+# label in the footer column, even though the English happened to match:
+# one is a bordered button on all 51 pages and carries a width budget, the
+# other is a list item that does not. Sharing them would silently apply the
+# button's budget to a footer label the day somebody widened one.
+HEAD_CTA = "Inizia un progetto"
+# Italian puts the destination first and the owner after it, so the token moves
+# to the end of the label. It is still written literally.
+ARIA_HOME = "Home di {brand}"
+ARIA_PRIMARY = "Principale"
+# "Indice" and not "Mappa": the English says Site index rather than Sitemap on
+# purpose, because sitemap.xml is a different artefact, and Italian keeps that
+# distinction with the same word.
+ARIA_INDEX = "Indice del sito"
+# What Italian actually calls a breadcrumb trail. "Briciole di pane" is a
+# literal translation nobody uses and no screen-reader user expects.
+ARIA_CRUMBS = "Percorso"
+ARIA_GLANCE = "In sintesi"
+ARIA_DETAILS = "Dettagli"
+ARIA_LANG = "Lingua"
+WA_LABEL = "Scrivici su WhatsApp"
+# What actually arrives on the founder's phone. It is a data- attribute read by
+# js/main.js, so nothing that walks the DOM for text will find it.
+WA_PREFILL = "Ciao {brand}, ho una domanda sul mio sito."
+
+# -- the ink band and the footer meta --------------------------------------
+# The band CTA is a filled block set at --fs-lead, so its width is its text and
+# nothing else. "del sito" is dropped: the form it links to is headed by what is
+# being audited, and "audit gratuito" is already the product's name in
+# glossary.TERMS. "Chiedi" rather than the commercial "Richiedi", which is 2
+# characters longer and half a register more formal than the rest of the site.
+BAND_CTA = "Chiedi un audit gratuito"
+# The city is Durazzo in Italian and glossary.BANNED fails on "Durres".
+#
+# RECOMMENDATION, not a silent decision: the language list leads with Italian.
+# The English line leads with English, so leading with the page's own language
+# preserves the pattern rather than the order, and the reader of this page gets
+# his answer in the first word instead of the third. Reverting to the English
+# order is this one line and nothing else.
+FOOT_META = "{brand} {dot} Durazzo, Albania {dot} Lavoriamo in italiano, inglese e albanese"
+FOOT_COPYRIGHT = "&#169; 2026 {brand}"
+
+# -- shared section headings the generators emit ---------------------------
+# These are single words and short phrases, which is exactly the class check 35
+# looks for on a translated page: an English one surviving here is invisible to
+# check 11, because check 11 only sees sentences of 9 words or more.
+#
+# "Vedi anche" rather than a bare "Anche", which is not a heading in Italian.
+SIDE_ALSO = "Vedi anche"
+SIDE_WRITTEN = "Ne abbiamo scritto"
+SIDE_SERVICE = "Il servizio"
+# The sidebar already sits inside the post, so "di cui parliamo" carries "in
+# this post" without repeating it, and it stays a heading rather than becoming
+# a caption.
+SIDE_BUSINESS = "L'attività di cui parliamo"
+SIDE_NEXT = "Prossimo"
+SIDE_ALL_FOUR = "Tutti e quattro"
+READ_NEXT = "Da leggere dopo"
+READ_IT = "Leggilo"
+WHAT_WE_DO = "Cosa facciamo"      # identical to FOOT_HEADINGS[0], as in English
+WHAT_WE_DONT = "Cosa non facciamo"
+# "Le domande giuste" carries the claim the English makes with "worth asking",
+# that these are the questions to put to anybody in this trade, and it does it
+# in 5 characters fewer. The literal "Domande che vale la pena fare" is a
+# heading with a subordinate clause in it.
+QUESTIONS = "Le domande giuste"
+# "Home" is what an Italian breadcrumb says. It is a loan word Italian has
+# fully taken, not English that escaped translation, and check 35 will need to
+# know that.
+CRUMB_HOME = "Home"
+
+# -- what js/main.js says, read from data- attributes ----------------------
+# They cannot be a table inside main.js: script-src has no unsafe-inline, and a
+# JS-side {en,it,sq} lookup falls back to English on an unknown language, which
+# is the half-translated page check 35 exists to catch.
+#
+# JS_SENDING replaces the submit button's own label while the request is in
+# flight, so it is kept short: "Invio in corso" is twice the width of the label
+# it replaces and the button would jump under the cursor.
+JS_SENDING = "Invio"
+# The live region, by contrast, is announced and never measured, so it says the
+# whole thing in the "we" the rest of the site uses.
+JS_SENDING_SAY = "Stiamo inviando i tuoi dati."
+JS_ERROR = ("Non è stato inviato. Usa l'email o il link WhatsApp qui sotto e "
+            "lo riprendiamo da lì.")
+
+# -- 404, which is one document serving all 3 languages --------------------
+ERR_TITLE = "404"
+# The joke is the whole line and it survives the move: posizionarsi is what a
+# page does in the results, and glossary.TERMS already fixes posizionamento as
+# the word for ranking.
+ERR_SAY = "Questa pagina non si è mai posizionata. Non esiste."
+# "In cima" is both the top of the page this link returns you to and the top of
+# the results the sentence above just denied, which is the pun the English has.
+ERR_BACK = "Torna in cima"
