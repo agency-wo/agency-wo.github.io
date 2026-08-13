@@ -581,16 +581,27 @@ for d, dirs, files in os.walk(ROOT):
                     findings.append(f"[domain] {rel(p)}:{i} still says {dead}, "
                                     f"which is not ours. The site is {host}")
 
-# 30. the CNAME is the domain -----------------------------------------------
-# GitHub Pages will not serve a custom domain without this file, and nothing
-# else in the build knows it exists.
+# 30. CNAME agrees with the launch flag ------------------------------------
+# Committing a CNAME makes GitHub Pages activate the custom domain IMMEDIATELY
+# and 301 the whole github.io host to it. Do that before the domain resolves
+# and the preview goes offline, which is exactly what happened. So CNAME and
+# robots.txt are one decision, owned by PREVIEW in gen_launch.py.
+import gen_launch as _launch  # noqa: E402
 cname_p = os.path.join(ROOT, "CNAME")
-if not os.path.exists(cname_p):
-    findings.append("[domain] no CNAME file, so GitHub Pages cannot serve the "
-                    "custom domain")
-elif read(cname_p).strip() != host:
-    findings.append(f"[domain] CNAME says {read(cname_p).strip()!r}, "
-                    f"shell.SITE says {host!r}")
+if _launch.PREVIEW:
+    if os.path.exists(cname_p):
+        findings.append("[domain] CNAME exists while PREVIEW is on. GitHub "
+                        "Pages will 301 the preview host to a domain that "
+                        "does not resolve yet, taking the site offline")
+    if "Disallow: /" not in read(os.path.join(ROOT, "robots.txt")):
+        findings.append("[domain] PREVIEW is on but robots.txt does not block")
+else:
+    if not os.path.exists(cname_p):
+        findings.append("[domain] PREVIEW is off but there is no CNAME, so "
+                        "GitHub Pages cannot serve the custom domain")
+    elif read(cname_p).strip() != host:
+        findings.append(f"[domain] CNAME says {read(cname_p).strip()!r}, "
+                        f"shell.SITE says {host!r}")
 
 # 31. every asset colour is a token ----------------------------------------
 # The favicon, both monograms, both wordmarks and the OG card sat on the dead

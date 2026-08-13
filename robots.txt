@@ -2,8 +2,8 @@
 # are blocked: indexing it under the wrong host is far more work to undo than
 # to prevent, and the JSON-LD identifiers are keyed to https://minarankstudio.com.
 #
-# To open the site: set PREVIEW = False in .build/gen_robots.py and rebuild.
-# Do that on the day the domain serves, not before.
+# To open the site: set PREVIEW = False in .build/gen_launch.py and rebuild.
+# That also writes CNAME. Do it on the day the domain resolves, not before.
 
 User-agent: *
 Disallow: /
