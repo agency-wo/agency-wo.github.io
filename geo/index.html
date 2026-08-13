@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GEO: generative engine optimization · minarank</title>
-  <meta name="description" content="Generative engine optimization: making your expertise legible to the systems that write answers. What an AI engine actually reads, what we change, and what nobody can promise.">
+  <title>Getting named when someone asks an AI · minarank</title>
+  <meta name="description" content="AI search, sometimes called GEO. Becoming one of the few businesses an assistant names when a customer asks it for a recommendation.">
   <link rel="canonical" href="https://minarank.com/geo/">
-  <meta name="theme-color" content="#F7F5F2">
+  <meta name="theme-color" content="#F0F1F3">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="minarank">
-  <meta property="og:title" content="GEO: generative engine optimization · minarank">
-  <meta property="og:description" content="When an AI answers, it cites someone. The work of being that someone.">
+  <meta property="og:title" content="Getting named when someone asks an AI · minarank">
+  <meta property="og:description" content="When an assistant answers, it names two or three businesses.">
   <meta property="og:url" content="https://minarank.com/geo/">
   <meta property="og:image" content="https://minarank.com/assets/og/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -20,8 +20,8 @@
   <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-  <link rel="preload" href="/assets/fonts/clash-display-var.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/assets/fonts/satoshi-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/apfel-mittel.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/tokens.css">
   <link rel="stylesheet" href="/css/fonts.css">
   <link rel="stylesheet" href="/css/main.css">
@@ -33,9 +33,9 @@
     {
       "@type": "Service",
       "@id": "https://minarank.com/geo/#service",
-      "name": "Generative Engine Optimization",
-      "serviceType": "Generative Engine Optimization",
-      "description": "Generative engine optimization: making your expertise legible to the systems that write answers. What an AI engine actually reads, what we change, and what nobody can promise.",
+      "name": "Generative engine optimisation",
+      "serviceType": "Generative engine optimisation",
+      "description": "AI search, sometimes called GEO. Becoming one of the few businesses an assistant names when a customer asks it for a recommendation.",
       "url": "https://minarank.com/geo/",
       "provider": {
         "@id": "https://minarank.com/#org"
@@ -57,34 +57,26 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Is GEO just SEO with a new name?",
+          "name": "Is this just SEO with a new name?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, though they overlap heavily. SEO competes for a position in a list of links. GEO competes to be the source a generated answer draws from and attributes. The same technical foundations serve both, but the unit of success differs: a ranking versus a citation. A page can rank well and never be cited, and a page can be cited without ranking first."
+            "text": "They overlap a lot and the same foundations serve both. What differs is what counts as winning: SEO wants a position in a list of links, this wants to be the business the answer names. A page can rank well and never get named."
           }
         },
         {
           "@type": "Question",
-          "name": "Can you guarantee that ChatGPT will recommend my business?",
+          "name": "Can you guarantee ChatGPT will recommend me?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, and neither can anyone else. Generated answers vary by model, by phrasing, by date and by user. What can be done is raise the probability: make the expertise extractable, make the entity resolvable, and make the claims corroborated off-site. Anyone offering a guaranteed placement in an AI answer is selling something that does not exist."
+            "text": "No, and neither can anyone else. The answers change by model, by phrasing, by day. What we can do is make you easy to find, easy to identify, and backed up elsewhere, which is what these systems look for."
           }
         },
         {
           "@type": "Question",
-          "name": "Does llms.txt actually work?",
+          "name": "How would I know if it's working?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "As a citation mechanism, currently close to nothing. No major provider has been shown to consume it. It costs one file, so it is worth shipping, but it should never be sold as a ranking lever. Anyone charging meaningfully for llms.txt is charging for a text file."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do I need GEO if my site already ranks well?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Ranking well is the strongest starting position, because retrieval frequently draws from pages that already rank. But ranking does not guarantee extraction. If the substance of a page lives in an image, in a script-rendered widget, or behind an interaction, it can rank and still be invisible to the system writing the answer."
+            "text": "Ask it. That's genuinely the honest answer today. Try the questions your customers would ask, in the languages they'd ask them in, and write down what comes back. We do that monthly and show you the answers."
           }
         }
       ]
@@ -102,7 +94,7 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "GEO",
+          "name": "AI search",
           "item": "https://minarank.com/geo/"
         }
       ]
@@ -118,15 +110,14 @@
   <header class="site-head">
     <div class="wrap head-row">
       <a class="head-logo" href="/" aria-label="minarank home">
-        <svg viewBox="0 0 64 64" width="36" height="36" aria-hidden="true">
-          <path fill="none" stroke="#1B1F3B" stroke-width="8" stroke-linejoin="miter" stroke-miterlimit="2" stroke-linecap="butt" d="M14 54 L14 18 L32 42 L50 18 L50 54"/>
-          <path fill="none" stroke="#FF6B4A" stroke-width="7" stroke-linecap="butt" d="M53 14 L60.5 4"/>
+        <svg viewBox="0 0 64 64" width="34" height="34" aria-hidden="true">
+          <path fill="none" stroke="#13161C" stroke-width="8" stroke-linejoin="miter" stroke-miterlimit="2" stroke-linecap="butt" d="M14 54 L14 18 L32 42 L50 18 L50 54"/>
+          <path fill="none" stroke="#D8232A" stroke-width="7" stroke-linecap="butt" d="M53 14 L60.5 4"/>
         </svg>
       </a>
       <nav class="head-nav" aria-label="Primary">
-        <a href="/#services">Services</a>
-        <a href="/systems/">Systems</a>
         <a href="/work/">Work</a>
+        <a href="/#services">Services</a>
         <a href="/studio/">Studio</a>
         <a class="head-cta" href="/start/">Start a project</a>
       </nav>
@@ -139,181 +130,146 @@
       <header class="page-head">
         <nav class="crumbs" aria-label="Breadcrumb">
           <a href="/">minarank</a>
-          <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1 11H5V7H9V3H11" fill="none" stroke="#5B5F7A" stroke-width="2"/></svg>
-          <span aria-current="page">GEO</span>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">AI search</span>
         </nav>
-        <p class="eyebrow">Service 02</p>
-        <h1 class="page-title">When an AI answers, it cites someone.</h1>
-        <p class="standfirst"><strong>Make it you.</strong> Buyers now ask a model before they ask a search box. The answer they get names a handful of sources. This is the work of becoming one of them.</p>
+        <h1 class="page-title">Getting named when somebody asks an AI.</h1>
+        <p class="standfirst">Ask ChatGPT for a watch repair shop in Durres and it names two or three. Being one of them isn't luck.</p>
       </header>
-
-      <p class="finding">
-        <span class="finding-label">The finding</span>
-        Ask ChatGPT for a good watch repair shop in Durres and it names two or three. Being one of them is not luck. These systems read a website in a very particular way, and most sites are invisible to them for reasons that are boring and fixable. That is the whole job.
-      </p>
 
       <div class="grid">
         <div class="prose">
+          <p class="lead">More people now ask an assistant before they open Google, and the answer names a handful of businesses. Nobody tells you whether you were one of them. There's no ranking report for this yet, which is exactly why it's still cheap to win.</p>
 
-          <h2>We have already done this once</h2>
-          <p>Iglisi Watch is a small watch shop in Durres. Ask ChatGPT, Claude or Perplexity where to get a watch repaired there and they name it, with the street, the opening hours and the WhatsApp number. Search the same thing in English, Albanian or Italian and it comes back first, usually holding the top three results outright.</p>
-          <p>It is the only watch business in Durres with a website that ranks at all. The competition is directory listings and Facebook pages. That is worth saying plainly, because it is the real lesson: the opening was sitting there and nobody had taken it. Most towns and most trades are exactly the same today.</p>
-          <p><a href="/work/">See what we built for them</a>.</p>
+          <h2>We've done this once already</h2>
+          <p>Ask ChatGPT, Claude or Perplexity where to get a watch repaired in Durres and they name Iglisi Watch, with the street, the opening hours and the WhatsApp number. That's a client, and you can check it right now.</p>
+          <p>They're also the only watch business in Durres with a website that ranks at all. The competition is directory listings and Facebook pages. Most towns and most trades still look like that, which is the useful part of the story.</p>
 
           <h2>What these systems actually read</h2>
-          <p>Most of what a designer labours over never reaches the machine. Position, colour, spacing and anything that needs a click carry meaning to a person and nothing at all to software. What gets through, roughly in order of importance:</p>
-          <ul><li>The first hundred words underneath the heading that asks the question.</li><li>Your headings, read as an outline of the argument.</li><li>Short, plain sentences that name their own subject, instead of leaning on a pronoun and expecting the reader to remember what it meant.</li><li>Tables and lists, which survive better than long paragraphs.</li><li>The hidden labels that tell a machine what your business is, where it is and what it sells. In the trade these are called schema.</li><li>The words describing your images, and the words you link out with.</li></ul>
-          <p>What does not get through: anything loaded in after the page appears, words sitting inside a picture, meaning carried only by where things sit on screen, and anything behind a click. Most of these systems never run the code that builds a modern site, so whatever your page assembles on the fly is simply not there. That is the same argument as our <a href="/web-design/">web design page</a>, seen from the other side.</p>
+          <p>An assistant doesn't see your website the way you do. It reads a stripped-down version: the words in the order they appear in the code, your headings, and a few hidden labels. The layout, the colours and anything that only appears when you click are thrown away before it gets there.</p>
+          <p>So what survives is:</p>
+          <ul><li>The first hundred words underneath the heading that asks the question.</li><li>Your headings, read as an outline of the page.</li><li>Short, plain sentences that name their subject instead of saying "we" and hoping the reader remembers who that is.</li><li>Lists and tables, which survive better than long paragraphs.</li><li>Hidden labels telling a machine what your business is, where it is and what it sells. The trade calls these schema.</li></ul>
+          <p>What doesn't survive: words inside a picture, anything that loads after the page appears, anything behind a click, and meaning carried only by where things sit on screen. Most of these systems never run the code that builds a modern website, so whatever your page assembles as it loads isn't there at all.</p>
 
           <h2>What we do</h2>
           <ol class="ledger">
             <li>
-              <span class="ledger-n">01</span>
-              <div>
-                <h3>Extraction audit</h3>
-                <p>We flatten your key pages the way a retrieval system does and read what is left. It is usually the most uncomfortable document a client receives, because the answer to why nobody cites you is often that the part which matters is a picture.</p>
-              </div>
+              <h3>Read your site the way an assistant does</h3>
+              <p>We strip it down and read what's left. It's usually an uncomfortable document, because the answer to why nobody names you is often that the part which matters is a picture.</p>
             </li>
             <li>
-              <span class="ledger-n">02</span>
-              <div>
-                <h3>Entity clarity</h3>
-                <p>One machine-resolvable identity for the business and the people in it, stated the same way everywhere, and corroborated by sources you do not control. Off-site corroboration outranks on-site assertion in every citation hierarchy worth trusting.</p>
-              </div>
+              <h3>Make the business easy to identify</h3>
+              <p>One version of who you are, written the same way everywhere, backed up by places you don't control. What other sites say about you counts for more than what yours says.</p>
             </li>
             <li>
-              <span class="ledger-n">03</span>
-              <div>
-                <h3>Answer-shaped structure</h3>
-                <p>A self-contained answer of forty to sixty words directly under the heading that asks the question, naming its own subject. This is the single highest-leverage change available, and almost nobody does it, because it reads as redundant to a human skimming the page.</p>
-              </div>
+              <h3>Answer the question where it's asked</h3>
+              <p>A 40 to 60 word answer directly under the heading that asks it, naming its own subject. Almost nobody does this, because to somebody skimming the page it reads as repetitive.</p>
             </li>
             <li>
-              <span class="ledger-n">04</span>
-              <div>
-                <h3>Structured data that asserts something true</h3>
-                <p>Schema is a set of claims made in the one format where a machine takes you literally. We mark up what exists and nothing that does not. Declaring a search box you do not have, or reviews you wrote yourself, is a false statement to the only audience that cannot detect tone.</p>
-              </div>
-            </li>
-            <li>
-              <span class="ledger-n">05</span>
-              <div>
-                <h3>Crawler access</h3>
-                <p>The robots rules that decide whether any of the above is ever seen. Which AI crawlers you allow is a commercial decision, not a technical default, and most businesses have never made it deliberately. We make it explicit, in writing.</p>
-                <p class="payoff"><svg class="tick" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 11H5V7H9V3H11" fill="none" stroke="#FF6B4A" stroke-width="2"/></svg>
-                  Your name inside the answer.</p>
-              </div>
+              <h3>Decide who's allowed in</h3>
+              <p>Which AI crawlers can read your site is a business decision, not a technical default, and most owners have never made it on purpose. We'll make it explicitly, in writing.</p>
+              <p class="payoff"><svg class="tick" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 11H5V7H9V3H11" fill="none" stroke="#D8232A" stroke-width="2"/></svg>Named when somebody asks.</p>
             </li>
           </ol>
 
           <section class="exclusions">
             <h2>What we do not do</h2>
             <ul>
-              <li>We do not sell <code>llms.txt</code> as a ranking lever. We ship the file because it costs one file, and we tell you plainly that no major provider has been shown to consume it.</li>
-              <li>We do not add FAQ markup to pages that contain no questions. It is the most over-used and worst-implemented tactic in this field.</li>
-              <li>We do not promise a placement in a generated answer. Nobody can, and the promise is how you identify who is guessing.</li>
-              <li>We do not produce content at volume to feed a model. Answer engines are selecting for substance and corroboration, which volume actively works against.</li>
+              <li>We don't sell <code>llms.txt</code> as a ranking trick. We'll add the file because it costs nothing, and tell you plainly that no major provider has been shown to read it.</li>
+              <li>We don't promise you a place in an AI answer. Nobody can, and the promise is how you spot who's guessing.</li>
+              <li>We don't write 30 articles a month to feed a model. These systems are picking for substance, and volume works against it.</li>
             </ul>
           </section>
 
           <section class="faq">
             <h2>Questions worth asking</h2>
             <div class="faq-item">
-              <h3 class="faq-q">Is GEO just SEO with a new name?</h3>
-              <p class="faq-a">No, though they overlap heavily. SEO competes for a position in a list of links. GEO competes to be the source a generated answer draws from and attributes. The same technical foundations serve both, but the unit of success differs: a ranking versus a citation. A page can rank well and never be cited, and a page can be cited without ranking first.</p>
+              <h3 class="faq-q">Is this just SEO with a new name?</h3>
+              <p>They overlap a lot and the same foundations serve both. What differs is what counts as winning: SEO wants a position in a list of links, this wants to be the business the answer names. A page can rank well and never get named.</p>
             </div>
             <div class="faq-item">
-              <h3 class="faq-q">Can you guarantee that ChatGPT will recommend my business?</h3>
-              <p class="faq-a">No, and neither can anyone else. Generated answers vary by model, by phrasing, by date and by user. What can be done is raise the probability: make the expertise extractable, make the entity resolvable, and make the claims corroborated off-site. Anyone offering a guaranteed placement in an AI answer is selling something that does not exist.</p>
+              <h3 class="faq-q">Can you guarantee ChatGPT will recommend me?</h3>
+              <p>No, and neither can anyone else. The answers change by model, by phrasing, by day. What we can do is make you easy to find, easy to identify, and backed up elsewhere, which is what these systems look for.</p>
             </div>
             <div class="faq-item">
-              <h3 class="faq-q">Does llms.txt actually work?</h3>
-              <p class="faq-a">As a citation mechanism, currently close to nothing. No major provider has been shown to consume it. It costs one file, so it is worth shipping, but it should never be sold as a ranking lever. Anyone charging meaningfully for llms.txt is charging for a text file.</p>
-            </div>
-            <div class="faq-item">
-              <h3 class="faq-q">Do I need GEO if my site already ranks well?</h3>
-              <p class="faq-a">Ranking well is the strongest starting position, because retrieval frequently draws from pages that already rank. But ranking does not guarantee extraction. If the substance of a page lives in an image, in a script-rendered widget, or behind an interaction, it can rank and still be invisible to the system writing the answer.</p>
+              <h3 class="faq-q">How would I know if it's working?</h3>
+              <p>Ask it. That's genuinely the honest answer today. Try the questions your customers would ask, in the languages they'd ask them in, and write down what comes back. We do that monthly and show you the answers.</p>
             </div>
           </section>
-
         </div>
 
         <aside class="side" aria-label="At a glance">
-          <figure class="fig fig-lead">
-            <svg viewBox="-10 -10 180 180" aria-hidden="true">
-              <path class="pl-reg" d="M0 -8 V-3 M-8 0 H-3 M160 -8 V-3 M168 0 H163 M0 168 V163 M-8 160 H-3 M160 168 V163 M168 160 H163" fill="none" stroke="#E4E1D9" stroke-width="1"/>
-              <rect class="pl-frame" x="0.5" y="0.5" width="159" height="159" fill="none" stroke="#E4E1D9" stroke-width="1"/>
-              <rect x="8" y="8" width="144" height="64" rx="8" fill="none" stroke="#5B5F7A" stroke-width="1.5"/>
-              <rect x="22" y="22" width="100" height="5" fill="#E4E1D9"/>
-              <rect x="22" y="34" width="116" height="5" fill="#E4E1D9"/>
-              <rect x="22" y="46" width="84" height="5" fill="#E4E1D9"/>
-              <path class="pl-subject" pathLength="1" fill="none" stroke="#1B1F3B" stroke-width="2" d="M24 72 V92 H62 V112 H100 V126"/>
-              <rect x="100" y="126" width="44" height="18" fill="none" stroke="#1B1F3B" stroke-width="2"/>
-              <path class="pl-coral" fill="none" stroke="#FF6B4A" stroke-width="2" d="M140 122 H144 V118 H148 V114 H152"/>
+          <figure class="fig">
+            <svg viewBox="0 0 160 160" aria-hidden="true">
+              <rect x="8" y="8" width="144" height="64" rx="8" fill="none" stroke="#5A6070" stroke-width="1.5"/>
+              <rect x="22" y="22" width="100" height="5" fill="#D9DCE1"/>
+              <rect x="22" y="34" width="116" height="5" fill="#D9DCE1"/>
+              <rect x="22" y="46" width="84" height="5" fill="#D9DCE1"/>
+              <path fill="none" stroke="#13161C" stroke-width="2" d="M24 72 V92 H62 V112 H100 V126"/>
+              <rect x="100" y="126" width="44" height="18" fill="none" stroke="#13161C" stroke-width="2"/>
+              <path fill="none" stroke="#D8232A" stroke-width="2" d="M140 122 H144 V118 H148 V114 H152"/>
             </svg>
-            <figcaption class="fig-cap">FIG. 02 &#183; THE CITATION</figcaption>
           </figure>
 
           <div class="side-block">
-            <p class="side-h">Honest expectations</p>
-            <p>Citations move slower than rankings and are harder to attribute. Expect the first signals in months, not weeks, and expect them to be uneven across engines.</p>
+            <p class="side-h">What to expect</p>
+            <p>This moves slower than search rankings and is harder to measure. Expect the first signs in months, and expect them to be uneven between one assistant and another.</p>
           </div>
 
           <div class="side-block">
-            <p class="side-h">Related</p>
+            <p class="side-h">Also</p>
             <ul class="side-list">
-              <li><a href="/seo/">SEO: the other endpoint of this argument</a></li>
-              <li><a href="/web-design/">Web design: why the build decides the ceiling</a></li>
+              <li><a href="/seo/">SEO and local search</a></li>
+              <li><a href="/web-design/">Websites</a></li>
             </ul>
           </div>
         </aside>
       </div>
 
-      <section class="tail">
-        <div class="tail-inner">
-          <h2>Find out what an engine currently sees.</h2>
-          <a class="cta" href="/start/">Start a project <span class="arrow" aria-hidden="true">&#8599;</span></a>
-        </div>
-      </section>
-
     </div>
   </main>
 
-  <div class="band on-ink">
-    <div class="wrap band-inner">
+  <div class="band on-ink" id="contact">
+    <div class="wrap">
+      <h2>Find out what an assistant says about you now.</h2>
+      <p class="band-note">Tell us what you sell and where you want to be found. We answer with a plan and a straight price.</p>
+      <p class="band-actions">
+        <a class="mail" href="mailto:hello@minarank.com">hello@minarank.com</a>
+        <span class="band-alt">or <a href="https://wa.me/355675716090">message on WhatsApp</a></span>
+      </p>
       <!-- SHARED:FOOTER -->
-      <footer class="site-foot" id="sitemap">
-        <div class="foot-row">
-          <span class="foot-logo-wrap">
-            <img src="/assets/logo/minarank-wordmark-paper.svg" alt="minarank" width="106" height="22" class="foot-logo">
-          </span>
-        </div>
+      <footer class="site-foot">
         <nav class="foot-index" aria-label="Site index">
           <div class="foot-col">
-            <p class="foot-h">The climb</p>
-            <a href="/seo/">SEO</a>
-            <a href="/geo/">GEO</a>
-            <a href="/web-design/">Web Design</a>
-            <a href="/meta-ads/">Meta Ads</a>
+            <p class="foot-h">What we do</p>
+            <a href="/seo/">SEO and local search</a>
+            <a href="/geo/">AI search</a>
+            <a href="/web-design/">Websites</a>
+            <a href="/meta-ads/">Meta ads</a>
+            <a href="/systems/">Custom software</a>
           </div>
           <div class="foot-col">
-            <p class="foot-h">The workshop</p>
-            <a href="/systems/">Systems</a>
-            <a href="/work/">Work</a>
+            <p class="foot-h">Work</p>
+            <a href="/work/iglisi-watch/">Iglisi Watch</a>
+            <a href="/work/victoria-boutique/">Victoria Boutique</a>
+            <a href="/work/intimo-bruna/">Intimo Bruna</a>
+            <a href="/work/pro-affy/">Pro Affy</a>
           </div>
           <div class="foot-col">
             <p class="foot-h">Studio</p>
-            <a href="/studio/">About the studio</a>
+            <a href="/studio/">About</a>
             <a href="/start/">Start a project</a>
+          </div>
+          <div class="foot-col">
+            <p class="foot-h">Get in touch</p>
             <a href="mailto:hello@minarank.com">hello@minarank.com</a>
+            <a href="https://wa.me/355675716090">WhatsApp</a>
           </div>
         </nav>
         <div class="foot-meta">
-          <p class="foot-acro">mina: Marketing&nbsp;· Interface&nbsp;· Navigation&nbsp;· Analytics.&nbsp;
-            rank: what follows.</p>
-          <p class="foot-copy">&#169; 2026 minarank</p>
+          <p>minarank · Durres, Albania · We work in English, Italian and Albanian</p>
+          <p>&#169; 2026 Henri Sila</p>
         </div>
-        <p class="colophon">Set in Clash Display and Satoshi · Two inks on paper · Built by hand, no frameworks · Under 100KB</p>
       </footer>
       <!-- /SHARED:FOOTER -->
     </div>

@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SEO: technical foundations and content architecture · minarank</title>
-  <meta name="description" content="Technical SEO, content architecture and links that compound. What we check, what we change, in what order, and what we refuse to sell.">
+  <title>Getting found on Google · minarank</title>
+  <meta name="description" content="SEO and local search for small businesses: your Google Business Profile, on-page work on the site, and off-page work everywhere else. English, Italian and Albanian.">
   <link rel="canonical" href="https://minarank.com/seo/">
-  <meta name="theme-color" content="#F7F5F2">
+  <meta name="theme-color" content="#F0F1F3">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="minarank">
-  <meta property="og:title" content="SEO: technical foundations and content architecture · minarank">
-  <meta property="og:description" content="Pages built the way search engines wish everyone built them.">
+  <meta property="og:title" content="Getting found on Google · minarank">
+  <meta property="og:description" content="The map gets you phoned today. The results get you found next year.">
   <meta property="og:url" content="https://minarank.com/seo/">
   <meta property="og:image" content="https://minarank.com/assets/og/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -20,8 +20,8 @@
   <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-  <link rel="preload" href="/assets/fonts/clash-display-var.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/assets/fonts/satoshi-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/apfel-mittel.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/tokens.css">
   <link rel="stylesheet" href="/css/fonts.css">
   <link rel="stylesheet" href="/css/main.css">
@@ -33,9 +33,9 @@
     {
       "@type": "Service",
       "@id": "https://minarank.com/seo/#service",
-      "name": "Search Engine Optimization",
-      "serviceType": "Search Engine Optimization",
-      "description": "Technical SEO, content architecture and links that compound. What we check, what we change, in what order, and what we refuse to sell.",
+      "name": "Search engine optimisation and local search",
+      "serviceType": "Search engine optimisation and local search",
+      "description": "SEO and local search for small businesses: your Google Business Profile, on-page work on the site, and off-page work everywhere else. English, Italian and Albanian.",
       "url": "https://minarank.com/seo/",
       "provider": {
         "@id": "https://minarank.com/#org"
@@ -57,26 +57,26 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "How long before SEO does anything?",
+          "name": "Do I need this if I already have customers?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "For a site with existing authority, technical fixes can move things in weeks. For a new domain, meaningful organic traffic is a six to twelve month project, and anyone promising faster is describing paid ads. The honest framing: SEO behaves like fitness rather than a light switch, and it is won by whoever is still showing up in month twelve."
+            "text": "Maybe not. If you're booked out and the phone rings from word of mouth, spend the money elsewhere. This is for when you want customers who don't already know you exist."
           }
         },
         {
           "@type": "Question",
-          "name": "Do I need SEO if I am already running ads?",
+          "name": "What's the difference between the map and the normal results?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "They solve different problems. Ads buy attention now and stop the moment you stop paying. Organic compounds and keeps working while you sleep, but it is slow to start. Most small businesses need the ads to fund the wait, which is exactly why we sell both."
+            "text": "The map is your Google Business Profile and on a phone it sits above everything else. It runs on your listing, your reviews and how close you are to the person searching. The results underneath run on your website. Different jobs, different fixes, and most local businesses should do the map first."
           }
         },
         {
           "@type": "Question",
-          "name": "Can you work on a site you did not build?",
+          "name": "Can you work on a site somebody else built?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, and most of our work is exactly that. If the platform makes the required fixes impossible we will say so plainly rather than bill you monthly for work the platform will not allow."
+            "text": "Yes, most of our work is. If the platform makes the necessary fixes impossible we'll say so straight away, rather than bill you monthly for work it won't let us do."
           }
         }
       ]
@@ -110,15 +110,14 @@
   <header class="site-head">
     <div class="wrap head-row">
       <a class="head-logo" href="/" aria-label="minarank home">
-        <svg viewBox="0 0 64 64" width="36" height="36" aria-hidden="true">
-          <path fill="none" stroke="#1B1F3B" stroke-width="8" stroke-linejoin="miter" stroke-miterlimit="2" stroke-linecap="butt" d="M14 54 L14 18 L32 42 L50 18 L50 54"/>
-          <path fill="none" stroke="#FF6B4A" stroke-width="7" stroke-linecap="butt" d="M53 14 L60.5 4"/>
+        <svg viewBox="0 0 64 64" width="34" height="34" aria-hidden="true">
+          <path fill="none" stroke="#13161C" stroke-width="8" stroke-linejoin="miter" stroke-miterlimit="2" stroke-linecap="butt" d="M14 54 L14 18 L32 42 L50 18 L50 54"/>
+          <path fill="none" stroke="#D8232A" stroke-width="7" stroke-linecap="butt" d="M53 14 L60.5 4"/>
         </svg>
       </a>
       <nav class="head-nav" aria-label="Primary">
-        <a href="/#services">Services</a>
-        <a href="/systems/">Systems</a>
         <a href="/work/">Work</a>
+        <a href="/#services">Services</a>
         <a href="/studio/">Studio</a>
         <a class="head-cta" href="/start/">Start a project</a>
       </nav>
@@ -131,162 +130,138 @@
       <header class="page-head">
         <nav class="crumbs" aria-label="Breadcrumb">
           <a href="/">minarank</a>
-          <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1 11H5V7H9V3H11" fill="none" stroke="#5B5F7A" stroke-width="2"/></svg>
+          <span aria-hidden="true">/</span>
           <span aria-current="page">SEO</span>
         </nav>
-        <p class="eyebrow">Service 01</p>
-        <h1 class="page-title">Most SEO advice is true, vague, and useless.</h1>
-        <p class="standfirst"><strong>This is the specific version.</strong> What we check, what we change, in what order, and the things we refuse to sell you.</p>
+        <h1 class="page-title">Getting found on Google, and on the map.</h1>
+        <p class="standfirst">Two different jobs. The map listing decides who gets phoned today. The results underneath decide who gets found next year.</p>
       </header>
-
-      <p class="finding">
-        <span class="finding-label">The finding</span>
-        Search engines reward the same thing readers do: a page that answers the question it promised, loads before attention runs out, and is corroborated by sources the engine already trusts. Almost every ranking problem reduces to one of those three failing, and it is usually obvious which.
-      </p>
 
       <div class="grid">
         <div class="prose">
+          <p class="lead">Search for a watch repair in Durres and Google shows a map with three shops on it before it shows a single website. Most small businesses aren't on that map, or they're on it with the wrong hours and a photo from 2019. It's usually the cheapest thing to fix and almost nobody fixes it.</p>
 
-          <h2>Where rankings actually break</h2>
-          <p>After enough audits the failures stop being surprising. In rough order of how often they turn out to be the real cause:</p>
-          <ul><li><strong>The page is not about the thing.</strong> It targets a phrase the business uses internally rather than the phrase buyers type.</li><li><strong>The substance is thin.</strong> Four paragraphs competing against pages that answer the question completely.</li><li><strong>The site cannot be crawled cheaply.</strong> Slow responses, duplicate paths, an accidental noindex, a sitemap nobody regenerated.</li><li><strong>Nothing points at it.</strong> No links, no mentions, no reason for an engine to believe anyone else cares.</li><li><strong>It is fighting itself.</strong> Three pages targeting one intent, splitting the signal three ways.</li></ul>
-          <p>None of that is exotic. The work is not clever, it is thorough.</p>
+          <h2>The map listing, first</h2>
+          <p>That listing is a Google Business Profile. It's free, it takes an afternoon to fill in properly, and it decides whether somebody 400 metres away calls you or the shop down the road.</p>
+          <p>We fill in all of it: the categories, every service you offer, hours that are still right at Christmas, real photographs of the place rather than stock ones, the description, and the questions people keep ringing up to ask. In Albanian, Italian and English, so the profile answers in the language somebody searched in.</p>
+          <p>Then reviews, which is the part everyone finds awkward. There's a way to ask that doesn't feel like begging, and there's a way to reply to a bad one that wins more work than the bad review cost you.</p>
+
+          <h2>On the site, and off it</h2>
+          <p>The trade splits the rest in two, and it's worth knowing which is which, because you'll be sold both.</p>
+          <p><strong>On-page</strong> is everything on your own website: what each page is about, whether it answers the question somebody actually typed, how it's written, how it's built, how fast it loads on a phone on mobile data. You control all of it, so it's where we start.</p>
+          <p><strong>Off-page</strong> is everything happening elsewhere that decides whether Google believes you: other sites linking to yours, your business in the same directories your competitors are in, your name and address spelled identically everywhere, and those reviews again. You control less of it and it takes longer, which is why it's worth something once you have it.</p>
+
+          <h2>What it costs, and how long it takes</h2>
+          <p>Technical fixes can move things within weeks. A new site competing for the phrases people actually buy on is a 6 to 12 month job. Anyone promising faster is describing paid ads.</p>
+          <p>watch.al went from no website at all to 560 visits from Google in 3 months. You can see the chart on <a href="/work/iglisi-watch/">their page</a>. That's a real timeline for a business starting from zero in a town where the competition has no website either. In a crowded market it's slower, and we'll tell you which one you're in before you pay us anything.</p>
 
           <h2>What we do</h2>
           <ol class="ledger">
             <li>
-              <span class="ledger-n">01</span>
-              <div>
-                <h3>Technical audit</h3>
-                <p>Crawl, response times, indexation, canonicals, redirects, structured data, and the mobile render. We report what is broken and what is merely untidy, separately, because conflating them is how agencies pad invoices.</p>
-              </div>
+              <h3>The Google Business Profile</h3>
+              <p>Categories, services, hours, photos, the description, the questions people ask, and posts. In all three languages.</p>
             </li>
             <li>
-              <span class="ledger-n">02</span>
-              <div>
-                <h3>Intent and architecture</h3>
-                <p>Which page should own which query, and which pages are competing with each other. Usually the fastest win available is a merge, not a new page.</p>
-              </div>
+              <h3>The site itself</h3>
+              <p>What each page is for, whether it answers the question, how it's built, how fast it loads. Often the quickest win is merging two pages that are competing with each other.</p>
             </li>
             <li>
-              <span class="ledger-n">03</span>
-              <div>
-                <h3>The pages themselves</h3>
-                <p>Written or rewritten to answer completely. Depth beats frequency: one page that settles a question outranks nine that circle it.</p>
-              </div>
+              <h3>Everywhere else</h3>
+              <p>The directories your competitors are in and you aren't, your name and address written identically everywhere, and a sensible way of asking for reviews.</p>
             </li>
             <li>
-              <span class="ledger-n">04</span>
-              <div>
-                <h3>Foundations that compound</h3>
-                <p>Internal linking that carries authority to the pages that earn money, and the technical hygiene that stops it leaking. This is the part that keeps paying after the engagement ends.</p>
-                <p class="payoff"><svg class="tick" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 11H5V7H9V3H11" fill="none" stroke="#FF6B4A" stroke-width="2"/></svg>
-                  Pages that outrank incumbents.</p>
-              </div>
+              <h3>Reporting you can read</h3>
+              <p>What moved, what didn't, what we're doing next. If a month goes badly you'll hear it from us first.</p>
+              <p class="payoff"><svg class="tick" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 11H5V7H9V3H11" fill="none" stroke="#D8232A" stroke-width="2"/></svg>Found by people who don't know your name yet.</p>
             </li>
           </ol>
-
-          <section class="exclusions">
-            <h2>What we do not do</h2>
-            <ul>
-              <li>We do not buy links. It works until it does not, and the recovery costs more than the gain.</li>
-              <li>We do not report rankings as the headline metric. Positions are a means; enquiries are the point, and we report both in that order.</li>
-              <li>We do not publish at volume to look busy. Thin pages actively suppress the good ones by splitting intent.</li>
-              <li>We do not promise a timeline for a specific keyword. Anyone who does is either guessing or has stopped caring whether it is true.</li>
-            </ul>
-          </section>
 
           <section class="faq">
             <h2>Questions worth asking</h2>
             <div class="faq-item">
-              <h3 class="faq-q">How long before SEO does anything?</h3>
-              <p class="faq-a">For a site with existing authority, technical fixes can move things in weeks. For a new domain, meaningful organic traffic is a six to twelve month project, and anyone promising faster is describing paid ads. The honest framing: SEO behaves like fitness rather than a light switch, and it is won by whoever is still showing up in month twelve.</p>
+              <h3 class="faq-q">Do I need this if I already have customers?</h3>
+              <p>Maybe not. If you're booked out and the phone rings from word of mouth, spend the money elsewhere. This is for when you want customers who don't already know you exist.</p>
             </div>
             <div class="faq-item">
-              <h3 class="faq-q">Do I need SEO if I am already running ads?</h3>
-              <p class="faq-a">They solve different problems. Ads buy attention now and stop the moment you stop paying. Organic compounds and keeps working while you sleep, but it is slow to start. Most small businesses need the ads to fund the wait, which is exactly why we sell both.</p>
+              <h3 class="faq-q">What's the difference between the map and the normal results?</h3>
+              <p>The map is your Google Business Profile and on a phone it sits above everything else. It runs on your listing, your reviews and how close you are to the person searching. The results underneath run on your website. Different jobs, different fixes, and most local businesses should do the map first.</p>
             </div>
             <div class="faq-item">
-              <h3 class="faq-q">Can you work on a site you did not build?</h3>
-              <p class="faq-a">Yes, and most of our work is exactly that. If the platform makes the required fixes impossible we will say so plainly rather than bill you monthly for work the platform will not allow.</p>
+              <h3 class="faq-q">Can you work on a site somebody else built?</h3>
+              <p>Yes, most of our work is. If the platform makes the necessary fixes impossible we'll say so straight away, rather than bill you monthly for work it won't let us do.</p>
             </div>
           </section>
-
         </div>
 
         <aside class="side" aria-label="At a glance">
-          <figure class="fig fig-lead">
-            <svg viewBox="-10 -10 180 180" aria-hidden="true">
-              <path class="pl-reg" d="M0 -8 V-3 M-8 0 H-3 M160 -8 V-3 M168 0 H163 M0 168 V163 M-8 160 H-3 M160 168 V163 M168 160 H163" fill="none" stroke="#E4E1D9" stroke-width="1"/>
-              <rect class="pl-frame" x="0.5" y="0.5" width="159" height="159" fill="none" stroke="#E4E1D9" stroke-width="1"/>
-              <path fill="none" stroke="#E4E1D9" stroke-width="1" d="M8 24 H152 M8 40 H152 M8 56 H152 M8 72 H152 M8 88 H152 M8 104 H152 M8 120 H152 M8 136 H152 M8 152 H152 M8 8.5 H152"/>
-              <rect x="8" y="92" width="44" height="12" fill="none" stroke="#5B5F7A" stroke-width="1.5"/>
-              <path class="pl-subject" pathLength="1" fill="none" stroke="#1B1F3B" stroke-width="2" d="M8 152 H36 V136 H60 V120 H84 V104 H108 V88 H122 V72 H134 V56 H142 V40 H148 V24"/>
-              <path class="pl-coral" fill="none" stroke="#FF6B4A" stroke-width="2" d="M142 20 H146 V16 H150 V12 H154"/>
+          <figure class="fig">
+            <svg viewBox="0 0 160 160" aria-hidden="true">
+              <path fill="none" stroke="#D9DCE1" stroke-width="1" d="M8 24 H152 M8 40 H152 M8 56 H152 M8 72 H152 M8 88 H152 M8 104 H152 M8 120 H152 M8 136 H152 M8 152 H152"/>
+              <rect x="8" y="92" width="44" height="12" fill="none" stroke="#5A6070" stroke-width="1.5"/>
+              <path fill="none" stroke="#13161C" stroke-width="2" d="M8 152 H36 V136 H60 V120 H84 V104 H108 V88 H122 V72 H134 V56 H142 V40 H148 V24"/>
+              <path fill="none" stroke="#D8232A" stroke-width="2" d="M142 20 H146 V16 H150 V12 H154"/>
             </svg>
-            <figcaption class="fig-cap">FIG. 01 &#183; THE LADDER</figcaption>
           </figure>
 
           <div class="side-block">
-            <p class="side-h">Honest expectations</p>
-            <p>Technical fixes can move in weeks. A new domain competing for commercial terms is a six to twelve month project. We would rather lose the sale than agree to a timeline we do not believe.</p>
+            <p class="side-h">Honest timeline</p>
+            <p>Technical fixes: weeks. A new site competing on commercial phrases: 6 to 12 months. We'd rather lose the job than agree to a date we don't believe.</p>
           </div>
 
           <div class="side-block">
-            <p class="side-h">Related</p>
+            <p class="side-h">Also</p>
             <ul class="side-list">
-              <li><a href="/geo/">GEO: the other endpoint of this argument</a></li>
-              <li><a href="/web-design/">Web design: why the build decides the ceiling</a></li>
+              <li><a href="/geo/">AI search</a></li>
+              <li><a href="/web-design/">Websites</a></li>
             </ul>
           </div>
         </aside>
       </div>
 
-      <section class="tail">
-        <div class="tail-inner">
-          <h2>Find out what is actually holding the site back.</h2>
-          <a class="cta" href="/start/">Start a project <span class="arrow" aria-hidden="true">&#8599;</span></a>
-        </div>
-      </section>
-
     </div>
   </main>
 
-  <div class="band on-ink">
-    <div class="wrap band-inner">
+  <div class="band on-ink" id="contact">
+    <div class="wrap">
+      <h2>Find out what's holding the site back.</h2>
+      <p class="band-note">Tell us what you sell and where you want to be found. We answer with a plan and a straight price.</p>
+      <p class="band-actions">
+        <a class="mail" href="mailto:hello@minarank.com">hello@minarank.com</a>
+        <span class="band-alt">or <a href="https://wa.me/355675716090">message on WhatsApp</a></span>
+      </p>
       <!-- SHARED:FOOTER -->
-      <footer class="site-foot" id="sitemap">
-        <div class="foot-row">
-          <span class="foot-logo-wrap">
-            <img src="/assets/logo/minarank-wordmark-paper.svg" alt="minarank" width="106" height="22" class="foot-logo">
-          </span>
-        </div>
+      <footer class="site-foot">
         <nav class="foot-index" aria-label="Site index">
           <div class="foot-col">
-            <p class="foot-h">The climb</p>
-            <a href="/seo/">SEO</a>
-            <a href="/geo/">GEO</a>
-            <a href="/web-design/">Web Design</a>
-            <a href="/meta-ads/">Meta Ads</a>
+            <p class="foot-h">What we do</p>
+            <a href="/seo/">SEO and local search</a>
+            <a href="/geo/">AI search</a>
+            <a href="/web-design/">Websites</a>
+            <a href="/meta-ads/">Meta ads</a>
+            <a href="/systems/">Custom software</a>
           </div>
           <div class="foot-col">
-            <p class="foot-h">The workshop</p>
-            <a href="/systems/">Systems</a>
-            <a href="/work/">Work</a>
+            <p class="foot-h">Work</p>
+            <a href="/work/iglisi-watch/">Iglisi Watch</a>
+            <a href="/work/victoria-boutique/">Victoria Boutique</a>
+            <a href="/work/intimo-bruna/">Intimo Bruna</a>
+            <a href="/work/pro-affy/">Pro Affy</a>
           </div>
           <div class="foot-col">
             <p class="foot-h">Studio</p>
-            <a href="/studio/">About the studio</a>
+            <a href="/studio/">About</a>
             <a href="/start/">Start a project</a>
+          </div>
+          <div class="foot-col">
+            <p class="foot-h">Get in touch</p>
             <a href="mailto:hello@minarank.com">hello@minarank.com</a>
+            <a href="https://wa.me/355675716090">WhatsApp</a>
           </div>
         </nav>
         <div class="foot-meta">
-          <p class="foot-acro">mina: Marketing&nbsp;· Interface&nbsp;· Navigation&nbsp;· Analytics.&nbsp;
-            rank: what follows.</p>
-          <p class="foot-copy">&#169; 2026 minarank</p>
+          <p>minarank · Durres, Albania · We work in English, Italian and Albanian</p>
+          <p>&#169; 2026 Henri Sila</p>
         </div>
-        <p class="colophon">Set in Clash Display and Satoshi · Two inks on paper · Built by hand, no frameworks · Under 100KB</p>
       </footer>
       <!-- /SHARED:FOOTER -->
     </div>

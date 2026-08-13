@@ -1,70 +1,73 @@
 /* ==========================================================================
    MINARANK · design tokens
-   Shared by every page on the site, including the future /blog/.
-   Palette source: brand concept PDF ("Color scheme", p.3).
-   Design law: work happens in ink; coral marks where ranking, the payoff,
-   appears. Coral is scarce. Amber is interaction-only.
+
+   Colour. Ink, press white, and the red from the Albanian flag. Every value
+   has a source we can name to a client in one sentence. Red does the job
+   coral used to: it marks where ranking happens, and it is never body text.
+
+   Type. Apfel Grotezk (Collletttivo, Italian open-source cooperative) for
+   display only, above 2rem. Archivo (Omnibus-Type) for everything else.
+   Two faces, and the display face is not allowed to do nine jobs.
    ========================================================================== */
 
 :root {
-  /* -- color ------------------------------------------------------------- */
-  --ink:    #1B1F3B;   /* primary type, the single dark band */
-  --ink-2:  #2E3358;   /* hairlines on ink, hover-deepen */
-  --coral:  #FF6B4A;   /* payoff only: logo k, ticks, arrows, mailto-on-ink */
-  --amber:  #F4A259;   /* interaction only: hover-on-coral, ::selection */
-  --paper:  #F7F5F2;   /* page ground */
-  --slate:  #5B5F7A;   /* secondary text on paper (5.7:1, AA) */
-  --bone:   #E4E1D9;   /* hairlines, secondary text on ink */
-  --ghost:  #ABABAB;   /* disabled / ghosted */
+  /* -- colour ------------------------------------------------------------ */
+  --ink:    #13161C;   /* printing black is never pure black */
+  --ink-2:  #262B35;   /* hairlines on ink */
+  --red:    #D8232A;   /* the red in the Albanian flag */
+  --red-dk: #A81B21;   /* hover, and red text where AA demands it */
+  --paper:  #F0F1F3;   /* cool press white, coated stock */
+  --slate:  #5A6070;   /* captions and metadata only, never body */
+  --rule:   #D9DCE1;   /* hairlines */
 
   /* -- type -------------------------------------------------------------- */
-  --font-display: "Clash Display", "Arial Narrow", sans-serif;
-  --font-body: "Satoshi", "Segoe UI", system-ui, sans-serif;
+  --font-display: "Apfel Grotezk", "Arial Narrow", sans-serif;
+  --font-body: Archivo, "Segoe UI", system-ui, sans-serif;
 
-  --fs-hero:  clamp(3.5rem, 12vw, 11rem);     /* wordmark h1 */
-  --fs-h2:    clamp(2.25rem, 5vw, 4.5rem);
-  --fs-h3:    clamp(1.375rem, 2.2vw, 2rem);
-  --fs-num:   clamp(4rem, 9vw, 8rem);         /* service numerals */
-  --fs-lead:  clamp(1.125rem, 1.6vw, 1.375rem);
-  --fs-body:  1.0625rem;
+  --fs-hero:  clamp(3rem, 11vw, 9rem);
+  --fs-h2:    clamp(2rem, 3.6vw, 3.25rem);
+  --fs-h3:    clamp(1.25rem, 1.8vw, 1.5rem);
+  --fs-lead:  clamp(1.1875rem, 1.4vw, 1.375rem);
+  --fs-body:  1.125rem;      /* 18px. Every site worth copying sits 18 to 24 */
   --fs-small: 0.9375rem;
-  --fs-label: 0.75rem;                        /* uppercase, tracked */
+  --fs-label: 0.8125rem;     /* there is no smaller size on this site */
 
-  --track-label: 0.14em;
-  --lh-body: 1.65;
+  --track-label:   0.08em;
+  --track-display: -0.022em; /* Apfel is geometric; it needs negative tracking big */
+  --lh-body: 1.6;
 
-  /* -- space (4-base) ---------------------------------------------------- */
-  --s-1: 4px;  --s-2: 8px;   --s-3: 12px;  --s-4: 16px;
-  --s-5: 24px; --s-6: 32px;  --s-7: 48px;  --s-8: 64px;
-  --s-9: 96px; --s-10: 128px; --s-11: 160px;
-  --section-pad: clamp(6rem, 12vh, 10rem);
+  /* -- space ------------------------------------------------------------- */
+  --s-2: 8px;   --s-3: 12px;  --s-4: 16px;  --s-5: 24px;
+  --s-6: 32px;  --s-7: 48px;  --s-8: 64px;  --s-9: 96px;  --s-10: 128px;
+
+  /* three rhythm weights, not one. Uniform padding is a machine signature. */
+  --pad-section: clamp(3.5rem, 7vh, 5.5rem);
+  --pad-major:   clamp(5rem, 10vh, 8rem);
+  --pad-hero:    clamp(6rem, 12vh, 9rem);
 
   /* -- grid -------------------------------------------------------------- */
-  --page-max: 1360px;
+  --page-max: 1280px;
   --gutter: clamp(16px, 2.5vw, 32px);
-  --margin: clamp(20px, 5vw, 72px);
+  --margin: clamp(20px, 5vw, 64px);
 
   /* -- motion ------------------------------------------------------------ */
-  --ease-rise:   cubic-bezier(0.16, 1, 0.3, 1);   /* hero letters */
-  --ease-reveal: cubic-bezier(0.22, 1, 0.36, 1);  /* scroll reveals */
-  --rise-step: 0.028em;                            /* the climb, per letter */
-
-  /* -- texture ------------------------------------------------------------ */
-  /* paper grain: one 256px SVG noise tile, rasterized once by the browser.
-     Applied at 2.5% multiply on paper, 6% soft-light on ink. */
-  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='256'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23n)'/%3E%3C/svg%3E");
+  --ease-rise:   cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-reveal: cubic-bezier(0.22, 1, 0.36, 1);
+  --rise-step: 0.028em;      /* the climb, per letter */
 }
 
-/* Reset (minimal, intentional) */
 *, *::before, *::after { box-sizing: border-box; }
+
 body { margin: 0; background: var(--paper); color: var(--ink);
-  font-family: var(--font-body); font-size: var(--fs-body); line-height: var(--lh-body);
+  font-family: var(--font-body); font-size: var(--fs-body);
+  line-height: var(--lh-body); font-synthesis: none;
   -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+
 h1, h2, h3, p { margin: 0; }
 a { color: inherit; }
 img, svg { display: block; max-width: 100%; }
 
-::selection { background: var(--amber); color: var(--ink); }
+::selection { background: var(--red); color: var(--paper); }
 
 :focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
 .on-ink :focus-visible { outline-color: var(--paper); }
