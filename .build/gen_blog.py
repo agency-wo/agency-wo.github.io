@@ -163,11 +163,21 @@ def blog_index():
             "jsonld": json.dumps({"@context": "https://schema.org", "@graph": graph},
                                  indent=2, ensure_ascii=False)}
 
+    # 5/7, the same proportion the service doors use: the name is short and the
+    # sell is the long half. Without it the list was a narrow text column with
+    # the entire right half of the page blank above 1000px. One proportion used
+    # twice is a system; a second proportion invented here would not be.
     rows = NL.join(f'''          <li>
-            <h2 class="case-name"><a href="{post_url(p)}">{p["title"]}</a></h2>
-            <p class="case-where">{p["topic"]}</p>
-            <p class="case-said">{p["summary"]}</p>
-            <p class="case-said"><a href="{post_url(p)}">Read it {shell.ARROW}</a></p>
+            <div class="post-row">
+              <div>
+                <h2 class="case-name"><a href="{post_url(p)}">{p["title"]}</a></h2>
+                <p class="case-where">{p["topic"]} {shell.DOT} {human(p["date"])}</p>
+              </div>
+              <div>
+                <p class="case-said">{p["summary"]}</p>
+                <p class="case-said"><a href="{post_url(p)}">Read it {shell.ARROW}</a></p>
+              </div>
+            </div>
           </li>''' for p in POSTS)
 
     body = f'''

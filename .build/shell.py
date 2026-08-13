@@ -42,11 +42,19 @@ TURNAROUND = "within 24 hours"
 # no script. Drop the fragment and a JS-off visitor comes back to a blank form
 # and sees nothing happen.
 #
+# It is derived per page, not a constant. There are 2 forms now, and a form
+# that returns the visitor to SOMEBODY ELSE'S confirmation panel is the same
+# failure with a nicer face: it is what a second form gets by default when the
+# redirect is one hardcoded string. Gate check 26 re-derives this the way check
+# 5 derives the canonical, so the two cannot disagree.
+#
 # Web3Forms' free plan redirects same-domain only, so this is derived from SITE
 # rather than the host we are previewing on: the day the domain resolves this
 # starts working, with no edit. Until then a no-JS visitor lands on Web3Forms'
 # own thank-you page and their lead still arrives.
-FORM_REDIRECT = SITE + "/start/?sent=1#sent"
+def form_redirect(page_url):
+    """page_url is the page's own URL: "/" or "/start/"."""
+    return SITE + page_url + "?sent=1#sent"
 
 # Work first: there is proof now, and it should not be buried.
 NAV = [
@@ -175,7 +183,29 @@ def head(page):
 
 
 def header():
+    """The nav links are emitted TWICE, once per width, both from NAV.
+
+    Below 720px the row hides everything but the CTA, which meant Proof,
+    Services, Writing and Studio were unreachable from the header on a phone,
+    on all 18 pages. The <details> is the fix and it needs no script at all, so
+    rule 32 is satisfied by the element rather than by a rule about it.
+
+    Two copies, not one shown two ways: sharing a single list needs
+    ::details-content with content-visibility:visible, which is Chrome 131,
+    Safari 18.4 and Firefox 139, all 2025. On anything older the non-summary
+    children sit in an internal slot no author selector reaches, so the DESKTOP
+    nav becomes a closed disclosure and it fails silently. Two lists from one
+    Python list is the cheaper mistake. Gate check 33 counts them.
+
+    The <details> is INSIDE .head-nav and last: inside, so js/main.js's
+    ".head-nav a[href^='/']" still marks the current page in the menu with no
+    change; last, so DOM order equals paint order at both widths.
+
+    No aria-expanded (<summary> supplies it, and a hand-written one goes
+    stale), no role="button" (it destroys the disclosure), no role="menu".
+    """
     links = "\n".join(f'        <a href="{h}">{t}</a>' for h, t in NAV)
+    menu = "\n".join(f'            <a href="{h}">{t}</a>' for h, t in NAV)
     return f'''
   <!-- SHARED:HEADER -->
   <header class="site-head">
@@ -186,6 +216,12 @@ def header():
       <nav class="head-nav" aria-label="Primary">
 {links}
         <a class="head-cta" href="/start/">Start a project</a>
+        <details class="menu">
+          <summary>Menu</summary>
+          <div class="menu-panel">
+{menu}
+          </div>
+        </details>
       </nav>
     </div>
   </header>

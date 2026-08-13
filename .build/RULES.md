@@ -60,7 +60,14 @@ everything checkable is checked by `verify.py`, which fails the build.
 19. **Client work gets its own page** at `/work/<slug>/`. Each client's
     "what changed" heading is a required field, so nothing sits empty for the
     three without published numbers.
-20. **One CTA per page**, in the ink band.
+20. **One ask per page.** The header link and the ink band appear on all 18
+    pages: they are chrome, and chrome is not a page's ask. Below the chrome a
+    page gets exactly one thing that takes something from a visitor, and it is
+    a form. The homepage's is the audit form in the hero; `/start/`'s is the
+    6-field version. Anything else styled as a button has to be a link to one
+    of our own pages, which is why the homepage's other button says "See the
+    work" and not "Send". The old wording said one CTA in the ink band, was
+    false the day it was written, and nothing checked it. Check 32 does now.
 
 ## Claims
 
@@ -95,8 +102,10 @@ everything checkable is checked by `verify.py`, which fails the build.
 32. Every animation's final state is the CSS default, so no-JS, crawlers and
     reduced-motion get the finished page.
 33. Every `<img>` carries `width`, `height` and real `alt`. Gated.
-34. Build order: `gen_pages`, `gen_docs`, `gen_cases`, `gen_home`,
-    `gen_headers`, `gen_sitemap` last, then `verify`.
+34. Build order: `gen_pages`, `gen_docs`, `gen_cases`, `gen_home`, `gen_blog`,
+    `gen_headers`, `gen_launch`, `gen_sitemap` last, then `verify`. `gen_blog`
+    and `gen_launch` were missing from this line for a while, which would have
+    stranded the 4 blog pages the first time SHARED:HEADER changed.
 
 ## Writing, again
 

@@ -149,6 +149,15 @@
         <a href="/blog/">Writing</a>
         <a href="/studio/">Studio</a>
         <a class="head-cta" href="/start/">Start a project</a>
+        <details class="menu">
+          <summary>Menu</summary>
+          <div class="menu-panel">
+            <a href="/work/">Proof</a>
+            <a href="/#services">Services</a>
+            <a href="/blog/">Writing</a>
+            <a href="/studio/">Studio</a>
+          </div>
+        </details>
       </nav>
     </div>
   </header>
@@ -161,20 +170,91 @@
         <h1 class="hero-title">
           <span class="sr-only">minarank studio</span>
           <span class="wm-box" aria-hidden="true">
-            <span class="serp"><i style="--r:0" data-n="1"></i><i style="--r:1" data-n="2"></i><i style="--r:2" data-n="3"></i><i style="--r:3" data-n="4"></i><i style="--r:4" data-n="5"></i><i style="--r:5" data-n="6"></i><i style="--r:6" data-n="7"></i><i style="--r:7" data-n="8"></i><i style="--r:8" data-n="9"></i><i style="--r:9" data-n="10"></i></span>
-            <span class="wm"><span class="l" style="--i:0">m</span><span class="l" style="--i:1">i</span><span class="l" style="--i:2">n</span><span class="l" style="--i:3">a</span><span class="l" style="--i:4">r</span><span class="l" style="--i:5">a</span><span class="l" style="--i:6">n</span><span class="l k" style="--i:7">k</span><span class="wm-studio">studio</span></span>
+            <span class="serp"><i data-n="1"></i><i data-n="2"></i><i data-n="3"></i><i data-n="4"></i><i data-n="5"></i><i data-n="6"></i><i data-n="7"></i><i data-n="8"></i><i data-n="9"></i><i data-n="10"></i></span>
+            <span class="wm"><span class="l">m</span><span class="l">i</span><span class="l">n</span><span class="l">a</span><span class="l">r</span><span class="l">a</span><span class="l">n</span><span class="l k">k</span><span class="wm-studio">studio</span></span>
           </span>
         </h1>
-        <div class="hero-rest">
-          <p class="hero-say">Somebody is searching for what you sell right now.
-            We make sure they find you on Google.</p>
-          <p class="hero-sub">Google, the map, and the answers ChatGPT and Gemini give
-            when somebody asks for a shop like yours. Then the website itself, and the
-            software behind it. We work in English, Italian and Albanian.</p>
-          <p class="hero-who">You will not be handed to anybody else.
-            <strong>minarank studio is Henri&nbsp;Sila, working from Durres.</strong></p>
-          <p class="status"><span class="dot" aria-hidden="true"></span>
-            Taking on new work from September.</p>
+        <div class="hero-split">
+          <div class="hero-rest">
+            <p class="hero-say">Somebody is searching for what you sell right now.
+              We make sure they find you on Google.</p>
+            <p class="hero-sub">Google, the map, and the answers ChatGPT and Gemini give
+              when somebody asks for a shop like yours. Then the website itself, and the
+              software behind it. We work in English, Italian and Albanian.</p>
+            <p class="hero-who">You will not be handed to anybody else.
+              <strong>The person who reads your site is the person who builds
+              the fix.</strong></p>
+            <p class="status"><span class="dot" aria-hidden="true"></span>
+              Taking on new work from September.</p>
+          </div>
+          <div class="audit hero-af" id="audit">
+            <h2 class="af-h" id="audit-h">Get a free audit of your site.</h2>
+            <p class="af-lead">A PDF within 24 hours. What's working, what's
+              not, what to fix first.</p>
+
+            <div class="af-done" id="sent" tabindex="-1">
+              <h3>Sent. Check your inbox.</h3>
+              <p>The audit lands within 24 hours. Nothing there? One line to
+                <a href="mailto:hello@minarankstudio.com">hello@minarankstudio.com</a> and we'll
+                resend.</p>
+            </div>
+
+            <form class="af" id="audit-form" method="POST"
+              action="https://api.web3forms.com/submit" aria-labelledby="audit-h">
+              <input type="hidden" name="access_key" value="PASTE-MINARANK-ACCESS-KEY-HERE">
+              <input type="hidden" name="subject" value="Free audit request from the homepage of minarank studio">
+              <input type="hidden" name="redirect" value="https://minarankstudio.com/?sent=1#sent">
+              <input type="hidden" name="source" value="home-hero">
+              <input class="af-hp" type="checkbox" name="botcheck" tabindex="-1"
+                autocomplete="off">
+
+              <p class="field">
+                <label for="af-url">Your website</label>
+                <input id="af-url" name="url" type="text" inputmode="url"
+                  autocomplete="url" autocapitalize="none" spellcheck="false"
+                  required placeholder="yourshop.al"
+                  pattern="(https?:\/\/)?[a-zA-Z0-9][a-zA-Z0-9.\-]*\.[a-zA-Z]{2,}(\/\S*)?"
+                  title="Your web address, for example yourshop.al"
+                  aria-describedby="af-url-err">
+                <span class="field-err" id="af-url-err">A web address, like
+                  yourshop.al.</span>
+              </p>
+
+              <p class="field">
+                <label for="af-owner">Your name</label>
+                <input id="af-owner" name="owner" type="text" autocomplete="name"
+                  required aria-describedby="af-owner-err">
+                <span class="field-err" id="af-owner-err">Who should we send it
+                  to?</span>
+              </p>
+
+              <p class="field">
+                <label for="af-email">Email</label>
+                <input id="af-email" name="email" type="email" inputmode="email"
+                  autocomplete="email" autocapitalize="none" spellcheck="false"
+                  required aria-describedby="af-email-err">
+                <span class="field-err" id="af-email-err">The PDF goes to this
+                  address.</span>
+              </p>
+
+              <p class="field">
+                <label for="af-category">What you sell</label>
+                <input id="af-category" name="category" type="text" required
+                  aria-describedby="af-category-err">
+                <span class="field-err" id="af-category-err">Watches, kitchens,
+                  cakes. One word is enough.</span>
+              </p>
+
+              <p class="af-go">
+                <button class="btn" type="submit" id="af-send"><span
+                  id="af-send-text">Send it</span><svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+              </p>
+              <p class="af-say" id="af-say" role="status" aria-live="polite"></p>
+              <p class="af-alt">Or <a href="mailto:hello@minarankstudio.com">email us</a>, or
+                <a href="https://wa.me/355675716090">WhatsApp</a>.</p>
+              <p class="af-fine">We use it for the audit, nothing else.</p>
+            </form>
+          </div>
         </div>
       </div>
     </section>

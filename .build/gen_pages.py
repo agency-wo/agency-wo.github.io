@@ -20,21 +20,27 @@ EM_DASH = chr(0x2014)
 # Drawings, in one grammar: orthogonal stepped lines, no curves except the
 # answer panel, no numerals inside any figure. They carry no captions: a
 # drawing that needs a caption is not working.
+#
+# Every hex here is a token from css/tokens.css and gate check 31 now scans
+# this file for it. It did not until these drawings had already sat on the
+# retired palette through a rebrand, which is the whole reason the check
+# exists. The hairline is --edge, the structure colour, because a 1.22:1 line
+# inside a 160px drawing is a line nobody sees.
 FIGS = {
-    "ladder": '''<path fill="none" stroke="#D9DCE1" stroke-width="1" d="M8 24 H152 M8 40 H152 M8 56 H152 M8 72 H152 M8 88 H152 M8 104 H152 M8 120 H152 M8 136 H152 M8 152 H152"/>
+    "ladder": '''<path fill="none" stroke="#A6ADB9" stroke-width="1" d="M8 24 H152 M8 40 H152 M8 56 H152 M8 72 H152 M8 88 H152 M8 104 H152 M8 120 H152 M8 136 H152 M8 152 H152"/>
               <rect x="8" y="92" width="44" height="12" fill="none" stroke="#5A6070" stroke-width="1.5"/>
               <path fill="none" stroke="#13161C" stroke-width="2" d="M8 152 H36 V136 H60 V120 H84 V104 H108 V88 H122 V72 H134 V56 H142 V40 H148 V24"/>
               <path fill="none" stroke="#D8232A" stroke-width="2" d="M142 20 H146 V16 H150 V12 H154"/>''',
 
     "citation": '''<rect x="8" y="8" width="144" height="64" rx="8" fill="none" stroke="#5A6070" stroke-width="1.5"/>
-              <rect x="22" y="22" width="100" height="5" fill="#D9DCE1"/>
-              <rect x="22" y="34" width="116" height="5" fill="#D9DCE1"/>
-              <rect x="22" y="46" width="84" height="5" fill="#D9DCE1"/>
+              <rect x="22" y="22" width="100" height="5" fill="#A6ADB9"/>
+              <rect x="22" y="34" width="116" height="5" fill="#A6ADB9"/>
+              <rect x="22" y="46" width="84" height="5" fill="#A6ADB9"/>
               <path fill="none" stroke="#13161C" stroke-width="2" d="M24 72 V92 H62 V112 H100 V126"/>
               <rect x="100" y="126" width="44" height="18" fill="none" stroke="#13161C" stroke-width="2"/>
               <path fill="none" stroke="#D8232A" stroke-width="2" d="M140 122 H144 V118 H148 V114 H152"/>''',
 
-    "instrument": '''<path fill="none" stroke="#D9DCE1" stroke-width="1" d="M20 28 V148 M32 28 V148 M44 28 V148 M56 28 V148 M68 28 V148 M80 28 V148 M92 28 V148 M104 28 V148 M116 28 V148 M128 28 V148 M140 28 V148"/>
+    "instrument": '''<path fill="none" stroke="#A6ADB9" stroke-width="1" d="M20 28 V148 M32 28 V148 M44 28 V148 M56 28 V148 M68 28 V148 M80 28 V148 M92 28 V148 M104 28 V148 M116 28 V148 M128 28 V148 M140 28 V148"/>
               <rect x="8" y="8" width="144" height="144" fill="none" stroke="#13161C" stroke-width="2"/>
               <path fill="none" stroke="#13161C" stroke-width="2" d="M8 24 H152"/>
               <rect x="13" y="13" width="3" height="3" fill="#13161C"/><rect x="19" y="13" width="3" height="3" fill="#13161C"/><rect x="25" y="13" width="3" height="3" fill="#13161C"/>

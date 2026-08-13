@@ -318,7 +318,7 @@ start_body = f'''
               action="{shell.FORM_ENDPOINT}">
               <input type="hidden" name="access_key" value="{shell.WEB3FORMS_KEY}">
               <input type="hidden" name="subject" value="Free audit request via {shell.BRAND}">
-              <input type="hidden" name="redirect" value="{shell.FORM_REDIRECT}">
+              <input type="hidden" name="redirect" value="{shell.form_redirect('/start/')}">
               <input type="hidden" name="source" value="start-audit">
               <input class="af-hp" type="checkbox" name="botcheck" tabindex="-1"
                 autocomplete="off">

@@ -9,16 +9,10 @@
   <link rel="preload" href="/assets/fonts/apfel-mittel.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/tokens.css">
   <link rel="stylesheet" href="/css/fonts.css">
-  <style>
-    .err { min-height: 88vh; display: flex; flex-direction: column;
-      justify-content: center; max-width: var(--page-max);
-      margin-inline: auto; padding-inline: var(--margin); }
-    .err h1 { font-family: var(--font-display); font-weight: 500;
-      font-size: clamp(3rem, 10vw, 8rem); line-height: 1; }
-    .err h1 span { color: var(--red); }
-    .err p { color: var(--slate); margin-top: 24px; max-width: 40ch; }
-    .err a { color: var(--ink); font-weight: 700; }
-  </style>
+  <!-- .err lives in main.css because style-src is 'self' and an inline
+       <style> block is blocked by it. This page used to carry its own and
+       would have rendered unstyled on any host that honours _headers. -->
+  <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
   <main class="err">

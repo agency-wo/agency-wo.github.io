@@ -1,4 +1,4 @@
-"""MINARANK gate. Read-only. Exit 1 on any finding.
+"""MINARANK gate. 33 checks. Read-only. Exit 1 on any finding.
 
 Run from the project root:  python .build/verify.py
 
@@ -273,7 +273,7 @@ if total > 200 * 1024:
 CONCRETE = re.compile(r"\d|Google|ChatGPT|Claude|Perplexity|Durres|Albania|Italy|"
                       r"WhatsApp|Iglisi|Victoria|Bruna|Affy|minarank|euro|lek", re.I)
 for p in all_pages:
-    for para in re.findall(r"<p[^>]*>(.*?)</p>", read(p), re.S):
+    for para in re.findall(r"<p\b[^>]*>(.*?)</p>", read(p), re.S):
         plain = re.sub(r"\s+", " ", re.sub(r"(?s)<[^>]+>", "", para)).strip()
         if len(plain.split()) < 14:
             continue
@@ -351,9 +351,13 @@ for p in all_pages:
 # 21. paragraphs stay short ------------------------------------------------
 # Rule 35. Over-explaining shows up as length before it shows up as anything
 # else. Measured: median 19 words, p90 43, longest good paragraph 73.
+#
+# <p, not <p: [^>]* happily matches the "ath ..." of a <path> inside every
+# inline SVG on the site, so this and check 17 used to measure from the logo's
+# first path to the first real </p> and judged the header as a paragraph.
 P_WARN, P_FAIL = 55, 85
 for p in all_pages:
-    for para in re.findall(r"<p[^>]*>(.*?)</p>", read(p), re.S):
+    for para in re.findall(r"<p\b[^>]*>(.*?)</p>", read(p), re.S):
         plain = re.sub(r"\s+", " ", re.sub(r"(?s)<[^>]+>", "", para)).strip()
         n = len(plain.split())
         if n > P_FAIL:
@@ -372,17 +376,53 @@ IGLISI_KEY = "b8cb1417-7408-4af4-a7da-9c2a163735fc"   # watch.al's. Not ours.
 KEY_RE = r"[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}"
 start_html = read(os.path.join(ROOT, "start", "index.html"))
 
-# 22. the key is real, is OURS, and actually reached the page ---------------
+# The shape of every form, DECLARED. Checks 22 and 26 used to read start_html
+# and were keyed to start/index.html by name, so the day a second form appeared
+# the gate reported PASS on a form none of this ran against. A page that has a
+# form and no line here is a FAILURE: a third form cannot be added without
+# somebody writing down what shape it is meant to be, which is the whole point.
+#
+# csv_ready means Minafy's batch can take the row as it stands. The hero form
+# has 4 fields and no business-name field by design, so its rows get completed
+# by hand from the URL. Declared here rather than discovered by the batch 3
+# weeks later.
+FORM_SHAPES = {
+    #  page                (visible field names, in source order),   csv_ready
+    "index.html":       (("url", "owner", "email", "category"),          False),
+    "start/index.html": (("url", "name", "category", "city",
+                          "owner", "email"),                             True),
+}
+
+
+def visible_fields(f):
+    """Field names in source order. Web3Forms lists fields in submission order,
+    so this IS the shape of the notification email."""
+    out = []
+    for tag in re.findall(r"<input\b[^>]*>|<textarea\b[^>]*>|<select\b[^>]*>", f):
+        if re.search(r'type="(hidden|submit|button)"', tag):
+            continue
+        m = re.search(r'\bname="([^"]+)"', tag)
+        if m and m.group(1) != "botcheck":
+            out.append(m.group(1))
+    return out
+
+
+form_pages = [p for p in all_pages if re.search(r"<form\b", read(p))]
+
+# 22. the key is real, is OURS, and reached EVERY page that posts -----------
 if not re.fullmatch(KEY_RE, shell.WEB3FORMS_KEY, re.I):
     findings.append("[form] shell.WEB3FORMS_KEY is still a placeholder. Create a "
                     "key at web3forms.com for minarank and paste it into shell.py")
 elif shell.WEB3FORMS_KEY.lower() == IGLISI_KEY:
     findings.append("[form] shell.WEB3FORMS_KEY is watch.al's key. One key, one "
-                    "form, one inbox: minarank needs its own")
-elif start_html.count('value="' + shell.WEB3FORMS_KEY + '"') != 1:
-    # set the constant, forget to rerun gen_docs, ship the placeholder
-    findings.append("[form] the key is in shell.py but not in the rendered page. "
-                    "Re-run gen_docs.py")
+                    "inbox: minarank needs its own")
+else:
+    for p in form_pages:
+        # set the constant, forget to rerun one generator, ship the placeholder
+        # on one page out of two and never notice
+        if read(p).count('value="' + shell.WEB3FORMS_KEY + '"') != 1:
+            findings.append(f"[form] {rel(p)} has a form but not the key from "
+                            f"shell.py, exactly once. Re-run its generator")
 
 # 23. every form control is labelled and described -------------------------
 for p in all_pages:
@@ -452,47 +492,114 @@ if said < 3:
     findings.append(f"[promise] start/index.html states the turnaround {said} "
                     f"time(s). The standfirst, the offer and the confirmation "
                     f"all need it")
+# a form that asks for an email without saying when the answer comes is a leak
+for p in form_pages:
+    if shell.TURNAROUND.lower() not in text_of(read(p)).lower():
+        findings.append(f"[promise] {rel(p)} carries the audit form and never "
+                        f"states {shell.TURNAROUND!r}")
 
-# 26. the shape of the form itself -----------------------------------------
-# Four defects shipped here once. Each line below is one of them.
-forms = re.findall(r"(?s)<form\b.*?</form>", start_html)
-if len(forms) != 1:
-    findings.append(f"[form] start/index.html has {len(forms)} forms, expected 1")
-else:
+# 26. the shape of EVERY form on EVERY page --------------------------------
+# Four defects shipped on /start/ once and each line below is one of them. They
+# run over every form on the site now, because a defect only /start/ is checked
+# for is a defect the next form gets for free.
+sources = {}
+for p in all_pages:
+    html, key = read(p), rel(p)
+    forms = re.findall(r"(?s)<form\b.*?</form>", html)
+    if key not in FORM_SHAPES:
+        if forms:
+            findings.append(f"[form] {key} has {len(forms)} form(s) and no entry in "
+                            f"FORM_SHAPES. Declare its field order, or the whole "
+                            f"contract below runs against nothing")
+        continue
+    want_order, csv_ready = FORM_SHAPES[key]
+    if len(forms) != 1:
+        findings.append(f"[form] {key} has {len(forms)} forms, expected 1")
+        continue
     f = forms[0]
+
     if 'method="POST"' not in f:
-        findings.append("[form] no method=POST, so a no-JS submit would put every "
-                        "field in the URL")
+        findings.append(f"[form] {key}: no method=POST, so a no-JS submit would put "
+                        f"every field in the URL")
     if "novalidate" in f:
-        findings.append("[form] novalidate is in the markup, so a JS-off visitor "
-                        "can post an empty form. js/main.js must set it instead")
+        findings.append(f"[form] {key}: novalidate is in the markup, so a JS-off "
+                        f"visitor can post an empty form. js/main.js must set it")
     if 'name="botcheck"' not in f:
-        findings.append("[form] no botcheck honeypot")
+        findings.append(f"[form] {key}: no botcheck honeypot")
     if 'name="website"' in f:
-        findings.append("[form] a field is named 'website', which one site in this "
-                        "workspace and half the spam filters read as a honeypot. "
-                        "Use 'url', which is also the CSV column")
-    for col in ("url", "name"):   # Minafy's batch skips any row missing either
-        if f'name="{col}"' not in f:
-            findings.append(f"[form] no '{col}' field. Minafy's batch CSV needs it")
-    order = re.findall(r'name="(url|name|category|city)"', f)
-    if order != ["url", "name", "category", "city"]:
-        findings.append(f"[form] field order is {order}. Web3Forms lists fields in "
-                        f"submission order, so this is what makes the notification "
-                        f"a paste-ready CSV row")
+        findings.append(f"[form] {key}: a field is named 'website', which one site "
+                        f"in this workspace and half the spam filters read as a "
+                        f"honeypot. Use 'url', which is also the CSV column")
+
+    order = tuple(visible_fields(f))
+    if order != want_order:
+        findings.append(f"[form] {key}: field order is {list(order)}, declared "
+                        f"{list(want_order)}. Web3Forms lists fields in submission "
+                        f"order, so this is the shape of the notification")
+    if "url" not in order:
+        findings.append(f"[form] {key}: no 'url' field. There is no audit without a "
+                        f"website to audit")
+    if csv_ready and "name" not in order:
+        findings.append(f"[form] {key} is declared csv_ready and has no 'name' "
+                        f"field. Minafy's batch skips any row missing it")
+
+    # The redirect must come back to THIS page. A form that returns the visitor
+    # to somebody else's confirmation panel is the same failure with a nicer
+    # face, and it is what a second form gets by default when the redirect is
+    # one hardcoded constant. Derived the way check 5 derives the canonical.
+    own = _SITE + "/" + key.replace("index.html", "")
     r = re.search(r'name="redirect" value="([^"]+)"', f)
     if not r:
-        findings.append("[form] no redirect, so a no-JS visitor is left on "
-                        "Web3Forms' own thank-you page")
+        findings.append(f"[form] {key}: no redirect, so a no-JS visitor is left on "
+                        f"Web3Forms' own thank-you page")
     elif not r.group(1).endswith("#sent"):
-        findings.append(f"[form] the redirect is {r.group(1)}. Without the #sent "
-                        f"fragment the :target reveal never fires and a JS-off "
-                        f"visitor comes back to a blank form")
-    elif not r.group(1).startswith(shell.SITE):
-        findings.append(f"[form] the redirect leaves the site: {r.group(1)}")
-    if start_html.index("af-done") > start_html.index('class="af"'):
-        findings.append("[form] the confirmation comes after the form, so the "
-                        "no-JS reveal needs :has(). Put it before and use ~")
+        findings.append(f"[form] {key}: the redirect is {r.group(1)}. Without the "
+                        f"#sent fragment the :target reveal never fires and a "
+                        f"JS-off visitor comes back to a blank form")
+    elif r.group(1) != own + "?sent=1#sent":
+        findings.append(f"[form] {key}: the redirect is {r.group(1)}, which is not "
+                        f"this page. A no-JS visitor lands on a confirmation for a "
+                        f"form they did not fill in. Expected {own}?sent=1#sent")
+
+    # One inbox, two forms. The hidden source is the only thing that says which
+    # one a lead came from.
+    sc = re.search(r'name="source" value="([^"]+)"', f)
+    if not sc:
+        findings.append(f"[form] {key}: no hidden 'source' field")
+    elif sc.group(1) in sources:
+        findings.append(f"[form] {key}: source={sc.group(1)!r} is already used by "
+                        f"{sources[sc.group(1)]}. Two forms, one inbox, and no way "
+                        f"to tell the leads apart")
+    else:
+        sources[sc.group(1)] = key
+
+    # The confirmation, and the ids js/main.js binds by getElementById. Miss one
+    # and sendText.textContent throws, which kills the WHOLE script on that
+    # page: no interception, no nav marking, no header hairline, and a form that
+    # posts away to Web3Forms' own page.
+    done = re.search(r'<[^>]*\bclass="af-done"[^>]*>', html)
+    if not done:
+        findings.append(f"[form] {key}: no .af-done confirmation")
+    else:
+        if 'id="sent"' not in done.group(0):
+            findings.append(f'[form] {key}: .af-done has no id="sent", so neither '
+                            f":target nor getElementById can reveal it")
+        if 'tabindex="-1"' not in done.group(0):
+            findings.append(f"[form] {key}: .af-done is not focusable, so the "
+                            f"doneEl.focus() after a successful send does nothing")
+        if html.index(done.group(0)) > html.index(f):
+            findings.append(f"[form] {key}: the confirmation comes after the form, "
+                            f"so the no-JS reveal needs :has(). Put it before "
+                            f"and use ~")
+    if not (re.search(r'class="[^"]*\baudit\b[^"]*"[^>]*id="audit"', html) or
+            re.search(r'id="audit"[^>]*class="[^"]*\baudit\b', html)):
+        findings.append(f"[form] {key}: no element is both .audit and #audit, so "
+                        f"the .is-sent reveal has nothing to bind to")
+    for hook in ('id="audit-form"', 'id="af-say"', 'id="af-send"',
+                 'id="af-send-text"'):
+        if hook not in f:
+            findings.append(f"[form] {key}: the form has no {hook}. js/main.js "
+                            f"binds it by id and throws on the whole page without it")
 
     # Browsers compile a pattern attribute with the regex `v` flag, where an
     # unescaped / or - inside a character class is a SYNTAX ERROR. A pattern
@@ -502,18 +609,18 @@ else:
         try:
             re.compile(pat)
         except re.error as e:
-            findings.append(f"[form] pattern does not compile at all: {e}")
+            findings.append(f"[form] {key}: pattern does not compile at all: {e}")
             continue
         for cls in re.findall(r"\[\^?((?:\\.|[^\]\\])*)\]", pat):
             # '/' is reserved in v mode wherever it appears in a class
             if re.search(r"(?<!\\)/", cls):
-                findings.append(f"[form] pattern has an unescaped '/' inside "
+                findings.append(f"[form] {key}: pattern has an unescaped '/' inside "
                                 f"[{cls}]")
             # a LITERAL '-' must be escaped; a-z is a range and is fine, so
             # only leading, trailing and doubled dashes are the hazard
             if re.match(r"-", cls) or re.search(r"(?<!\\)-$", cls) \
                     or re.search(r"(?<!\\)--", cls):
-                findings.append(f"[form] pattern has a literal '-' inside "
+                findings.append(f"[form] {key}: pattern has a literal '-' inside "
                                 f"[{cls}] that is not escaped")
 
 # 27. the one CTA is identical on every banded page ------------------------
@@ -623,11 +730,19 @@ else:
 # navy-and-coral palette through an entire rebrand, because nothing on this
 # site ever compared a pixel to a token. The tab icon and the header logo were
 # different colours from each other on all 13 pages.
-tokens = read(os.path.join(ROOT, "css", "tokens.css"))
+# Comments are STRIPPED before the allow-list is built. A hex named in a
+# comment is not a token, and a comment explaining why a colour was retired
+# would otherwise re-authorise the colour it is retiring. That happened here
+# the same hour this line was written.
+tokens = re.sub(r"(?s)/\*.*?\*/", " ",
+                read(os.path.join(ROOT, "css", "tokens.css")))
 ALLOWED = {m.upper() for m in re.findall(r"#[0-9A-Fa-f]{6}", tokens)}
 ALLOWED |= {"#000000", "#FFFFFF"}
+# gen_pages.py's three FIGS drawings hard-code their hexes and were NOT scanned
+# here, which is the exact class of asset that sat on the dead palette. All four
+# of theirs are tokens today, so this passes now and catches the next drift.
 for rel_p in ["favicon.svg", "assets/logo/build_logos.py",
-              "assets/logo/build_icons.py"] + \
+              "assets/logo/build_icons.py", ".build/gen_pages.py"] + \
              [f"assets/logo/{f}" for f in sorted(os.listdir(
                  os.path.join(ROOT, "assets", "logo"))) if f.endswith(".svg")]:
     p = os.path.join(ROOT, rel_p.replace("/", os.sep))
@@ -643,6 +758,45 @@ for name, want in (("INK", "#13161C"), ("RED", "#D8232A"), ("PAPER", "#F0F1F3"))
     trip = "(0x%s, 0x%s, 0x%s)" % (want[1:3], want[3:5], want[5:7])
     if trip not in icons_src:
         findings.append(f"[palette] build_icons.py {name} is not {want}")
+
+# 32. one ask per page -----------------------------------------------------
+# Rule 20 said "one CTA per page, in the ink band" and nothing enforced it, so
+# it drifted: .head-cta, .ask-go's button and the band CTA were all already on
+# the homepage before the audit form arrived. What is worth holding is that a
+# page takes something from a visitor in exactly ONE place. Everything else
+# that looks like a button has to be a link to one of our own pages.
+for p in all_pages:
+    html = read(p)
+    n = len(re.findall(r"<form\b", html))
+    if n > 1:
+        findings.append(f"[ask] {rel(p)} has {n} forms. One ask per page")
+    body = re.sub(r"(?s)<!-- SHARED:HEADER -->.*?<!-- /SHARED:HEADER -->", " ", html)
+    body = re.sub(r'(?s)<p class="band-actions">.*?</p>', " ", body)
+    for tag in re.findall(r'<a\b[^>]*\bclass="[^"]*\bbtn\b[^"]*"[^>]*>', body):
+        href = re.search(r'href="([^"]*)"', tag)
+        if not href or not href.group(1).startswith("/"):
+            findings.append(f"[ask] {rel(p)}: a .btn that is not a link to one of "
+                            f"our own pages: {tag[:60]}. The form and the band are "
+                            f"the ask, and nothing else may impersonate them")
+
+# 33. the phone can reach the navigation -----------------------------------
+# Below 720px main.css hid every header link except .head-cta, so Proof,
+# Services, Writing and Studio were unreachable from a phone on all 18 pages.
+# The <details> menu is the fix; these 3 checks are what stops it being quietly
+# deleted or, worse, half-deleted.
+ref_head = block(read(os.path.join(ROOT, "geo", "index.html")), "HEADER") or ""
+for _href, _t in shell.NAV:
+    n = ref_head.count(f'href="{_href}"')
+    if n != 2:
+        findings.append(f"[nav] the header names {_href} {n} time(s). It needs one "
+                        f"copy for the row and one for the phone menu")
+if "<details" not in ref_head or "<summary" not in ref_head:
+    findings.append("[nav] the header has no <details> menu, so below 720px only "
+                    ".head-cta is reachable")
+if ".head-nav > a:not(.head-cta)" not in css:
+    findings.append("[nav] main.css hides the header links with a descendant "
+                    "selector, which hides the phone menu's copies too. It has to "
+                    "be a child combinator, or the menu opens onto nothing")
 
 # ------------------------------------------------------------------- report
 print(f"pages checked: {len(all_pages)}")

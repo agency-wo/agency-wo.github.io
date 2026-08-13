@@ -16,7 +16,12 @@ from fontTools.misc.transform import Transform
 # extract, and point MINARANK_FONTS_DIR at the folder holding both family dirs.
 SC = os.environ.get("MINARANK_FONTS_DIR") or os.path.dirname(os.path.abspath(__file__))
 OUT = r"c:\Users\aceto\OneDrive\Desktop\web and apps\MINA RANK\assets\logo"
-INK, INK2, CORAL, PAPER = "#13161C", "#262B35", "#D8232A", "#F0F1F3"
+# These are --ink, --ink-2, --red and --paper from css/tokens.css, and gate
+# check 31 fails the build if any of them stops being a token there. It scans
+# this file's comments too, so do not write a retired value here to explain
+# itself: --ink-2 was lightened because at 1.27:1 on ink it was a hairline
+# nobody could see, and no emitted SVG carries the old one.
+INK, INK2, CORAL, PAPER = "#13161C", "#3C4350", "#D8232A", "#F0F1F3"
 
 def load(path, wght):
     f = TTFont(path)

@@ -28,29 +28,95 @@ section { padding-block: var(--pad-section); }
   margin-bottom: var(--s-4); }
 
 h2 { font-family: var(--font-display); font-weight: 500; font-size: var(--fs-h2);
-  line-height: 1.06; letter-spacing: var(--track-display); text-wrap: balance; }
+  line-height: 1.06; letter-spacing: var(--track-display); }
 
 h3, .faq-q, .ledger h3, .cta {
   font-family: var(--font-body); font-weight: 700; letter-spacing: -0.006em; }
+
+/* balance was on h2 alone, so every other heading on the site still stranded
+   its last word on a line of its own. Paragraphs keep pretty: balance is for
+   short blocks and browsers stop applying it past a few lines anyway. */
+h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
+  text-wrap: balance; }
+
+/* The header is sticky at 72px. Only #audit and .af-done cleared it, so the
+   nav's own /#services link and the footer's #contact both landed their
+   heading UNDERNEATH the header. Every fragment target clears it now. */
+[id] { scroll-margin-top: calc(72px + var(--s-6)); }
 
 .sec-head { margin-bottom: var(--s-7); }
 
 /* -- header ---------------------------------------------------------------- */
 .site-head { position: sticky; top: 0; z-index: 5; background: var(--paper); }
-.site-head::after { content: ""; display: block; height: 1px; background: var(--rule);
-  opacity: 0; transition: opacity 0.3s ease; }
-.site-head.scrolled::after { opacity: 1; }
+/* The default is the finished state (rule 32): with no script the sticky
+   header always has its edge, and the script only takes it away at the top of
+   the page where there is nothing to separate it from. It was the other way
+   round, so a JS-off visitor scrolled a header with no boundary at all. */
+.site-head::after { content: ""; display: block; height: 1px; background: var(--edge);
+  transition: opacity 0.3s ease; }
+.js .site-head:not(.scrolled)::after { opacity: 0; }
 .head-row { display: flex; align-items: center; justify-content: space-between;
   height: 72px; gap: var(--s-5); }
 .head-logo { display: block; padding: 4px; margin: -4px; }
 .head-nav { display: flex; align-items: center; gap: var(--s-6); }
 .head-nav a { font-size: var(--fs-small); font-weight: 500; text-decoration: none;
   padding-block: 12px; margin-block: -12px; }
-.head-nav a:hover { color: var(--slate); }
+/* was color: var(--slate), which DIMMED the link on hover: 15.9:1 down to
+   5.56:1, so pointing at a nav item made it 3 times quieter. Same idiom as
+   .head-cta below, and the colour is not the only signal. */
+.head-nav a:hover { text-decoration: underline; text-underline-offset: 4px;
+  text-decoration-thickness: 2px; text-decoration-color: var(--red); }
 .head-nav a[aria-current="true"] { font-weight: 700; }
 .head-cta { text-decoration: underline !important; text-underline-offset: 4px;
   text-decoration-thickness: 2px; }
 .head-cta:hover { text-decoration-color: var(--red) !important; }
+
+/* 404.html is hand-authored and carries no header, footer or band, which is
+   why gate check 7 exempts it. Its styles were an inline <style> block until
+   style-src 'self' was pointed at them. */
+.err { min-height: 88vh; display: flex; flex-direction: column;
+  justify-content: center; max-width: var(--page-max);
+  margin-inline: auto; padding-inline: var(--margin); }
+.err h1 { font-family: var(--font-display); font-weight: 500;
+  font-size: clamp(3rem, 10vw, 8rem); line-height: 1; }
+.err h1 span { color: var(--red); }
+.err p { color: var(--slate); margin-top: var(--s-5); max-width: 40ch; }
+.err a { color: var(--ink); font-weight: 700; }
+
+/* -- the phone menu --------------------------------------------------------
+   A <details>, so it needs no script at all: rule 32 is satisfied by the
+   element rather than by a rule about it, and with JS off it still opens.
+
+   The 4 links are emitted twice from shell.NAV, once per width. They are NOT
+   one list shown two ways: that needs ::details-content with
+   content-visibility:visible, which is Chrome 131, Safari 18.4 and Firefox
+   139, all 2025. On anything older the non-summary children sit in an
+   internal slot no author selector reaches, so the DESKTOP nav becomes a
+   closed disclosure and it fails silently. Two lists from one Python list is
+   the cheaper mistake.                                                      */
+.menu { display: none; position: relative; }
+.menu > summary { display: inline-flex; align-items: center; gap: 0.45em;
+  cursor: pointer; list-style: none; padding-block: 12px; margin-block: -12px;
+  font-size: var(--fs-small); font-weight: 500; }
+.menu > summary::-webkit-details-marker { display: none; }
+/* the marker is drawn, not a glyph: no font has to carry it and it can turn */
+.menu > summary::after { content: ""; width: 9px; height: 9px; flex: none;
+  border-right: 2px solid currentColor; border-bottom: 2px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform 160ms var(--ease-rise); }
+.menu[open] > summary::after { transform: translateY(1px) rotate(225deg); }
+.menu > summary:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+/* Stated, not inherited. A closed <details> hides its non-summary children
+   through an internal slot the UA styles, and Chrome still reports a live
+   192x126 box for the panel inside it. It is not painted and not hit-tested,
+   but "not painted because of a UA slot" is not something to build a header
+   on. This says it. */
+.menu:not([open]) .menu-panel { display: none; }
+.menu-panel { position: absolute; right: 0; top: calc(100% + 18px);
+  min-width: 12rem; display: flex; flex-direction: column;
+  background: var(--paper); border: 1px solid var(--edge);
+  padding: var(--s-3) var(--s-5) var(--s-4); }
+.menu-panel a { padding-block: var(--s-3); }
 
 /* -- hero ------------------------------------------------------------------ */
 .hero { padding-block: var(--pad-hero) var(--pad-major); }
@@ -68,15 +134,30 @@ h3, .faq-q, .ledger h3, .cta {
   padding-top: 0.22em; }
 .wm-box { display: block; position: relative; }
 
-/* ten results, and the wordmark climbs them */
+/* ten results, and the wordmark climbs them.
+   The hairline was rgba(19,22,28,0.06), which is 1.09:1 on paper: ten lines
+   nobody has ever seen. The numerals were rgba(90,96,112,0.5), 2.10:1 at 10px.
+   This diagram is the hero's whole argument, so it is drawn in the site's own
+   hairline and its own caption colour rather than in 2 numbers typed once. */
 .serp { position: absolute; inset: 0; z-index: 0; }
 .serp i { position: absolute; left: 0; right: 2.6em; height: 1px;
   font-size: 10px; top: calc(4% + var(--r) * 10.2%);
-  background: rgba(19, 22, 28, 0.06); }
+  background: var(--rule); }
 .serp i::after { content: attr(data-n); position: absolute; right: -2em; top: 0;
   transform: translateY(-50%); width: 1.6em; text-align: right;
   font-family: var(--font-body); font-variant-numeric: tabular-nums;
-  font-size: 10px; letter-spacing: 0.06em; color: rgba(90, 96, 112, 0.5); }
+  font-size: 10px; letter-spacing: 0.06em; color: var(--slate); }
+/* --r and --i used to be style="" attributes on the elements, which
+   style-src 'self' blocks exactly as it blocks an inline <style>. Unset, the
+   calc()s below become invalid at computed-value time: the wordmark stops
+   climbing and all ten hairlines stack onto one line. The counts are fixed by
+   shell.WORDMARK (8) and gen_home's range(10), which is also what the 10.2%
+   step already assumes. */
+.serp i:nth-child(1) { --r: 0 }  .serp i:nth-child(2) { --r: 1 }
+.serp i:nth-child(3) { --r: 2 }  .serp i:nth-child(4) { --r: 3 }
+.serp i:nth-child(5) { --r: 4 }  .serp i:nth-child(6) { --r: 5 }
+.serp i:nth-child(7) { --r: 6 }  .serp i:nth-child(8) { --r: 7 }
+.serp i:nth-child(9) { --r: 8 }  .serp i:nth-child(10) { --r: 9 }
 
 .wm { display: inline-block; white-space: nowrap; position: relative; z-index: 1; }
 
@@ -95,6 +176,10 @@ h3, .faq-q, .ledger h3, .cta {
   transform: none; }
 .wm .l { display: inline-block;
   transform: translateY(calc(var(--i) * -1 * var(--rise-step))); }
+.wm .l:nth-child(1) { --i: 0 }  .wm .l:nth-child(2) { --i: 1 }
+.wm .l:nth-child(3) { --i: 2 }  .wm .l:nth-child(4) { --i: 3 }
+.wm .l:nth-child(5) { --i: 4 }  .wm .l:nth-child(6) { --i: 5 }
+.wm .l:nth-child(7) { --i: 6 }  .wm .l:nth-child(8) { --i: 7 }
 .wm .k { color: var(--red); margin-left: -0.012em; }
 
 @media (hover: hover) and (pointer: fine) {
@@ -106,8 +191,6 @@ h3, .faq-q, .ledger h3, .cta {
 .hero-say { margin-top: var(--s-8); font-size: clamp(1.375rem, 2.4vw, 2rem);
   line-height: 1.3; max-width: 26ch; letter-spacing: -0.012em; }
 .hero-sub { margin-top: var(--s-5); max-width: 54ch; text-wrap: pretty; }
-.hero-meta { margin-top: var(--s-6); font-size: var(--fs-small); color: var(--slate); }
-.hero-meta a { color: var(--ink); text-underline-offset: 3px; }
 
 /* availability: a fact that has to be kept true */
 .status { display: inline-flex; align-items: baseline; gap: var(--s-3);
@@ -115,12 +198,46 @@ h3, .faq-q, .ledger h3, .cta {
 .status .dot { width: 7px; height: 7px; background: var(--red);
   border-radius: 50%; transform: translateY(-1px); flex: none; }
 
+/* -- the hero's second row -------------------------------------------------
+   The wordmark keeps the full width above: .serp is inset:0 on .wm-box, so its
+   ten hairlines and their numerals span the whole container and a column
+   BESIDE the h1 lands on top of them at every width. Below it, at none.
+
+   The proportion is .ask-row's 7/5, shared literally rather than restated. The
+   comment further down this file says four layout idioms on the homepage and
+   no more; this is one of the four, used twice.                             */
+.hero-split { margin-top: var(--s-8); display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  column-gap: var(--s-9); align-items: start; }
+.hero-split .hero-say { margin-top: 0; }
+
+/* The red rule is .check's rule, the same idiom for the same reason: this is
+   the one thing on the page that takes something rather than says something.
+   No border, no panel, no shadow. The site has no cards and this is not the
+   moment to introduce one. */
+.hero-af { border-left: 2px solid var(--red); padding-left: var(--s-5); }
+.hero-af .af { margin-top: var(--s-5); }
+/* .check p's exact register, not a second one 1.4px away from it. The two
+   red-rule blocks on this page are one idiom, and an idiom whose two uses
+   disagree about type size is two idioms. */
+.af-h { font-size: clamp(1.25rem, 2vw, 1.625rem); line-height: 1.15;
+  max-width: 18ch; }
+.af-lead { margin-top: var(--s-3); font-size: var(--fs-small);
+  color: var(--slate); max-width: 34ch; text-wrap: pretty; }
+/* the hero form is 4 stacked fields in a 5fr column, so the two-up pair and
+   the 54ch measures the /start/ form uses would both overflow it */
+.hero-af .field { margin-top: var(--s-4); }
+.hero-af .af-say, .hero-af .af-alt, .hero-af .af-fine { max-width: none; }
+.hero-af .af-go { margin-top: var(--s-5); }
+.hero-af .af-done { padding-left: 0; border-left: 0; }
+.hero-af .af-done h3 { font-size: clamp(1.25rem, 2vw, 1.625rem); }
+
 /* -- services -------------------------------------------------------------- */
-.services { padding-block: var(--pad-major); border-top: 1px solid var(--rule); }
+.services { padding-block: var(--pad-major); border-top: 1px solid var(--edge); }
 /* Five doors, not five paragraphs. Nothing in the nav points at the service
    pages, so the whole row is the link surface and the arrow says so. */
 .svc-list { list-style: none; margin: 0; padding: 0; }
-.svc-list li { border-top: 1px solid var(--rule); }
+.svc-list li { border-top: 1px solid var(--edge); }
 .svc-list li:first-child { border-top: 0; }
 /* 5/7, not 7/5: the name is short and the sell is the long half */
 .svc-list a { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
@@ -136,14 +253,20 @@ h3, .faq-q, .ledger h3, .cta {
   max-width: 46ch; }
 /* inline, not flex: a wrapped door line must not strand the arrow to the right */
 .svc-go .arrow { width: 0.75em; height: 0.75em; vertical-align: -0.05em;
-  margin-left: 0.4em; transition: transform 160ms var(--ease-rise); }
+  margin-left: 0.4em; }
+/* One gesture, everywhere the site draws an arrow. It lived on the service
+   rows alone, which read as an accident rather than as intent. */
+.arrow { transition: transform 160ms var(--ease-rise); }
+.svc-list a:hover .arrow, .cta:hover .arrow, .btn:hover .arrow,
+.case-said a:hover .arrow, .who-more a:hover .arrow,
+.band-cta:hover .arrow { transform: translate(2px, -2px); }
 .svc-list a:hover h3 { color: var(--red); }
 .svc-list a:hover .svc-go { color: var(--ink); }
-.svc-list a:hover .svc-go .arrow { transform: translate(2px, -2px); }
+
 .svc-list a:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
 
 /* -- proof ----------------------------------------------------------------- */
-.proof { padding-block: var(--pad-major); border-top: 1px solid var(--rule); }
+.proof { padding-block: var(--pad-major); border-top: 1px solid var(--edge); }
 .proof-body > p { max-width: 62ch; margin-bottom: var(--s-5); }
 .proof-lead { font-size: var(--fs-lead); }
 
@@ -151,7 +274,7 @@ h3, .faq-q, .ledger h3, .cta {
    the click rate went back in, and a hard-coded repeat(3) silently stacked it */
 .stat-strip { list-style: none; margin: var(--s-7) 0 var(--s-3); padding: var(--s-5) 0 0;
   display: flex; flex-wrap: wrap; gap: var(--s-6) var(--s-8);
-  border-top: 1px solid var(--rule); }
+  border-top: 1px solid var(--edge); }
 .stat-n { display: block; font-family: var(--font-display); font-weight: 500;
   font-size: clamp(2rem, 3.6vw, 3.25rem); line-height: 1;
   letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
@@ -161,14 +284,14 @@ h3, .faq-q, .ledger h3, .cta {
 
 /* the chart breaks the measure: one of three deliberate breaks */
 .gsc { margin: var(--s-7) 0 var(--s-6); max-width: 1000px; }
-.gsc img { width: 100%; height: auto; border: 1px solid var(--rule); }
+.gsc img { width: 100%; height: auto; border: 1px solid var(--edge); }
 .gsc figcaption { margin-top: var(--s-3); font-size: var(--fs-small);
   color: var(--slate); max-width: 58ch; }
 .taken { font-size: var(--fs-small); color: var(--slate); margin-top: var(--s-6); }
 
 /* -- work list ------------------------------------------------------------- */
 .cases { list-style: none; margin: 0; padding: 0; }
-.cases > li { border-top: 1px solid var(--rule); padding-block: var(--s-7); }
+.cases > li { border-top: 1px solid var(--edge); padding-block: var(--s-7); }
 .case-name { font-family: var(--font-display); font-weight: 500;
   font-size: clamp(1.5rem, 2.4vw, 2rem); letter-spacing: var(--track-display); }
 .case-name a { text-decoration: none; }
@@ -177,10 +300,16 @@ h3, .faq-q, .ledger h3, .cta {
 .case-said { margin-top: var(--s-4); max-width: 60ch; text-wrap: pretty; }
 .case-grid { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 6fr);
   gap: var(--s-7); align-items: start; }
+/* the same 5/7 as the service doors, for the same reason: the name is short
+   and the sell is the long half. NOT .case-grid's 6/6, which is sized for a
+   text-and-screenshot pair and a post has no screenshot. Without it the blog
+   index was a narrow text column with the right half of the page blank. */
+.post-row { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  column-gap: var(--s-6); align-items: start; }
 
 /* -- plates: real screenshots, no frame furniture -------------------------- */
 .plate { margin: 0; }
-.plate img { width: 100%; height: auto; border: 1px solid var(--rule); }
+.plate img { width: 100%; height: auto; border: 1px solid var(--edge); }
 .plate figcaption { margin-top: var(--s-3); font-size: var(--fs-small);
   color: var(--slate); }
 
@@ -188,12 +317,13 @@ h3, .faq-q, .ledger h3, .cta {
 .band { background: var(--ink); color: var(--paper);
   padding-block: var(--pad-major) var(--s-7); margin-top: var(--pad-section); }
 .band h2 { font-size: clamp(2.25rem, 4.4vw, 3.5rem); max-width: 16ch; }
-.band-note { color: var(--rule); margin-top: var(--s-5); max-width: 46ch;
+.band-note { color: var(--ink-mute); margin-top: var(--s-5); max-width: 46ch;
   text-wrap: pretty; }
 .band-actions { margin-top: var(--s-7); display: flex; gap: var(--s-7);
   flex-wrap: wrap; align-items: baseline; }
-.band-alt { color: var(--rule); font-size: var(--fs-small); }
-.band-alt a { color: var(--rule); text-underline-offset: 4px; }
+.band-alt { color: var(--ink-mute); font-size: var(--fs-small);
+  overflow-wrap: anywhere; }
+.band-alt a { color: var(--ink-mute); text-underline-offset: 4px; }
 .band-alt a:hover { color: var(--paper); }
 
 /* -- footer ---------------------------------------------------------------- */
@@ -202,15 +332,18 @@ h3, .faq-q, .ledger h3, .cta {
 .foot-index { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s-6); }
 .foot-col { display: flex; flex-direction: column; align-items: flex-start;
   gap: var(--s-2); }
-.foot-h { font-size: var(--fs-small); color: var(--rule); opacity: 0.6;
+.foot-h { font-size: var(--fs-small); color: var(--ink-mute);
   margin-bottom: var(--s-2); }
+/* hello@minarankstudio.com is a 23-character unbreakable string in a column
+   that is one of four at 1440 and full width at 390 */
 .foot-col a { color: var(--paper); font-size: var(--fs-small); font-weight: 500;
-  text-decoration: none; padding-block: 5px; }
-.foot-col a:hover { color: var(--rule); }
+  text-decoration: none; padding-block: 5px; overflow-wrap: anywhere; }
+/* was color: var(--rule), the same dimming defect as the nav had, on ink */
+.foot-col a:hover { color: var(--paper); text-decoration: underline;
+  text-underline-offset: 4px; text-decoration-color: var(--red); }
 .foot-meta { display: flex; justify-content: space-between; gap: var(--s-6);
   flex-wrap: wrap; margin-top: var(--s-8); font-size: var(--fs-small);
-  color: var(--rule); }
-.foot-logo { height: 20px; width: auto; }
+  color: var(--ink-mute); }
 
 /* ==========================================================================
    SUBPAGES
@@ -245,7 +378,7 @@ h3, .faq-q, .ledger h3, .cta {
 
 .side { grid-column: 9 / 13; align-self: start; position: sticky;
   top: calc(72px + var(--s-6)); }
-.side-block { border-top: 1px solid var(--rule); padding-top: var(--s-4);
+.side-block { border-top: 1px solid var(--edge); padding-top: var(--s-4);
   margin-bottom: var(--s-7); }
 .side-h { font-size: var(--fs-small); color: var(--slate);
   margin-bottom: var(--s-3); font-weight: 700; }
@@ -253,17 +386,19 @@ h3, .faq-q, .ledger h3, .cta {
 .side-list { list-style: none; margin: 0; padding: 0; }
 /* the padding moves from the li onto the a, so the whole row is the target
    rather than a 16px strip of text inside it */
-.side-list li { border-bottom: 1px solid var(--rule); }
+.side-list li { border-bottom: 1px solid var(--edge); }
 .side-list a { display: block; padding-block: var(--s-3); text-decoration: none; }
-.side-list a:hover { color: var(--red); }
+/* --red-dk, not --red. These inherit --fs-small from .side-block, and red on
+   paper is 4.2:1, under the 4.5:1 AA floor for text this size. 6.53:1. */
+.side-list a:hover { color: var(--red-dk); }
 
 .ledger { list-style: none; margin: var(--s-6) 0 0; padding: 0; }
-.ledger > li { border-top: 1px solid var(--rule); padding-block: var(--s-5); }
-.ledger > li:last-child { border-bottom: 1px solid var(--rule); }
+.ledger > li { border-top: 1px solid var(--edge); padding-block: var(--s-5); }
+.ledger > li:last-child { border-bottom: 1px solid var(--edge); }
 .ledger h3 { font-size: var(--fs-h3); margin-bottom: var(--s-3); }
 .ledger p { text-wrap: pretty; }
 
-.exclusions { margin-top: var(--s-8); border-top: 1px solid var(--rule);
+.exclusions { margin-top: var(--s-8); border-top: 1px solid var(--edge);
   padding-top: var(--s-6); padding-bottom: 0; }
 .exclusions ul { list-style: none; margin: var(--s-4) 0 0; padding: 0; max-width: 62ch; }
 .exclusions li { padding-block: var(--s-3); }
@@ -274,8 +409,8 @@ h3, .faq-q, .ledger h3, .cta {
    place the page genuinely changes register. */
 .faq { margin-top: var(--s-9); padding-block: 0; }
 .faq > h2 { margin-top: 0; }
-.faq-item { border-top: 1px solid var(--rule); padding-block: var(--s-5); max-width: 66ch; }
-.faq-item:last-child { border-bottom: 1px solid var(--rule); }
+.faq-item { border-top: 1px solid var(--edge); padding-block: var(--s-5); max-width: 66ch; }
+.faq-item:last-child { border-bottom: 1px solid var(--edge); }
 .faq-q { font-size: var(--fs-h3); margin-bottom: var(--s-3); }
 
 .payoff { margin-top: var(--s-5); font-weight: 700; display: flex;
@@ -327,8 +462,17 @@ h3, .faq-q, .ledger h3, .cta {
   @keyframes fade-in { to { opacity: 1; } }
 
   .js:not(.played) .hero-rest { opacity: 0; transform: translateY(12px); }
-  .play .hero-rest { animation: rest-in 450ms var(--ease-reveal) 900ms both; }
+  /* was 900ms. The last wordmark letter starts rising at 580ms and the climb
+     finishes at 1230ms, so the copy used to land AFTER it, 1350ms past play,
+     and play itself waits on document.fonts.ready or an 800ms cap. The form
+     beside it has no entrance at all: a conversion element must never be the
+     thing that has not arrived yet. */
+  .play .hero-rest { animation: rest-in 450ms var(--ease-reveal) 400ms both; }
   @keyframes rest-in { to { opacity: 1; transform: none; } }
+
+  /* the line above it is a fact somebody has to keep true, so it breathes */
+  .status .dot { animation: dot-pulse 2.4s var(--ease-reveal) infinite; }
+  @keyframes dot-pulse { 0%, 100% { opacity: 1 } 50% { opacity: 0.35 } }
 
   .js [data-reveal] { opacity: 0; transform: translateY(14px);
     transition: opacity 0.45s var(--ease-reveal), transform 0.45s var(--ease-reveal); }
@@ -349,18 +493,28 @@ h3, .faq-q, .ledger h3, .cta {
 @media (max-width: 999px) {
   .prose, .studio-prose { grid-column: 1 / 13; }
   .side { grid-column: 1 / 13; position: static; margin-top: var(--s-8); }
-  .case-grid { grid-template-columns: 1fr; }
+  .case-grid, .post-row { grid-template-columns: 1fr; }
+  .post-row > div + div { margin-top: var(--s-4); }
   .foot-index { grid-template-columns: repeat(2, 1fr); }
+  /* the form goes under the copy rather than beside it, and gets the red rule
+     across the full measure. It stays above the fold's second screen, which is
+     the whole point of it being in the hero. */
+  .hero-split { grid-template-columns: 1fr; row-gap: var(--s-8); }
 }
 
 @media (max-width: 719px) {
   .svc-list a { grid-template-columns: 1fr; gap: var(--s-4); }
-  .stat-strip { grid-template-columns: 1fr; gap: var(--s-5); }
+  .stat-strip { gap: var(--s-5); }
   .hero-wrap::before, .hero-wrap::after { display: none; }
   .serp i { right: 0; }
   .serp i::after { content: none; }
   .head-nav { gap: var(--s-4); }
-  .head-nav a:not(.head-cta) { display: none; }
+  /* '>' and NOT a descendant selector: the phone menu's copies of these four
+     links live inside .menu-panel, and a descendant selector here hides them
+     too, which is a menu that opens onto nothing. Gate check 33 fails the
+     build if this stops being a child combinator. */
+  .head-nav > a:not(.head-cta) { display: none; }
+  .menu { display: block; }
   .foot-index { grid-template-columns: 1fr; }
   .foot-meta { flex-direction: column; }
   .band-actions { flex-direction: column; gap: var(--s-5); }
@@ -368,9 +522,12 @@ h3, .faq-q, .ledger h3, .cta {
 
 /* ==========================================================================
    THE ASK, THE CHECK, AND THE WHATSAPP BUTTON
-   Four deliberate layout breaks on the homepage and no more: the ask row's
-   7/5, the who split's empty column, the one wide service row, and the
-   check block's red rule. A fifth would make the page a demo reel.
+   Four deliberate layout idioms on the homepage and no more: the 7/5 row, the
+   who split's empty column, the one wide service row, and a red rule down a
+   left edge. Two of them are now used twice: the 7/5 carries the hero split
+   and the ask row, and the red rule marks the check block and the hero's
+   audit form. One idiom used twice is a system. A FIFTH idiom is still the
+   line, and it would still make the page a demo reel.
    ========================================================================== */
 
 /* the hero byline: small type on a hairline, so the hero has three weights */
@@ -407,6 +564,9 @@ h3, .faq-q, .ledger h3, .cta {
   transition: background 160ms ease, color 160ms ease; }
 .btn:hover { background: var(--ink); color: var(--paper); }
 .btn .arrow { color: currentColor; }
+/* the global ring is 2px ink at 2px offset, which lands against a 2px ink
+   border and is indistinguishable from it */
+.btn:focus-visible, button.btn:focus-visible { outline-offset: 4px; }
 
 /* -- the client marks ------------------------------------------------------
    Logos drawn by four different people in four different colours. Each part is
@@ -421,7 +581,7 @@ h3, .faq-q, .ledger h3, .cta {
    Adding a business is one file and one rule. Gate check 18 enforces it.     */
 .marks { --mgap: var(--s-8);
   list-style: none; margin: var(--s-9) 0 0; padding: var(--s-8) 0 0;
-  border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap;
+  border-top: 1px solid var(--edge); display: flex; flex-wrap: wrap;
   align-items: center; justify-content: flex-start; gap: var(--s-4) var(--mgap); }
 /* Below the width where all four fit on one line, go 2 per row rather than
    letting the wrap strand the last one on a line of its own. Measured: four
@@ -472,7 +632,7 @@ h3, .faq-q, .ledger h3, .cta {
    file whose own comment says "three rhythm weights, not one". This is the
    connective sentence between the proof and the refusal, not a third exhibit,
    so it is the one section that can step down without losing status. */
-.place { border-top: 1px solid var(--rule); padding-block: var(--pad-section); }
+.place { border-top: 1px solid var(--edge); padding-block: var(--pad-section); }
 .place-say { font-size: clamp(2.25rem, 4.6vw, 3.75rem); line-height: 1.04;
   max-width: 22ch; }
 .place-more { margin-top: var(--s-6); max-width: 50ch; font-size: var(--fs-lead);
@@ -518,8 +678,14 @@ h3, .faq-q, .ledger h3, .cta {
 .field input { width: 100%; font: inherit; font-size: var(--fs-body);
   color: var(--ink); background: var(--paper); padding: 0.7em 0.8em;
   border: 1px solid var(--slate); border-radius: 0;
+  caret-color: var(--red);
   transition: border-color 160ms ease; }
-.field input:hover { border-color: var(--slate); }
+/* the UA default is undefined and usually fails contrast. --slate is 5.56:1
+   and is already the caption colour, which is what a placeholder is. */
+.field input::placeholder { color: var(--slate); opacity: 1; }
+/* was --slate, which is the default border at line above: the hover state
+   did nothing at all. */
+.field input:hover { border-color: var(--ink); }
 .field input:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px;
   border-color: var(--ink); }
 .field-hint { display: block; margin-top: var(--s-2);
@@ -565,8 +731,6 @@ button.btn:disabled:hover { background: none; color: var(--ink); }
 .af-done:target ~ .af, .audit.is-sent .af      { display: none; }
 .af-done:focus { outline: none; }
 .af-done:focus-visible { outline: 2px solid var(--ink); outline-offset: 6px; }
-/* the header is sticky, so both anchors need clearance */
-#audit, .af-done { scroll-margin-top: calc(72px + var(--s-6)); }
 
 /* the band's primary action, inverted against the ink */
 .band-cta { display: inline-flex; align-items: center; font-weight: 700;

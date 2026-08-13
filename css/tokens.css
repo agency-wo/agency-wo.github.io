@@ -12,13 +12,25 @@
 
 :root {
   /* -- colour ------------------------------------------------------------ */
-  --ink:    #13161C;   /* printing black is never pure black */
-  --ink-2:  #262B35;   /* hairlines on ink */
-  --red:    #D8232A;   /* the red in the Albanian flag */
-  --red-dk: #A81B21;   /* hover, and red text where AA demands it */
-  --paper:  #F0F1F3;   /* cool press white, coated stock */
-  --slate:  #5A6070;   /* captions and metadata only, never body */
-  --rule:   #D9DCE1;   /* hairlines */
+  /* Two hairlines and a muted, not one token doing three jobs. --rule used to
+     be all three: 19 hairlines on paper AND 6 pieces of muted text on the ink
+     band, which is why nobody could darken it. At #D9DCE1 it was 1.22:1 on
+     paper, and --ink-2 was 1.27:1 on ink, so the footer's own divider had
+     never been seen by anybody.
+
+     3:1 is not the answer either. 3:1 on this paper is about #858B99, which is
+     --slate with extra steps, and 40 borders at --slate is a spreadsheet. So:
+     --rule stays quiet for decoration, --edge is the boundary you are meant to
+     be able to count, and --ink-mute is the dark side's caption colour. */
+  --ink:      #13161C;   /* printing black is never pure black */
+  --ink-2:    #3C4350;   /* hairlines on ink. 1.81:1, was 1.27 and invisible */
+  --red:      #D8232A;   /* the red in the Albanian flag */
+  --red-dk:   #A81B21;   /* hover, and red text where AA demands it */
+  --paper:    #F0F1F3;   /* cool press white, coated stock */
+  --slate:    #5A6070;   /* captions and metadata only, never body */
+  --rule:     #BFC4CE;   /* quiet hairlines: crop marks, bylines, fine print */
+  --edge:     #A6ADB9;   /* structure: section rules, screenshot frames, 2:1 */
+  --ink-mute: #B4BAC5;   /* muted text ON ink. 9.21:1, and never a hairline */
 
   /* -- type -------------------------------------------------------------- */
   --font-display: "Apfel Grotezk", "Arial Narrow", sans-serif;
@@ -68,6 +80,10 @@ a { color: inherit; }
 img, svg { display: block; max-width: 100%; }
 
 ::selection { background: var(--red); color: var(--paper); }
+
+/* any checkbox, radio or progress this site ever grows is brand-coloured
+   rather than Chrome blue, without anybody remembering to do it */
+:root { accent-color: var(--red); }
 
 :focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
 .on-ink :focus-visible { outline-color: var(--paper); }
