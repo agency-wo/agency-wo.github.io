@@ -47,6 +47,13 @@ WANT_HL = list(i18n.LANGS) + ["x-default"]
 
 
 def git_date(path):
+    """The page's last commit date, or today for a page git has never seen.
+
+    The build runs before the commit that will record it, so a brand-new page
+    has no git history at sitemap time and the first 12 post URLs shipped with
+    no lastmod at all. Falling back to today is not a fabrication: an untracked
+    page is by definition being published today, and today is exactly the date
+    the commit is about to give it."""
     try:
         out = subprocess.run(
             ["git", "log", "-1", "--format=%cs", "--", path],
@@ -56,7 +63,8 @@ def git_date(path):
             return d
     except Exception:
         pass
-    return None
+    import datetime
+    return datetime.date.today().isoformat()
 
 
 entries = []
@@ -139,6 +147,10 @@ def lang_of(e):
     """Which language this entry is, read out of its own alternates."""
     return next(hl for hl, href in e[2] if href == e[0])
 
+
+# every URL carries a date now that git_date always answers; a None here
+# means the fallback above was broken, which should stop the build, not ship
+assert all(e[1] for e in entries), "a sitemap entry has no lastmod"
 
 entries.sort(key=lambda e: (rank(e[3]), e[3], LANG_AT[lang_of(e)]))
 
