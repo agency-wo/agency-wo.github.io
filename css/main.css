@@ -346,8 +346,19 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
 /* Five doors, not five paragraphs. Nothing in the nav points at the service
    pages, so the whole row is the link surface and the arrow says so. */
 .svc-list { list-style: none; margin: 0; padding: 0; }
-.svc-list li { border-top: 1px solid var(--edge); }
+.svc-list li { border-top: 1px solid var(--edge); position: relative; }
 .svc-list li:first-child { border-top: 0; }
+/* The mark on the active door. Absolutely positioned OUTSIDE the text column
+   rather than as a border or a padding change: a border would move all 5 rows
+   sideways the moment one lit up, and moving text to signal attention is the
+   opposite of what this is for. It scales from the top so the rule draws
+   downward rather than appearing, which is the same gesture .serp uses in the
+   hero. Hidden from assistive tech by being a ::before with no content. */
+.svc-list li::before { content: ""; position: absolute;
+  left: calc(var(--s-4) * -1); top: 0; bottom: 0; width: 2px;
+  background: var(--red); transform: scaleY(0); transform-origin: top;
+  transition: transform 260ms var(--ease-rise); }
+.svc-list li.is-near::before { transform: scaleY(1); }
 /* 5/7, not 7/5: the name is short and the sell is the long half */
 .svc-list a { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
   gap: var(--s-6); align-items: baseline; padding-block: var(--s-6);
@@ -369,8 +380,19 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
 .svc-list a:hover .arrow, .cta:hover .arrow, .btn:hover .arrow,
 .case-said a:hover .arrow, .who-more a:hover .arrow,
 .band-cta:hover .arrow { transform: translate(2px, -2px); }
-.svc-list a:hover h3 { color: var(--red); }
-.svc-list a:hover .svc-go { color: var(--ink); }
+
+/* THE ACTIVE DOOR, and the 2 ways to become one.
+   :hover is the desktop reader pointing at it. .is-near is js/main.js marking
+   whichever door is closest to the middle of the screen, which is the only
+   affordance a touch reader can get: below 719px these 5 collapse to one
+   column and a phone has no hover at all, so the interaction this section was
+   designed with never fired on the device this market reads on.
+   One selector list, so the 2 states cannot drift apart. */
+.svc-list a:hover h3,
+.svc-list li.is-near h3 { color: var(--red); }
+.svc-list a:hover .svc-go,
+.svc-list li.is-near .svc-go { color: var(--ink); }
+.svc-list li.is-near .arrow { transform: translate(2px, -2px); }
 
 .svc-list a:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
 
@@ -757,6 +779,11 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
 
 @media (max-width: 719px) {
   .svc-list a { grid-template-columns: 1fr; gap: var(--s-4); }
+  /* .wrap is 5vw a side here, so the desktop -16px offset puts the active
+     rule 4px off the screen edge, where it reads as a browser artefact
+     rather than as a mark on the row. -10 splits the gutter and belongs to
+     the row again. Measured at 360 and 390: no horizontal overflow either way. */
+  .svc-list li::before { left: -10px; }
   .stat-strip { gap: var(--s-5); }
   .hero-wrap::before, .hero-wrap::after { display: none; }
   .serp i { right: 0; }

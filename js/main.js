@@ -111,19 +111,67 @@
     }
   });
 
-  /* hairline under the header after 24px */
+  /* ---- header hairline, and the service spotlight -----------------------
+     One scroll listener for both. A second listener would run a second rAF
+     on every scroll event to do work that fits in the first one.
+
+     THE SPOTLIGHT. Below 719px the 5 service doors collapse to one column and
+     a phone has no hover, so the hover state main.css gives them never fires
+     on the device this market reads on. This marks whichever door is nearest
+     the middle of the viewport, which walks the reader through all 5 as the
+     page moves. On a desktop :hover still wins, because a pointer deliberately
+     on a door beats a guess made from scroll position.
+
+     Skipped entirely when reduce is on: the doors are then exactly what CSS
+     alone makes them, which is the contract at the top of this file. */
   var head = document.querySelector(".site-head");
-  if (head) {
+  var doors = reduce ? [] :
+    [].slice.call(document.querySelectorAll(".svc-list > li"));
+  var near = null;
+
+  var spotlight = function () {
+    if (!doors.length) return;
+    var mid = window.innerHeight / 2;
+    /* one bounds check for the whole list before measuring 5 rects: scrolling
+       anywhere else on the page costs 2 reads rather than 5.
+
+       The test is whether the LIST intersects the viewport, so it is the
+       first door's top against the bottom of the screen and the last door's
+       bottom against the top of it. Reading last.top instead of first.top
+       looks equivalent and is not: below 719px these 5 stack into a block
+       taller than a phone, so the last door's top only comes on screen near
+       the end of the list, and the spotlight sat dark for most of the scroll.
+       The QA walk caught it -- it reached 1 door of 5. */
+    var first = doors[0].getBoundingClientRect();
+    var last = doors[doors.length - 1].getBoundingClientRect();
+    var best = null;
+    if (first.top < window.innerHeight && last.bottom > 0) {
+      var bestGap = Infinity;
+      for (var i = 0; i < doors.length; i++) {
+        var r = doors[i].getBoundingClientRect();
+        var gap = Math.abs((r.top + r.bottom) / 2 - mid);
+        if (gap < bestGap) { bestGap = gap; best = doors[i]; }
+      }
+    }
+    if (best === near) return;
+    if (near) near.classList.remove("is-near");
+    if (best) best.classList.add("is-near");
+    near = best;
+  };
+
+  if (head || doors.length) {
     var ticking = false;
     var onScroll = function () {
       if (ticking) return;
       ticking = true;
       requestAnimationFrame(function () {
-        head.classList.toggle("scrolled", window.scrollY > 24);
+        if (head) head.classList.toggle("scrolled", window.scrollY > 24);
+        spotlight();
         ticking = false;
       });
     };
     window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll, { passive: true });
     onScroll();
   }
 
