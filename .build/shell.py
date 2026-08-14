@@ -78,8 +78,14 @@ FOUNDER = "Henri Sila"
 # the marker is the thing that makes the check work rather than something the
 # check happens to catch.
 SAMEAS = [
-    "https://www.linkedin.com/company/placeholder-paste-the-minarank-page",
-    "https://www.instagram.com/placeholder-paste-the-minarank-account",
+    # Confirmed by fetching it: the page's own og:title is "MINA Rank Studio"
+    # and its og:description "Web Design/SEO/GEO". The slug was not guessed --
+    # minarankstudio, minarank-studio and minarank all 404, this one did not.
+    "https://www.linkedin.com/company/mina-rank-studio",
+    # The founder named this handle directly. Instagram serves a login wall to
+    # anything without a session, so there is no og:url to corroborate it with,
+    # and the owner stating their own account is the better authority anyway.
+    "https://www.instagram.com/minarankstudio",
 ]
 FOUNDER_SAMEAS = [
     "https://www.linkedin.com/in/placeholder-paste-the-founder-profile",
