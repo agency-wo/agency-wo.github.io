@@ -80,13 +80,47 @@ FOUNDER_SAMEAS = [
     "https://www.linkedin.com/in/placeholder-paste-the-founder-profile",
 ]
 
+# -- search engine verification ---------------------------------------------
+# EMPTY BY DEFAULT, and deliberately not the placeholder-red pattern the
+# sameAs list uses. A placeholder is right there because those accounts can be
+# created today and the gate should nag until they are. These tokens CANNOT
+# exist yet: Search Console and Bing Webmaster only mint them once the site is
+# live to verify, so a permanent red finding here would be noise, and noise
+# teaches people to skim the gate. Empty means head() emits nothing at all.
+#
+# LAUNCH.md prefers the DNS TXT route (the domain is on Cloudflare, and a
+# DOMAIN property covers every subdomain and protocol at once); these two
+# constants are the fallback for the day a meta tag is the easier proof.
+# When set, the gate holds the value to a token shape and requires the meta
+# to actually be on the built homepage, so a pasted token that never got
+# rebuilt cannot sit here looking finished.
+GOOGLE_SITE_VERIFICATION = ""
+BING_SITE_VERIFICATION = ""
+
 # -- the files structured data and the share card name ----------------------
 # A file named in JSON-LD or in an og: tag is a claim like any other, and it is
 # the cheapest sort to get wrong: nothing renders differently when the path
 # stops resolving. asset() is why every one of them is checked against the disk
 # at build time rather than at somebody else's crawl time.
 LOGO_FILE = "/assets/logo/minarank-monogram.svg"
-OG_IMAGE = "/assets/og/og-image.png"
+
+# One card per language, because the card carries the service line and the
+# service line is copy: an Italian page sharing an English card is the same
+# half-translated page check 35 exists to catch, in the one image a share
+# shows. The 3 files come from the same generated harness family
+# (assets/og/build_harness.py), so they are one design photographed 3 times.
+OG_IMAGE = {
+    "en": "/assets/og/og-image.png",
+    "it": "/assets/og/og-image-it.png",
+    "sq": "/assets/og/og-image-sq.png",
+}
+
+
+def og_image(lang):
+    """THE accessor for the share card path. Everything that names the card
+    goes through here, so a fourth language failing this lookup fails loudly
+    with the language in the traceback, not silently with the English card."""
+    return OG_IMAGE[lang]
 
 
 def asset(path):
@@ -112,7 +146,10 @@ def _png_size(path):
     return struct.unpack(">II", head[16:24])
 
 
-OG_W, OG_H = _png_size(os.path.join(ROOT, OG_IMAGE.lstrip("/")))
+# Read per language at import, so a missing or truncated card fails the first
+# generator that imports shell rather than surviving until check 49.
+OG_SIZE = {lg: _png_size(os.path.join(ROOT, p.lstrip("/")))
+           for lg, p in OG_IMAGE.items()}
 
 # -- when the copy on a page last changed -----------------------------------
 # The site publishes that freshness by last-updated date is one of the few
@@ -405,25 +442,38 @@ def head(page, lang):
     # inline ld+json, and a 404 must not carry structured data to be pinned.
     ld = (f'{NL}  <script type="application/ld+json">{NL}{page["jsonld"]}{NL}'
           f'  </script>{NL}') if page.get("jsonld") else ""
+    # Emitted only when a token exists, on every page because head() is one
+    # function: the engines only read the homepage's copy and the rest is a
+    # few identical bytes. While the constants are empty this emits nothing,
+    # which is the whole point: see the comment on the constants.
+    verify = "".join(
+        f'{NL}  <meta name="{name}" content="{token}">'
+        for name, token in (("google-site-verification", GOOGLE_SITE_VERIFICATION),
+                            ("msvalidate.01", BING_SITE_VERIFICATION))
+        if token)
+    # website unless the page says otherwise. The 9 posts say "article", which
+    # is the one og:type distinction the crawlers act on; nothing else here
+    # earns a rarer type.
+    og_w, og_h = OG_SIZE[lang]
     return f'''<!DOCTYPE html>
 <html lang="{i18n.HTML_LANG[lang]}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{page["title"]}</title>
-  <meta name="description" content="{page["description"]}">
+  <meta name="description" content="{page["description"]}">{verify}
 {head_url}{alts}
   <meta name="theme-color" content="#F0F1F3">
 
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="{page.get("og_type", "website")}">
   <meta property="og:site_name" content="{BRAND}">
   <meta property="og:locale" content="{i18n.OG_LOCALE[lang]}">
   <meta property="og:title" content="{page["title"]}">
   <meta property="og:description" content="{page.get("og_desc", page["description"])}">
   <meta property="og:url" content="{url}">
-  <meta property="og:image" content="{asset(OG_IMAGE)}">
-  <meta property="og:image:width" content="{OG_W}">
-  <meta property="og:image:height" content="{OG_H}">
+  <meta property="og:image" content="{asset(og_image(lang))}">
+  <meta property="og:image:width" content="{og_w}">
+  <meta property="og:image:height" content="{og_h}">
   <meta property="og:image:alt" content="{ch(lang).OG_ALT}">
   <meta name="twitter:card" content="summary_large_image">
 

@@ -311,11 +311,11 @@ SERVICES = [
     # ---------------------------------------------------------- WEB DESIGN --
     {
         "slug": "web-design",
-        "src": "3133ce47",
+        "src": "4d0474e5",
         "nav": "Faqe interneti",
         "schema_name": "Dizajn dhe zhvillim faqesh interneti",
         # 50 characters.
-        "title": "Faqe të ndërtuara për t'u gjetur dhe për të shitur",
+        "title": "Faqe interneti në Shqipëri, për t'u gjetur dhe për të shitur",
         "h1": "Një faqe që hapet para se klienti të heqë dorë.",
         "standfirst": "Je brenda shembullit. Çdo pohim i kësaj faqeje mund të "
                       "kontrollohet në këtë faqe, për rreth 30 sekonda.",

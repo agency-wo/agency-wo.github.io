@@ -13,12 +13,12 @@ Italiano at /it/, Shqip at /sq/. Every URL on the site, in all 3 languages and
 with its hreflang alternates, is in https://minarankstudio.com/sitemap.xml.
 
 ## Home
-- [minarank studio · digital presence for small businesses](https://minarankstudio.com/): Somebody is searching for what you sell right now. We make sure they find you on Google, on the map, and in what ChatGPT says. Durres, Albania.
+- [minarank studio · digital presence for small businesses in Durres](https://minarankstudio.com/): Somebody is searching for what you sell right now. We make sure they find you on Google, on the map, and in what ChatGPT says. Durres, Albania.
 
 ## What we do
 - [Getting found on Google](https://minarankstudio.com/seo/): SEO and local search for small businesses: your Google Business Profile, on-page work on the site, and off-page work everywhere else. English, Italian and Albanian.
 - [Getting named when someone asks an AI](https://minarankstudio.com/geo/): AI search, sometimes called GEO. Becoming one of the few businesses an assistant names when a customer asks it for a recommendation.
-- [Websites built to be found and to sell](https://minarankstudio.com/web-design/): Websites for small businesses: fast, clear, readable by machines, usually in three languages. Built without frameworks or third-party scripts.
+- [Websites in Albania, built to be found and to sell](https://minarankstudio.com/web-design/): Websites for small businesses: fast, clear, readable by machines, usually in three languages. Built without frameworks or third-party scripts.
 - [Facebook and Instagram ads](https://minarankstudio.com/meta-ads/): Facebook and Instagram advertising for small businesses. A flat monthly fee, never a percentage of what you spend.
 - [Custom business software for small shops](https://minarankstudio.com/systems/): Stock, jobs, customers and money in one place. We build the software small shops and trades actually run on, in Albania and Italy.
 

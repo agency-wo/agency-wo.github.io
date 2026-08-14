@@ -250,7 +250,7 @@ SERVICES = [
         "slug": "web-design",
         "nav": "Websites",
         "schema_name": "Web design and development",
-        "title": "Websites built to be found and to sell",
+        "title": "Websites in Albania, built to be found and to sell",
         "h1": "A site that loads before your customer gives up.",
         "standfirst": "You're standing inside the example. Every claim on this page "
                       "can be checked on this page, in about 30 seconds.",

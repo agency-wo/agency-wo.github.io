@@ -98,11 +98,11 @@ STATS = [
 ]
 
 PAGE = {
-    "src": "2c1f8b50",
+    "src": "d3ef8f1c",
 
     # 39 characters against the 52 the title budget leaves once gen_home.py has
     # put "minarank studio ·" in front of it.
-    "title": "prezencë dixhitale për biznese të vogla",
+    "title": "prezencë dixhitale për biznese të vogla në Durrës",
     "description": "Dikush po kërkon pikërisht tani atë që shet. Ne sigurohemi "
                    "që të të gjejnë në Google, në hartë dhe në atë që thotë "
                    "ChatGPT. Durrës, Shqipëri.",

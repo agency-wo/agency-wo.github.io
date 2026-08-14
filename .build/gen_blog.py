@@ -100,8 +100,10 @@ def post_page(p, en_p, nxt, by_slug, band, lang):
          # The share card, which is the only image a post has. Google wants an
          # image on an Article and there is no per-post artwork to give it, so
          # this names the one that exists rather than a file we intend to draw.
-         # shell.asset() fails the build if it ever stops existing.
-         "image": shell.asset(shell.OG_IMAGE),
+         # THIS language's card, through the one accessor, so the Italian
+         # post's graph does not claim the English picture. shell.asset()
+         # fails the build if it ever stops existing.
+         "image": shell.asset(shell.og_image(lang)),
          # Counted off the rendered body, never typed. A wordCount somebody
          # types is a wordCount that is wrong by the second edit, and this one
          # is a claim a machine can check against the page in one pass.
@@ -127,6 +129,10 @@ def post_page(p, en_p, nxt, by_slug, band, lang):
             "title": p["title"] + " " + shell.DOT + " " + shell.BRAND,
             "description": p["description"],
             "og_desc": p.get("og_desc", p["description"]),
+            # A post is the one page here that IS an article, and og:type is
+            # how a share tells a crawler to read the byline and date. The
+            # index stays website: a list of articles is not one.
+            "og_type": "article",
             "jsonld": json.dumps({"@context": "https://schema.org", "@graph": graph},
                                  indent=2, ensure_ascii=False)}
 

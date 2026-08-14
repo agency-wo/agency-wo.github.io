@@ -290,6 +290,24 @@ for p in all_pages:
         if frag not in ids:
             findings.append(f"[link] {rel(p)} -> #{frag} (no such id on the page)")
 
+# 2c. every image URL a page emits is a file in this repo ------------------
+# Check 2 reads href and nothing else, so an <img src> was never checked by
+# anything, and srcset made the gap wider: a srcset candidate that 404s is
+# invisible in every browser whose viewport happens to pick the other file,
+# which is the definition of a break nobody reproduces. Every candidate must
+# resolve, not just the one src a developer's window happened to fetch.
+for p in all_pages:
+    html = read(p)
+    img_urls = re.findall(r'<img\b[^>]*\bsrc="(/[^"]+)"', html)
+    for srcset in re.findall(r'\bsrcset="([^"]+)"', html):
+        img_urls += [cand.strip().split()[0] for cand in srcset.split(",")
+                     if cand.strip()]
+    for u in sorted(set(img_urls)):
+        if not u.startswith("/"):
+            continue              # rule 30: nothing loads from anybody else
+        if not os.path.exists(os.path.join(ROOT, u.lstrip("/").replace("/", os.sep))):
+            findings.append(f"[link] {rel(p)} -> {u} (missing image file)")
+
 # 3. one h1 -----------------------------------------------------------------
 for p in all_pages:
     n = len(re.findall(r"<h1[^>]*>", read(p)))
@@ -1272,16 +1290,49 @@ elif os.path.exists(cname_p):
                     "the whole github.io host at a domain that may not resolve")
 
 robots = read(os.path.join(ROOT, "robots.txt"))
+# The bare block-everything LINE, not the substring: the open robots
+# legitimately says "Disallow: /assets/proof/source/", and a substring test
+# would read that deliberate path exclusion as the whole site being blocked.
+# The question this check asks is "is everything blocked", and only a
+# Disallow whose value is exactly / answers yes.
+_BLOCK_ALL = re.compile(r"(?m)^Disallow: /\s*$")
 if OPEN_TO_CRAWLERS:
-    if "Disallow: /" in robots:
+    if _BLOCK_ALL.search(robots):
         findings.append("[domain] OPEN_TO_CRAWLERS is on and robots.txt still "
                         "says Disallow: /")
     if _SITE + "/sitemap.xml" not in robots:
         findings.append("[domain] robots.txt is open and does not name the "
                         "sitemap, which is the one line a crawler wants")
-elif "Disallow: /" not in robots:
+elif not _BLOCK_ALL.search(robots):
     findings.append("[domain] OPEN_TO_CRAWLERS is off but robots.txt does not "
                     "block anybody")
+
+# 30b. verification tokens, IF the founder has set them --------------------
+# Empty is not a finding: the tokens cannot exist until the accounts do, and
+# LAUNCH.md prefers the DNS route anyway, so a permanent red here would be
+# noise (shell.py says the same over the constants). What IS checked is a
+# token that has been set: it has to look like a token rather than a pasted
+# sentence or a quoted copy of one, and the meta has to actually be on the
+# built homepage. A token sitting correct in shell.py while every page on
+# disk predates it is exactly the set-the-constant-forget-the-rebuild failure
+# check 22 already guards for the form key.
+_home_en = FAMILY.get(HOME, {}).get("en")
+for _meta_name, _tok in (("google-site-verification",
+                          _shell.GOOGLE_SITE_VERIFICATION),
+                         ("msvalidate.01", _shell.BING_SITE_VERIFICATION)):
+    if not _tok:
+        continue
+    if not re.fullmatch(r"[A-Za-z0-9_-]{16,128}", _tok):
+        findings.append(f"[domain] shell.py's {_meta_name} token {_tok!r} does "
+                        f"not look like a token: letters, digits, - and _ "
+                        f"only, 16 to 128 of them, no spaces and no quotes. "
+                        f"Paste the content= value alone, not the whole tag")
+    elif _home_en and (f'<meta name="{_meta_name}" content="{_tok}">'
+                       not in read(_home_en)):
+        findings.append(f"[domain] shell.py sets {_meta_name} and the built "
+                        f"homepage does not carry it. The constant is not the "
+                        f"site: rebuild, so the meta the engine will look for "
+                        f"actually exists")
 
 # 31. every asset colour is a token ----------------------------------------
 # The favicon, both monograms, both wordmarks and the OG card sat on the dead

@@ -1,5 +1,5 @@
-"""Own the 3 files a crawler reads before it reads a page: CNAME, robots.txt
-and llms.txt.
+"""Own the 4 files a crawler reads before it reads a page: CNAME, robots.txt,
+llms.txt and the IndexNow key file, plus the IndexNow ping itself.
 
 THREE, and llms.txt is the one that was missing. The site says twice, on the AI
 search page and in a post, that we add the file because it costs nothing and
@@ -62,6 +62,8 @@ import os
 import re
 import sys
 import textwrap
+import urllib.parse
+import urllib.request
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import i18n  # noqa: E402
@@ -72,6 +74,14 @@ NL = chr(10)
 
 DOMAIN_LIVE = True
 OPEN_TO_CRAWLERS = False
+
+# -- IndexNow ---------------------------------------------------------------
+# One key, minted once with uuid4().hex and then FIXED: the protocol proves
+# ownership by serving <key>.txt at the site root with the key as its body,
+# so a key that regenerated per build would invalidate the served file
+# between the mint and the deploy. Bing and Yandex read IndexNow; Google does
+# not, and we say so in LAUNCH.md rather than selling the ping as coverage.
+INDEXNOW_KEY = "f1cb431d93d24da6a62ae48d75982c3f"
 
 HOST = shell.SITE.split("//", 1)[-1]
 
@@ -87,11 +97,16 @@ User-agent: *
 Disallow: /
 """
 else:
+    # /assets/proof/source/ holds the raw Search Console PNGs the webp charts
+    # are derived from. They are working material, not content: indexed, they
+    # surface in image search as bigger, slower duplicates of the charts the
+    # pages already show, and nothing links at them.
     robots = f"""# {shell.BRAND}: everyone is welcome, including AI crawlers.
 # We are a GEO studio. Being read by answer engines is the entire point.
 
 User-agent: *
 Allow: /
+Disallow: /assets/proof/source/
 
 Sitemap: {shell.SITE}/sitemap.xml
 """
@@ -118,6 +133,14 @@ elif os.path.exists(cname):
           "not resolve yet")
 else:
     print("CNAME absent, as it must be until the domain resolves")
+
+# The IndexNow ownership proof: <key>.txt at the root, containing the key.
+# Written unconditionally, like llms.txt: serving it early costs nothing and a
+# crawler that respects the closed robots.txt never fetches it anyway.
+print("%s.txt %s (IndexNow key file)"
+      % (INDEXNOW_KEY,
+         write_if_changed(os.path.join(ROOT, INDEXNOW_KEY + ".txt"),
+                          INDEXNOW_KEY + NL)))
 
 
 # ---------------------------------------------------------------- llms.txt --
@@ -156,13 +179,17 @@ def page_name(title):
 
 
 def harvest():
-    """Every indexable English page: (path, name, description).
+    """Every indexable English page as (path, name, description), and every
+    indexable canonical in every language, for the IndexNow ping.
 
     Read out of the emitted HTML, and the canonical is what says where a page
     lives, exactly as in gen_sitemap.py. A file that composed its own URLs
-    would agree with a function instead of agreeing with the site.
+    would agree with a function instead of agreeing with the site. The ping
+    list is harvested here rather than read from sitemap.xml because rule 34
+    runs gen_sitemap AFTER this file: the sitemap on disk describes the
+    previous build, and the pages describe this one.
     """
-    out = []
+    out, all_urls = [], []
     for dirpath, dirnames, filenames in os.walk(ROOT):
         dirnames[:] = [d for d in dirnames if d not in SKIP_DIRS]
         for fn in sorted(filenames):
@@ -175,6 +202,7 @@ def harvest():
                 continue
             m = CANON.search(doc)
             assert m, "no canonical in " + os.path.relpath(p, ROOT)
+            all_urls.append(m.group(1))
             path = m.group(1)[len(shell.SITE):]
             if path.split("/")[1] in LANG_TOPS:
                 continue                      # English only, and "/" splits to ""
@@ -182,7 +210,7 @@ def harvest():
             assert t and d, "no title or description in " + path
             out.append((path, page_name(html.unescape(t.group(1).strip())),
                         html.unescape(d.group(1).strip())))
-    return out
+    return out, all_urls
 
 
 def index_order(rel_path, prefix):
@@ -239,7 +267,7 @@ def section(path):
     return SEC_DO if path in SERVICES else SEC_STUDIO
 
 
-pages = harvest()
+pages, all_urls = harvest()
 assert pages, "llms.txt has nothing to describe: run the page generators first"
 
 grouped = {}
@@ -307,3 +335,40 @@ llms = NL.join(body).rstrip(NL) + NL
 print("llms.txt %s (%d pages, %d sections)"
       % (write_if_changed(os.path.join(ROOT, "llms.txt"), llms),
          len(pages), sum(1 for s in SECTIONS if grouped.get(s))))
+
+
+# ---------------------------------------------------------------- IndexNow --
+# GATED ON OPEN_TO_CRAWLERS, and hard. Pinging an engine about a site whose
+# robots.txt says Disallow: / is inviting a fetch we then refuse: the engine
+# reads the block, logs the contradiction against the host, and the one thing
+# the ping bought is a worse first impression. While closed this prints what
+# it is holding back, so the day the flag flips nobody wonders whether the
+# ping exists.
+#
+# NON-FATAL BY DESIGN. The build must produce the same files on a plane as on
+# a good connection, so every network failure is a printed sentence and never
+# an exit code, and the first failure stops the loop: 150 URLs each waiting
+# out a timeout on a dead network is a 25-minute build, and after one refusal
+# the rest were going to fail the same way.
+def indexnow_ping(urls):
+    sent = 0
+    for u in urls:
+        q = urllib.parse.urlencode({"url": u, "key": INDEXNOW_KEY})
+        try:
+            urllib.request.urlopen(
+                "https://api.indexnow.org/indexnow?" + q, timeout=10).close()
+            sent += 1
+        except Exception as e:
+            print("IndexNow: stopped after %d of %d (%s). Not a build "
+                  "failure: the pages are built and the ping is a courtesy"
+                  % (sent, len(urls), e))
+            return
+    print("IndexNow: pinged %d URL(s)" % sent)
+
+
+if OPEN_TO_CRAWLERS:
+    indexnow_ping(all_urls)
+else:
+    print("IndexNow: robots.txt is closed, nothing pinged. Open would submit "
+          "%d URLs as https://api.indexnow.org/indexnow?url=<url>&key=%s"
+          % (len(all_urls), INDEXNOW_KEY))

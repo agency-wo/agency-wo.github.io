@@ -331,11 +331,11 @@ SERVICES = [
     # ---------------------------------------------------------- WEB DESIGN --
     {
         "slug": "web-design",
-        "src": "3133ce47",
+        "src": "4d0474e5",
         "nav": "Siti web",
         "schema_name": "Progettazione e sviluppo di siti web",
         # 42 characters.
-        "title": "Siti costruiti per farsi trovare e vendere",
+        "title": "Siti web a Durazzo, costruiti per farsi trovare e vendere",
         "h1": "Un sito che si carica prima che il cliente rinunci.",
         "standfirst": "Sei dentro l'esempio. Ogni affermazione di questa "
                       "pagina si può verificare su questa pagina, in circa 30 "

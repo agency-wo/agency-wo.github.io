@@ -58,7 +58,7 @@ STATS = [
 PAGE = {
     # The brand comes first in this one title, because it is the only page
     # whose job is to say whose site this is.
-    "title": "digital presence for small businesses",
+    "title": "digital presence for small businesses in Durres",
     "description": "Somebody is searching for what you sell right now. We make sure "
                    "they find you on Google, on the map, and in what ChatGPT says. "
                    "Durres, Albania.",

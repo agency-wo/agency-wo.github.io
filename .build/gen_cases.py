@@ -28,11 +28,45 @@ def txt(indent, s, lang):
     return (NL + " " * indent).join(shell.localise_html(s, lang).split(NL))
 
 
+# The `sizes` each figure declares, measured off css/main.css rather than
+# guessed: a sizes that flatters the layout makes the browser fetch the small
+# file and paint it soft, which is worse than no srcset at all.
+#
+#   SIZES_SIDE   .side is columns 9-13 of the 12-column grid inside .wrap
+#                (--page-max 1280 minus 2x64 margin = 1152), which is 4
+#                columns and 3 gutters, about 370px. Below 1000px the sidebar
+#                goes full width and .wrap's margins are 5vw a side.
+#   SIZES_CASE   .case-grid splits 6fr/6fr, so the plate is half the content
+#                width, about 560px, until the grid stacks below 1000px.
+#   SIZES_CHART  .gsc is max-width none (the homepage override in main.css is
+#                unscoped, so it holds everywhere): full content width, capped
+#                by .wrap at 1152px.
+#
+# The -720 rendition beside each original comes from assets/build_renditions.py
+# and the gate fails any srcset URL with no file behind it, so a renamed image
+# cannot strand these strings.
+SIZES_SIDE = "(min-width: 1000px) 370px, 90vw"
+SIZES_CASE = "(min-width: 1000px) 560px, 90vw"
+SIZES_CHART = "(min-width: 1280px) 1152px, 90vw"
+
+
+def with_720(path, w):
+    """srcset for one image: its 720w rendition, then the original."""
+    stem, ext = path.rsplit(".", 1)
+    return f"{stem}-720.{ext} 720w, {path} {w}w"
+
+
 def plate(c, eager=False):
     src, w, h, alt = c["plate"]
     loading = "" if eager else ' loading="lazy" decoding="async"'
+    # eager is only ever the client-page sidebar; the lazy copy is only ever
+    # the /work/ index's 6/6 grid. The flag already encodes the context, so a
+    # second parameter would be the same fact stated twice.
+    sizes = SIZES_SIDE if eager else SIZES_CASE
     return (f'<figure class="plate">'
-            f'<img src="/assets/plates/{src}" width="{w}" height="{h}" '
+            f'<img src="/assets/plates/{src}" '
+            f'srcset="{with_720("/assets/plates/" + src, w)}" '
+            f'sizes="{sizes}" width="{w}" height="{h}" '
             f'alt="{alt}"{loading}>'
             f'<figcaption>{c["name"]}, {c["site"]}</figcaption></figure>')
 
@@ -48,7 +82,9 @@ def gsc_figure(c):
     """
     return "".join(
         f'<figure class="gsc">'
-        f'<img src="/assets/proof/{src}" width="{w}" height="{h}" '
+        f'<img src="/assets/proof/{src}" '
+        f'srcset="{with_720("/assets/proof/" + src, w)}" '
+        f'sizes="{SIZES_CHART}" width="{w}" height="{h}" '
         f'alt="{alt}" loading="lazy" decoding="async">'
         f'<figcaption>{cap}</figcaption>'
         f'</figure>'

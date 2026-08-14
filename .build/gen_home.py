@@ -95,7 +95,7 @@ def jsonld(h, services, lang):
         # an image naming a path that 404s is the cheapest wrong claim on the
         # site to make, because nothing on the page renders differently.
         "logo": shell.asset(shell.LOGO_FILE),
-        "image": shell.asset(shell.OG_IMAGE),
+        "image": shell.asset(shell.og_image(lang)),
         # The one property here a search engine can corroborate against
         # somebody else's server. Placeholders today, and shell.py says why
         # they ship as placeholders rather than as an absent key.
@@ -298,6 +298,8 @@ def render(lang):
 
           <figure class="gsc" data-reveal>
             <img src="/assets/proof/watch-al-3-months.webp" width="1440" height="592"
+              srcset="/assets/proof/watch-al-3-months-720.webp 720w, /assets/proof/watch-al-3-months.webp 1440w"
+              sizes="(min-width: 1280px) 1152px, 90vw"
               alt="{txt(14, h["fig_alt"], lang)}"
               loading="lazy" decoding="async">
             <figcaption>{txt(14, h["fig_caption"], lang)}</figcaption>
