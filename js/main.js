@@ -102,6 +102,62 @@
     }
   }
 
+  /* ---- the footer clock -------------------------------------------------
+     Local time in Durres, on the same logic as watch.al's clock.js: 3 hands
+     rotated around one centre, with FRACTIONAL angles so the minute hand
+     creeps between marks instead of jumping once a minute.
+
+     Set once here, unconditionally, so a reduced-motion visitor still gets a
+     clock telling the correct time -- it just does not tick. A frozen clock
+     showing the right time is information; hiding it would leave a hole in
+     the row and tell that reader less than everybody else gets.
+
+     Ticking runs ONLY while the footer is on screen. A per-second DOM write
+     on 96 pages, forever, to animate something below the fold nobody is
+     looking at, is the sort of cost that never shows up in a screenshot. */
+  var clock = document.querySelector(".foot-clock");
+  if (clock) {
+    var hands = {
+      h: clock.querySelector(".fc-h"),
+      m: clock.querySelector(".fc-m"),
+      s: clock.querySelector(".fc-s"),
+    };
+    var setHands = function () {
+      var now = new Date();
+      var sec = now.getSeconds() + now.getMilliseconds() / 1000;
+      var min = now.getMinutes() + sec / 60;
+      var hr = (now.getHours() % 12) + min / 60;
+      var put = function (el, deg) {
+        if (el) el.setAttribute("transform", "rotate(" + deg + ",12,12)");
+      };
+      put(hands.h, hr * 30);
+      put(hands.m, min * 6);
+      put(hands.s, sec * 6);
+    };
+    setHands();
+
+    if (!reduce) {
+      var tick = null;
+      var run = function (on) {
+        if (on && !tick) { setHands(); tick = setInterval(setHands, 1000); }
+        if (!on && tick) { clearInterval(tick); tick = null; }
+      };
+      if ("IntersectionObserver" in window) {
+        new IntersectionObserver(function (es) {
+          run(es[0].isIntersecting);
+        }, { threshold: 0 }).observe(clock);
+      } else {
+        run(true);
+      }
+      /* a backgrounded tab throttles timers anyway; stopping is tidier and
+         means the first frame back is correct rather than a second stale */
+      document.addEventListener("visibilitychange", function () {
+        run(!document.hidden &&
+            clock.getBoundingClientRect().top < window.innerHeight);
+      });
+    }
+  }
+
   /* mark the current section in the nav */
   var here = window.location.pathname.replace(/index\.html$/, "");
   document.querySelectorAll(".head-nav a[href^='/']").forEach(function (a) {

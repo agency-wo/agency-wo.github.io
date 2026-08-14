@@ -90,6 +90,12 @@ LISTED_ON = "Listed on"
 # The review ask. One sentence, no stars, no widget: a review is a favour and
 # the sentence has to sound like a person asking one, not a popup demanding it.
 REVIEW_CTA = "Worked with us? Say so on Google."
+# The footer clock's accessible name. It shows real local time rather than
+# decoration, so it is labelled rather than aria-hidden: a sighted reader gets
+# the information and a screen reader would not, and that asymmetry is the
+# thing a label costs one string to avoid. The city is glossary.TERMS's, so
+# Italian says Durazzo and Albanian says Durrës.
+CLOCK_LABEL = "Local time in Durres"
 FOOT_COPYRIGHT = "&#169; 2026 {brand}"
 
 # -- shared section headings the generators emit ---------------------------

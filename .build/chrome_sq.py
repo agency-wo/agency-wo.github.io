@@ -62,6 +62,7 @@ SRC = {
     "AUDIT_LINK": "f2416589",
     "BAND_CTA": "63be028a",
     "BYLINE": "0a55b894",
+    "CLOCK_LABEL": "762eab2d",
     "CRUMB_HOME": "8f3852d3",
     "CRUMB_WORK": "0571c47a",
     "CRUMB_WRITING": "6228153d",
@@ -202,6 +203,7 @@ AUDIT_LINK = "Merr një auditim falas"
 LISTED_ON = "Na gjen te"
 REVIEW_CTA = "Ke punuar me ne? Thuaje në Google."
 FOOT_META = "{brand} {dot} Durrës, Shqipëri {dot} Punojmë në shqip, anglisht dhe italisht"
+CLOCK_LABEL = "Ora lokale në Durrës"
 FOOT_COPYRIGHT = "&#169; 2026 {brand}"
 
 # -- shared section headings the generators emit ---------------------------

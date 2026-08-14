@@ -60,6 +60,7 @@ SRC = {
     "AUDIT_LINK": "f2416589",
     "BAND_CTA": "63be028a",
     "BYLINE": "0a55b894",
+    "CLOCK_LABEL": "762eab2d",
     "CRUMB_HOME": "8f3852d3",
     "CRUMB_WORK": "0571c47a",
     "CRUMB_WRITING": "6228153d",
@@ -195,6 +196,7 @@ LISTED_ON = "Ci trovi su"
 # recensione": the English asks you to say so, not to perform a task.
 REVIEW_CTA = "Hai lavorato con noi? Dillo su Google."
 FOOT_META = "{brand} {dot} Durazzo, Albania {dot} Lavoriamo in italiano, inglese e albanese"
+CLOCK_LABEL = "Ora locale a Durazzo"
 FOOT_COPYRIGHT = "&#169; 2026 {brand}"
 
 # -- shared section headings the generators emit ---------------------------

@@ -514,6 +514,32 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
    is the band CTA above them. */
 .foot-trust a { color: var(--ink-mute); text-underline-offset: 4px; }
 .foot-trust a:hover { color: var(--paper); }
+
+/* The footer clock. It sits inline at the end of the place line, so "Durres,
+   Albania" and the time are adjacent and the clock needs no caption to say
+   which city it is showing.
+
+   The dial is left unfilled rather than painted --ink: the band already IS
+   --ink, so a fill would be the same colour twice and would stop the clock
+   working if this element ever moved to a lighter surface. What draws the
+   shape is the --paper rim, which is what the founder asked for.
+
+   -0.28em lifts it onto the text baseline: a 20px circle beside 15px text
+   sits low on its own, and the rim reads as misaligned rather than as small.
+
+   display MATTERS HERE and took 3 attempts to find. tokens.css:80 sets
+   "img, svg { display: block }" for the whole site, which is right for every
+   other svg on it and wrong for this one: a block can never share a line, so
+   the clock sat under the sentence no matter what. A flex row did not fix it
+   and neither did the &#160; in shell.py -- both were treating a symptom.
+   Two screenshots read as "inline" at 1440 because the text is one line there
+   and the clock lands directly beneath it; only measuring the x told the
+   truth, at 146px against text ending at 639px.
+
+   The &#160; stays and is doing real work now that this is inline: it stops
+   the clock being orphaned from the last word when the sentence wraps. */
+.foot-clock { display: inline-block; vertical-align: -0.28em;
+  margin-left: 0.15em; }
 /* The footer switcher had no rules at all: 3 links laid out by .foot-meta's
    flex, in the UA's underline, at the muted colour meant for captions. Same
    shape as the header copy, in the ink band's colours: --paper for the links,
@@ -1089,7 +1115,11 @@ button.btn:disabled:hover { background: none; color: var(--ink); }
 @media print {
   /* A green circle on every printed page is the worst thing here, and a nav
      that cannot be clicked is the second. */
-  .wa, .site-head, .skip, .foot-index, .menu, .af, .side-toc { display: none; }
+  /* The clock joins them: frozen at whatever second somebody hit print, on
+     paper that will be read later, it is the one element here that is
+     guaranteed to be telling the wrong time. */
+  .wa, .site-head, .skip, .foot-index, .menu, .af, .side-toc,
+  .foot-clock { display: none; }
 
   /* The ink band loses its background. A full-bleed #13161C rectangle across
      a sheet of paper is toner nobody consented to. */

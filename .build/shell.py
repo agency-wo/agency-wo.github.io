@@ -704,6 +704,47 @@ def switcher(lang, page_url, place="foot", indent=10):
             f'{inner}{NL}{pad}</nav>{NL}')
 
 
+def clock(lang):
+    """The footer's small analogue clock, showing local time in Durres.
+
+    watch.al's clock.js is the reference and the logic is the same: 3 hands
+    positioned by rotate(deg, cx, cy) around one centre, driven from
+    js/main.js. What is not carried over is that file's 6 timezone readouts
+    and its synthesised ticking, neither of which is a footer's job.
+
+    THE HANDS ARE AUTHORED AT 10:10, which is the position every watch
+    advertisement has used for a century: both hands up and symmetric, out of
+    the way of the dial. It is what a reader with no JavaScript sees, and it
+    matters that the fallback is a clock rather than a clock stopped at
+    midnight, which reads as broken. The script overwrites all 3 on its first
+    frame, so nobody with JS ever sees 10:10.
+
+    Labelled rather than aria-hidden: it shows real information, and a sighted
+    reader getting the time while a screen reader gets nothing is the
+    asymmetry one string avoids.
+
+    A 24 viewBox with a 12,12 centre keeps every angle in the script the same
+    arithmetic as watch.al's, only the radius differs.
+    """
+    return (
+        f'<svg class="foot-clock" viewBox="0 0 24 24" width="20" height="20" '
+        f'role="img" aria-label="{ch(lang).CLOCK_LABEL}">'
+        f'<circle cx="12" cy="12" r="10.25" fill="none" '
+        f'stroke="var(--paper)" stroke-width="1.1"/>'
+        # the 4 quarter markers, the least a dial needs to read as one
+        f'<g stroke="var(--paper)" stroke-width="1.1" stroke-linecap="round">'
+        f'<path d="M12 3.2v1.6"/><path d="M20.8 12h-1.6"/>'
+        f'<path d="M12 20.8v-1.6"/><path d="M3.2 12h1.6"/></g>'
+        f'<g stroke="var(--red)" stroke-linecap="round" fill="none">'
+        f'<path class="fc-h" d="M12 12V6.9" stroke-width="1.6" '
+        f'transform="rotate(-60,12,12)"/>'
+        f'<path class="fc-m" d="M12 12V4.9" stroke-width="1.3" '
+        f'transform="rotate(60,12,12)"/>'
+        f'<path class="fc-s" d="M12 12V4.2" stroke-width="0.7" '
+        f'transform="rotate(0,12,12)"/></g>'
+        f'<circle cx="12" cy="12" r="1" fill="var(--red)"/></svg>')
+
+
 def trust_line(lang):
     """'Listed on TechBehemoths' -- the label localised, the names not.
 
@@ -753,7 +794,7 @@ def footer(lang, page_url=None, cta_heading=None, cta_note=None):
 {cols}
         </nav>
         <div class="foot-meta">
-          <p>{c.FOOT_META.replace("{brand}", BRAND).replace("{dot}", DOT)}</p>
+          <p class="foot-where">{c.FOOT_META.replace("{brand}", BRAND).replace("{dot}", DOT)}&#160;{clock(lang)}</p>
           <p class="foot-trust">{trust_line(lang)} {DOT} <a href="{GBP_REVIEW_URL}"\
  target="_blank" rel="noopener">{c.REVIEW_CTA}</a></p>
           <p>{c.FOOT_COPYRIGHT.replace("{brand}", BRAND)}</p>
