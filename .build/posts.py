@@ -360,6 +360,274 @@ POSTS = [
         "related": [("/systems/", "Custom software"),
                     ("/web-design/", "Websites")],
     },
+    # =========================================================== WEB, 3 LANG ===
+    {
+        "slug": "a-website-in-3-languages",
+        "date": "2026-08-14",
+        "updated": "2026-08-14",
+        "topic": "Websites",
+        "work": "iglisi-watch",
+        "service": ("/web-design/", "Websites"),
+
+        "title": "A website in 3 languages that stays in step",
+        "h1": "A website in 3 languages, and nobody retypes anything.",
+        "summary": "Most multilingual sites drift until 2 of the 3 languages "
+                   "are wrong. Here is the build that cannot.",
+        "standfirst": "3 languages is 3 sets of pages, not a widget. The "
+                      "question is what keeps them agreeing.",
+        "description": "How a Durres watch shop runs its site in Albanian, "
+                       "Italian and English without anybody retyping a word, "
+                       "and why a translation widget is not the same job.",
+        "og_desc": "3 languages, 58 watches, and nobody retypes anything.",
+
+        "body": [
+            ("The short answer", [
+                "<p>A real multilingual site is 3 sets of pages, one per "
+                "language, each one readable by Google at its own address. "
+                "<a href=\"/work/iglisi-watch/\">watch.al</a> runs that way in "
+                "Albanian, Italian and English, with 58 watches, and nobody "
+                "has ever updated the same fact twice.</p>",
+            ]),
+            ("Why a translation widget is not this", [
+                "<p>A widget rewrites the page after it loads. The address "
+                "stays one address, so Google reads one language, and the "
+                "customer searching in Italian never finds the Italian.</p>",
+                "<p>Separate pages cost more to build once. They are also "
+                "the only version of this that ranks in each language, "
+                "which is the point of having them.</p>",
+            ]),
+            ("The part that usually fails", [
+                "<p>Not the launch. The site is right on day one in all 3 "
+                "languages, because everybody checked. It goes wrong the "
+                "day a price changes and gets fixed in one language, or a "
+                "watch sells and comes off 2 of the 3 pages that list "
+                "it.</p>",
+                "<p>We have watched copy retyped in 3 languages drift in 2 "
+                "of them. Nobody does it on purpose. Keeping 3 pages in "
+                "step by hand is a job, and the person holding it also has "
+                "a shop to run.</p>",
+            ]),
+            ("What we build instead", [
+                "<p>Every fact lives in one place. Add a watch and the "
+                "product page, the shop list, the sitemap and every number "
+                "written into the text update together, in all 3 "
+                "languages, without anybody editing anything.</p>",
+                "<p>That is not a feature you buy. It is how the site is "
+                "built: the words are written by people, once, and the "
+                "structure is generated, so the 3 languages cannot "
+                "disagree about what is in stock or what it costs.</p>",
+            ]),
+            ("What it means for a shop like yours", [
+                "<p>If your customers search in more than one language, "
+                "the languages are separate doors, and each one either "
+                "exists or it does not. <a href=\"/web-design/\">Our web "
+                "design work</a> builds all of them from one source, so a "
+                "second door never means hiring somebody to keep it "
+                "true.</p>",
+            ]),
+        ],
+        "payoff": "Tell us which languages your customers search in, and "
+                  "we will tell you what a site in all of them involves.",
+        "related": [("/web-design/", "Websites"),
+                    ("/systems/", "Custom software")],
+    },
+
+    # ============================================================= COMPOUND ===
+    {
+        "slug": "the-last-4-weeks",
+        "date": "2026-08-14",
+        "updated": "2026-08-14",
+        "topic": "Local search",
+        "work": "iglisi-watch",
+        "service": ("/seo/", "SEO and local search"),
+
+        "title": "The last 4 weeks beat the first 8",
+        "h1": "The last 4 weeks of the quarter beat the first 8.",
+        "summary": "Of 560 clicks in a quarter, 301 arrived in the final 28 "
+                   "days. What that curve means before you spend anything.",
+        "standfirst": "Search does not pay out evenly. The quarter that "
+                      "averaged position 8.4 put over half its clicks at "
+                      "the end.",
+        "description": "A Durres shop took 560 clicks from Google in its "
+                       "first quarter online, and 301 came in the last 28 "
+                       "days. Why search compounds, with the real numbers.",
+        "og_desc": "560 clicks in a quarter. 301 of them in the last 28 days.",
+
+        "body": [
+            ("The short answer", [
+                "<p>Search work pays at the end, not evenly. In "
+                "<a href=\"/work/iglisi-watch/\">watch.al's</a> first "
+                "quarter online, Google sent 560 clicks, and 301 of them, "
+                "over half, arrived between 15 July and 11 August, the "
+                "final 28 days.</p>",
+            ]),
+            ("The window on its own", [
+                "<p>Those 28 days alone: 301 clicks from 27.5k appearances "
+                "at an average position of 8.6. The quarter as a whole "
+                "averaged 8.4, so the position was not improving while the "
+                "clicks accelerated. It was fractionally worse.</p>",
+                "<p>That pair of facts matters more than either alone. The "
+                "growth did not come from ranking higher. It came from "
+                "being shown for more searches, which is what Google does "
+                "with a site it has decided to trust.</p>",
+            ]),
+            ("Why the curve looks like this", [
+                "<p>A new site spends its first weeks being sampled. "
+                "Google shows it a little, watches what people do, and "
+                "widens or narrows accordingly. The clicks that arrive in "
+                "month 3 were earned by work done in month 1.</p>",
+                "<p>Judging search work at week 6 is judging bread halfway "
+                "through baking. The honest check is the direction of the "
+                "curve, not the height of it.</p>",
+            ]),
+            ("What this means for your budget", [
+                "<p>Try <a href=\"/seo/\">search work</a> for 2 months and "
+                "stop, and you pay for the flat part of the curve, then "
+                "walk away before the part it was buying. The quarter's "
+                "shape says the opposite of what a 2-month invoice "
+                "suggests.</p>",
+            ]),
+            ("Check it against your own chart", [
+                "<p>If you have Search Console, look at your last 90 days "
+                "and split them in 3. A healthy new site leans the same "
+                "way: the last third beats the first 2. A flat line for 90 "
+                "days is the thing to worry about, and worth a "
+                "conversation.</p>",
+            ]),
+        ],
+        "payoff": "Send us your Search Console chart and we will read the "
+                  "curve with you, in plain words.",
+        "related": [("/seo/", "SEO and local search"), ("/geo/", "AI search")],
+    },
+
+    # ================================================================ PHONE ===
+    {
+        "slug": "a-shop-that-updates-its-own-site",
+        "date": "2026-08-14",
+        "updated": "2026-08-14",
+        "topic": "Websites",
+        "work": "victoria-boutique",
+        "service": ("/web-design/", "Websites"),
+
+        "title": "The shop that updates its site from a phone",
+        "h1": "She updates the site from her phone, and pays nobody.",
+        "summary": "New pieces go on the site in about a minute, from a "
+                   "phone, with no licence and no monthly fee.",
+        "standfirst": "The real cost of a shop site is not the build. It is "
+                      "the licence, the fee and the person you must ring.",
+        "description": "Victoria Boutique in Durres adds, edits and removes "
+                       "stock from a phone, in 3 languages, with nothing to "
+                       "license and nobody to call. How that build works.",
+        "og_desc": "New stock on the site in about a minute, from a phone, "
+                   "for nothing a month.",
+
+        "body": [
+            ("The short answer", [
+                "<p><a href=\"/work/victoria-boutique/\">Victoria "
+                "Boutique</a> in Durres adds, edits and removes pieces "
+                "from her phone. A new piece is on the site in about a "
+                "minute, in Albanian, Italian and English. There is no "
+                "content system to license, no monthly fee, and nobody to "
+                "call.</p>",
+            ]),
+            ("Where the money usually goes", [
+                "<p>Most shop sites carry 3 running costs the owner never "
+                "chose: a content system licence, a monthly platform fee, "
+                "and the developer you ring for every change because the "
+                "system is too fiddly to touch.</p>",
+                "<p>Each one is small. Together they are a subscription to "
+                "your own website, forever, and they are why so many shop "
+                "sites quietly stop being updated.</p>",
+            ]),
+            ("What she actually does", [
+                "<p>She photographs the piece, opens a panel on her phone, "
+                "and fills in a name and a price. The site does the rest: "
+                "the piece appears in all 3 languages, and when it sells "
+                "she removes it the same way.</p>",
+                "<p>The panel was built for her, once. Nothing renews, "
+                "nothing expires, and the site keeps working whether or "
+                "not we ever speak again. She owns it in the plainest "
+                "sense: it runs without us.</p>",
+            ]),
+            ("Why this is not the normal offer", [
+                "<p>Agencies sell subscriptions because subscriptions pay "
+                "agencies. A site that costs nothing to run is a worse "
+                "business for us and a better one for the shop, which is "
+                "why we lead with it. What began as a one-off build for "
+                "her is now something we hand to the next client.</p>",
+                "<p><a href=\"/web-design/\">Our sites</a> are built this "
+                "way by default. The running cost is a domain name.</p>",
+            ]),
+        ],
+        "payoff": "Ask us what your current site costs a year to keep, and "
+                  "what the same site would cost to own outright.",
+        "related": [("/web-design/", "Websites"),
+                    ("/systems/", "Custom software")],
+    },
+
+    # ================================================================ ANSWER ===
+    {
+        "slug": "whoever-answers-first",
+        "date": "2026-08-14",
+        "updated": "2026-08-14",
+        "topic": "Meta ads",
+        "work": "pro-affy",
+        "service": ("/meta-ads/", "Meta ads"),
+
+        "title": "The job goes to whoever answers first",
+        "h1": "The job goes to whoever answers first.",
+        "summary": "Ads buy the call. What decides whether you win the job "
+                   "happens in the minutes after it.",
+        "standfirst": "A homeowner with no heating calls 3 numbers and "
+                      "books the one that picks up. The ad is the smaller "
+                      "half.",
+        "description": "Why trades lose jobs they paid to find: the enquiry "
+                       "goes to 3 firms and the fastest reply wins. What we "
+                       "learned building for a heating lead business.",
+        "og_desc": "3 firms get the call. The one that picks up gets the job.",
+
+        "body": [
+            ("The short answer", [
+                "<p>In the trades, the ad does not win the job. A "
+                "homeowner with no heating calls 3 numbers and books the "
+                "one that picks up. Everything you spend on being found is "
+                "decided in the minutes after somebody finds you.</p>",
+            ]),
+            ("The shape of an emergency customer", [
+                "<p>Somebody whose boiler died is not researching. They "
+                "are ringing down a list, and the list is short. Being on "
+                "it is what <a href=\"/meta-ads/\">the ads</a> buy. Staying "
+                "on it for longer than one unanswered call is up to "
+                "you.</p>",
+                "<p>This is why 2 firms can run the same ad, pay the same "
+                "money, and get completely different months. The "
+                "difference was never the ad.</p>",
+            ]),
+            ("What we built for a heating business", [
+                "<p><a href=\"/work/pro-affy/\">ProAffy</a> generates "
+                "enquiries for heating and cooling firms, so this problem "
+                "is their whole business. The site we built for them is "
+                "shaped around speed of response rather than looks: the "
+                "page's one job is to start the conversation now.</p>",
+                "<p>The guarantee sits plainly on the page instead of "
+                "buried in terms, because a customer in a hurry does not "
+                "read terms, and trust has about a sentence to happen "
+                "in.</p>",
+            ]),
+            ("The 90 seconds that decide it", [
+                "<p>Most of the result is decided in the 90 seconds after "
+                "somebody taps. Does the page load, does it say the thing "
+                "they need, is there one obvious way to reach you, and "
+                "does that way actually get answered.</p>",
+                "<p>Every step is fixable, and none of them is more ad "
+                "spend. Which is why we will tell you when the honest fix "
+                "is your reply time, not your budget.</p>",
+            ]),
+        ],
+        "payoff": "Ask us how fast your last enquiry got an answer. If you "
+                  "do not know, that is the answer.",
+        "related": [("/meta-ads/", "Meta ads"), ("/web-design/", "Websites")],
+    },
 ]
 
 # /blog/, the index over those records. It is a page and a page's copy is copy,

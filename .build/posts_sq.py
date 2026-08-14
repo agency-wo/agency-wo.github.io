@@ -358,6 +358,296 @@ POSTS = [
         "related": [("/systems/", "Software me porosi"),
                     ("/web-design/", "Faqe interneti")],
     },
+    # =========================================================== WEB, 3 LANG ===
+    {
+        "slug": "a-website-in-3-languages",
+        "src": "2c000678",
+        "date": "2026-08-14",
+        "updated": "2026-08-14",
+        "topic": "Faqe interneti",
+        "work": "iglisi-watch",
+        "service": ("/web-design/", "Faqe interneti"),
+
+        "title": "Një faqe në 3 gjuhë që mbetet në një hap",
+        "h1": "Një faqe në 3 gjuhë, dhe askush nuk rishkruan asgjë.",
+        "summary": "Shumica e faqeve shumëgjuhëshe shkojnë keq derisa 2 nga "
+                   "3 gjuhët janë gabim. Ja ndërtimi që s'mund ta bëjë "
+                   "këtë.",
+        "standfirst": "3 gjuhë do të thotë 3 grupe faqesh, jo një widget. "
+                      "Pyetja është se çfarë i mban në një mendje.",
+        "description": "Si një dyqan orësh në Durrës e mban faqen në "
+                       "shqip, italisht dhe anglisht pa rishkruar njeri "
+                       "asnjë fjalë, dhe pse një widget përkthimi nuk "
+                       "është e njëjta punë.",
+        "og_desc": "3 gjuhë, 58 orë, dhe askush nuk rishkruan asgjë.",
+
+        "body": [
+            ("Përgjigjja e shkurtër", [
+                "<p>Një faqe e vërtetë shumëgjuhëshe është 3 grupe "
+                "faqesh, një për gjuhë, secila e lexueshme nga Google në "
+                "adresën e vet. <a href=\"/work/iglisi-watch/\">watch.al</a> "
+                "funksionon kështu në shqip, italisht dhe anglisht, me 58 "
+                "orë, dhe askush s'e ka përditësuar të njëjtin fakt 2 "
+                "herë.</p>",
+            ]),
+            ("Pse një widget përkthimi nuk është kjo", [
+                "<p>Widget-i e rishkruan faqen pasi ajo hapet. Adresa "
+                "mbetet një e vetme, kështu Google lexon vetëm një gjuhë, "
+                "dhe klienti që kërkon në italisht italishten s'e gjen "
+                "kurrë.</p>",
+                "<p>Faqet e ndara kushtojnë më shumë për t'u ndërtuar, "
+                "një herë. Janë edhe e vetmja formë e kësaj që renditet "
+                "në çdo gjuhë, që është arsyeja pse i ke.</p>",
+            ]),
+            ("Pjesa që zakonisht dështon", [
+                "<p>Jo hapja. Faqja është e saktë ditën e parë në të 3 "
+                "gjuhët, sepse e kontrolluan të gjithë. Prishet ditën kur "
+                "një çmim ndryshon dhe rregullohet vetëm në një gjuhë, "
+                "ose një orë shitet dhe hiqet nga 2 prej 3 faqeve që e "
+                "listojnë.</p>",
+                "<p>Kemi parë tekste të rishkruara në 3 gjuhë të shkojnë "
+                "keq në 2 prej tyre. Askush s'e bën me qëllim. T'i mbash "
+                "3 faqe në një hap me dorë është punë më vete, dhe ai që "
+                "e mban ka edhe një dyqan për të drejtuar.</p>",
+            ]),
+            ("Çfarë ndërtojmë ne në vend të kësaj", [
+                "<p>Çdo fakt jeton në një vend të vetëm. Shto një orë dhe "
+                "faqja e produktit, lista e dyqanit, sitemap-i dhe çdo "
+                "numër i shkruar në tekst përditësohen bashkë, në të 3 "
+                "gjuhët, pa prekur njeri asgjë.</p>",
+                "<p>Kjo nuk është veçori që e blen. Është mënyra si është "
+                "ndërtuar faqja: fjalët i shkruajnë njerëzit, një herë, "
+                "dhe struktura gjenerohet, kështu 3 gjuhët s'mund të mos "
+                "pajtohen për çfarë ka në magazinë a sa kushton.</p>",
+            ]),
+            ("Çfarë do të thotë për një dyqan si yti", [
+                "<p>Nëse klientët e tu kërkojnë në më shumë se një gjuhë, "
+                "gjuhët janë dyer të ndara, dhe secila ose ekziston ose "
+                "jo. <a href=\"/web-design/\">Puna jonë me faqet</a> i "
+                "ndërton të gjitha nga një burim i vetëm, kështu një derë "
+                "e dytë s'do të thotë kurrë të paguash dikë që ta mbajë "
+                "të vërtetë.</p>",
+            ]),
+        ],
+        "payoff": "Na trego në cilat gjuhë kërkojnë klientët e tu, dhe të "
+                  "themi çfarë kërkon një faqe në të gjitha.",
+        "related": [("/web-design/", "Faqe interneti"),
+                    ("/systems/", "Software me porosi")],
+    },
+
+    # ============================================================= COMPOUND ===
+    {
+        "slug": "the-last-4-weeks",
+        "src": "aa5ab857",
+        "date": "2026-08-14",
+        "updated": "2026-08-14",
+        "topic": "Kërkimi lokal",
+        "work": "iglisi-watch",
+        "service": ("/seo/", "SEO dhe kërkimi lokal"),
+
+        "title": "4 javët e fundit mundin 8 të parat",
+        "h1": "4 javët e fundit të tremujorit mundin 8 të parat.",
+        "summary": "Nga 560 klikime në një tremujor, 301 erdhën në 28 "
+                   "ditët e fundit. Çfarë tregon ajo kurbë para se të "
+                   "shpenzosh gjë.",
+        "standfirst": "Kërkimi nuk paguan njëtrajtshëm. Tremujori me "
+                      "pozicion mesatar 8,4 i vuri mbi gjysmën e "
+                      "klikimeve në fund.",
+        "description": "Një dyqan në Durrës mori 560 klikime nga Google në "
+                       "tremujorin e parë online, dhe 301 erdhën në 28 "
+                       "ditët e fundit. Pse kërkimi grumbullohet, me "
+                       "numrat e vërtetë.",
+        "og_desc": "560 klikime në një tremujor. 301 në 28 ditët e fundit.",
+
+        "body": [
+            ("Përgjigjja e shkurtër", [
+                "<p>Puna me kërkimin paguan në fund, jo njëtrajtshëm. Në "
+                "tremujorin e parë online të "
+                "<a href=\"/work/iglisi-watch/\">watch.al</a>, Google "
+                "dërgoi 560 klikime, dhe 301 prej tyre, mbi gjysma, "
+                "erdhën mes 15 korrikut dhe 11 gushtit, 28 ditët e "
+                "fundit.</p>",
+            ]),
+            ("Dritarja më vete", [
+                "<p>Ato 28 ditë më vete: 301 klikime nga 27,5k herë e "
+                "shfaqur, me pozicion mesatar 8,6. Tremujori në tërësi "
+                "bënte 8,4, pra pozicioni s'po përmirësohej ndërsa "
+                "klikimet shpejtonin. Ishte një fije më keq.</p>",
+                "<p>Ajo dyshe faktesh vlen më shumë se secili më vete. "
+                "Rritja s'erdhi nga renditja më lart. Erdhi nga shfaqja "
+                "për më shumë kërkime, që është ajo çfarë bën Google me "
+                "një faqe të cilës i ka zënë besë.</p>",
+            ]),
+            ("Pse kurba ka këtë formë", [
+                "<p>Një faqe e re i kalon javët e para nën provë. Google "
+                "e shfaq pak, sheh çfarë bëjnë njerëzit, dhe zgjeron a "
+                "ngushton sipas kësaj. Klikimet që vijnë në muajin e 3-të "
+                "i fitoi puna e muajit të 1-rë.</p>",
+                "<p>Ta gjykosh punën me kërkimin në javën e 6-të është si "
+                "ta gjykosh bukën në gjysmë të pjekjes. Prova e ndershme "
+                "është drejtimi i kurbës, jo lartësia e saj.</p>",
+            ]),
+            ("Çfarë do të thotë për buxhetin tënd", [
+                "<p>Provo <a href=\"/seo/\">punën me kërkimin</a> për 2 "
+                "muaj dhe ndalo, dhe ke paguar pjesën e sheshtë të "
+                "kurbës, pastaj ikën para pjesës që ajo po blinte. Forma "
+                "e tremujorit thotë të kundërtën e asaj që sugjeron një "
+                "faturë 2-mujore.</p>",
+            ]),
+            ("Krahasoje me grafikun tënd", [
+                "<p>Nëse ke Search Console, shih 90 ditët e tua të fundit "
+                "dhe ndaji në 3. Një faqe e re e shëndetshme anon nga e "
+                "njëjta anë: e treta e fundit i mund 2 të parat. Një vijë "
+                "e sheshtë për 90 ditë është ajo për t'u shqetësuar, dhe "
+                "ia vlen një bisedë.</p>",
+            ]),
+        ],
+        "payoff": "Na dërgo grafikun tënd të Search Console dhe e lexojmë "
+                  "kurbën bashkë me ty, me fjalë të thjeshta.",
+        "related": [("/seo/", "SEO dhe kërkimi lokal"),
+                    ("/geo/", "Kërkimi me AI")],
+    },
+
+    # ================================================================ PHONE ===
+    {
+        "slug": "a-shop-that-updates-its-own-site",
+        "src": "cc854b84",
+        "date": "2026-08-14",
+        "updated": "2026-08-14",
+        "topic": "Faqe interneti",
+        "work": "victoria-boutique",
+        "service": ("/web-design/", "Faqe interneti"),
+
+        "title": "Dyqani që e përditëson faqen nga telefoni",
+        "h1": "E përditëson faqen nga telefoni, dhe s'paguan njeri.",
+        "summary": "Artikujt e rinj dalin në faqe për rreth një minutë, "
+                   "nga telefoni, pa licencë dhe pa pagesë mujore.",
+        "standfirst": "Kostoja e vërtetë e faqes së një dyqani s'është "
+                      "ndërtimi. Është licenca, pagesa mujore dhe njeriu "
+                      "që duhet të marrësh në telefon.",
+        "description": "Victoria Boutique në Durrës shton, ndryshon dhe "
+                       "heq artikuj nga telefoni, në 3 gjuhë, pa asgjë "
+                       "për të licencuar dhe pa njeri për të thirrur. Si "
+                       "funksionon ai ndërtim.",
+        "og_desc": "Mall i ri në faqe për rreth një minutë, nga telefoni, "
+                   "me zero kosto në muaj.",
+
+        "body": [
+            ("Përgjigjja e shkurtër", [
+                "<p><a href=\"/work/victoria-boutique/\">Victoria "
+                "Boutique</a> në Durrës shton, ndryshon dhe heq artikuj "
+                "nga telefoni. Një artikull i ri është në faqe për rreth "
+                "një minutë, në shqip, italisht dhe anglisht. S'ka "
+                "sistem përmbajtjesh për të licencuar, s'ka pagesë "
+                "mujore, dhe s'ka njeri për të thirrur.</p>",
+            ]),
+            ("Ku shkojnë zakonisht paratë", [
+                "<p>Shumica e faqeve të dyqaneve mbajnë 3 kosto të "
+                "rregullta që pronari s'i ka zgjedhur kurrë: licencën e "
+                "një sistemi përmbajtjesh, pagesën mujore të një "
+                "platforme, dhe zhvilluesin që e merr në telefon për çdo "
+                "ndryshim, se sistemi është tepër i ndërlikuar për t'u "
+                "prekur.</p>",
+                "<p>Secila është e vogël. Bashkë janë një abonim te faqja "
+                "jote vetë, përgjithmonë, dhe janë arsyeja pse kaq shumë "
+                "faqe dyqanesh heshtazi ndalojnë së përditësuari.</p>",
+            ]),
+            ("Çfarë bën ajo konkretisht", [
+                "<p>E fotografon artikullin, hap një panel në telefon, "
+                "dhe shkruan një emër e një çmim. Të tjerat i bën faqja: "
+                "artikulli del në të 3 gjuhët, dhe kur shitet e heq në "
+                "të njëjtën mënyrë.</p>",
+                "<p>Paneli u ndërtua për të, një herë. Asgjë s'rinovohet, "
+                "asgjë s'skadon, dhe faqja vazhdon të punojë, u "
+                "dëgjofshim përsëri a jo. Është e saja në kuptimin më të "
+                "thjeshtë: punon pa ne.</p>",
+            ]),
+            ("Pse kjo s'është oferta e zakonshme", [
+                "<p>Agjencitë shesin abonime sepse abonimet i paguajnë "
+                "agjencitë. Një faqe që s'kushton asgjë për t'u mbajtur "
+                "është biznes më i keq për ne dhe më i mirë për dyqanin, "
+                "dhe prandaj nisim që andej. Ajo që nisi si punë e "
+                "vetme për të, tani ia dorëzojmë klientit të "
+                "radhës.</p>",
+                "<p><a href=\"/web-design/\">Faqet tona</a> ndërtohen "
+                "kështu si parazgjedhje. Kostoja e mbajtjes është një "
+                "emër domaini.</p>",
+            ]),
+        ],
+        "payoff": "Na pyet sa të kushton në vit ta mbash faqen që ke, dhe "
+                  "sa do të kushtonte ta kishe vërtet tënden.",
+        "related": [("/web-design/", "Faqe interneti"),
+                    ("/systems/", "Software me porosi")],
+    },
+
+    # ================================================================ ANSWER ===
+    {
+        "slug": "whoever-answers-first",
+        "src": "09a5a3e5",
+        "date": "2026-08-14",
+        "updated": "2026-08-14",
+        "topic": "Reklamat Meta",
+        "work": "pro-affy",
+        "service": ("/meta-ads/", "Reklamat Meta"),
+
+        "title": "Puna i shkon atij që përgjigjet i pari",
+        "h1": "Puna i shkon atij që përgjigjet i pari.",
+        "summary": "Reklamat e blejnë telefonatën. Kush e fiton punën "
+                   "vendoset në minutat pas saj.",
+        "standfirst": "Ai që mbetet pa ngrohje merr 3 numra dhe rezervon "
+                      "atë që përgjigjet. Reklama është gjysma më e "
+                      "vogël.",
+        "description": "Pse mjeshtrit humbin punë që i paguan për t'i "
+                       "gjetur: kërkesa u shkon 3 firmave dhe fiton "
+                       "përgjigjja më e shpejtë. Çfarë mësuam duke "
+                       "ndërtuar për sektorin e ngrohjes.",
+        "og_desc": "3 firma e marrin telefonatën. Puna i shkon asaj që "
+                   "përgjigjet.",
+
+        "body": [
+            ("Përgjigjja e shkurtër", [
+                "<p>Në zanatet, reklama s'e fiton punën. Ai që mbetet pa "
+                "ngrohje merr 3 numra dhe rezervon atë që përgjigjet. "
+                "Gjithçka që shpenzon për t'u gjetur vendoset në minutat "
+                "pasi dikush të ka gjetur.</p>",
+            ]),
+            ("Forma e klientit në emergjencë", [
+                "<p>Ai që i ka vdekur kaldaja s'bën kërkime. Po zbret "
+                "nëpër një listë, dhe lista është e shkurtër. Të jesh "
+                "aty është ajo që <a href=\"/meta-ads/\">reklamat</a> e "
+                "blejnë. Të qëndrosh aty më gjatë se një telefonatë pa "
+                "përgjigje varet nga ti.</p>",
+                "<p>Prandaj 2 firma mund të xhirojnë të njëjtën reklamë, "
+                "të paguajnë të njëjtat para, dhe të kenë muaj krejt të "
+                "ndryshëm. Ndryshimi s'ka qenë kurrë reklama.</p>",
+            ]),
+            ("Çfarë ndërtuam për një biznes ngrohjeje", [
+                "<p><a href=\"/work/pro-affy/\">ProAffy</a> gjeneron "
+                "kërkesa për firma ngrohjeje dhe ftohjeje, pra ky "
+                "problem është gjithë biznesi i tyre. Faqja që ndërtuam "
+                "për ta është formuar rreth shpejtësisë së përgjigjes "
+                "më shumë se rreth pamjes: e vetmja punë e faqes është "
+                "ta nisë bisedën tani.</p>",
+                "<p>Garancia rri hapur në faqe në vend që të groposet në "
+                "kushte, sepse një klient me ngut kushtet s'i lexon, "
+                "dhe besimi ka rreth një fjali kohë për të lindur.</p>",
+            ]),
+            ("90 sekondat që vendosin gjithçka", [
+                "<p>Pjesa më e madhe e rezultatit vendoset në 90 "
+                "sekondat pas prekjes. A hapet faqja, a e thotë atë që "
+                "i duhet, a ka një mënyrë të qartë për të të gjetur, "
+                "dhe a merr vërtet përgjigje ajo mënyrë.</p>",
+                "<p>Çdo hap rregullohet, dhe asnjëri s'është më shumë "
+                "shpenzim reklamash. Prandaj do të ta themi kur "
+                "rregullimi i ndershëm është koha jote e përgjigjes, jo "
+                "buxheti yt.</p>",
+            ]),
+        ],
+        "payoff": "Na pyet sa shpejt mori përgjigje kërkesa jote e "
+                  "fundit. Nëse s'e di, ajo është përgjigjja.",
+        "related": [("/meta-ads/", "Reklamat Meta"),
+                    ("/web-design/", "Faqe interneti")],
+    },
 ]
 
 # /blog/, the index over those records. The soft wraps are placed for this text
