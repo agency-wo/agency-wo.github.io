@@ -73,7 +73,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 NL = chr(10)
 
 DOMAIN_LIVE = True
-OPEN_TO_CRAWLERS = False
+OPEN_TO_CRAWLERS = True
 
 # -- IndexNow ---------------------------------------------------------------
 # One key, minted once with uuid4().hex and then FIXED: the protocol proves
@@ -366,9 +366,46 @@ def indexnow_ping(urls):
     print("IndexNow: pinged %d URL(s)" % sent)
 
 
-if OPEN_TO_CRAWLERS:
-    indexnow_ping(all_urls)
-else:
-    print("IndexNow: robots.txt is closed, nothing pinged. Open would submit "
-          "%d URLs as https://api.indexnow.org/indexnow?url=<url>&key=%s"
+def live_is_open():
+    """Does the DEPLOYED robots.txt allow crawling right now?
+
+    OPEN_TO_CRAWLERS is a fact about this working copy, not about the site. The
+    build runs before the push, so on the very build that flips the flag the
+    live robots.txt still says Disallow: / -- and pinging then is the exact
+    mistake the comment above describes, just arrived at by timing instead of
+    by forgetting. An engine invited to a site that refuses it does not retry
+    on our schedule.
+
+    So the ping asks the internet, not the flag. FAILS CLOSED: if the check
+    cannot complete, no ping. A courtesy that is skipped costs a later build's
+    ping; a courtesy sent into a closed door costs the host's first
+    impression, and only one of those is recoverable.
+    """
+    try:
+        body = urllib.request.urlopen(
+            shell.SITE + "/robots.txt", timeout=10).read().decode("utf-8")
+    except Exception as e:
+        print("IndexNow: could not read the live robots.txt (%s), so nothing "
+              "pinged. Re-run after the deploy" % e)
+        return False
+    # The same bare block-everything shape check 30 matches, and nothing looser:
+    # "Disallow: /assets/proof/source/" is a line the OPEN file contains.
+    closed = re.search(r"^\s*Disallow:\s*/\s*$", body, re.M)
+    if closed:
+        print("IndexNow: the live robots.txt is still closed, so nothing "
+              "pinged. Push this build, then run gen_launch again")
+    return not closed
+
+
+# Two different reasons not to ping, and they need different sentences. This
+# branch used to say "robots.txt is closed" for the only case that existed.
+# Once live_is_open() joined the condition it said that while the robots.txt on
+# disk was open, blaming the wrong file for the wrong build -- and a status line
+# that misreports why it did nothing is how somebody spends an afternoon
+# debugging a working ping.
+if not OPEN_TO_CRAWLERS:
+    print("IndexNow: OPEN_TO_CRAWLERS is False, nothing pinged. Open would "
+          "submit %d URLs as https://api.indexnow.org/indexnow?url=<url>&key=%s"
           % (len(all_urls), INDEXNOW_KEY))
+elif live_is_open():          # prints its own reason when it declines
+    indexnow_ping(all_urls)

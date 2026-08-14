@@ -1,9 +1,8 @@
-# CLOSED ON PURPOSE. Every form here posts to a Web3Forms key that is still a
-# placeholder, so a visitor who filled one in would reach nobody. Being indexed
-# with dead forms is worse than being indexed a week later.
-#
-# The domain is live; this is the other half. Set OPEN_TO_CRAWLERS = True in
-# .build/gen_launch.py on the day the Web3Forms key is real, and rebuild.
+# minarank studio: everyone is welcome, including AI crawlers.
+# We are a GEO studio. Being read by answer engines is the entire point.
 
 User-agent: *
-Disallow: /
+Allow: /
+Disallow: /assets/proof/source/
+
+Sitemap: https://minarankstudio.com/sitemap.xml
