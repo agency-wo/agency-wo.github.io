@@ -705,7 +705,14 @@ def switcher(lang, page_url, place="foot", indent=10):
 
 
 def clock(lang):
-    """The footer's small analogue clock, showing local time in Durres.
+    """The analogue clock in the ink band, showing local time in Durres.
+
+    It sits in the half of the band the heading leaves empty, which is where a
+    portrait or an office photo would go on most studio sites. There is no
+    photo and inventing one is not an option, so the space holds the one thing
+    that is both true and worth knowing: whether anybody is awake in Durres.
+    An English or Italian visitor reads it as an answer to "will they reply".
+
 
     watch.al's clock.js is the reference and the logic is the same: 3 hands
     positioned by rotate(deg, cx, cy) around one centre, driven from
@@ -725,24 +732,35 @@ def clock(lang):
 
     A 24 viewBox with a 12,12 centre keeps every angle in the script the same
     arithmetic as watch.al's, only the radius differs.
+
+    TWELVE MARKS, not 4. At 20px in the meta row 4 was all that would read;
+    sized up into the band's empty half it is big enough that 4 marks looked
+    like a compass rather than a dial. The 4 quarters stay longer than the 8
+    between them, which is how a watch face states the same hierarchy.
     """
+    marks = []
+    for i in range(12):
+        # 0 is noon and every mark is 30 degrees on from it, so the geometry is
+        # the same rotate() the hands use rather than 12 hand-typed paths.
+        long = i % 3 == 0
+        y1, y2 = (2.6, 4.5) if long else (2.9, 4.0)
+        w = 1.0 if long else 0.55
+        marks.append(f'<path d="M12 {y1}V{y2}" stroke-width="{w}" '
+                     f'transform="rotate({i * 30},12,12)"/>')
     return (
-        f'<svg class="foot-clock" viewBox="0 0 24 24" width="20" height="20" '
+        f'<svg class="foot-clock" viewBox="0 0 24 24" '
         f'role="img" aria-label="{ch(lang).CLOCK_LABEL}">'
-        f'<circle cx="12" cy="12" r="10.25" fill="none" '
-        f'stroke="var(--paper)" stroke-width="1.1"/>'
-        # the 4 quarter markers, the least a dial needs to read as one
-        f'<g stroke="var(--paper)" stroke-width="1.1" stroke-linecap="round">'
-        f'<path d="M12 3.2v1.6"/><path d="M20.8 12h-1.6"/>'
-        f'<path d="M12 20.8v-1.6"/><path d="M3.2 12h1.6"/></g>'
+        f'<circle cx="12" cy="12" r="11" fill="none" '
+        f'stroke="var(--paper)" stroke-width="0.7"/>'
+        f'<g stroke="var(--paper)" stroke-linecap="round">{"".join(marks)}</g>'
         f'<g stroke="var(--red)" stroke-linecap="round" fill="none">'
-        f'<path class="fc-h" d="M12 12V6.9" stroke-width="1.6" '
+        f'<path class="fc-h" d="M12 12V7.2" stroke-width="1.1" '
         f'transform="rotate(-60,12,12)"/>'
-        f'<path class="fc-m" d="M12 12V4.9" stroke-width="1.3" '
+        f'<path class="fc-m" d="M12 12V5.2" stroke-width="0.85" '
         f'transform="rotate(60,12,12)"/>'
-        f'<path class="fc-s" d="M12 12V4.2" stroke-width="0.7" '
+        f'<path class="fc-s" d="M12 12V4.6" stroke-width="0.4" '
         f'transform="rotate(0,12,12)"/></g>'
-        f'<circle cx="12" cy="12" r="1" fill="var(--red)"/></svg>')
+        f'<circle cx="12" cy="12" r="0.7" fill="var(--red)"/></svg>')
 
 
 def trust_line(lang):
@@ -775,14 +793,22 @@ def footer(lang, page_url=None, cta_heading=None, cta_note=None):
           </div>''')
     cols = NL.join(cols)
 
+    # The clock lives in the band's right half rather than down in the meta
+    # row. At 1440 that half is empty beside a 16ch heading, and a 20px mark
+    # in the fine print was too small to be the thing it was asked to be.
     cta = ""
     if cta_heading:
-        cta = f'''      <h2>{cta_heading}</h2>
-      <p class="band-note">{cta_note}</p>
-      <p class="band-actions">
-        <a class="band-cta" href="{localise(AUDIT_URL, lang)}">{c.BAND_CTA}</a>
-        <span class="band-alt"><a href="mailto:{EMAIL}">{EMAIL}</a> {DOT} <a href="https://wa.me/{WHATSAPP}">WhatsApp</a></span>
-      </p>
+        cta = f'''      <div class="band-top">
+        <div class="band-say">
+          <h2>{cta_heading}</h2>
+          <p class="band-note">{cta_note}</p>
+          <p class="band-actions">
+            <a class="band-cta" href="{localise(AUDIT_URL, lang)}">{c.BAND_CTA}</a>
+            <span class="band-alt"><a href="mailto:{EMAIL}">{EMAIL}</a> {DOT} <a href="https://wa.me/{WHATSAPP}">WhatsApp</a></span>
+          </p>
+        </div>
+{clock(lang)}
+      </div>
 '''
 
     return f'''
@@ -794,7 +820,7 @@ def footer(lang, page_url=None, cta_heading=None, cta_note=None):
 {cols}
         </nav>
         <div class="foot-meta">
-          <p class="foot-where">{c.FOOT_META.replace("{brand}", BRAND).replace("{dot}", DOT)}&#160;{clock(lang)}</p>
+          <p>{c.FOOT_META.replace("{brand}", BRAND).replace("{dot}", DOT)}</p>
           <p class="foot-trust">{trust_line(lang)} {DOT} <a href="{GBP_REVIEW_URL}"\
  target="_blank" rel="noopener">{c.REVIEW_CTA}</a></p>
           <p>{c.FOOT_COPYRIGHT.replace("{brand}", BRAND)}</p>

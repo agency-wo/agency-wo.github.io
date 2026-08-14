@@ -524,22 +524,20 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
    working if this element ever moved to a lighter surface. What draws the
    shape is the --paper rim, which is what the founder asked for.
 
-   -0.28em lifts it onto the text baseline: a 20px circle beside 15px text
-   sits low on its own, and the rim reads as misaligned rather than as small.
+   It lives in the band and not the meta row, in the half the heading leaves
+   empty. That half was going to hold a portrait and there is no portrait, so
+   rather than leave the band lopsided it holds the one honest thing this
+   studio can put there: what time it is where the studio is.
 
-   display MATTERS HERE and took 3 attempts to find. tokens.css:80 sets
-   "img, svg { display: block }" for the whole site, which is right for every
-   other svg on it and wrong for this one: a block can never share a line, so
-   the clock sat under the sentence no matter what. A flex row did not fix it
-   and neither did the &#160; in shell.py -- both were treating a symptom.
-   Two screenshots read as "inline" at 1440 because the text is one line there
-   and the clock lands directly beneath it; only measuring the x told the
-   truth, at 146px against text ending at 639px.
-
-   The &#160; stays and is doing real work now that this is inline: it stops
-   the clock being orphaned from the last word when the sentence wraps. */
-.foot-clock { display: inline-block; vertical-align: -0.28em;
-  margin-left: 0.15em; }
+   Sized off the viewport rather than in fixed px so it fills that half at any
+   width instead of floating in it, with a floor that keeps it legible and a
+   cap that stops it becoming a dinner plate on an ultrawide. auto height and
+   NO width/height attributes on the svg: the viewBox carries the ratio, and a
+   hardcoded attribute would fight the clamp. */
+.band-top { display: grid; grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--s-7); align-items: center; }
+.band-say { min-width: 0; }
+.foot-clock { width: clamp(120px, 13vw, 190px); height: auto; }
 /* The footer switcher had no rules at all: 3 links laid out by .foot-meta's
    flex, in the UA's underline, at the muted colour meant for captions. Same
    shape as the header copy, in the ink band's colours: --paper for the links,
@@ -804,6 +802,13 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
 }
 
 @media (max-width: 719px) {
+  /* The band stacks: a 16ch heading and a dial side by side on a phone leaves
+     the heading 2 words wide. The clock goes under the actions and shrinks,
+     because here it is a full-width row of its own rather than the thing
+     filling an empty half. */
+  .band-top { grid-template-columns: 1fr; gap: var(--s-6);
+    justify-items: start; }
+  .foot-clock { width: 96px; }
   .svc-list a { grid-template-columns: 1fr; gap: var(--s-4); }
   /* .wrap is 5vw a side here, so the desktop -16px offset puts the active
      rule 4px off the screen edge, where it reads as a browser artefact
