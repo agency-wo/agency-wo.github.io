@@ -187,7 +187,7 @@ SERVICES = [
     # ------------------------------------------------------------------ GEO --
     {
         "slug": "geo",
-        "src": "c3060a20",
+        "src": "6bc55434",
         # glossary.TERMS: AI search -> ricerca AI, and glossary.BANNED fails on
         # "IA", which reads as a translation artefact to the people who buy
         # this. Matches chrome_it.FOOT_LABELS[0][1] exactly.
@@ -208,7 +208,9 @@ SERVICES = [
                 "Google, e la risposta nomina una manciata di attività. "
                 "Nessuno ti dice se eri una di quelle. Per questo non esiste "
                 "ancora un report di posizionamento, ed è esattamente per "
-                "questo che vincere costa ancora poco.",
+                "questo che vincere costa ancora poco. Se qualche parola di "
+                "questa pagina è nuova, <a href=\"/glossary/\">sono tutte "
+                "spiegate qui</a>.",
         "sections": [
             ("Come faccio a far consigliare la mia attività da ChatGPT?", [
                 "<p>ChatGPT consiglia attività che riesce a leggere e a "

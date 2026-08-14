@@ -40,7 +40,11 @@ here is the copyright sign in FOOT_COPYRIGHT, which is a symbol and not a word.
 # away, and it still avoids "Blog", which was the point.
 # Stamps for every chrome string. These are bare strings and lists, so
 # none of them can hold a "src" key of its own. Edit an English chrome
-# string and i18n.load() names the one that went stale.
+# string and shell.py names the one that went stale, at import.
+#
+# It used to say i18n.load() did that, and i18n.load() never sees this file:
+# chrome is imported directly by shell.py. So for a long time these 50 stamps
+# were read by nothing at all. shell.py now checks every one of them.
 SRC = {
     "ARIA_CRUMBS": "3a789919",
     "ARIA_DETAILS": "e32297d7",
@@ -51,6 +55,7 @@ SRC = {
     "ARIA_PRIMARY": "e68bd589",
     "AUDIT_LINK": "f2416589",
     "BAND_CTA": "63be028a",
+    "BYLINE": "0a55b894",
     "CRUMB_HOME": "8f3852d3",
     "CRUMB_WORK": "0571c47a",
     "CRUMB_WRITING": "db632f4b",
@@ -213,6 +218,9 @@ SIDE_DID = "Çfarë bëmë"
 SIDE_ON_THIS_PAGE = "Në këtë faqe"
 READ_NEXT = "Lexo më pas"
 READ_IT = "Lexoje"
+# "Nga Henri Sila". Albanian marks the author with nga, the same preposition as
+# the agent, and it is what a byline on any Albanian publication uses.
+BYLINE = "Nga"
 # "Përditësuar më 13 gusht 2026". Albanian puts "më" in front of a date and the
 # English has nothing to put there, so it lives in this string rather than in
 # l10n.human, which formats a date and knows nothing about the sentence around

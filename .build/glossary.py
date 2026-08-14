@@ -100,6 +100,11 @@ BANNED = [
 # or markup. i18n.AUTONYM is kept out of this file for the same reason.
 IDENTICAL_BY_DESIGN = {
     "Menu", "Studio", "Home", "404", "Meta ads", "SEO", "AI search",
+    # TERMS itself says the Italian for "audit" is "audit": Italian took the
+    # word whole. It only became visible when /glossary/ put the bare term in
+    # a <dt> with nothing around it, and check 35 correctly asked whether a
+    # word identical in both languages had ever been translated. It had.
+    "audit", "GEO",
     # The form control label. Italian and Albanian both write "Email" on a
     # form, and check 35 would otherwise fail 8 correct pages for it.
     "Email",

@@ -176,7 +176,7 @@ SERVICES = [
     # ------------------------------------------------------------------ GEO --
     {
         "slug": "geo",
-        "src": "c3060a20",
+        "src": "6bc55434",
         # glossary.TERMS: AI search -> kërkimi me AI. Matches
         # chrome_sq.FOOT_LABELS[0][1] exactly.
         "nav": "Kërkimi me AI",
@@ -196,7 +196,9 @@ SERVICES = [
                 "hapin Google, dhe përgjigjja përmend një grusht biznesesh. "
                 "Askush nuk të thotë nëse ishe një prej tyre. Për këtë ende "
                 "s'ka raport renditjeje, dhe pikërisht prandaj fitorja "
-                "kushton ende pak.",
+                "kushton ende pak. Nëse ndonjë fjalë e kësaj faqeje është e "
+                "re, <a href=\"/glossary/\">janë të gjitha të shpjeguara "
+                "këtu</a>.",
         "sections": [
             ("Si bëj që ChatGPT të rekomandojë biznesin tim?", [
                 "<p>ChatGPT rekomandon biznese që mund t'i lexojë dhe t'i "

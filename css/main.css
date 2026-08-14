@@ -481,7 +481,38 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
 .standfirst { margin-top: var(--s-5); font-size: var(--fs-lead);
   max-width: 42ch; text-wrap: pretty; }
 
+/* The post byline, under the standfirst. Small and quiet on purpose: it is
+   attribution, not argument, and it sits above a heading it must not compete
+   with. The <time> is not styled apart from the rest of the line, because a
+   date that looks like a link is a date people click.
+
+   --slate, NOT --ink-mute. The first draft used --ink-mute because "muted" is
+   what a byline wants, and measured 1.73:1 on paper: that token is the muted
+   colour for text ON ink, where it is 9.21:1, and every other use of it in
+   this file is inside .band. --slate is 5.56:1 here and its own comment in
+   tokens.css says captions and metadata, which is what this is. */
+.byline { margin-top: var(--s-3); font-size: var(--fs-small);
+  color: var(--slate); }
+.byline a { color: inherit; text-decoration: underline;
+  text-underline-offset: 3px; text-decoration-color: var(--rule); }
+.byline a:hover { color: var(--red-dk); text-decoration-color: var(--red); }
+
 .lead { font-size: var(--fs-lead); max-width: 60ch; margin-bottom: var(--s-6); }
+
+/* The glossary. A <dl> because 11 term/definition pairs is the one thing a
+   description list is for, and each pair is wrapped in a div so the term and
+   its definition stay together when the grid wraps at a narrow width.
+   Two columns at desktop, stacked on a phone. */
+.glossary { margin-top: var(--s-8); border-top: 1px solid var(--edge); }
+.glossary .term { display: grid; grid-template-columns: 15rem 1fr;
+  gap: var(--s-4) var(--s-6); padding: var(--s-5) 0;
+  border-bottom: 1px solid var(--rule); }
+.glossary dt { font-weight: 600; font-size: var(--fs-body);
+  text-wrap: balance; scroll-margin-top: 5rem; }
+.glossary dd { margin: 0; max-width: 56ch; color: var(--ink); }
+@media (max-width: 720px) {
+  .glossary .term { grid-template-columns: 1fr; gap: var(--s-2); }
+}
 
 .prose { grid-column: 1 / 8; max-width: 62ch; }
 .prose h2, .studio-prose h2 { font-size: clamp(1.75rem, 2.6vw, 2.25rem);

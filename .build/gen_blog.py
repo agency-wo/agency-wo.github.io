@@ -97,6 +97,9 @@ def post_page(p, en_p, nxt, by_slug, band, lang):
          "headline": p["h1"], "name": p["title"],
          "description": p["description"], "url": url,
          "mainEntityOfPage": {"@id": url + "#post"},
+         # Which of the 3 language versions is the original, stated rather than
+         # left for an engine to guess from hreflang, which does not carry it.
+         **shell.translation_links(post_url(p), lang, "#post"),
          # The share card, which is the only image a post has. Google wants an
          # image on an Article and there is no per-post artwork to give it, so
          # this names the one that exists rather than a file we intend to draw.
@@ -133,6 +136,12 @@ def post_page(p, en_p, nxt, by_slug, band, lang):
             # how a share tells a crawler to read the byline and date. The
             # index stays website: a list of articles is not one.
             "og_type": "article",
+            # The same 3 facts the BlogPosting node above already states, for
+            # the parsers that read meta tags and never touch JSON-LD. Taken
+            # from the same record, not retyped, so they cannot drift apart.
+            "published": p["date"],
+            "modified": p.get("updated", p["date"]),
+            "author": shell.FOUNDER,
             "jsonld": json.dumps({"@context": "https://schema.org", "@graph": graph},
                                  indent=2, ensure_ascii=False)}
 
@@ -162,6 +171,9 @@ def post_page(p, en_p, nxt, by_slug, band, lang):
 {shell.crumbs(lang, (c.CRUMB_WRITING, shell.localise(BLOG, lang)), p["title"])}
         <h1 class="page-title">{p["h1"]}</h1>
         <p class="standfirst">{shell.localise_html(p["standfirst"], lang)}</p>
+        <p class="byline">{c.BYLINE} <a href="{shell.localise("/studio/", lang)}"\
+ rel="author">{shell.FOUNDER}</a> {shell.DOT} \
+<time datetime="{p["date"]}">{l10n.human(p["date"], lang)}</time></p>
       </header>
 
       <div class="grid">
@@ -214,12 +226,26 @@ def blog_index(posts, idx, lang):
     c = shell.ch(lang)
     url = S + shell.localise(BLOG, lang)
     home = S + shell.localise("/", lang)
+    # blogPost already names every post, and says nothing about their ORDER.
+    # This page is newest-first and that is meaningful on a blog, so the
+    # ItemList carries the sequence the reader actually sees, declared
+    # descending rather than left to be guessed from the array.
+    items = [{"@type": "ListItem", "position": i,
+              "url": S + shell.localise(post_url(p), lang),
+              "name": p["title"],
+              "item": {"@id": S + shell.localise(post_url(p), lang) + "#post"}}
+             for i, p in enumerate(posts, 1)]
     graph = [
         {"@type": "Blog", "@id": url + "#blog", "url": url,
          "name": idx["title"], "publisher": {"@id": home + "#org"},
          "inLanguage": lang,
+         "mainEntity": {"@id": url + "#list"},
          "blogPost": [{"@id": S + shell.localise(post_url(p), lang) + "#post"}
                       for p in posts]},
+        {"@type": "ItemList", "@id": url + "#list",
+         "name": idx["title"], "numberOfItems": len(items),
+         "itemListOrder": "https://schema.org/ItemListOrderDescending",
+         "itemListElement": items},
         {"@type": "BreadcrumbList", "@id": url + "#crumbs",
          "itemListElement": [
              {"@type": "ListItem", "position": 1,

@@ -39,7 +39,11 @@ Accented letters are literal too ("attività"), never HTML entities.
 # nav calls it Proof. It also avoids "Blog", which was the point.
 # Stamps for every chrome string. These are bare strings and lists, so
 # none of them can hold a "src" key of its own. Edit an English chrome
-# string and i18n.load() names the one that went stale.
+# string and shell.py names the one that went stale, at import.
+#
+# It used to say i18n.load() did that, and i18n.load() never sees this file:
+# chrome is imported directly by shell.py. So for a long time these 50 stamps
+# were read by nothing at all. shell.py now checks every one of them.
 SRC = {
     "ARIA_CRUMBS": "3a789919",
     "ARIA_DETAILS": "e32297d7",
@@ -50,6 +54,7 @@ SRC = {
     "ARIA_PRIMARY": "e68bd589",
     "AUDIT_LINK": "f2416589",
     "BAND_CTA": "63be028a",
+    "BYLINE": "0a55b894",
     "CRUMB_HOME": "8f3852d3",
     "CRUMB_WORK": "0571c47a",
     "CRUMB_WRITING": "db632f4b",
@@ -203,6 +208,10 @@ SIDE_DID = "Cosa abbiamo fatto"
 SIDE_ON_THIS_PAGE = "In questa pagina"
 READ_NEXT = "Da leggere dopo"
 READ_IT = "Leggilo"
+# "Di Henri Sila". Not "Da", which is the agent of a passive and would read as
+# "written by" only if a verb were in front of it; a standalone byline in
+# Italian takes di.
+BYLINE = "Di"
 # "Aggiornato il 13 agosto 2026". The article is required in Italian in front of
 # a date and the English has nothing to put there, so it lives in this string
 # rather than in l10n.human, which formats a date and knows nothing about the

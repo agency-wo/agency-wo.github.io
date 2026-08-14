@@ -19,7 +19,8 @@ from urllib.parse import quote
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import i18n  # noqa: E402
 import shell  # noqa: E402
-from gen_pages import Contents, form_source, out, strip_tags, write  # noqa: E402
+from gen_pages import (Contents, form_source, out, slugify, strip_tags,  # noqa: E402
+                       write)
 
 S = shell.SITE
 NL = chr(10)
@@ -148,9 +149,16 @@ def block(indent, b, lang, en=None, toc=None):
         return NL.join(rows)
     if kind == "ledger":
         rows = [pad + '<ol class="ledger">']
-        for heading, bodytext in b[1]:
+        # The id is cut from the ENGLISH heading, so a fragment copied out of
+        # the Albanian page still names the same section on the English one.
+        # No English in hand means no id rather than one slugged from the
+        # translation, which would spell the same section 3 different ways.
+        # aside() calls block() without en, which is the case this guards.
+        en_led = en[1] if en else None
+        for i, (heading, bodytext) in enumerate(b[1]):
+            hid = f' id="{slugify(en_led[i][0], "h-")}"' if en_led else ""
             rows.append(pad + "  <li>")
-            rows.append(f'{pad}    <h3>{txt(indent + 6, heading, lang)}</h3>')
+            rows.append(f'{pad}    <h3{hid}>{txt(indent + 6, heading, lang)}</h3>')
             rows.append(f'{pad}    <p>{txt(indent + 6, bodytext, lang)}</p>')
             rows.append(pad + "  </li>")
         rows.append(pad + "</ol>")
@@ -233,9 +241,10 @@ def faq_section(indent, rec, en_rec, lang, toc):
     hid = "" if toc is None else f' id="{toc.add(en_rec["faq_h"], h)}"'
     rows = [pad + '<section class="faq">',
             f'{pad}  <h2{hid}>{h}</h2>']
-    for q, a in rec["faq"]:
+    for (q, a), (en_q, _en_a) in zip(rec["faq"], en_rec["faq"]):
         rows.append(pad + '  <div class="faq-item">')
-        rows.append(f'{pad}    <h3 class="faq-q">{txt(indent + 6, q, lang)}</h3>')
+        rows.append(f'{pad}    <h3 class="faq-q" id="{slugify(en_q, "q-")}">'
+                    f'{txt(indent + 6, q, lang)}</h3>')
         rows.append(f'{pad}    <p>{txt(indent + 6, a, lang)}</p>')
         rows.append(pad + "  </div>")
     rows.append(pad + "</section>")

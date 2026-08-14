@@ -64,6 +64,7 @@ import sys
 import textwrap
 import urllib.parse
 import urllib.request
+from html.parser import HTMLParser
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import i18n  # noqa: E402
@@ -331,10 +332,117 @@ for sec in SECTIONS:
     body += [f"- [{name}]({shell.SITE}{path}): {desc}" for path, name, desc in rows]
     body.append("")
 
+body += para(
+    f"The prose of every page below, in one file, is at "
+    f"{shell.SITE}/llms-full.txt.")
+body += [""]
+
 llms = NL.join(body).rstrip(NL) + NL
 print("llms.txt %s (%d pages, %d sections)"
       % (write_if_changed(os.path.join(ROOT, "llms.txt"), llms),
          len(pages), sum(1 for s in SECTIONS if grouped.get(s))))
+
+
+# ----------------------------------------------------------- llms-full.txt --
+# llms.txt is a map: 21 links and a sentence each. This is the territory, and
+# the convention's other half. An engine that wants the argument rather than
+# the index takes it in 1 fetch instead of 21.
+#
+# DERIVED FROM THE EMITTED HTML, like llms.txt, so it cannot describe a page
+# that no longer says this. Nothing here is written twice.
+#
+# English only, for the reason llms.txt is English only: the Italian and
+# Albanian are the same records, and tripling the file to say each thing 3
+# times would make it worse at the one job it has.
+MAIN = re.compile(r"<main\b[^>]*>(.*?)</main>", re.S)
+
+
+class _Prose(HTMLParser):
+    """Text of a page, minus everything that is not the argument.
+
+    A parser and not a regex, because the first version was a regex and the
+    homepage came out saying "m i n a r a n k studio": the climbing wordmark is
+    one span per letter, and turning tags into spaces turns 8 letters into 8
+    words. A brand name spelled out letter by letter is exactly the sort of
+    thing this file exists to hand an engine correctly.
+
+    aria-hidden subtrees are skipped, which is the rule that fixes it and is
+    not a special case: a thing hidden from a screen reader is decoration, and
+    this file is the same job as a screen reader with different output. <nav>
+    and <form> go with <script> and <svg> for the same reason -- the breadcrumb
+    and the audit form are on all 21 pages, and would be most of the weight of
+    the file while carrying none of its meaning.
+    """
+
+    SKIP = {"script", "style", "svg", "form", "nav"}
+    BREAK = {"p", "h1", "h2", "h3", "h4", "h5", "h6", "li", "section",
+             "article", "figcaption", "tr"}
+    VOID = {"br", "img", "meta", "link", "input", "hr", "source", "col"}
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.parts, self.open, self.skip_at = [], [], None
+
+    def handle_starttag(self, tag, attrs):
+        if tag in self.VOID:
+            if tag == "br" and self.skip_at is None:
+                self.parts.append("\n")
+            return
+        self.open.append(tag)
+        if self.skip_at is None:
+            if tag in self.SKIP or dict(attrs).get("aria-hidden") == "true":
+                self.skip_at = len(self.open) - 1
+            elif tag in self.BREAK:
+                self.parts.append("\n")
+
+    def handle_endtag(self, tag):
+        if tag in self.VOID:
+            return
+        if tag in self.open:
+            i = len(self.open) - 1 - self.open[::-1].index(tag)
+            del self.open[i:]
+            if self.skip_at is not None and self.skip_at >= len(self.open):
+                self.skip_at = None      # the skipped subtree just closed
+        if self.skip_at is None and tag in self.BREAK:
+            self.parts.append("\n")
+
+    def handle_data(self, data):
+        if self.skip_at is None:
+            self.parts.append(data)
+
+
+def page_text(doc):
+    """The prose of one page, one block per line."""
+    m = MAIN.search(doc)
+    p = _Prose()
+    p.feed(m.group(1) if m else doc)
+    lines = [re.sub(r"\s+", " ", ln).strip() for ln in "".join(p.parts).split("\n")]
+    return [ln for ln in lines if ln]
+
+
+full = [f"# {shell.BRAND}", ""]
+full += para("The full text of every English page on this site, in the order "
+             "llms.txt lists them. Generated from the pages themselves, so it "
+             "cannot drift from what they say. The Italian and Albanian "
+             "versions are the same records, page for page, under /it/ and "
+             "/sq/.")
+full += [""]
+for sec in SECTIONS:
+    for path, name, _desc in grouped.get(sec, []):
+        local = os.path.join(ROOT, path.strip("/").replace("/", os.sep),
+                             "index.html")
+        if path == "/":
+            local = os.path.join(ROOT, "index.html")
+        if not os.path.exists(local):
+            continue
+        full += [f"## {name}", f"{shell.SITE}{path}", ""]
+        full += page_text(io.open(local, encoding="utf-8").read())
+        full += [""]
+
+full_txt = NL.join(full).rstrip(NL) + NL
+print("llms-full.txt %s (%d KB)"
+      % (write_if_changed(os.path.join(ROOT, "llms-full.txt"), full_txt),
+         round(len(full_txt.encode("utf-8")) / 1024)))
 
 
 # ---------------------------------------------------------------- IndexNow --

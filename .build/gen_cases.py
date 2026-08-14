@@ -232,10 +232,27 @@ def work_index(clients, idx, lang):
     url = "/work/"
     full = S + shell.localise(url, lang)
     home = S + shell.localise("/", lang)
+    # The CollectionPage said what this page IS and never what it CONTAINS: an
+    # engine reading it had to infer the 4 clients from the markup. The
+    # ItemList states them, in the order the page shows them, each pointing at
+    # the CreativeWork node its own case page already publishes -- so this
+    # enumerates rather than duplicating, and a client that changes name in one
+    # place cannot disagree with itself in the other.
+    items = [{"@type": "ListItem", "position": i,
+              "url": S + shell.localise("/work/" + c["slug"] + "/", lang),
+              "name": c["name"],
+              "item": {"@id": S + shell.localise("/work/" + c["slug"] + "/", lang)
+                       + "#work"}}
+             for i, c in enumerate(clients, 1)]
     graph = [
         {"@type": "CollectionPage", "@id": full + "#page", "url": full,
          "name": idx["title"], "inLanguage": lang,
-         "about": {"@id": home + "#org"}},
+         "about": {"@id": home + "#org"},
+         "mainEntity": {"@id": full + "#list"}},
+        {"@type": "ItemList", "@id": full + "#list",
+         "name": idx["title"], "numberOfItems": len(items),
+         "itemListOrder": "https://schema.org/ItemListUnordered",
+         "itemListElement": items},
         {"@type": "BreadcrumbList", "@id": full + "#crumbs",
          "itemListElement": [
              {"@type": "ListItem", "position": 1,

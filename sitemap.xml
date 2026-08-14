@@ -242,6 +242,30 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/start/"/>
   </url>
   <url>
+    <loc>https://minarankstudio.com/glossary/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/glossary/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/glossary/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/glossary/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/glossary/"/>
+  </url>
+  <url>
+    <loc>https://minarankstudio.com/it/glossary/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/glossary/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/glossary/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/glossary/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/glossary/"/>
+  </url>
+  <url>
+    <loc>https://minarankstudio.com/sq/glossary/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/glossary/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://minarankstudio.com/it/glossary/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://minarankstudio.com/sq/glossary/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://minarankstudio.com/glossary/"/>
+  </url>
+  <url>
     <loc>https://minarankstudio.com/work/iglisi-watch/</loc>
     <lastmod>2026-08-14</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://minarankstudio.com/work/iglisi-watch/"/>

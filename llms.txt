@@ -42,3 +42,7 @@ with its hreflang alternates, is in https://minarankstudio.com/sitemap.xml.
 ## Studio
 - [How we work](https://minarankstudio.com/studio/): How we work: evidence before opinion, one plain document, built in house, and the things we will tell you for free even when it costs us the job.
 - [Start a project](https://minarankstudio.com/start/): Tell us what you sell and where you want to be found. Email, WhatsApp or a short call. We answer with a plan and a straight price.
+- [What the words mean](https://minarankstudio.com/glossary/): Plain definitions of the search and web words this studio uses: SEO, GEO, ranking, map listing, times shown, click rate and the rest. Written for shop owners, not agencies.
+
+The prose of every page below, in one file, is at
+https://minarankstudio.com/llms-full.txt.

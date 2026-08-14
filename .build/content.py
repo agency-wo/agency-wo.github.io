@@ -144,7 +144,9 @@ SERVICES = [
         "lead": "More people now ask an assistant before they open Google, and the "
                 "answer names a handful of businesses. Nobody tells you whether you "
                 "were one of them. There's no ranking report for this yet, which is "
-                "exactly why it's still cheap to win.",
+                "exactly why it's still cheap to win. If any of the words on "
+                "this page are new, <a href=\"/glossary/\">they are all "
+                "defined here</a>.",
         "sections": [
             # The answer names the client and then tells the reader to go and
             # check it, which is the only proof this subject has: there is no

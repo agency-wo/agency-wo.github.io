@@ -88,13 +88,18 @@ SLUG_MAX = 40
 MIN_ENTRIES = 4
 
 
-def slugify(text):
+def slugify(text, prefix="s-"):
     """An English heading as an id: ASCII, lower case, hyphens, prefixed s-.
 
     The prefix is doing real work rather than decorating. These documents
     already carry main, audit, sent, contact, services, audit-h and 6 af- ids,
     and an id that collides with one of those does not fail loudly: it sends
     everybody who clicks that contents link to the form instead of the section.
+
+    It is a parameter because h3 now needs ids too and h3 text can repeat an
+    h2 on the same page. "s-" stays the default so every existing call site is
+    untouched; sub-sections take "h-" and FAQ questions "q-", which makes a
+    collision between the two levels impossible rather than unlikely.
 
     The NFKD pass looks redundant while the heading handed in is always the
     English one, and it is the thing that makes the English rule safe to break
@@ -114,7 +119,7 @@ def slugify(text):
     cut = flat[:SLUG_MAX]
     if len(flat) > SLUG_MAX and "-" in cut:
         cut = cut[:cut.rindex("-")]
-    return "s-" + cut.strip("-")
+    return prefix + cut.strip("-")
 
 
 class Contents:
@@ -252,10 +257,15 @@ def render(svc, en_svc, posts, lang):
     do_id = toc.add(en_c.WHAT_WE_DO, c.WHAT_WE_DO)
     a(f'          <h2 id="{do_id}">{c.WHAT_WE_DO}</h2>\n')
     a('          <ol class="ledger">\n')
-    for item in svc["ledger"]:
+    # Zipped with the English the way the sections loop above is, and for the
+    # same reason: the id is slugged from the ENGLISH title so that
+    # /it/seo/#h-the-listing names the section /seo/#h-the-listing names.
+    # same_shape has already proved the two lists are the same length and in
+    # the same order, which is what makes pairing by index safe.
+    for item, en_item in zip(svc["ledger"], en_svc["ledger"]):
         title, bodytext = item[0], item[1]
         a('            <li>\n')
-        a(f'              <h3>{title}</h3>\n')
+        a(f'              <h3 id="{slugify(en_item[0], "h-")}">{title}</h3>\n')
         a(f'              <p>{shell.localise_html(bodytext, lang)}</p>\n')
         if len(item) > 2 and item[2]:
             a(f'              <p class="payoff">{shell.TICK}{svc["payoff"]}</p>\n')
@@ -274,9 +284,9 @@ def render(svc, en_svc, posts, lang):
     q_id = toc.add(en_c.QUESTIONS, c.QUESTIONS)
     a('          <section class="faq">\n')
     a(f'            <h2 id="{q_id}">{c.QUESTIONS}</h2>\n')
-    for q, ans in svc["faq"]:
+    for (q, ans), (en_q, _en_ans) in zip(svc["faq"], en_svc["faq"]):
         a('            <div class="faq-item">\n')
-        a(f'              <h3 class="faq-q">{q}</h3>\n')
+        a(f'              <h3 class="faq-q" id="{slugify(en_q, "q-")}">{q}</h3>\n')
         a(f'              <p>{shell.localise_html(ans, lang)}</p>\n')
         a('            </div>\n')
     a('          </section>\n')

@@ -100,6 +100,12 @@ SIDE_DID = "What we did"
 SIDE_ON_THIS_PAGE = "On this page"
 READ_NEXT = "Read next"
 READ_IT = "Read it"
+# The post byline. Every BlogPosting node has claimed an author since the posts
+# shipped and no post page ever showed one, so the schema asserted a person the
+# reader could not see. The name itself is shell.FOUNDER and is never typed
+# here: this is the preposition in front of it, which is the only part of a
+# byline that is a translation problem.
+BYLINE = "By"
 # The last-updated line at the foot of the prose. {date} is a token and is
 # filled by shell.updated() with l10n.human's output, so this string never
 # carries a month name and a translator never types one: the 36 month names

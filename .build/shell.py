@@ -34,8 +34,28 @@ _CHROME = {"en": chrome, "it": chrome_it, "sq": chrome_sq}
 # KeyError that names no language.
 for _lg, _mod in _CHROME.items():
     if _lg != "en":
+        # The SRC dict in each translation carried 50 stamps that NOTHING read.
+        # Its own comment said "i18n.load() names the one that went stale", and
+        # i18n.load() never sees this file: chrome is imported directly, right
+        # above. Proved by mutation -- rewording READ_NEXT in English and
+        # rebuilding passed silently, so both translations could have gone on
+        # answering a sentence the English no longer said, on all 66 pages.
+        #
+        # same_shape catches a missing string. Only the stamp catches a string
+        # that is still there and no longer means what it meant.
+        _src = getattr(_mod, "SRC", {})
         for _a in [a for a in dir(chrome) if a.isupper() and not a.startswith("_")]:
             i18n.same_shape(getattr(chrome, _a), getattr(_mod, _a), _lg, _a)
+            _want = i18n.stamp(getattr(chrome, _a))
+            _got = _src.get(_a)
+            assert _got, (
+                f"chrome_{_lg}.py has no SRC entry for {_a}. Add "
+                f'"{_a}": "{_want}" -- an unstamped chrome string is one that '
+                f"can go stale in English without saying so")
+            assert _got == _want, (
+                f"chrome.{_a} changed in English (stamp was {_got}, is now "
+                f"{_want}) and chrome_{_lg}.py still claims {_got}. "
+                f"Re-translate, then re-stamp.")
 
 SITE = "https://minarankstudio.com"
 DOT = "·"
@@ -342,6 +362,31 @@ def localise_html(s, lang):
     return _HREF.sub(lambda m: 'href="' + localise(m.group(1), lang) + '"', s)
 
 
+def translation_links(path, lang, frag=""):
+    """schema.org's translation pair for the CreativeWork at this path.
+
+    hreflang tells a crawler that these 3 URLs are alternates of one another.
+    It does not say which one is the original, and until now nothing did. An
+    answer engine reading the Albanian post had no way to know it was reading a
+    translation rather than a separate article making the same claims.
+
+    English is the original, and that is not an opinion: i18n.stamp() hashes the
+    ENGLISH record and both translations carry its src, so the build already
+    refuses to ship a translation whose English has moved. This states the fact
+    the stamps enforce.
+
+    Derived from i18n.url_for the same way alternates() is, so the schema and
+    the hreflang cannot disagree about where a language lives.
+    """
+    if len(i18n.LANGS) < 2:
+        return {}                  # one language is not a translation of itself
+    if lang == "en":
+        return {"workTranslation": [
+            {"@id": SITE + i18n.url_for(path, lg) + frag}
+            for lg in i18n.LANGS if lg != "en"]}
+    return {"translationOfWork": {"@id": SITE + i18n.url_for(path, "en") + frag}}
+
+
 def alternates(path):
     """The 4 (hreflang, url) pairs, derived from the English path.
 
@@ -465,6 +510,20 @@ def head(page, lang):
     # website unless the page says otherwise. The 9 posts say "article", which
     # is the one og:type distinction the crawlers act on; nothing else here
     # earns a rarer type.
+    #
+    # An article also gets its dates and its author in the meta layer. The
+    # JSON-LD has said all 3 since the posts shipped, and a parser that reads
+    # meta tags without executing or parsing ld+json saw none of them. Emitted
+    # only when the generator supplied them, so a page that is not an article
+    # cannot end up claiming a publication date it does not have.
+    art = "".join(
+        f'{NL}  <meta property="{k}" content="{v}">'
+        for k, v in (("article:published_time", page.get("published")),
+                     ("article:modified_time", page.get("modified")))
+        if v)
+    if page.get("author"):
+        art += (f'{NL}  <meta property="article:author" content="{page["author"]}">'
+                f'{NL}  <meta name="author" content="{page["author"]}">')
     og_w, og_h = OG_SIZE[lang]
     return f'''<!DOCTYPE html>
 <html lang="{i18n.HTML_LANG[lang]}">
@@ -476,7 +535,7 @@ def head(page, lang):
 {head_url}{alts}
   <meta name="theme-color" content="#F0F1F3">
 
-  <meta property="og:type" content="{page.get("og_type", "website")}">
+  <meta property="og:type" content="{page.get("og_type", "website")}">{art}
   <meta property="og:site_name" content="{BRAND}">
   <meta property="og:locale" content="{i18n.OG_LOCALE[lang]}">
   <meta property="og:title" content="{page["title"]}">
