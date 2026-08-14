@@ -106,6 +106,12 @@ SAMEAS = [
     # anything without a session, so there is no og:url to corroborate it with,
     # and the owner stating their own account is the better authority anyway.
     "https://www.instagram.com/minarankstudio",
+    # A directory profile is the same business somewhere else, which is what
+    # sameAs is for, and this one is the kind Google can actually check: it is
+    # a third party publishing a page about us rather than us publishing one
+    # about ourselves. Verified before it shipped -- 200, and the page's own
+    # title is "minarank studio Company Profile - TechBehemoths".
+    "https://techbehemoths.com/company/mina-rank-studio",
 ]
 FOUNDER_SAMEAS = [
     "https://www.linkedin.com/in/placeholder-paste-the-founder-profile",
