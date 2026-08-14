@@ -110,6 +110,10 @@ IDENTICAL_BY_DESIGN = {
     # searches the name we printed, so an Italian rendering of it would send
     # him looking for a report that does not exist under that name.
     "Changing Traveller Report 2026",
+    # Same rule, the name of a journal. A reader who wants to check the dentist
+    # figure searches the title we printed; an Italian rendering of it finds
+    # nothing. Titles of cited works are proper nouns in every language.
+    "International Journal of Environmental Research and Public Health",
     # The form control label. Italian and Albanian both write "Email" on a
     # form, and check 35 would otherwise fail 8 correct pages for it.
     "Email",

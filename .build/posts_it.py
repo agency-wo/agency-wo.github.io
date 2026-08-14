@@ -1161,6 +1161,228 @@ POSTS = [
         "related": [("/web-design/", "Siti web"),
                     ("/seo/", "SEO e ricerca locale")],
     },
+    # ==================================================== INDUSTRY: DENTISTS ===
+    {
+        "slug": "dentists-and-clinics",
+        "src": "9266037f",
+        "date": "2026-08-14",
+        "updated": "2026-08-14",
+        "topic": "Siti web",
+        "work": None,
+        "service": ("/web-design/", "Siti web"),
+
+        "title": "Quasi tutti i pazienti arrivano consigliati",
+        "h1": "Qualcuno gli ha dato il tuo nome. Il sito decide cosa succede "
+              "dopo.",
+        "summary": "Un dentista si sceglie sulla parola di qualcuno molto più "
+                   "che su una ricerca, e questo cambia a cosa serve il sito.",
+        "standfirst": "La pagina non sta convincendo uno sconosciuto. Sta "
+                      "confermando quello che un amico ha già detto, a "
+                      "qualcuno che sta controllando.",
+        "description": "I pazienti scelgono il dentista su consiglio molto più "
+                       "che con una ricerca. Perché questo rende il sito una "
+                       "conferma e non una pubblicità.",
+        "og_desc": "Un amico gli ha dato il tuo nome. Al sito basta dimostrare "
+                   "che l'amico aveva ragione.",
+
+        "body": [
+            ("La risposta breve", [
+                "<p>Un dentista non si cerca come si cerca un ristorante. Si "
+                "chiede a qualcuno di cui ci si fida, si ottiene un nome, e "
+                "poi quel nome si va a controllare.</p>",
+                "<p>Quindi il sito non deve vincere una discussione. Deve "
+                "reggere a un controllo.</p>",
+            ]),
+            ("Cosa ha trovato davvero la ricerca", [
+                "<p>Uno studio su 466 pazienti in 3 città tedesche, pubblicato "
+                "sull'<a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC9324363/\" target=\"_blank\" rel=\"noopener\">International Journal of Environmental Research and Public Health</a>, "
+                "ha chiesto come fossero venuti a conoscenza del loro "
+                "dentista. Il 65,6% ha risposto un consiglio. Il 7,3% "
+                "internet.</p>",
+                "<p>È un paese solo e le interviste sono del 2012 e 2013, "
+                "quindi prendilo come una forma e non come una misura di "
+                "Durazzo oggi. La forma è la parte utile, e dove è stata "
+                "richiesta da allora non si è ribaltata.</p>",
+            ]),
+            ("Essere controllati è un lavoro diverso da farsi trovare", [
+                "<p>Chi ha ricevuto il tuo nome lo digita direttamente. Cerca "
+                "un indirizzo, una fotografia del posto, gli orari e un segno "
+                "che lì dentro lavori una persona vera.</p>",
+                "<p>Se non esce niente, il consiglio si indebolisce in "
+                "silenzio. Non perché dubitino dell'amico, ma perché uno "
+                "studio senza traccia sembra uno che potrebbe aver "
+                "chiuso.</p>",
+            ]),
+            ("Cosa mettere sulla pagina, in ordine", [
+                "<p>Il nome del dentista e una sua fotografia. L'indirizzo con "
+                "una mappa. Gli orari. Cosa curi davvero, con le parole che "
+                "userebbe un paziente e non quelle cliniche.</p>",
+                "<p>I prezzi sono una scelta e non un obbligo, e comunque tu "
+                "decida, non dire niente è l'opzione che ti costa il paziente "
+                "insicuro.</p>",
+            ]),
+            ("Dove la ricerca serve ancora", [
+                "<p>Due casi. L'emergenza, in cui chi ha male cerca e prende "
+                "chi lo può ricevere. E chi è appena arrivato in città e non "
+                "conosce nessuno, che in una città con questo movimento non è "
+                "un gruppetto.</p>",
+                "<p>Tutti e due si trovano sulla mappa e non attraverso il "
+                "sito, il che rende la scheda la metà più economica di questo "
+                "lavoro.</p>",
+            ]),
+        ],
+        "payoff": "Cerca il tuo studio come lo cercherebbe un paziente, con il "
+                  "nome che gli avrebbe dato un amico, e dicci cosa hai "
+                  "trovato.",
+        "related": [("/web-design/", "Siti web"),
+                    ("/seo/", "SEO e ricerca locale")],
+    },
+
+    # ================================================== INDUSTRY: CAR REPAIR ===
+    {
+        "slug": "car-repair-and-garages",
+        "src": "63038f5d",
+        "date": "2026-08-14",
+        "updated": "2026-08-14",
+        "topic": "Ricerca locale",
+        "work": None,
+        "service": ("/seo/", "SEO e ricerca locale"),
+
+        "title": "Nessuno cerca un meccanico",
+        "h1": "Cercano il rumore che fa la macchina.",
+        "summary": "Chi guida descrive un sintomo, non un servizio, e trova "
+                   "l'officina che quel sintomo lo ha scritto da qualche "
+                   "parte.",
+        "standfirst": "Una pagina che dice riparazioni auto risponde a una "
+                      "ricerca che nessuno fa. Una pagina su un ticchettio "
+                      "risponde a quella che fanno.",
+        "description": "Chi guida cerca un rumore, una spia o un odore, non "
+                       "un'officina. Cosa vuol dire per come si fa trovare un "
+                       "meccanico.",
+        "og_desc": "Non digitano meccanico. Digitano il rumore che fa a bassa "
+                   "velocità.",
+
+        "body": [
+            ("La risposta breve", [
+                "<p>Chi guida e ha un problema non sa cosa si è rotto. Sa che "
+                "fa un rumore in curva, o che si è accesa una spia, o che c'è "
+                "un odore dopo un viaggio lungo.</p>",
+                "<p>È quello che viene digitato. L'officina che quelle parole "
+                "le ha scritte da qualche parte è quella che compare.</p>",
+            ]),
+            ("Il mercato sono le auto vecchie, e invecchiano ancora", [
+                "<p>Nel 2022 le auto in Unione Europea avevano in media 12,3 "
+                "anni, contro i 10,9 del 2013, secondo i "
+                "<a href=\"https://www.eea.europa.eu/en/analysis/publications/product-lifespans-monitoring-trends/evolution-of-the-average-passenger-car-age-in-the-eu-between-2013-and-2022\" target=\"_blank\" rel=\"noopener\">dati dell'Agenzia europea dell'ambiente</a> "
+                "presi da Eurostat.</p>",
+                "<p>Quella è l'Unione Europea e l'Albania non ne fa parte, "
+                "quindi il numero descrive i vicini e non questo mercato. Vale "
+                "la pena saperlo lo stesso: un parco auto che invecchia è un "
+                "mestiere di riparazioni che cresce, ovunque lo abbiano "
+                "contato.</p>",
+            ]),
+            ("Scrivi quello che la gente ti porta davvero", [
+                "<p>Per un mese annota come i clienti descrivono il guasto "
+                "quando telefonano. Quelle frasi, con le loro parole, sono le "
+                "pagine che conviene avere.</p>",
+                "<p>Non costa niente, non ha bisogno di design, ed è più "
+                "vicino a quello che uno digita di qualsiasi elenco di servizi "
+                "che un'officina scriverebbe su se stessa.</p>",
+            ]),
+            ("La ricerca del guasto in strada è una ricerca sulla mappa", [
+                "<p>Chi è fermo sul ciglio non legge. Vuole il posto aperto "
+                "più vicino e un pulsante che lo chiami. Orari, posizione e un "
+                "numero di telefono decidono tutto, e stanno tutti e 3 sulla "
+                "scheda e non sul sito.</p>",
+            ]),
+            ("In questo mestiere la difficoltà è la fiducia", [
+                "<p>A ogni automobilista è stato preventivato un lavoro che "
+                "sospetta inventato. Quel sospetto è il vero concorrente, non "
+                "l'officina in fondo alla strada.</p>",
+                "<p>Fotografie del lavoro, un preventivo scritto prima di "
+                "cominciare e dire cosa non farai valgono più di qualsiasi "
+                "cosa una pagina possa dichiarare sulla qualità.</p>",
+            ]),
+        ],
+        "payoff": "Dicci le 3 lamentele che senti più spesso al telefono, "
+                  "parola per parola, e ti facciamo vedere cosa sta digitando "
+                  "la gente.",
+        "related": [("/seo/", "SEO e ricerca locale"),
+                    ("/web-design/", "Siti web")],
+    },
+
+    # =============================================== INDUSTRY: ESTATE AGENTS ===
+    {
+        "slug": "estate-agents",
+        "src": "d61623a0",
+        "date": "2026-08-14",
+        "updated": "2026-08-14",
+        "topic": "Annunci Meta",
+        "work": None,
+        "service": ("/meta-ads/", "Annunci Meta"),
+
+        "title": "Il tuo marketing è per chi vende",
+        "h1": "Il portale ha già i compratori. Tu stai gareggiando per chi "
+              "vende.",
+        "summary": "I compratori stanno sul portale qualunque cosa tu faccia. "
+                   "L'incarico è la cosa per cui gareggi davvero, e arriva da "
+                   "un'altra parte.",
+        "standfirst": "Ogni agenzia della città pubblicizza gli stessi "
+                      "appartamenti agli stessi compratori sullo stesso sito. "
+                      "Niente di tutto questo decide chi prende il prossimo "
+                      "incarico.",
+        "description": "La vera concorrenza di un'agenzia immobiliare è "
+                       "sull'incarico, non sul compratore. Cosa cambia su dove "
+                       "vanno i soldi del marketing.",
+        "og_desc": "I compratori arrivano dal portale. Chi vende arriva da "
+                   "qualcosa che devi costruire.",
+
+        "body": [
+            ("La risposta breve", [
+                "<p>I compratori vanno sul portale, perché è lì che stanno "
+                "tutti gli immobili. Il tuo annuncio lì gareggia sul prezzo e "
+                "sulle fotografie e su poco altro.</p>",
+                "<p>Chi vende è la cosa scarsa. Conquistarlo è un lavoro "
+                "diverso e non ci spende quasi nessuno.</p>",
+            ]),
+            ("Perché il portale non è il tuo marketing", [
+                "<p>Pagare per pubblicare su un portale ti mette in fila con "
+                "ogni concorrente, su una pagina che è del portale, davanti a "
+                "un compratore che il tuo nome non lo imparerà mai. È "
+                "distribuzione ed è necessaria.</p>",
+                "<p>Non è un motivo per cui qualcuno sceglierebbe te per "
+                "vendere il suo appartamento, che è l'unica decisione che fa "
+                "crescere un'agenzia.</p>",
+            ]),
+            ("Cosa sta decidendo davvero chi vende", [
+                "<p>Chi pensa di vendere vuole sapere quanto vale casa sua, "
+                "quanto ci vorrà, e se tu hai venduto qualcosa di simile lì "
+                "vicino.</p>",
+                "<p>Di solito ci pensa per mesi prima di telefonare a "
+                "chiunque. Quel lungo periodo silenzioso è tutta "
+                "l'opportunità, e non è sul portale.</p>",
+            ]),
+            ("Dove dovrebbero andare i soldi", [
+                "<p>Pagine sulle strade in cui vendi davvero, cosa è andato "
+                "via di recente e più o meno a quanto. Annunci rivolti a chi "
+                "possiede in quelle strade invece che a tutti quelli che "
+                "cercano casa.</p>",
+                "<p>È un pubblico più piccolo e una distanza molto più corta "
+                "da un incarico.</p>",
+            ]),
+            ("Le fotografie sono il prodotto", [
+                "<p>Chi vende ti giudica dall'ultimo annuncio che hai "
+                "pubblicato, perché è l'unica prova di come verrà il suo. Le "
+                "brutte fotografie non ti costano solo quella vendita. Ti "
+                "costano l'incarico successivo, di qualcuno che le ha viste e "
+                "ha deciso in silenzio.</p>",
+            ]),
+        ],
+        "payoff": "Dicci da dove sono arrivati i tuoi ultimi 3 incarichi, e ti "
+                  "diciamo se il portale c'entrava qualcosa.",
+        "related": [("/meta-ads/", "Annunci Meta"),
+                    ("/web-design/", "Siti web")],
+    },
 ]
 
 # /blog/, the index over those records. The soft wraps are placed for this text

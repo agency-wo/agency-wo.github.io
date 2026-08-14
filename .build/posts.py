@@ -1124,6 +1124,220 @@ POSTS = [
         "related": [("/web-design/", "Websites"),
                     ("/seo/", "SEO and local search")],
     },
+    # ==================================================== INDUSTRY: DENTISTS ===
+    {
+        "slug": "dentists-and-clinics",
+        "date": "2026-08-14",
+        "updated": "2026-08-14",
+        "topic": "Websites",
+        "work": None,
+        "service": ("/web-design/", "Websites"),
+
+        "title": "Most patients arrive recommended",
+        "h1": "Somebody gave them your name. The site decides what happens "
+              "next.",
+        "summary": "A dentist is chosen on somebody's word far more often than "
+                   "on a search, which changes what the website is for.",
+        "standfirst": "The page is not competing for a stranger. It is "
+                      "confirming what a friend already said, to somebody who "
+                      "is checking.",
+        "description": "Patients pick a dentist on recommendation far more "
+                       "than on search. Why that makes the website a "
+                       "confirmation rather than an advertisement.",
+        "og_desc": "A friend gave them your name. The site only has to prove "
+                   "the friend was right.",
+
+        "body": [
+            ("The short answer", [
+                "<p>People do not shop for a dentist the way they shop for a "
+                "restaurant. They ask somebody they trust, get a name, and "
+                "then look that name up.</p>",
+                "<p>So the website is not there to win an argument. It is "
+                "there to survive being checked.</p>",
+            ]),
+            ("What the research actually found", [
+                "<p>A study of 466 patients across 3 German cities, published "
+                "in the "
+                "<a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC9324363/\" target=\"_blank\" rel=\"noopener\">International Journal of Environmental Research and Public Health</a>, "
+                "asked how they had become aware of their dentist. 65.6% said "
+                "a recommendation. 7.3% said the internet.</p>",
+                "<p>That is one country and the fieldwork was done in 2012 and "
+                "2013, so treat it as a shape rather than a measurement of "
+                "Durres today. The shape is the useful part, and it has not "
+                "reversed anywhere it has been asked since.</p>",
+            ]),
+            ("Being checked is a different job from being found", [
+                "<p>Somebody who was given your name types it directly. They "
+                "are looking for an address, a photograph of the place, the "
+                "hours, and some sign that a real person works there.</p>",
+                "<p>If nothing comes up, the recommendation quietly weakens. "
+                "Not because they doubt their friend, but because a clinic "
+                "with no trace looks like one that might have closed.</p>",
+            ]),
+            ("What to put on the page, in order", [
+                "<p>The name of the dentist and a photograph of them. The "
+                "address with a map. The hours. What you actually treat, in "
+                "the words a patient would use rather than the clinical "
+                "ones.</p>",
+                "<p>Prices are a decision rather than an obligation, and "
+                "whichever you choose, saying nothing at all is the option "
+                "that costs you the nervous patient.</p>",
+            ]),
+            ("Where search still earns its keep", [
+                "<p>Two cases. The emergency, where somebody in pain searches "
+                "and takes whoever can see them. And the newcomer who knows "
+                "nobody in the city yet, which in a town with this much "
+                "movement is not a small group.</p>",
+                "<p>Both are found on the map rather than through the site, "
+                "which makes the listing the cheaper half of this job.</p>",
+            ]),
+        ],
+        "payoff": "Search your own clinic the way a patient would, with the "
+                  "name a friend would have given them, and tell us what you "
+                  "found.",
+        "related": [("/web-design/", "Websites"),
+                    ("/seo/", "SEO and local search")],
+    },
+
+    # ================================================== INDUSTRY: CAR REPAIR ===
+    {
+        "slug": "car-repair-and-garages",
+        "date": "2026-08-14",
+        "updated": "2026-08-14",
+        "topic": "Local search",
+        "work": None,
+        "service": ("/seo/", "SEO and local search"),
+
+        "title": "Nobody searches for a mechanic",
+        "h1": "They search the noise the car is making.",
+        "summary": "Drivers describe a symptom, not a service, and the garage "
+                   "that wrote the symptom down is the one they find.",
+        "standfirst": "A page that says car repair answers a search nobody "
+                      "makes. A page about a knocking sound answers the one "
+                      "they do.",
+        "description": "Drivers search for a noise, a warning light or a "
+                       "smell, not for a garage. What that means for how a "
+                       "workshop should be findable.",
+        "og_desc": "They do not type mechanic. They type the noise it makes at "
+                   "low speed.",
+
+        "body": [
+            ("The short answer", [
+                "<p>A driver with a problem does not know what is broken. They "
+                "know it makes a noise when turning, or a light came on, or "
+                "there is a smell after a long drive.</p>",
+                "<p>That is what gets typed. The garage that has written those "
+                "words down somewhere is the one that turns up.</p>",
+            ]),
+            ("The market is old cars, and it keeps getting older", [
+                "<p>Passenger cars in the EU averaged 12.3 years old in 2022, "
+                "up from 10.9 in 2013, on "
+                "<a href=\"https://www.eea.europa.eu/en/analysis/publications/product-lifespans-monitoring-trends/evolution-of-the-average-passenger-car-age-in-the-eu-between-2013-and-2022\" target=\"_blank\" rel=\"noopener\">European Environment Agency figures</a> "
+                "drawn from Eurostat.</p>",
+                "<p>That is the EU and Albania is not in it, so the number "
+                "describes the neighbours rather than this market. It is worth "
+                "knowing anyway: an ageing fleet is a growing repair trade "
+                "everywhere it has been counted.</p>",
+            ]),
+            ("Write down what people actually bring you", [
+                "<p>Keep a note for a month of how customers describe what is "
+                "wrong when they ring. Those sentences, in their words, are "
+                "the pages worth having.</p>",
+                "<p>It costs nothing, it needs no design, and it is closer to "
+                "what somebody types than any list of services a workshop "
+                "would write about itself.</p>",
+            ]),
+            ("The breakdown search is a map search", [
+                "<p>Somebody stopped at the roadside is not reading. They want "
+                "the nearest place that is open and a button that dials it. "
+                "Hours, location and a phone number decide that, and all 3 are "
+                "on the listing rather than the site.</p>",
+            ]),
+            ("Trust is the whole difficulty in this trade", [
+                "<p>Every driver has been quoted for work they suspect was "
+                "invented. That suspicion is the real competitor, not the "
+                "garage down the road.</p>",
+                "<p>Photographs of the work, a written quote before starting, "
+                "and naming what you will not do are worth more than "
+                "anything a page can claim about quality.</p>",
+            ]),
+        ],
+        "payoff": "Tell us the 3 complaints you hear most on the phone, word "
+                  "for word, and we will show you what people are typing.",
+        "related": [("/seo/", "SEO and local search"),
+                    ("/web-design/", "Websites")],
+    },
+
+    # =============================================== INDUSTRY: ESTATE AGENTS ===
+    {
+        "slug": "estate-agents",
+        "date": "2026-08-14",
+        "updated": "2026-08-14",
+        "topic": "Meta ads",
+        "work": None,
+        "service": ("/meta-ads/", "Meta ads"),
+
+        "title": "Your marketing is for sellers",
+        "h1": "The portal already has the buyers. You are competing for the "
+              "seller.",
+        "summary": "Buyers are on the portal whatever you do. The listing is "
+                   "what you actually compete for, and it comes from "
+                   "somewhere else.",
+        "standfirst": "Every agent in town advertises the same flats to the "
+                      "same buyers on the same site. None of that decides who "
+                      "gets the next instruction.",
+        "description": "An estate agent's real competition is for the "
+                       "instruction, not the buyer. What that changes about "
+                       "where the marketing money goes.",
+        "og_desc": "Buyers come from the portal. Sellers come from somewhere "
+                   "you have to build.",
+
+        "body": [
+            ("The short answer", [
+                "<p>Buyers go to the portal, because that is where every "
+                "property is. Your listing competes there on price and "
+                "photographs and very little else.</p>",
+                "<p>The seller is the scarce thing. Winning that is a "
+                "different job and almost nobody spends money on it.</p>",
+            ]),
+            ("Why the portal is not your marketing", [
+                "<p>Paying to list on a portal puts you in a row with every "
+                "rival, on a page the portal owns, in front of a buyer who "
+                "will never learn your name. It is distribution and it is "
+                "necessary.</p>",
+                "<p>It is not a reason anybody would choose you to sell their "
+                "flat, which is the only decision that grows an agency.</p>",
+            ]),
+            ("What a seller is actually deciding", [
+                "<p>Somebody thinking of selling wants to know what their "
+                "place is worth, how long it will take, and whether you have "
+                "sold anything like it nearby.</p>",
+                "<p>They usually think about it for months before ringing "
+                "anybody. That long quiet period is the whole opportunity, and "
+                "it is not on the portal.</p>",
+            ]),
+            ("Where the money should go instead", [
+                "<p>Pages about the streets you actually sell in, what went "
+                "recently and roughly for what. Ads aimed at the people who "
+                "own in those streets rather than at everyone looking to "
+                "buy.</p>",
+                "<p>That is a smaller audience and a much shorter distance to "
+                "an instruction.</p>",
+            ]),
+            ("The photographs are the product", [
+                "<p>A seller judges you by the last listing you published, "
+                "because it is the only evidence of how theirs will look. "
+                "Bad photographs do not just cost you that sale. They cost "
+                "you the next instruction, from somebody who saw them and "
+                "quietly decided.</p>",
+            ]),
+        ],
+        "payoff": "Tell us where your last 3 instructions came from, and we "
+                  "will tell you whether the portal had anything to do with "
+                  "it.",
+        "related": [("/meta-ads/", "Meta ads"),
+                    ("/web-design/", "Websites")],
+    },
 ]
 
 # /blog/, the index over those records. It is a page and a page's copy is copy,

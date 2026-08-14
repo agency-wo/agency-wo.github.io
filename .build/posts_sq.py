@@ -1158,6 +1158,218 @@ POSTS = [
         "related": [("/web-design/", "Faqe interneti"),
                     ("/seo/", "SEO dhe kërkim lokal")],
     },
+    # ==================================================== INDUSTRY: DENTISTS ===
+    {
+        "slug": "dentists-and-clinics",
+        "src": "9266037f",
+        "date": "2026-08-14",
+        "updated": "2026-08-14",
+        "topic": "Faqe interneti",
+        "work": None,
+        "service": ("/web-design/", "Faqe interneti"),
+
+        "title": "Shumica e pacientëve vijnë të rekomanduar",
+        "h1": "Dikush ua dha emrin tënd. Faqja vendos se çfarë ndodh më pas.",
+        "summary": "Dentisti zgjidhet me fjalën e dikujt shumë më shpesh sesa "
+                   "me një kërkim, dhe kjo ndryshon se për çfarë shërben "
+                   "faqja.",
+        "standfirst": "Faqja nuk po bind një të panjohur. Po vërteton atë që "
+                      "një shok e ka thënë tashmë, para dikujt që po "
+                      "kontrollon.",
+        "description": "Pacientët e zgjedhin dentistin me rekomandim shumë më "
+                       "shpesh sesa me kërkim. Pse kjo e bën faqen një "
+                       "vërtetim dhe jo një reklamë.",
+        "og_desc": "Një shok ua dha emrin tënd. Faqes i mbetet vetëm të "
+                   "provojë se shoku kishte të drejtë.",
+
+        "body": [
+            ("Përgjigjja e shkurtër", [
+                "<p>Dentisti nuk kërkohet si kërkohet një restorant. I pyesin "
+                "dikujt që i besojnë, marrin një emër, dhe pastaj atë emër "
+                "shkojnë e kontrollojnë.</p>",
+                "<p>Prandaj faqja nuk ka për të fituar një debat. Ka për t'i "
+                "qëndruar një kontrolli.</p>",
+            ]),
+            ("Çfarë gjeti vërtet studimi", [
+                "<p>Një studim me 466 pacientë në 3 qytete gjermane, botuar te "
+                "<a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC9324363/\" target=\"_blank\" rel=\"noopener\">International Journal of Environmental Research and Public Health</a>, "
+                "i pyeti si kishin dëgjuar për dentistin e tyre. 65,6% thanë "
+                "një rekomandim. 7,3% thanë internetin.</p>",
+                "<p>Është një vend i vetëm dhe intervistat janë të vitit 2012 "
+                "dhe 2013, prandaj merre si formë dhe jo si matje të Durrësit "
+                "sot. Forma është pjesa e dobishme, dhe atje ku është pyetur "
+                "që atëherë nuk është përmbysur.</p>",
+            ]),
+            ("Të kontrollohesh është punë tjetër nga të gjendesh", [
+                "<p>Ai që mori emrin tënd e shkruan drejtpërdrejt. Kërkon një "
+                "adresë, një fotografi të vendit, orarin dhe një shenjë që aty "
+                "brenda punon një njeri i vërtetë.</p>",
+                "<p>Nëse nuk del asgjë, rekomandimi dobësohet në heshtje. Jo "
+                "se dyshojnë te shoku, por sepse një klinikë pa gjurmë duket "
+                "si një klinikë që mund të ketë mbyllur.</p>",
+            ]),
+            ("Çfarë të vësh në faqe, me radhë", [
+                "<p>Emrin e dentistit dhe një fotografi të tij. Adresën me një "
+                "hartë. Orarin. Çfarë kuron vërtet, me fjalët që do të "
+                "përdorte një pacient dhe jo me ato klinike.</p>",
+                "<p>Çmimet janë zgjedhje dhe jo detyrim, dhe si të vendosësh, "
+                "të mos thuash asgjë është varianti që të kushton pacientin e "
+                "pasigurt.</p>",
+            ]),
+            ("Ku e vlen ende kërkimi", [
+                "<p>Dy raste. Urgjenca, ku ai që ka dhimbje kërkon dhe merr "
+                "atë që e pret. Dhe ai që sapo ka ardhur në qytet e nuk njeh "
+                "njeri, që në një qytet me kaq lëvizje nuk është grup i "
+                "vogël.</p>",
+                "<p>Të dy gjenden në hartë dhe jo përmes faqes, që e bën "
+                "profilin gjysmën më të lirë të kësaj pune.</p>",
+            ]),
+        ],
+        "payoff": "Kërkoje klinikën tënde si do ta kërkonte një pacient, me "
+                  "emrin që do t'i kishte dhënë një shok, dhe na thuaj çfarë "
+                  "gjete.",
+        "related": [("/web-design/", "Faqe interneti"),
+                    ("/seo/", "SEO dhe kërkim lokal")],
+    },
+
+    # ================================================== INDUSTRY: CAR REPAIR ===
+    {
+        "slug": "car-repair-and-garages",
+        "src": "63038f5d",
+        "date": "2026-08-14",
+        "updated": "2026-08-14",
+        "topic": "Kërkim lokal",
+        "work": None,
+        "service": ("/seo/", "SEO dhe kërkim lokal"),
+
+        "title": "Askush nuk kërkon mekanik",
+        "h1": "Kërkojnë zhurmën që bën makina.",
+        "summary": "Shoferi përshkruan një shenjë, jo një shërbim, dhe gjen "
+                   "atë ofiçinë që atë shenjë e ka shkruar diku.",
+        "standfirst": "Një faqe që thotë riparim makinash i përgjigjet një "
+                      "kërkimi që s'e bën njeri. Një faqe për një zhurmë "
+                      "kërcitëse i përgjigjet atij që e bëjnë.",
+        "description": "Shoferët kërkojnë një zhurmë, një dritë sinjalizuese "
+                       "ose një erë, jo një ofiçinë. Çfarë do të thotë kjo për "
+                       "mënyrën si gjendet një mekanik.",
+        "og_desc": "Nuk shkruajnë mekanik. Shkruajnë zhurmën që bën në "
+                   "shpejtësi të ulët.",
+
+        "body": [
+            ("Përgjigjja e shkurtër", [
+                "<p>Shoferi me një problem nuk e di çfarë është prishur. E di "
+                "që bën zhurmë kur kthen, ose që u ndez një dritë, ose që ka "
+                "një erë pas një rruge të gjatë.</p>",
+                "<p>Kjo është ajo që shkruhet. Ofiçina që ato fjalë i ka "
+                "shkruar diku është ajo që del.</p>",
+            ]),
+            ("Tregu janë makinat e vjetra, dhe vjetërohen edhe më", [
+                "<p>Në 2022 makinat në Bashkimin Evropian ishin mesatarisht "
+                "12,3 vjeç, nga 10,9 në 2013, sipas "
+                "<a href=\"https://www.eea.europa.eu/en/analysis/publications/product-lifespans-monitoring-trends/evolution-of-the-average-passenger-car-age-in-the-eu-between-2013-and-2022\" target=\"_blank\" rel=\"noopener\">shifrave të Agjencisë Evropiane të Mjedisit</a> "
+                "marrë nga Eurostat.</p>",
+                "<p>Ai është Bashkimi Evropian dhe Shqipëria nuk bën pjesë, "
+                "prandaj numri përshkruan fqinjët dhe jo këtë treg. Ia vlen ta "
+                "dish gjithsesi: një park makinash që plaket është një zanat "
+                "riparimi që rritet, kudo ku është numëruar.</p>",
+            ]),
+            ("Shkruaj atë që të sjellin vërtet njerëzit", [
+                "<p>Për një muaj mbaj shënim si e përshkruajnë klientët "
+                "prishjen kur marrin në telefon. Ato fjali, me fjalët e tyre, "
+                "janë faqet që ia vlen t'i kesh.</p>",
+                "<p>Nuk kushton asgjë, s'ka nevojë për dizajn, dhe është më "
+                "afër asaj që shkruan dikush sesa çdo listë shërbimesh që një "
+                "ofiçinë do të shkruante për vete.</p>",
+            ]),
+            ("Kërkimi kur mbetesh në rrugë është kërkim në hartë", [
+                "<p>Ai që ka mbetur në anë të rrugës nuk lexon. Do vendin më "
+                "të afërt që është hapur dhe një buton që e merr në telefon. "
+                "Orari, vendndodhja dhe një numër telefoni e vendosin, dhe të "
+                "3 rrinë te profili e jo te faqja.</p>",
+            ]),
+            ("Në këtë zanat e gjithë vështirësia është besimi", [
+                "<p>Çdo shoferi i është ofertuar një punë që dyshon se ishte e "
+                "shpikur. Ai dyshim është konkurrenti i vërtetë, jo ofiçina "
+                "më poshtë në rrugë.</p>",
+                "<p>Fotografitë e punës, një ofertë me shkrim para se të "
+                "nisësh, dhe të thuash çfarë nuk do ta bësh vlejnë më shumë se "
+                "çdo gjë që një faqe mund të pretendojë për cilësinë.</p>",
+            ]),
+        ],
+        "payoff": "Na thuaj 3 ankesat që dëgjon më shpesh në telefon, fjalë "
+                  "për fjalë, dhe të tregojmë çfarë po shkruajnë njerëzit.",
+        "related": [("/seo/", "SEO dhe kërkim lokal"),
+                    ("/web-design/", "Faqe interneti")],
+    },
+
+    # =============================================== INDUSTRY: ESTATE AGENTS ===
+    {
+        "slug": "estate-agents",
+        "src": "d61623a0",
+        "date": "2026-08-14",
+        "updated": "2026-08-14",
+        "topic": "Reklamat Meta",
+        "work": None,
+        "service": ("/meta-ads/", "Reklamat Meta"),
+
+        "title": "Marketingu yt është për ata që shesin",
+        "h1": "Portali i ka tashmë blerësit. Ti po konkurron për atë që shet.",
+        "summary": "Blerësit janë te portali çfarëdo që të bësh. Porosia është "
+                   "ajo për të cilën konkurron vërtet, dhe vjen nga gjetkë.",
+        "standfirst": "Çdo agjenci e qytetit u reklamon të njëjtat apartamente "
+                      "të njëjtëve blerës në të njëjtën faqe. Asgjë nga këto "
+                      "nuk vendos kush e merr porosinë tjetër.",
+        "description": "Konkurrenca e vërtetë e një agjencie imobiliare është "
+                       "për porosinë, jo për blerësin. Çfarë ndryshon kjo për "
+                       "vendin ku shkojnë paratë e marketingut.",
+        "og_desc": "Blerësit vijnë nga portali. Ata që shesin vijnë nga diçka "
+                   "që duhet ta ndërtosh.",
+
+        "body": [
+            ("Përgjigjja e shkurtër", [
+                "<p>Blerësit shkojnë te portali, sepse aty janë të gjitha "
+                "pronat. Njoftimi yt aty konkurron me çmimin, me fotografitë "
+                "dhe me pak gjë tjetër.</p>",
+                "<p>Ai që shet është gjëja e paktë. Ta fitosh atë është punë "
+                "tjetër dhe pothuajse askush nuk shpenzon për të.</p>",
+            ]),
+            ("Pse portali nuk është marketingu yt", [
+                "<p>Të paguash për të botuar te një portal të vë në radhë me "
+                "çdo konkurrent, në një faqe që është e portalit, para një "
+                "blerësi që emrin tënd nuk do ta mësojë kurrë. Është shpërndarje "
+                "dhe është e nevojshme.</p>",
+                "<p>Nuk është arsye pse dikush do të zgjidhte ty për të shitur "
+                "apartamentin e vet, që është i vetmi vendim që e rrit një "
+                "agjenci.</p>",
+            ]),
+            ("Çfarë po vendos vërtet ai që shet", [
+                "<p>Kush mendon të shesë do të dijë sa vlen shtëpia e tij, sa "
+                "kohë do të duhet, dhe nëse ti ke shitur diçka të ngjashme aty "
+                "afër.</p>",
+                "<p>Zakonisht e mendon me muaj para se t'i telefonojë "
+                "kujtdo. Ajo periudhë e gjatë e qetë është e gjithë mundësia, "
+                "dhe nuk është te portali.</p>",
+            ]),
+            ("Ku duhet të shkojnë paratë", [
+                "<p>Faqe për rrugët ku shet vërtet, çfarë ka ikur së fundmi "
+                "dhe pak a shumë për sa. Reklama drejtuar atyre që kanë pronë "
+                "në ato rrugë, jo të gjithëve që kërkojnë të blejnë.</p>",
+                "<p>Është publik më i vogël dhe distancë shumë më e shkurtër "
+                "deri te një porosi.</p>",
+            ]),
+            ("Fotografitë janë vetë produkti", [
+                "<p>Ai që shet të gjykon nga njoftimi i fundit që ke botuar, "
+                "sepse është e vetmja provë se si do të dalë i tiji. "
+                "Fotografitë e këqija nuk të kushtojnë vetëm atë shitje. Të "
+                "kushtojnë porosinë tjetër, nga dikush që i pa dhe vendosi në "
+                "heshtje.</p>",
+            ]),
+        ],
+        "payoff": "Na thuaj nga erdhën 3 porositë e tua të fundit, dhe ta "
+                  "themi nëse portali kishte ndonjë lidhje me to.",
+        "related": [("/meta-ads/", "Reklamat Meta"),
+                    ("/web-design/", "Faqe interneti")],
+    },
 ]
 
 # /blog/, the index over those records. The soft wraps are placed for this text
