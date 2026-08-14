@@ -1530,10 +1530,10 @@ _CHROME_MOD = {"en": _chrome, "it": _chrome_it, "sq": _chrome_sq}
 #
 # Host names are the FIRST alternative rather than a second pass, and that is
 # the whole reason this is one regex. The work index lists proaffy.com beside
-# ProAffy, and the address is hello@ the site's own host. Strip proper nouns
-# first and ".com" is left over as a word; strip hosts first and "hello@" is.
+# ProAffy, and the address is info@ the site's own host. Strip proper nouns
+# first and ".com" is left over as a word; strip hosts first and "info@" is.
 # Alternation is leftmost-first, so the host branch takes proaffy.com whole and
-# declines hello@..., where the address branch then takes the lot.
+# declines info@..., where the address branch then takes the lot.
 _NOT_COPY = re.compile(
     r"\b(?:[\w-]+(?:\.[\w-]+)+|" + "|".join(re.escape(w) for w in sorted(
         set(glossary.KEEP_ENGLISH) | set(glossary.IDENTICAL_BY_DESIGN)
@@ -2254,6 +2254,42 @@ for p in all_pages:
                             f"measures {_real}. A stated size that disagrees "
                             f"with the file is believed, which is the one thing "
                             f"worse than no size at all")
+
+
+# 50. one published address ------------------------------------------------
+# shell.EMAIL is a single constant and every page derives from it, so the 64
+# pages were never the risk. The prose was. Changing hello@ to info@ left the
+# right address on all 64 pages and the wrong one in LAUNCH.md, which is the
+# file that tells the founder which inbox to point Web3Forms at -- a stale
+# address there wires the forms to a mailbox nobody reads, and the site would
+# have looked perfect while every lead fell down a hole.
+#
+# So this is not a tidiness check. Anywhere in the repo that names an address
+# at our own mail host has to name the one we publish. The host is DERIVED
+# from shell.EMAIL rather than written here: a literal would be one more copy
+# of the fact this check exists to stop copying, and it would match itself.
+_mail_host = _shell.EMAIL.split("@", 1)[-1]
+_ADDR = re.compile(r"[\w.+-]+@" + re.escape(_mail_host))
+_SKIP_DIRS = {".git", ".build/cache", "browsers", "node_modules"}
+_TEXT = (".html", ".md", ".py", ".css", ".js", ".txt", ".xml", ".json")
+
+for _dirpath, _dirnames, _filenames in os.walk(ROOT):
+    _dirnames[:] = [d for d in _dirnames
+                    if d not in _SKIP_DIRS and not d.startswith(".git")]
+    for _fn in _filenames:
+        if not _fn.endswith(_TEXT):
+            continue
+        _p = os.path.join(_dirpath, _fn)
+        try:
+            _body = io.open(_p, encoding="utf-8").read()
+        except (UnicodeDecodeError, OSError):
+            continue              # not text we can judge; check 40 owns encoding
+        for _found in set(_ADDR.findall(_body)):
+            if _found != _shell.EMAIL:
+                findings.append(
+                    f"[address] {rel(_p)} names {_found} and the site publishes "
+                    f"{_shell.EMAIL}. One of the two is a mailbox that does not "
+                    f"exist, and prose is where that goes unnoticed")
 
 
 # ------------------------------------------------------------------- report

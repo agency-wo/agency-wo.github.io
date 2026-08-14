@@ -443,7 +443,7 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
   gap: var(--s-2); }
 .foot-h { font-size: var(--fs-small); color: var(--ink-mute);
   margin-bottom: var(--s-2); }
-/* hello@minarankstudio.com is a 23-character unbreakable string in a column
+/* info@minarankstudio.com is a 23-character unbreakable string in a column
    that is one of four at 1440 and full width at 390 */
 .foot-col a { color: var(--paper); font-size: var(--fs-small); font-weight: 500;
   text-decoration: none; padding-block: 5px; overflow-wrap: anywhere; }

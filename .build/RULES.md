@@ -103,9 +103,14 @@ everything checkable is checked by `verify.py`, which fails the build.
     reduced-motion get the finished page.
 33. Every `<img>` carries `width`, `height` and real `alt`. Gated.
 34. Build order: `gen_pages`, `gen_docs`, `gen_cases`, `gen_home`, `gen_blog`,
-    `gen_headers`, `gen_launch`, `gen_sitemap` last, then `verify`. `gen_blog`
-    and `gen_launch` were missing from this line for a while, which would have
-    stranded the 4 blog pages the first time SHARED:HEADER changed.
+    `gen_404`, `gen_headers`, `gen_launch`, `gen_sitemap` last, then `verify`.
+    `gen_blog` and `gen_launch` were missing from this line for a while, which
+    would have stranded the 4 blog pages the first time SHARED:HEADER changed.
+    `gen_404` then went missing the same way and was stranded for real: the day
+    shell.EMAIL changed, 63 pages took the new address and 404.html kept the
+    old one. Checks 7, 27 and 50 all fired on it, which is the only reason this
+    line is now right. A generator absent from this list is a page that stops
+    being built without anybody deciding to stop building it.
 
 ## Writing, again
 

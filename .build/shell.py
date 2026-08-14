@@ -47,7 +47,12 @@ DOT = "·"
 BRAND = "minarank studio"
 WORDMARK = "minarank"
 
-EMAIL = "hello@minarankstudio.com"
+# info@, not hello@: the customers are Durres shopkeepers and Italian-market
+# businesses, and info@ is the address both of those markets type without
+# thinking. hello@ is an Anglo studio convention, and reading as foreign is the
+# opposite of the job. Every page derives from this one string, so the local
+# part is a one-line decision and check 50 holds the rest of the repo to it.
+EMAIL = "info@minarankstudio.com"
 WHATSAPP = "355675716090"
 FOUNDER = "Henri Sila"
 
