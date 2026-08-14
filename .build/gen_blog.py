@@ -91,7 +91,12 @@ def post_page(p, en_p, nxt, by_slug, band, lang):
     url = S + shell.localise(post_url(p), lang)
     home = S + shell.localise("/", lang)
     blog = S + shell.localise(BLOG, lang)
-    client = by_slug[p["work"]]
+    # None for a post with no case study behind it. The industry posts cover
+    # trades we have not built for yet, and the founder's instruction was to
+    # leave those without an example rather than borrow one: a post that links
+    # a watch shop from an article about restaurants is implying a job we did
+    # not do. So this is optional, and every use of it below is guarded.
+    client = by_slug[p["work"]] if p["work"] else None
     graph = [
         {"@type": "BlogPosting", "@id": url + "#post",
          "headline": p["h1"], "name": p["title"],
@@ -118,8 +123,13 @@ def post_page(p, en_p, nxt, by_slug, band, lang):
          "isPartOf": {"@id": blog + "#blog"},
          "inLanguage": lang,
          "keywords": p["topic"],
-         "about": {"@id": S + shell.localise("/work/" + p["work"] + "/", lang)
-                   + "#work"}},
+         # "about" names the client work this post argues from. A post with no
+         # client is about a trade rather than about a job, and omitting the
+         # property says that; pointing it at a client we did not do this for
+         # would be a machine-readable version of the same false claim.
+         **({"about": {"@id": S + shell.localise("/work/" + p["work"] + "/",
+                                                 lang) + "#work"}}
+            if p["work"] else {})},
         {"@type": "BreadcrumbList", "@id": url + "#crumbs",
          "itemListElement": [
              {"@type": "ListItem", "position": 1, "name": c.CRUMB_HOME,
@@ -166,6 +176,17 @@ def post_page(p, en_p, nxt, by_slug, band, lang):
                       for h, t in p["related"])
     svc_href, svc_name = p["service"]
 
+    # The sidebar's client block, or nothing. A post about a trade we have not
+    # worked in has no business to name, and an empty heading over an empty
+    # list is worse than the block being absent.
+    client_block = "" if client is None else f'''          <div class="side-block">
+            <p class="side-h">{c.SIDE_BUSINESS}</p>
+            <ul class="side-list">
+              <li><a href="{shell.localise("/work/" + client["slug"] + "/", lang)}">{client["name"]}</a></li>
+            </ul>
+          </div>
+'''
+
     body = f'''
       <header class="page-head">
 {shell.crumbs(lang, (c.CRUMB_WRITING, shell.localise(BLOG, lang)), p["title"])}
@@ -192,13 +213,7 @@ def post_page(p, en_p, nxt, by_slug, band, lang):
               <li><a href="{shell.localise(svc_href, lang)}">{svc_name}</a></li>
             </ul>
           </div>
-          <div class="side-block">
-            <p class="side-h">{c.SIDE_BUSINESS}</p>
-            <ul class="side-list">
-              <li><a href="{shell.localise("/work/" + client["slug"] + "/", lang)}">{client["name"]}</a></li>
-            </ul>
-          </div>
-          <div class="side-block">
+{client_block}          <div class="side-block">
             <p class="side-h">{c.SIDE_ALSO}</p>
             <ul class="side-list">
 {related}
@@ -317,7 +332,13 @@ def check(posts, by_slug):
         assert 50 <= len(p["description"]) <= 175, (
             f'{w}: description is {len(p["description"])} chars, want 50 to 175')
         assert re.fullmatch(r"\d{4}-\d{2}-\d{2}", p["date"]), w + ": bad date"
-        assert p["work"] in by_slug, f'{w}: "{p["work"]}" is not a client slug'
+        # None is allowed and means "no case study": the industry posts cover
+        # trades we have not built for. A slug that is SET and unknown is still
+        # a typo and still fails, which is the whole value of this line -- it
+        # must not be weakened into "anything goes" by the None case.
+        assert p["work"] is None or p["work"] in by_slug, (
+            f'{w}: "{p["work"]}" is not a client slug. Use None for a post '
+            f"with no case study behind it")
         assert p["summary"] != p["standfirst"], (
             f"{w}: summary and standfirst are the same string, and check 11 "
             f"fails a sentence that appears on 2 pages")

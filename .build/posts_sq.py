@@ -663,6 +663,289 @@ POSTS = [
         "related": [("/meta-ads/", "Reklamat Meta"),
                     ("/web-design/", "Faqe interneti")],
     },
+    # ====================================================== INDUSTRY: WATCH ===
+    {
+        "slug": "watch-shops-and-jewellers",
+        "src": "c7fa2b9a",
+        "date": "2026-08-14",
+        "updated": "2026-08-14",
+        "topic": "Kërkim lokal",
+        "work": "iglisi-watch",
+        "service": ("/seo/", "SEO dhe kërkim lokal"),
+
+        "title": "Si gjendet një dyqan orësh",
+        "h1": "Një dyqan orësh janë 2 biznese, dhe vetëm 1 ka ngut.",
+        "summary": "Riparimet kërkohen me ngut. Orët studiohen me javë. Një "
+                   "dyqan i vetëm duhet t'u përgjigjet të dyjave.",
+        "standfirst": "Ai që ka bateri të mbaruar dhe ai që po mbledh para për "
+                      "një Seiko nuk janë i njëjti njeri, dhe asgjë nuk i "
+                      "kap të dy njëherësh.",
+        "description": "Riparimi i orës është kërkim lokal me ngut, blerja e "
+                       "saj është kërkim i ngadaltë. Çfarë bëri një dyqan në "
+                       "Durrës për të dyja, dhe numrat pas 3 muajsh.",
+        "og_desc": "Riparimet kanë ngut. Shitjet jo. Një dyqan, 2 kërkime "
+                   "krejt të ndryshme.",
+
+        "body": [
+            ("Përgjigjja e shkurtër", [
+                "<p>Një dyqan orësh shet 2 gjëra që sillen krejt ndryshe. Një "
+                "riparim është një hall që dikush do ta heqë qafe këtë javë. "
+                "Një orë është një vendim që dikush e rrotullon në kokë një "
+                "muaj të tërë.</p>",
+                "<p>Shumica e dyqaneve ndërtojnë për njërën dhe pastaj pyesin "
+                "pse tjetra nuk vjen kurrë.</p>",
+            ]),
+            ("Ai që riparon ka ngut dhe është aty pranë", [
+                "<p>Një orë e ndalur kërkohet nga telefoni, zakonisht me një "
+                "vend brenda fjalëve: bateri, rrip, kurorë. Ai njeri nuk po "
+                "krahason mjeshtëri. Do dikë afër që e ka hapur.</p>",
+                "<p>Ai kërkim fitohet në hartë, jo në faqe. Orari, adresa dhe "
+                "nëse të ka vlerësuar njeri e vendosin, dhe të 3 rrinë te i "
+                "njëjti profil falas.</p>",
+            ]),
+            ("Ai që blen shkon ngadalë dhe lexon gjithçka", [
+                "<p>Kush shpenzon kursimet e 3 muajve për një orë lexon me "
+                "javë para se të hyjë brenda. Krahason të njëjtin model nga "
+                "dyqan në dyqan, kërkon një çmim dhe do të dijë se shitësi "
+                "ekziston vërtet.</p>",
+                "<p>Atij klienti i duhet një faqe për çdo orë, me emrin e "
+                "modelit shkruar ashtu si e shkruan ai dhe një çmim sipër. Një "
+                "dyqan me një faqe të vetme që thotë shesim orë në atë "
+                "krahasim nuk hyn fare.</p>",
+            ]),
+            ("Pse një dyqani i duhen të dyja", [
+                "<p>Riparimet paguajnë qiranë ndërsa faqet e modeleve "
+                "vjetërohen sa duhet për t'u gjetur. Kërkimi shpërblen një "
+                "faqe që ekziston prej kohësh, harta shpërblen një biznes që "
+                "përgjigjet këtë javë.</p>",
+                "<p>Të mbash vetëm gjysmën e shpejtë do të thotë të nisesh nga "
+                "zeroja çdo tremujor. Të mbash vetëm atë të ngadaltën do të "
+                "thotë të presësh me muaj me banak bosh.</p>",
+            ]),
+            ("Çfarë deshi te një dyqan në Durrës", [
+                "<p><a href=\"/work/iglisi-watch/\">Iglisi Watch</a> nuk "
+                "kishte fare faqe, prandaj te numri i nisjes nuk ka asgjë për "
+                "t'u mburrur: ishte zero. Një faqe për secilën nga 58 orët, në "
+                "3 gjuhë, plus profili në Google.</p>",
+                "<p>3 muaj më vonë Google sillte 560 klikime në tremujor, me "
+                "renditje mesatare 8,4 dhe përqindje klikimesh 1%. Këta 2 "
+                "numrat e fundit janë të dobët, dhe rrinë te grafiku i "
+                "<a href=\"/work/iglisi-watch/\">faqes së tyre</a> bashkë me "
+                "pamjen nga erdhën. Marrë në gusht 2026, dhe kërkimi nuk rri "
+                "në vend, prandaj kontrolli yt do të tregojë diçka "
+                "tjetër.</p>",
+            ]),
+        ],
+        "payoff": "Na thuaj cila gjysmë e dyqanit tënd rri e qetë, riparimet "
+                  "apo shitjet, dhe ta themi cili kërkim po të mungon.",
+        "related": [("/seo/", "SEO dhe kërkim lokal"),
+                    ("/web-design/", "Faqe interneti")],
+    },
+
+    # ==================================================== INDUSTRY: FASHION ===
+    {
+        "slug": "fashion-boutiques",
+        "src": "03f81075",
+        "date": "2026-08-14",
+        "updated": "2026-08-14",
+        "topic": "Faqe interneti",
+        "work": "victoria-boutique",
+        "service": ("/web-design/", "Faqe interneti"),
+
+        "title": "Një faqe butiku që nuk vjetërohet",
+        "h1": "Halli i një butiku nuk është trafiku. Është vjetërimi.",
+        "summary": "Malli ndërrohet çdo javë. Një faqe që tregon sezonin e "
+                   "shkuar bën më shumë dëm sesa mos ta kesh fare.",
+        "standfirst": "Rrobat janë vetë biznesi. Nëse faqja tregon atë që "
+                      "shite në mars, po flet kundër teje.",
+        "description": "Pse faqja e një butiku vjetërohet brenda një sezoni, "
+                       "sa të kushton, dhe si një zonjë dyqani në Durrës e "
+                       "mban të vetën të freskët nga telefoni.",
+        "og_desc": "Një faqe që tregon sezonin e shkuar flet kundër teje.",
+
+        "body": [
+            ("Përgjigjja e shkurtër", [
+                "<p>Një butik e ndërron mallin më shpejt nga sa ka qejf njeri "
+                "të përditësojë një faqe. Kështu faqja mbetet pas, dhe klientja "
+                "që bëri rrugë për një copë të shitur në mars nuk kthehet "
+                "më.</p>",
+                "<p>Zgjidhja nuk është disiplina. Është ta bësh përditësimin "
+                "punë një minute.</p>",
+            ]),
+            ("Si blen vërtet një kliente", [
+                "<p>Sheh një copë në Instagram, pastaj do të dijë 2 gjëra: a "
+                "është ende aty dhe sa kushton. Asnjëra prej të dyjave nuk "
+                "rri në një postim 3 javësh.</p>",
+                "<p>Atëherë kërkon dyqanin me emër, hyn te faqja dhe brenda "
+                "një minute vendos nëse ky vend punon ende.</p>",
+            ]),
+            ("Pse shumica e këtyre faqeve kalben", [
+                "<p>Faqen e bën dikush tjetër. Të shtosh një copë do të thotë "
+                "t'i shkruash, të presësh dhe të kontrollosh që doli si duhet. "
+                "Në muajin e tretë nuk e bën më njeri, dhe faqja bëhet në "
+                "heshtje fotografia e një jave pranvere.</p>",
+                "<p>Një pagesë mujore e keqëson punën në vend që ta "
+                "përmirësojë: tani dyqani po paguan për atë që ka mbetur "
+                "jashtë kohe.</p>",
+            ]),
+            ("Çfarë ndërtojmë për një dyqan të tillë", [
+                "<p><a href=\"/work/victoria-boutique/\">Victoria "
+                "Boutique</a> sjell marka greke në Shqipëri dhe e ndërron "
+                "mallin me sezonin. Zonja fotografon një copë, hap një panel "
+                "në telefon dhe e ngjit vetë.</p>",
+                "<p>Asnjë sistem për të licencuar, asnjë pagesë mujore, askush "
+                "për të marrë në telefon. Faqja është shqip, anglisht dhe "
+                "italisht, dhe ndërrimi i gjuhës punon edhe me JavaScript të "
+                "fikur.</p>",
+            ]),
+            ("Çfarë do të thotë kjo për dyqanin tënd", [
+                "<p>Pyet veten çfarë do të të duhej që të vije një copë online "
+                "tani, aty ku je në këmbë. Nëse përgjigjja e ndershme përfshin "
+                "një njeri tjetër, faqja do të ketë mbetur jashtë kohe brenda "
+                "sezonit tjetër dhe s'ke ç'i bën.</p>",
+            ]),
+        ],
+        "payoff": "Na dërgo fotografinë e diçkaje që e vure në vitrinë këtë "
+                  "javë, dhe ta themi sa do të zgjaste ta vije online.",
+        "related": [("/web-design/", "Faqe interneti"),
+                    ("/seo/", "SEO dhe kërkim lokal")],
+    },
+
+    # =================================================== INDUSTRY: LINGERIE ===
+    {
+        "slug": "lingerie-shops",
+        "src": "25970d2d",
+        "date": "2026-08-14",
+        "updated": "2026-08-14",
+        "topic": "Faqe interneti",
+        "work": "intimo-bruna",
+        "service": ("/web-design/", "Faqe interneti"),
+
+        "title": "Pse të brendshmet shiten duke folur",
+        "h1": "Këtu arka është gjëja e gabuar për t'u ndërtuar.",
+        "summary": "Masa është e pasigurt dhe blerja është private. Të dyja e "
+                   "shtyjnë klienten të pyesë në vend që të klikojë.",
+        "standfirst": "Një dyqan mund të shpenzojë gjithçka për një arkë që "
+                      "s'e përdor njeri, sepse pyetjen që ka klientja nuk ia "
+                      "zgjidh dot një buton.",
+        "description": "Klientet e të brendshmeve shkruajnë në vend që të "
+                       "përdorin arkën, sepse për masën duhet një njeri. Si "
+                       "ndërtoi një dyqan në Durrës mbi zakonin që kishin.",
+        "og_desc": "Për masën duhet një njeri. Prandaj arka mbetet bosh.",
+
+        "body": [
+            ("Përgjigjja e shkurtër", [
+                "<p>Të brendshmet blihen me 2 dyshime ngjitur: a do të më "
+                "vijnë, dhe kush e sheh që i bleva. Një arkë nuk i përgjigjet "
+                "asnjërës, dhe prandaj kaq shumë prej tyre rrinë pa u "
+                "përdorur.</p>",
+                "<p>Dyqanet që këtu shesin vërtet online, shesin brenda një "
+                "mesazhi.</p>",
+            ]),
+            ("Masa është pyetje, jo listë me zgjedhje", [
+                "<p>Masat ndryshojnë nga marka në markë dhe shumica e "
+                "klienteve të vetën e dinë vetëm përafërsisht. Përballë një "
+                "liste dhe pa njeri për të pyetur, klientja e kujdesshme e "
+                "mbyll faqen në vend që të rrezikojë.</p>",
+                "<p>E njëjta kliente ia bën pyetjen shitëses pa problem. Nuk "
+                "të vjen turp të pyesësh kur ka dikë që përgjigjet.</p>",
+            ]),
+            ("Privatësia e ndërron vendin ku njerëzit pranojnë të blejnë", [
+                "<p>Një bisedë duket private siç s'do të dukej kurrë një "
+                "formular me kartë, dhe në një qytet të vogël kjo peshon më "
+                "shumë se gjetkë. Diskrecioni është pjesë e asaj që "
+                "shitet.</p>",
+            ]),
+            ("Ndërto mbi zakonin që e kanë tashmë", [
+                "<p>Te <a href=\"/work/intimo-bruna/\">Intimo Bruna</a> "
+                "klientet shkruanin tashmë në vend që të plotësonin formularë, "
+                "prandaj t'i çoje te një arkë do të thoshte të projektoje për "
+                "një zakon që nuk e kanë.</p>",
+                "<p>Çdo faqe produkti kalon te WhatsApp me artikullin e "
+                "shkruar që në mesazh, që zonja të mos pyesë se cilin. Malli "
+                "dhe çmimet mbahen të freskëta nga telefoni.</p>",
+            ]),
+            ("Çfarë ka kjo të bëjë me dyqanet e tjera", [
+                "<p>Mësimi nuk ka të bëjë me të brendshmet. Ka të bëjë me të "
+                "parit se si blejnë tashmë klientët e tu dhe me ndërtimin e "
+                "asaj, në vend që të blesh arkën që ta shesin të gjithë sepse "
+                "e kanë të gjitha dyqanet e tjera.</p>",
+            ]),
+        ],
+        "payoff": "Na thuaj si të mbërritën vërtet 10 porositë e fundit, dhe "
+                  "ta themi nëse një arkë do të të kishte ndihmuar.",
+        "related": [("/web-design/", "Faqe interneti"),
+                    ("/meta-ads/", "Reklamat Meta")],
+    },
+
+    # ==================================================== INDUSTRY: HEATING ===
+    {
+        "slug": "heating-and-cooling-trades",
+        "src": "959b0d23",
+        "date": "2026-08-14",
+        "updated": "2026-08-14",
+        "topic": "Kërkim lokal",
+        "work": "pro-affy",
+        "service": ("/seo/", "SEO dhe kërkim lokal"),
+
+        "title": "Zanati që shet ditën më të ftohtë",
+        "h1": "Java jote më e ngarkuar vendos pjesën më të madhe të vitit.",
+        "summary": "Ngrohja kërkohet brenda pak ditësh të ftohta, nga telefoni, "
+                   "në një orë që nuk e planifikon njeri.",
+        "standfirst": "Profilin nuk e ndërton dot gjatë të ftohtit. Atëherë "
+                      "kërkimet po ndodhin tashmë dhe përgjigjja është ajo që "
+                      "Google ka në dorë.",
+        "description": "Puna e ngrohjes vjen e gjitha brenda pak ditësh dhe "
+                       "kërkimi bëhet nga telefoni, vonë. Pse puna duhet bërë "
+                       "muaj para se të vijë i ftohti.",
+        "og_desc": "Puna vjen brenda pak ditësh. Profili duhet të ekzistojë "
+                   "para tyre.",
+
+        "body": [
+            ("Përgjigjja e shkurtër", [
+                "<p>Puna e ngrohjes nuk vjen njëtrajtësisht. Vjen javën e parë "
+                "vërtet të ftohtë, e gjitha përnjëherë, nga njerëz që javën e "
+                "shkuar nuk po të mendonin fare.</p>",
+                "<p>Gjithçka që vendos nëse të gjejnë duhej të ishte gati para "
+                "se ajo javë të niste.</p>",
+            ]),
+            ("Kërkimi ndodh në një orë të keqe dhe në një ekran të vogël", [
+                "<p>Kaldaja prishet në mbrëmje. Kërkimi shkruhet nga telefoni, "
+                "në një shtëpi të ftohtë, nga dikush që faqen e dytë të "
+                "rezultateve nuk do ta hapë.</p>",
+                "<p>Ajo që i del është një hartë me pak firma sipër. Të jesh "
+                "një nga ato të paktat është punë tjetër nga të kesh faqe të "
+                "bukur, dhe vendoset javë më parë.</p>",
+            ]),
+            ("Pse gjatë të ftohtit është vonë për të nisur", [
+                "<p>Një profil i marrë dhe i plotësuar javën e pikut garon me "
+                "profile që mbledhin vlerësime që nga qershori. Kërkimi nuk e "
+                "shpërblen firmën që u shfaq bashkë me punën.</p>",
+                "<p>Muajt bosh janë ata ku kjo kushton pak. Janë edhe ata ku "
+                "nuk ka qejf ta bëjë njeri.</p>",
+            ]),
+            ("Të gjendesh dhe të kapesh janë 2 prishje të ndryshme", [
+                "<p>Një firmë mund ta fitojë kërkimin dhe prapë ta humbasë "
+                "punën se nuk përgjigjet, që është argumenti i "
+                "<a href=\"/work/pro-affy/\">faqes së ProAffy</a> dhe i "
+                "<a href=\"/blog/whoever-answers-first/\">një shkrimi më "
+                "vete</a>.</p>",
+                "<p>Prishen veç e veç dhe rregullohen veç e veç. Të jesh i "
+                "kapshëm nuk vlen asgjë nëse nuk ishe mes 3 firmave në listë, "
+                "dhe të jesh në listë nuk vlen nëse telefoni bie bosh.</p>",
+            ]),
+            ("Çfarë të bësh në stinën e qetë", [
+                "<p>Merr profilin, rregullo zonat që mbulon dhe orarin, dhe "
+                "kërko një vlerësim nga klientët e dimrit të shkuar sa i kanë "
+                "ende mend. Asgjë nga këto nuk kushton, dhe të gjitha duan "
+                "kohë që të numërojnë.</p>",
+            ]),
+        ],
+        "payoff": "Na thuaj cili është muaji yt më i qetë, dhe ta themi çfarë "
+                  "ia vlen ta kesh mbaruar para se të vijë i ftohti.",
+        "related": [("/seo/", "SEO dhe kërkim lokal"),
+                    ("/meta-ads/", "Reklamat Meta")],
+    },
 ]
 
 # /blog/, the index over those records. The soft wraps are placed for this text

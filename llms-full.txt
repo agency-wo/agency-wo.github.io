@@ -130,8 +130,10 @@ Updated 14 August 2026
 Honest timeline
 Technical fixes: weeks. A new site competing on commercial phrases: 6 to 12 months. We'd rather lose the job than agree to a date we don't believe.
 Written about this
+The trade that sells on the coldest day
 What a new shop's first 3 months look like
 The last 4 weeks beat the first 8
+How a watch shop gets found
 Also
 AI search
 Websites
@@ -227,6 +229,8 @@ Nothing on this page is loaded from another company. Open the network tab and co
 Written about this
 The shop that updates its site from a phone
 A website in 3 languages that stays in step
+A boutique site that is never out of date
+Why lingerie sells in a conversation
 Also
 SEO and local search
 Custom software
@@ -438,6 +442,7 @@ A website in 3 languages that stays in step
 The 4 money lines that were really 5
 What a new shop's first 3 months look like
 The last 4 weeks beat the first 8
+How a watch shop gets found
 What nobody can promise you about AI search
 Next
 Victoria Boutique
@@ -474,6 +479,7 @@ Websites
 Custom software
 Written about this
 The shop that updates its site from a phone
+A boutique site that is never out of date
 Next
 Intimo Bruna
 All four
@@ -500,6 +506,8 @@ Intimo Bruna, intimobruna.com
 What we did
 Websites
 Custom software
+Written about this
+Why lingerie sells in a conversation
 Next
 ProAffy
 All four
@@ -527,6 +535,7 @@ What we did
 Meta ads
 Websites
 Written about this
+The trade that sells on the coldest day
 The job goes to whoever answers first
 Next
 Iglisi Watch
@@ -546,6 +555,10 @@ What nobody can promise you about AI search
 AI search · 14 August 2026
 The 40% figure everyone quotes does not mean what they say. And 97% of llms.txt files have never been read.
 Read it
+How a watch shop gets found
+Local search · 14 August 2026
+Repairs get searched in a hurry. Watches get researched for weeks. One shop has to answer both, and they do not search alike.
+Read it
 The last 4 weeks beat the first 8
 Local search · 14 August 2026
 Of 560 clicks in a quarter, 301 arrived in the final 28 days. What that curve means before you spend anything.
@@ -554,9 +567,21 @@ What a new shop's first 3 months look like
 Local search · 14 August 2026
 The real Search Console chart for a business that started with no website, including the parts nobody screenshots.
 Read it
+Why lingerie sells in a conversation
+Websites · 14 August 2026
+Sizing is uncertain and the purchase is private. Both push the customer towards asking rather than clicking buy.
+Read it
+The trade that sells on the coldest day
+Local search · 14 August 2026
+Heating demand arrives in a few cold days, from people searching on a phone at an hour nobody plans for.
+Read it
 The 4 money lines that were really 5
 Custom software · 14 August 2026
 A bug that hid inside a chart for a whole phase, and what it says about the software a small business runs on.
+Read it
+A boutique site that is never out of date
+Websites · 14 August 2026
+Stock turns over weekly. A site that shows last season is worse for a boutique than no site at all.
 Read it
 A website in 3 languages that stays in step
 Websites · 14 August 2026
@@ -638,6 +663,40 @@ Also
 AI search
 SEO and local search
 Read next
+How a watch shop gets found
+
+## How a watch shop gets found
+https://minarankstudio.com/blog/watch-shops-and-jewellers/
+
+A watch shop is 2 businesses, and only 1 of them is urgent.
+The customer with a dead battery and the customer saving for a Seiko are not the same person, and nothing you do reaches both at once.
+By Henri Sila · 14 August 2026
+The short answer
+A watch shop sells 2 things that behave nothing alike. A repair is a problem somebody wants gone this week. A watch is a decision somebody turns over for a month.
+Most shops build for one and wonder why the other never arrives.
+The repair customer is in a hurry and close by
+A stopped watch gets searched on a phone, usually with a place in the words: a battery, a strap, a crown. The person is not comparing craftsmanship. They want somebody nearby who is open.
+That search is won on the map rather than on the website. Your hours, your address and whether anybody has reviewed you decide it, and all 3 live in the same free listing.
+The buyer is slow, and reads everything
+Somebody spending 3 months of savings on a watch reads for weeks before walking in. They compare the same reference across shops, look for a price, and want to know the seller is real.
+That customer needs a page per watch, with the model name written the way they type it and a price on it. A shop with one page saying we sell watches never enters that comparison.
+Why one shop needs both
+The repair work pays the rent while the sales pages age into being findable. Search rewards a page that has existed for a while, and the map rewards a business that answers this week.
+Running only the fast half means starting from nothing every quarter. Running only the slow half means waiting months with an empty counter.
+What it took at a shop in Durres
+Iglisi Watch had no website at all, so there is nothing flattering in the starting number: it was zero. A page for each of 58 watches, in 3 languages, plus the map listing.
+3 months later Google was sending 560 clicks a quarter, at an average position of 8.4 and a 1% click rate. Both of those last 2 numbers are weak, and they are on the chart on their page with the screenshot they came from. Taken in August 2026, and search does not hold still, so your own check will show something else.
+Tell us which half of your shop is quiet, the repairs or the sales, and we will tell you which search is missing.
+Get a free audit.
+Updated 14 August 2026
+The service
+SEO and local search
+The business in this post
+Iglisi Watch
+Also
+SEO and local search
+Websites
+Read next
 The last 4 weeks beat the first 8
 
 ## The last 4 weeks beat the first 8
@@ -708,6 +767,71 @@ Also
 SEO and local search
 AI search
 Read next
+Why lingerie sells in a conversation
+
+## Why lingerie sells in a conversation
+https://minarankstudio.com/blog/lingerie-shops/
+
+The checkout is the wrong thing to build here.
+A shop can spend everything on a checkout nobody uses, because the question the customer has cannot be answered by a button.
+By Henri Sila · 14 August 2026
+The short answer
+Lingerie is bought with 2 doubts attached: will it fit, and who sees that I bought it. A checkout answers neither, which is why so many of them sit unused.
+The shops that do well online here sell in a message instead.
+Sizing is a question, not a dropdown
+Sizes differ between labels and most customers know their own only approximately. Faced with a dropdown and no way to ask, a careful buyer closes the page rather than risk guessing.
+The same person will happily ask a shopkeeper. The question is not embarrassing when there is somebody to answer it.
+Privacy changes where people are willing to buy
+A message thread feels private in a way a card form does not, and in a small city that matters more than it would elsewhere. Discretion is part of what is being sold.
+Build for the habit they already have
+At Intimo Bruna customers were already messaging rather than filling in forms, so sending them to a checkout would have meant designing for a habit they do not have.
+Every product page hands off to WhatsApp with the item already named in the message, so the owner is not asking which one you mean. Stock and prices are kept current from a phone.
+What this means beyond lingerie
+The lesson is not about underwear. It is that a shop should look at how its customers already buy and build that, rather than buying the checkout everybody sells because every other shop has one.
+Tell us how your last 10 orders actually reached you, and we will tell you whether a checkout would have helped.
+Get a free audit.
+Updated 14 August 2026
+The service
+Websites
+The business in this post
+Intimo Bruna
+Also
+Websites
+Meta ads
+Read next
+The trade that sells on the coldest day
+
+## The trade that sells on the coldest day
+https://minarankstudio.com/blog/heating-and-cooling-trades/
+
+Your busiest week decides most of your year.
+You cannot build a listing during the cold snap. By then the searches are already happening and the answer is whatever Google has on file.
+By Henri Sila · 14 August 2026
+The short answer
+Heating work does not arrive evenly. It arrives in the first genuinely cold week, all at once, from people who were not thinking about you the week before.
+Everything that decides whether they find you had to be in place before that week started.
+The search happens at a bad hour on a small screen
+A boiler fails in the evening. The search is typed on a phone, in a cold house, by somebody who is not going to read a second page of results.
+What they get is a map with a few firms on it. Being one of those few is a different job from having a good website, and it is decided weeks earlier.
+Why the cold snap is too late to start
+A listing that is claimed and filled in during the busy week is competing against listings that have been collecting reviews since summer. Search does not reward the firm that showed up when the demand did.
+The quiet months are when this is cheap. They are also when nobody feels like doing it.
+Being found and being reachable are 2 different failures
+A firm can win the search and still lose the job by not picking up, which is the argument on ProAffy's page and in a post of its own.
+They fail separately and they are fixed separately. Being reachable does nothing if you were never in the list of 3, and being in the list does nothing if the phone rings out.
+What to do in the quiet season
+Claim the listing, get the service areas and hours right, and ask the customers you helped last winter for a review while they still remember. None of that costs money and all of it takes time to count.
+Tell us what your quietest month is, and we will tell you what to have finished before the cold arrives.
+Get a free audit.
+Updated 14 August 2026
+The service
+SEO and local search
+The business in this post
+ProAffy
+Also
+SEO and local search
+Meta ads
+Read next
 The 4 money lines that were really 5
 
 ## The 4 money lines that were really 5
@@ -748,6 +872,39 @@ Iglisi Watch
 Also
 Custom software
 Websites
+Read next
+A boutique site that is never out of date
+
+## A boutique site that is never out of date
+https://minarankstudio.com/blog/fashion-boutiques/
+
+A boutique's problem is not traffic. It is going stale.
+The clothes are the business. If the website is showing what you sold in March, it is arguing against you.
+By Henri Sila · 14 August 2026
+The short answer
+A boutique changes stock faster than anybody wants to update a website. So the website falls behind, and a customer who drove over for a piece that sold in March does not come back.
+The fix is not discipline. It is making the update take a minute.
+How a customer actually shops for clothes
+She sees a piece on Instagram, then wants to know 2 things: is it still there, and what does it cost. Neither answer is on a social post 3 weeks old.
+So she searches the shop by name, lands on the site, and decides in about a minute whether this place is still trading.
+Why most boutique sites rot
+The site gets built by somebody else. Adding a piece means emailing them, waiting, and checking it went up right. By the third month nobody bothers, and the site quietly becomes a photograph of one week in spring.
+A monthly platform fee makes it worse rather than better: now the shop is paying for the thing that is out of date.
+What we build for a shop like this
+Victoria Boutique brings Greek labels into Albania and changes stock with the season. The owner photographs a piece, opens a panel on her phone and puts it up herself.
+No content system to license, no monthly fee, nobody to ring. The site is in Albanian, English and Italian, and the language switch works with JavaScript turned off.
+What it means for your shop
+Ask what it would take you to put a piece online right now, from where you are standing. If the honest answer involves another person, the site will be out of date by next season and there is nothing you can do about it.
+Send us a photograph of something you put in the window this week, and we will tell you how long it would take to get it online.
+Get a free audit.
+Updated 14 August 2026
+The service
+Websites
+The business in this post
+Victoria Boutique
+Also
+Websites
+SEO and local search
 Read next
 A website in 3 languages that stays in step
 
@@ -930,3 +1087,4 @@ audit
 A read of a site against what search engines and readers need from it, written down. Ours names what is wrong, what it costs you and what we would do about it, in that order.
 custom software
 A tool built for one business instead of rented from a company that built it for everybody. Worth it when the way you work is the thing that makes you money, and not otherwise.
+Updated 14 August 2026

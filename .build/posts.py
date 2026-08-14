@@ -628,6 +628,294 @@ POSTS = [
                   "do not know, that is the answer.",
         "related": [("/meta-ads/", "Meta ads"), ("/web-design/", "Websites")],
     },
+    # ====================================================== INDUSTRY: WATCH ===
+    # The industry posts answer a query a shop owner types, where the 7 posts
+    # above answer "what did you build". Each one leads on what is DIFFERENT
+    # about that trade's customer, which is also what keeps check 11 quiet: 10
+    # posts arguing the same shape in the same words would share a sentence.
+    {
+        "slug": "watch-shops-and-jewellers",
+        "date": "2026-08-14",
+        "updated": "2026-08-14",
+        "topic": "Local search",
+        "work": "iglisi-watch",
+        "service": ("/seo/", "SEO and local search"),
+
+        "title": "How a watch shop gets found",
+        "h1": "A watch shop is 2 businesses, and only 1 of them is urgent.",
+        "summary": "Repairs get searched in a hurry. Watches get researched "
+                   "for weeks. One shop has to answer both, and they do not "
+                   "search alike.",
+        "standfirst": "The customer with a dead battery and the customer "
+                      "saving for a Seiko are not the same person, and nothing "
+                      "you do reaches both at once.",
+        "description": "Watch repair is an urgent local search and watch buying "
+                       "is a slow one. What a shop in Durres did about both, "
+                       "and the numbers it has after 3 months.",
+        "og_desc": "Repairs are urgent. Sales are slow. One shop, 2 completely "
+                   "different searches.",
+
+        "body": [
+            ("The short answer", [
+                "<p>A watch shop sells 2 things that behave nothing alike. A "
+                "repair is a problem somebody wants gone this week. A watch is "
+                "a decision somebody turns over for a month.</p>",
+                "<p>Most shops build for one and wonder why the other never "
+                "arrives.</p>",
+            ]),
+            ("The repair customer is in a hurry and close by", [
+                "<p>A stopped watch gets searched on a phone, usually with a "
+                "place in the words: a battery, a strap, a crown. The person "
+                "is not comparing craftsmanship. They want somebody nearby who "
+                "is open.</p>",
+                "<p>That search is won on the map rather than on the website. "
+                "Your hours, your address and whether anybody has reviewed you "
+                "decide it, and all 3 live in the same free listing.</p>",
+            ]),
+            ("The buyer is slow, and reads everything", [
+                "<p>Somebody spending 3 months of savings on a watch reads for "
+                "weeks before walking in. They compare the same reference "
+                "across shops, look for a price, and want to know the seller "
+                "is real.</p>",
+                "<p>That customer needs a page per watch, with the model name "
+                "written the way they type it and a price on it. A shop with "
+                "one page saying we sell watches never enters that "
+                "comparison.</p>",
+            ]),
+            ("Why one shop needs both", [
+                "<p>The repair work pays the rent while the sales pages age "
+                "into being findable. Search rewards a page that has existed "
+                "for a while, and the map rewards a business that answers this "
+                "week.</p>",
+                "<p>Running only the fast half means starting from nothing "
+                "every quarter. Running only the slow half means waiting "
+                "months with an empty counter.</p>",
+            ]),
+            ("What it took at a shop in Durres", [
+                "<p><a href=\"/work/iglisi-watch/\">Iglisi Watch</a> had no "
+                "website at all, so there is nothing flattering in the "
+                "starting number: it was zero. A page for each of 58 watches, "
+                "in 3 languages, plus the map listing.</p>",
+                "<p>3 months later Google was sending 560 clicks a quarter, at "
+                "an average position of 8.4 and a 1% click rate. Both of those "
+                "last 2 numbers are weak, and they are on the chart on "
+                "<a href=\"/work/iglisi-watch/\">their page</a> with the "
+                "screenshot they came from. Taken in August 2026, and search "
+                "does not hold still, so your own check will show "
+                "something else.</p>",
+            ]),
+        ],
+        "payoff": "Tell us which half of your shop is quiet, the repairs or "
+                  "the sales, and we will tell you which search is missing.",
+        "related": [("/seo/", "SEO and local search"),
+                    ("/web-design/", "Websites")],
+    },
+
+    # ==================================================== INDUSTRY: FASHION ===
+    {
+        "slug": "fashion-boutiques",
+        "date": "2026-08-14",
+        "updated": "2026-08-14",
+        "topic": "Websites",
+        "work": "victoria-boutique",
+        "service": ("/web-design/", "Websites"),
+
+        "title": "A boutique site that is never out of date",
+        "h1": "A boutique's problem is not traffic. It is going stale.",
+        "summary": "Stock turns over weekly. A site that shows last season is "
+                   "worse for a boutique than no site at all.",
+        "standfirst": "The clothes are the business. If the website is showing "
+                      "what you sold in March, it is arguing against you.",
+        "description": "Why a fashion boutique's website goes stale within a "
+                       "season, what that costs, and how a shop in Durres "
+                       "keeps hers current from a phone.",
+        "og_desc": "A boutique site showing last season is arguing against "
+                   "you.",
+
+        "body": [
+            ("The short answer", [
+                "<p>A boutique changes stock faster than anybody wants to "
+                "update a website. So the website falls behind, and a customer "
+                "who drove over for a piece that sold in March does not come "
+                "back.</p>",
+                "<p>The fix is not discipline. It is making the update take a "
+                "minute.</p>",
+            ]),
+            ("How a customer actually shops for clothes", [
+                "<p>She sees a piece on Instagram, then wants to know 2 "
+                "things: is it still there, and what does it cost. Neither "
+                "answer is on a social post 3 weeks old.</p>",
+                "<p>So she searches the shop by name, lands on the site, and "
+                "decides in about a minute whether this place is still "
+                "trading.</p>",
+            ]),
+            ("Why most boutique sites rot", [
+                "<p>The site gets built by somebody else. Adding a piece means "
+                "emailing them, waiting, and checking it went up right. By the "
+                "third month nobody bothers, and the site quietly becomes a "
+                "photograph of one week in spring.</p>",
+                "<p>A monthly platform fee makes it worse rather than better: "
+                "now the shop is paying for the thing that is out of date.</p>",
+            ]),
+            ("What we build for a shop like this", [
+                "<p><a href=\"/work/victoria-boutique/\">Victoria "
+                "Boutique</a> brings Greek labels into Albania and changes "
+                "stock with the season. The owner photographs a piece, opens a "
+                "panel on her phone and puts it up herself.</p>",
+                "<p>No content system to license, no monthly fee, nobody to "
+                "ring. The site is in Albanian, English and Italian, and the "
+                "language switch works with JavaScript turned off.</p>",
+            ]),
+            ("What it means for your shop", [
+                "<p>Ask what it would take you to put a piece online right "
+                "now, from where you are standing. If the honest answer "
+                "involves another person, the site will be out of date by "
+                "next season and there is nothing you can do about it.</p>",
+            ]),
+        ],
+        "payoff": "Send us a photograph of something you put in the window "
+                  "this week, and we will tell you how long it would take to "
+                  "get it online.",
+        "related": [("/web-design/", "Websites"),
+                    ("/seo/", "SEO and local search")],
+    },
+
+    # =================================================== INDUSTRY: LINGERIE ===
+    {
+        "slug": "lingerie-shops",
+        "date": "2026-08-14",
+        "updated": "2026-08-14",
+        "topic": "Websites",
+        "work": "intimo-bruna",
+        "service": ("/web-design/", "Websites"),
+
+        "title": "Why lingerie sells in a conversation",
+        "h1": "The checkout is the wrong thing to build here.",
+        "summary": "Sizing is uncertain and the purchase is private. Both push "
+                   "the customer towards asking rather than clicking buy.",
+        "standfirst": "A shop can spend everything on a checkout nobody uses, "
+                      "because the question the customer has cannot be "
+                      "answered by a button.",
+        "description": "Lingerie customers message instead of using a "
+                       "checkout, because sizing needs a person. How a Durres "
+                       "shop built for the habit its customers already had.",
+        "og_desc": "Sizing needs a person. That is why the checkout stays "
+                   "empty.",
+
+        "body": [
+            ("The short answer", [
+                "<p>Lingerie is bought with 2 doubts attached: will it fit, "
+                "and who sees that I bought it. A checkout answers neither, "
+                "which is why so many of them sit unused.</p>",
+                "<p>The shops that do well online here sell in a message "
+                "instead.</p>",
+            ]),
+            ("Sizing is a question, not a dropdown", [
+                "<p>Sizes differ between labels and most customers know their "
+                "own only approximately. Faced with a dropdown and no way to "
+                "ask, a careful buyer closes the page rather than risk "
+                "guessing.</p>",
+                "<p>The same person will happily ask a shopkeeper. The "
+                "question is not embarrassing when there is somebody to "
+                "answer it.</p>",
+            ]),
+            ("Privacy changes where people are willing to buy", [
+                "<p>A message thread feels private in a way a card form does "
+                "not, and in a small city that matters more than it would "
+                "elsewhere. Discretion is part of what is being sold.</p>",
+            ]),
+            ("Build for the habit they already have", [
+                "<p>At <a href=\"/work/intimo-bruna/\">Intimo Bruna</a> "
+                "customers were already messaging rather than filling in "
+                "forms, so sending them to a checkout would have meant "
+                "designing for a habit they do not have.</p>",
+                "<p>Every product page hands off to WhatsApp with the item "
+                "already named in the message, so the owner is not asking "
+                "which one you mean. Stock and prices are kept current from a "
+                "phone.</p>",
+            ]),
+            ("What this means beyond lingerie", [
+                "<p>The lesson is not about underwear. It is that a shop "
+                "should look at how its customers already buy and build that, "
+                "rather than buying the checkout everybody sells because every "
+                "other shop has one.</p>",
+            ]),
+        ],
+        "payoff": "Tell us how your last 10 orders actually reached you, and "
+                  "we will tell you whether a checkout would have helped.",
+        "related": [("/web-design/", "Websites"),
+                    ("/meta-ads/", "Meta ads")],
+    },
+
+    # ==================================================== INDUSTRY: HEATING ===
+    {
+        "slug": "heating-and-cooling-trades",
+        "date": "2026-08-14",
+        "updated": "2026-08-14",
+        "topic": "Local search",
+        "work": "pro-affy",
+        "service": ("/seo/", "SEO and local search"),
+
+        "title": "The trade that sells on the coldest day",
+        "h1": "Your busiest week decides most of your year.",
+        "summary": "Heating demand arrives in a few cold days, from people "
+                   "searching on a phone at an hour nobody plans for.",
+        "standfirst": "You cannot build a listing during the cold snap. By "
+                      "then the searches are already happening and the answer "
+                      "is whatever Google has on file.",
+        "description": "Heating and cooling demand spikes into a handful of "
+                       "days and the search happens on a phone, late. Why the "
+                       "work has to be done months before the cold.",
+        "og_desc": "Demand arrives in a few days. The listing has to exist "
+                   "before them.",
+
+        "body": [
+            ("The short answer", [
+                "<p>Heating work does not arrive evenly. It arrives in the "
+                "first genuinely cold week, all at once, from people who were "
+                "not thinking about you the week before.</p>",
+                "<p>Everything that decides whether they find you had to be in "
+                "place before that week started.</p>",
+            ]),
+            ("The search happens at a bad hour on a small screen", [
+                "<p>A boiler fails in the evening. The search is typed on a "
+                "phone, in a cold house, by somebody who is not going to read "
+                "a second page of results.</p>",
+                "<p>What they get is a map with a few firms on it. Being one "
+                "of those few is a different job from having a good website, "
+                "and it is decided weeks earlier.</p>",
+            ]),
+            ("Why the cold snap is too late to start", [
+                "<p>A listing that is claimed and filled in during the busy "
+                "week is competing against listings that have been collecting "
+                "reviews since summer. Search does not reward the firm that "
+                "showed up when the demand did.</p>",
+                "<p>The quiet months are when this is cheap. They are also "
+                "when nobody feels like doing it.</p>",
+            ]),
+            ("Being found and being reachable are 2 different failures", [
+                "<p>A firm can win the search and still lose the job by not "
+                "picking up, which is the argument on "
+                "<a href=\"/work/pro-affy/\">ProAffy's page</a> and in "
+                "<a href=\"/blog/whoever-answers-first/\">a post of its "
+                "own</a>.</p>",
+                "<p>They fail separately and they are fixed separately. Being "
+                "reachable does nothing if you were never in the list of 3, "
+                "and being in the list does nothing if the phone rings "
+                "out.</p>",
+            ]),
+            ("What to do in the quiet season", [
+                "<p>Claim the listing, get the service areas and hours right, "
+                "and ask the customers you helped last winter for a review "
+                "while they still remember. None of that costs money and all "
+                "of it takes time to count.</p>",
+            ]),
+        ],
+        "payoff": "Tell us what your quietest month is, and we will tell you "
+                  "what to have finished before the cold arrives.",
+        "related": [("/seo/", "SEO and local search"),
+                    ("/meta-ads/", "Meta ads")],
+    },
 ]
 
 # /blog/, the index over those records. It is a page and a page's copy is copy,

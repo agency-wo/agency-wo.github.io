@@ -73,6 +73,13 @@ everything checkable is checked by `verify.py`, which fails the build.
 
 21. **Only what is evidenced.** Every number must be demonstrable. The
     Search Console figures are published with the client's permission.
+    A post may therefore have **no client at all**: `work: None` is legal and
+    means there is no case study behind it. The industry posts cover trades we
+    have not built for yet, and the alternative was borrowing a client from a
+    different trade, which is a job we did not do dressed as one we did. Such a
+    post loses its `about` node and its sidebar client link, which is the
+    machine-readable version of the same honesty. A `work` that is set and
+    unknown is still a typo and still fails the build.
 22. **Keep the weak numbers visible and explain them.** Position 8.4 and a
     1% click rate stay in the picture.
 23. **Any performance claim carries a date and a self-check:** "Taken August

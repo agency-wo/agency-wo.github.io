@@ -656,6 +656,296 @@ POSTS = [
                   "avere risposta. Se non lo sai, la risposta è quella.",
         "related": [("/meta-ads/", "Annunci Meta"), ("/web-design/", "Siti web")],
     },
+    # ====================================================== INDUSTRY: WATCH ===
+    {
+        "slug": "watch-shops-and-jewellers",
+        "src": "c7fa2b9a",
+        "date": "2026-08-14",
+        "updated": "2026-08-14",
+        "topic": "Ricerca locale",
+        "work": "iglisi-watch",
+        "service": ("/seo/", "SEO e ricerca locale"),
+
+        "title": "Come si fa trovare un orologiaio",
+        "h1": "Un negozio di orologi sono 2 attività, e solo 1 ha fretta.",
+        "summary": "Le riparazioni si cercano di corsa. Gli orologi si "
+                   "studiano per settimane. Un negozio solo deve rispondere a "
+                   "entrambe.",
+        "standfirst": "Chi ha la pila scarica e chi sta mettendo da parte i "
+                      "soldi per un Seiko non sono la stessa persona, e niente "
+                      "raggiunge tutti e due insieme.",
+        "description": "Riparare un orologio è una ricerca locale urgente, "
+                       "comprarlo è lenta. Cosa ha fatto un negozio di Durazzo "
+                       "per entrambe, e i numeri dopo 3 mesi.",
+        "og_desc": "Le riparazioni hanno fretta. Le vendite no. Un negozio, 2 "
+                   "ricerche diverse.",
+
+        "body": [
+            ("La risposta breve", [
+                "<p>Un orologiaio vende 2 cose che si comportano in modo "
+                "opposto. Una riparazione è un problema che qualcuno vuole "
+                "togliersi questa settimana. Un orologio è una decisione che "
+                "si rigira in testa per un mese.</p>",
+                "<p>Quasi tutti i negozi costruiscono per una sola delle due e "
+                "poi si chiedono perché l'altra non arriva mai.</p>",
+            ]),
+            ("Chi ripara ha fretta ed è qui vicino", [
+                "<p>Un orologio fermo si cerca dal telefono, di solito con un "
+                "luogo nelle parole: una pila, un cinturino, una corona. Non "
+                "sta confrontando la maestria di nessuno. Vuole qualcuno "
+                "vicino che sia aperto.</p>",
+                "<p>Quella ricerca si vince sulla mappa, non sul sito. Orari, "
+                "indirizzo e se qualcuno ti ha recensito decidono tutto, e "
+                "stanno tutti e 3 nella stessa scheda gratuita.</p>",
+            ]),
+            ("Chi compra va piano e legge tutto", [
+                "<p>Chi spende 3 mesi di risparmi per un orologio legge per "
+                "settimane prima di entrare. Confronta lo stesso modello tra "
+                "negozi diversi, cerca un prezzo e vuole sapere che il "
+                "venditore esiste davvero.</p>",
+                "<p>Quel cliente ha bisogno di una pagina per orologio, con il "
+                "nome del modello scritto come lo digita lui e un prezzo "
+                "sopra. Un negozio con una pagina sola che dice vendiamo "
+                "orologi in quel confronto non entra proprio.</p>",
+            ]),
+            ("Perché a un negozio servono tutte e due", [
+                "<p>Le riparazioni pagano l'affitto mentre le pagine dei "
+                "modelli invecchiano abbastanza da farsi trovare. La ricerca "
+                "premia una pagina che esiste da un po', la mappa premia "
+                "un'attività che risponde questa settimana.</p>",
+                "<p>Tenere solo la metà veloce vuol dire ripartire da zero "
+                "ogni trimestre. Tenere solo quella lenta vuol dire aspettare "
+                "mesi con il banco vuoto.</p>",
+            ]),
+            ("Cosa è servito a un negozio di Durazzo", [
+                "<p><a href=\"/work/iglisi-watch/\">Iglisi Watch</a> non "
+                "aveva nessun sito, quindi nel numero di partenza non c'è "
+                "niente di lusinghiero: era zero. Una pagina per ognuno dei 58 "
+                "orologi, in 3 lingue, più la scheda Google.</p>",
+                "<p>3 mesi dopo Google mandava 560 clic a trimestre, con un "
+                "posizionamento medio di 8,4 e una percentuale di clic "
+                "dell'1%. Questi ultimi 2 numeri sono deboli, e stanno sul "
+                "grafico della <a href=\"/work/iglisi-watch/\">loro "
+                "pagina</a> con la schermata da cui arrivano. Rilevato ad "
+                "agosto 2026, e la ricerca non sta ferma, quindi il tuo "
+                "controllo mostrerà altro.</p>",
+            ]),
+        ],
+        "payoff": "Dicci quale metà del tuo negozio è ferma, le riparazioni o "
+                  "le vendite, e ti diciamo quale ricerca ti manca.",
+        "related": [("/seo/", "SEO e ricerca locale"),
+                    ("/web-design/", "Siti web")],
+    },
+
+    # ==================================================== INDUSTRY: FASHION ===
+    {
+        "slug": "fashion-boutiques",
+        "src": "03f81075",
+        "date": "2026-08-14",
+        "updated": "2026-08-14",
+        "topic": "Siti web",
+        "work": "victoria-boutique",
+        "service": ("/web-design/", "Siti web"),
+
+        "title": "Un sito che non è mai fuori stagione",
+        "h1": "Il problema di una boutique non è il traffico. È invecchiare.",
+        "summary": "La merce cambia ogni settimana. Un sito che mostra la "
+                   "stagione scorsa fa più danno che non averlo.",
+        "standfirst": "I vestiti sono l'attività. Se il sito mostra quello che "
+                      "hai venduto a marzo, sta parlando contro di te.",
+        "description": "Perché il sito di una boutique invecchia nel giro di "
+                       "una stagione, quanto costa, e come una negoziante di "
+                       "Durazzo tiene il suo aggiornato dal telefono.",
+        "og_desc": "Un sito che mostra la stagione scorsa parla contro di te.",
+
+        "body": [
+            ("La risposta breve", [
+                "<p>Una boutique cambia merce più in fretta di quanto chiunque "
+                "abbia voglia di aggiornare un sito. Così il sito resta "
+                "indietro, e la cliente che ha fatto strada per un capo "
+                "venduto a marzo non ci ripassa.</p>",
+                "<p>Il rimedio non è la disciplina. È far sì che aggiornare "
+                "prenda un minuto.</p>",
+            ]),
+            ("Come compra davvero una cliente", [
+                "<p>Vede un capo su Instagram, poi vuole sapere 2 cose: c'è "
+                "ancora e quanto costa. Nessuna delle due risposte sta in un "
+                "post di 3 settimane fa.</p>",
+                "<p>Allora cerca il negozio per nome, arriva sul sito e in "
+                "circa un minuto decide se questo posto lavora ancora.</p>",
+            ]),
+            ("Perché quasi tutti questi siti marciscono", [
+                "<p>Il sito lo fa qualcun altro. Aggiungere un capo vuol dire "
+                "scrivergli, aspettare e controllare che sia andato su giusto. "
+                "Al terzo mese non lo fa più nessuno, e il sito diventa in "
+                "silenzio la fotografia di una settimana di primavera.</p>",
+                "<p>Un canone mensile peggiora le cose invece di migliorarle: "
+                "adesso il negozio paga per la cosa che è fuori tempo.</p>",
+            ]),
+            ("Cosa costruiamo per un negozio così", [
+                "<p><a href=\"/work/victoria-boutique/\">Victoria "
+                "Boutique</a> porta marchi greci in Albania e cambia merce con "
+                "la stagione. La proprietaria fotografa un capo, apre un "
+                "pannello sul telefono e lo mette su lei stessa.</p>",
+                "<p>Nessun sistema da licenziare, nessun canone mensile, "
+                "nessuno da chiamare. Il sito è in albanese, inglese e "
+                "italiano, e il cambio lingua funziona anche con JavaScript "
+                "spento.</p>",
+            ]),
+            ("Cosa vuol dire per il tuo negozio", [
+                "<p>Chiediti cosa ti servirebbe per mettere online un capo "
+                "adesso, da dove sei in piedi. Se la risposta onesta coinvolge "
+                "un'altra persona, il sito sarà fuori tempo entro la prossima "
+                "stagione e non ci puoi fare niente.</p>",
+            ]),
+        ],
+        "payoff": "Mandaci la fotografia di qualcosa che hai messo in vetrina "
+                  "questa settimana, e ti diciamo quanto ci vorrebbe a metterla "
+                  "online.",
+        "related": [("/web-design/", "Siti web"),
+                    ("/seo/", "SEO e ricerca locale")],
+    },
+
+    # =================================================== INDUSTRY: LINGERIE ===
+    {
+        "slug": "lingerie-shops",
+        "src": "25970d2d",
+        "date": "2026-08-14",
+        "updated": "2026-08-14",
+        "topic": "Siti web",
+        "work": "intimo-bruna",
+        "service": ("/web-design/", "Siti web"),
+
+        "title": "Perché l'intimo si vende parlando",
+        "h1": "Qui il carrello è la cosa sbagliata da costruire.",
+        "summary": "La taglia è incerta e l'acquisto è privato. Tutte e due le "
+                   "cose spingono la cliente a chiedere invece che a "
+                   "cliccare.",
+        "standfirst": "Un negozio può spendere tutto in un carrello che non "
+                      "usa nessuno, perché la domanda che ha la cliente non la "
+                      "risolve un pulsante.",
+        "description": "Le clienti di intimo scrivono invece di usare il "
+                       "carrello, perché sulla taglia serve una persona. Come "
+                       "un negozio di Durazzo ha costruito sull'abitudine che "
+                       "avevano già.",
+        "og_desc": "Sulla taglia serve una persona. Per questo il carrello "
+                   "resta vuoto.",
+
+        "body": [
+            ("La risposta breve", [
+                "<p>L'intimo si compra con 2 dubbi attaccati: mi andrà bene, e "
+                "chi vede che l'ho comprato. Un carrello non risponde a "
+                "nessuno dei due, ed è per questo che tanti restano lì "
+                "inutilizzati.</p>",
+                "<p>I negozi che qui vendono online davvero vendono dentro un "
+                "messaggio.</p>",
+            ]),
+            ("La taglia è una domanda, non un menù a tendina", [
+                "<p>Le taglie cambiano da marchio a marchio e quasi tutte le "
+                "clienti la propria la sanno solo per approssimazione. Davanti "
+                "a un menù a tendina e senza nessuno a cui chiedere, chi è "
+                "prudente chiude la pagina invece di rischiare.</p>",
+                "<p>La stessa persona lo chiede volentieri a una commessa. La "
+                "domanda non imbarazza quando c'è qualcuno che risponde.</p>",
+            ]),
+            ("La riservatezza sposta il posto in cui si compra", [
+                "<p>Una conversazione sembra privata come un modulo con la "
+                "carta non sarà mai, e in una città piccola questo pesa più "
+                "che altrove. La discrezione fa parte di quello che si "
+                "vende.</p>",
+            ]),
+            ("Costruisci sull'abitudine che hanno già", [
+                "<p>Da <a href=\"/work/intimo-bruna/\">Intimo Bruna</a> le "
+                "clienti scrivevano già invece di compilare moduli, quindi "
+                "mandarle a un carrello avrebbe voluto dire progettare per "
+                "un'abitudine che non hanno.</p>",
+                "<p>Ogni pagina prodotto passa a WhatsApp con l'articolo già "
+                "scritto nel messaggio, così la proprietaria non deve chiedere "
+                "quale. Merce e prezzi restano aggiornati dal telefono.</p>",
+            ]),
+            ("Cosa c'entra tutto questo con gli altri negozi", [
+                "<p>La lezione non riguarda l'intimo. Riguarda il guardare "
+                "come i tuoi clienti comprano già e costruire quello, invece "
+                "di comprare il carrello che ti vendono tutti perché ce "
+                "l'hanno tutti gli altri negozi.</p>",
+            ]),
+        ],
+        "payoff": "Dicci come ti sono arrivati davvero gli ultimi 10 ordini, e "
+                  "ti diciamo se un carrello ti sarebbe servito.",
+        "related": [("/web-design/", "Siti web"),
+                    ("/meta-ads/", "Annunci Meta")],
+    },
+
+    # ==================================================== INDUSTRY: HEATING ===
+    {
+        "slug": "heating-and-cooling-trades",
+        "src": "959b0d23",
+        "date": "2026-08-14",
+        "updated": "2026-08-14",
+        "topic": "Ricerca locale",
+        "work": "pro-affy",
+        "service": ("/seo/", "SEO e ricerca locale"),
+
+        "title": "Il mestiere che vende nel giorno più freddo",
+        "h1": "La tua settimana più piena decide quasi tutto l'anno.",
+        "summary": "Il riscaldamento si cerca in pochi giorni di freddo, dal "
+                   "telefono, a un'ora che non programma nessuno.",
+        "standfirst": "La scheda non la costruisci durante l'ondata di freddo. "
+                      "Per allora le ricerche stanno già succedendo e la "
+                      "risposta è quello che Google ha in archivio.",
+        "description": "La domanda di riscaldamento arriva tutta in pochi "
+                       "giorni e la ricerca si fa dal telefono, tardi. Perché "
+                       "il lavoro va fatto mesi prima del freddo.",
+        "og_desc": "La domanda arriva in pochi giorni. La scheda deve esistere "
+                   "prima.",
+
+        "body": [
+            ("La risposta breve", [
+                "<p>Il lavoro sul riscaldamento non arriva in modo regolare. "
+                "Arriva nella prima settimana davvero fredda, tutto insieme, "
+                "da gente che la settimana prima non ti stava pensando.</p>",
+                "<p>Tutto quello che decide se ti trovano doveva essere a "
+                "posto prima che quella settimana cominciasse.</p>",
+            ]),
+            ("La ricerca succede a un'ora scomoda su uno schermo piccolo", [
+                "<p>Una caldaia si ferma di sera. La ricerca la digita dal "
+                "telefono, in una casa fredda, qualcuno che non leggerà una "
+                "seconda pagina di risultati.</p>",
+                "<p>Quello che vede è una mappa con poche ditte sopra. Essere "
+                "una di quelle poche è un lavoro diverso dall'avere un bel "
+                "sito, e si decide settimane prima.</p>",
+            ]),
+            ("Perché durante il freddo è tardi per cominciare", [
+                "<p>Una scheda rivendicata e compilata nella settimana di "
+                "punta gareggia contro schede che raccolgono recensioni da "
+                "giugno. La ricerca non premia la ditta che si è presentata "
+                "insieme alla domanda.</p>",
+                "<p>I mesi vuoti sono quelli in cui tutto questo costa poco. "
+                "Sono anche quelli in cui non ha voglia di farlo nessuno.</p>",
+            ]),
+            ("Farsi trovare e farsi raggiungere sono 2 guasti diversi", [
+                "<p>Una ditta può vincere la ricerca e perdere lo stesso il "
+                "lavoro perché non risponde, che è l'argomento della "
+                "<a href=\"/work/pro-affy/\">pagina di ProAffy</a> e di "
+                "<a href=\"/blog/whoever-answers-first/\">un articolo a "
+                "parte</a>.</p>",
+                "<p>Si rompono separatamente e si riparano separatamente. "
+                "Essere raggiungibili non serve a niente se non eri tra le 3 "
+                "ditte in lista, ed esserci non serve se il telefono squilla a "
+                "vuoto.</p>",
+            ]),
+            ("Cosa fare nella stagione morta", [
+                "<p>Rivendica la scheda, sistema le zone servite e gli orari, "
+                "e chiedi una recensione ai clienti dell'inverno scorso finché "
+                "si ricordano. Niente di tutto questo costa, e tutto ha "
+                "bisogno di tempo per contare.</p>",
+            ]),
+        ],
+        "payoff": "Dicci qual è il tuo mese più vuoto, e ti diciamo cosa "
+                  "conviene avere finito prima che arrivi il freddo.",
+        "related": [("/seo/", "SEO e ricerca locale"),
+                    ("/meta-ads/", "Annunci Meta")],
+    },
 ]
 
 # /blog/, the index over those records. The soft wraps are placed for this text
