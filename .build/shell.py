@@ -226,10 +226,10 @@ def updated(source, lang, indent=10):
 # Web3Forms, the same service already running on watch.al. The access key is a
 # public write-only token: it can submit to this one form and do nothing else,
 # so it is safe in markup. It is not a secret and must not be treated as one.
-# TODO(founder): replace with the key for our own form. Do not reuse
-# watch.al's: one key, one inbox, one form. Gate check 22 fails until this is
-# a real key.
-WEB3FORMS_KEY = "PASTE-MINARANK-ACCESS-KEY-HERE"
+# Minarank's own key, its own form, its own inbox (info@minarankstudio.com).
+# Not watch.al's: one key, one inbox, one form, and check 22 rejects that key
+# by name in case anybody is ever tempted.
+WEB3FORMS_KEY = "2dcc706e-25be-4efa-83cb-416c74e4e2e9"
 FORM_ENDPOINT = "https://api.web3forms.com/submit"
 AUDIT_URL = "/start/#audit"
 
