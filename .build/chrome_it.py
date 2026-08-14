@@ -76,12 +76,14 @@ SRC = {
     "JS_ERROR": "e3741a63",
     "JS_SENDING": "29167c1d",
     "JS_SENDING_SAY": "21151b65",
+    "LISTED_ON": "2ce6ea19",
     "MENU": "c784aaa3",
     "NAV": "a2cb9fab",
     "OG_ALT": "4ccf3412",
     "QUESTIONS": "1579db95",
     "READ_IT": "89d4581e",
     "READ_NEXT": "3715bfd2",
+    "REVIEW_CTA": "915ab013",
     "SERVICE_BAND_NOTE": "77d5f90b",
     "SIDE_ALL_FOUR": "6c234522",
     "SIDE_ALSO": "e4144fc8",
@@ -186,6 +188,12 @@ AUDIT_LINK = "Chiedi un audit gratuito"
 # preserves the pattern rather than the order, and the reader of this page gets
 # his answer in the first word instead of the third. Reverting to the English
 # order is this one line and nothing else.
+# "Ci trovi su TechBehemoths": the natural Italian for a directory listing
+# is where you FIND us, not where we are listed, which reads as a register.
+LISTED_ON = "Ci trovi su"
+# Tu register like everything else, and "dillo" rather than "lascia una
+# recensione": the English asks you to say so, not to perform a task.
+REVIEW_CTA = "Hai lavorato con noi? Dillo su Google."
 FOOT_META = "{brand} {dot} Durazzo, Albania {dot} Lavoriamo in italiano, inglese e albanese"
 FOOT_COPYRIGHT = "&#169; 2026 {brand}"
 

@@ -30,22 +30,75 @@
       document.fonts.ready.then(function () { clearTimeout(cap); play(); });
     }
 
+    /* Count-up on the stat strips. THE NUMBERS ARE NEVER RE-DERIVED: the
+       final frame writes the exact source string back, so after the animation
+       the DOM is byte-identical to the HTML the generator emitted, separators
+       and suffixes included (57.6k, the Italian 57,6k, 1%). The animation is
+       theatre; the value is the record's. */
+    var countUp = function (el) {
+      var end = el.textContent;
+      var m = end.match(/^([^0-9]*)([0-9]+(?:[.,][0-9]+)?)(.*)$/);
+      if (!m) return;
+      var target = parseFloat(m[2].replace(",", "."));
+      var decimals = (m[2].split(/[.,]/)[1] || "").length;
+      var sep = m[2].indexOf(",") !== -1 ? "," : ".";
+      var t0 = null;
+      var DUR = 900;
+      var step = function (ts) {
+        if (t0 === null) t0 = ts;
+        var p = Math.min((ts - t0) / DUR, 1);
+        /* the hero's own ease-out: fast start, settled ending */
+        var eased = 1 - Math.pow(1 - p, 3);
+        if (p < 1) {
+          var v = (target * eased).toFixed(decimals).replace(".", sep);
+          el.textContent = m[1] + v + m[3];
+          requestAnimationFrame(step);
+        } else {
+          el.textContent = end;   /* the source string, exactly */
+        }
+      };
+      requestAnimationFrame(step);
+    };
+
     if ("IntersectionObserver" in window) {
       var io = new IntersectionObserver(function (entries) {
         for (var i = 0; i < entries.length; i++) {
           if (entries[i].isIntersecting) {
-            entries[i].target.classList.add("in-view");
-            io.unobserve(entries[i].target);
+            var el = entries[i].target;
+            /* a group reveals its children on a small stagger. The delay is
+               set through the CSSOM, which style-src does not govern; the cap
+               keeps a 17-row list from taking a second to finish. The class
+               lands 2 frames later so the delays are in place first; a single
+               element needs no delay and reveals on the spot. */
+            if (!el.hasAttribute("data-reveal-group")) {
+              el.classList.add("in-view");
+            } else {
+              var kids = el.children;
+              for (var k = 0; k < kids.length; k++) {
+                kids[k].style.transitionDelay =
+                  (Math.min(k, 6) * 70) + "ms";
+              }
+              /* two frames, so the delays land before the class flips */
+              (function (g) {
+                requestAnimationFrame(function () {
+                  requestAnimationFrame(function () {
+                    g.classList.add("in-view");
+                  });
+                });
+              })(el);
+              if (el.hasAttribute("data-count")) {
+                el.querySelectorAll(".stat-n").forEach(countUp);
+              }
+            }
+            io.unobserve(el);
           }
         }
       }, { threshold: 0.15, rootMargin: "0px 0px -10% 0px" });
-      document.querySelectorAll("[data-reveal]").forEach(function (el) {
-        io.observe(el);
-      });
+      document.querySelectorAll("[data-reveal], [data-reveal-group]")
+        .forEach(function (el) { io.observe(el); });
     } else {
-      document.querySelectorAll("[data-reveal]").forEach(function (el) {
-        el.classList.add("in-view");
-      });
+      document.querySelectorAll("[data-reveal], [data-reveal-group]")
+        .forEach(function (el) { el.classList.add("in-view"); });
     }
   }
 

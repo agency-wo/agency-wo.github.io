@@ -208,6 +208,7 @@ def audit_form(f, lang):
               <p class="af-say" id="af-say" role="status" aria-live="polite"></p>
               <p class="af-alt">{txt(16, f["alt"], lang)}</p>
               <p class="af-fine">{fill(f["fine"], lang)}</p>
+              <p class="af-fine">{shell.trust_line(lang)}</p>
             </form>
           </div>'''
 
@@ -291,7 +292,7 @@ def render(lang):
           <h2 id="proof-h">{txt(12, h["proof_h"], lang)}</h2>
           <p class="proof-lead">{txt(12, h["proof_lead"], lang)}</p>
 
-          <ul class="stat-strip">
+          <ul class="stat-strip" data-reveal-group data-count>
 {stats}
           </ul>
           <p class="stat-note">{txt(12, h["stat_note"], lang)}</p>
@@ -321,7 +322,7 @@ def render(lang):
           <p class="eyebrow">{fill(h["services_eyebrow"], lang)}</p>
           <h2 id="services-h">{txt(10, h["services_h"], lang)}</h2>
         </div>
-        <ul class="svc-list">
+        <ul class="svc-list" data-reveal-group>
 {svc}
         </ul>
       </div>

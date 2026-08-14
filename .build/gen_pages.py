@@ -256,7 +256,7 @@ def render(svc, en_svc, posts, lang):
 
     do_id = toc.add(en_c.WHAT_WE_DO, c.WHAT_WE_DO)
     a(f'          <h2 id="{do_id}">{c.WHAT_WE_DO}</h2>\n')
-    a('          <ol class="ledger">\n')
+    a('          <ol class="ledger" data-reveal-group>\n')
     # Zipped with the English the way the sections loop above is, and for the
     # same reason: the id is slugged from the ENGLISH title so that
     # /it/seo/#h-the-listing names the section /seo/#h-the-listing names.
@@ -282,7 +282,7 @@ def render(svc, en_svc, posts, lang):
         a('            </ul>\n          </section>\n\n')
 
     q_id = toc.add(en_c.QUESTIONS, c.QUESTIONS)
-    a('          <section class="faq">\n')
+    a('          <section class="faq" data-reveal-group>\n')
     a(f'            <h2 id="{q_id}">{c.QUESTIONS}</h2>\n')
     for (q, ans), (en_q, _en_ans) in zip(svc["faq"], en_svc["faq"]):
         a('            <div class="faq-item">\n')

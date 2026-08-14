@@ -445,6 +445,9 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
    every other link here already uses, so the row borrows it. */
 .cases > li:has(.post-row):hover .case-name a { color: var(--red); }
 .cases > li:has(.post-row):hover .arrow { transform: translate(2px, -2px); }
+/* the /work/ rows react the same way: one hover vocabulary for every list */
+.cases > li:has(.case-grid):hover .case-name a { color: var(--red); }
+.cases > li:has(.case-grid):hover .arrow { transform: translate(2px, -2px); }
 
 /* -- plates: real screenshots, no frame furniture -------------------------- */
 .plate { margin: 0; }
@@ -483,6 +486,12 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
 .foot-meta { display: flex; justify-content: space-between; gap: var(--s-6);
   flex-wrap: wrap; margin-top: var(--s-8); font-size: var(--fs-small);
   color: var(--ink-mute); }
+/* The trust line: directory links and the review ask, on ink, so they take
+   the band-alt treatment -- muted at rest, paper on hover. Quiet on purpose:
+   these are receipts, not calls to action, and the one loud block on a page
+   is the band CTA above them. */
+.foot-trust a { color: var(--ink-mute); text-underline-offset: 4px; }
+.foot-trust a:hover { color: var(--paper); }
 /* The footer switcher had no rules at all: 3 links laid out by .foot-meta's
    flex, in the UA's underline, at the muted colour meant for captions. Same
    shape as the header copy, in the ink band's colours: --paper for the links,
@@ -672,6 +681,15 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
   .js [data-reveal] { opacity: 0; transform: translateY(14px);
     transition: opacity 0.45s var(--ease-reveal), transform 0.45s var(--ease-reveal); }
   .js [data-reveal].in-view { opacity: 1; transform: none; }
+
+  /* A group hides its CHILDREN and reveals them on a stagger main.js sets as
+     a per-child transition-delay. The container itself never moves: sliding a
+     whole <ul> and its rows at once reads as the page lurching, sliding the
+     rows in sequence reads as the page arriving. Same 0.45s, same ease, so a
+     group and a lone [data-reveal] are one vocabulary. */
+  .js [data-reveal-group] > * { opacity: 0; transform: translateY(14px);
+    transition: opacity 0.45s var(--ease-reveal), transform 0.45s var(--ease-reveal); }
+  .js [data-reveal-group].in-view > * { opacity: 1; transform: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {

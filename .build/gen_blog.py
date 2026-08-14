@@ -317,7 +317,7 @@ def blog_index(posts, idx, lang):
         # the old flat list would not say.
         return f'''      <section class="post-group">
         <h2 class="group-h">{heading} <span class="group-n">{len(group)}</span></h2>
-        <ul class="cases">
+        <ul class="cases" data-reveal-group>
 {NL.join(row(p) for p in group)}
         </ul>
       </section>'''

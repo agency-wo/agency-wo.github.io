@@ -113,6 +113,25 @@ SAMEAS = [
     # title is "minarank studio Company Profile - TechBehemoths".
     "https://techbehemoths.com/company/mina-rank-studio",
 ]
+
+# The directories the site SHOWS, footer and hero form both. A separate list
+# from SAMEAS even though today it is a subset: sameAs is a schema claim about
+# identity, this is a visible trust line, and the day one of them earns a place
+# in one list but not the other, sharing the list would force the wrong call.
+#
+# Only listings that are LIVE AND VERIFIED go here (rule 21). The GoodFirms
+# profile exists but is still in their review queue and has no public URL:
+# paste it in the day it goes live, and nothing else needs touching.
+DIRECTORIES = [
+    ("TechBehemoths", "https://techbehemoths.com/company/mina-rank-studio"),
+    # ("GoodFirms", "https://www.goodfirms.co/company/..."),
+]
+
+# The Google review link, minted by Google when GBP verification completed and
+# pasted by the founder. The gate holds it to a review-link shape: a profile
+# URL pasted here would render a "leave a review" sentence that lands somebody
+# on a map card with no review box, which is a broken promise in 3 languages.
+GBP_REVIEW_URL = "https://g.page/r/CQ8FTD_EyBqyEAE/review"
 FOUNDER_SAMEAS = [
     "https://www.linkedin.com/in/placeholder-paste-the-founder-profile",
 ]
@@ -685,6 +704,20 @@ def switcher(lang, page_url, place="foot", indent=10):
             f'{inner}{NL}{pad}</nav>{NL}')
 
 
+def trust_line(lang):
+    """'Listed on TechBehemoths' -- the label localised, the names not.
+
+    One function called by the footer AND the hero form, so the two cannot
+    disagree about which directories we claim. Directory names are proper nouns
+    and stay as DIRECTORIES spells them; only the label in front travels.
+    """
+    c = ch(lang)
+    links = ", ".join(
+        f'<a href="{u}" target="_blank" rel="noopener">{n}</a>'
+        for n, u in DIRECTORIES)
+    return f"{c.LISTED_ON} {links}"
+
+
 def footer(lang, page_url=None, cta_heading=None, cta_note=None):
     """The single ink band: the closing CTA, the site index and the language
     switcher, so a page has exactly one dark block and exactly one ask."""
@@ -721,6 +754,8 @@ def footer(lang, page_url=None, cta_heading=None, cta_note=None):
         </nav>
         <div class="foot-meta">
           <p>{c.FOOT_META.replace("{brand}", BRAND).replace("{dot}", DOT)}</p>
+          <p class="foot-trust">{trust_line(lang)} {DOT} <a href="{GBP_REVIEW_URL}"\
+ target="_blank" rel="noopener">{c.REVIEW_CTA}</a></p>
           <p>{c.FOOT_COPYRIGHT.replace("{brand}", BRAND)}</p>
 {switcher(lang, page_url)}        </div>
       </footer>

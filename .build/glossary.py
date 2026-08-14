@@ -110,6 +110,9 @@ IDENTICAL_BY_DESIGN = {
     # why chrome_it.py and chrome_sq.py each reversed a documented decision to
     # get here. Without this, check 35 fails 3 correct files.
     "Blog",
+    # The directory's name, in the footer trust line on every page. A company
+    # name, like Iglisi Watch and ProAffy above it.
+    "TechBehemoths",
     # The TITLE of a cited study, and titles are not translated. Rule 7 says a
     # figure names its source in the sentence; a reader who wants to check it
     # searches the name we printed, so an Italian rendering of it would send

@@ -123,7 +123,7 @@ def stats(rows, lang):
     items = NL.join(
         f'            <li><span class="stat-n">{l10n.dec(n, lang)}</span>'
         f'<span class="stat-l">{l}</span></li>' for n, l in rows)
-    return f'''          <ul class="stat-strip">
+    return f'''          <ul class="stat-strip" data-reveal-group data-count>
 {items}
           </ul>'''
 
@@ -294,7 +294,7 @@ def work_index(clients, idx, lang):
       </div>
 
       <section>
-        <ul class="cases">
+        <ul class="cases" data-reveal-group>
 {rows}
         </ul>
       </section>

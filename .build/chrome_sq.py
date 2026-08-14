@@ -78,12 +78,14 @@ SRC = {
     "JS_ERROR": "e3741a63",
     "JS_SENDING": "29167c1d",
     "JS_SENDING_SAY": "21151b65",
+    "LISTED_ON": "2ce6ea19",
     "MENU": "c784aaa3",
     "NAV": "a2cb9fab",
     "OG_ALT": "4ccf3412",
     "QUESTIONS": "1579db95",
     "READ_IT": "89d4581e",
     "READ_NEXT": "3715bfd2",
+    "REVIEW_CTA": "915ab013",
     "SERVICE_BAND_NOTE": "77d5f90b",
     "SIDE_ALL_FOUR": "6c234522",
     "SIDE_ALSO": "e4144fc8",
@@ -195,6 +197,10 @@ AUDIT_LINK = "Merr një auditim falas"
 # preserves the pattern rather than the order, and the reader of this page gets
 # his answer in the first word instead of the third. Reverting to the English
 # order is this one line and nothing else.
+# "Na gjen te": where you find us, the same move as the Italian, because
+# "të listuar në" is registry language and nobody speaks it.
+LISTED_ON = "Na gjen te"
+REVIEW_CTA = "Ke punuar me ne? Thuaje në Google."
 FOOT_META = "{brand} {dot} Durrës, Shqipëri {dot} Punojmë në shqip, anglisht dhe italisht"
 FOOT_COPYRIGHT = "&#169; 2026 {brand}"
 

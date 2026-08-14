@@ -83,6 +83,13 @@ AUDIT_LINK = "Get a free audit"
 # Durres is deliberately the plain form in English. Italian says Durazzo and
 # Albanian says Durrës, and both are in glossary.TERMS.
 FOOT_META = "{brand} {dot} Durres, Albania {dot} We work in English, Italian and Albanian"
+# The label in front of the directory links, footer and hero form both. The
+# directory NAMES are proper nouns and live in shell.DIRECTORIES; this is only
+# the preposition phrase, which is the only part that is a translation problem.
+LISTED_ON = "Listed on"
+# The review ask. One sentence, no stars, no widget: a review is a favour and
+# the sentence has to sound like a person asking one, not a popup demanding it.
+REVIEW_CTA = "Worked with us? Say so on Google."
 FOOT_COPYRIGHT = "&#169; 2026 {brand}"
 
 # -- shared section headings the generators emit ---------------------------

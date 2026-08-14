@@ -120,7 +120,7 @@ def render(page, rows, lang):
 {NL.join("          " + shell.localise_html(b, lang) for b in page["intro"])}
       </div>
 
-      <dl class="glossary">
+      <dl class="glossary" data-reveal-group>
 {NL.join(items)}
       </dl>
 {shell.updated("terms", lang)}

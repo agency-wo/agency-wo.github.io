@@ -148,7 +148,7 @@ def block(indent, b, lang, en=None, toc=None):
         rows.append(pad + "</ul>")
         return NL.join(rows)
     if kind == "ledger":
-        rows = [pad + '<ol class="ledger">']
+        rows = [pad + '<ol class="ledger" data-reveal-group>']
         # The id is cut from the ENGLISH heading, so a fragment copied out of
         # the Albanian page still names the same section on the English one.
         # No English in hand means no id rather than one slugged from the
@@ -239,7 +239,7 @@ def faq_section(indent, rec, en_rec, lang, toc):
     pad = " " * indent
     h = fill(rec["faq_h"], lang)
     hid = "" if toc is None else f' id="{toc.add(en_rec["faq_h"], h)}"'
-    rows = [pad + '<section class="faq">',
+    rows = [pad + '<section class="faq" data-reveal-group>',
             f'{pad}  <h2{hid}>{h}</h2>']
     for (q, a), (en_q, _en_a) in zip(rec["faq"], en_rec["faq"]):
         rows.append(pad + '  <div class="faq-item">')

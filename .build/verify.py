@@ -2256,6 +2256,22 @@ for p in all_pages:
                             f"worse than no size at all")
 
 
+# 51. the review link is a review link -------------------------------------
+# GBP_REVIEW_URL renders as "say so on Google" in 3 languages, on all 32
+# pages per language. A profile URL pasted there lands somebody willing to do
+# us a favour on a map card with no review box, which is a broken promise made
+# exactly to the people doing us favours. Google mints 2 shapes; both pass,
+# anything else is a paste error.
+if _shell.GBP_REVIEW_URL and not re.match(
+        r"https://(g\.page/r/[\w-]+/review$"
+        r"|search\.google\.com/local/writereview\?)",
+        _shell.GBP_REVIEW_URL):
+    findings.append(
+        f"[review] shell.GBP_REVIEW_URL is {_shell.GBP_REVIEW_URL}, which is "
+        f"not a Google review link. g.page/r/<id>/review or "
+        f"search.google.com/local/writereview are the shapes Google mints")
+
+
 # 50. one published address ------------------------------------------------
 # shell.EMAIL is a single constant and every page derives from it, so the 64
 # pages were never the risk. The prose was. Changing hello@ to info@ left the
