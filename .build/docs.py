@@ -331,11 +331,11 @@ PAGES = [
         "url": "/start/",
         "nav": "Start a project",
         "title": "Start a project",
-        "description": "Tell us what you sell and where you want to be found. Email, "
+        "description": "Tell us what you offer and where you want to be found. Email, "
                        "WhatsApp or a short call. We answer with a plan and a straight "
                        "price.",
         "og_desc": "We answer with a plan and a straight price.",
-        "h1": "Tell us what you sell.",
+        "h1": "Get found for what you offer.",
         "standfirst": "Start with the free audit, or just write. It all" + NL +
                       "reaches the same person, and the audit comes back {turnaround}.",
         # The long form, against the homepage hero's four fields. Somebody who
@@ -439,6 +439,6 @@ PAGES = [
             ]),
         ]),
         "cta": "Or just say hello.",
-        "cta_note": "A paragraph about what you sell is enough to start.",
+        "cta_note": "A paragraph about what you offer is enough to start.",
     },
 ]

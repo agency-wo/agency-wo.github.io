@@ -300,7 +300,7 @@ CLIENTS = [
 # text and not copied from the English: a newline here says where the emitted
 # line breaks and carries no meaning.
 WORK_INDEX = {
-    "src": "23770083",
+    "src": "39522997",
     # "Punët" is what chrome_sq.FOOT_HEADINGS[1] and CRUMB_WORK already call
     # this section, so the tab, the crumb and the footer say one word.
     "title": "Punët",
@@ -324,13 +324,13 @@ WORK_INDEX = {
              "dhe analitika mbeten te klienti, por gjithçka në këtë faqe "
              "është publike dhe e verifikueshme.",
     "band_h": "Biznesi yt, më i lehtë për t'u gjetur.",
-    "band_note": "Na thuaj çfarë shet dhe ku do të të gjejnë.",
+    "band_note": "Na thuaj çfarë ofron dhe ku do të të gjejnë.",
 }
 
 # The ink band on all 4 client pages, written once, as in English.
 CLIENT_BAND = {
-    "src": "a0e39377",
+    "src": "26791b40",
     "h": "Do të njëjtën gjë për dyqanin tënd?",
-    "note": "Na thuaj çfarë shet dhe ku do të të gjejnë. Të përgjigjemi me "
+    "note": "Na thuaj çfarë ofron dhe ku do të të gjejnë. Të përgjigjemi me "
             "një plan.",
 }

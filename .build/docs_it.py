@@ -344,14 +344,14 @@ PAGES = [
     # ---------------------------------------------------------------- START --
     {
         "url": "/start/",
-     "src": "cfd2facd",
+     "src": "98c6ca53",
         "nav": "Inizia un progetto",
         "title": "Inizia un progetto",
-        "description": "Dicci cosa vendi e dove vuoi farti trovare. Email, WhatsApp o "
+        "description": "Dicci cosa offri e dove vuoi farti trovare. Email, WhatsApp o "
                        "una telefonata breve. Ti rispondiamo con un piano e un prezzo "
                        "chiaro.",
         "og_desc": "Ti rispondiamo con un piano e un prezzo chiaro.",
-        "h1": "Dicci cosa vendi.",
+        "h1": "Fatti trovare per quello che offri.",
         # {turnaround} 1 of 3. Gate check 25 counts them.
         "standfirst": "Comincia dall'audit gratuito, o scrivi e basta." + NL +
                       "Arriva tutto alla stessa persona, e l'audit torna indietro "
@@ -464,6 +464,6 @@ PAGES = [
             ]),
         ]),
         "cta": "Oppure dicci solo ciao.",
-        "cta_note": "Un paragrafo su cosa vendi basta per cominciare.",
+        "cta_note": "Un paragrafo su cosa offri basta per cominciare.",
     },
 ]

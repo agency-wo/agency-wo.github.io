@@ -84,7 +84,7 @@ SRC = {
     "READ_IT": "89d4581e",
     "READ_NEXT": "3715bfd2",
     "REVIEW_CTA": "915ab013",
-    "SERVICE_BAND_NOTE": "77d5f90b",
+    "SERVICE_BAND_NOTE": "4a124f73",
     "SIDE_ALL_FOUR": "6c234522",
     "SIDE_ALSO": "e4144fc8",
     "SIDE_BUSINESS": "af808825",
@@ -172,7 +172,7 @@ WA_PREFILL = "Ciao {brand}, ho una domanda sul mio sito."
 # glossary.TERMS. "Chiedi" rather than the commercial "Richiedi", which is 2
 # characters longer and half a register more formal than the rest of the site.
 BAND_CTA = "Chiedi un audit gratuito"
-SERVICE_BAND_NOTE = ("Dicci cosa vendi e dove vuoi farti trovare. "
+SERVICE_BAND_NOTE = ("Dicci cosa offri e dove vuoi farti trovare. "
                      "Ti rispondiamo con un piano e un prezzo chiaro.")
 # The same words as BAND_CTA above, and that is not a copy-paste. The English
 # separates the two by "website", which the Italian band had already dropped

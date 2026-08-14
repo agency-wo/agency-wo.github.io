@@ -272,7 +272,7 @@ WORK_INDEX = {
              "with the client, but everything on this page is public and "
              "checkable.",
     "band_h": "Your business, easier to find.",
-    "band_note": "Tell us what you sell and where you want to be found.",
+    "band_note": "Tell us what you offer and where you want to be found.",
 }
 
 # The ink band on all 4 client pages. One pair for 4 pages, so it is written
@@ -281,7 +281,7 @@ WORK_INDEX = {
 # slightly different asks.
 CLIENT_BAND = {
     "h": "Want the same for your shop?",
-    "note": "Tell us what you sell and where you want to be found. We answer "
+    "note": "Tell us what you offer and where you want to be found. We answer "
             "with a plan.",
 }
 

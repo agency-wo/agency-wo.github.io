@@ -144,7 +144,7 @@ PAGE = {
     "who_go": "How we work",
 
     # -- the one call to action ---------------------------------------------
-    "cta": "Tell us what you sell.",
+    "cta": "Get found for what you offer.",
     "cta_note": "We answer with a plan and a straight price. If we are not the right "
                 "people, we will say so.",
 }

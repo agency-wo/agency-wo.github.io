@@ -335,14 +335,14 @@ PAGES = [
     # ---------------------------------------------------------------- START --
     {
         "url": "/start/",
-     "src": "cfd2facd",
+     "src": "98c6ca53",
         "nav": "Nis një projekt",
         "title": "Nis një projekt",
-        "description": "Na thuaj çfarë shet dhe ku do të të gjejnë. Email, WhatsApp ose "
+        "description": "Na thuaj çfarë ofron dhe ku do të të gjejnë. Email, WhatsApp ose "
                        "një telefonatë e shkurtër. Të përgjigjemi me një plan dhe një "
                        "çmim të qartë.",
         "og_desc": "Të përgjigjemi me një plan dhe një çmim të qartë.",
-        "h1": "Na thuaj çfarë shet.",
+        "h1": "Bëhu i gjetshëm për atë që ofron.",
         # {turnaround} 1 of 3. Gate check 25 counts them.
         "standfirst": "Nis me auditimin falas, ose thjesht shkruaj." + NL +
                       "Gjithçka mbërrin te i njëjti person, dhe auditimi kthehet "
@@ -457,6 +457,6 @@ PAGES = [
             ]),
         ]),
         "cta": "Ose thjesht përshëndet.",
-        "cta_note": "Një paragraf për atë që shet mjafton për të nisur.",
+        "cta_note": "Një paragraf për atë që ofron mjafton për të nisur.",
     },
 ]

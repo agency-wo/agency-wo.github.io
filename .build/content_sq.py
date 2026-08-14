@@ -432,7 +432,7 @@ SERVICES = [
     # ------------------------------------------------------------ META ADS --
     {
         "slug": "meta-ads",
-        "src": "09e11765",
+        "src": "6b784122",
         # In glossary.KEEP_ENGLISH, and identical in all 3 languages.
         "nav": "Meta ads",
         "schema_name": "Reklamim në Meta",
@@ -538,6 +538,6 @@ SERVICES = [
         "related": [("/web-design/", "Faqe interneti"),
                     ("/seo/", "SEO dhe kërkim lokal")],
         "payoff": "Një buxhet i vendosur nga marzhet e tua, jo nga fatura jonë.",
-        "tail": "Na thuaj çfarë shet dhe kush duhet ta blejë.",
+        "tail": "Na thuaj çfarë ofron dhe kush duhet ta blejë.",
     },
 ]

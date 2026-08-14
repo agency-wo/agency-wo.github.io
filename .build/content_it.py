@@ -453,7 +453,7 @@ SERVICES = [
     # ------------------------------------------------------------ META ADS --
     {
         "slug": "meta-ads",
-        "src": "09e11765",
+        "src": "6b784122",
         # In glossary.KEEP_ENGLISH, and identical in all 3 languages.
         "nav": "Meta ads",
         "schema_name": "Pubblicità su Meta",
@@ -565,6 +565,6 @@ SERVICES = [
         "related": [("/web-design/", "Siti web"),
                     ("/seo/", "SEO e ricerca locale")],
         "payoff": "Un budget deciso dai tuoi margini, non dalla nostra fattura.",
-        "tail": "Dicci cosa vendi e chi dovrebbe comprarlo.",
+        "tail": "Dicci cosa offri e chi dovrebbe comprarlo.",
     },
 ]

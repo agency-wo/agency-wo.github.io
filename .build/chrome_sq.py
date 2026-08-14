@@ -86,7 +86,7 @@ SRC = {
     "READ_IT": "89d4581e",
     "READ_NEXT": "3715bfd2",
     "REVIEW_CTA": "915ab013",
-    "SERVICE_BAND_NOTE": "77d5f90b",
+    "SERVICE_BAND_NOTE": "4a124f73",
     "SIDE_ALL_FOUR": "6c234522",
     "SIDE_ALSO": "e4144fc8",
     "SIDE_BUSINESS": "af808825",
@@ -180,7 +180,7 @@ WA_PREFILL = "Përshëndetje {brand}, kam një pyetje për faqen time të intern
 # singular imperative, and the whole button is 2 characters shorter than the
 # English it replaces.
 BAND_CTA = "Merr një auditim falas"
-SERVICE_BAND_NOTE = ("Na trego çfarë shet dhe ku do të të gjejnë. "
+SERVICE_BAND_NOTE = ("Na trego çfarë ofron dhe ku do të të gjejnë. "
                      "Të përgjigjemi me një plan dhe një çmim të qartë.")
 # The same words as BAND_CTA above, and that is not a copy-paste. The English
 # separates the two by "website", which the Albanian band could not carry:

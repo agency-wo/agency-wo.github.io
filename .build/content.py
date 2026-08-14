@@ -441,6 +441,6 @@ SERVICES = [
                       "spend, because that pays an agency to tell you to spend more."),
         "related": [("/web-design/", "Websites"), ("/seo/", "SEO and local search")],
         "payoff": "A budget set by your margins, not our invoice.",
-        "tail": "Tell us what you sell and who should be buying it.",
+        "tail": "Tell us what you offer and who should be buying it.",
     },
 ]

@@ -73,7 +73,7 @@ BAND_CTA = "Get a free website audit"
 # The note under the band heading on the 4 service pages. One key rather than
 # one per page, because all 4 pass the same sentence: it was hardcoded in
 # gen_pages.py and would have stayed English under /it/ and /sq/.
-SERVICE_BAND_NOTE = ("Tell us what you sell and where you want to be found. "
+SERVICE_BAND_NOTE = ("Tell us what you offer and where you want to be found. "
                      "We answer with a plan and a straight price.")
 # The same offer named inside a sentence, at the end of a blog post's payoff
 # line. It is NOT BAND_CTA: that one is a filled block whose width is its own

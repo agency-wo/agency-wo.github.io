@@ -45,7 +45,7 @@ NL = chr(10)
 AVAILABILITY = "Prendiamo nuovi lavori da settembre."
 
 # (href, name, what you end up with, what the page holds)
-# STAMP: SERVICES is a list of tuples and has nowhere to put "src": "b5bb98c5".
+# STAMP: SERVICES is a list of tuples and has nowhere to put "src": "e2792051".
 # It is recorded here instead, and check_stamp does not run on this record.
 #
 # The 5 names are byte-identical to chrome_it.FOOT_LABELS[0]: the footer and
@@ -98,7 +98,7 @@ STATS = [
 ]
 
 PAGE = {
-    "src": "d3ef8f1c",
+    "src": "e2792051",
 
     # 38 characters against the 52 the title budget leaves once gen_home.py has
     # put "minarank studio ·" in front of it.
@@ -229,7 +229,7 @@ PAGE = {
     # -- the one call to action ---------------------------------------------
     # Both lines are the brief's own, word for word: they render in the ink
     # band on every Italian page, and check 27 wants one CTA, not eighteen.
-    "cta": "Dicci cosa vendi.",
+    "cta": "Fatti trovare per quello che offri.",
     "cta_note": "Ti rispondiamo con un piano e un prezzo chiaro. Se non siamo "
                 "le persone giuste, te lo diciamo.",
 }
