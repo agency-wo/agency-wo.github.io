@@ -1343,10 +1343,38 @@ POSTS = [
 # /blog/, the index over those records. It is a page and a page's copy is copy,
 # so it sits here rather than in gen_blog.py: a headline typed into a generator
 # is a headline that stays English on an Italian page, and nothing would say so.
+# Which posts are written FOR A TRADE rather than about a job we did. The
+# index splits on this, and nothing else uses it.
+#
+# A set of slugs and not a key on each record, deliberately. Slugs are English
+# in all 3 languages (i18n.py:62), so this needs no translation, adds no key to
+# 51 records and cannot fall out of same_shape. The membership is a fact about
+# the post, not a word somebody has to render into Albanian.
+#
+# gen_blog asserts every slug here is a real post, so a rename that forgets
+# this line fails the build instead of quietly emptying a section.
+INDUSTRY = {
+    "watch-shops-and-jewellers",
+    "fashion-boutiques",
+    "lingerie-shops",
+    "heating-and-cooling-trades",
+    "restaurants-and-cafes",
+    "hotels-and-guesthouses",
+    "hairdressers-and-salons",
+    "dentists-and-clinics",
+    "car-repair-and-garages",
+    "estate-agents",
+}
+
 BLOG_INDEX = {
     # 7 characters of the title budget's 52, because shell.head appends
     # " · minarank studio" and check 6 fails a title over 70.
-    "title": "Writing",
+    "title": "Blog",
+    # The 2 sections the index splits into. Which posts land in which is
+    # decided by INDUSTRY above, on slugs, so this file carries the words
+    # and never the membership.
+    "group_trade": "Find your trade",
+    "group_work": "See what we built",
     "description": "What we have learned doing search, AI search and custom "
                    "software for small businesses in Durres, written so you "
                    "can check it.",

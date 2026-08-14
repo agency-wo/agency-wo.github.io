@@ -25,6 +25,9 @@ import i18n  # noqa: E402
 import l10n  # noqa: E402
 import shell  # noqa: E402
 from gen_pages import Contents, out, strip_tags, write  # noqa: E402
+# Imported straight rather than through i18n.load, because it is slugs and not
+# copy: there is nothing in it for a translator to answer.
+from posts import INDUSTRY  # noqa: E402
 
 S = shell.SITE
 NL = chr(10)
@@ -242,14 +245,28 @@ def blog_index(posts, idx, lang):
     url = S + shell.localise(BLOG, lang)
     home = S + shell.localise("/", lang)
     # blogPost already names every post, and says nothing about their ORDER.
-    # This page is newest-first and that is meaningful on a blog, so the
-    # ItemList carries the sequence the reader actually sees, declared
-    # descending rather than left to be guessed from the array.
+    # Two sections, because 17 identical rows is a scroll rather than a page and
+    # the reader arrives asking whether there is anything here about HIS trade.
+    # Split on posts.INDUSTRY, which is slugs, so the order inside each half is
+    # still the newest-first the whole list was in.
+    trade = [p for p in posts if p["slug"] in INDUSTRY]
+    work = [p for p in posts if p["slug"] not in INDUSTRY]
+
+    # The ItemList enumerates the page AS DISPLAYED, so it is built from the
+    # 2 groups in the order they are rendered rather than from the flat list.
+    #
+    # It used to say ItemListOrderDescending, and that stopped being true the
+    # moment the page grouped: the first item on the page is now the newest
+    # TRADE post, not the newest post. Position is presentation here, not a
+    # ranking and not a date sort, and Unordered is what schema.org has for
+    # that. Claiming a sort the page does not perform is the kind of thing
+    # nothing would ever have failed on.
+    ordered = trade + work
     items = [{"@type": "ListItem", "position": i,
               "url": S + shell.localise(post_url(p), lang),
               "name": p["title"],
               "item": {"@id": S + shell.localise(post_url(p), lang) + "#post"}}
-             for i, p in enumerate(posts, 1)]
+             for i, p in enumerate(ordered, 1)]
     graph = [
         {"@type": "Blog", "@id": url + "#blog", "url": url,
          "name": idx["title"], "publisher": {"@id": home + "#org"},
@@ -259,7 +276,7 @@ def blog_index(posts, idx, lang):
                       for p in posts]},
         {"@type": "ItemList", "@id": url + "#list",
          "name": idx["title"], "numberOfItems": len(items),
-         "itemListOrder": "https://schema.org/ItemListOrderDescending",
+         "itemListOrder": "https://schema.org/ItemListUnordered",
          "itemListElement": items},
         {"@type": "BreadcrumbList", "@id": url + "#crumbs",
          "itemListElement": [
@@ -279,18 +296,34 @@ def blog_index(posts, idx, lang):
     # sell is the long half. Without it the list was a narrow text column with
     # the entire right half of the page blank above 1000px. One proportion used
     # twice is a system; a second proportion invented here would not be.
-    rows = NL.join(f'''          <li>
+    def row(p):
+        href = shell.localise(post_url(p), lang)
+        return f'''          <li>
             <div class="post-row">
               <div>
-                <h2 class="case-name"><a href="{shell.localise(post_url(p), lang)}">{p["title"]}</a></h2>
+                <h2 class="case-name"><a href="{href}">{p["title"]}</a></h2>
                 <p class="case-where">{p["topic"]} {shell.DOT} {l10n.human(p["date"], lang)}</p>
               </div>
               <div>
                 <p class="case-said">{shell.localise_html(p["summary"], lang)}</p>
-                <p class="case-said"><a href="{shell.localise(post_url(p), lang)}">{shell.ch(lang).READ_IT} {shell.ARROW}</a></p>
+                <p class="case-said"><a href="{href}">{shell.ch(lang).READ_IT} {shell.ARROW}</a></p>
               </div>
             </div>
-          </li>''' for p in posts)
+          </li>'''
+
+    def section(heading, group):
+        # The count is in the heading rather than under it: it tells the reader
+        # how much is here before he starts scrolling, which is the one thing
+        # the old flat list would not say.
+        return f'''      <section class="post-group">
+        <h2 class="group-h">{heading} <span class="group-n">{len(group)}</span></h2>
+        <ul class="cases">
+{NL.join(row(p) for p in group)}
+        </ul>
+      </section>'''
+
+    groups = NL + NL.join((section(idx["group_trade"], trade),
+                           section(idx["group_work"], work))) + NL
 
     body = f'''
       <header class="page-head">
@@ -298,13 +331,7 @@ def blog_index(posts, idx, lang):
         <h1 class="page-title">{idx["h1"]}</h1>
         <p class="standfirst">{txt(10, idx["standfirst"], lang)}</p>
       </header>
-
-      <section>
-        <ul class="cases">
-{rows}
-        </ul>
-      </section>
-{shell.updated("posts", lang, 6)}
+{groups}{shell.updated("posts", lang, 6)}
 '''
     return (shell.head(page, lang) + shell.header(lang, BLOG) +
             '\n  <main id="main">\n    <div class="wrap">\n' + body +
@@ -348,6 +375,14 @@ def check(posts, by_slug):
             assert heading.count(",") < 2, (
                 f'{w}: heading "{heading}" has 2 commas and check 20 fails a '
                 f'verbless heading with 2 commas')
+
+    # Every slug in INDUSTRY is a real post. Rename a post and forget that
+    # set and the index quietly renders a section short by one, which is
+    # the kind of wrong that looks like a design decision.
+    missing = sorted(INDUSTRY - slugs)
+    assert not missing, (
+        f"posts.INDUSTRY names {missing}, which are not posts. A slug there "
+        f"must match a record, or the blog index drops it silently")
 
     # Check 11 fails ANY sentence of 9+ words that appears on 2 pages, and 3
     # posts sharing one closing CTA is how this file first failed the gate.

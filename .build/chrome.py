@@ -15,7 +15,12 @@ destinations, this file owns every word in it.
 """
 
 # Header nav. Same length and order as shell.NAV_PATHS.
-NAV = ["Proof", "Services", "Writing", "Studio"]
+#
+# "Blog" and not "Writing". The URL has been /blog/ since the first build and
+# the nav spent a year calling it something else, which is one word for a
+# reader to translate before they click. Both other languages take "Blog"
+# whole, so the 3 navs now agree with each other and with the address bar.
+NAV = ["Proof", "Services", "Blog", "Studio"]
 
 # The 4 footer columns: a heading, then a label per link. Lengths must match
 # shell.FOOT_PATHS exactly. The Work column is 4 client names, which are proper
@@ -26,7 +31,7 @@ FOOT_LABELS = [
     ["SEO and local search", "AI search", "Websites", "Meta ads",
      "Custom software"],
     ["Iglisi Watch", "Victoria Boutique", "Intimo Bruna", "ProAffy"],
-    ["About", "Writing", "Start a project"],
+    ["About", "Blog", "Start a project"],   # Blog matches NAV[2]
     [],   # filled by shell: the email address and WhatsApp are not words
 ]
 
@@ -121,7 +126,7 @@ CRUMB_HOME = "Home"       # also the JSON-LD BreadcrumbList root
 # row that must not wrap at 1024px and a crumb is not, and the English already
 # calls one section Proof in the nav and Work in the footer.
 CRUMB_WORK = "Work"
-CRUMB_WRITING = "Writing"
+CRUMB_WRITING = "Blog"
 
 # The 2 prose headings every client page carries, in the order they appear.
 # The second is also the link on /work/ that leads to that section, so the

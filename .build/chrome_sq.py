@@ -34,10 +34,16 @@ here is the copyright sign in FOOT_COPYRIGHT, which is a symbol and not a word.
 # "Results": /work/ holds 4 clients and only 1 publishes numbers, so it would
 # over-promise on 3 of the 4 pages it leads to.
 #
-# "Shkrime" and not "Artikuj". Albanian, unlike Italian, does have a natural
-# noun for what the English "Writing" names: shkrim is what an Albanian writer
-# calls a piece he wrote. It keeps the English metaphor instead of trading it
-# away, and it still avoids "Blog", which was the point.
+# "Blog", and this reverses a decision. The note here used to argue for
+# "Shkrime" and ended "it still avoids 'Blog', which was the point". The
+# founder has decided the section is called Blog, in every language, because
+# the URL has always been /blog/ and a nav that disagrees with the address
+# bar is a word the reader has to translate before clicking.
+#
+# The old reasoning was right that Albanian has a real noun for this and
+# Italian does not. It was answering the wrong question: the word has to
+# match the URL and the other 2 navs, and "shkrim" cannot do that.
+
 # Stamps for every chrome string. These are bare strings and lists, so
 # none of them can hold a "src" key of its own. Edit an English chrome
 # string and shell.py names the one that went stale, at import.
@@ -58,7 +64,7 @@ SRC = {
     "BYLINE": "0a55b894",
     "CRUMB_HOME": "8f3852d3",
     "CRUMB_WORK": "0571c47a",
-    "CRUMB_WRITING": "db632f4b",
+    "CRUMB_WRITING": "6228153d",
     "ERR_BACK": "d7504791",
     "ERR_BAND_H": "8500f0e4",
     "ERR_BAND_NOTE": "184903aa",
@@ -66,14 +72,14 @@ SRC = {
     "ERR_TITLE": "8aa30e6c",
     "FOOT_COPYRIGHT": "387ea80f",
     "FOOT_HEADINGS": "8a193087",
-    "FOOT_LABELS": "2ffcd722",
+    "FOOT_LABELS": "967e86a8",
     "FOOT_META": "77f25e44",
     "HEAD_CTA": "50bb03ab",
     "JS_ERROR": "e3741a63",
     "JS_SENDING": "29167c1d",
     "JS_SENDING_SAY": "21151b65",
     "MENU": "c784aaa3",
-    "NAV": "0aed4a3d",
+    "NAV": "a2cb9fab",
     "OG_ALT": "4ccf3412",
     "QUESTIONS": "1579db95",
     "READ_IT": "89d4581e",
@@ -98,7 +104,7 @@ SRC = {
     "WORK_STARTED": "0409d547",
 }
 
-NAV = ["Prova", "Shërbime", "Shkrime", "Studio"]
+NAV = ["Prova", "Shërbime", "Blog", "Studio"]
 
 # The 4 footer columns: a heading, then a label per link. Lengths must match
 # shell.FOOT_PATHS exactly. The Work column is 4 client names, proper nouns and
@@ -113,7 +119,7 @@ FOOT_LABELS = [
     ["SEO dhe kërkim lokal", "Kërkimi me AI", "Faqe interneti", "Meta ads",
      "Software me porosi"],
     ["Iglisi Watch", "Victoria Boutique", "Intimo Bruna", "ProAffy"],
-    ["Kush jemi", "Shkrime", "Nis një projekt"],   # Shkrime matches NAV[2]
+    ["Kush jemi", "Blog", "Nis një projekt"],   # Blog matches NAV[2]
     [],   # filled by shell: the email address and WhatsApp are not words
 ]
 
@@ -241,7 +247,7 @@ CRUMB_WORK = "Punët"
 # "Shkrime" matches NAV[2] and FOOT_LABELS[2][1]. Albanian does have the noun
 # the English "Writing" needs, so the crumb keeps it rather than trading it for
 # "Artikuj".
-CRUMB_WRITING = "Shkrime"
+CRUMB_WRITING = "Blog"
 
 # The 2 prose headings on a client page. "Nga nisi kjo" is a question of place
 # answered by the paragraphs under it, and it keeps the verb the English has:

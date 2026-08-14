@@ -130,8 +130,10 @@ Updated 14 August 2026
 Honest timeline
 Technical fixes: weeks. A new site competing on commercial phrases: 6 to 12 months. We'd rather lose the job than agree to a date we don't believe.
 Written about this
+Nobody searches for a mechanic
 The trade that sells on the coldest day
 What a new shop's first 3 months look like
+The menu nobody can read
 The last 4 weeks beat the first 8
 How a watch shop gets found
 Also
@@ -183,6 +185,7 @@ Updated 14 August 2026
 What to expect
 This moves slower than search rankings and is harder to measure. Expect the first signs in months, and expect them to be uneven between one assistant and another.
 Written about this
+Where guests start looking has moved
 What nobody can promise you about AI search
 Also
 SEO and local search
@@ -229,7 +232,9 @@ Nothing on this page is loaded from another company. Open the network tab and co
 Written about this
 The shop that updates its site from a phone
 A website in 3 languages that stays in step
+Most patients arrive recommended
 A boutique site that is never out of date
+A salon lives on the second visit
 Why lingerie sells in a conversation
 Also
 SEO and local search
@@ -274,6 +279,7 @@ Updated 14 August 2026
 How we charge
 A flat monthly fee for the work. Never a percentage of what you spend, because that pays an agency to tell you to spend more.
 Written about this
+Your marketing is for sellers
 The job goes to whoever answers first
 Also
 Websites
@@ -541,12 +547,54 @@ Next
 Iglisi Watch
 All four
 
-## Writing
+## Blog
 https://minarankstudio.com/blog/
 
 Written so you can check it.
 Every post here names a business, a number or a
 mistake we made. If it does not, it is not worth your time.
+Find your trade 10
+How a watch shop gets found
+Local search · 14 August 2026
+Repairs get searched in a hurry. Watches get researched for weeks. One shop has to answer both, and they do not search alike.
+Read it
+The menu nobody can read
+Local search · 14 August 2026
+A menu saved as an image is invisible to Google and to every assistant somebody asks for dinner.
+Read it
+Why lingerie sells in a conversation
+Websites · 14 August 2026
+Sizing is uncertain and the purchase is private. Both push the customer towards asking rather than clicking buy.
+Read it
+Where guests start looking has moved
+AI search · 14 August 2026
+Search is a smaller front door for hotels than it was, and somebody else is charging you for the guests who use theirs.
+Read it
+The trade that sells on the coldest day
+Local search · 14 August 2026
+Heating demand arrives in a few cold days, from people searching on a phone at an hour nobody plans for.
+Read it
+A salon lives on the second visit
+Websites · 14 August 2026
+A salon does not have a traffic problem. It has a gap between visits, and that is a different thing to fix.
+Read it
+A boutique site that is never out of date
+Websites · 14 August 2026
+Stock turns over weekly. A site that shows last season is worse for a boutique than no site at all.
+Read it
+Your marketing is for sellers
+Meta ads · 14 August 2026
+Buyers are on the portal whatever you do. The listing is what you actually compete for, and it comes from somewhere else.
+Read it
+Most patients arrive recommended
+Websites · 14 August 2026
+A dentist is chosen on somebody's word far more often than on a search, which changes what the website is for.
+Read it
+Nobody searches for a mechanic
+Local search · 14 August 2026
+Drivers describe a symptom, not a service, and the garage that wrote the symptom down is the one they find.
+Read it
+See what we built 7
 The job goes to whoever answers first
 Meta ads · 14 August 2026
 Ads buy the call. What decides whether you win the job happens in the minutes after it.
@@ -554,10 +602,6 @@ Read it
 What nobody can promise you about AI search
 AI search · 14 August 2026
 The 40% figure everyone quotes does not mean what they say. And 97% of llms.txt files have never been read.
-Read it
-How a watch shop gets found
-Local search · 14 August 2026
-Repairs get searched in a hurry. Watches get researched for weeks. One shop has to answer both, and they do not search alike.
 Read it
 The last 4 weeks beat the first 8
 Local search · 14 August 2026
@@ -567,21 +611,9 @@ What a new shop's first 3 months look like
 Local search · 14 August 2026
 The real Search Console chart for a business that started with no website, including the parts nobody screenshots.
 Read it
-Why lingerie sells in a conversation
-Websites · 14 August 2026
-Sizing is uncertain and the purchase is private. Both push the customer towards asking rather than clicking buy.
-Read it
-The trade that sells on the coldest day
-Local search · 14 August 2026
-Heating demand arrives in a few cold days, from people searching on a phone at an hour nobody plans for.
-Read it
 The 4 money lines that were really 5
 Custom software · 14 August 2026
 A bug that hid inside a chart for a whole phase, and what it says about the software a small business runs on.
-Read it
-A boutique site that is never out of date
-Websites · 14 August 2026
-Stock turns over weekly. A site that shows last season is worse for a boutique than no site at all.
 Read it
 A website in 3 languages that stays in step
 Websites · 14 August 2026
@@ -592,6 +624,325 @@ Websites · 14 August 2026
 New pieces go on the site in about a minute, from a phone, with no licence and no monthly fee.
 Read it
 Updated 14 August 2026
+
+## How a watch shop gets found
+https://minarankstudio.com/blog/watch-shops-and-jewellers/
+
+A watch shop is 2 businesses, and only 1 of them is urgent.
+The customer with a dead battery and the customer saving for a Seiko are not the same person, and nothing you do reaches both at once.
+By Henri Sila · 14 August 2026
+The short answer
+A watch shop sells 2 things that behave nothing alike. A repair is a problem somebody wants gone this week. A watch is a decision somebody turns over for a month.
+Most shops build for one and wonder why the other never arrives.
+The repair customer is in a hurry and close by
+A stopped watch gets searched on a phone, usually with a place in the words: a battery, a strap, a crown. The person is not comparing craftsmanship. They want somebody nearby who is open.
+That search is won on the map rather than on the website. Your hours, your address and whether anybody has reviewed you decide it, and all 3 live in the same free listing.
+The buyer is slow, and reads everything
+Somebody spending 3 months of savings on a watch reads for weeks before walking in. They compare the same reference across shops, look for a price, and want to know the seller is real.
+That customer needs a page per watch, with the model name written the way they type it and a price on it. A shop with one page saying we sell watches never enters that comparison.
+Why one shop needs both
+The repair work pays the rent while the sales pages age into being findable. Search rewards a page that has existed for a while, and the map rewards a business that answers this week.
+Running only the fast half means starting from nothing every quarter. Running only the slow half means waiting months with an empty counter.
+What it took at a shop in Durres
+Iglisi Watch had no website at all, so there is nothing flattering in the starting number: it was zero. A page for each of 58 watches, in 3 languages, plus the map listing.
+3 months later Google was sending 560 clicks a quarter, at an average position of 8.4 and a 1% click rate. Both of those last 2 numbers are weak, and they are on the chart on their page with the screenshot they came from. Taken in August 2026, and search does not hold still, so your own check will show something else.
+Tell us which half of your shop is quiet, the repairs or the sales, and we will tell you which search is missing.
+Get a free audit.
+Updated 14 August 2026
+The service
+SEO and local search
+The business in this post
+Iglisi Watch
+Also
+SEO and local search
+Websites
+Read next
+The last 4 weeks beat the first 8
+
+## The menu nobody can read
+https://minarankstudio.com/blog/restaurants-and-cafes/
+
+Your menu is a photograph, so nobody can search it.
+The dish you are known for is written down somewhere no machine can read, which is the same as not having written it.
+By Henri Sila · 14 August 2026
+The short answer
+Somebody hungry types a dish, not a restaurant. If your menu is a photograph or a PDF, the words on it do not exist as far as search is concerned, and neither do you.
+A menu written as text on a page is the cheapest thing on this list and almost nobody does it.
+How somebody actually picks where to eat
+The decision is made on a phone, usually within a few minutes, often while already walking. What gets seen is the map: photographs, hours, how far away, and what other people said.
+The website is rarely the thing that decides it. The listing is, and the listing is free.
+Why a picture of a menu costs you
+A search engine reads text. A photograph of a menu contains no text, only pixels arranged to look like some. So every dish you are known for is invisible, and the search for that dish goes to somebody who typed theirs out.
+An assistant asked to recommend somewhere for a specific dish has the same problem, for the same reason.
+The photographs are doing more work than the design
+People look at pictures of the food and the room before they read a word. Photographs taken in your own place, in daylight, outperform anything bought from a library, because a customer can tell the difference and is checking whether the place is real.
+What to do this week
+Type the menu out as text on a page, with prices, and keep the pretty version as well if you want it. Fill in the hours, including the ones that change in summer. Put up photographs from your own kitchen.
+None of that is a project and all of it is the part that gets read.
+Send us your menu the way a customer finds it, and we will tell you which dishes are invisible.
+Get a free audit.
+Updated 14 August 2026
+The service
+SEO and local search
+Also
+SEO and local search
+Websites
+Read next
+What a new shop's first 3 months look like
+
+## Why lingerie sells in a conversation
+https://minarankstudio.com/blog/lingerie-shops/
+
+The checkout is the wrong thing to build here.
+A shop can spend everything on a checkout nobody uses, because the question the customer has cannot be answered by a button.
+By Henri Sila · 14 August 2026
+The short answer
+Lingerie is bought with 2 doubts attached: will it fit, and who sees that I bought it. A checkout answers neither, which is why so many of them sit unused.
+The shops that do well online here sell in a message instead.
+Sizing is a question, not a dropdown
+Sizes differ between labels and most customers know their own only approximately. Faced with a dropdown and no way to ask, a careful buyer closes the page rather than risk guessing.
+The same person will happily ask a shopkeeper. The question is not embarrassing when there is somebody to answer it.
+Privacy changes where people are willing to buy
+A message thread feels private in a way a card form does not, and in a small city that matters more than it would elsewhere. Discretion is part of what is being sold.
+Build for the habit they already have
+At Intimo Bruna customers were already messaging rather than filling in forms, so sending them to a checkout would have meant designing for a habit they do not have.
+Every product page hands off to WhatsApp with the item already named in the message, so the owner is not asking which one you mean. Stock and prices are kept current from a phone.
+What this means beyond lingerie
+The lesson is not about underwear. It is that a shop should look at how its customers already buy and build that, rather than buying the checkout everybody sells because every other shop has one.
+Tell us how your last 10 orders actually reached you, and we will tell you whether a checkout would have helped.
+Get a free audit.
+Updated 14 August 2026
+The service
+Websites
+The business in this post
+Intimo Bruna
+Also
+Websites
+Meta ads
+Read next
+Where guests start looking has moved
+
+## Where guests start looking has moved
+https://minarankstudio.com/blog/hotels-and-guesthouses/
+
+The same guest costs you less if they arrive directly.
+Every booking that arrives through an agency is the same guest in the same room, with a share of the rate going somewhere else.
+By Henri Sila · 14 August 2026
+The short answer
+A guesthouse has 2 ways to be found: somebody searches, or an agency shows you to them and keeps a share of the rate. The second is easier and it is not free.
+Being findable on your own is how you keep the difference on the bookings that would have come anyway.
+The front door moved, and it is worth knowing where
+SiteMinder's Changing Traveller Report 2026 found the share of travellers who begin researching a stay on a search engine fell to 21%, from 36% the year before, while the share starting on a booking agency rose to 26%.
+The same report put the share starting with an assistant at 4%, up from 1%. That is small, and it quadrupled in a year, and both halves of that sentence matter.
+Agencies are not the enemy and they are not free
+An agency puts you in front of somebody who has never heard of your town. That is worth paying for, and for a new guesthouse it is often the only way to fill a first season.
+What it is not worth is paying that share on a guest who already knew your name and looked you up. Those are the bookings a site and a listing are for.
+The guest who checks you out before booking
+The same report found 18% of travellers who start on an agency go on to book directly with the hotel, a share that rose by 3.3 percentage points in a year.
+That person is already sold. They are looking for your own page to confirm the place is real and to see whether booking direct is easier. If there is nothing to find, they go back and book the expensive way.
+What a small place should have
+Real photographs of the actual rooms, the price, and a way to book or ask that does not need an account. Then the map listing, filled in properly, because a guest standing in the street with a suitcase is searching the map and nothing else.
+Tell us roughly what share of your bookings arrive through an agency, and we will tell you which of them you were paying for twice.
+Get a free audit.
+Updated 14 August 2026
+The service
+AI search
+Also
+AI search
+Websites
+Read next
+The trade that sells on the coldest day
+
+## The trade that sells on the coldest day
+https://minarankstudio.com/blog/heating-and-cooling-trades/
+
+Your busiest week decides most of your year.
+You cannot build a listing during the cold snap. By then the searches are already happening and the answer is whatever Google has on file.
+By Henri Sila · 14 August 2026
+The short answer
+Heating work does not arrive evenly. It arrives in the first genuinely cold week, all at once, from people who were not thinking about you the week before.
+Everything that decides whether they find you had to be in place before that week started.
+The search happens at a bad hour on a small screen
+A boiler fails in the evening. The search is typed on a phone, in a cold house, by somebody who is not going to read a second page of results.
+What they get is a map with a few firms on it. Being one of those few is a different job from having a good website, and it is decided weeks earlier.
+Why the cold snap is too late to start
+A listing that is claimed and filled in during the busy week is competing against listings that have been collecting reviews since summer. Search does not reward the firm that showed up when the demand did.
+The quiet months are when this is cheap. They are also when nobody feels like doing it.
+Being found and being reachable are 2 different failures
+A firm can win the search and still lose the job by not picking up, which is the argument on ProAffy's page and in a post of its own.
+They fail separately and they are fixed separately. Being reachable does nothing if you were never in the list of 3, and being in the list does nothing if the phone rings out.
+What to do in the quiet season
+Claim the listing, get the service areas and hours right, and ask the customers you helped last winter for a review while they still remember. None of that costs money and all of it takes time to count.
+Tell us what your quietest month is, and we will tell you what to have finished before the cold arrives.
+Get a free audit.
+Updated 14 August 2026
+The service
+SEO and local search
+The business in this post
+ProAffy
+Also
+SEO and local search
+Meta ads
+Read next
+A salon lives on the second visit
+
+## A salon lives on the second visit
+https://minarankstudio.com/blog/hairdressers-and-salons/
+
+Getting found is the easy half. Getting them back is the business.
+One new client who returns every 6 weeks is worth more than 10 who came once, and almost all the advice you are sold is about the 10.
+By Henri Sila · 14 August 2026
+The short answer
+A salon is a repeat business wearing the clothes of a retail one. The money is in somebody coming back 8 times a year, not in the first appointment.
+So the question is not how to be found. It is what happens in the 6 weeks after somebody sits in your chair.
+The first visit is a search and the rest are not
+Somebody new looks at the map, the photographs and the reviews, and books whoever looks competent and is close. That is a search problem and it is worth solving once.
+Everybody after that is booking a person they already trust. No amount of search work touches that half.
+The booking app introduces a client and keeps introducing them
+Marketplace apps bring you somebody who was looking for a salon and not for you, and they charge a share of that introduction. For a genuinely new client that can be a fair trade.
+It stops being fair when a regular starts booking through the app because it is the only way you offer. Now you are paying an introduction fee for somebody who has been coming for a year.
+What owning the booking actually means
+A way to book on your own site, and a listing that lets somebody book or call without an app in between. Neither has to be clever. Both have to belong to you.
+The test is simple: if the app closed tomorrow, would you still have the phone number of the woman who comes in every month.
+The photographs are the portfolio
+Hair is the one trade where the work is the advertisement. Photographs of what you did, on real clients who agreed, do more than any words on the page. That is also what somebody scrolls before deciding to trust you with their head.
+Tell us how a regular books with you today, and we will tell you what that arrangement is costing.
+Get a free audit.
+Updated 14 August 2026
+The service
+Websites
+Also
+Websites
+SEO and local search
+Read next
+The 4 money lines that were really 5
+
+## A boutique site that is never out of date
+https://minarankstudio.com/blog/fashion-boutiques/
+
+A boutique's problem is not traffic. It is going stale.
+The clothes are the business. If the website is showing what you sold in March, it is arguing against you.
+By Henri Sila · 14 August 2026
+The short answer
+A boutique changes stock faster than anybody wants to update a website. So the website falls behind, and a customer who drove over for a piece that sold in March does not come back.
+The fix is not discipline. It is making the update take a minute.
+How a customer actually shops for clothes
+She sees a piece on Instagram, then wants to know 2 things: is it still there, and what does it cost. Neither answer is on a social post 3 weeks old.
+So she searches the shop by name, lands on the site, and decides in about a minute whether this place is still trading.
+Why most boutique sites rot
+The site gets built by somebody else. Adding a piece means emailing them, waiting, and checking it went up right. By the third month nobody bothers, and the site quietly becomes a photograph of one week in spring.
+A monthly platform fee makes it worse rather than better: now the shop is paying for the thing that is out of date.
+What we build for a shop like this
+Victoria Boutique brings Greek labels into Albania and changes stock with the season. The owner photographs a piece, opens a panel on her phone and puts it up herself.
+No content system to license, no monthly fee, nobody to ring. The site is in Albanian, English and Italian, and the language switch works with JavaScript turned off.
+What it means for your shop
+Ask what it would take you to put a piece online right now, from where you are standing. If the honest answer involves another person, the site will be out of date by next season and there is nothing you can do about it.
+Send us a photograph of something you put in the window this week, and we will tell you how long it would take to get it online.
+Get a free audit.
+Updated 14 August 2026
+The service
+Websites
+The business in this post
+Victoria Boutique
+Also
+Websites
+SEO and local search
+Read next
+Your marketing is for sellers
+
+## Your marketing is for sellers
+https://minarankstudio.com/blog/estate-agents/
+
+The portal already has the buyers. You are competing for the seller.
+Every agent in town advertises the same flats to the same buyers on the same site. None of that decides who gets the next instruction.
+By Henri Sila · 14 August 2026
+The short answer
+Buyers go to the portal, because that is where every property is. Your listing competes there on price and photographs and very little else.
+The seller is the scarce thing. Winning that is a different job and almost nobody spends money on it.
+Why the portal is not your marketing
+Paying to list on a portal puts you in a row with every rival, on a page the portal owns, in front of a buyer who will never learn your name. It is distribution and it is necessary.
+It is not a reason anybody would choose you to sell their flat, which is the only decision that grows an agency.
+What a seller is actually deciding
+Somebody thinking of selling wants to know what their place is worth, how long it will take, and whether you have sold anything like it nearby.
+They usually think about it for months before ringing anybody. That long quiet period is the whole opportunity, and it is not on the portal.
+Where the money should go instead
+Pages about the streets you actually sell in, what went recently and roughly for what. Ads aimed at the people who own in those streets rather than at everyone looking to buy.
+That is a smaller audience and a much shorter distance to an instruction.
+The photographs are the product
+A seller judges you by the last listing you published, because it is the only evidence of how theirs will look. Bad photographs do not just cost you that sale. They cost you the next instruction, from somebody who saw them and quietly decided.
+Tell us where your last 3 instructions came from, and we will tell you whether the portal had anything to do with it.
+Get a free audit.
+Updated 14 August 2026
+The service
+Meta ads
+Also
+Meta ads
+Websites
+Read next
+Most patients arrive recommended
+
+## Most patients arrive recommended
+https://minarankstudio.com/blog/dentists-and-clinics/
+
+Somebody gave them your name. The site decides what happens next.
+The page is not competing for a stranger. It is confirming what a friend already said, to somebody who is checking.
+By Henri Sila · 14 August 2026
+The short answer
+People do not shop for a dentist the way they shop for a restaurant. They ask somebody they trust, get a name, and then look that name up.
+So the website is not there to win an argument. It is there to survive being checked.
+What the research actually found
+A study of 466 patients across 3 German cities, published in the International Journal of Environmental Research and Public Health, asked how they had become aware of their dentist. 65.6% said a recommendation. 7.3% said the internet.
+That is one country and the fieldwork was done in 2012 and 2013, so treat it as a shape rather than a measurement of Durres today. The shape is the useful part, and it has not reversed anywhere it has been asked since.
+Being checked is a different job from being found
+Somebody who was given your name types it directly. They are looking for an address, a photograph of the place, the hours, and some sign that a real person works there.
+If nothing comes up, the recommendation quietly weakens. Not because they doubt their friend, but because a clinic with no trace looks like one that might have closed.
+What to put on the page, in order
+The name of the dentist and a photograph of them. The address with a map. The hours. What you actually treat, in the words a patient would use rather than the clinical ones.
+Prices are a decision rather than an obligation, and whichever you choose, saying nothing at all is the option that costs you the nervous patient.
+Where search still earns its keep
+Two cases. The emergency, where somebody in pain searches and takes whoever can see them. And the newcomer who knows nobody in the city yet, which in a town with this much movement is not a small group.
+Both are found on the map rather than through the site, which makes the listing the cheaper half of this job.
+Search your own clinic the way a patient would, with the name a friend would have given them, and tell us what you found.
+Get a free audit.
+Updated 14 August 2026
+The service
+Websites
+Also
+Websites
+SEO and local search
+Read next
+Nobody searches for a mechanic
+
+## Nobody searches for a mechanic
+https://minarankstudio.com/blog/car-repair-and-garages/
+
+They search the noise the car is making.
+A page that says car repair answers a search nobody makes. A page about a knocking sound answers the one they do.
+By Henri Sila · 14 August 2026
+The short answer
+A driver with a problem does not know what is broken. They know it makes a noise when turning, or a light came on, or there is a smell after a long drive.
+That is what gets typed. The garage that has written those words down somewhere is the one that turns up.
+The market is old cars, and it keeps getting older
+Passenger cars in the EU averaged 12.3 years old in 2022, up from 10.9 in 2013, on European Environment Agency figures drawn from Eurostat.
+That is the EU and Albania is not in it, so the number describes the neighbours rather than this market. It is worth knowing anyway: an ageing fleet is a growing repair trade everywhere it has been counted.
+Write down what people actually bring you
+Keep a note for a month of how customers describe what is wrong when they ring. Those sentences, in their words, are the pages worth having.
+It costs nothing, it needs no design, and it is closer to what somebody types than any list of services a workshop would write about itself.
+The breakdown search is a map search
+Somebody stopped at the roadside is not reading. They want the nearest place that is open and a button that dials it. Hours, location and a phone number decide that, and all 3 are on the listing rather than the site.
+Trust is the whole difficulty in this trade
+Every driver has been quoted for work they suspect was invented. That suspicion is the real competitor, not the garage down the road.
+Photographs of the work, a written quote before starting, and naming what you will not do are worth more than anything a page can claim about quality.
+Tell us the 3 complaints you hear most on the phone, word for word, and we will show you what people are typing.
+Get a free audit.
+Updated 14 August 2026
+The service
+SEO and local search
+Also
+SEO and local search
+Websites
+Read next
+A website in 3 languages that stays in step
 
 ## The job goes to whoever answers first
 https://minarankstudio.com/blog/whoever-answers-first/
@@ -665,40 +1016,6 @@ SEO and local search
 Read next
 How a watch shop gets found
 
-## How a watch shop gets found
-https://minarankstudio.com/blog/watch-shops-and-jewellers/
-
-A watch shop is 2 businesses, and only 1 of them is urgent.
-The customer with a dead battery and the customer saving for a Seiko are not the same person, and nothing you do reaches both at once.
-By Henri Sila · 14 August 2026
-The short answer
-A watch shop sells 2 things that behave nothing alike. A repair is a problem somebody wants gone this week. A watch is a decision somebody turns over for a month.
-Most shops build for one and wonder why the other never arrives.
-The repair customer is in a hurry and close by
-A stopped watch gets searched on a phone, usually with a place in the words: a battery, a strap, a crown. The person is not comparing craftsmanship. They want somebody nearby who is open.
-That search is won on the map rather than on the website. Your hours, your address and whether anybody has reviewed you decide it, and all 3 live in the same free listing.
-The buyer is slow, and reads everything
-Somebody spending 3 months of savings on a watch reads for weeks before walking in. They compare the same reference across shops, look for a price, and want to know the seller is real.
-That customer needs a page per watch, with the model name written the way they type it and a price on it. A shop with one page saying we sell watches never enters that comparison.
-Why one shop needs both
-The repair work pays the rent while the sales pages age into being findable. Search rewards a page that has existed for a while, and the map rewards a business that answers this week.
-Running only the fast half means starting from nothing every quarter. Running only the slow half means waiting months with an empty counter.
-What it took at a shop in Durres
-Iglisi Watch had no website at all, so there is nothing flattering in the starting number: it was zero. A page for each of 58 watches, in 3 languages, plus the map listing.
-3 months later Google was sending 560 clicks a quarter, at an average position of 8.4 and a 1% click rate. Both of those last 2 numbers are weak, and they are on the chart on their page with the screenshot they came from. Taken in August 2026, and search does not hold still, so your own check will show something else.
-Tell us which half of your shop is quiet, the repairs or the sales, and we will tell you which search is missing.
-Get a free audit.
-Updated 14 August 2026
-The service
-SEO and local search
-The business in this post
-Iglisi Watch
-Also
-SEO and local search
-Websites
-Read next
-The last 4 weeks beat the first 8
-
 ## The last 4 weeks beat the first 8
 https://minarankstudio.com/blog/the-last-4-weeks/
 
@@ -728,7 +1045,7 @@ Also
 SEO and local search
 AI search
 Read next
-What a new shop's first 3 months look like
+The menu nobody can read
 
 ## What a new shop's first 3 months look like
 https://minarankstudio.com/blog/map-listing-first/
@@ -768,71 +1085,6 @@ SEO and local search
 AI search
 Read next
 Why lingerie sells in a conversation
-
-## Why lingerie sells in a conversation
-https://minarankstudio.com/blog/lingerie-shops/
-
-The checkout is the wrong thing to build here.
-A shop can spend everything on a checkout nobody uses, because the question the customer has cannot be answered by a button.
-By Henri Sila · 14 August 2026
-The short answer
-Lingerie is bought with 2 doubts attached: will it fit, and who sees that I bought it. A checkout answers neither, which is why so many of them sit unused.
-The shops that do well online here sell in a message instead.
-Sizing is a question, not a dropdown
-Sizes differ between labels and most customers know their own only approximately. Faced with a dropdown and no way to ask, a careful buyer closes the page rather than risk guessing.
-The same person will happily ask a shopkeeper. The question is not embarrassing when there is somebody to answer it.
-Privacy changes where people are willing to buy
-A message thread feels private in a way a card form does not, and in a small city that matters more than it would elsewhere. Discretion is part of what is being sold.
-Build for the habit they already have
-At Intimo Bruna customers were already messaging rather than filling in forms, so sending them to a checkout would have meant designing for a habit they do not have.
-Every product page hands off to WhatsApp with the item already named in the message, so the owner is not asking which one you mean. Stock and prices are kept current from a phone.
-What this means beyond lingerie
-The lesson is not about underwear. It is that a shop should look at how its customers already buy and build that, rather than buying the checkout everybody sells because every other shop has one.
-Tell us how your last 10 orders actually reached you, and we will tell you whether a checkout would have helped.
-Get a free audit.
-Updated 14 August 2026
-The service
-Websites
-The business in this post
-Intimo Bruna
-Also
-Websites
-Meta ads
-Read next
-The trade that sells on the coldest day
-
-## The trade that sells on the coldest day
-https://minarankstudio.com/blog/heating-and-cooling-trades/
-
-Your busiest week decides most of your year.
-You cannot build a listing during the cold snap. By then the searches are already happening and the answer is whatever Google has on file.
-By Henri Sila · 14 August 2026
-The short answer
-Heating work does not arrive evenly. It arrives in the first genuinely cold week, all at once, from people who were not thinking about you the week before.
-Everything that decides whether they find you had to be in place before that week started.
-The search happens at a bad hour on a small screen
-A boiler fails in the evening. The search is typed on a phone, in a cold house, by somebody who is not going to read a second page of results.
-What they get is a map with a few firms on it. Being one of those few is a different job from having a good website, and it is decided weeks earlier.
-Why the cold snap is too late to start
-A listing that is claimed and filled in during the busy week is competing against listings that have been collecting reviews since summer. Search does not reward the firm that showed up when the demand did.
-The quiet months are when this is cheap. They are also when nobody feels like doing it.
-Being found and being reachable are 2 different failures
-A firm can win the search and still lose the job by not picking up, which is the argument on ProAffy's page and in a post of its own.
-They fail separately and they are fixed separately. Being reachable does nothing if you were never in the list of 3, and being in the list does nothing if the phone rings out.
-What to do in the quiet season
-Claim the listing, get the service areas and hours right, and ask the customers you helped last winter for a review while they still remember. None of that costs money and all of it takes time to count.
-Tell us what your quietest month is, and we will tell you what to have finished before the cold arrives.
-Get a free audit.
-Updated 14 August 2026
-The service
-SEO and local search
-The business in this post
-ProAffy
-Also
-SEO and local search
-Meta ads
-Read next
-The 4 money lines that were really 5
 
 ## The 4 money lines that were really 5
 https://minarankstudio.com/blog/four-lines-that-were-five/
@@ -874,39 +1126,6 @@ Custom software
 Websites
 Read next
 A boutique site that is never out of date
-
-## A boutique site that is never out of date
-https://minarankstudio.com/blog/fashion-boutiques/
-
-A boutique's problem is not traffic. It is going stale.
-The clothes are the business. If the website is showing what you sold in March, it is arguing against you.
-By Henri Sila · 14 August 2026
-The short answer
-A boutique changes stock faster than anybody wants to update a website. So the website falls behind, and a customer who drove over for a piece that sold in March does not come back.
-The fix is not discipline. It is making the update take a minute.
-How a customer actually shops for clothes
-She sees a piece on Instagram, then wants to know 2 things: is it still there, and what does it cost. Neither answer is on a social post 3 weeks old.
-So she searches the shop by name, lands on the site, and decides in about a minute whether this place is still trading.
-Why most boutique sites rot
-The site gets built by somebody else. Adding a piece means emailing them, waiting, and checking it went up right. By the third month nobody bothers, and the site quietly becomes a photograph of one week in spring.
-A monthly platform fee makes it worse rather than better: now the shop is paying for the thing that is out of date.
-What we build for a shop like this
-Victoria Boutique brings Greek labels into Albania and changes stock with the season. The owner photographs a piece, opens a panel on her phone and puts it up herself.
-No content system to license, no monthly fee, nobody to ring. The site is in Albanian, English and Italian, and the language switch works with JavaScript turned off.
-What it means for your shop
-Ask what it would take you to put a piece online right now, from where you are standing. If the honest answer involves another person, the site will be out of date by next season and there is nothing you can do about it.
-Send us a photograph of something you put in the window this week, and we will tell you how long it would take to get it online.
-Get a free audit.
-Updated 14 August 2026
-The service
-Websites
-The business in this post
-Victoria Boutique
-Also
-Websites
-SEO and local search
-Read next
-A website in 3 languages that stays in step
 
 ## A website in 3 languages that stays in step
 https://minarankstudio.com/blog/a-website-in-3-languages/

@@ -1388,10 +1388,12 @@ POSTS = [
 # /blog/, the index over those records. The soft wraps are placed for this text
 # and not copied from the English.
 BLOG_INDEX = {
-    "src": "ab37d23a",
+    "src": "50462d9f",
     # "Articoli" is what chrome_it.NAV[2] and CRUMB_WRITING already call this
     # section, so the tab, the crumb and the nav say one word.
-    "title": "Articoli",
+    "title": "Blog",
+    "group_trade": "Trova il tuo mestiere",
+    "group_work": "Guarda cosa abbiamo costruito",
     "description": "Quello che abbiamo imparato facendo ricerca, ricerca AI e "
                    "software su misura per piccole attività a Durazzo, "
                    "scritto in modo che tu possa verificarlo.",

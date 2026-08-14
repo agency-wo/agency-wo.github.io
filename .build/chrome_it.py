@@ -31,12 +31,17 @@ Accented letters are literal too ("attività"), never HTML entities.
 # of the 4 pages it leads to. If "Prove" ever reads as a rehearsal in the wild,
 # "Le prove" fixes it and costs 3 characters.
 #
-# "Articoli", not "Scritti". Italian has no noun that does what the English
-# "Writing" does, an activity used as a section name; "Scritti" is the literal
-# one and it belongs to a dead author's collected works. "Articoli" names the
-# thing you will find instead of the act of making it, which is the move the
-# footer already makes in English when it calls the same section Work and the
-# nav calls it Proof. It also avoids "Blog", which was the point.
+# "Blog", and this reverses a decision. The note here used to argue for
+# "Articoli" and ended "It also avoids 'Blog', which was the point". The
+# founder has decided the section is called Blog, in every language, because
+# the URL has always been /blog/ and the nav disagreeing with the address bar
+# is a word the reader has to translate before clicking.
+#
+# The old reasoning was not wrong about Italian: "Scritti" really does belong
+# to a dead author's collected works, and "Articoli" really is the better
+# native noun. It was wrong about the problem. A loanword every Italian reader
+# already uses beats a better word that says something different from the URL.
+
 # Stamps for every chrome string. These are bare strings and lists, so
 # none of them can hold a "src" key of its own. Edit an English chrome
 # string and shell.py names the one that went stale, at import.
@@ -57,7 +62,7 @@ SRC = {
     "BYLINE": "0a55b894",
     "CRUMB_HOME": "8f3852d3",
     "CRUMB_WORK": "0571c47a",
-    "CRUMB_WRITING": "db632f4b",
+    "CRUMB_WRITING": "6228153d",
     "ERR_BACK": "d7504791",
     "ERR_BAND_H": "8500f0e4",
     "ERR_BAND_NOTE": "184903aa",
@@ -65,14 +70,14 @@ SRC = {
     "ERR_TITLE": "8aa30e6c",
     "FOOT_COPYRIGHT": "387ea80f",
     "FOOT_HEADINGS": "8a193087",
-    "FOOT_LABELS": "2ffcd722",
+    "FOOT_LABELS": "967e86a8",
     "FOOT_META": "77f25e44",
     "HEAD_CTA": "50bb03ab",
     "JS_ERROR": "e3741a63",
     "JS_SENDING": "29167c1d",
     "JS_SENDING_SAY": "21151b65",
     "MENU": "c784aaa3",
-    "NAV": "0aed4a3d",
+    "NAV": "a2cb9fab",
     "OG_ALT": "4ccf3412",
     "QUESTIONS": "1579db95",
     "READ_IT": "89d4581e",
@@ -97,7 +102,7 @@ SRC = {
     "WORK_STARTED": "0409d547",
 }
 
-NAV = ["Prove", "Servizi", "Articoli", "Studio"]
+NAV = ["Prove", "Servizi", "Blog", "Studio"]
 
 # The 4 footer columns: a heading, then a label per link. Lengths must match
 # shell.FOOT_PATHS exactly. The Work column is 4 client names, proper nouns and
@@ -112,7 +117,7 @@ FOOT_LABELS = [
     ["SEO e ricerca locale", "Ricerca AI", "Siti web", "Meta ads",
      "Software su misura"],
     ["Iglisi Watch", "Victoria Boutique", "Intimo Bruna", "ProAffy"],
-    ["Chi siamo", "Articoli", "Inizia un progetto"],   # Articoli matches NAV[2]
+    ["Chi siamo", "Blog", "Inizia un progetto"],   # Blog matches NAV[2]
     [],   # filled by shell: the email address and WhatsApp are not words
 ]
 
@@ -236,7 +241,7 @@ CRUMB_WORK = "Lavori"
 # "Articoli" matches NAV[2] and FOOT_LABELS[2][1]. Italian has no noun that
 # does what the English "Writing" does, so the reasoning behind the nav label
 # applies unchanged here: name the things, not the act of making them.
-CRUMB_WRITING = "Articoli"
+CRUMB_WRITING = "Blog"
 
 # The 2 prose headings on a client page. "Da dove è cominciato" keeps the
 # English shape, a question of place answered by the paragraphs under it, and

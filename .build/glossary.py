@@ -105,6 +105,11 @@ IDENTICAL_BY_DESIGN = {
     # a <dt> with nothing around it, and check 35 correctly asked whether a
     # word identical in both languages had ever been translated. It had.
     "audit", "GEO",
+    # The nav label, in all 3 languages. Italian and Albanian both take the
+    # loanword whole, and it is the word that matches the /blog/ URL, which is
+    # why chrome_it.py and chrome_sq.py each reversed a documented decision to
+    # get here. Without this, check 35 fails 3 correct files.
+    "Blog",
     # The TITLE of a cited study, and titles are not translated. Rule 7 says a
     # figure names its source in the sentence; a reader who wants to check it
     # searches the name we printed, so an Italian rendering of it would send

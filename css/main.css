@@ -416,6 +416,36 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
 .post-row { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
   column-gap: var(--s-6); align-items: start; }
 
+/* -- the blog index, in 2 groups ------------------------------------------
+   17 posts in one list was a scroll with nothing to orient by. The heading
+   carries its own count so the reader knows how much is under it before he
+   starts, which is the one thing the flat list would not say.
+
+   The group rule is --ink, heavier than the --edge hairline between rows: the
+   section break has to read as louder than the row break or the grouping does
+   not survive being skimmed, which is the only way this page is read. */
+.post-group + .post-group { margin-top: var(--s-9); }
+.group-h { font-family: var(--font-display); font-weight: 500;
+  font-size: clamp(1.125rem, 1.4vw, 1.375rem); letter-spacing: var(--track-display);
+  padding-top: var(--s-4); border-top: 2px solid var(--ink);
+  display: flex; align-items: baseline; gap: var(--s-3); }
+/* The count is metadata, not a heading, so it takes the caption colour and
+   sits on the baseline rather than beside it at heading weight. */
+.group-n { font-family: var(--font-body); font-size: var(--fs-small);
+  font-weight: 400; color: var(--slate); letter-spacing: 0; }
+.post-group .cases > li:first-child { border-top: none; }
+
+/* The whole row reacts, not only the title. Two links to one place in one row
+   and only one of them lighting up is what made this read as a list of text
+   rather than a set of doors. :has means no wrapper element and no JS.
+
+   No background tint: this palette has no colour between --paper and --rule,
+   and inventing one for a hover state would be a new token carrying no meaning
+   anywhere else on the site. The title and the arrow are the hover vocabulary
+   every other link here already uses, so the row borrows it. */
+.cases > li:has(.post-row):hover .case-name a { color: var(--red); }
+.cases > li:has(.post-row):hover .arrow { transform: translate(2px, -2px); }
+
 /* -- plates: real screenshots, no frame furniture -------------------------- */
 .plate { margin: 0; }
 .plate img { width: 100%; height: auto; border: 1px solid var(--edge); }
