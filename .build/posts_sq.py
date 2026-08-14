@@ -266,52 +266,61 @@ POSTS = [
         "work": "iglisi-watch",
         "service": ("/systems/", "Software me porosi"),
 
-        # "zëra" and not "rreshta": a zë is what Albanian accounting calls a
-        # money line, and the post later needs "rreshta" for the 4 lines of
-        # CODE the bug was hiding in. English uses "lines" for both and the
-        # reader has to tell them apart; Albanian gets to keep them apart.
-        "title": "Të 4 zërat e parave që ishin në fakt 5",
-        "h1": "Të 4 zërat e parave që ishin në fakt 5.",
+        # "kanale të ardhurash", not "zëra". An earlier note here argued that
+        # "zë" is the Albanian accounting word for a money line. The founder,
+        # who is Albanian, says it is not the word anybody uses, and he is the
+        # authority on that. It is replaced everywhere in this record.
+        #
+        # What the old note got right is kept: "rreshta" still means the 4
+        # lines of CODE the bug hid in, and the money sense now has its own
+        # word rather than sharing one. English says "lines" for both and
+        # leaves the reader to tell them apart; Albanian does not have to.
+        "title": "4 kanalet e të ardhurave që në fakt ishin 5",
+        "h1": "4 kanalet e të ardhurave që në fakt ishin 5.",
         "summary": "Një bug që u fsheh brenda një grafiku për një fazë të tërë, "
-                   "dhe çfarë thotë ai për software-in mbi të cilin punon një "
-                   "biznes i vogël.",
-        "standfirst": "Një grafik me shtresa nuk ka total të vetin që ta "
-                      "kundërshtojë, prandaj gënjeu në heshtje me javë.",
-        "description": "Si arriti software-i i një dyqani orësh të mblidhte 4 "
-                       "zëra parash kur ishin 5, pse asnjë test nuk e kapi dhe "
+                   "dhe çfarë thotë ai për software-in që mban në këmbë një "
+                   "biznes të vogël.",
+        "standfirst": "Një grafik me shtresa nuk ka një total të vetin që t'i "
+                      "dalë kundër, prandaj gënjeu në heshtje me javë.",
+        # 172 of the 175 gen_blog allows. "kanale të ardhurash" is 8 characters
+        # longer than the "zëra parash" it replaced, which pushed the old
+        # phrasing to 181 and stopped the build -- the shorter verb is what
+        # bought the room back, not a cut to what the sentence says.
+        "description": "Si e mblodhi software-i i një dyqani orësh 4 kanale të "
+                       "ardhurash kur ishin 5, pse asnjë test nuk e kapi dhe "
                        "çfarë do të thotë për një biznes që mbahet me fletë "
                        "llogaritëse.",
-        "og_desc": "Një grafik me shtresa nuk ka total të vetin që ta kundërshtojë.",
+        "og_desc": "Një grafik me shtresa nuk ka një total të vetin që t'i dalë kundër.",
 
         "body": [
             ("Përgjigjja e shkurtër", [
-                "<p>Software-i mbi të cilin punon një biznes zakonisht nuk "
+                "<p>Software-i që mban në këmbë një biznes zakonisht nuk "
                 "prishet me zhurmë. Prishet duke lënë jashtë diçka në heshtje, "
                 "dhe biznesi i beson numrit sepse doli nga një ekran.</p>",
-                "<p>Ja një që gjetëm në build-in tonë, sa kushtoi dhe pse tani "
+                "<p>Ja një që gjetëm në ndërtimin tonë, sa kushtoi dhe pse tani "
                 "e kontrollojmë ndryshe.</p>",
             ]),
             ("Një grafik që s'kishte si të gabonte, dhe gaboi", [
-                "<p>Sistemi e ndjek paranë në zëra të veçantë që pronari të "
-                "shohë cila pjesë e biznesit fiton vërtet. U shtua një zë i "
+                "<p>Sistemi i ndjek paratë në kanale të veçanta që pronari të "
+                "shohë cila pjesë e biznesit fiton vërtet. U shtua një kanal i "
                 "5-të, dhe 5 grafikë vazhduan të mblidhnin 4.</p>",
                 "<p>Nuk u prish asgjë. Asgjë nuk dukej e çuditshme. Një grafik me "
-                "shtresa nuk ka total të vetin që ta kundërshtojë, prandaj pamja "
-                "mbeti e besueshme dhe paratë në heshtje nuk dilnin. Punoi ashtu "
-                "për një fazë të tërë pune.</p>",
+                "shtresa nuk ka një total të vetin që t'i dalë kundër, prandaj "
+                "pamja mbeti e besueshme dhe paratë në heshtje nuk dilnin. Punoi "
+                "ashtu për një fazë të tërë pune.</p>",
             ]),
             ("Kontrolli që e gjeti, dhe ai që nuk mundi", [
-                "<p>Shkruam një kontroll që kërkon në kod çdo vend ku të 4 zërat "
-                "origjinalë përmenden bashkë. I gjeti 5 grafikët menjëherë.</p>",
+                "<p>Shkruam një kontroll që kërkon në kod çdo vend ku 4 kanalet "
+                "origjinale përmenden bashkë. I gjeti 5 grafikët menjëherë.</p>",
                 "<p>Nuk mundi ta gjente problemin e 6-të. Një funksion i "
-                "emërtonte të 4 zërat si një objekt i shtrirë në 4 rreshta kodi, "
+                "emërtonte 4 kanalet si një objekt i shtrirë në 4 rreshta kodi, "
                 "që për një kërkim teksti nuk i ngjan aspak një liste.</p>",
-                "<p>Ditën që ekzistoi një zë i 5-të, ai funksion nxori gabim dhe "
-                "mori me vete gjithë panelin e statistikave. Një crawler që hap "
-                "çdo ekran dhe klikon gjithçka e gjeti brenda një minute. Asnjë "
-                "kërkim teksti nuk do ta kishte gjetur.</p>",
+                "<p>Ditën që ekzistoi një kanal i 5-të, ai funksion nxori gabim "
+                "dhe mori me vete gjithë panelin e statistikave. Një crawler që "
+                "hap çdo ekran dhe klikon gjithçka e gjeti brenda një minute. "
+                "Asnjë kërkim teksti nuk do ta kishte gjetur.</p>",
                 "<p>Kontrolli zëvendësues i pyet vetë funksionet nëse çdo rresht "
-                "mban çdo zë. Kap formën në vend të fjalëve.</p>",
+                "mban çdo kanal. Kap formën në vend të fjalëve.</p>",
             ]),
             ("Pse ky është argumenti për software-in me porosi", [
                 "<p>I njëjti dyqan kishte një problem të dytë të së njëjtës "
@@ -368,13 +377,19 @@ POSTS = [
         "work": "iglisi-watch",
         "service": ("/web-design/", "Faqe interneti"),
 
-        "title": "Një faqe në 3 gjuhë që mbetet në një hap",
+        # "mbetet pas" and not "mbetet në një hap". The English is "stays in
+        # step" and the first translation carried the idiom across word for
+        # word, which in Albanian says "stays in one pace" and means nothing.
+        # Italian did not make this mistake: it says "resta allineato". The
+        # Albanian idiom for a thing falling out of sync is "mbetet pas", so
+        # the title says no language falls behind.
+        "title": "Një faqe në 3 gjuhë ku asnjëra nuk mbetet pas",
         "h1": "Një faqe në 3 gjuhë, dhe askush nuk rishkruan asgjë.",
-        "summary": "Shumica e faqeve shumëgjuhëshe shkojnë keq derisa 2 nga "
-                   "3 gjuhët janë gabim. Ja ndërtimi që s'mund ta bëjë "
-                   "këtë.",
+        "summary": "Shumica e faqeve shumëgjuhëshe shmangen nga njëra-tjetra "
+                   "derisa 2 nga 3 gjuhët janë gabim. Ja ndërtimi që s'mund "
+                   "ta bëjë këtë.",
         "standfirst": "3 gjuhë do të thotë 3 grupe faqesh, jo një widget. "
-                      "Pyetja është se çfarë i mban në një mendje.",
+                      "Pyetja është se çfarë i mban të pajtuara.",
         "description": "Si një dyqan orësh në Durrës e mban faqen në "
                        "shqip, italisht dhe anglisht pa rishkruar njeri "
                        "asnjë fjalë, dhe pse një widget përkthimi nuk "
@@ -393,11 +408,11 @@ POSTS = [
             ("Pse një widget përkthimi nuk është kjo", [
                 "<p>Widget-i e rishkruan faqen pasi ajo hapet. Adresa "
                 "mbetet një e vetme, kështu Google lexon vetëm një gjuhë, "
-                "dhe klienti që kërkon në italisht italishten s'e gjen "
-                "kurrë.</p>",
-                "<p>Faqet e ndara kushtojnë më shumë për t'u ndërtuar, "
-                "një herë. Janë edhe e vetmja formë e kësaj që renditet "
-                "në çdo gjuhë, që është arsyeja pse i ke.</p>",
+                "dhe ai që kërkon në italisht nuk e gjen kurrë faqen "
+                "italiane.</p>",
+                "<p>Faqet e ndara kushtojnë më shumë, por vetëm një herë. "
+                "Janë edhe e vetmja zgjidhje që renditet në çdo gjuhë, që "
+                "është arsyeja pse i ke.</p>",
             ]),
             ("Pjesa që zakonisht dështon", [
                 "<p>Jo hapja. Faqja është e saktë ditën e parë në të 3 "
@@ -405,10 +420,10 @@ POSTS = [
                 "një çmim ndryshon dhe rregullohet vetëm në një gjuhë, "
                 "ose një orë shitet dhe hiqet nga 2 prej 3 faqeve që e "
                 "listojnë.</p>",
-                "<p>Kemi parë tekste të rishkruara në 3 gjuhë të shkojnë "
-                "keq në 2 prej tyre. Askush s'e bën me qëllim. T'i mbash "
-                "3 faqe në një hap me dorë është punë më vete, dhe ai që "
-                "e mban ka edhe një dyqan për të drejtuar.</p>",
+                "<p>Kemi parë tekste të rishkruara në 3 gjuhë të dalin "
+                "gabim në 2 prej tyre. Askush s'e bën me qëllim. T'i "
+                "mbash 3 faqe njësoj me dorë është punë më vete, dhe ai "
+                "që e mban ka edhe një dyqan për të drejtuar.</p>",
             ]),
             ("Çfarë ndërtojmë ne në vend të kësaj", [
                 "<p>Çdo fakt jeton në një vend të vetëm. Shto një orë dhe "
@@ -418,7 +433,7 @@ POSTS = [
                 "<p>Kjo nuk është veçori që e blen. Është mënyra si është "
                 "ndërtuar faqja: fjalët i shkruajnë njerëzit, një herë, "
                 "dhe struktura gjenerohet, kështu 3 gjuhët s'mund të mos "
-                "pajtohen për çfarë ka në magazinë a sa kushton.</p>",
+                "pajtohen për çfarë ka në magazinë apo sa kushton.</p>",
             ]),
             ("Çfarë do të thotë për një dyqan si yti", [
                 "<p>Nëse klientët e tu kërkojnë në më shumë se një gjuhë, "
