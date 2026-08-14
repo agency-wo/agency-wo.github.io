@@ -946,6 +946,218 @@ POSTS = [
         "related": [("/seo/", "SEO dhe kërkim lokal"),
                     ("/meta-ads/", "Reklamat Meta")],
     },
+    # ================================================ INDUSTRY: RESTAURANTS ===
+    {
+        "slug": "restaurants-and-cafes",
+        "src": "0c75554f",
+        "date": "2026-08-14",
+        "updated": "2026-08-14",
+        "topic": "Kërkim lokal",
+        "work": None,
+        "service": ("/seo/", "SEO dhe kërkim lokal"),
+
+        "title": "Menuja që s'e lexon dot askush",
+        "h1": "Menuja jote është fotografi, prandaj s'e kërkon dot njeri.",
+        "summary": "Një menu e ruajtur si fotografi është e padukshme për "
+                   "Google dhe për çdo asistent që dikush e pyet ku të hajë.",
+        "standfirst": "Gjella për të cilën të njohin është shkruar diku ku "
+                      "asnjë makinë s'e lexon dot, që është njësoj sikur të "
+                      "mos e kishe shkruar fare.",
+        "description": "Shumica e menuve të restoranteve janë fotografi ose "
+                       "PDF, prandaj asnjë motor kërkimi nuk lexon dot as një "
+                       "gjellë të vetme. Sa të kushton, dhe çfarë të bësh.",
+        "og_desc": "Një menu e ruajtur si fotografi është e padukshme për "
+                   "gjithçka që bën kërkimin.",
+
+        "body": [
+            ("Përgjigjja e shkurtër", [
+                "<p>Ai që ka uri shkruan një gjellë, jo një restorant. Nëse "
+                "menuja jote është fotografi ose PDF, ato fjalë për kërkimin "
+                "nuk ekzistojnë, dhe as ti nuk ekziston.</p>",
+                "<p>Një menu e shkruar si tekst në një faqe është gjëja më e "
+                "lirë e kësaj liste dhe pothuajse nuk e bën njeri.</p>",
+            ]),
+            ("Si zgjidhet vërtet ku të hahet", [
+                "<p>Vendoset nga telefoni, zakonisht brenda pak minutash, "
+                "shpesh duke ecur. Ajo që shihet është harta: fotografitë, "
+                "orari, sa larg është dhe çfarë kanë thënë të tjerët.</p>",
+                "<p>Faqja rrallë është ajo që vendos. Vendos profili, dhe "
+                "profili është falas.</p>",
+            ]),
+            ("Pse një foto e menusë të kushton", [
+                "<p>Motori i kërkimit lexon tekst. Fotografia e një menuje nuk "
+                "ka tekst brenda, ka vetëm pika ngjyre të vendosura sa për t'i "
+                "ngjarë. Kështu çdo gjellë për të cilën të njohin është e "
+                "padukshme, dhe ai kërkim i shkon atij që të vetën e "
+                "shkroi.</p>",
+                "<p>Një asistent të cilit i kërkon një vend për një gjellë të "
+                "caktuar e ka të njëjtin hall, për të njëjtën arsye.</p>",
+            ]),
+            ("Fotografitë punojnë më shumë se dizajni", [
+                "<p>Njerëzit shohin fotot e ushqimit dhe të sallës para se të "
+                "lexojnë një fjalë. Fotografitë e bëra te lokali yt, me dritë "
+                "dite, bëjnë më shumë se çdo pamje e blerë, sepse klienti e "
+                "dallon ndryshimin dhe po kontrollon nëse vendi është i "
+                "vërtetë.</p>",
+            ]),
+            ("Çfarë të bësh këtë javë", [
+                "<p>Shkruaje menunë si tekst në një faqe, me çmimet, dhe mbaje "
+                "po deshe edhe variantin e bukur. Plotëso orarin, përfshirë atë "
+                "që ndryshon në verë. Vër fotografi nga kuzhina jote.</p>",
+                "<p>Asnjëra nga këto nuk është projekt, dhe të gjitha janë "
+                "pjesa që lexohet.</p>",
+            ]),
+        ],
+        "payoff": "Na dërgo menunë ashtu si e gjen klienti, dhe ta themi cilat "
+                  "gjellë janë të padukshme.",
+        "related": [("/seo/", "SEO dhe kërkim lokal"),
+                    ("/web-design/", "Faqe interneti")],
+    },
+
+    # ===================================================== INDUSTRY: HOTELS ===
+    {
+        "slug": "hotels-and-guesthouses",
+        "src": "fbc2308d",
+        "date": "2026-08-14",
+        "updated": "2026-08-14",
+        "topic": "Kërkimi me AI",
+        "work": None,
+        "service": ("/geo/", "Kërkimi me AI"),
+
+        "title": "Ku nisin të kërkojnë klientët ka ndryshuar",
+        "h1": "I njëjti mysafir të kushton më pak nëse vjen drejtpërdrejt.",
+        "summary": "Për hotelet kërkimi është derë më e ngushtë se dikur, dhe "
+                   "dikush tjetër po ta faturon mysafirin që kalon nga e tija.",
+        "standfirst": "Çdo rezervim që vjen nga një agjenci është i njëjti "
+                      "mysafir në të njëjtën dhomë, me një pjesë të çmimit që "
+                      "ikën gjetkë.",
+        "description": "Më pak udhëtarë nisin të kërkojnë hotel nga një motor "
+                       "kërkimi sesa një vit më parë, dhe më shumë nisin nga "
+                       "një agjenci. Çfarë do të thotë për një bujtinë të "
+                       "vogël.",
+        "og_desc": "I njëjti mysafir, e njëjta dhomë, pa një komision që nuk "
+                   "duhej ta paguaje.",
+
+        "body": [
+            ("Përgjigjja e shkurtër", [
+                "<p>Një bujtinë ka 2 mënyra për t'u gjetur: dikush kërkon, ose "
+                "një agjenci ia shfaq atij dhe mban një pjesë të çmimit. E "
+                "dyta është më e lehtë dhe nuk është falas.</p>",
+                "<p>Të gjendesh vetë është mënyra si e mban ndryshimin te "
+                "rezervimet që do të kishin ardhur gjithsesi.</p>",
+            ]),
+            ("Dera ka lëvizur, dhe ia vlen ta dish ku", [
+                "<p><a href=\"https://www.siteminder.com/changing-traveller-report/\" target=\"_blank\" rel=\"noopener\">Changing Traveller Report 2026</a> i SiteMinder "
+                "gjeti se pjesa e udhëtarëve që nis kërkimin e një qëndrimi "
+                "nga një motor kërkimi ra në 21%, nga 36% një vit më parë, "
+                "ndërsa ata që nisin nga një agjenci u ngjitën në 26%.</p>",
+                "<p>I njëjti raport i vë në 4% ata që nisin nga një asistent, "
+                "nga 1% më parë. Është pak, dhe u katërfishua brenda një viti, "
+                "dhe kanë rëndësi të dyja gjysmat e kësaj fjalie.</p>",
+            ]),
+            ("Agjencitë nuk janë armiku dhe nuk janë falas", [
+                "<p>Një agjenci të vë përpara dikujt që nuk e ka dëgjuar kurrë "
+                "emrin e qytetit tënd. Kjo ia vlen të paguhet, dhe për një "
+                "bujtinë të re shpesh është e vetmja mënyrë për të mbushur "
+                "sezonin e parë.</p>",
+                "<p>Ajo që nuk ia vlen është ta paguash atë pjesë për një "
+                "mysafir që e dinte emrin tënd dhe shkoi të të kërkonte. Ato "
+                "rezervime janë arsyeja pse ekzistojnë një faqe dhe një "
+                "profil.</p>",
+            ]),
+            ("Mysafiri që të kontrollon para se të rezervojë", [
+                "<p>I njëjti raport gjeti se 18% e udhëtarëve që nisin nga një "
+                "agjenci pastaj rezervojnë drejtpërdrejt me hotelin, një pjesë "
+                "që u rrit me 3,3 pikë përqindjeje brenda vitit.</p>",
+                "<p>Ai njeri është bindur tashmë. Po kërkon faqen tënde për të "
+                "parë nëse vendi është i vërtetë dhe nëse rezervimi i "
+                "drejtpërdrejtë është më i thjeshtë. Nëse nuk gjen asgjë, "
+                "kthehet dhe rezervon në mënyrën e shtrenjtë.</p>",
+            ]),
+            ("Çfarë duhet të ketë një vend i vogël", [
+                "<p>Fotografi të vërteta të dhomave të vërteta, çmimin, dhe "
+                "një mënyrë për të rezervuar a për të pyetur që nuk kërkon "
+                "llogari. Pastaj profilin në hartë, të plotësuar si duhet, "
+                "sepse një mysafir në mes të rrugës me valixhe kërkon në hartë "
+                "dhe askund tjetër.</p>",
+            ]),
+        ],
+        "payoff": "Na thuaj afërsisht sa nga rezervimet e tua vijnë përmes një "
+                  "agjencie, dhe ta themi për cilat po paguaje dy herë.",
+        "related": [("/geo/", "Kërkimi me AI"),
+                    ("/web-design/", "Faqe interneti")],
+    },
+
+    # ================================================ INDUSTRY: HAIRDRESSERS ===
+    {
+        "slug": "hairdressers-and-salons",
+        "src": "af466dea",
+        "date": "2026-08-14",
+        "updated": "2026-08-14",
+        "topic": "Faqe interneti",
+        "work": None,
+        "service": ("/web-design/", "Faqe interneti"),
+
+        "title": "Një parukeri rron nga vizita e dytë",
+        "h1": "Të gjendesh është gjysma e lehtë. T'i kthesh është zanati.",
+        "summary": "Një parukeri nuk ka hall trafiku. Ka një boshllëk mes një "
+                   "vizite dhe tjetrës, dhe kjo është punë tjetër për t'u "
+                   "rregulluar.",
+        "standfirst": "Një kliente që kthehet çdo 6 javë vlen më shumë se 10 "
+                      "që erdhën një herë, dhe gati të gjitha këshillat që të "
+                      "shesin flasin për të 10-at.",
+        "description": "Pse numri i vërtetë i një parukerie është vizita e "
+                       "kthimit dhe jo klientet e reja, dhe çfarë ndryshon kjo "
+                       "te faqja dhe te aplikacioni i rezervimeve.",
+        "og_desc": "Një kliente që kthehet çdo 6 javë i mund 10 që erdhën një "
+                   "herë.",
+
+        "body": [
+            ("Përgjigjja e shkurtër", [
+                "<p>Një parukeri është biznes kthimi i veshur si dyqan. Paratë "
+                "janë te dikush që kthehet 8 herë në vit, jo te takimi i "
+                "parë.</p>",
+                "<p>Prandaj pyetja nuk është si të gjendesh. Është çfarë ndodh "
+                "në 6 javët pasi një kliente ulet në karrigen tënde.</p>",
+            ]),
+            ("Vizita e parë është kërkim dhe të tjerat jo", [
+                "<p>Kush është e re shikon hartën, fotografitë dhe vlerësimet, "
+                "dhe rezervon te ai që duket i zoti dhe është afër. Ai është "
+                "hall kërkimi dhe ia vlen të zgjidhet një herë.</p>",
+                "<p>Të gjithë pas saj rezervojnë një njeri të cilit i besojnë "
+                "tashmë. Asnjë punë kërkimi nuk e prek atë gjysmë.</p>",
+            ]),
+            ("Aplikacioni të prezanton një kliente dhe vazhdon ta prezantojë", [
+                "<p>Aplikacionet e tregut të sjellin dikë që kërkonte një "
+                "parukeri dhe jo ty, dhe mbajnë një pjesë të asaj prezantimi. "
+                "Për një kliente vërtet të re kjo mund të jetë shkëmbim i "
+                "drejtë.</p>",
+                "<p>Pushon së qeni i drejtë kur një kliente e rregullt nis të "
+                "rezervojë nga aplikacioni sepse është e vetmja mënyrë që "
+                "ofron. Tani po paguan prezantim për dikë që vjen prej një "
+                "viti.</p>",
+            ]),
+            ("Çfarë do të thotë vërtet ta kesh ti rezervimin", [
+                "<p>Një mënyrë për të rezervuar te faqja jote, dhe një profil "
+                "që e lë dikë të rezervojë a të telefonojë pa aplikacion në "
+                "mes. Asnjëra s'ka pse të jetë e zgjuar. Të dyja duhet të jenë "
+                "të tuat.</p>",
+                "<p>Prova është e thjeshtë: po të mbyllej aplikacioni nesër, a "
+                "do ta kishe ende numrin e zonjës që vjen çdo muaj.</p>",
+            ]),
+            ("Fotografitë janë portofoli", [
+                "<p>Flokët janë i vetmi zanat ku puna është vetë reklama. "
+                "Fotografitë e asaj që ke bërë, mbi kliente të vërteta që kanë "
+                "pranuar, bëjnë më shumë se çdo fjalë në faqe. Është edhe ajo "
+                "që shfletohet para se dikush të vendosë të të besojë "
+                "kokën.</p>",
+            ]),
+        ],
+        "payoff": "Na thuaj si rezervon sot një kliente e rregullt, dhe ta "
+                  "themi sa po të kushton ajo mënyrë.",
+        "related": [("/web-design/", "Faqe interneti"),
+                    ("/seo/", "SEO dhe kërkim lokal")],
+    },
 ]
 
 # /blog/, the index over those records. The soft wraps are placed for this text

@@ -105,6 +105,11 @@ IDENTICAL_BY_DESIGN = {
     # a <dt> with nothing around it, and check 35 correctly asked whether a
     # word identical in both languages had ever been translated. It had.
     "audit", "GEO",
+    # The TITLE of a cited study, and titles are not translated. Rule 7 says a
+    # figure names its source in the sentence; a reader who wants to check it
+    # searches the name we printed, so an Italian rendering of it would send
+    # him looking for a report that does not exist under that name.
+    "Changing Traveller Report 2026",
     # The form control label. Italian and Albanian both write "Email" on a
     # form, and check 35 would otherwise fail 8 correct pages for it.
     "Email",

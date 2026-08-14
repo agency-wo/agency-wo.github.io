@@ -946,6 +946,221 @@ POSTS = [
         "related": [("/seo/", "SEO e ricerca locale"),
                     ("/meta-ads/", "Annunci Meta")],
     },
+    # ================================================ INDUSTRY: RESTAURANTS ===
+    {
+        "slug": "restaurants-and-cafes",
+        "src": "0c75554f",
+        "date": "2026-08-14",
+        "updated": "2026-08-14",
+        "topic": "Ricerca locale",
+        "work": None,
+        "service": ("/seo/", "SEO e ricerca locale"),
+
+        "title": "Il menù che non può leggere nessuno",
+        "h1": "Il tuo menù è una fotografia, quindi non lo cerca nessuno.",
+        "summary": "Un menù salvato come immagine è invisibile a Google e a "
+                   "ogni assistente a cui qualcuno chiede dove cenare.",
+        "standfirst": "Il piatto per cui ti conoscono è scritto in un posto "
+                      "che nessuna macchina può leggere, che equivale a non "
+                      "averlo scritto.",
+        "description": "Quasi tutti i menù dei ristoranti sono immagini o PDF, "
+                       "quindi nessun motore di ricerca legge un solo piatto. "
+                       "Quanto costa, e cosa fare invece.",
+        "og_desc": "Un menù salvato come immagine è invisibile a tutto quello "
+                   "che fa la ricerca.",
+
+        "body": [
+            ("La risposta breve", [
+                "<p>Chi ha fame digita un piatto, non un ristorante. Se il tuo "
+                "menù è una fotografia o un PDF, per la ricerca quelle parole "
+                "non esistono, e non esisti neanche tu.</p>",
+                "<p>Un menù scritto come testo su una pagina è la cosa più "
+                "economica di questa lista e non la fa quasi nessuno.</p>",
+            ]),
+            ("Come si sceglie davvero dove mangiare", [
+                "<p>Si decide dal telefono, di solito in pochi minuti, spesso "
+                "già camminando. Quello che si vede è la mappa: fotografie, "
+                "orari, quanto è lontano e cosa hanno detto gli altri.</p>",
+                "<p>Il sito raramente è la cosa che decide. Decide la scheda, "
+                "e la scheda è gratis.</p>",
+            ]),
+            ("Perché una foto del menù ti costa", [
+                "<p>Un motore di ricerca legge testo. La fotografia di un menù "
+                "non contiene testo, solo pixel messi in modo da sembrarlo. "
+                "Così ogni piatto per cui ti conoscono è invisibile, e quella "
+                "ricerca va a chi il suo lo ha scritto.</p>",
+                "<p>Un assistente a cui chiedi un posto per un piatto preciso "
+                "ha lo stesso problema, per lo stesso motivo.</p>",
+            ]),
+            ("Le fotografie lavorano più del design", [
+                "<p>La gente guarda le foto del cibo e della sala prima di "
+                "leggere una parola. Le fotografie fatte nel tuo locale, con "
+                "la luce del giorno, rendono più di qualsiasi immagine "
+                "comprata, perché il cliente la differenza la vede e sta "
+                "controllando se il posto è vero.</p>",
+            ]),
+            ("Cosa fare questa settimana", [
+                "<p>Scrivi il menù come testo su una pagina, con i prezzi, e "
+                "tieniti pure anche la versione bella. Compila gli orari, "
+                "compresi quelli che cambiano d'estate. Metti fotografie fatte "
+                "nella tua cucina.</p>",
+                "<p>Niente di tutto questo è un progetto, e tutto questo è la "
+                "parte che viene letta.</p>",
+            ]),
+        ],
+        "payoff": "Mandaci il menù come lo trova un cliente, e ti diciamo "
+                  "quali piatti sono invisibili.",
+        "related": [("/seo/", "SEO e ricerca locale"),
+                    ("/web-design/", "Siti web")],
+    },
+
+    # ===================================================== INDUSTRY: HOTELS ===
+    {
+        "slug": "hotels-and-guesthouses",
+        "src": "fbc2308d",
+        "date": "2026-08-14",
+        "updated": "2026-08-14",
+        "topic": "Ricerca AI",
+        "work": None,
+        "service": ("/geo/", "Ricerca AI"),
+
+        "title": "Da dove partono a cercare è cambiato",
+        "h1": "Lo stesso ospite ti costa meno se arriva direttamente.",
+        "summary": "Per gli hotel la ricerca è una porta più stretta di prima, "
+                   "e qualcun altro ti fa pagare gli ospiti che passano dalla "
+                   "sua.",
+        "standfirst": "Ogni prenotazione che arriva da un'agenzia è lo stesso "
+                      "ospite nella stessa stanza, con una parte della tariffa "
+                      "che se ne va altrove.",
+        "description": "Meno viaggiatori iniziano a cercare un hotel da un "
+                       "motore di ricerca rispetto a un anno fa, e più partono "
+                       "da un'agenzia. Cosa vuol dire per una piccola "
+                       "struttura.",
+        "og_desc": "Lo stesso ospite, la stessa stanza, meno una commissione "
+                   "che non dovevi pagare.",
+
+        "body": [
+            ("La risposta breve", [
+                "<p>Una struttura piccola ha 2 modi per farsi trovare: "
+                "qualcuno cerca, oppure un'agenzia ti mostra a lui e si tiene "
+                "una parte della tariffa. Il secondo è più facile e non è "
+                "gratis.</p>",
+                "<p>Farsi trovare da soli è come ti tieni la differenza sulle "
+                "prenotazioni che sarebbero arrivate comunque.</p>",
+            ]),
+            ("La porta si è spostata, e conviene sapere dove", [
+                "<p>Il <a href=\"https://www.siteminder.com/changing-traveller-report/\" target=\"_blank\" rel=\"noopener\">Changing Traveller Report 2026</a> di SiteMinder "
+                "ha rilevato che la quota di viaggiatori che comincia a "
+                "cercare un soggiorno da un motore di ricerca è scesa al 21%, "
+                "dal 36% dell'anno prima, mentre chi parte da un'agenzia è "
+                "salito al 26%.</p>",
+                "<p>Lo stesso rapporto mette al 4% chi parte da un assistente, "
+                "contro l'1% di prima. È poco, ed è quadruplicato in un anno, "
+                "e contano tutte e due le metà della frase.</p>",
+            ]),
+            ("Le agenzie non sono il nemico e non sono gratis", [
+                "<p>Un'agenzia ti mette davanti a qualcuno che non ha mai "
+                "sentito nominare la tua città. Questo vale la pena pagarlo, e "
+                "per una struttura nuova spesso è l'unico modo di riempire una "
+                "prima stagione.</p>",
+                "<p>Quello che non vale la pena è pagare quella quota su un "
+                "ospite che sapeva già il tuo nome ed è andato a cercarti. "
+                "Quelle prenotazioni sono il motivo per cui esistono un sito e "
+                "una scheda.</p>",
+            ]),
+            ("L'ospite che ti controlla prima di prenotare", [
+                "<p>Lo stesso rapporto ha rilevato che il 18% di chi parte da "
+                "un'agenzia poi prenota direttamente con l'hotel, una quota "
+                "cresciuta di 3,3 punti percentuali in un anno.</p>",
+                "<p>Quella persona è già convinta. Sta cercando la tua pagina "
+                "per confermare che il posto è vero e per vedere se prenotare "
+                "diretto è più semplice. Se non trova niente, torna indietro e "
+                "prenota nel modo caro.</p>",
+            ]),
+            ("Cosa deve avere una struttura piccola", [
+                "<p>Fotografie vere delle stanze vere, il prezzo, e un modo "
+                "per prenotare o chiedere che non richieda un account. Poi la "
+                "scheda sulla mappa, compilata per bene, perché un ospite in "
+                "mezzo alla strada con la valigia cerca sulla mappa e basta.</p>",
+            ]),
+        ],
+        "payoff": "Dicci più o meno che quota delle tue prenotazioni arriva da "
+                  "un'agenzia, e ti diciamo per quali stavi pagando due volte.",
+        "related": [("/geo/", "Ricerca AI"), ("/web-design/", "Siti web")],
+    },
+
+    # ================================================ INDUSTRY: HAIRDRESSERS ===
+    {
+        "slug": "hairdressers-and-salons",
+        "src": "af466dea",
+        "date": "2026-08-14",
+        "updated": "2026-08-14",
+        "topic": "Siti web",
+        "work": None,
+        "service": ("/web-design/", "Siti web"),
+
+        "title": "Un salone vive sulla seconda visita",
+        "h1": "Farsi trovare è la metà facile. Farli tornare è il mestiere.",
+        "summary": "Un salone non ha un problema di traffico. Ha un vuoto tra "
+                   "una visita e l'altra, ed è una cosa diversa da "
+                   "sistemare.",
+        "standfirst": "Una cliente che torna ogni 6 settimane vale più di 10 "
+                      "venute una volta sola, e quasi tutti i consigli che ti "
+                      "vendono parlano delle 10.",
+        "description": "Perché il numero vero di un parrucchiere è la visita "
+                       "di ritorno e non le clienti nuove, e cosa cambia nel "
+                       "sito e nell'app di prenotazione.",
+        "og_desc": "Una cliente che torna ogni 6 settimane batte 10 venute una "
+                   "volta sola.",
+
+        "body": [
+            ("La risposta breve", [
+                "<p>Un salone è un'attività di ritorno vestita da negozio. I "
+                "soldi stanno in qualcuno che torna 8 volte l'anno, non nel "
+                "primo appuntamento.</p>",
+                "<p>Quindi la domanda non è come farsi trovare. È cosa succede "
+                "nelle 6 settimane dopo che una cliente si è seduta sulla tua "
+                "poltrona.</p>",
+            ]),
+            ("La prima visita è una ricerca e le altre no", [
+                "<p>Chi è nuovo guarda la mappa, le fotografie e le "
+                "recensioni, e prenota da chi sembra capace ed è vicino. "
+                "Quello è un problema di ricerca e vale la pena risolverlo una "
+                "volta.</p>",
+                "<p>Tutti quelli dopo prenotano una persona di cui si fidano "
+                "già. Nessun lavoro sulla ricerca tocca quella metà.</p>",
+            ]),
+            ("L'app di prenotazione presenta una cliente e continua a "
+             "presentarla", [
+                "<p>Le app marketplace ti portano qualcuno che cercava un "
+                "salone e non cercava te, e si tengono una quota di quella "
+                "presentazione. Per una cliente davvero nuova può essere uno "
+                "scambio giusto.</p>",
+                "<p>Smette di esserlo quando una cliente abituale comincia a "
+                "prenotare dall'app perché è l'unico modo che offri. Adesso "
+                "stai pagando una presentazione per qualcuno che viene da un "
+                "anno.</p>",
+            ]),
+            ("Cosa vuol dire davvero avere la prenotazione", [
+                "<p>Un modo per prenotare sul tuo sito, e una scheda che lasci "
+                "prenotare o telefonare senza un'app in mezzo. Nessuno dei due "
+                "deve essere ingegnoso. Tutti e due devono essere tuoi.</p>",
+                "<p>La prova è semplice: se l'app chiudesse domani, avresti "
+                "ancora il numero della signora che viene ogni mese.</p>",
+            ]),
+            ("Le fotografie sono il portfolio", [
+                "<p>I capelli sono l'unico mestiere in cui il lavoro è la "
+                "pubblicità. Le fotografie di quello che hai fatto, su clienti "
+                "vere che hanno detto di sì, valgono più di qualsiasi parola "
+                "sulla pagina. È anche quello che si scorre prima di decidere "
+                "di affidarti la testa.</p>",
+            ]),
+        ],
+        "payoff": "Dicci come prenota oggi una cliente abituale, e ti diciamo "
+                  "quanto ti costa quella abitudine.",
+        "related": [("/web-design/", "Siti web"),
+                    ("/seo/", "SEO e ricerca locale")],
+    },
 ]
 
 # /blog/, the index over those records. The soft wraps are placed for this text

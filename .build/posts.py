@@ -916,6 +916,214 @@ POSTS = [
         "related": [("/seo/", "SEO and local search"),
                     ("/meta-ads/", "Meta ads")],
     },
+    # ================================================ INDUSTRY: RESTAURANTS ===
+    {
+        "slug": "restaurants-and-cafes",
+        "date": "2026-08-14",
+        "updated": "2026-08-14",
+        "topic": "Local search",
+        "work": None,
+        "service": ("/seo/", "SEO and local search"),
+
+        "title": "The menu nobody can read",
+        "h1": "Your menu is a photograph, so nobody can search it.",
+        "summary": "A menu saved as an image is invisible to Google and to "
+                   "every assistant somebody asks for dinner.",
+        "standfirst": "The dish you are known for is written down somewhere no "
+                      "machine can read, which is the same as not having "
+                      "written it.",
+        "description": "Most restaurant menus are pictures or PDFs, so no "
+                       "search engine can read a single dish on them. What "
+                       "that costs, and what to do instead.",
+        "og_desc": "A menu saved as an image is invisible to everything that "
+                   "does the searching.",
+
+        "body": [
+            ("The short answer", [
+                "<p>Somebody hungry types a dish, not a restaurant. If your "
+                "menu is a photograph or a PDF, the words on it do not exist "
+                "as far as search is concerned, and neither do you.</p>",
+                "<p>A menu written as text on a page is the cheapest thing on "
+                "this list and almost nobody does it.</p>",
+            ]),
+            ("How somebody actually picks where to eat", [
+                "<p>The decision is made on a phone, usually within a few "
+                "minutes, often while already walking. What gets seen is the "
+                "map: photographs, hours, how far away, and what other people "
+                "said.</p>",
+                "<p>The website is rarely the thing that decides it. The "
+                "listing is, and the listing is free.</p>",
+            ]),
+            ("Why a picture of a menu costs you", [
+                "<p>A search engine reads text. A photograph of a menu "
+                "contains no text, only pixels arranged to look like some. So "
+                "every dish you are known for is invisible, and the search for "
+                "that dish goes to somebody who typed theirs out.</p>",
+                "<p>An assistant asked to recommend somewhere for a specific "
+                "dish has the same problem, for the same reason.</p>",
+            ]),
+            ("The photographs are doing more work than the design", [
+                "<p>People look at pictures of the food and the room before "
+                "they read a word. Photographs taken in your own place, in "
+                "daylight, outperform anything bought from a library, because "
+                "a customer can tell the difference and is checking whether "
+                "the place is real.</p>",
+            ]),
+            ("What to do this week", [
+                "<p>Type the menu out as text on a page, with prices, and keep "
+                "the pretty version as well if you want it. Fill in the hours, "
+                "including the ones that change in summer. Put up photographs "
+                "from your own kitchen.</p>",
+                "<p>None of that is a project and all of it is the part that "
+                "gets read.</p>",
+            ]),
+        ],
+        "payoff": "Send us your menu the way a customer finds it, and we will "
+                  "tell you which dishes are invisible.",
+        "related": [("/seo/", "SEO and local search"),
+                    ("/web-design/", "Websites")],
+    },
+
+    # ===================================================== INDUSTRY: HOTELS ===
+    {
+        "slug": "hotels-and-guesthouses",
+        "date": "2026-08-14",
+        "updated": "2026-08-14",
+        "topic": "AI search",
+        "work": None,
+        "service": ("/geo/", "AI search"),
+
+        "title": "Where guests start looking has moved",
+        "h1": "The same guest costs you less if they arrive directly.",
+        "summary": "Search is a smaller front door for hotels than it was, and "
+                   "somebody else is charging you for the guests who use "
+                   "theirs.",
+        "standfirst": "Every booking that arrives through an agency is the "
+                      "same guest in the same room, with a share of the rate "
+                      "going somewhere else.",
+        "description": "Fewer travellers start their hotel search on a search "
+                       "engine than a year ago, and more start on an agency. "
+                       "What that means for a small guesthouse.",
+        "og_desc": "The same guest, the same room, minus a commission you did "
+                   "not have to pay.",
+
+        "body": [
+            ("The short answer", [
+                "<p>A guesthouse has 2 ways to be found: somebody searches, or "
+                "an agency shows you to them and keeps a share of the rate. "
+                "The second is easier and it is not free.</p>",
+                "<p>Being findable on your own is how you keep the difference "
+                "on the bookings that would have come anyway.</p>",
+            ]),
+            ("The front door moved, and it is worth knowing where", [
+                "<p>SiteMinder's <a href=\"https://www.siteminder.com/changing-traveller-report/\" target=\"_blank\" rel=\"noopener\">Changing Traveller Report 2026</a> "
+                "found the share of travellers who begin researching a stay on "
+                "a search engine fell to 21%, from 36% the year before, while "
+                "the share starting on a booking agency rose to 26%.</p>",
+                "<p>The same report put the share starting with an assistant "
+                "at 4%, up from 1%. That is small, and it quadrupled in a "
+                "year, and both halves of that sentence matter.</p>",
+            ]),
+            ("Agencies are not the enemy and they are not free", [
+                "<p>An agency puts you in front of somebody who has never "
+                "heard of your town. That is worth paying for, and for a new "
+                "guesthouse it is often the only way to fill a first "
+                "season.</p>",
+                "<p>What it is not worth is paying that share on a guest who "
+                "already knew your name and looked you up. Those are the "
+                "bookings a site and a listing are for.</p>",
+            ]),
+            ("The guest who checks you out before booking", [
+                "<p>The same report found 18% of travellers who start on an "
+                "agency go on to book directly with the hotel, a share that "
+                "rose by 3.3 percentage points in a year.</p>",
+                "<p>That person is already sold. They are looking for your own "
+                "page to confirm the place is real and to see whether booking "
+                "direct is easier. If there is nothing to find, they go back "
+                "and book the expensive way.</p>",
+            ]),
+            ("What a small place should have", [
+                "<p>Real photographs of the actual rooms, the price, and a way "
+                "to book or ask that does not need an account. Then the map "
+                "listing, filled in properly, because a guest standing in the "
+                "street with a suitcase is searching the map and nothing "
+                "else.</p>",
+            ]),
+        ],
+        "payoff": "Tell us roughly what share of your bookings arrive through "
+                  "an agency, and we will tell you which of them you were "
+                  "paying for twice.",
+        "related": [("/geo/", "AI search"), ("/web-design/", "Websites")],
+    },
+
+    # ================================================ INDUSTRY: HAIRDRESSERS ===
+    {
+        "slug": "hairdressers-and-salons",
+        "date": "2026-08-14",
+        "updated": "2026-08-14",
+        "topic": "Websites",
+        "work": None,
+        "service": ("/web-design/", "Websites"),
+
+        "title": "A salon lives on the second visit",
+        "h1": "Getting found is the easy half. Getting them back is the "
+              "business.",
+        "summary": "A salon does not have a traffic problem. It has a gap "
+                   "between visits, and that is a different thing to fix.",
+        "standfirst": "One new client who returns every 6 weeks is worth more "
+                      "than 10 who came once, and almost all the advice you "
+                      "are sold is about the 10.",
+        "description": "Why a hairdresser's real number is the return visit "
+                       "rather than new clients, and what that changes about "
+                       "the website and the booking app.",
+        "og_desc": "One client who comes back every 6 weeks beats 10 who came "
+                   "once.",
+
+        "body": [
+            ("The short answer", [
+                "<p>A salon is a repeat business wearing the clothes of a "
+                "retail one. The money is in somebody coming back 8 times a "
+                "year, not in the first appointment.</p>",
+                "<p>So the question is not how to be found. It is what happens "
+                "in the 6 weeks after somebody sits in your chair.</p>",
+            ]),
+            ("The first visit is a search and the rest are not", [
+                "<p>Somebody new looks at the map, the photographs and the "
+                "reviews, and books whoever looks competent and is close. That "
+                "is a search problem and it is worth solving once.</p>",
+                "<p>Everybody after that is booking a person they already "
+                "trust. No amount of search work touches that half.</p>",
+            ]),
+            ("The booking app introduces a client and keeps introducing them", [
+                "<p>Marketplace apps bring you somebody who was looking for a "
+                "salon and not for you, and they charge a share of that "
+                "introduction. For a genuinely new client that can be a fair "
+                "trade.</p>",
+                "<p>It stops being fair when a regular starts booking through "
+                "the app because it is the only way you offer. Now you are "
+                "paying an introduction fee for somebody who has been coming "
+                "for a year.</p>",
+            ]),
+            ("What owning the booking actually means", [
+                "<p>A way to book on your own site, and a listing that lets "
+                "somebody book or call without an app in between. Neither has "
+                "to be clever. Both have to belong to you.</p>",
+                "<p>The test is simple: if the app closed tomorrow, would you "
+                "still have the phone number of the woman who comes in every "
+                "month.</p>",
+            ]),
+            ("The photographs are the portfolio", [
+                "<p>Hair is the one trade where the work is the advertisement. "
+                "Photographs of what you did, on real clients who agreed, do "
+                "more than any words on the page. That is also what somebody "
+                "scrolls before deciding to trust you with their head.</p>",
+            ]),
+        ],
+        "payoff": "Tell us how a regular books with you today, and we will "
+                  "tell you what that arrangement is costing.",
+        "related": [("/web-design/", "Websites"),
+                    ("/seo/", "SEO and local search")],
+    },
 ]
 
 # /blog/, the index over those records. It is a page and a page's copy is copy,
