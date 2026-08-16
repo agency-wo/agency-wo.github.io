@@ -39,6 +39,38 @@ MONTHS = {
 }
 
 
+# Spelled small numbers, for counts that sit inside a sentence. Deliberately
+# lower case in all 3: the one caller writes "{brand} has put {clients}
+# businesses online", so the word is never sentence-initial and a capitalised
+# table would put a Four in the middle of a line. If a sentence ever needs to
+# open with one, give that sentence its own string rather than teaching this
+# table about position.
+COUNTS = {
+    "en": ("no", "one", "two", "three", "four", "five", "six", "seven",
+           "eight", "nine", "ten"),
+    "it": ("nessuna", "una", "due", "tre", "quattro", "cinque", "sei", "sette",
+           "otto", "nove", "dieci"),
+    # Albanian marks gender and these count biznese, which is neuter/masculine
+    # in the plural: një and katër are invariable, so only the zero form had a
+    # choice to make and asnjë is the one that fits "asnjë biznes".
+    "sq": ("asnjë", "një", "dy", "tre", "katër", "pesë", "gjashtë", "shtatë",
+           "tetë", "nëntë", "dhjetë"),
+}
+
+
+def count(n, lang):
+    """4 -> four / quattro / katër. Above ten, the digit.
+
+    The site has 4 clients and spelling that is better prose than "4". It is a
+    function and not a constant because the caller derives n from
+    len(clients.CLIENTS): the day a fifth client ships, the sentence says five
+    without anybody remembering that it says a number at all. That is the same
+    bargain {turnaround} and {brand} make, and it is the only reason this is
+    not just typed into the copy.
+    """
+    return COUNTS[lang][n] if 0 <= n < len(COUNTS[lang]) else str(n)
+
+
 def dec(text, lang):
     """Re-point the separators in an already-formatted number.
 

@@ -945,6 +945,36 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
    position you have to explain is not a position. It was 2 columns of
    supporting detail once and read as an argument being made rather than a
    fact being stated. */
+/* -- being new ------------------------------------------------------------- */
+/* Directly under the 4 client logos, because that is where a reader counts
+   them and thinks "only four". It answers with prose rather than another
+   exhibit, so it takes --pad-section and a 1px rule: the section above it
+   already owns the 2px ink border and the major padding, and two shouts in a
+   row is neither of them being heard.
+
+   The measure matches .proof-body exactly. Both are the same kind of block --
+   an argument in flowing text under a heading -- and giving them different
+   line lengths would be two answers to one question. */
+.open { border-top: 1px solid var(--edge); padding-block: var(--pad-section); }
+.open-body > p { max-width: 62ch; margin-bottom: var(--s-5); }
+.open-lead { font-size: var(--fs-lead); }
+/* No margin-top here on purpose: .eyebrow's own margin-bottom is larger and
+   wins the collapse, so one adds nothing and only invites somebody to "fix"
+   the spacing in two places. Measured against .proof: eyebrow to h2 is 24px in
+   both, h2 to lead is 0 in both. */
+.open-body h2 { max-width: 24ch; }
+
+/* The ownership promise, in .check's clothes and for .check's reason: a red
+   left rule on this site means "this is the load-bearing claim, and you can
+   test it". It is the one sentence here that promises something about the
+   world rather than about the page, which is exactly what a reader hesitating
+   over a studio this size is actually weighing. Gate check 52 keeps it present
+   in all 3 languages on both pages that make it. */
+.open-own { margin-top: var(--s-7); border-left: 2px solid var(--red);
+  padding: var(--s-2) 0 var(--s-2) var(--s-5); max-width: 54ch;
+  font-size: var(--fs-lead); text-wrap: pretty; }
+.open-own strong { font-weight: 700; }
+
 /* --pad-major fired 4 times consecutively on the homepage, against a token
    file whose own comment says "three rhythm weights, not one". This is the
    connective sentence between the proof and the refusal, not a third exhibit,

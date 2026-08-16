@@ -34,15 +34,18 @@ that softens them has edited a claim while appearing to translate one.
 # the whole attribute lives here. i18n.load() fails the build when the
 # English list is edited and this is not.
 SRC = {
-    "AVAILABILITY": "6b356f6b",
+    "AVAILABILITY": "868c31af",
     "SERVICES": "b417d875",
     "STATS": "dcfd8814",
 }
 
 NL = chr(10)
 
-# Kept true by hand, like the English. A month name is lower case in Italian.
-AVAILABILITY = "Prendiamo nuovi lavori da settembre."
+# No month in it any more, like the English: there is nothing here to keep true
+# and nothing that expires. "adesso" and not "ora" because the rest of this file
+# already says "proprio adesso" in hero_say, and one page should reach for the
+# same word twice rather than two words once.
+AVAILABILITY = "Prendiamo nuovi lavori adesso."
 
 # (href, name, what you end up with, what the page holds)
 # STAMP: SERVICES is a list of tuples and has nowhere to put "src": "e2792051".
@@ -98,7 +101,7 @@ STATS = [
 ]
 
 PAGE = {
-    "src": "e2792051",
+    "src": "47e7ac53",
 
     # 38 characters against the 52 the title budget leaves once gen_home.py has
     # put "minarank studio ·" in front of it.
@@ -204,6 +207,30 @@ PAGE = {
     # 3 words, like the English, and "lavori" is what chrome_it.py calls the
     # section it points at.
     "ask_go": "Vedi i lavori",
+
+    # -- being new ----------------------------------------------------------
+    # "studio" is native Italian and is what the brand already calls itself, so
+    # the heading keeps the word rather than reaching for "agenzia" -- which is
+    # also the thing the next sentence contrasts against.
+    "open_eyebrow": "Lo studio",
+    "open_h": "Siamo nuovi, e pubblichiamo quello che gli" + NL +
+              "studi più vecchi nascondono.",
+    "open_p1": "{brand} ha portato online {clients} attività, ognuna con la" + NL +
+               "sua pagina. La prima non aveva alcun sito a maggio; ad agosto "
+               "Google le" + NL +
+               "mandava 560 clic a trimestre.",
+    "open_p2": "Quasi tutte le agenzie mostrano un muro di loghi. Noi mostriamo" + NL +
+               "l'export di Search Console, compresa la posizione media 8,4 e la "
+               "percentuale" + NL +
+               "di clic dell'1%, che nessuno sceglierebbe di pubblicare. Un dato "
+               "che non" + NL +
+               "puoi verificare non vale niente.",
+    # "a tuo nome" is the phrase an Italian reader recognises from a utility
+    # contract or a domain registration, which is exactly the register this
+    # promise needs: administrative and checkable, not reassuring.
+    "open_p3": "<strong>E qualunque cosa costruiamo, è tua:</strong> il dominio, "
+               "il codice" + NL +
+               "e ogni account, a tuo nome dal primo giorno.",
 
     # -- the price ----------------------------------------------------------
     "place_h": "Lo standard non cambia con il" + NL +

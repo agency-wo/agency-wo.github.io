@@ -19,9 +19,11 @@ leads with what the reader ends up with, and the method goes underneath.
 
 NL = chr(10)
 
-# TODO(founder): keep this line true. It is here because a fact somebody has to
-# maintain is worth more than any amount of copy.
-AVAILABILITY = "Taking on new work from September."
+# This used to name a month, which meant it was a fact somebody had to
+# maintain and, for the fortnight before that month, a sign on the door saying
+# come back later. It now states availability without a date in it, so there is
+# nothing to keep true and nothing that expires.
+AVAILABILITY = "Taking on new work now."
 
 # (href, name, what you end up with, what the page holds)
 # The third field is also the Service description in the JSON-LD, so it has to
@@ -123,6 +125,35 @@ PAGE = {
                 "what" + NL +
                 "we built.",
     "ask_go": "See the work",
+
+    # -- being new ----------------------------------------------------------
+    # This block sits directly under the 4 client logos, which is where the
+    # doubt actually forms: a visitor counts them and thinks "only four". The
+    # answer is not to hide the number but to say what a reader should weigh
+    # instead, and then to be the studio that publishes the unflattering half
+    # of its own evidence. {clients} is derived from len(clients.CLIENTS), so
+    # the sentence cannot go stale the way a typed "four" would.
+    # Held to ~95 words: the homepage's 900-word budget had 102 left when this
+    # block was written, and the budget is a real constraint rather than a
+    # formality. Every sentence that survived the cut earns its place, which is
+    # the only useful thing about writing to a cap.
+    "open_eyebrow": "The studio",
+    "open_h": "We are new, and we publish what older" + NL +
+              "studios hide.",
+    "open_p1": "{brand} has put {clients} businesses online, each with its" + NL +
+               "own page. The first had no website in May; by August Google was" + NL +
+               "sending it 560 clicks a quarter.",
+    # Rule 22 is the argument here and not merely a constraint the block
+    # survives: the weak numbers are the reason to believe the strong one, so
+    # this says so rather than leaving a reader to notice.
+    "open_p2": "Most agencies show a wall of logos. We show the Search Console" + NL +
+               "export, including the 8.4 average position and the 1% click rate, "
+               "which" + NL +
+               "nobody would choose to publish. A figure you cannot check is worth "
+               "nothing.",
+    "open_p3": "<strong>And whatever we build, you own:</strong> the domain, the "
+               "code" + NL +
+               "and every account, in your name from day one.",
 
     # -- the price ----------------------------------------------------------
     "place_h": "The standard does not move with the" + NL +

@@ -1,7 +1,8 @@
 """Emit index.html from home.py. The homepage was hand-authored and drifted;
 now it comes from the same shell as every other page.
 
-Six blocks: what we do, the proof, the five doors, the businesses, the refusal,
+Seven blocks: what we do, the proof, the five doors, the businesses, why being
+a new studio is the argument rather than the problem, the price, the refusal,
 one CTA. No values section, no process diagram, no stats bar.
 
 Every sentence lives in home.py so the page can be translated without anybody
@@ -20,6 +21,12 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import i18n  # noqa: E402
 import l10n  # noqa: E402
 import shell  # noqa: E402
+# Imported under a second name on purpose: render() has its own local `clients`
+# holding the TRANSLATED list, and tokens() below is module-level and cannot see
+# it. This is the English source list, which is the right thing to count from --
+# i18n.same_shape() makes the 3 lists the same length at import, so the count is
+# language-independent and the English file is where it is decided.
+import clients as client_data  # noqa: E402
 from gen_pages import form_source, out, write  # noqa: E402
 
 S = shell.SITE
@@ -37,6 +44,12 @@ NL = chr(10)
 def tokens(lang):
     return {
         "{brand}": shell.BRAND,
+        # How many businesses we have built for, spelled out. Derived and never
+        # typed: the copy states the number, clients.py owns it, and a fifth
+        # client changes the sentence without anybody remembering it has a
+        # number in it. l10n.count() is lower case in all 3, so the one caller
+        # keeps it out of sentence-initial position.
+        "{clients}": l10n.count(len(client_data.CLIENTS), lang),
         "{turnaround}": shell.turnaround(lang),
         "{email}": f'<a href="mailto:{shell.EMAIL}">{shell.EMAIL}</a>',
         "{email_href}": "mailto:" + shell.EMAIL,
@@ -340,6 +353,18 @@ def render(lang):
         <ul class="marks">
 {marks}
         </ul>
+      </div>
+    </section>
+
+    <section class="open" aria-labelledby="open-h">
+      <div class="wrap">
+        <div class="open-body" data-reveal>
+          <p class="eyebrow">{fill(h["open_eyebrow"], lang)}</p>
+          <h2 id="open-h">{txt(10, h["open_h"], lang)}</h2>
+          <p class="open-lead">{txt(10, h["open_p1"], lang)}</p>
+          <p>{txt(10, h["open_p2"], lang)}</p>
+          <p class="open-own">{txt(10, h["open_p3"], lang)}</p>
+        </div>
       </div>
     </section>
 

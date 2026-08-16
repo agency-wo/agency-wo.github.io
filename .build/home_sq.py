@@ -35,15 +35,17 @@ that softens them has edited a claim while appearing to translate one.
 # the whole attribute lives here. i18n.load() fails the build when the
 # English list is edited and this is not.
 SRC = {
-    "AVAILABILITY": "6b356f6b",
+    "AVAILABILITY": "868c31af",
     "SERVICES": "b417d875",
     "STATS": "dcfd8814",
 }
 
 NL = chr(10)
 
-# Kept true by hand, like the English. A month name is lower case in Albanian.
-AVAILABILITY = "Marrim punë të reja nga shtatori."
+# No month in it any more, like the English: there is nothing here to keep true
+# and nothing that expires. "tani" is the plain word for now and is what
+# hero_say's "pikërisht tani" is built on, so the page reaches for it twice.
+AVAILABILITY = "Marrim punë të reja tani."
 
 # (href, name, what you end up with, what the page holds)
 # STAMP: SERVICES is a list of tuples and has nowhere to put "src": "e2792051".
@@ -98,7 +100,7 @@ STATS = [
 ]
 
 PAGE = {
-    "src": "e2792051",
+    "src": "47e7ac53",
 
     # 39 characters against the 52 the title budget leaves once gen_home.py has
     # put "minarank studio ·" in front of it.
@@ -197,6 +199,30 @@ PAGE = {
     # 2 words, under the English count, and "punët" is what chrome_sq.py calls
     # the section it points at.
     "ask_go": "Shih punët",
+
+    # -- being new ----------------------------------------------------------
+    # "studio" is an accepted loan in Albanian and is already in
+    # glossary.IDENTICAL_BY_DESIGN as the nav label, so the eyebrow keeps it
+    # rather than reaching for "studioja" and disagreeing with the nav.
+    "open_eyebrow": "Studio",
+    "open_h": "Jemi të rinj, dhe publikojmë atë që studiot" + NL +
+              "më të vjetra e fshehin.",
+    "open_p1": "{brand} ka nxjerrë online {clients} biznese, secili me faqen" + NL +
+               "e vet. I pari nuk kishte fare faqe interneti në maj; në gusht "
+               "Google i" + NL +
+               "dërgonte 560 klikime në tremujor.",
+    "open_p2": "Shumica e agjencive tregojnë një mur me logo. Ne tregojmë" + NL +
+               "eksportin e Search Console, përfshirë pozicionin mesatar 8,4 dhe "
+               "përqindjen" + NL +
+               "e klikimeve prej 1%, që askush nuk do t'i zgjidhte për botim. Një "
+               "shifër" + NL +
+               "që nuk e verifikon dot nuk vlen asgjë.",
+    # "në emrin tënd" is the phrase an Albanian reader knows from a utility
+    # contract or a domain registration: administrative and checkable, which is
+    # the register this promise needs.
+    "open_p3": "<strong>Dhe çfarëdo që ndërtojmë, është jotja:</strong> domeni, "
+               "kodi" + NL +
+               "dhe çdo llogari, në emrin tënd që nga dita e parë.",
 
     # -- the price ----------------------------------------------------------
     "place_h": "Standardi nuk ndryshon me" + NL +

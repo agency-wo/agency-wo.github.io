@@ -344,7 +344,7 @@ PAGES = [
     # ---------------------------------------------------------------- START --
     {
         "url": "/start/",
-     "src": "98c6ca53",
+     "src": "6cf2f99e",
         "nav": "Inizia un progetto",
         "title": "Inizia un progetto",
         "description": "Dicci cosa offri e dove vuoi farti trovare. Email, WhatsApp o "
@@ -447,6 +447,38 @@ PAGES = [
                   "quanto costa, e se vale la pena farlo. Solo dopo, una proposta su "
                   "una" + NL +
                   "pagina. Nessun contratto continuativo da cui non puoi uscire."),
+        ],
+        # Same heading as /systems/ in this file: it is chrome_it.QUESTIONS.
+        "faq_h": "Domande che vale la pena fare",
+        "faq": [
+            ("Da quanto tempo fate questo lavoro?",
+             "{brand} è nuovo. Il lavoro è pubblico invece che raccontato: c'è "
+             "una" + NL +
+             "pagina per ogni attività per cui abbiamo lavorato, e per la prima "
+             "l'export" + NL +
+             "completo di Search Console, numeri deboli compresi. È la parte che "
+             "puoi" + NL +
+             "verificare, ed è più di quanto ti dica una data di fondazione."),
+            ("Cosa succede al mio sito se smettiamo di lavorare insieme?",
+             "Te lo tieni tutto. Il dominio, il codice, l'hosting e ogni account "
+             "sono" + NL +
+             "a tuo nome dal primo giorno, non al nostro. Non c'è nessun passaggio "
+             "di" + NL +
+             "consegne da trattare, perché non abbiamo mai tenuto niente per te."),
+            ("Chi fa il lavoro, in concreto?",
+             "La persona che risponde al tuo primo messaggio è la persona che "
+             "scrive" + NL +
+             "il codice. Nessun account manager che fa da tramite, e nessun junior "
+             "che" + NL +
+             "impara sul tuo sito."),
+            ("Quanto costa?",
+             "Dipende dal sito e da cosa serve fare, ed è per questo che l'audit "
+             "viene" + NL +
+             "prima e non costa niente. Il prezzo arriva insieme al piano, su una "
+             "pagina," + NL +
+             "prima che inizi qualsiasi lavoro. Le Meta ads hanno una tariffa "
+             "fissa," + NL +
+             "non una percentuale di quello che spendi."),
         ],
         # "Dettagli" is chrome_it.ARIA_DETAILS.
         "aside": ("Dettagli", [

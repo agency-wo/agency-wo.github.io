@@ -423,6 +423,46 @@ PAGES = [
                   "proposal" + NL +
                   "on one page. No retainer you can't leave."),
         ],
+        # The four things somebody hesitates over on this page, answered on this
+        # page. gen_docs.py derives a FAQPage node from these automatically, the
+        # way it already does for /systems/, so the answers a person reads and
+        # the answers a machine quotes cannot drift apart. That node is also the
+        # thing an AI search engine lifts, which is a service this studio sells
+        # and had never once used on itself.
+        #
+        # Rule 25 governs the last one: it says how the price is arrived at and
+        # when you see it, and never a minimum. Any timing here has to come from
+        # {turnaround} or check 25 reads it as a rival promise.
+        "faq_h": "Questions worth asking",
+        "faq": [
+            ("How long have you been doing this?",
+             "{brand} is new. The work is public rather than described: there is "
+             "a" + NL +
+             "page for every business we have built for, and for the first of them "
+             "the" + NL +
+             "whole Search Console export, weak numbers included. That is the part "
+             "you" + NL +
+             "can check, which is more than a founding date tells you."),
+            ("What happens to my site if we stop working together?",
+             "You keep all of it. The domain, the code, the hosting and every "
+             "account" + NL +
+             "are in your name from day one, not ours. There is no handover to "
+             "negotiate," + NL +
+             "because nothing was ever held on your behalf."),
+            ("Who actually does the work?",
+             "The person who answers your first message is the person who writes "
+             "the" + NL +
+             "code. No account manager relaying it, and no junior practising on "
+             "your site."),
+            ("What does it cost?",
+             "It depends on the site and what needs doing, which is why the audit "
+             "comes" + NL +
+             "first and costs nothing. You get the price with the plan, on one "
+             "page," + NL +
+             "before any work starts. Meta ads are a flat fee rather than a cut of "
+             "what" + NL +
+             "you spend."),
+        ],
         "aside": ("Details", [
             ("Studio", [
                 ("p", "{brand}, Durres, Albania<br>" + NL +

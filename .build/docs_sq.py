@@ -335,7 +335,7 @@ PAGES = [
     # ---------------------------------------------------------------- START --
     {
         "url": "/start/",
-     "src": "98c6ca53",
+     "src": "6cf2f99e",
         "nav": "Nis një projekt",
         "title": "Nis një projekt",
         "description": "Na thuaj çfarë ofron dhe ku do të të gjejnë. Email, WhatsApp ose "
@@ -439,6 +439,38 @@ PAGES = [
                   "kushton afërsisht, dhe nëse ia vlen fare. Vetëm pas kësaj, një ofertë "
                   "në" + NL +
                   "një faqe. Pa kontratë mujore nga e cila nuk del dot."),
+        ],
+        # Same heading as /systems/ in this file: it is chrome_sq.QUESTIONS.
+        "faq_h": "Pyetje që ia vlen t'i bësh",
+        "faq": [
+            ("Prej sa kohësh e bëni këtë punë?",
+             "{brand} është i ri. Puna është publike në vend që të tregohet: ka "
+             "një" + NL +
+             "faqe për çdo biznes për të cilin kemi punuar, dhe për të parin "
+             "eksportin e" + NL +
+             "plotë të Search Console, përfshirë shifrat e dobëta. Kjo është pjesa "
+             "që" + NL +
+             "mund ta verifikosh, dhe të thotë më shumë se një datë themelimi."),
+            ("Çfarë i ndodh faqes sime nëse ndalojmë së punuari bashkë?",
+             "E mban të gjithën. Domeni, kodi, hostimi dhe çdo llogari janë në "
+             "emrin" + NL +
+             "tënd që nga dita e parë, jo në tonin. Nuk ka asnjë dorëzim për t'u "
+             "negociuar," + NL +
+             "sepse asgjë nuk u mbajt ndonjëherë në emrin tonë për ty."),
+            ("Kush e bën punën në të vërtetë?",
+             "Personi që i përgjigjet mesazhit tënd të parë është personi që "
+             "shkruan" + NL +
+             "kodin. Asnjë account manager që bën ndërmjetësin, dhe asnjë i ri që "
+             "mëson" + NL +
+             "mbi faqen tënde."),
+            ("Sa kushton?",
+             "Varet nga faqja dhe nga çfarë duhet bërë, prandaj auditimi vjen i "
+             "pari" + NL +
+             "dhe nuk kushton asgjë. Çmimin e merr bashkë me planin, në një faqe, "
+             "para" + NL +
+             "se të nisë çdo punë. Meta ads kanë një tarifë fikse, jo një përqindje "
+             "të" + NL +
+             "asaj që shpenzon."),
         ],
         # "Detaje" is chrome_sq.ARIA_DETAILS.
         "aside": ("Detaje", [

@@ -2272,6 +2272,38 @@ if _shell.GBP_REVIEW_URL and not re.match(
         f"search.google.com/local/writereview are the shapes Google mints")
 
 
+# 52. the ownership promise is made on both pages that make it --------------
+# "The domain, the code and every account are in your name from day one" is the
+# only sentence on this site that promises something about the world rather
+# than about the site, and it is the reason somebody hires a studio with 4
+# clients instead of one with 40. It is stated twice per language -- the
+# homepage block and the /start/ FAQ -- which is the exact shape that produced
+# check 25: two places, one fact, and nothing making them agree.
+#
+# This is a PRESENCE check and deliberately not a sameness one. The two
+# statements are different sentences by design (the FAQ answers a question, the
+# block makes a claim) and forcing them byte-identical would be a check
+# demanding worse prose. What must never happen is one of them quietly
+# disappearing -- most likely in a translation, where nobody reading the English
+# would notice.
+#
+# The phrase is the load-bearing half rather than the whole sentence, and it is
+# matched against text_of(), which collapses the soft wraps: the Albanian
+# breaks "në emrin / tënd" across a line and a raw-HTML match would miss it.
+OWNERSHIP = {
+    "en": "in your name from day one",
+    "it": "a tuo nome dal primo giorno",
+    "sq": "në emrin tënd që nga dita e parë",
+}
+for _key, _where in ((HOME, "the homepage block"), (START, "the /start/ FAQ")):
+    for _lg, _p in sorted(FAMILY.get(_key, {}).items()):
+        if OWNERSHIP[_lg].lower() not in text_of(read(_p)).lower():
+            findings.append(
+                f"[promise] {rel(_p)} never states that the client owns the "
+                f"work. {_where} carries that promise in every language, and "
+                f"{_lg} must say {OWNERSHIP[_lg]!r}")
+
+
 # 50. one published address ------------------------------------------------
 # shell.EMAIL is a single constant and every page derives from it, so the 64
 # pages were never the risk. The prose was. Changing hello@ to info@ left the

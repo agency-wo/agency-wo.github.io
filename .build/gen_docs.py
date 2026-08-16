@@ -369,7 +369,12 @@ def audit_section(rec, lang):
 # ---------------------------------------------------------------- schema ----
 
 def graph(*nodes):
-    return json.dumps({"@context": "https://schema.org", "@graph": list(nodes)},
+    # None is dropped rather than serialised. faq_node() returns it for a page
+    # with no FAQ, so a caller lists the node unconditionally and a page that
+    # has no questions emits no node at all -- instead of a null in the @graph,
+    # which is not a schema.org anything and which every validator flags.
+    return json.dumps({"@context": "https://schema.org",
+                       "@graph": [n for n in nodes if n is not None]},
                       indent=2, ensure_ascii=False)
 
 
@@ -385,15 +390,36 @@ def crumb_node(url, name, lang):
                 {"@type": "ListItem", "position": 2, "name": name, "item": url}]}
 
 
+def faq_node(url, rec, lang):
+    """The FAQPage, DERIVED from the visible answers rather than retyped.
+
+    /systems/ had this inline and /start/ then grew an FAQ of its own, which is
+    the moment a second copy of the same six lines usually appears. It was one
+    copy for a reason worth keeping: the node used to be typed underneath the
+    prose and the two had drifted in three places -- "two people" against
+    "2 people", a missing "above", and "Most are not" against "Most aren't".
+    Two of those broke rules 11 and 12 in the copy a machine reads while the
+    copy a person reads obeyed them.
+
+    Returns None when the page has no FAQ, so a caller can pass it to graph()
+    unconditionally and pages without one emit no empty node.
+
+    inLanguage sits here rather than on whatever node sits above it, for the
+    reason gen_pages.py gives at the same spot: a Service is an Intangible and
+    inLanguage belongs to CreativeWork.
+    """
+    if not rec.get("faq"):
+        return None
+    return {"@type": "FAQPage", "@id": url + "#faq", "inLanguage": lang,
+            "mainEntity": [
+                {"@type": "Question", "name": flat(q, lang),
+                 "acceptedAnswer": {"@type": "Answer", "text": flat(a, lang)}}
+                for q, a in rec["faq"]]}
+
+
 def systems_ld(rec, lang):
     url = S + shell.localise(rec["url"], lang)
     sc = rec["schema"]
-    # The FAQPage is DERIVED from the visible answers, the way gen_pages.py
-    # already derives its own. It used to be a second copy typed underneath
-    # the first, and the two had drifted in three places: "two people" against
-    # "2 people", a missing "above", and "Most are not" against "Most aren't".
-    # Two of those broke rules 11 and 12 in the copy a machine reads while the
-    # copy a person reads obeyed them.
     return graph(
         {"@type": "Service", "@id": url + "#service",
          "name": sc["name"],
@@ -401,14 +427,7 @@ def systems_ld(rec, lang):
          "description": sc["description"],
          "url": url, "provider": {"@id": S + shell.localise("/", lang) + "#org"},
          "areaServed": ["AL", "IT", "Worldwide"]},
-        # inLanguage sits on the FAQPage rather than on the Service above, for
-        # the reason gen_pages.py gives at the same spot: a Service is an
-        # Intangible and inLanguage belongs to CreativeWork.
-        {"@type": "FAQPage", "@id": url + "#faq", "inLanguage": lang,
-         "mainEntity": [
-            {"@type": "Question", "name": flat(q, lang),
-             "acceptedAnswer": {"@type": "Answer", "text": flat(a, lang)}}
-            for q, a in rec["faq"]]},
+        faq_node(url, rec, lang),
         crumb_node(url, rec["nav"], lang))
 
 
@@ -440,6 +459,11 @@ def start_ld(rec, lang):
         {"@type": "ContactPage", "@id": url + "#page", "url": url,
          "name": rec["nav"], "inLanguage": lang,
          "about": {"@id": S + shell.localise("/", lang) + "#org"}},
+        # The 4 questions somebody hesitates over before writing. This is the
+        # node an AI search engine lifts when asked what it is like to hire a
+        # studio like this one, which is the service /geo/ sells and which this
+        # site had never once pointed at itself.
+        faq_node(url, rec, lang),
         crumb_node(url, rec["nav"], lang))
 
 

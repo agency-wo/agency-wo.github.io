@@ -86,7 +86,8 @@ everything checkable is checked by `verify.py`, which fails the build.
     2026. Rankings move, so it will look different when you check."
 24. **The stated page weight must be the measured page weight.** The gate
     compares any "under N KB" claim against the real total.
-25. **No minimum budgets published.**
+25. **No minimum budgets published.** `/start/`'s FAQ may say how a price is
+    arrived at and when the client sees it. It may never name a floor.
 26. **Say what we do:** on-page and off-page SEO, and Google Business
     Profile. All three are gated as present on `/seo/`.
 
@@ -147,6 +148,24 @@ everything checkable is checked by `verify.py`, which fails the build.
     the confirmation sits BEFORE the form in the source so a plain sibling
     combinator can hide it. Every form in this workspace that hands off to
     WhatsApp is dead without JS. This one is not.
+41. **The client owns the work, from day one.** The domain, the code, the
+    hosting and every account are registered in the client's name, not the
+    studio's. Stated twice per language -- the homepage's `.open` block and the
+    `/start/` FAQ -- and check 52 fails the build if either drops it.
+
+    This is the only claim on the site that asserts something about the world
+    rather than about the site, so it is the only one a rebuild cannot verify.
+    **Before it ships for a new client, the registrations have to actually be
+    in their name.** If a setup does not match, moving the registration is the
+    repair. Softening the sentence is not.
+42. **Never a superlative the studio cannot measure.** "Fastest growing",
+    "best in Albania", "#1", and the Italian and Albanian versions of each.
+    The reason is commercial and not delicate: this site publishes an 8.4
+    average position and a 1% click rate on purpose, and one unverifiable
+    boast standing next to them tells a reader that the checkable numbers were
+    a pose too. Being new is answered with counted, dated facts instead -- how
+    many businesses, from when, with the export attached -- which is the same
+    claim a superlative gestures at, except a reader can finish checking it.
 
 **Never loosen a check to make it pass.** A gate that can be talked into
 passing is decoration.
