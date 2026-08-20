@@ -244,13 +244,26 @@ def blog_index(posts, idx, lang):
     c = shell.ch(lang)
     url = S + shell.localise(BLOG, lang)
     home = S + shell.localise("/", lang)
-    # blogPost already names every post, and says nothing about their ORDER.
-    # Two sections, because 17 identical rows is a scroll rather than a page and
-    # the reader arrives asking whether there is anything here about HIS trade.
-    # Split on posts.INDUSTRY, which is slugs, so the order inside each half is
-    # still the newest-first the whole list was in.
-    trade = [p for p in posts if p["slug"] in INDUSTRY]
-    work = [p for p in posts if p["slug"] not in INDUSTRY]
+    # GROUPED BY SERVICE, in the order the footer lists them, because a post
+    # about AI search and the page that sells AI search should be one click
+    # apart and should share a name. Every post carries a service tuple and all
+    # 17 map onto exactly one, so this is the content model's own grouping and
+    # not a taxonomy invented for the index.
+    #
+    # The names are the POSTS' own service labels, which are now identical to
+    # chrome.FOOT_LABELS[0] in all 3 languages. They were not: 2 Italian and 2
+    # Albanian posts called Meta ads "Annunci Meta" and "Reklamat Meta" while
+    # every other page called it "Meta ads", which glossary.KEEP_ENGLISH says
+    # it stays. Nothing caught it, because KEEP_ENGLISH is an exemption list
+    # for check 35 rather than an assertion that those terms survive.
+    SERVICE_ORDER = ["/seo/", "/geo/", "/web-design/", "/meta-ads/", "/systems/"]
+    by_service = {}
+    for post in posts:
+        svc = post.get("service")
+        if not svc:
+            continue
+        by_service.setdefault(svc[0], {"name": svc[1], "posts": []})["posts"].append(post)
+    service_groups = [(u, by_service[u]) for u in SERVICE_ORDER if u in by_service]
 
     # The ItemList enumerates the page AS DISPLAYED, so it is built from the
     # 2 groups in the order they are rendered rather than from the flat list.
@@ -261,7 +274,7 @@ def blog_index(posts, idx, lang):
     # ranking and not a date sort, and Unordered is what schema.org has for
     # that. Claiming a sort the page does not perform is the kind of thing
     # nothing would ever have failed on.
-    ordered = trade + work
+    ordered = [q for _u, g in service_groups for q in g["posts"]]
     items = [{"@type": "ListItem", "position": i,
               "url": S + shell.localise(post_url(p), lang),
               "name": p["title"],
@@ -292,17 +305,30 @@ def blog_index(posts, idx, lang):
             "jsonld": json.dumps({"@context": "https://schema.org", "@graph": graph},
                                  indent=2, ensure_ascii=False)}
 
+    def key_for(u):
+        """/web-design/ -> web-design. The filter's id, and its data-topic."""
+        return u.strip("/") or "all"
+
     # 5/7, the same proportion the service doors use: the name is short and the
     # sell is the long half. Without it the list was a narrow text column with
     # the entire right half of the page blank above 1000px. One proportion used
     # twice is a system; a second proportion invented here would not be.
-    def row(p):
+    def row(p, svc_url):
         href = shell.localise(post_url(p), lang)
-        return f'''          <li>
+        # A slug is the same in all 3 languages, so INDUSTRY -- which is English
+        # slugs -- decides trade membership on every localised page without a
+        # second list to keep in step.
+        trade = p["slug"] in INDUSTRY
+        # The topic is gone from this line: it is the heading of the section
+        # this row sits in, and printing it again on every row was the same
+        # word 6 times down one screen. The trade marker replaces it, and earns
+        # its place by saying something the heading does not.
+        mark = f' <span class="row-trade">{idx["filter_trade"]}</span>' if trade else ""
+        return f'''          <li data-topic="{key_for(svc_url)}"{' data-trade' if trade else ''}>
             <div class="post-row">
               <div>
                 <h2 class="case-name"><a href="{href}">{p["title"]}</a></h2>
-                <p class="case-where">{p["topic"]} {shell.DOT} {l10n.human(p["date"], lang)}</p>
+                <p class="case-where">{l10n.human(p["date"], lang)}{mark}</p>
               </div>
               <div>
                 <p class="case-said">{shell.localise_html(p["summary"], lang)}</p>
@@ -311,19 +337,69 @@ def blog_index(posts, idx, lang):
             </div>
           </li>'''
 
-    def section(heading, group):
-        # The count is in the heading rather than under it: it tells the reader
-        # how much is here before he starts scrolling, which is the one thing
-        # the old flat list would not say.
-        return f'''      <section class="post-group">
-        <h2 class="group-h">{heading} <span class="group-n">{len(group)}</span></h2>
+    def section(svc_url, group):
+        # THE HEADING LINKS TO THE SERVICE. Somebody who has just read why AI
+        # search matters is then one click from the page that sells it, which
+        # is the whole argument for grouping by service rather than by date or
+        # by trade.
+        #
+        # The count sits in the heading rather than under it: it says how much
+        # is here before the reader starts scrolling.
+        k = key_for(svc_url)
+        rows = NL.join(row(p, svc_url) for p in group["posts"])
+        return f'''      <section class="post-group" id="topic-{k}" data-group="{k}">
+        <h2 class="group-h"><a href="{shell.localise(svc_url, lang)}">{group["name"]}</a> <span class="group-n">{len(group["posts"])}</span></h2>
         <ul class="cases" data-reveal-group>
-{NL.join(row(p) for p in group)}
+{rows}
         </ul>
       </section>'''
 
-    groups = NL + NL.join((section(idx["group_trade"], trade),
-                           section(idx["group_work"], work))) + NL
+    # -- the filter bar ----------------------------------------------------
+    # PILLS ARE ANCHORS, NOT BUTTONS, and that is the whole no-JS story: with
+    # scripting off they jump to the group they name, which is a page that
+    # still works rather than 7 dead controls. js/main.js upgrades them into
+    # filters in place.
+    #
+    # class="pill" and never "btn": check 32 requires every .btn href to start
+    # with "/", and these are fragments.
+    trade_n = len([p for p in posts if p["slug"] in INDUSTRY])
+
+    def pill(key, label, count, on=False, hide=False, anchor=None):
+        # hide=True ships the pill with the hidden attribute for js/main.js to
+        # remove. Only "Your trade" needs it: the trade posts are spread across
+        # all 5 sections, so unlike the service pills there is no anchor it
+        # could usefully jump to, and a control that does nothing is worse than
+        # one that is not there.
+        return (f'''          <a class="pill{' is-on' if on else ''}" href="#topic-{anchor or key}"'''
+                f'''{' hidden' if hide else ''} data-filter="{key}"'''
+                f''' aria-pressed="{'true' if on else 'false'}">{label}'''
+                f''' <span class="pill-n">{count}</span></a>''')
+
+    pills = [pill("all", idx["filter_all"], len(posts), on=True),
+             # anchor="all" because there is no #topic-trade to point at: the
+             # trade posts live in all 5 sections. The href is never followed
+             # anyway -- with JS the click is intercepted, without it the pill
+             # is hidden -- but it still has to RESOLVE, because a dangling
+             # fragment is a dangling fragment whether or not anybody can see
+             # the link, and the gate is right to say so.
+             pill("trade", idx["filter_trade"], trade_n, hide=True, anchor="all")]
+    pills += [pill(key_for(u), g["name"], len(g["posts"])) for u, g in service_groups]
+
+    # The search input ships HIDDEN and js/main.js reveals it. A search box that
+    # cannot search is worse than no search box, and without JavaScript this
+    # one cannot.
+    filter_bar = f'''      <div class="blog-filter" data-blog-filter>
+        <label class="sr-only" for="blog-q">{idx["search_placeholder"]}</label>
+        <input class="blog-search" type="search" id="blog-q" hidden data-blog-search
+          placeholder="{idx["search_placeholder"]}" aria-describedby="blog-q-hint">
+        <p class="sr-only" id="blog-q-hint">{idx["search_hint"]}</p>
+        <nav class="pills" aria-label="{idx["filter_label"]}">
+{NL.join(pills)}
+        </nav>
+        <p class="blog-empty" hidden data-blog-empty>{idx["search_empty"]}</p>
+      </div>'''
+
+    groups = NL + NL.join(section(u, g) for u, g in service_groups) + NL
 
     body = f'''
       <header class="page-head">
@@ -331,7 +407,8 @@ def blog_index(posts, idx, lang):
         <h1 class="page-title">{idx["h1"]}</h1>
         <p class="standfirst">{txt(10, idx["standfirst"], lang)}</p>
       </header>
-{groups}{shell.updated("posts", lang, 6)}
+{filter_bar}
+      <div id="topic-all" data-blog-list>{groups}      </div>{shell.updated("posts", lang, 6)}
 '''
     return (shell.head(page, lang) + shell.header(lang, BLOG) +
             '\n  <main id="main">\n    <div class="wrap">\n' + body +

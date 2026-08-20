@@ -591,9 +591,9 @@ POSTS = [
         "src": "09a5a3e5",
         "date": "2026-08-14",
         "updated": "2026-08-14",
-        "topic": "Annunci Meta",
+        "topic": "Meta ads",
         "work": "pro-affy",
-        "service": ("/meta-ads/", "Annunci Meta"),
+        "service": ("/meta-ads/", "Meta ads"),
 
         "title": "Il lavoro va a chi risponde per primo",
         "h1": "Il lavoro va a chi risponde per primo.",
@@ -654,7 +654,7 @@ POSTS = [
         ],
         "payoff": "Chiedici quanto ci ha messo la tua ultima richiesta ad "
                   "avere risposta. Se non lo sai, la risposta è quella.",
-        "related": [("/meta-ads/", "Annunci Meta"), ("/web-design/", "Siti web")],
+        "related": [("/meta-ads/", "Meta ads"), ("/web-design/", "Siti web")],
     },
     # ====================================================== INDUSTRY: WATCH ===
     {
@@ -873,7 +873,7 @@ POSTS = [
         "payoff": "Dicci come ti sono arrivati davvero gli ultimi 10 ordini, e "
                   "ti diciamo se un carrello ti sarebbe servito.",
         "related": [("/web-design/", "Siti web"),
-                    ("/meta-ads/", "Annunci Meta")],
+                    ("/meta-ads/", "Meta ads")],
     },
 
     # ==================================================== INDUSTRY: HEATING ===
@@ -944,7 +944,7 @@ POSTS = [
         "payoff": "Dicci qual è il tuo mese più vuoto, e ti diciamo cosa "
                   "conviene avere finito prima che arrivi il freddo.",
         "related": [("/seo/", "SEO e ricerca locale"),
-                    ("/meta-ads/", "Annunci Meta")],
+                    ("/meta-ads/", "Meta ads")],
     },
     # ================================================ INDUSTRY: RESTAURANTS ===
     {
@@ -1317,9 +1317,9 @@ POSTS = [
         "src": "d61623a0",
         "date": "2026-08-14",
         "updated": "2026-08-14",
-        "topic": "Annunci Meta",
+        "topic": "Meta ads",
         "work": None,
-        "service": ("/meta-ads/", "Annunci Meta"),
+        "service": ("/meta-ads/", "Meta ads"),
 
         "title": "Il tuo marketing è per chi vende",
         "h1": "Il portale ha già i compratori. Tu stai gareggiando per chi "
@@ -1380,7 +1380,7 @@ POSTS = [
         ],
         "payoff": "Dicci da dove sono arrivati i tuoi ultimi 3 incarichi, e ti "
                   "diciamo se il portale c'entrava qualcosa.",
-        "related": [("/meta-ads/", "Annunci Meta"),
+        "related": [("/meta-ads/", "Meta ads"),
                     ("/web-design/", "Siti web")],
     },
 ]
@@ -1388,12 +1388,25 @@ POSTS = [
 # /blog/, the index over those records. The soft wraps are placed for this text
 # and not copied from the English.
 BLOG_INDEX = {
-    "src": "50462d9f",
+    "src": "f4e4a9e8",
     # "Articoli" is what chrome_it.NAV[2] and CRUMB_WRITING already call this
     # section, so the tab, the crumb and the nav say one word.
     "title": "Blog",
     "group_trade": "Trova il tuo mestiere",
     "group_work": "Guarda cosa abbiamo costruito",
+    # -- the filter bar -----------------------------------------------------
+    # The five service pills are NOT here: they come from
+    # chrome_it.FOOT_LABELS[0], so the blog and the footer name a service
+    # identically.
+    "filter_label": "Filtra per argomento",
+    "filter_all": "Tutti",
+    # "Il tuo mestiere" and not "settore": mestiere is what an orologiaio or a
+    # parrucchiere calls the thing he does, and it is the word group_trade
+    # already uses two lines above.
+    "filter_trade": "Il tuo mestiere",
+    "search_placeholder": "Cerca negli articoli",
+    "search_hint": "Filtra l'elenco mentre scrivi.",
+    "search_empty": "Nessun risultato. Cancella la ricerca, o scegli un argomento qui sopra.",
     "description": "Quello che abbiamo imparato facendo ricerca, ricerca AI e "
                    "software su misura per piccole attività a Durazzo, "
                    "scritto in modo che tu possa verificarlo.",

@@ -457,6 +457,54 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
   font-weight: 400; color: var(--slate); letter-spacing: 0; }
 .post-group .cases > li:first-child { border-top: none; }
 
+/* -- the blog filter ------------------------------------------------------
+   The pills are ANCHORS. Without JavaScript they jump to the group they name,
+   which is why they are styled as controls but marked up as links -- and why
+   they must never take class "btn": check 32 requires every .btn href to
+   start with "/", and these are fragments.
+
+   The active pill is the only new red on the page. Five colours, one per
+   topic, would be five colours the brand does not have; the palette is four
+   and the discipline is the point. */
+.blog-filter { margin: var(--s-5) 0 var(--s-6); }
+.blog-search { width: 100%; max-width: 34ch; padding: var(--s-3) var(--s-4);
+  border: 1px solid var(--edge); border-radius: 999px; background: #fff;
+  font: inherit; font-size: var(--fs-small); color: var(--ink); }
+.blog-search::placeholder { color: var(--slate); }
+.blog-search:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px;
+  border-color: var(--ink); }
+.pills { display: flex; flex-wrap: wrap; gap: var(--s-2); margin-top: var(--s-4); }
+.pill { display: inline-flex; align-items: baseline; gap: var(--s-2);
+  padding: var(--s-2) var(--s-4); border: 1px solid var(--edge);
+  border-radius: 999px; font-size: var(--fs-small); text-decoration: none;
+  color: var(--ink); background: #fff; transition: border-color .15s, color .15s; }
+.pill:hover { border-color: var(--ink); }
+.pill.is-on { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+.pill-n { font-size: 0.8em; color: var(--slate); font-variant-numeric: tabular-nums; }
+.pill.is-on .pill-n { color: var(--edge); }
+.blog-empty { margin-top: var(--s-6); color: var(--slate); }
+
+/* Which posts are about a trade, readable in the All view rather than only
+   when the trade filter is on. Deliberately quiet: it is a tag, not a claim. */
+.row-trade { display: inline-block; margin-left: var(--s-3); padding: 0 var(--s-2);
+  border: 1px solid var(--edge); border-radius: 3px;
+  font-size: 0.8em; color: var(--slate); }
+
+/* -- density --------------------------------------------------------------
+   THIS is what made the page boring. 17 posts rendered 5,680px tall, roughly
+   334px a row and most of it empty, so the list read as eight screens of
+   nothing rather than as a body of work. The rows were never badly designed;
+   there were simply far too few of them per screen.
+
+   Scoped to the blog index (.post-group) so the client-work list, which has 4
+   entries and wants the air, is untouched. */
+.post-group .cases > li { padding-block: var(--s-5); }
+.post-group .post-row { gap: var(--s-5) var(--s-6); align-items: start; }
+.post-group .case-name { font-size: clamp(1.125rem, 1.6vw, 1.375rem); }
+.post-group .case-said { margin-top: 0; }
+.post-group .case-where { margin-top: var(--s-2); }
+.post-group + .post-group { margin-top: var(--s-8); }
+
 /* The whole row reacts, not only the title. Two links to one place in one row
    and only one of them lighting up is what made this read as a list of text
    rather than a set of doors. :has means no wrapper element and no JS.

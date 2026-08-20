@@ -601,9 +601,9 @@ POSTS = [
         "src": "09a5a3e5",
         "date": "2026-08-14",
         "updated": "2026-08-14",
-        "topic": "Reklamat Meta",
+        "topic": "Meta ads",
         "work": "pro-affy",
-        "service": ("/meta-ads/", "Reklamat Meta"),
+        "service": ("/meta-ads/", "Meta ads"),
 
         "title": "Puna i shkon atij që përgjigjet i pari",
         "h1": "Puna i shkon atij që përgjigjet i pari.",
@@ -660,7 +660,7 @@ POSTS = [
         ],
         "payoff": "Na pyet sa shpejt mori përgjigje kërkesa jote e "
                   "fundit. Nëse s'e di, ajo është përgjigjja.",
-        "related": [("/meta-ads/", "Reklamat Meta"),
+        "related": [("/meta-ads/", "Meta ads"),
                     ("/web-design/", "Faqe interneti")],
     },
     # ====================================================== INDUSTRY: WATCH ===
@@ -875,7 +875,7 @@ POSTS = [
         "payoff": "Na thuaj si të mbërritën vërtet 10 porositë e fundit, dhe "
                   "ta themi nëse një arkë do të të kishte ndihmuar.",
         "related": [("/web-design/", "Faqe interneti"),
-                    ("/meta-ads/", "Reklamat Meta")],
+                    ("/meta-ads/", "Meta ads")],
     },
 
     # ==================================================== INDUSTRY: HEATING ===
@@ -944,7 +944,7 @@ POSTS = [
         "payoff": "Na thuaj cili është muaji yt më i qetë, dhe ta themi çfarë "
                   "ia vlen ta kesh mbaruar para se të vijë i ftohti.",
         "related": [("/seo/", "SEO dhe kërkim lokal"),
-                    ("/meta-ads/", "Reklamat Meta")],
+                    ("/meta-ads/", "Meta ads")],
     },
     # ================================================ INDUSTRY: RESTAURANTS ===
     {
@@ -1308,9 +1308,9 @@ POSTS = [
         "src": "d61623a0",
         "date": "2026-08-14",
         "updated": "2026-08-14",
-        "topic": "Reklamat Meta",
+        "topic": "Meta ads",
         "work": None,
-        "service": ("/meta-ads/", "Reklamat Meta"),
+        "service": ("/meta-ads/", "Meta ads"),
 
         "title": "Marketingu yt është për ata që shesin",
         "h1": "Portali i ka tashmë blerësit. Ti po konkurron për atë që shet.",
@@ -1367,7 +1367,7 @@ POSTS = [
         ],
         "payoff": "Na thuaj nga erdhën 3 porositë e tua të fundit, dhe ta "
                   "themi nëse portali kishte ndonjë lidhje me to.",
-        "related": [("/meta-ads/", "Reklamat Meta"),
+        "related": [("/meta-ads/", "Meta ads"),
                     ("/web-design/", "Faqe interneti")],
     },
 ]
@@ -1375,12 +1375,25 @@ POSTS = [
 # /blog/, the index over those records. The soft wraps are placed for this text
 # and not copied from the English.
 BLOG_INDEX = {
-    "src": "50462d9f",
+    "src": "f4e4a9e8",
     # "Shkrime" is what chrome_sq.NAV[2] and CRUMB_WRITING already call this
     # section, so the tab, the crumb and the nav say one word.
     "title": "Blog",
     "group_trade": "Gjej zanatin tënd",
     "group_work": "Shih çfarë kemi ndërtuar",
+    # -- the filter bar -----------------------------------------------------
+    # The five service pills are NOT here: they come from
+    # chrome_sq.FOOT_LABELS[0], so the blog and the footer name a service
+    # identically.
+    "filter_label": "Filtro sipas temës",
+    "filter_all": "Të gjitha",
+    # "zanati yt" reuses group_trade's word two lines above: zanat is what a
+    # tradesman calls his trade, and switching to "sektor" mid-page would make
+    # them read as two different things.
+    "filter_trade": "Zanati yt",
+    "search_placeholder": "Kërko në artikuj",
+    "search_hint": "Filtron listën ndërsa shkruan.",
+    "search_empty": "Asgjë nuk përputhet. Pastro kërkimin, ose zgjidh një temë më lart.",
     "description": "Çfarë kemi mësuar duke bërë kërkim, kërkim me AI dhe "
                    "software me porosi për biznese të vogla në Durrës, "
                    "shkruar që ta kontrollosh vetë.",

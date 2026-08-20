@@ -354,4 +354,85 @@
       }
     });
   }
+
+  /* ---- the blog filter ---------------------------------------------------
+     Upgrades a page that already works. The service pills ship as anchors
+     that jump to the group they name, so with scripting off the blog is a
+     grouped list with a working table of contents rather than seven dead
+     controls. Two things CANNOT work without JS and therefore ship hidden --
+     the search box, and the "Your trade" pill, whose posts are spread across
+     all five sections with no single anchor to point at. This function is
+     what reveals them, so they appear only once they can do something.
+
+     Filtering hides individual <li> and then hides any section left with
+     nothing in it, because "Your trade" cuts across the five services. */
+  var filterBar = document.querySelector("[data-blog-filter]");
+  if (filterBar) {
+    var searchBox = filterBar.querySelector("[data-blog-search]");
+    var emptyMsg = filterBar.querySelector("[data-blog-empty]");
+    var pillEls = [].slice.call(filterBar.querySelectorAll(".pill"));
+    var listEl = document.querySelector("[data-blog-list]");
+    var sections = [].slice.call(document.querySelectorAll("[data-group]"));
+    var items = [].slice.call(document.querySelectorAll("[data-topic]"));
+    var active = "all";
+
+    /* The text the search reads is the text ON the page -- title plus summary
+       -- rather than a copy in a data- attribute, which is how the two drift
+       apart the first time somebody edits a post. */
+    items.forEach(function (li) {
+      li.__text = (li.textContent || "").toLowerCase();
+    });
+
+    /* Everything JS-only becomes visible now that JS is demonstrably running. */
+    if (searchBox) searchBox.hidden = false;
+    pillEls.forEach(function (a) { a.hidden = false; });
+
+    var apply = function () {
+      var q = searchBox ? searchBox.value.trim().toLowerCase() : "";
+      var shown = 0;
+      items.forEach(function (li) {
+        var okTopic =
+          active === "all" ||
+          (active === "trade" ? li.hasAttribute("data-trade")
+                              : li.getAttribute("data-topic") === active);
+        var okText = !q || li.__text.indexOf(q) !== -1;
+        var show = okTopic && okText;
+        li.hidden = !show;
+        if (show) shown++;
+      });
+      /* A heading over nothing reads as a bug, so a section with no visible
+         row goes too. */
+      sections.forEach(function (sec) {
+        var any = [].slice.call(sec.querySelectorAll("[data-topic]"))
+          .some(function (li) { return !li.hidden; });
+        sec.hidden = !any;
+      });
+      if (emptyMsg) emptyMsg.hidden = shown !== 0;
+      if (listEl) listEl.hidden = shown === 0;
+    };
+
+    pillEls.forEach(function (a) {
+      a.addEventListener("click", function (e) {
+        /* Only take over the click once the filter can actually answer it.
+           Without this the anchor would still be the right behaviour. */
+        e.preventDefault();
+        active = a.getAttribute("data-filter") || "all";
+        pillEls.forEach(function (o) {
+          var on = o === a;
+          o.classList.toggle("is-on", on);
+          o.setAttribute("aria-pressed", on ? "true" : "false");
+        });
+        apply();
+      });
+    });
+
+    if (searchBox) {
+      searchBox.addEventListener("input", apply);
+      /* type=search renders a clear button; it fires input, so nothing else
+         is needed for it. Escape is the keyboard equivalent. */
+      searchBox.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") { searchBox.value = ""; apply(); }
+      });
+    }
+  }
 })();

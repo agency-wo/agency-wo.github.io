@@ -1373,8 +1373,32 @@ BLOG_INDEX = {
     # The 2 sections the index splits into. Which posts land in which is
     # decided by INDUSTRY above, on slugs, so this file carries the words
     # and never the membership.
+    #
+    # group_work is kept although the index no longer renders a "what we built"
+    # section: the index now groups by SERVICE, and the five service names come
+    # from chrome.FOOT_LABELS[0] rather than being retyped here, so the blog
+    # calls a service exactly what the footer and the homepage call it.
     "group_trade": "Find your trade",
     "group_work": "See what we built",
+    # -- the filter bar -----------------------------------------------------
+    # Five of the seven pills are NOT here on purpose. They are the service
+    # names, read from chrome.FOOT_LABELS[0], because a service that is called
+    # one thing in the footer and another on the blog is two services to a
+    # reader.
+    "filter_label": "Filter by topic",
+    "filter_all": "All",
+    # Shorter than group_trade: this is a pill in a row of seven, not a heading
+    # with a whole line to itself.
+    "filter_trade": "Your trade",
+    "search_placeholder": "Search the writing",
+    # Read out when the search box takes focus. It exists because check 23
+    # requires every form control to carry an aria-describedby, and that rule
+    # is right: a search that filters as you type behaves differently from one
+    # that waits for Enter, and a screen-reader user has no other way to know.
+    "search_hint": "Filters the list as you type.",
+    # Shown when a search matches nothing. It names the way out, because a dead
+    # end with no instruction is how somebody leaves the page.
+    "search_empty": "Nothing matches that. Clear the search, or pick a topic above.",
     "description": "What we have learned doing search, AI search and custom "
                    "software for small businesses in Durres, written so you "
                    "can check it.",
