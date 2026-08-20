@@ -19,8 +19,18 @@ from urllib.parse import quote
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import i18n  # noqa: E402
 import shell  # noqa: E402
-from gen_pages import (Contents, form_source, out, slugify, strip_tags,  # noqa: E402
-                       write)
+from gen_pages import (FIGS, Contents, form_source, out, slugify,  # noqa: E402
+                       strip_tags, write)
+
+# Which of these 3 pages carries a mark, keyed by URL rather than by a field in
+# docs.py. The 4 service pages name their figure in content.py, but adding the
+# same field here would change the shape of every PAGES record in all 3
+# languages and re-stamp copy that nobody translated. The URL is already the
+# key LD uses 30 lines down, and a figure is structure, not a sentence.
+#
+# /studio/ and /start/ get nothing: one is a person talking and the other is an
+# instruction sheet, and neither has a mechanism worth drawing.
+FIG_FOR = {"/systems/": "ledger"}
 
 S = shell.SITE
 NL = chr(10)
@@ -90,6 +100,11 @@ def tokens(lang):
         "{email}": EMAIL_LINK,
         "{email_delete}": delete_link(lang),
         "{wa_href}": "https://wa.me/" + shell.WHATSAPP,
+        # The directory anchors, label and all. A directory name is a proper
+        # noun and is the same word in all 3 languages, which is the case the
+        # docstring above describes; the sentence around it is copy and each
+        # translation writes its own. The address stays in shell.DIRECTORIES.
+        "{listings}": shell.directory_links(),
     }
 
 
@@ -231,14 +246,19 @@ CTA_NOTE = {
 
 # ------------------------------------------------------------- the parts ----
 
-def faq_section(indent, rec, en_rec, lang, toc):
+def faq_section(indent, rec, en_rec, lang, toc, heading=None,
+                en_heading=None):
     """The FAQ heading is an h2 like any other and goes into the contents like
     any other. It is emitted from here rather than from the block list, which
     is exactly how a contents list built off rec["blocks"] would have missed
     it and been quietly short by one on the only page that has one."""
     pad = " " * indent
-    h = fill(rec["faq_h"], lang)
-    hid = "" if toc is None else f' id="{toc.add(en_rec["faq_h"], h)}"'
+    # A post has no faq_h of its own. Rather than 10 new headings in 3
+    # languages saying the same thing, the caller passes the chrome string
+    # the service pages already use, so the whole site asks it the same way.
+    h = fill(heading if heading is not None else rec["faq_h"], lang)
+    en_h = en_heading if en_heading is not None else en_rec["faq_h"]
+    hid = "" if toc is None else f' id="{toc.add(en_h, h)}"'
     rows = [pad + '<section class="faq" data-reveal-group>',
             f'{pad}  <h2{hid}>{h}</h2>']
     for (q, a), (en_q, _en_a) in zip(rec["faq"], en_rec["faq"]):
@@ -519,6 +539,21 @@ def render(rec, en_rec, lang):
     if upd:
         chunks.append(upd)
 
+    # After the first section, which is where these pages turn into an
+    # unbroken column. Before the SECOND h2, so it lands inside the argument
+    # rather than on top of it.
+    fig = FIG_FOR.get(rec["url"])
+    if fig:
+        h2s = [n for n, c in enumerate(chunks) if c.lstrip().startswith("<h2")]
+        assert h2s, "no h2 on " + rec["url"] + ", so there is nowhere to put the figure"
+        at = h2s[1] if len(h2s) > 1 else len(chunks)
+        chunks[at:at] = ["",
+                         '          <figure class="fig fig-body">',
+                         '            <svg viewBox="0 0 160 160" aria-hidden="true">',
+                         "              " + FIGS[fig],
+                         "            </svg>",
+                         "          </figure>"]
+
     parts += chunks
     parts.append("        </div>")
     if rec.get("aside"):
@@ -527,8 +562,7 @@ def render(rec, en_rec, lang):
     body = NL.join(parts)
 
     return (shell.head(p, lang) + shell.header(lang, rec["url"]) +
-            '\n  <main id="main">\n    <div class="wrap">\n' + body +
-            '\n    </div>\n  </main>\n' +
+            shell.main_block(body) +
             shell.footer(lang, rec["url"], fill(rec["cta"], lang),
                          fill(rec["cta_note"], lang)))
 

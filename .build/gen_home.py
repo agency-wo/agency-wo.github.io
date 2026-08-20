@@ -27,6 +27,7 @@ import shell  # noqa: E402
 # i18n.same_shape() makes the 3 lists the same length at import, so the count is
 # language-independent and the English file is where it is decided.
 import clients as client_data  # noqa: E402
+import proof_data  # noqa: E402
 from gen_pages import form_source, out, write  # noqa: E402
 
 S = shell.SITE
@@ -226,6 +227,89 @@ def audit_form(f, lang):
           </div>'''
 
 
+# -- the growth chart -------------------------------------------------------
+# Google's own screenshot is still on the page underneath this, and it is still
+# blue and purple. This is the same 90 days in the studio's colours, drawn from
+# proof_data.DAILY, which .build/trace_proof.py read back out of that very
+# screenshot and checked against the 2 published totals before writing.
+#
+# Each series is scaled onto its published total here rather than in the data
+# file, so the shape stays raw on disk and the arithmetic is visible. The
+# assert is the point: if the drawing ever stops summing to the figures printed
+# directly above it, the build stops instead of shipping a chart that disagrees
+# with its own caption.
+#
+# Axis maxima are Google's: 24 clicks and 1500 impressions. Keeping them means
+# the 2 lines sit against each other exactly as they do in the screenshot, so
+# the redraw can be held up beside the receipt and match.
+C_MAX, I_MAX = 24.0, 1500.0
+VB_W, VB_H = 1240, 396
+PL, PR, PT, PB = 60, 1120, 24, 248
+
+
+def _path(vals, vmax):
+    n = len(vals)
+    pts = []
+    for d, v in enumerate(vals):
+        x = PL + (PR - PL) * d / (n - 1)
+        y = PB - (PB - PT) * min(v, vmax) / vmax
+        pts.append("%.1f %.1f" % (x, y))
+    return "M" + " L".join(pts)
+
+
+def growth_chart(lang, stats_rows):
+    daily = proof_data.DAILY
+    cs = [c for c, _ in daily]
+    ims = [i for _, i in daily]
+    # Reconcile the RAW trace against the published totals, and do it BEFORE
+    # scaling. Asserting after the scaling proves nothing at all: normalising
+    # forces the sum onto the total, so the check can never fail however wrong
+    # the data is. This is the version with teeth. 6% is the tracer's own
+    # tolerance; it currently lands at 1.6% and 2.1%.
+    for got, want, what in ((sum(cs), proof_data.TOTAL_CLICKS, 'clicks'),
+                            (sum(ims), proof_data.TOTAL_IMPRESSIONS, 'impressions')):
+        off = abs(got - want) / want
+        assert off < 0.06, (
+            'proof_data %s sum to %.0f against a published %d, %.1f%% out. The '
+            'trace no longer reconciles, so the chart would disagree with the '
+            'figures printed above it. Rerun .build/trace_proof.py.'
+            % (what, got, want, off * 100))
+
+    kc = proof_data.TOTAL_CLICKS / sum(cs)
+    ki = proof_data.TOTAL_IMPRESSIONS / sum(ims)
+    cs = [c * kc for c in cs]
+    ims = [i * ki for i in ims]
+    assert max(cs) <= C_MAX and max(ims) <= I_MAX, "a series now exceeds Google's axis"
+
+    rows = []
+    add = rows.append
+    add(f'            <svg class="chart" viewBox="0 0 {VB_W} {VB_H}" '
+        f'aria-hidden="true" focusable="false">')
+    for v in (0, 8, 16, 24):
+        y = PB - (PB - PT) * v / C_MAX
+        add(f'              <path class="chart-grid" d="M{PL} {y:.1f} H{PR}"/>')
+        add(f'              <text class="chart-ax" x="{PL - 12}" y="{y + 6:.1f}" '
+            f'text-anchor="end">{l10n.dec(str(v), lang)}</text>')
+    for v, label in ((0, "0"), (500, "500"), (1000, "1k"), (1500, "1.5k")):
+        y = PB - (PB - PT) * v / I_MAX
+        add(f'              <text class="chart-ax" x="{PR + 12}" y="{y + 6:.1f}">'
+            f'{l10n.dec(label, lang)}</text>')
+    add(f'              <path class="chart-impr" d="{_path(ims, I_MAX)}"/>')
+    add(f'              <path class="chart-clicks" d="{_path(cs, C_MAX)}"/>')
+    # Stacked, not side by side. At 390px the viewBox is squeezed to about a
+    # quarter, the labels are scaled back up to stay readable, and 2 keys on one
+    # row then overlap each other. 2 rows need no media query and no second
+    # layout to keep working.
+    add(f'              <rect class="key-clicks" x="{PL}" y="296" width="26" height="4"/>')
+    add(f'              <text class="chart-key" x="{PL + 38}" y="304">'
+        f'{fill(stats_rows[0][1], lang)}</text>')
+    add(f'              <rect class="key-impr" x="{PL}" y="354" width="26" height="4"/>')
+    add(f'              <text class="chart-key" x="{PL + 38}" y="362">'
+        f'{fill(stats_rows[1][1], lang)}</text>')
+    add("            </svg>")
+    return "\n".join(rows)
+
+
 def render(lang):
     # One load per language rather than per slot: i18n.load() shape-checks the
     # whole record every call, and the homepage would otherwise pay for that
@@ -268,9 +352,11 @@ def render(lang):
     svc = NL.join(svc_row(*s) for s in services)
     # Same 4 figures as the Iglisi Watch page, and localised the same way, so
     # the homepage and /work/iglisi-watch/ cannot print one number 2 ways.
-    stats = NL.join(f'            <li><span class="stat-n">{l10n.dec(n, lang)}</span>'
+    stats_rows = i18n.load("home", "STATS", lang)
+    stats = NL.join(f'              <li><span class="stat-n">{l10n.dec(n, lang)}</span>'
                     f'<span class="stat-l">{fill(label, lang)}</span></li>'
-                    for n, label in i18n.load("home", "STATS", lang))
+                    for n, label in stats_rows)
+    chart = growth_chart(lang, stats_rows)
     marks = NL.join(shell.client_mark(c) for c in clients)
     ARROW = shell.ARROW
     audit = audit_form(i18n.load("home", "FORM", lang), lang)
@@ -299,31 +385,42 @@ def render(lang):
     </section>
 
     <section class="proof" aria-labelledby="proof-h">
-      <div class="wrap">
-        <div class="proof-body">
-          <p class="eyebrow">{fill(h["proof_eyebrow"], lang)}</p>
-          <h2 id="proof-h">{txt(12, h["proof_h"], lang)}</h2>
-          <p class="proof-lead">{txt(12, h["proof_lead"], lang)}</p>
+      <div class="zone zone-ink on-ink">
+        <div class="wrap">
+          <div class="proof-head">
+            <p class="eyebrow">{fill(h["proof_eyebrow"], lang)}</p>
+            <h2 id="proof-h">{txt(12, h["proof_h"], lang)}</h2>
+            <p class="proof-lead">{txt(12, h["proof_lead"], lang)}</p>
 
-          <ul class="stat-strip" data-reveal-group data-count>
+            <ul class="stat-strip" data-reveal-group data-count>
 {stats}
-          </ul>
-          <p class="stat-note">{txt(12, h["stat_note"], lang)}</p>
+            </ul>
+            <p class="stat-note">{txt(12, h["stat_note"], lang)}</p>
+            <figure class="chart-fig">
+{chart}
+            </figure>
+          </div>
+        </div>
+      </div>
 
-          <figure class="gsc" data-reveal>
-            <img src="/assets/proof/watch-al-3-months.webp" width="1440" height="592"
-              srcset="/assets/proof/watch-al-3-months-720.webp 720w, /assets/proof/watch-al-3-months.webp 1440w"
-              sizes="(min-width: 1280px) 1152px, 90vw"
-              alt="{txt(14, h["fig_alt"], lang)}"
-              loading="lazy" decoding="async">
-            <figcaption>{txt(14, h["fig_caption"], lang)}</figcaption>
-          </figure>
+      <div class="zone">
+        <div class="wrap">
+          <div class="proof-body">
+            <figure class="gsc" data-reveal>
+              <img src="/assets/proof/watch-al-3-months.webp" width="1440" height="592"
+                srcset="/assets/proof/watch-al-3-months-720.webp 720w, /assets/proof/watch-al-3-months.webp 1440w"
+                sizes="(min-width: 1280px) 1152px, 90vw"
+                alt="{txt(14, h["fig_alt"], lang)}"
+                loading="lazy" decoding="async">
+              <figcaption>{txt(14, h["fig_caption"], lang)}</figcaption>
+            </figure>
 
-          <p>{txt(12, h["proof_p1"], lang)}</p>
-          <p>{txt(12, h["proof_p2"], lang)}</p>
-          <div class="check">
-            <p>{txt(14, h["check"], lang)}</p>
-            <p class="taken">{txt(14, h["taken"], lang)}</p>
+            <p>{txt(12, h["proof_p1"], lang)}</p>
+            <p>{txt(12, h["proof_p2"], lang)}</p>
+            <div class="check">
+              <p>{txt(14, h["check"], lang)}</p>
+              <p class="taken">{txt(14, h["taken"], lang)}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -357,13 +454,15 @@ def render(lang):
     </section>
 
     <section class="open" aria-labelledby="open-h">
-      <div class="wrap">
+      <div class="zone zone-surface">
+        <div class="wrap">
         <div class="open-body" data-reveal>
           <p class="eyebrow">{fill(h["open_eyebrow"], lang)}</p>
           <h2 id="open-h">{txt(10, h["open_h"], lang)}</h2>
           <p class="open-lead">{txt(10, h["open_p1"], lang)}</p>
           <p>{txt(10, h["open_p2"], lang)}</p>
           <p class="open-own">{txt(10, h["open_p3"], lang)}</p>
+          </div>
         </div>
       </div>
     </section>

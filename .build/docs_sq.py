@@ -249,7 +249,7 @@ PAGES = [
     # --------------------------------------------------------------- STUDIO --
     {
         "url": "/studio/",
-     "src": "4cefc8ba",
+     "src": "c5316581",
         "nav": "Studio",
         "title": "Si punojmë",
         "description": "Si punojmë: prova para mendimeve, një dokument i qartë, i bërë "
@@ -325,6 +325,12 @@ PAGES = [
                   "klientët e tu, që për shumicën e klientëve tanë nuk është "
                   "anglishtja."),
 
+            ("p", "Nuk ke pse të na besosh në fjalë. {brand} është i "
+                  "listuar në" + NL +
+                  "{listings}, që e mban dikush tjetër, dhe një "
+                  "profil që nuk e" + NL +
+                  "kontrollojmë vlen më shumë se një stemë që e "
+                  "vizatuam vetë."),
             ("who", "Shkruar dhe ndërtuar nga <strong>{founder}</strong> në" + NL +
                     "Durrës. Pyetjet shkojnë te {email}."),
         ],
@@ -335,12 +341,13 @@ PAGES = [
     # ---------------------------------------------------------------- START --
     {
         "url": "/start/",
-     "src": "6cf2f99e",
+     "src": "a466b9b3",
         "nav": "Nis një projekt",
-        "title": "Nis një projekt",
-        "description": "Na thuaj çfarë ofron dhe ku do të të gjejnë. Email, WhatsApp ose "
-                       "një telefonatë e shkurtër. Të përgjigjemi me një plan dhe një "
-                       "çmim të qartë.",
+        "title": "Auditim falas",
+        "description": "Na dërgo faqen tënde dhe merr një auditim falas: çfarë po "
+                       "të kushton klientë, çfarë të rregullosh e para, dhe sa do "
+                       "të kushtonte. Ose email, WhatsApp, ose një telefonatë e "
+                       "shkurtër.",
         "og_desc": "Të përgjigjemi me një plan dhe një çmim të qartë.",
         "h1": "Bëhu i gjetshëm për atë që ofron.",
         # {turnaround} 1 of 3. Gate check 25 counts them.
@@ -464,13 +471,16 @@ PAGES = [
              "mëson" + NL +
              "mbi faqen tënde."),
             ("Sa kushton?",
-             "Varet nga faqja dhe nga çfarë duhet bërë, prandaj auditimi vjen i "
-             "pari" + NL +
-             "dhe nuk kushton asgjë. Çmimin e merr bashkë me planin, në një faqe, "
-             "para" + NL +
-             "se të nisë çdo punë. Meta ads kanë një tarifë fikse, jo një përqindje "
-             "të" + NL +
-             "asaj që shpenzon."),
+             "Katër gjëra e lëvizin: sa faqe, sa gjuhë, nëse faqja duhet "
+             "të mbajë" + NL +
+             "gjendje, rezervime ose pagesa, dhe nëse fotot dhe tekstet "
+             "ekzistojnë" + NL +
+             "tashmë. Prandaj auditimi vjen i pari dhe nuk kushton "
+             "asgjë. Çmimin e" + NL +
+             "merr bashkë me planin, në një faqe, para se të nisë çdo "
+             "punë. Meta ads" + NL +
+             "kanë një tarifë fikse, jo një përqindje të asaj që "
+             "shpenzon."),
         ],
         # "Detaje" is chrome_sq.ARIA_DETAILS.
         "aside": ("Detaje", [

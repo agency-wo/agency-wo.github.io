@@ -770,11 +770,51 @@ def trust_line(lang):
     disagree about which directories we claim. Directory names are proper nouns
     and stay as DIRECTORIES spells them; only the label in front travels.
     """
-    c = ch(lang)
-    links = ", ".join(
+    return f"{ch(lang).LISTED_ON} {directory_links()}"
+
+
+def directory_links():
+    """The directory links WITHOUT the label in front of them.
+
+    Split out so a sentence somewhere else can wrap its own words around the
+    same anchors. /studio/ does exactly that through the {listings} token, and
+    the point of the split is that the address still lives in DIRECTORIES and
+    nowhere else. A URL retyped into a copy file is a URL that goes stale in
+    one language and not the other two.
+    """
+    return ", ".join(
         f'<a href="{u}" target="_blank" rel="noopener">{n}</a>'
         for n, u in DIRECTORIES)
-    return f"{c.LISTED_ON} {links}"
+
+
+def main_block(body):
+    """<main>, with the page head on the --surface band and the rest on paper.
+
+    Seven call sites across 5 generators had assembled this by hand and byte
+    for byte identically, which is 7 places to forget when the shape changes.
+    It changed, so now there is one.
+
+    A full-bleed tone cannot live INSIDE the centred .wrap, so the head gets a
+    zone of its own and the body reopens a second .wrap under it. The zone is a
+    <div> and never a <section>: check 15 counts `<section` with a regex, caps
+    the homepage at 7 and asserts the 3 languages agree, so a zone that reached
+    for <section> would fail the gate twice over.
+
+    A body with no page head (there is at least one) comes back in a single
+    paper wrap, unchanged in everything but whitespace.
+    """
+    body = body.strip(NL)
+    close = "      </header>"
+    top = NL + '  <main id="main">' + NL
+    tail = "    </div>" + NL + "  </main>" + NL
+    if close + NL in body:
+        head, rest = body.split(close + NL, 1)
+        return (top
+                + '    <div class="zone-surface">' + NL + '    <div class="wrap">' + NL
+                + head + close + NL
+                + "    </div>" + NL + "    </div>" + NL + NL
+                + '    <div class="wrap">' + NL + rest + NL + tail)
+    return top + '    <div class="wrap">' + NL + body + NL + tail
 
 
 def footer(lang, page_url=None, cta_heading=None, cta_note=None):

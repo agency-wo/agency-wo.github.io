@@ -659,7 +659,7 @@ POSTS = [
     # ====================================================== INDUSTRY: WATCH ===
     {
         "slug": "watch-shops-and-jewellers",
-        "src": "c7fa2b9a",
+        "src": "de0fa910",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Ricerca locale",
@@ -733,6 +733,38 @@ POSTS = [
         ],
         "payoff": "Dicci quale metà del tuo negozio è ferma, le riparazioni o "
                   "le vendite, e ti diciamo quale ricerca ti manca.",
+        "faq": [
+            ("Il grosso del mio lavoro sono le riparazioni, non le "
+             "vendite. La ricerca aiuta anche lì?",
+             "Le riparazioni sono la metà più facile. Chi ha un orologio "
+             "fermo scrive il problema, la marca o il cinturino, e cerca "
+             "entro pochi chilometri. Quella ricerca la puoi vincere. "
+             "Vendere è più difficile, perché lì hai contro tutti i "
+             "venditori online d'Europa."),
+            ("Devo elencare tutte le marche di orologi che riparo?",
+             "Elenca quelle che ripari davvero, per nome, su una pagina "
+             "che una persona possa leggere. È così che ti trova chi "
+             "cerca la propria marca. Elencare marche che non sai "
+             "riparare per intercettare la ricerca significa solo che la "
+             "chiamata arriva, tu dici di no, e l'hai pagata."),
+            ("Vendo usato. Cambia qualcosa?",
+             "Aiuta. Un pezzo usato è unico, quindi la sua pagina non ha "
+             "quasi concorrenza, e la gente cerca modelli esatti. "
+             "Funziona solo se ogni pezzo ha parole sue e foto sue "
+             "invece di finire in una galleria."),
+            ("Mi serve un negozio online o basta farmi trovare?",
+             "Per la maggior parte delle botteghe che vivono di "
+             "riparazioni, basta farsi trovare. Incassare online è un "
+             "lavoro più grande e un impegno più grande, e non serve a "
+             "chi è in strada davanti a te con la chiusura rotta. "
+             "Venderai online dopo, se la domanda si rivela vera."),
+            ("Cosa determina il prezzo?",
+             "Quanti pezzi vuoi in vetrina, se incassi online, e quante "
+             "lingue. Una pagina che fa trovare una bottega è piccola. "
+             "Un catalogo di duecento pezzi con prezzi e disponibilità è "
+             "un altro lavoro, e ti diciamo quale dei due stai "
+             "chiedendo."),
+        ],
         "related": [("/seo/", "SEO e ricerca locale"),
                     ("/web-design/", "Siti web")],
     },
@@ -740,7 +772,7 @@ POSTS = [
     # ==================================================== INDUSTRY: FASHION ===
     {
         "slug": "fashion-boutiques",
-        "src": "03f81075",
+        "src": "60fd0bbc",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Siti web",
@@ -802,6 +834,35 @@ POSTS = [
         "payoff": "Mandaci la fotografia di qualcosa che hai messo in vetrina "
                   "questa settimana, e ti diciamo quanto ci vorrebbe a metterla "
                   "online.",
+        "faq": [
+            ("La merce cambia ogni settimana. Il sito sarà vecchio dopo "
+             "un mese?",
+             "Solo se è fatto in modo che per cambiarlo serviamo noi. Il "
+             "tuo è fatto perché lo cambi dal telefono, come pubblichi: "
+             "cosa è arrivato, cosa è finito, cosa è appena entrato. Un "
+             "sito che nessuno sa aggiornare comincia a mentire sulla "
+             "merce dalla seconda settimana."),
+            ("Devo vendere online o posso solo mostrare quello che ho?",
+             "Puoi solo mostrarlo, e per molte boutique è la scelta "
+             "giusta. La gente controlla se hai quel capo nella sua "
+             "taglia e poi viene. Vendere online aggiunge pagamenti, "
+             "spedizioni e resi, che sono tre lavori invece di uno."),
+            ("Instagram già mi funziona. Perché dovrei avere un sito?",
+             "Tieni Instagram, è lì che si guarda. Quello che non farà è "
+             "uscire quando qualcuno cerca un vestito nella tua città, e "
+             "non è tuo. Il sito è la parte che possiedi e la parte che "
+             "la ricerca sa leggere."),
+            ("E le taglie e i resi?",
+             "Scrivili dove il cliente li trova senza chiedere. Quasi "
+             "tutte le domande a cui rispondi nei messaggi ogni giorno "
+             "sono le stesse cinque, e una pagina che risponde ti "
+             "risparmia i messaggi e risponde anche a chi non ti avrebbe "
+             "mai scritto."),
+            ("Cosa determina il prezzo?",
+             "Quanti capi metti online, se incassi, e quante lingue. "
+             "Mostrare uno stand in una lingua è piccolo. Un negozio con "
+             "pagamenti, spedizioni e resi in tre lingue no."),
+        ],
         "related": [("/web-design/", "Siti web"),
                     ("/seo/", "SEO e ricerca locale")],
     },
@@ -809,7 +870,7 @@ POSTS = [
     # =================================================== INDUSTRY: LINGERIE ===
     {
         "slug": "lingerie-shops",
-        "src": "25970d2d",
+        "src": "b7635225",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Siti web",
@@ -872,6 +933,35 @@ POSTS = [
         ],
         "payoff": "Dicci come ti sono arrivati davvero gli ultimi 10 ordini, e "
                   "ti diciamo se un carrello ti sarebbe servito.",
+        "faq": [
+            ("Un sito non rischia di essere troppo freddo per quello che "
+             "vendo?",
+             "Può esserlo, se è costruito come un supermercato. Qui a "
+             "vendere è la conversazione, quindi il compito del sito è "
+             "portare qualcuno abbastanza vicino da iniziarla: taglie, "
+             "vestibilità, cosa tieni, e un modo semplice per chiedere. "
+             "Non una cassa per una cosa che nessuno compra senza prima "
+             "domandare."),
+            ("Devo mostrare i prezzi?",
+             "Aiuta più di quanto ti costi. Chi se ne va per un prezzo "
+             "non avrebbe comprato, e anche chi non lo trova spesso se "
+             "ne va lo stesso. Se la gamma è ampia, basta una fascia di "
+             "prezzo."),
+            ("I clienti possono chiedere in privato?",
+             "È la parte che conta. WhatsApp o un modulo breve, a cui "
+             "rispondi tu, qui vale più di qualsiasi funzione ingegnosa. "
+             "Le domande sulla vestibilità sono private e in pubblico "
+             "non le fa nessuno."),
+            ("E la discrezione?",
+             "Di' come fai. Se la confezione è anonima, scrivilo sulla "
+             "pagina. È la domanda che la gente si vergogna di fare, e "
+             "rispondere prima che venga fatta è quasi tutto il trucco."),
+            ("Cosa determina il prezzo?",
+             "Quanta parte della gamma va online, se incassi, e quante "
+             "lingue. Una pagina che mostra cosa tieni e apre una "
+             "conversazione è piccola. Un negozio completo con taglie, "
+             "disponibilità e cassa è un lavoro più grande."),
+        ],
         "related": [("/web-design/", "Siti web"),
                     ("/meta-ads/", "Meta ads")],
     },
@@ -879,7 +969,7 @@ POSTS = [
     # ==================================================== INDUSTRY: HEATING ===
     {
         "slug": "heating-and-cooling-trades",
-        "src": "959b0d23",
+        "src": "31352e7c",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Ricerca locale",
@@ -943,13 +1033,39 @@ POSTS = [
         ],
         "payoff": "Dicci qual è il tuo mese più vuoto, e ti diciamo cosa "
                   "conviene avere finito prima che arrivi il freddo.",
+        "faq": [
+            ("Il mio lavoro è stagionale. Ha senso pagare tutto l'anno?",
+             "Il lavoro è stagionale, le ricerche no, e il "
+             "posizionamento ci mette mesi ad arrivare. Se parti a "
+             "novembre l'inverno lo hai perso. Il motivo per costruirlo "
+             "nei mesi vuoti è che il primo giorno di freddo c'è già."),
+            ("Mi chiamano alle undici di sera. Come mi trovano a "
+             "quell'ora?",
+             "Dalla scheda sulla mappa, col telefono, dal letto. Quindi "
+             "i tuoi orari devono dire cosa fai davvero fuori orario, e "
+             "il numero deve essere a un tocco. Quasi tutte le urgenze "
+             "vanno a chi è trovabile, non a chi è più bravo."),
+            ("Lavoro con un furgone. Mi serve davvero un sito?",
+             "Ti serve più la scheda, e una scheda senza vetrina può "
+             "comunque coprire una zona. Un sito piccolo si ripaga "
+             "dicendo quali lavori prendi e quali no, che ti risparmia "
+             "le chiamate che non volevi."),
+            ("Devo elencare le marche che assisto?",
+             "Sì, per nome, perché l'apparecchio in casa di qualcuno ha "
+             "un nome sopra ed è quello che scriverà. Solo quelle che "
+             "assisti davvero."),
+            ("Cosa determina il prezzo?",
+             "Quante zone copri, quanti servizi elenchi, e se ti serve "
+             "più di una lingua. Far trovare un furgone in una città è "
+             "un lavoro piccolo."),
+        ],
         "related": [("/seo/", "SEO e ricerca locale"),
                     ("/meta-ads/", "Meta ads")],
     },
     # ================================================ INDUSTRY: RESTAURANTS ===
     {
         "slug": "restaurants-and-cafes",
-        "src": "0c75554f",
+        "src": "fcbc7a34",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Ricerca locale",
@@ -1010,6 +1126,37 @@ POSTS = [
         ],
         "payoff": "Mandaci il menù come lo trova un cliente, e ti diciamo "
                   "quali piatti sono invisibili.",
+        "faq": [
+            ("Mi serve un sito se ho già Instagram e la scheda Google?",
+             "Per molti locali la scheda fa quasi tutto il lavoro. "
+             "Quello che non può fare è ospitare un menu che la ricerca "
+             "sappia leggere, o una pagina per il piatto per cui ti "
+             "conoscono. Parti dalla scheda, aggiungi il menu come "
+             "testo, e solo dopo pensa al resto del sito."),
+            ("Il menu cambia ogni settimana. Devo riscrivere la pagina "
+             "ogni volta?",
+             "No. È fatto perché i piatti e i prezzi li cambi tu, dal "
+             "telefono, come modificheresti una nota. Lo facciamo noi se "
+             "preferisci, ma un menu che dipende da qualcun altro è un "
+             "menu che invecchia."),
+            ("Non posso permettermi un fotografo. È un problema?",
+             "Meno di quanto pensi. Le foto fatte nella tua cucina con "
+             "la luce del giorno battono quelle comprate, perché il "
+             "cliente sta controllando se il posto è vero. Basta un "
+             "telefono di questi anni vicino a una finestra. Un piatto "
+             "al buio sotto una lampadina gialla no."),
+            ("Essere su un'app di consegne copre tutto questo?",
+             "Copre le consegne. Non ti mette sulla mappa quando "
+             "qualcuno qui vicino cerca quel piatto, e l'app tiene il "
+             "cliente invece di passartelo. Trattala come uno scaffale "
+             "in più, non come la tua presenza."),
+            ("Cosa determina il prezzo?",
+             "Quanto è lungo il menu, in quante lingue serve, e se le "
+             "foto esistono già. Un menu di una pagina in una lingua è "
+             "un lavoro piccolo. Cento piatti in tre lingue con un "
+             "modulo di prenotazione no. Te lo diciamo prima che tu "
+             "accetti qualsiasi cosa."),
+        ],
         "related": [("/seo/", "SEO e ricerca locale"),
                     ("/web-design/", "Siti web")],
     },
@@ -1017,7 +1164,7 @@ POSTS = [
     # ===================================================== INDUSTRY: HOTELS ===
     {
         "slug": "hotels-and-guesthouses",
-        "src": "fbc2308d",
+        "src": "a3940875",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Ricerca AI",
@@ -1086,13 +1233,42 @@ POSTS = [
         ],
         "payoff": "Dicci più o meno che quota delle tue prenotazioni arriva da "
                   "un'agenzia, e ti diciamo per quali stavi pagando due volte.",
+        "faq": [
+            ("I portali di prenotazione già mi mandano ospiti. Perché "
+             "dovrei fare questo?",
+             "Perché su ognuno prendono una commissione, e un ospite che "
+             "ti trova direttamente vale di più e torna da te invece che "
+             "da loro. Tieni i portali. Qui si parla degli ospiti che "
+             "prima chiedono altrove."),
+            ("Cosa vuol dire davvero essere nominati da un'AI?",
+             "Qualcuno chiede a un assistente una pensione vicino al "
+             "mare con parcheggio e l'assistente risponde con due o tre "
+             "nomi. Che tu sia fra quelli dipende da cosa esiste su di "
+             "te in un testo che una macchina sa leggere, e da chi lo "
+             "dice oltre a te. Non dal tuo design."),
+            ("Mi serve un sistema di prenotazione mio?",
+             "Non per iniziare. Un modulo e una risposta veloce battono "
+             "un motore di prenotazione che non finisci mai di "
+             "configurare. Lo aggiungi quando le prenotazioni dirette lo "
+             "giustificano."),
+            ("Le mie recensioni sono tutte sui portali. Il mio sito "
+             "conta?",
+             "Le recensioni restano dove sono, e va bene così. Il tuo "
+             "sito è quello che un assistente legge per sapere cosa sei, "
+             "dove sei e cosa offri. I portali ti descrivono con le loro "
+             "parole. Questo è quello con le tue."),
+            ("Cosa determina il prezzo?",
+             "Quante camere descrivi, se vuoi la prenotazione diretta, e "
+             "quante lingue, che per una pensione su questa costa di "
+             "solito vuol dire almeno tre."),
+        ],
         "related": [("/geo/", "Ricerca AI"), ("/web-design/", "Siti web")],
     },
 
     # ================================================ INDUSTRY: HAIRDRESSERS ===
     {
         "slug": "hairdressers-and-salons",
-        "src": "af466dea",
+        "src": "19a141e1",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Siti web",
@@ -1158,13 +1334,40 @@ POSTS = [
         ],
         "payoff": "Dicci come prenota oggi una cliente abituale, e ti diciamo "
                   "quanto ti costa quella abitudine.",
+        "faq": [
+            ("Le mie clienti riprenotano sulla poltrona. Cosa mi darebbe "
+             "un sito?",
+             "A loro niente. È per chi si è trasferito qui il mese "
+             "scorso e sta cercando qualcuno. Se la poltrona è piena, "
+             "spendi i soldi altrove. Se il martedì hai buchi, è questo "
+             "che li riempie."),
+            ("Mi serve la prenotazione online?",
+             "Solo se la terrai aggiornata. Una pagina che mostra orari "
+             "che hai già riempito ti costa più che non averla. Molti "
+             "saloni funzionano meglio con un messaggio e una risposta "
+             "rapida."),
+            ("Devo mostrare i prezzi?",
+             "Un listino ferma la domanda a cui rispondi venti volte a "
+             "settimana, e toglie di mezzo chi si sarebbe arrabbiato "
+             "alla cassa. Dove il lavoro varia, va bene una fascia."),
+            ("Tutto il mio lavoro è su Instagram. Il sito può mostrarlo?",
+             "Non tirandolo dentro dal vivo. Questo sito non carica "
+             "niente da nessun altro, ed è parte del motivo per cui è "
+             "veloce, e un feed incorporato si rompe il giorno in cui la "
+             "piattaforma cambia qualcosa. Le tue foto migliori vengono "
+             "copiate sul sito e restano lì."),
+            ("Cosa determina il prezzo?",
+             "Quanti servizi elenchi, se vuoi la prenotazione, e quante "
+             "lingue. Un listino, le foto e una mappa sono un lavoro "
+             "piccolo."),
+        ],
         "related": [("/web-design/", "Siti web"),
                     ("/seo/", "SEO e ricerca locale")],
     },
     # ==================================================== INDUSTRY: DENTISTS ===
     {
         "slug": "dentists-and-clinics",
-        "src": "9266037f",
+        "src": "0f6786a7",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Siti web",
@@ -1234,6 +1437,34 @@ POSTS = [
         "payoff": "Cerca il tuo studio come lo cercherebbe un paziente, con il "
                   "nome che gli avrebbe dato un amico, e dicci cosa hai "
                   "trovato.",
+        "faq": [
+            ("Quasi tutti i miei pazienti arrivano su consiglio. Questo "
+             "cosa cambia?",
+             "Lo sostiene. Chi ha avuto il tuo nome ti cerca comunque "
+             "prima di telefonare, e quello che trova decide se "
+             "telefona. Metà di questo lavoro è per persone che hanno "
+             "già sentito parlare di te."),
+            ("Cosa posso dire?",
+             "Descrivi cosa fai, chi lo fa e cosa comporta. Non "
+             "promettere risultati. Le regole cambiano e la versione "
+             "prudente è anche quella che si legge come più competente, "
+             "quindi non ti costa niente."),
+            ("Mi serve la prenotazione online degli appuntamenti?",
+             "Di solito non all'inizio. Un numero chiaro, orari veri e "
+             "un modulo che arriva a una persona coprono quasi tutto. I "
+             "sistemi di prenotazione falliscono nelle cliniche dove "
+             "l'agenda vera sta al banco."),
+            ("Le recensioni contano per uno studio?",
+             "Più che in altri mestieri, perché la decisione è ansiosa. "
+             "Chiedile nel momento in cui qualcuno dice che è contento. "
+             "Rispondi con calma e in pubblico a quelle brutte, perché "
+             "la risposta la legge il paziente dopo, non chi si è "
+             "lamentato."),
+            ("Cosa determina il prezzo?",
+             "Quante prestazioni descrivi, quante persone presenti, e "
+             "quante lingue. Uno studio solo con sei prestazioni è un "
+             "lavoro piccolo."),
+        ],
         "related": [("/web-design/", "Siti web"),
                     ("/seo/", "SEO e ricerca locale")],
     },
@@ -1241,7 +1472,7 @@ POSTS = [
     # ================================================== INDUSTRY: CAR REPAIR ===
     {
         "slug": "car-repair-and-garages",
-        "src": "63038f5d",
+        "src": "aaab3992",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Ricerca locale",
@@ -1307,6 +1538,31 @@ POSTS = [
         "payoff": "Dicci le 3 lamentele che senti più spesso al telefono, "
                   "parola per parola, e ti facciamo vedere cosa sta digitando "
                   "la gente.",
+        "faq": [
+            ("Nessuno cerca il mio nome. Allora cosa cercano?",
+             "Il problema e il posto. Un rumore, una spia accesa, una "
+             "marca, e vicino a me. Quelle sono pagine che puoi vincere, "
+             "e quasi nessuno nel mestiere si prende la briga di "
+             "scriverle."),
+            ("Devo elencare tutte le marche di auto su cui lavoro?",
+             "Quelle su cui lavori davvero, per nome, perché è quello "
+             "che viene scritto. Un elenco di tutti i marchi d'Europa "
+             "non convince nessuno e ti porta chiamate che devi "
+             "rifiutare."),
+            ("Mi serve un sito o basta la scheda sulla mappa?",
+             "La scheda prima, sempre. È gratis e sul telefono sta sopra "
+             "tutto il resto. Il sito è quello che dice quali lavori "
+             "prendi, quali no, e se ci si può fidare a lasciarti "
+             "l'auto, e nella scheda per queste cose non c'è spazio."),
+            ("Posso fare preventivi online?",
+             "Puoi dire quanto costano di solito le cose e cosa le fa "
+             "cambiare. Un preventivo fermo senza aver visto l'auto è "
+             "una promessa che dovrai rompere, e romperla è peggio che "
+             "non averla fatta."),
+            ("Cosa determina il prezzo?",
+             "Quanti servizi e quante marche elenchi, e quante lingue. "
+             "Far trovare un'officina in una città è piccolo."),
+        ],
         "related": [("/seo/", "SEO e ricerca locale"),
                     ("/web-design/", "Siti web")],
     },
@@ -1314,7 +1570,7 @@ POSTS = [
     # =============================================== INDUSTRY: ESTATE AGENTS ===
     {
         "slug": "estate-agents",
-        "src": "d61623a0",
+        "src": "097de570",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Meta ads",
@@ -1380,6 +1636,29 @@ POSTS = [
         ],
         "payoff": "Dicci da dove sono arrivati i tuoi ultimi 3 incarichi, e ti "
                   "diciamo se il portale c'entrava qualcosa.",
+        "faq": [
+            ("I miei annunci sono sui portali. Perché un sito mio?",
+             "I portali ti vendono a chi compra. Il tuo sito ti vende a "
+             "chi vende, e chi vende è dove stanno i soldi. È una pagina "
+             "diversa che fa un discorso diverso."),
+            ("Devo pubblicizzare gli immobili o me stesso?",
+             "Gli immobili prendono i clic. Pubblicizzare te stesso "
+             "prende gli incarichi. Fai pure gli annunci sugli immobili "
+             "se vuoi il traffico, ma la campagna che paga è quella "
+             "rivolta a chi sta decidendo a chi affidare la casa."),
+            ("Cosa succede a un annuncio dopo che è venduto?",
+             "Tienilo, segnato come venduto. Una pagina di quello che "
+             "hai venduto è l'argomento per farsi affidare un incarico, "
+             "e cancellarla butta via l'unica prova che hai."),
+            ("Quanto in fretta devo rispondere?",
+             "Più in fretta di quanto pensi. Le richieste vanno a chi "
+             "risponde per primo molto più spesso che a chi è più bravo, "
+             "e quasi tutte arrivano fuori orario."),
+            ("Cosa determina il prezzo?",
+             "Se vuoi il sito, gli annunci o entrambi, quante lingue, e "
+             "se gli immobili escono da un sistema che già usi. Solo gli "
+             "annunci sono una messa a punto piccola."),
+        ],
         "related": [("/meta-ads/", "Meta ads"),
                     ("/web-design/", "Siti web")],
     },

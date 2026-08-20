@@ -195,24 +195,58 @@ def load(module, attr, lang):
     return tr
 
 
-def _stamp_file(module, lang):
+def _records_attr(mod):
+    """The attribute whose records are stamped INLINE, chosen by shape.
+
+    This used to be `next(a for a in dir(mod) if a.isupper())`, and dir() is
+    alphabetical, so on posts.py it picked BLOG_INDEX out of five uppercase
+    names and rewrote nothing: every line printed NOT FOUND and the file was
+    written back unchanged. A tool that reports success by saying NOT FOUND
+    fifteen times is worse than no tool.
+
+    Inline stamping is the list-of-dicts case, and those dicts carry a slug,
+    which is exactly what the regex below anchors on. So match that shape
+    rather than an alphabetical accident.
+    """
+    names = [a for a in dir(mod) if a.isupper() and not a.startswith("_")]
+    for a in names:
+        v = getattr(mod, a)
+        if not (isinstance(v, (list, tuple)) and v
+                and all(isinstance(r, dict) for r in v)):
+            continue
+        # posts and content identify a record by slug, docs by url. Both sit
+        # immediately above the "src" line the regex rewrites, so either works
+        # as the anchor and neither has to be guessed.
+        for k in ("slug", "url"):
+            if all(k in r for r in v):
+                return v, k
+    raise SystemExit(
+        "no attribute in %s holds records keyed by slug or url, so there is "
+        "nothing this can stamp inline. Names seen: %s"
+        % (mod.__name__, ", ".join(names)))
+
+
+def _stamp_file(module, lang, attr=None):
     """--stamp: rewrite every src line in a translation to the current English.
 
     Deliberately edits in place rather than printing, because a stamp somebody
     has to copy by hand is a stamp somebody gets wrong.
     """
     en = importlib.import_module(module)
-    attr = next(a for a in dir(en) if a.isupper() and not a.startswith("_"))
-    src = getattr(en, attr)
+    if attr:
+        src = getattr(en, attr)
+        idkey = next(k for k in ("slug", "url") if all(k in r for r in src))
+    else:
+        src, idkey = _records_attr(en)
     path = os.path.join(ROOT, ".build", f"{module}_{lang}.py")
     text = io.open(path, encoding="utf-8").read()
 
     recs = src.values() if isinstance(src, dict) else src
     keys = list(src) if isinstance(src, dict) else [
-        r.get("slug", i) for i, r in enumerate(src)]
+        r.get(idkey, i) for i, r in enumerate(src)]
     for key, rec in zip(keys, recs):
         want = stamp(rec)
-        pat = re.compile(r'("slug":\s*"' + re.escape(str(key)) +
+        pat = re.compile(r'("' + idkey + r'":\s*"' + re.escape(str(key)) +
                          r'",\s*\n\s*"src":\s*")[0-9a-f]{8}(")')
         text, n = pat.subn(lambda m: m.group(1) + want + m.group(2), text)
         print(f"  {module}/{key}: {want}" + ("" if n else "   NOT FOUND"))
@@ -220,7 +254,8 @@ def _stamp_file(module, lang):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) == 4 and sys.argv[1] == "--stamp":
-        _stamp_file(sys.argv[2], sys.argv[3])
+    if len(sys.argv) in (4, 5) and sys.argv[1] == "--stamp":
+        _stamp_file(sys.argv[2], sys.argv[3],
+                    sys.argv[4] if len(sys.argv) == 5 else None)
     else:
         print(__doc__)

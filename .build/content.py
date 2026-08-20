@@ -117,6 +117,18 @@ SERVICES = [
              "Yes, most of our work is. If the platform makes the necessary fixes "
              "impossible we'll say so straight away, rather than bill you monthly for "
              "work it won't let us do."),
+            ("What does this cost?",
+             "It moves with how many places you need to be found in, how "
+             "many services want a page of their own, and how many "
+             "languages. One shop, one city, one language is the small end. "
+             "Several branches in three languages is not. You get the number "
+             "after we look, not before."),
+            ("Do you only work in Durres?",
+             "Durres is where we are and where our clients are, which is why "
+             "the proof on this site comes from here. The work itself is "
+             "remote, so Tirana and the rest of Albania are the same job at "
+             "the same rate, and we do it in Italian for businesses selling "
+             "into Italy."),
         ],
         "fig": "ladder",
         "side_note": ("Honest timeline",
@@ -236,6 +248,18 @@ SERVICES = [
              "Ask it. That's genuinely the honest answer today. Try the questions your "
              "customers would ask, in the languages they'd ask them in, and write down "
              "what comes back, then do it again next month, because the answers move."),
+            ("What does this cost?",
+             "Mostly it depends on how much of your business already exists "
+             "as text a machine can read. A site with real pages and a "
+             "filled-in listing needs far less work than one where "
+             "everything lives inside photographs. The audit tells you which "
+             "one you are, and it is free."),
+            ("Does this only work in English?",
+             "No, and that is most of the point. An assistant asked in "
+             "Albanian answers from Albanian sources, and the same question "
+             "in Italian answers from Italian ones. A business that exists "
+             "in one language is invisible in the other two, which is why "
+             "everything we build ships in three."),
         ],
         "fig": "citation",
         "side_note": ("What to expect",
@@ -337,6 +361,17 @@ SERVICES = [
              "it's faster, cheaper to host and has almost nothing to hack. When a "
              "project genuinely needs accounts, payments or live stock we build that "
              "too."),
+            ("What does this cost?",
+             "The number of pages, the number of languages, and whether the "
+             "site has to hold stock, bookings or payments. Five pages in "
+             "one language is the small end. Three languages with a shop "
+             "attached is a different build. Nothing starts until the number "
+             "is in writing."),
+            ("Do you work outside Durres?",
+             "Yes. Building is remote, so Tirana, the coast and anywhere "
+             "else in Albania cost what they cost here. We also build in "
+             "Italian for businesses whose customers are in Italy, which is "
+             "a different job from translating an Albanian site."),
         ],
         "fig": "instrument",
         "side_note": ("Checkable right now",
@@ -434,6 +469,16 @@ SERVICES = [
              "No. Accounts left alone decay, and you'd be paying us to watch it happen. "
              "If you want it hands-off we'll set it up, hand it over, and tell you what "
              "to check each month."),
+            ("What does this cost?",
+             "Two numbers, kept separate on purpose. What you pay us to run "
+             "it is a flat fee, decided by how many campaigns and how many "
+             "languages. What you pay Meta is your budget, it never passes "
+             "through us, and we never take a cut of it."),
+            ("Can you run ads in Italian?",
+             "Yes. The ad, the page it lands on and the reply all have to be "
+             "in the same language, or the money leaks at whichever step "
+             "changes. That is true of Albanian and Italian equally, and it "
+             "is the most common way an ad budget is wasted here."),
         ],
         "fig": "crossover",
         "side_note": ("How we charge",

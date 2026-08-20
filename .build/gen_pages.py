@@ -53,6 +53,25 @@ FIGS = {
               <path fill="none" stroke="#5A6070" stroke-width="1.5" stroke-dasharray="4 4" d="M10 104 H150"/>
               <rect x="132" y="32" width="8" height="8" fill="#D8232A"/>''',
 
+    # /systems/ is the 5th service and the only one that never had a mark,
+    # because it is emitted from docs.py through gen_docs and was never in this
+    # table. A month sheet: ruled rows, the columns filled in, and the total
+    # already sitting there on the 1st, which is the sentence the page opens on.
+    "ledger": '''<rect x="8" y="8" width="144" height="144" fill="none" stroke="#13161C" stroke-width="2"/>
+              <path fill="none" stroke="#13161C" stroke-width="2" d="M8 36 H152"/>
+              <path fill="none" stroke="#A6ADB9" stroke-width="1" d="M8 58 H152 M8 80 H152 M8 102 H152 M8 124 H152"/>
+              <path fill="none" stroke="#A6ADB9" stroke-width="1" d="M96 36 V152"/>
+              <rect x="20" y="46" width="46" height="5" fill="#5A6070"/>
+              <rect x="20" y="68" width="62" height="5" fill="#5A6070"/>
+              <rect x="20" y="90" width="38" height="5" fill="#5A6070"/>
+              <rect x="20" y="112" width="54" height="5" fill="#5A6070"/>
+              <rect x="108" y="46" width="30" height="5" fill="#13161C"/>
+              <rect x="108" y="68" width="30" height="5" fill="#13161C"/>
+              <rect x="108" y="90" width="30" height="5" fill="#13161C"/>
+              <rect x="108" y="112" width="30" height="5" fill="#13161C"/>
+              <path fill="none" stroke="#13161C" stroke-width="2" d="M104 134 H144"/>
+              <rect x="108" y="140" width="36" height="6" fill="#D8232A"/>''',
+
     "crossover": '''<path fill="none" stroke="#5A6070" stroke-width="1.5" stroke-dasharray="5 4" d="M8 84 H56 V80 H104 V76 H152"/>
               <path fill="none" stroke="#13161C" stroke-width="2" d="M8 140 H36 V124 H62 V104 H86 V72 H110 V50 H134 V28 H152"/>
               <rect x="84" y="78" width="4" height="4" fill="#D8232A"/>''',
@@ -232,8 +251,8 @@ def render(svc, en_svc, posts, lang):
             "jsonld": jsonld(svc, lang)}
 
     parts = [shell.head(page, lang), shell.header(lang, url)]
-    a = parts.append
-    a('\n  <main id="main">\n    <div class="wrap">\n')
+    mid = []
+    a = mid.append
     a('      <header class="page-head">\n')
     a(shell.crumbs(lang, svc["nav"]) + "\n")
     a(f'        <h1 class="page-title">{svc["h1"]}</h1>\n')
@@ -247,12 +266,21 @@ def render(svc, en_svc, posts, lang):
     # contents list built from svc["sections"] alone would be short by 3 on
     # every service page and nothing would say so, which is why every one of
     # the 4 goes through toc.add() at the line that writes it.
-    for (heading, blocks), (en_heading, _en_blocks) in zip(svc["sections"],
-                                                           en_svc["sections"]):
+    # The figure used to sit at the top of the sidebar at 240px, where it was
+    # decoration. These pages run 5,300px and 5,625px with nothing in the prose
+    # column to look at, so it moves into the text after the first section and
+    # gets the room to be read. Emitted once and not twice: the same mark
+    # printed in two places reads as a mistake rather than as a rhythm.
+    for i, ((heading, blocks), (en_heading, _en_blocks)) in enumerate(
+            zip(svc["sections"], en_svc["sections"])):
         a(f'          <h2 id="{toc.add(en_heading, heading)}">{heading}</h2>\n')
         for b in blocks:
             a(f'          {shell.localise_html(b, lang)}\n')
         a("\n")
+        if i == 0:
+            a('          <figure class="fig fig-body">\n')
+            a('            <svg viewBox="0 0 160 160" aria-hidden="true">\n              ')
+            a(FIGS[svc["fig"]] + "\n            </svg>\n          </figure>\n\n")
 
     do_id = toc.add(en_c.WHAT_WE_DO, c.WHAT_WE_DO)
     a(f'          <h2 id="{do_id}">{c.WHAT_WE_DO}</h2>\n')
@@ -300,9 +328,6 @@ def render(svc, en_svc, posts, lang):
     a('        </div>\n\n')
 
     a(f'        <aside class="side" aria-label="{c.ARIA_GLANCE}">\n')
-    a('          <figure class="fig">\n')
-    a('            <svg viewBox="0 0 160 160" aria-hidden="true">\n              ')
-    a(FIGS[svc["fig"]] + "\n            </svg>\n          </figure>\n\n")
     # Above every block under it, because those 3 send a reader somewhere else
     # and this one is the only thing in the column that moves him around the
     # page he chose to be on.
@@ -332,8 +357,8 @@ def render(svc, en_svc, posts, lang):
     for href, label in svc["related"]:
         a(f'              <li><a href="{shell.localise(href, lang)}">{label}</a></li>\n')
     a('            </ul>\n          </div>\n        </aside>\n      </div>\n')
-    a('\n    </div>\n  </main>\n')
-    a(shell.footer(lang, url, svc["tail"], shell.ch(lang).SERVICE_BAND_NOTE))
+    parts.append(shell.main_block(''.join(mid)))
+    parts.append(shell.footer(lang, url, svc["tail"], shell.ch(lang).SERVICE_BAND_NOTE))
     return "".join(parts)
 
 

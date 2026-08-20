@@ -319,6 +319,12 @@ PAGES = [
                   "customers are searching in, which for most of our clients is not "
                   "English."),
 
+            ("p", "You do not have to take our word for any of this. "
+                  "{brand} is listed" + NL +
+                  "on {listings}, which somebody else runs, and a "
+                  "profile we do not" + NL +
+                  "control is worth more than a badge we drew "
+                  "ourselves."),
             ("who", "Written and built by <strong>{founder}</strong> in" + NL +
                     "Durres. Questions go to {email}."),
         ],
@@ -330,10 +336,10 @@ PAGES = [
     {
         "url": "/start/",
         "nav": "Start a project",
-        "title": "Start a project",
-        "description": "Tell us what you offer and where you want to be found. Email, "
-                       "WhatsApp or a short call. We answer with a plan and a straight "
-                       "price.",
+        "title": "Free website audit",
+        "description": "Send us your site and get a free audit back: what is "
+                       "costing you customers, what to fix first, and what it "
+                       "would cost. Or email, WhatsApp, or ask for a short call.",
         "og_desc": "We answer with a plan and a straight price.",
         "h1": "Get found for what you offer.",
         "standfirst": "Start with the free audit, or just write. It all" + NL +
@@ -455,13 +461,17 @@ PAGES = [
              "code. No account manager relaying it, and no junior practising on "
              "your site."),
             ("What does it cost?",
-             "It depends on the site and what needs doing, which is why the audit "
-             "comes" + NL +
-             "first and costs nothing. You get the price with the plan, on one "
-             "page," + NL +
-             "before any work starts. Meta ads are a flat fee rather than a cut of "
-             "what" + NL +
-             "you spend."),
+             "Four things move it: how many pages, how many languages, "
+             "whether the" + NL +
+             "site has to hold stock, bookings or payments, and whether "
+             "the" + NL +
+             "photographs and text already exist. That is why the audit "
+             "comes first" + NL +
+             "and costs nothing. You get the price with the plan, on one "
+             "page, before" + NL +
+             "any work starts. Meta ads are a flat fee rather than a cut "
+             "of what you" + NL +
+             "spend."),
         ],
         "aside": ("Details", [
             ("Studio", [

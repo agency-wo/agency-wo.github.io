@@ -27,6 +27,7 @@ import shell  # noqa: E402
 from gen_pages import Contents, out, strip_tags, write  # noqa: E402
 # Imported straight rather than through i18n.load, because it is slugs and not
 # copy: there is nothing in it for a translator to answer.
+from gen_docs import faq_node, faq_section  # noqa: E402
 from posts import INDUSTRY  # noqa: E402
 
 S = shell.SITE
@@ -49,6 +50,8 @@ def word_count(p):
     """
     text = " ".join([h for h, _b in p["body"]]
                     + [b for _h, blocks in p["body"] for b in blocks]
+                    + [q for q, _a in p.get("faq", ())]
+                    + [a for _q, a in p.get("faq", ())]
                     + [p["payoff"]])
     return len(strip_tags(text).split())
 
@@ -141,6 +144,12 @@ def post_page(p, en_p, nxt, by_slug, band, lang):
               "item": blog},
              {"@type": "ListItem", "position": 3, "name": p["title"], "item": url}]},
     ]
+    # Derived from the visible answers by the same function the service pages
+    # use, so the questions a machine reads and the ones a person reads cannot
+    # drift apart. Returns None on a post with no FAQ, which is 7 of the 17.
+    _faq = faq_node(url, p, lang)
+    if _faq:
+        graph.append(_faq)
     page = {"url": post_url(p),
             "title": p["title"] + " " + shell.DOT + " " + shell.BRAND,
             "description": p["description"],
@@ -170,6 +179,14 @@ def post_page(p, en_p, nxt, by_slug, band, lang):
         sections.append(f'          <h2 id="{hid}">{heading}</h2>')
         sections.extend("          " + shell.localise_html(b, lang) for b in blocks)
     sections = NL.join(sections)
+
+    # Added to the contents BEFORE toc.markup() runs below, or the list would be
+    # short by one on exactly the posts that grew a section. The heading is the
+    # chrome string the service pages use, so no new copy ships in 3 languages.
+    faq_html = ""
+    if p.get("faq"):
+        faq_html = NL + faq_section(10, p, en_p, lang, toc,
+                                    c.QUESTIONS, shell.ch("en").QUESTIONS) + NL
 
     contents = toc.markup(10)
     if contents:
@@ -203,7 +220,7 @@ def post_page(p, en_p, nxt, by_slug, band, lang):
       <div class="grid">
         <div class="prose">
 {sections}
-
+{faq_html}
           <p class="payoff">{shell.TICK}<span>{shell.localise_html(p["payoff"], lang)}
             <a href="{shell.localise(shell.AUDIT_URL, lang)}">{c.AUDIT_LINK}</a>.</span></p>
 {shell.updated("posts", lang)}
@@ -233,8 +250,7 @@ def post_page(p, en_p, nxt, by_slug, band, lang):
       </div>
 '''
     return (shell.head(page, lang) + shell.header(lang, post_url(p)) +
-            '\n  <main id="main">\n    <div class="wrap">\n' + body +
-            '\n    </div>\n  </main>\n' +
+            shell.main_block(body) +
             shell.footer(lang, post_url(p), band["h"], band["note"]))
 
 
@@ -411,8 +427,7 @@ def blog_index(posts, idx, lang):
       <div id="topic-all" data-blog-list>{groups}      </div>{shell.updated("posts", lang, 6)}
 '''
     return (shell.head(page, lang) + shell.header(lang, BLOG) +
-            '\n  <main id="main">\n    <div class="wrap">\n' + body +
-            '\n    </div>\n  </main>\n' +
+            shell.main_block(body) +
             shell.footer(lang, BLOG, idx["band_h"], idx["band_note"]))
 
 

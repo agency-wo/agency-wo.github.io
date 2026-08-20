@@ -27,6 +27,9 @@
   --red:      #D8232A;   /* the red in the Albanian flag */
   --red-dk:   #A81B21;   /* hover, and red text where AA demands it */
   --paper:    #F0F1F3;   /* cool press white, coated stock */
+  --surface:  #FFFFFF;   /* the same stock, inset. Names the white that was
+                            already here three times over as a literal, and
+                            is the only ground besides paper and ink */
   --slate:    #5A6070;   /* captions and metadata only, never body */
   --rule:     #BFC4CE;   /* quiet hairlines: crop marks, bylines, fine print */
   --edge:     #A6ADB9;   /* structure: section rules, screenshot frames, 2:1 */

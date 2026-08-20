@@ -666,7 +666,7 @@ POSTS = [
     # ====================================================== INDUSTRY: WATCH ===
     {
         "slug": "watch-shops-and-jewellers",
-        "src": "c7fa2b9a",
+        "src": "de0fa910",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Kërkim lokal",
@@ -738,6 +738,37 @@ POSTS = [
         ],
         "payoff": "Na thuaj cila gjysmë e dyqanit tënd rri e qetë, riparimet "
                   "apo shitjet, dhe ta themi cili kërkim po të mungon.",
+        "faq": [
+            ("Pjesa më e madhe e punës sime janë riparimet, jo shitjet. "
+             "A ndihmon kërkimi aty?",
+             "Riparimet janë gjysma më e lehtë. Kush ka një orë të "
+             "ndalur shkruan problemin, markën ose rripin, dhe kërkon "
+             "brenda pak kilometrave. Atë kërkim mund ta fitosh. Të "
+             "shesësh është më e vështirë, sepse aty ke përballë çdo "
+             "shitës online të Evropës."),
+            ("A duhet t'i rendis të gjitha markat e orëve që riparoj?",
+             "Rendit ato që riparon vërtet, me emër, në një faqe që një "
+             "njeri mund ta lexojë. Kështu të gjen kush kërkon markën e "
+             "vet. Të rendisësh marka që nuk di t'i riparosh vetëm sa do "
+             "të thotë se telefonata vjen, ti thua jo, dhe e ke paguar."),
+            ("Shes të përdorura. A ndryshon gjë?",
+             "Ndihmon. Një copë e përdorur është unike, ndaj faqja e saj "
+             "nuk ka thuajse konkurrencë, dhe njerëzit kërkojnë modele "
+             "të sakta. Funksionon vetëm nëse çdo copë merr fjalët e "
+             "veta dhe fotot e veta në vend që të përfundojë në një "
+             "galeri."),
+            ("A më duhet dyqan online, apo mjafton të gjendem?",
+             "Për shumicën e punishteve që jetojnë me riparime, mjafton "
+             "të gjendesh. Të arkëtosh online është punë më e madhe dhe "
+             "detyrim më i madh, dhe nuk i shërben atij që është në "
+             "rrugë para teje me kapësen e thyer. Do të shesësh online "
+             "më vonë, nëse kërkesa del e vërtetë."),
+            ("Çfarë e përcakton çmimin?",
+             "Sa copë do në vitrinë, nëse arkëton online, dhe sa gjuhë. "
+             "Një faqe që bën të gjendet një punishte është e vogël. Një "
+             "katalog me dyqind copë me çmime dhe gjendje është punë "
+             "tjetër, dhe të themi cilën po kërkon."),
+        ],
         "related": [("/seo/", "SEO dhe kërkim lokal"),
                     ("/web-design/", "Faqe interneti")],
     },
@@ -745,7 +776,7 @@ POSTS = [
     # ==================================================== INDUSTRY: FASHION ===
     {
         "slug": "fashion-boutiques",
-        "src": "03f81075",
+        "src": "60fd0bbc",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Faqe interneti",
@@ -807,6 +838,35 @@ POSTS = [
         ],
         "payoff": "Na dërgo fotografinë e diçkaje që e vure në vitrinë këtë "
                   "javë, dhe ta themi sa do të zgjaste ta vije online.",
+        "faq": [
+            ("Malli ndryshon çdo javë. A do të jetë faqja e vjetëruar "
+             "pas një muaji?",
+             "Vetëm nëse është ndërtuar që për ta ndryshuar të duhemi "
+             "ne. E jotja është ndërtuar që ta ndryshosh nga telefoni, "
+             "si poston: çfarë hyri, çfarë mbaroi, çfarë sapo erdhi. Një "
+             "faqe që askush nuk di ta përditësojë fillon të gënjejë për "
+             "mallin që në javën e dytë."),
+            ("A duhet të shes online apo mund vetëm të tregoj çfarë kam?",
+             "Mund vetëm ta tregosh, dhe për shumë butika është zgjedhja "
+             "e duhur. Njerëzit kontrollojnë nëse e ke atë copë në masën "
+             "e tyre dhe pastaj vijnë. Të shesësh online shton pagesat, "
+             "dërgesat dhe kthimet, që janë tre punë në vend të një."),
+            ("Instagrami tashmë më funksionon. Pse më duhet një faqe?",
+             "Mbaje Instagramin, aty shihet. Ajo që nuk do të bëjë është "
+             "të dalë kur dikush kërkon një fustan në qytetin tënd, dhe "
+             "nuk është i yti. Faqja është pjesa që e zotëron ti dhe "
+             "pjesa që kërkimi di ta lexojë."),
+            ("Po masat dhe kthimet?",
+             "Shkruaji aty ku klienti i gjen pa pyetur. Gati të gjitha "
+             "pyetjet që u përgjigjesh në mesazhe çdo ditë janë të "
+             "njëjtat pesë, dhe një faqe që u përgjigjet të kursen "
+             "mesazhet dhe u përgjigjet edhe atyre që nuk do të kishin "
+             "shkruar kurrë."),
+            ("Çfarë e përcakton çmimin?",
+             "Sa copë vendos online, nëse arkëton, dhe sa gjuhë. Të "
+             "tregosh një stendë në një gjuhë është e vogël. Një dyqan "
+             "me pagesa, dërgesa dhe kthime në tre gjuhë jo."),
+        ],
         "related": [("/web-design/", "Faqe interneti"),
                     ("/seo/", "SEO dhe kërkim lokal")],
     },
@@ -814,7 +874,7 @@ POSTS = [
     # =================================================== INDUSTRY: LINGERIE ===
     {
         "slug": "lingerie-shops",
-        "src": "25970d2d",
+        "src": "b7635225",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Faqe interneti",
@@ -874,6 +934,34 @@ POSTS = [
         ],
         "payoff": "Na thuaj si të mbërritën vërtet 10 porositë e fundit, dhe "
                   "ta themi nëse një arkë do të të kishte ndihmuar.",
+        "faq": [
+            ("A nuk rrezikon një faqe të jetë shumë e ftohtë për atë që "
+             "shes?",
+             "Mund të jetë, nëse ndërtohet si supermarket. Këtu shet "
+             "biseda, ndaj detyra e faqes është ta sjellë dikë "
+             "mjaftueshëm afër sa ta nisë: masat, si rri, çfarë mban, "
+             "dhe një mënyrë e thjeshtë për të pyetur. Jo një arkë për "
+             "diçka që askush nuk e blen pa pyetur më parë."),
+            ("A duhet t'i tregoj çmimet?",
+             "Ndihmon më shumë nga sa të kushton. Kush ikën për një çmim "
+             "nuk do të kishte blerë, dhe edhe kush nuk e gjen shpesh "
+             "ikën njësoj. Nëse gama është e gjerë, mjafton një "
+             "interval."),
+            ("A mund të pyesin klientët privatisht?",
+             "Kjo është pjesa që ka rëndësi. WhatsApp ose një formular i "
+             "shkurtër, të cilit i përgjigjesh ti, këtu vlen më shumë se "
+             "çdo veçori e zgjuar. Pyetjet se si rri janë private dhe në "
+             "publik nuk i bën askush."),
+            ("Po diskrecioni?",
+             "Thuaj si e bën. Nëse paketimi është pa shenja, shkruaje në "
+             "faqe. Është pyetja që njerëzit kanë turp ta bëjnë, dhe t'i "
+             "përgjigjesh para se të bëhet është gati gjithë zanati."),
+            ("Çfarë e përcakton çmimin?",
+             "Sa pjesë e gamës shkon online, nëse arkëton, dhe sa gjuhë. "
+             "Një faqe që tregon çfarë mban dhe hap një bisedë është e "
+             "vogël. Një dyqan i plotë me masa, gjendje dhe arkë është "
+             "punë më e madhe."),
+        ],
         "related": [("/web-design/", "Faqe interneti"),
                     ("/meta-ads/", "Meta ads")],
     },
@@ -881,7 +969,7 @@ POSTS = [
     # ==================================================== INDUSTRY: HEATING ===
     {
         "slug": "heating-and-cooling-trades",
-        "src": "959b0d23",
+        "src": "31352e7c",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Kërkim lokal",
@@ -943,13 +1031,40 @@ POSTS = [
         ],
         "payoff": "Na thuaj cili është muaji yt më i qetë, dhe ta themi çfarë "
                   "ia vlen ta kesh mbaruar para se të vijë i ftohti.",
+        "faq": [
+            ("Puna ime është sezonale. A ia vlen të paguaj gjithë vitin?",
+             "Puna është sezonale, kërkimet jo, dhe renditja do muaj të "
+             "vijë. Nëse nis në nëntor, dimrin e ke humbur. Arsyeja për "
+             "ta ndërtuar në muajt e qetë është që ditën e parë të "
+             "ftohtë të jetë tashmë aty."),
+            ("Më marrin në telefon në njëmbëdhjetë të natës. Si më "
+             "gjejnë atëherë?",
+             "Nga skeda në hartë, me telefon, nga shtrati. Ndaj oraret e "
+             "tua duhet të thonë çfarë bën vërtet jashtë orarit, dhe "
+             "numri duhet të jetë me një prekje. Gati gjithë puna "
+             "urgjente shkon tek ai që gjendet, jo tek ai që është më i "
+             "mirë."),
+            ("Punoj me një furgon. A më duhet vërtet një faqe?",
+             "Të duhet më shumë skeda, dhe një skedë pa vitrinë prapë "
+             "mund të mbulojë një zonë. Një faqe e vogël e paguan veten "
+             "duke thënë cilat punë merr dhe cilat jo, gjë që të kursen "
+             "telefonatat që nuk i doje."),
+            ("A duhet t'i rendis markat që servisoj?",
+             "Po, me emër, sepse pajisja në shtëpinë e dikujt ka një "
+             "emër sipër dhe ai është ajo që do të shkruajë. Vetëm ato "
+             "që servison vërtet."),
+            ("Çfarë e përcakton çmimin?",
+             "Sa zona mbulon, sa shërbime rendit, dhe nëse të duhet më "
+             "shumë se një gjuhë. Të bësh një furgon të gjendet në një "
+             "qytet është punë e vogël."),
+        ],
         "related": [("/seo/", "SEO dhe kërkim lokal"),
                     ("/meta-ads/", "Meta ads")],
     },
     # ================================================ INDUSTRY: RESTAURANTS ===
     {
         "slug": "restaurants-and-cafes",
-        "src": "0c75554f",
+        "src": "fcbc7a34",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Kërkim lokal",
@@ -1010,6 +1125,37 @@ POSTS = [
         ],
         "payoff": "Na dërgo menunë ashtu si e gjen klienti, dhe ta themi cilat "
                   "gjellë janë të padukshme.",
+        "faq": [
+            ("A më duhet një faqe interneti nëse kam Instagram dhe "
+             "skedën e Google?",
+             "Për shumë lokale skeda bën pothuajse gjithë punën. Ajo që "
+             "nuk mund të bëjë është të mbajë një menu që kërkimi di ta "
+             "lexojë, ose një faqe për pjatën për të cilën të njohin. "
+             "Nis nga skeda, shto menunë si tekst, dhe vetëm pastaj "
+             "mendo për pjesën tjetër."),
+            ("Menuja ndryshon çdo javë. A duhet ta rishkruaj faqen çdo "
+             "herë?",
+             "Jo. Është ndërtuar që pjatat dhe çmimet t'i ndryshosh "
+             "vetë, nga telefoni, si të ndryshoje një shënim. E bëjmë ne "
+             "nëse preferon, por një menu që varet nga dikush tjetër "
+             "është një menu që vjetërohet."),
+            ("Nuk përballoj dot një fotograf. A është problem?",
+             "Më pak nga sa mendon. Fotot e bëra në kuzhinën tënde me "
+             "dritë dite ia kalojnë atyre të blera, sepse klienti po "
+             "kontrollon nëse vendi është i vërtetë. Mjafton një telefon "
+             "i këtyre viteve pranë një dritareje. Një pjatë në errësirë "
+             "nën një llambë të verdhë jo."),
+            ("A e mbulon këtë të qenit në një aplikacion dërgesash?",
+             "Mbulon dërgesat. Nuk të vendos në hartë kur dikush këtu "
+             "afër kërkon atë pjatë, dhe aplikacioni e mban klientin në "
+             "vend që të ta japë ty. Trajtoje si një raft më shumë, jo "
+             "si praninë tënde."),
+            ("Çfarë e përcakton çmimin?",
+             "Sa e gjatë është menuja, në sa gjuhë duhet, dhe nëse fotot "
+             "ekzistojnë tashmë. Një menu njëfaqëshe në një gjuhë është "
+             "punë e vogël. Njëqind pjata në tre gjuhë me një formular "
+             "rezervimi jo. Ta themi para se të pranosh asgjë."),
+        ],
         "related": [("/seo/", "SEO dhe kërkim lokal"),
                     ("/web-design/", "Faqe interneti")],
     },
@@ -1017,7 +1163,7 @@ POSTS = [
     # ===================================================== INDUSTRY: HOTELS ===
     {
         "slug": "hotels-and-guesthouses",
-        "src": "fbc2308d",
+        "src": "a3940875",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Kërkimi me AI",
@@ -1084,6 +1230,35 @@ POSTS = [
         ],
         "payoff": "Na thuaj afërsisht sa nga rezervimet e tua vijnë përmes një "
                   "agjencie, dhe ta themi për cilat po paguaje dy herë.",
+        "faq": [
+            ("Portalet e rezervimeve tashmë më sjellin mysafirë. Pse ta "
+             "bëj këtë?",
+             "Sepse nga secili marrin një pjesë, dhe një mysafir që të "
+             "gjen drejtpërdrejt vlen më shumë dhe kthehet te ti në vend "
+             "se tek ata. Mbaji portalet. Këtu flitet për mysafirët që "
+             "pyesin diku tjetër më parë."),
+            ("Çfarë do të thotë vërtet të përmendesh nga një AI?",
+             "Dikush i kërkon një asistenti një bujtinë pranë detit me "
+             "parkim dhe asistenti përgjigjet me dy a tre emra. Nëse je "
+             "mes tyre varet nga ajo që ekziston për ty në një tekst që "
+             "një makinë di ta lexojë, dhe nga kush e thotë përveç teje. "
+             "Jo nga dizajni yt."),
+            ("A më duhet sistem rezervimi i imi?",
+             "Jo për të nisur. Një formular dhe një përgjigje e shpejtë "
+             "ia kalojnë një motori rezervimesh që nuk mbaron kurrë së "
+             "konfiguruari. E shton kur rezervimet e drejtpërdrejta e "
+             "justifikojnë."),
+            ("Vlerësimet e mia janë të gjitha te portalet. A ka rëndësi "
+             "faqja ime?",
+             "Vlerësimet mbeten aty ku janë, dhe kjo është në rregull. "
+             "Faqja jote është ajo që një asistent lexon për të ditur "
+             "çfarë je, ku je dhe çfarë ofron. Portalet të përshkruajnë "
+             "me fjalët e tyre. Kjo është ajo me fjalët e tua."),
+            ("Çfarë e përcakton çmimin?",
+             "Sa dhoma përshkruan, nëse do rezervim të drejtpërdrejtë, "
+             "dhe sa gjuhë, që për një bujtinë në këtë bregdet zakonisht "
+             "do të thotë të paktën tre."),
+        ],
         "related": [("/geo/", "Kërkimi me AI"),
                     ("/web-design/", "Faqe interneti")],
     },
@@ -1091,7 +1266,7 @@ POSTS = [
     # ================================================ INDUSTRY: HAIRDRESSERS ===
     {
         "slug": "hairdressers-and-salons",
-        "src": "af466dea",
+        "src": "19a141e1",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Faqe interneti",
@@ -1155,13 +1330,41 @@ POSTS = [
         ],
         "payoff": "Na thuaj si rezervon sot një kliente e rregullt, dhe ta "
                   "themi sa po të kushton ajo mënyrë.",
+        "faq": [
+            ("Klientet e mia rezervojnë sërish në karrige. Çfarë do të "
+             "më jepte një faqe?",
+             "Atyre asgjë. Është për ata që u zhvendosën këtu muajin e "
+             "kaluar dhe po kërkojnë dikë. Nëse karrigia është plot, "
+             "shpenzoji paratë diku tjetër. Nëse të martën ke boshllëqe, "
+             "kjo është ajo që i mbush."),
+            ("A më duhet rezervimi online?",
+             "Vetëm nëse do ta mbash të përditësuar. Një faqe që tregon "
+             "orare që i ke mbushur tashmë të kushton më shumë se të mos "
+             "e kesh fare. Shumë salone punojnë më mirë me një mesazh "
+             "dhe një përgjigje të shpejtë."),
+            ("A duhet t'i tregoj çmimet?",
+             "Një listë çmimesh ndal pyetjen së cilës i përgjigjesh "
+             "njëzet herë në javë, dhe heq nga mesi atë që do të "
+             "mërzitej te arka. Aty ku puna ndryshon, një interval është "
+             "në rregull."),
+            ("Gjithë puna ime është në Instagram. A mund ta tregojë "
+             "faqja?",
+             "Jo duke e tërhequr drejtpërdrejt. Kjo faqe nuk ngarkon "
+             "asgjë nga askush tjetër, dhe kjo është pjesë e arsyes pse "
+             "është e shpejtë, dhe një feed i integruar prishet ditën që "
+             "platforma ndryshon diçka. Fotot e tua më të mira kopjohen "
+             "në faqe dhe rrinë aty."),
+            ("Çfarë e përcakton çmimin?",
+             "Sa shërbime rendit, nëse do rezervimin, dhe sa gjuhë. Një "
+             "listë çmimesh, fotot dhe një hartë janë punë e vogël."),
+        ],
         "related": [("/web-design/", "Faqe interneti"),
                     ("/seo/", "SEO dhe kërkim lokal")],
     },
     # ==================================================== INDUSTRY: DENTISTS ===
     {
         "slug": "dentists-and-clinics",
-        "src": "9266037f",
+        "src": "0f6786a7",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Faqe interneti",
@@ -1228,6 +1431,34 @@ POSTS = [
         "payoff": "Kërkoje klinikën tënde si do ta kërkonte një pacient, me "
                   "emrin që do t'i kishte dhënë një shok, dhe na thuaj çfarë "
                   "gjete.",
+        "faq": [
+            ("Gati të gjithë pacientët e mi vijnë me rekomandim. Çfarë "
+             "ndryshon kjo?",
+             "E mbështet. Kush e ka marrë emrin tënd prapë të kërkon "
+             "para se të telefonojë, dhe ajo që gjen vendos nëse "
+             "telefonon. Gjysma e kësaj pune është për njerëz që kanë "
+             "dëgjuar tashmë për ty."),
+            ("Çfarë mund të them?",
+             "Përshkruaj çfarë bën, kush e bën dhe çfarë përfshin. Mos "
+             "premto rezultate. Rregullat ndryshojnë dhe versioni i "
+             "kujdesshëm lexohet edhe si më i zoti, ndaj kjo nuk të "
+             "kushton asgjë."),
+            ("A më duhet rezervimi online i takimeve?",
+             "Zakonisht jo në fillim. Një numër i qartë, orare të "
+             "vërteta dhe një formular që arrin te një njeri e mbulojnë "
+             "gati gjithçka. Sistemet e rezervimit dështojnë në klinikat "
+             "ku axhenda e vërtetë rri te banaku."),
+            ("A kanë rëndësi vlerësimet për një klinikë?",
+             "Më shumë se në shumicën e zanateve, sepse vendimi merret "
+             "me ankth. Kërkoji në çastin kur dikush thotë se është i "
+             "kënaqur. Përgjigju me qetësi dhe publikisht atyre të "
+             "këqijave, sepse përgjigjen e lexon pacienti tjetër, jo ai "
+             "që u ankua."),
+            ("Çfarë e përcakton çmimin?",
+             "Sa trajtime përshkruan, sa njerëz prezanton, dhe sa gjuhë. "
+             "Një klinikë e vetme me gjashtë trajtime është punë e "
+             "vogël."),
+        ],
         "related": [("/web-design/", "Faqe interneti"),
                     ("/seo/", "SEO dhe kërkim lokal")],
     },
@@ -1235,7 +1466,7 @@ POSTS = [
     # ================================================== INDUSTRY: CAR REPAIR ===
     {
         "slug": "car-repair-and-garages",
-        "src": "63038f5d",
+        "src": "aaab3992",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Kërkim lokal",
@@ -1298,6 +1529,29 @@ POSTS = [
         ],
         "payoff": "Na thuaj 3 ankesat që dëgjon më shpesh në telefon, fjalë "
                   "për fjalë, dhe të tregojmë çfarë po shkruajnë njerëzit.",
+        "faq": [
+            ("Askush nuk kërkon emrin tim. Atëherë çfarë kërkojnë?",
+             "Problemin dhe vendin. Një zhurmë, një dritë e ndezur, një "
+             "markë, dhe afër meje. Ato janë faqe që mund t'i fitosh, "
+             "dhe gati askush në zanat nuk merret t'i shkruajë."),
+            ("A duhet t'i rendis të gjitha markat e makinave që riparoj?",
+             "Ato për të cilat punon vërtet, me emër, sepse ajo është "
+             "çfarë shkruhet. Një listë me çdo stemë të Evropës nuk bind "
+             "askënd dhe të sjell telefonata që duhet t'i refuzosh."),
+            ("A më duhet një faqe apo mjafton skeda në hartë?",
+             "Skeda e para, gjithmonë. Është falas dhe në telefon rri "
+             "sipër gjithçkaje. Faqja është ajo që thotë cilat punë "
+             "merr, cilat jo, dhe nëse mund të të lihet makina, dhe në "
+             "skedë për këto nuk ka vend."),
+            ("A mund të jap oferta online?",
+             "Mund të thuash sa kushtojnë zakonisht gjërat dhe çfarë i "
+             "ndryshon. Një ofertë e prerë pa e parë makinën është një "
+             "premtim që do të duhet ta thyesh, dhe ta thyesh është më "
+             "keq se të mos e kesh dhënë."),
+            ("Çfarë e përcakton çmimin?",
+             "Sa shërbime dhe sa marka rendit, dhe sa gjuhë. Të bësh një "
+             "ofiçinë të gjendet në një qytet është e vogël."),
+        ],
         "related": [("/seo/", "SEO dhe kërkim lokal"),
                     ("/web-design/", "Faqe interneti")],
     },
@@ -1305,7 +1559,7 @@ POSTS = [
     # =============================================== INDUSTRY: ESTATE AGENTS ===
     {
         "slug": "estate-agents",
-        "src": "d61623a0",
+        "src": "097de570",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Meta ads",
@@ -1367,6 +1621,29 @@ POSTS = [
         ],
         "payoff": "Na thuaj nga erdhën 3 porositë e tua të fundit, dhe ta "
                   "themi nëse portali kishte ndonjë lidhje me to.",
+        "faq": [
+            ("Njoftimet e mia janë te portalet. Pse një faqe imja?",
+             "Portalet të shesin tek ata që blejnë. Faqja jote të shet "
+             "tek ata që shesin, dhe ata që shesin janë aty ku janë "
+             "paratë. Është faqe tjetër që bën një argument tjetër."),
+            ("A duhet të reklamoj pronat apo veten?",
+             "Pronat marrin klikimet. Të reklamosh veten merr porositë. "
+             "Bëji reklamat e pronave nëse do trafikun, por fushata që "
+             "paguan është ajo drejtuar dikujt që po vendos kujt t'ia "
+             "lërë shtëpinë."),
+            ("Çfarë ndodh me një njoftim pasi shitet?",
+             "Mbaje, i shënuar si i shitur. Një faqe me atë që ke shitur "
+             "është argumenti për të marrë porosinë tjetër, dhe ta "
+             "fshish hedh poshtë të vetmen provë që ke."),
+            ("Sa shpejt duhet të përgjigjem?",
+             "Më shpejt nga sa mendon. Kërkesat shkojnë tek ai që "
+             "përgjigjet i pari shumë më shpesh se tek ai që është më i "
+             "mirë, dhe gati të gjitha vijnë jashtë orarit."),
+            ("Çfarë e përcakton çmimin?",
+             "Nëse do faqen, reklamat apo të dyja, sa gjuhë, dhe nëse "
+             "pronat dalin nga një sistem që e përdor tashmë. Vetëm "
+             "reklamat janë një vendosje e vogël."),
+        ],
         "related": [("/meta-ads/", "Meta ads"),
                     ("/web-design/", "Faqe interneti")],
     },

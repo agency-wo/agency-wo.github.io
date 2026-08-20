@@ -34,7 +34,7 @@ SERVICES = [
     # ------------------------------------------------------------------ SEO --
     {
         "slug": "seo",
-        "src": "8b6d0e48",
+        "src": "32e1012b",
         "nav": "SEO",
         "schema_name": "Ottimizzazione per i motori di ricerca e ricerca locale",
         # 23 characters, the same as the English, and 41 with the suffix
@@ -170,6 +170,18 @@ SERVICES = [
              "Sì, quasi tutto il nostro lavoro lo è. Se la piattaforma rende "
              "impossibili le correzioni necessarie lo diciamo subito, invece "
              "di farti pagare ogni mese un lavoro che non ci lascia fare."),
+            ("Quanto costa?",
+             "Dipende da in quanti posti devi essere trovato, da quanti "
+             "servizi vogliono una pagina propria, e da quante lingue. Un "
+             "negozio, una città, una lingua è l'estremo piccolo. Più "
+             "filiali in tre lingue no. Il numero lo hai dopo che abbiamo "
+             "guardato, non prima."),
+            ("Lavorate solo a Durazzo?",
+             "Durazzo è dove siamo e dove sono i nostri clienti, per questo "
+             "le prove su questo sito vengono da qui. Il lavoro però si fa "
+             "da remoto, quindi Tirana e il resto dell'Albania sono lo "
+             "stesso lavoro allo stesso prezzo, e lo facciamo in italiano "
+             "per chi vende in Italia."),
         ],
         "fig": "ladder",
         "side_note": ("Tempi onesti",
@@ -187,7 +199,7 @@ SERVICES = [
     # ------------------------------------------------------------------ GEO --
     {
         "slug": "geo",
-        "src": "6bc55434",
+        "src": "8f2f9cdd",
         # glossary.TERMS: AI search -> ricerca AI, and glossary.BANNED fails on
         # "IA", which reads as a translation artefact to the people who buy
         # this. Matches chrome_it.FOOT_LABELS[0][1] exactly.
@@ -317,6 +329,18 @@ SERVICES = [
              "domande che farebbero i tuoi clienti, nelle lingue in cui le "
              "farebbero, e scrivi quello che torna indietro, poi rifallo il "
              "mese prossimo, perché le risposte si muovono."),
+            ("Quanto costa?",
+             "Dipende soprattutto da quanto della tua attività esiste già "
+             "come testo che una macchina sa leggere. Un sito con pagine "
+             "vere e una scheda compilata richiede molto meno lavoro di uno "
+             "dove tutto vive dentro le foto. L'audit ti dice quale dei due "
+             "sei, ed è gratuito."),
+            ("Funziona solo in inglese?",
+             "No, ed è questo il punto. Un assistente a cui chiedi in "
+             "albanese risponde da fonti albanesi, e la stessa domanda in "
+             "italiano risponde da fonti italiane. Un'attività che esiste in "
+             "una lingua è invisibile nelle altre due, ed è per questo che "
+             "tutto quello che costruiamo esce in tre."),
         ],
         "fig": "citation",
         "side_note": ("Cosa aspettarsi",
@@ -333,7 +357,7 @@ SERVICES = [
     # ---------------------------------------------------------- WEB DESIGN --
     {
         "slug": "web-design",
-        "src": "4d0474e5",
+        "src": "d3640e4e",
         "nav": "Siti web",
         "schema_name": "Progettazione e sviluppo di siti web",
         # 42 characters.
@@ -439,6 +463,18 @@ SERVICES = [
              "quasi niente da bucare. Quando un progetto ha davvero bisogno di "
              "account, pagamenti o magazzino in tempo reale, costruiamo anche "
              "quello."),
+            ("Quanto costa?",
+             "Il numero di pagine, il numero di lingue, e se il sito deve "
+             "reggere magazzino, prenotazioni o pagamenti. Cinque pagine in "
+             "una lingua è l'estremo piccolo. Tre lingue con un negozio "
+             "attaccato è un'altra cosa. Non si comincia finché il numero "
+             "non è per iscritto."),
+            ("Lavorate fuori Durazzo?",
+             "Sì. La costruzione è da remoto, quindi Tirana, la costa e "
+             "qualsiasi altro posto in Albania costano quanto costano qui. "
+             "Costruiamo anche in italiano per attività che hanno i clienti "
+             "in Italia, che è un lavoro diverso dal tradurre un sito "
+             "albanese."),
         ],
         "fig": "instrument",
         "side_note": ("Verificabile adesso",
@@ -453,7 +489,7 @@ SERVICES = [
     # ------------------------------------------------------------ META ADS --
     {
         "slug": "meta-ads",
-        "src": "6b784122",
+        "src": "4de4f264",
         # In glossary.KEEP_ENGLISH, and identical in all 3 languages.
         "nav": "Meta ads",
         "schema_name": "Pubblicità su Meta",
@@ -556,6 +592,17 @@ SERVICES = [
              "stare a guardare mentre succede. Se lo vuoi senza pensieri lo "
              "impostiamo, te lo consegniamo, e ti diciamo cosa controllare "
              "ogni mese."),
+            ("Quanto costa?",
+             "Due numeri, tenuti separati apposta. Quello che paghi a noi "
+             "per gestirle è una quota fissa, decisa da quante campagne e "
+             "quante lingue. Quello che paghi a Meta è il tuo budget, non "
+             "passa mai da noi, e non ne prendiamo mai una percentuale."),
+            ("Potete fare annunci in italiano?",
+             "Sì. L'annuncio, la pagina su cui atterra e la risposta devono "
+             "essere tutti nella stessa lingua, o i soldi si perdono al "
+             "passaggio che cambia. Vale per l'albanese e per l'italiano "
+             "allo stesso modo, ed è il modo più comune in cui qui si spreca "
+             "un budget."),
         ],
         "fig": "crossover",
         "side_note": ("Come ci facciamo pagare",

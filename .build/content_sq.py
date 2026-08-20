@@ -36,7 +36,7 @@ SERVICES = [
     # ------------------------------------------------------------------ SEO --
     {
         "slug": "seo",
-        "src": "8b6d0e48",
+        "src": "32e1012b",
         "nav": "SEO",
         "schema_name": "Optimizim për motorët e kërkimit dhe kërkim lokal",
         # 21 characters, 2 fewer than the English.
@@ -159,6 +159,17 @@ SERVICES = [
              "Po, kështu është pjesa më e madhe e punës sonë. Nëse platforma i "
              "bën të pamundura rregullimet e nevojshme, e themi menjëherë, në "
              "vend që të të faturojmë çdo muaj një punë që s'na lë ta bëjmë."),
+            ("Sa kushton?",
+             "Varet nga sa vende duhet të gjendesh, sa shërbime duan një "
+             "faqe të vetën, dhe sa gjuhë. Një dyqan, një qytet, një gjuhë "
+             "është skaji i vogël. Disa degë në tre gjuhë jo. Numrin e merr "
+             "pasi të kemi parë, jo para."),
+            ("A punoni vetëm në Durrës?",
+             "Durrësi është aty ku jemi dhe ku janë klientët tanë, prandaj "
+             "provat në këtë faqe vijnë nga këtu. Puna vetë bëhet nga "
+             "distanca, ndaj Tirana dhe pjesa tjetër e Shqipërisë janë e "
+             "njëjta punë me të njëjtin çmim, dhe e bëjmë në italisht për "
+             "biznese që shesin në Itali."),
         ],
         "fig": "ladder",
         "side_note": ("Afate të ndershme",
@@ -176,7 +187,7 @@ SERVICES = [
     # ------------------------------------------------------------------ GEO --
     {
         "slug": "geo",
-        "src": "6bc55434",
+        "src": "8f2f9cdd",
         # glossary.TERMS: AI search -> kërkimi me AI. Matches
         # chrome_sq.FOOT_LABELS[0][1] exactly.
         "nav": "Kërkimi me AI",
@@ -298,6 +309,18 @@ SERVICES = [
              "që do të bënin klientët e tu, në gjuhët në të cilat do t'i "
              "bënin, dhe shkruaj çfarë kthehet, pastaj bëje sërish muajin "
              "tjetër, sepse përgjigjet lëvizin."),
+            ("Sa kushton?",
+             "Varet kryesisht nga sa prej biznesit tënd ekziston tashmë si "
+             "tekst që një makinë di ta lexojë. Një faqe me faqe të vërteta "
+             "dhe një skedë të plotësuar kërkon shumë më pak punë se një ku "
+             "gjithçka jeton brenda fotove. Auditimi të thotë cili nga të dy "
+             "je, dhe është falas."),
+            ("A funksionon vetëm në anglisht?",
+             "Jo, dhe kjo është pjesa kryesore. Një asistent të cilit i "
+             "kërkon shqip përgjigjet nga burime shqiptare, dhe e njëjta "
+             "pyetje në italisht përgjigjet nga burime italiane. Një biznes "
+             "që ekziston në një gjuhë është i padukshëm në dy të tjerat, "
+             "prandaj gjithçka që ndërtojmë del në tre."),
         ],
         "fig": "citation",
         "side_note": ("Çfarë të presësh",
@@ -313,7 +336,7 @@ SERVICES = [
     # ---------------------------------------------------------- WEB DESIGN --
     {
         "slug": "web-design",
-        "src": "4d0474e5",
+        "src": "d3640e4e",
         "nav": "Faqe interneti",
         "schema_name": "Dizajn dhe zhvillim faqesh interneti",
         # 50 characters.
@@ -418,6 +441,16 @@ SERVICES = [
              "dhe s'ka pothuajse asgjë për t'u hakuar. Kur një projekt ka "
              "vërtet nevojë për llogari, pagesa ose stok në kohë reale, e "
              "ndërtojmë edhe atë."),
+            ("Sa kushton?",
+             "Numri i faqeve, numri i gjuhëve, dhe nëse faqja duhet të mbajë "
+             "gjendje, rezervime ose pagesa. Pesë faqe në një gjuhë është "
+             "skaji i vogël. Tre gjuhë me një dyqan bashkangjitur është "
+             "tjetër gjë. Asgjë nuk nis derisa numri të jetë me shkrim."),
+            ("A punoni jashtë Durrësit?",
+             "Po. Ndërtimi bëhet nga distanca, ndaj Tirana, bregdeti dhe çdo "
+             "vend tjetër në Shqipëri kushtojnë sa kushtojnë këtu. Ndërtojmë "
+             "edhe në italisht për biznese që i kanë klientët në Itali, gjë "
+             "që është punë tjetër nga përkthimi i një faqeje shqip."),
         ],
         "fig": "instrument",
         "side_note": ("E kontrollueshme që tani",
@@ -432,7 +465,7 @@ SERVICES = [
     # ------------------------------------------------------------ META ADS --
     {
         "slug": "meta-ads",
-        "src": "6b784122",
+        "src": "4de4f264",
         # In glossary.KEEP_ENGLISH, and identical in all 3 languages.
         "nav": "Meta ads",
         "schema_name": "Reklamim në Meta",
@@ -529,6 +562,17 @@ SERVICES = [
              "Jo. Llogaritë e lëna vetëm degradojnë, dhe do të na paguaje për "
              "ta parë duke ndodhur. Nëse e do pa u marrë vetë, e ngremë, ta "
              "dorëzojmë, dhe të themi çfarë të kontrollosh çdo muaj."),
+            ("Sa kushton?",
+             "Dy numra, të mbajtur ndarë me qëllim. Ajo që na paguan neve "
+             "për t'i administruar është një tarifë fikse, e vendosur nga sa "
+             "fushata dhe sa gjuhë. Ajo që i paguan Metas është buxheti yt, "
+             "nuk kalon kurrë nga ne, dhe nuk marrim kurrë përqindje prej "
+             "tij."),
+            ("A mund të bëni reklama në italisht?",
+             "Po. Reklama, faqja ku ulet dhe përgjigjja duhet të jenë të "
+             "gjitha në të njëjtën gjuhë, ose paratë humbasin te hapi që "
+             "ndryshon. Vlen njësoj për shqipen dhe italishten, dhe është "
+             "mënyra më e zakonshme si shpërdorohet një buxhet këtu."),
         ],
         "fig": "crossover",
         "side_note": ("Si paguhemi",

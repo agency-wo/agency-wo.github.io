@@ -258,7 +258,7 @@ PAGES = [
     # --------------------------------------------------------------- STUDIO --
     {
         "url": "/studio/",
-     "src": "4cefc8ba",
+     "src": "c5316581",
         "nav": "Studio",
         "title": "Come lavoriamo",
         "description": "Come lavoriamo: prove prima delle opinioni, un documento "
@@ -334,6 +334,11 @@ PAGES = [
                   "tuoi clienti, che per la maggior parte dei nostri clienti non è "
                   "l'inglese."),
 
+            ("p", "Non devi crederci sulla parola. {brand} è presente "
+                  "su {listings}," + NL +
+                  "che gestisce qualcun altro, e un profilo che non "
+                  "controlliamo vale" + NL +
+                  "più di un distintivo disegnato da noi."),
             ("who", "Scritto e costruito da <strong>{founder}</strong> a" + NL +
                     "Durazzo. Le domande vanno a {email}."),
         ],
@@ -344,12 +349,12 @@ PAGES = [
     # ---------------------------------------------------------------- START --
     {
         "url": "/start/",
-     "src": "6cf2f99e",
+     "src": "a466b9b3",
         "nav": "Inizia un progetto",
-        "title": "Inizia un progetto",
-        "description": "Dicci cosa offri e dove vuoi farti trovare. Email, WhatsApp o "
-                       "una telefonata breve. Ti rispondiamo con un piano e un prezzo "
-                       "chiaro.",
+        "title": "Audit gratuito del sito",
+        "description": "Mandaci il tuo sito e ricevi un audit gratuito: cosa ti "
+                       "sta costando clienti, cosa sistemare per primo, e quanto "
+                       "costerebbe. Oppure email, WhatsApp o una telefonata breve.",
         "og_desc": "Ti rispondiamo con un piano e un prezzo chiaro.",
         "h1": "Fatti trovare per quello che offri.",
         # {turnaround} 1 of 3. Gate check 25 counts them.
@@ -472,13 +477,17 @@ PAGES = [
              "che" + NL +
              "impara sul tuo sito."),
             ("Quanto costa?",
-             "Dipende dal sito e da cosa serve fare, ed è per questo che l'audit "
-             "viene" + NL +
-             "prima e non costa niente. Il prezzo arriva insieme al piano, su una "
-             "pagina," + NL +
-             "prima che inizi qualsiasi lavoro. Le Meta ads hanno una tariffa "
-             "fissa," + NL +
-             "non una percentuale di quello che spendi."),
+             "Quattro cose lo spostano: quante pagine, quante lingue, se "
+             "il sito deve" + NL +
+             "reggere magazzino, prenotazioni o pagamenti, e se le foto "
+             "e i testi" + NL +
+             "esistono già. È per questo che l'audit viene prima e non "
+             "costa niente." + NL +
+             "Il prezzo arriva insieme al piano, su una pagina, prima "
+             "che inizi" + NL +
+             "qualsiasi lavoro. Le Meta ads hanno una tariffa fissa, non "
+             "una" + NL +
+             "percentuale di quello che spendi."),
         ],
         # "Dettagli" is chrome_it.ARIA_DETAILS.
         "aside": ("Dettagli", [

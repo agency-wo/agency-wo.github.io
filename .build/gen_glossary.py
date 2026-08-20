@@ -127,8 +127,7 @@ def render(page, rows, lang):
 '''
 
     return (shell.head(p, lang) + shell.header(lang, URL) +
-            '\n  <main id="main">\n    <div class="wrap">' + body +
-            '    </div>\n  </main>\n' +
+            shell.main_block(body) +
             shell.footer(lang, URL, page["band_h"], page["band_note"]))
 
 

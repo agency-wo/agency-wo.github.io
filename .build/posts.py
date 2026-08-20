@@ -707,6 +707,38 @@ POSTS = [
         ],
         "payoff": "Tell us which half of your shop is quiet, the repairs or "
                   "the sales, and we will tell you which search is missing.",
+        "faq": [
+            ("Most of my work is repairs, not sales. Does search help "
+             "with that?",
+             "Repairs are the easier half. Somebody with a stopped watch "
+             "types the problem, the brand or the strap, and they are "
+             "looking within a few kilometres. That is a search you can "
+             "win. Selling is harder, because there you are against "
+             "every online seller in Europe."),
+            ("Should I list every watch brand I service?",
+             "List the ones you actually service, by name, on a page a "
+             "person can read. That is how somebody searching for their "
+             "own brand finds you. Listing brands you cannot service to "
+             "catch the search only means the call comes, you say no, "
+             "and you have paid for it."),
+            ("I sell secondhand. Does that change anything?",
+             "It helps. A secondhand piece is unique, so its page has "
+             "almost nothing competing with it, and people search exact "
+             "models. It only works if each piece gets its own words and "
+             "its own photographs instead of a gallery."),
+            ("Do I need an online shop, or just to be found?",
+             "For most repair led shops, just to be found. Taking "
+             "payment is a bigger build and a bigger obligation, and it "
+             "does nothing for the person standing on your street with a "
+             "broken clasp. Sell online later, if the demand turns out "
+             "to be real."),
+            ("What decides the price?",
+             "How many pieces you want listed, whether you take payment, "
+             "and how many languages. A page that gets a repair shop "
+             "found is small. A catalogue of two hundred pieces with "
+             "stock and prices is a different job, and we say which one "
+             "you are asking for."),
+        ],
         "related": [("/seo/", "SEO and local search"),
                     ("/web-design/", "Websites")],
     },
@@ -776,6 +808,37 @@ POSTS = [
         "payoff": "Send us a photograph of something you put in the window "
                   "this week, and we will tell you how long it would take to "
                   "get it online.",
+        "faq": [
+            ("My stock changes every week. Will the site be out of date "
+             "in a month?",
+             "Only if it is built so that changing it needs us. Yours is "
+             "built so you change it from a phone, the way you post: "
+             "what is in, what is gone, what just arrived. A site nobody "
+             "can update starts lying about your stock in the second "
+             "week."),
+            ("Do I have to sell online, or can I just show what I have?",
+             "You can just show it, and for a lot of boutiques that is "
+             "the right call. People check whether you have the thing in "
+             "their size, then come in. Selling online adds payment, "
+             "delivery and returns, which are three jobs rather than "
+             "one."),
+            ("Instagram already works for me. Why would I need a site?",
+             "Keep Instagram, it is where the looking happens. What it "
+             "will not do is come up when somebody searches for a dress "
+             "in your city, and it does not belong to you. The site is "
+             "the part you own and the part search can read."),
+            ("What about sizes and returns?",
+             "Write them down where a customer finds them without "
+             "asking. Most of the questions you answer in messages every "
+             "day are the same five, and a page that answers them saves "
+             "you the messages and also answers the people who would "
+             "never have messaged."),
+            ("What decides the price?",
+             "How many pieces you list, whether you take payment, and "
+             "how many languages. Showing a rail of stock in one "
+             "language is small. A shop with checkout, delivery and "
+             "returns in three languages is not."),
+        ],
         "related": [("/web-design/", "Websites"),
                     ("/seo/", "SEO and local search")],
     },
@@ -843,6 +906,34 @@ POSTS = [
         ],
         "payoff": "Tell us how your last 10 orders actually reached you, and "
                   "we will tell you whether a checkout would have helped.",
+        "faq": [
+            ("Will a website feel too impersonal for what I sell?",
+             "It can, if it is built like a supermarket. What sells here "
+             "is the conversation, so the site's job is to get somebody "
+             "far enough to start one: sizes, fit, what you stock, and "
+             "an easy way to ask. Not a checkout for something nobody "
+             "buys without a question first."),
+            ("Do I have to show prices?",
+             "It helps more than it costs you. Somebody who leaves over "
+             "a price was not going to buy, and somebody who cannot find "
+             "one often leaves as well. If your range is wide, a range "
+             "is enough."),
+            ("Can customers ask something privately?",
+             "That is the important part. WhatsApp or a short form, "
+             "answered by you, is worth more here than any clever "
+             "feature. Fit questions are private and people will not ask "
+             "them in public."),
+            ("What about discretion?",
+             "Say what you do. If your packaging is plain, write it on "
+             "the page. It is the question people are too embarrassed to "
+             "ask, and answering it before it is asked is most of the "
+             "trick."),
+            ("What decides the price?",
+             "How much of the range goes online, whether you take "
+             "payment, and how many languages. A page that shows what "
+             "you stock and opens a conversation is small. A full shop "
+             "with sizes, stock and checkout is a bigger build."),
+        ],
         "related": [("/web-design/", "Websites"),
                     ("/meta-ads/", "Meta ads")],
     },
@@ -913,6 +1004,33 @@ POSTS = [
         ],
         "payoff": "Tell us what your quietest month is, and we will tell you "
                   "what to have finished before the cold arrives.",
+        "faq": [
+            ("My work is seasonal. Is it worth paying for this all year?",
+             "The work is seasonal, the searching is not, and the "
+             "ranking takes months to arrive. Start in November and you "
+             "have missed the winter. The reason to build it in the "
+             "quiet months is that it is already there on the first cold "
+             "day."),
+            ("People ring me at eleven at night. How do they find me "
+             "then?",
+             "The map listing, on a phone, from bed. So your hours have "
+             "to say what you really do out of hours, and your number "
+             "has to be one tap. Most emergency work goes to whoever is "
+             "findable, not to whoever is best."),
+            ("I work out of a van. Do I even need a website?",
+             "You need the listing more, and a listing with no shopfront "
+             "can still serve an area. A small site earns its place by "
+             "saying which jobs you take and which you do not, which "
+             "saves you the calls you did not want."),
+            ("Should I list the brands I service?",
+             "Yes, by name, because the unit in somebody's flat has a "
+             "name on it and that is what they type. Only the ones you "
+             "really service."),
+            ("What decides the price?",
+             "How many areas you cover, how many services you list, and "
+             "whether you need more than one language. Getting one van "
+             "found in one city is a small job."),
+        ],
         "related": [("/seo/", "SEO and local search"),
                     ("/meta-ads/", "Meta ads")],
     },
@@ -980,6 +1098,38 @@ POSTS = [
         ],
         "payoff": "Send us your menu the way a customer finds it, and we will "
                   "tell you which dishes are invisible.",
+        "faq": [
+            ("Do I need a website if I already have Instagram and a "
+             "Google listing?",
+             "For a lot of places the listing does most of the work. "
+             "What it cannot do is hold a menu that search can read, or "
+             "a page for the dish you are known for. Start with the "
+             "listing, add the menu as text, and worry about the rest of "
+             "a site after that."),
+            ("The menu changes every week. Do I have to retype the page "
+             "every time?",
+             "No. It is built so you change the dishes and the prices "
+             "yourself, from a phone, the way you would edit a note. We "
+             "will do it if you would rather, but a menu that depends on "
+             "somebody else is a menu that goes stale."),
+            ("I cannot afford a photographer. Is that a problem?",
+             "Less than you think. Photographs taken in your own kitchen "
+             "in daylight beat bought ones, because the customer is "
+             "checking whether the place is real. A phone from this "
+             "decade near a window is enough. A dark plate under a "
+             "yellow bulb is not."),
+            ("Does being on a delivery app cover this?",
+             "It covers delivery. It does not put you in the map when "
+             "somebody nearby searches for the dish, and the app keeps "
+             "the customer rather than handing them to you. Treat it as "
+             "one more shelf, not as your presence."),
+            ("What decides the price of this?",
+             "How long the menu is, how many languages it needs, and "
+             "whether the photographs exist yet. A one page menu in "
+             "Albanian is a small job. A hundred dishes in three "
+             "languages with a booking form is not. You are told which "
+             "one you are before you agree to anything."),
+        ],
         "related": [("/seo/", "SEO and local search"),
                     ("/web-design/", "Websites")],
     },
@@ -1053,6 +1203,34 @@ POSTS = [
         "payoff": "Tell us roughly what share of your bookings arrive through "
                   "an agency, and we will tell you which of them you were "
                   "paying for twice.",
+        "faq": [
+            ("The booking platforms already send me guests. Why bother "
+             "with this?",
+             "Because they take a cut of every one, and a guest who "
+             "finds you directly is worth more and comes back to you "
+             "rather than to them. Keep the platforms. This is about the "
+             "guests who ask somewhere else first."),
+            ("What does being named by an AI actually mean?",
+             "Somebody asks an assistant for a guesthouse near the beach "
+             "with parking and it answers with two or three names. "
+             "Whether you are one of them depends on what exists about "
+             "you in text a machine can read, and on other people saying "
+             "it. Not on your design."),
+            ("Do I need my own booking system?",
+             "Not to start. A form and a fast reply beats a booking "
+             "engine you never finish setting up. Add one when the "
+             "direct bookings justify it."),
+            ("My reviews are all on the platforms. Does my own site "
+             "matter?",
+             "The reviews stay where they are, and that is fine. Your "
+             "site is what an assistant reads to know what you are, "
+             "where you are and what you offer. The platforms describe "
+             "you in their words. This is the one that is yours."),
+            ("What decides the price?",
+             "How many rooms you describe, whether you want direct "
+             "booking, and how many languages, which for a guesthouse on "
+             "this coast usually means at least three."),
+        ],
         "related": [("/geo/", "AI search"), ("/web-design/", "Websites")],
     },
 
@@ -1121,6 +1299,32 @@ POSTS = [
         ],
         "payoff": "Tell us how a regular books with you today, and we will "
                   "tell you what that arrangement is costing.",
+        "faq": [
+            ("My clients rebook in the chair. What would a website do?",
+             "Nothing for them. It is for the people who moved here last "
+             "month and are looking for somebody. If your chair is full, "
+             "spend the money elsewhere. If there are gaps on a Tuesday, "
+             "this is what fills them."),
+            ("Do I need online booking?",
+             "Only if you will keep it up to date. A booking page "
+             "showing slots you have already filled costs you more than "
+             "no booking page at all. Plenty of salons do better with a "
+             "message and a quick reply."),
+            ("Should I show prices?",
+             "A price list stops the question you answer twenty times a "
+             "week, and it filters out the person who was going to be "
+             "upset at the till. Ranges are fine where the work varies."),
+            ("All my work is on Instagram. Can the site show it?",
+             "Not by pulling it in live. This site loads nothing from "
+             "anybody else, which is part of why it is fast, and an "
+             "embedded feed breaks the day the platform changes "
+             "something. Your best photographs are copied onto the site "
+             "and stay there."),
+            ("What decides the price?",
+             "How many services you list, whether you want booking, and "
+             "how many languages. A price list, photographs and a map is "
+             "a small job."),
+        ],
         "related": [("/web-design/", "Websites"),
                     ("/seo/", "SEO and local search")],
     },
@@ -1195,6 +1399,34 @@ POSTS = [
         "payoff": "Search your own clinic the way a patient would, with the "
                   "name a friend would have given them, and tell us what you "
                   "found.",
+        "faq": [
+            ("Most of my patients arrive recommended. Does this change "
+             "that?",
+             "It supports it. Somebody given your name still looks you "
+             "up before they ring, and what they find decides whether "
+             "they do. Half of this work is for people who already heard "
+             "about you."),
+            ("What am I allowed to say?",
+             "Describe what you do, who does it and what it involves. Do "
+             "not promise outcomes. The rules vary and the careful "
+             "version also reads as the more competent one, so this "
+             "costs you nothing."),
+            ("Do I need online appointment booking?",
+             "Usually not at first. A clear number, real hours and a "
+             "form that reaches a person covers most of it. Booking "
+             "systems fail in clinics where the diary is really kept at "
+             "the desk."),
+            ("Do reviews matter for a clinic?",
+             "More than in most trades, because the decision is an "
+             "anxious one. Ask at the moment somebody says they are "
+             "pleased. Reply to the bad ones calmly and in public, "
+             "because the reply is read by the next person rather than "
+             "by the complainer."),
+            ("What decides the price?",
+             "How many treatments you describe, how many people you "
+             "introduce, and how many languages. A single practice with "
+             "six treatments is a small job."),
+        ],
         "related": [("/web-design/", "Websites"),
                     ("/seo/", "SEO and local search")],
     },
@@ -1264,6 +1496,29 @@ POSTS = [
         ],
         "payoff": "Tell us the 3 complaints you hear most on the phone, word "
                   "for word, and we will show you what people are typing.",
+        "faq": [
+            ("Nobody searches for my name. So what do they search?",
+             "The problem and the place. A noise, a warning light, a "
+             "make, and near me. Those are pages you can win, and almost "
+             "nobody in the trade bothers to write them."),
+            ("Should I list every make of car I work on?",
+             "The ones you really work on, named, because that is what "
+             "gets typed. A list of every badge in Europe convinces "
+             "nobody and brings you calls you have to turn down."),
+            ("Do I need a website or just the map listing?",
+             "The listing first, always. It is free and on a phone it "
+             "sits above everything. The site is what says which jobs "
+             "you take, which you do not, and whether you can be trusted "
+             "with the car, and the listing has no room for any of that."),
+            ("Can I quote online?",
+             "You can say what things usually cost and what changes "
+             "them. A firm quote without seeing the car is a promise you "
+             "will have to break, and breaking it is worse than never "
+             "giving it."),
+            ("What decides the price?",
+             "How many services and makes you list, and how many "
+             "languages. Getting one garage found in one city is small."),
+        ],
         "related": [("/seo/", "SEO and local search"),
                     ("/web-design/", "Websites")],
     },
@@ -1335,6 +1590,29 @@ POSTS = [
         "payoff": "Tell us where your last 3 instructions came from, and we "
                   "will tell you whether the portal had anything to do with "
                   "it.",
+        "faq": [
+            ("My listings are on the portals. Why my own site?",
+             "The portals sell you to buyers. Your site sells you to "
+             "sellers, and sellers are where the money is. That is a "
+             "different page making a different argument."),
+            ("Should I advertise properties or myself?",
+             "Properties get the clicks. Advertising yourself gets the "
+             "instructions. Run the property ads if you want the "
+             "traffic, but the campaign that pays is the one aimed at "
+             "somebody deciding who to list with."),
+            ("What happens to a listing after it sells?",
+             "Keep it, marked as sold. A page of what you sold is the "
+             "argument for instructing you, and deleting it throws away "
+             "the only proof you have."),
+            ("How fast do I have to reply?",
+             "Faster than you think. Enquiries go to whoever answers "
+             "first far more often than to whoever is best, and most of "
+             "them arrive outside office hours."),
+            ("What decides the price?",
+             "Whether you want the site, the ads or both, how many "
+             "languages, and whether the listings come out of a system "
+             "you already use. Ads on their own are a small setup."),
+        ],
         "related": [("/meta-ads/", "Meta ads"),
                     ("/web-design/", "Websites")],
     },

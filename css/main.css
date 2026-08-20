@@ -397,7 +397,30 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
 .svc-list a:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
 
 /* -- proof ----------------------------------------------------------------- */
-.proof { padding-block: var(--pad-major); border-top: 1px solid var(--edge); }
+/* the border-top and the padding both moved into the zones. An --edge hairline
+   directly above an ink ground is invisible, and padding on the section would
+   have held the ink off the section's own top edge. */
+.proof { padding-block: 0; }
+.proof-head > p { max-width: 62ch; }
+.proof-head h2 { max-width: 20ch; margin-bottom: var(--s-5); }
+
+/* auto-fit, not a column count. The comment on .stat-strip is right and still
+   applies: the strip went from 3 figures to 4 when the click rate went back in,
+   and anything hard-coded stacks silently the next time it changes. auto-fit
+   spreads whatever it is given across the band. */
+.zone-ink .stat-strip { display: grid; gap: var(--s-7) var(--s-8);
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); }
+
+/* the zone already pays --pad-major at the top, so the chart's own top margin
+   would be charged twice */
+.zone > .wrap > .proof-body > .gsc:first-child { margin-top: 0; }
+
+/* the numbers are the argument, so on ink they get the display scale the hero
+   has and the strip is ruled in red. Red on ink is 3.4:1: fine for a 1px rule,
+   which is why it rules and never writes. */
+.zone-ink .stat-n { font-size: clamp(2.5rem, 5vw, 4.25rem); }
+.zone-ink .stat-strip { border-top: 2px solid var(--red);
+  gap: var(--s-7) var(--s-9); margin-top: var(--s-8); }
 .proof-body > p { max-width: 62ch; margin-bottom: var(--s-5); }
 .proof-lead { font-size: var(--fs-lead); }
 
@@ -524,6 +547,62 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
 .plate img { width: 100%; height: auto; border: 1px solid var(--edge); }
 .plate figcaption { margin-top: var(--s-3); font-size: var(--fs-small);
   color: var(--slate); }
+
+/* -- the growth chart ------------------------------------------------------ */
+/* The same 90 days as the Google screenshot that still sits below it, in the
+   studio's colours. gen_home.growth_chart asserts both series still sum to the
+   2 figures printed directly above before it will emit this.
+
+   Impressions are --slate on purpose. Every lighter grey in the palette lands
+   above 7:1 on ink and would outshine --red at 3.4:1, which would make the
+   context louder than the point. Clicks are the argument, so clicks are red. */
+.chart-fig { margin: var(--s-8) 0 0; }
+.chart { width: 100%; height: auto; }
+.chart-grid { fill: none; stroke: var(--ink-2); stroke-width: 1; }
+.chart-impr { fill: none; stroke: var(--slate); stroke-width: 2;
+  stroke-linejoin: round; stroke-linecap: round; }
+.chart-clicks { fill: none; stroke: var(--red); stroke-width: 3;
+  stroke-linejoin: round; stroke-linecap: round; }
+.chart-ax, .chart-key { fill: var(--ink-mute); font-family: var(--font-body);
+  font-size: 19px; font-variant-numeric: tabular-nums; }
+.key-clicks { fill: var(--red); }
+.key-impr { fill: var(--slate); }
+
+/* The chart is drawn in a 1240-unit viewBox, so on a 350px-wide phone every
+   unit is 0.28px and 19px type renders at 5. Everything here is in viewBox
+   units, scaled up to land back at a readable size once the SVG is squeezed.
+   The geometry is untouched: stretching a data chart to fit would misstate
+   the data, so it stays in proportion and only the ink gets heavier. */
+@media (max-width: 720px) {
+  .chart-ax, .chart-key { font-size: 42px; }
+  .chart-clicks { stroke-width: 7; }
+  .chart-impr { stroke-width: 5; }
+  .chart-grid { stroke-width: 2.5; }
+}
+
+/* -- tonal zones ----------------------------------------------------------- */
+/* The site was one flat --paper from the header to the footer, roughly 40,000px
+   of it, and .on-ink appeared in exactly one place: the footer band. So the
+   only tonal change a visitor saw arrived after they had finished reading.
+
+   A zone is the .band trick generalised. Full-bleed block, sits outside .wrap
+   and contains one, carries its own vertical padding because the section it
+   replaces no longer does.
+
+   It is a <div> and it is NEVER a <section>. Check 15 counts `<section` with a
+   regex and caps the homepage at 7, then asserts all 3 languages agree. A zone
+   that reached for <section> would spend a slot the copy needs and fail the
+   gate in two ways at once. */
+.zone { padding-block: var(--pad-major); }
+.zone-surface { background: var(--surface); }
+.zone-ink { background: var(--ink); color: var(--paper); }
+
+/* --slate is 2.44:1 on ink and cannot be a caption there. The footer band
+   already solved this: --ink-mute for muted text (9.21:1), --ink-2 for
+   hairlines. Zones reuse those answers rather than inventing paler greys. */
+.zone-ink .eyebrow,
+.zone-ink .stat-l,
+.zone-ink .stat-note { color: var(--ink-mute); }
 
 /* -- the ink band ---------------------------------------------------------- */
 .band { background: var(--ink); color: var(--paper);
@@ -718,6 +797,14 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
 .fig { margin: 0 0 var(--s-7); max-width: 240px; }
 .fig svg { width: 100%; height: auto; }
 
+/* The same mark, moved out of the sidebar and into the prose. It is set in a
+   --surface plate rather than run to the full column width: the art is drawn
+   on a 160x160 square, so a full-bleed column would make it a 700px block of
+   mostly empty space. The plate breaks the text; the square stays readable. */
+.fig-body { max-width: none; margin: var(--s-9) 0; padding: var(--s-8) var(--s-7);
+  background: var(--surface); border: 1px solid var(--edge); }
+.fig-body svg { width: 100%; max-width: 300px; margin-inline: auto; }
+
 .tail { margin-top: var(--s-9); }
 .tail-inner { border-top: 2px solid var(--ink); padding-top: var(--s-6);
   display: flex; justify-content: space-between; align-items: baseline;
@@ -732,7 +819,16 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
 /* /studio/ sits off the usual axis: the one page written as a person */
 /* was grid-column 2/9, which indented the body 99px while the h1 stayed
    flush left. An axis shift that moves half a page is a broken edge. */
-.studio-prose { grid-column: 1 / 9; max-width: 62ch; }
+/* /studio/ is the one page with no aside, and it kept the 62ch cap on the
+   COLUMN, so 8 grid columns were capped at about 740px and the rest of every
+   row was dead the whole way down the page. The measure belongs on the
+   paragraphs; the headings are then free to use the width, which is what fills
+   the space and gives the page its rhythm. One person talking, set large. */
+.studio-prose { grid-column: 1 / 11; max-width: none; }
+.studio-prose > p, .studio-prose > ul, .studio-prose > ol,
+.studio-prose > .lead { max-width: 62ch; }
+.studio-prose > h2 { max-width: 18ch; font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: var(--track-display); margin-top: var(--s-9); }
 
 /* ==========================================================================
    MOTION. Final states are the CSS default, so no-JS, crawlers and
@@ -1003,7 +1099,7 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
    The measure matches .proof-body exactly. Both are the same kind of block --
    an argument in flowing text under a heading -- and giving them different
    line lengths would be two answers to one question. */
-.open { border-top: 1px solid var(--edge); padding-block: var(--pad-section); }
+.open { padding-block: 0; }
 .open-body > p { max-width: 62ch; margin-bottom: var(--s-5); }
 .open-lead { font-size: var(--fs-lead); }
 /* No margin-top here on purpose: .eyebrow's own margin-bottom is larger and
