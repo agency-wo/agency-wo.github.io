@@ -67,7 +67,7 @@ PAGES = [
     {
         "url": "/systems/",
         "nav": "Custom software",
-        "title": "Custom business software for small shops",
+        "title": "Custom software for small businesses in Albania",
         "description": "Stock, jobs, customers and money in one place. We build the "
                        "software small shops and trades actually run on, in Albania "
                        "and Italy.",

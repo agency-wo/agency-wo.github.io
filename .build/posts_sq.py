@@ -32,14 +32,14 @@ POSTS = [
     # ================================================================ SEO ===
     {
         "slug": "map-listing-first",
-        "src": "06c4fb36",
+        "src": "20a67441",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Kërkim lokal",
         "work": "iglisi-watch",
         "service": ("/seo/", "SEO dhe kërkim lokal"),
 
-        "title": "Si duken 3 muajt e parë të një dyqani të ri",
+        "title": "Sa kohë i duhet një dyqani të ri për t'u renditur",
         "h1": "Ja si duken 3 muajt e parë të një dyqani të ri në Google.",
         "summary": "Grafiku i vërtetë i Search Console për një biznes që nisi "
                    "pa faqe interneti, përfshirë pjesët që askush nuk i vë në "
@@ -130,7 +130,7 @@ POSTS = [
     # ================================================================ GEO ===
     {
         "slug": "what-nobody-can-promise-ai-search",
-        "src": "cbee899e",
+        "src": "acd54645",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Kërkimi me AI",
@@ -143,7 +143,7 @@ POSTS = [
         # object clitic "të" is what goes: the title says nobody can promise
         # this, the h1 says nobody can promise it TO YOU, and the reader meets
         # the h1 second.
-        "title": "Çfarë s'mund të premtojë askush për kërkimin me AI",
+        "title": "Kërkimi me AI: çfarë s'mund të premtojë askush",
         "h1": "Çfarë s'mund të të premtojë askush për kërkimin me AI.",
         "summary": "Shifra 40% që citojnë të gjithë nuk do të thotë atë që "
                    "thonë. Dhe 97% e skedarëve llms.txt nuk janë lexuar kurrë.",
@@ -259,7 +259,7 @@ POSTS = [
     # =========================================================== SOFTWARE ===
     {
         "slug": "four-lines-that-were-five",
-        "src": "34478d13",
+        "src": "c81cff37",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Software me porosi",
@@ -275,7 +275,7 @@ POSTS = [
         # lines of CODE the bug hid in, and the money sense now has its own
         # word rather than sharing one. English says "lines" for both and
         # leaves the reader to tell them apart; Albanian does not have to.
-        "title": "4 kanalet e të ardhurave që në fakt ishin 5",
+        "title": "Numrat që një biznes i vogël duhet të ndjekë",
         "h1": "4 kanalet e të ardhurave që në fakt ishin 5.",
         "summary": "Një bug që u fsheh brenda një grafiku për një fazë të tërë, "
                    "dhe çfarë thotë ai për software-in që mban në këmbë një "
@@ -370,7 +370,7 @@ POSTS = [
     # =========================================================== WEB, 3 LANG ===
     {
         "slug": "a-website-in-3-languages",
-        "src": "2c000678",
+        "src": "8ae58264",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Faqe interneti",
@@ -383,7 +383,7 @@ POSTS = [
         # Italian did not make this mistake: it says "resta allineato". The
         # Albanian idiom for a thing falling out of sync is "mbetet pas", so
         # the title says no language falls behind.
-        "title": "Një faqe në 3 gjuhë ku asnjëra nuk mbetet pas",
+        "title": "Një faqe në shqip, italisht dhe anglisht",
         "h1": "Një faqe në 3 gjuhë, dhe askush nuk rishkruan asgjë.",
         "summary": "Shumica e faqeve shumëgjuhëshe shmangen nga njëra-tjetra "
                    "derisa 2 nga 3 gjuhët janë gabim. Ja ndërtimi që s'mund "
@@ -453,14 +453,14 @@ POSTS = [
     # ============================================================= COMPOUND ===
     {
         "slug": "the-last-4-weeks",
-        "src": "aa5ab857",
+        "src": "ca60e01f",
         "date": "2026-08-14",
         "updated": "2026-08-14",
-        "topic": "Kërkimi lokal",
+        "topic": "Kërkim lokal",
         "work": "iglisi-watch",
         "service": ("/seo/", "SEO dhe kërkimi lokal"),
 
-        "title": "4 javët e fundit mundin 8 të parat",
+        "title": "Rezultatet SEO: pse muaji 3 ia kalon të parit",
         "h1": "4 javët e fundit të tremujorit mundin 8 të parat.",
         "summary": "Nga 560 klikime në një tremujor, 301 erdhën në 28 "
                    "ditët e fundit. Çfarë tregon ajo kurbë para se të "
@@ -526,14 +526,14 @@ POSTS = [
     # ================================================================ PHONE ===
     {
         "slug": "a-shop-that-updates-its-own-site",
-        "src": "cc854b84",
+        "src": "4a6c0d4e",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Faqe interneti",
         "work": "victoria-boutique",
         "service": ("/web-design/", "Faqe interneti"),
 
-        "title": "Dyqani që e përditëson faqen nga telefoni",
+        "title": "Një faqe që e përditëson vetë nga telefoni",
         "h1": "E përditëson faqen nga telefoni, dhe s'paguan njeri.",
         "summary": "Artikujt e rinj dalin në faqe për rreth një minutë, "
                    "nga telefoni, pa licencë dhe pa pagesë mujore.",
@@ -598,14 +598,14 @@ POSTS = [
     # ================================================================ ANSWER ===
     {
         "slug": "whoever-answers-first",
-        "src": "09a5a3e5",
+        "src": "80244259",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Meta ads",
         "work": "pro-affy",
         "service": ("/meta-ads/", "Meta ads"),
 
-        "title": "Puna i shkon atij që përgjigjet i pari",
+        "title": "Pse punën e merr ai që përgjigjet i pari",
         "h1": "Puna i shkon atij që përgjigjet i pari.",
         "summary": "Reklamat e blejnë telefonatën. Kush e fiton punën "
                    "vendoset në minutat pas saj.",
@@ -666,14 +666,14 @@ POSTS = [
     # ====================================================== INDUSTRY: WATCH ===
     {
         "slug": "watch-shops-and-jewellers",
-        "src": "de0fa910",
+        "src": "9a131e40",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Kërkim lokal",
         "work": "iglisi-watch",
         "service": ("/seo/", "SEO dhe kërkim lokal"),
 
-        "title": "Si gjendet një dyqan orësh",
+        "title": "SEO për dyqane orësh dhe argjendari",
         "h1": "Një dyqan orësh janë 2 biznese, dhe vetëm 1 ka ngut.",
         "summary": "Riparimet kërkohen me ngut. Orët studiohen me javë. Një "
                    "dyqan i vetëm duhet t'u përgjigjet të dyjave.",
@@ -776,14 +776,14 @@ POSTS = [
     # ==================================================== INDUSTRY: FASHION ===
     {
         "slug": "fashion-boutiques",
-        "src": "60fd0bbc",
+        "src": "14f49fee",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Faqe interneti",
         "work": "victoria-boutique",
         "service": ("/web-design/", "Faqe interneti"),
 
-        "title": "Një faqe butiku që nuk vjetërohet",
+        "title": "Një faqe për një butik me mall që ndryshon",
         "h1": "Halli i një butiku nuk është trafiku. Është vjetërimi.",
         "summary": "Malli ndërrohet çdo javë. Një faqe që tregon sezonin e "
                    "shkuar bën më shumë dëm sesa mos ta kesh fare.",
@@ -874,14 +874,14 @@ POSTS = [
     # =================================================== INDUSTRY: LINGERIE ===
     {
         "slug": "lingerie-shops",
-        "src": "b7635225",
+        "src": "0cc3e448",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Faqe interneti",
         "work": "intimo-bruna",
         "service": ("/web-design/", "Faqe interneti"),
 
-        "title": "Pse të brendshmet shiten duke folur",
+        "title": "Një faqe për një dyqan të brendshmesh",
         "h1": "Këtu arka është gjëja e gabuar për t'u ndërtuar.",
         "summary": "Masa është e pasigurt dhe blerja është private. Të dyja e "
                    "shtyjnë klienten të pyesë në vend që të klikojë.",
@@ -969,14 +969,14 @@ POSTS = [
     # ==================================================== INDUSTRY: HEATING ===
     {
         "slug": "heating-and-cooling-trades",
-        "src": "31352e7c",
+        "src": "ae0c53f2",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Kërkim lokal",
         "work": "pro-affy",
         "service": ("/seo/", "SEO dhe kërkim lokal"),
 
-        "title": "Zanati që shet ditën më të ftohtë",
+        "title": "SEO për instalues ngrohjeje dhe ftohjeje",
         "h1": "Java jote më e ngarkuar vendos pjesën më të madhe të vitit.",
         "summary": "Ngrohja kërkohet brenda pak ditësh të ftohta, nga telefoni, "
                    "në një orë që nuk e planifikon njeri.",
@@ -1064,14 +1064,14 @@ POSTS = [
     # ================================================ INDUSTRY: RESTAURANTS ===
     {
         "slug": "restaurants-and-cafes",
-        "src": "fcbc7a34",
+        "src": "447f59b1",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Kërkim lokal",
         "work": None,
         "service": ("/seo/", "SEO dhe kërkim lokal"),
 
-        "title": "Menuja që s'e lexon dot askush",
+        "title": "SEO për restorante: menuja që Google lexon",
         "h1": "Menuja jote është fotografi, prandaj s'e kërkon dot njeri.",
         "summary": "Një menu e ruajtur si fotografi është e padukshme për "
                    "Google dhe për çdo asistent që dikush e pyet ku të hajë.",
@@ -1163,14 +1163,14 @@ POSTS = [
     # ===================================================== INDUSTRY: HOTELS ===
     {
         "slug": "hotels-and-guesthouses",
-        "src": "a3940875",
+        "src": "fd5807e2",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Kërkimi me AI",
         "work": None,
         "service": ("/geo/", "Kërkimi me AI"),
 
-        "title": "Ku nisin të kërkojnë klientët ka ndryshuar",
+        "title": "Kërkimi me AI për hotele dhe bujtina",
         "h1": "I njëjti mysafir të kushton më pak nëse vjen drejtpërdrejt.",
         "summary": "Për hotelet kërkimi është derë më e ngushtë se dikur, dhe "
                    "dikush tjetër po ta faturon mysafirin që kalon nga e tija.",
@@ -1266,14 +1266,14 @@ POSTS = [
     # ================================================ INDUSTRY: HAIRDRESSERS ===
     {
         "slug": "hairdressers-and-salons",
-        "src": "19a141e1",
+        "src": "8b379a7a",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Faqe interneti",
         "work": None,
         "service": ("/web-design/", "Faqe interneti"),
 
-        "title": "Një parukeri rron nga vizita e dytë",
+        "title": "Një faqe për një parukeri ose sallon",
         "h1": "Të gjendesh është gjysma e lehtë. T'i kthesh është zanati.",
         "summary": "Një parukeri nuk ka hall trafiku. Ka një boshllëk mes një "
                    "vizite dhe tjetrës, dhe kjo është punë tjetër për t'u "
@@ -1364,14 +1364,14 @@ POSTS = [
     # ==================================================== INDUSTRY: DENTISTS ===
     {
         "slug": "dentists-and-clinics",
-        "src": "0f6786a7",
+        "src": "2b196f51",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Faqe interneti",
         "work": None,
         "service": ("/web-design/", "Faqe interneti"),
 
-        "title": "Shumica e pacientëve vijnë të rekomanduar",
+        "title": "Një faqe për një klinikë dentare",
         "h1": "Dikush ua dha emrin tënd. Faqja vendos se çfarë ndodh më pas.",
         "summary": "Dentisti zgjidhet me fjalën e dikujt shumë më shpesh sesa "
                    "me një kërkim, dhe kjo ndryshon se për çfarë shërben "
@@ -1466,14 +1466,14 @@ POSTS = [
     # ================================================== INDUSTRY: CAR REPAIR ===
     {
         "slug": "car-repair-and-garages",
-        "src": "aaab3992",
+        "src": "e4985377",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Kërkim lokal",
         "work": None,
         "service": ("/seo/", "SEO dhe kërkim lokal"),
 
-        "title": "Askush nuk kërkon mekanik",
+        "title": "SEO për një ofiçinë: çfarë kërkojnë klientët",
         "h1": "Kërkojnë zhurmën që bën makina.",
         "summary": "Shoferi përshkruan një shenjë, jo një shërbim, dhe gjen "
                    "atë ofiçinë që atë shenjë e ka shkruar diku.",
@@ -1559,14 +1559,14 @@ POSTS = [
     # =============================================== INDUSTRY: ESTATE AGENTS ===
     {
         "slug": "estate-agents",
-        "src": "097de570",
+        "src": "e5d1621e",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Meta ads",
         "work": None,
         "service": ("/meta-ads/", "Meta ads"),
 
-        "title": "Marketingu yt është për ata që shesin",
+        "title": "Reklama Facebook për agjenci imobiliare",
         "h1": "Portali i ka tashmë blerësit. Ti po konkurron për atë që shet.",
         "summary": "Blerësit janë te portali çfarëdo që të bësh. Porosia është "
                    "ajo për të cilën konkurron vërtet, dhe vjen nga gjetkë.",
@@ -1647,6 +1647,766 @@ POSTS = [
         "related": [("/meta-ads/", "Meta ads"),
                     ("/web-design/", "Faqe interneti")],
     },
+    {
+        "slug": "what-a-website-costs-in-albania",
+        "src": "9c6d3edb",
+        "date": "2026-08-21",
+        "updated": "2026-08-21",
+        "topic": "Faqe interneti",
+        "work": None,
+        "service": ("/web-design/", "Faqe interneti"),
+
+        "title": "Sa kushton një faqe interneti në Shqipëri",
+        "h1": "Sa kushton një faqe këtu, dhe çfarë e lëviz numrin.",
+        "summary": "Katër gjërat që vendosin çmimin, dhe pse një ofertë e "
+                   "dhënë para se dikush të ketë parë është hamendje e "
+                   "veshur si numër.",
+        "standfirst": "Askush nuk mund të çmojë një faqe në telefon. Këto "
+                      "janë katër gjërat që e lëvizin vërtet, që ta dish "
+                      "afërsisht ku je para se t'i kërkosh kujtdo.",
+        "description": "Sa kushton një faqe interneti në Shqipëri dhe çfarë "
+                       "e vendos numrin: sa faqe, sa gjuhë, nëse duhet të "
+                       "mbajë gjendje ose rezervime, dhe nëse fotot "
+                       "ekzistojnë tashmë.",
+        "og_desc": "Katër gjëra vendosin sa kushton një faqe. Sa i bukur "
+                   "është dizajni nuk është një prej tyre.",
+
+        "body": [
+            ("Pse askush nuk jep çmim në telefon", [
+                "<p>Një faqe nuk është mall me çmim në raft. Është një "
+                "grumbull vendimesh, dhe derisa dikush të ketë parë çfarë "
+                "shet dhe kë ke përballë, një shifër është hamendje e veshur "
+                "si numër.</p>",
+                "<p>Të shohim para se të japim çmim nuk paguhet, dhe nuk "
+                "është marifet shitjeje. Është e vetmja mënyrë për të të "
+                "dhënë një çmim që do të jetë ende i vërtetë një muaj më vonë.</p>",
+            ]),
+            ("Katër gjërat që e lëvizin", [
+                "<p><strong>Sa faqe.</strong> Një dyqan me një gjë për të "
+                "thënë do rreth pesë. Një klinikë që përshkruan tetë "
+                "trajtime do tetë të tjera, dhe secila është një faqe që "
+                "dikush duhet ta shkruajë.</p>",
+                "<p><strong>Sa gjuhë.</strong> Vetëm shqip është një punë. "
+                "Shqip, italisht dhe anglisht janë tre, dhe jo tre kopje të "
+                "një faqeje: çdo gjuhë do fjalët e veta për të njëjtën "
+                "ide.</p>",
+                "<p><strong>Nëse duhet të mbajë diçka.</strong> Të tregosh "
+                "çfarë shet është pak. Të arkëtosh, të mbash llogari se "
+                "çfarë ka mbetur dhe të trajtosh një kthim janë tre punë të "
+                "ndara me tre mënyra të ndara për të shkuar keq.</p>",
+                "<p><strong>Nëse fotot ekzistojnë.</strong> Fotografi të "
+                "vendit tënd tashmë në telefon janë një javë e kursyer. "
+                "Gjithçka ende për t'u fotografuar është një javë më "
+                "shumë.</p>",
+            ]),
+            ("Çfarë nuk e lëviz", [
+                "<p>Sa i zgjuar është dizajni. Një faqe që hapet para se "
+                "klienti të heqë dorë dhe përgjigjet në gjuhën që ai shkroi "
+                "shet më shumë se një e bukur, dhe nuk është pjesa e "
+                "shtrenjtë për t'u ndërtuar.</p>",
+                "<p>As platforma, jo në mënyrën që e pret bota. Këtu nuk "
+                "licencohet asgjë muaj për muaj, ndaj poshtë çmimit nuk "
+                "mbetet një tarifë përgjithmonë.</p>",
+            ]),
+            ("Pyetja pas pyetjes", [
+                "<p>Ajo që zakonisht nënkuptohet është nëse ia del të "
+                "fillosh fare. Gati gjithmonë përgjigjja është po, sepse "
+                "gjëja e parë që ia vlen të bëhet nuk kushton asgjë.</p>",
+                "<p>Plotëso skedën e Google si duhet, në çdo gjuhë që "
+                "përdorin klientët e tu. Është një pasdite, dhe është ajo që "
+                "vendos nëse të merr në telefon dikush 400 metra larg apo "
+                "dyqani në fund të rrugës.</p>",
+            ]),
+            ("Çfarë vjen para se të zotohesh", [
+                "<p>Një plan i shkruar: çfarë do të ndryshonim, në çfarë "
+                "radhe, pse ka rëndësi secila pjesë, dhe çmimi për të "
+                "gjithën. Një faqe, para se të nisë çdo punë.</p>",
+                "<p>Nëse përgjigjja e ndershme është se nuk të duhemi ende, "
+                "merr atë, dhe kushton sa plani.</p>",
+            ]),
+        ],
+        "payoff": "Na dërgo faqen që ke, ose adresën që do të përdorje, dhe "
+                  "të themi cila nga të katërtat po ta ngre numrin.",
+        "faq": [
+            ("A më jep një interval afërsisht tani?",
+             "Jo me ndershmëri. Një shifër e sajuar për të të mbajtur në "
+             "telefon të shërben më pak se asnjë shifër. Ajo që mund të "
+             "bëjmë brenda 24 orëve është të shohim faqen tënde, "
+             "konkurrentët dhe çfarë shkruan bota, dhe të kthehemi me një "
+             "numër të vërtetë dhe arsyetimin pas tij."),
+            ("A është një faqe më e lirë një faqe më e keqe?",
+             "Jo domosdoshmërisht. Një e lirë që hapet shpejt, thotë çfarë "
+             "shet dhe përgjigjet në gjuhën e klientit ia kalon një të "
+             "shtrenjtë që nuk bën as njërën as tjetrën. Ajo që liria "
+             "zakonisht të kushton është pjesa që nuk e sheh: shpejtësia, "
+             "struktura, dhe nëse arrin ta gjejë gjë."),
+            ("A paguaj çdo muaj?",
+             "Jo neve, për vetë faqen. Nuk ka licencë dhe nuk ka tarifë "
+             "platforme poshtë saj. Domeni kushton diçka një herë në vit dhe "
+             "zakonisht ai është gjithë kostoja e mbajtjes. Meta ads janë "
+             "përjashtimi, dhe janë tarifë fikse e mbajtur veç."),
+            ("Kam paguar dikë dhe doli keq. Nisim nga e para?",
+             "Zakonisht jo. Gati gjithmonë faqet mbahen dhe riparohet vetëm "
+             "ajo që i pengon të gjenden. Cili nga të dy rastet je mund të "
+             "ta themi para se të shpenzosh gjë."),
+            ("E kujt është kur mbaron?",
+             "E jotja: domeni, kodi dhe çdo llogari, në emrin tënd që ditën "
+             "e parë. Nuk është bujari, është e vetmja marrëveshje që të lë "
+             "të lirë të ikësh nga ne."),
+        ],
+        "related": [("/web-design/", "Faqe interneti"),
+                    ("/seo/", "SEO dhe kërkimi lokal")],
+    },
+
+    {
+        "slug": "how-to-come-up-first-on-google",
+        "src": "56c65d65",
+        "date": "2026-08-21",
+        "updated": "2026-08-21",
+        "topic": "Kërkim lokal",
+        "work": "iglisi-watch",
+        "service": ("/seo/", "SEO dhe kërkimi lokal"),
+
+        "title": "Si të dalësh i pari në Google",
+        "h1": "Vendet e para janë dy, dhe njëri prej tyre është falas.",
+        "summary": "Harta dhe lidhjet blu janë gara të ndryshme me rregulla "
+                   "të ndryshme, dhe shumica e bizneseve të vogla duhet të "
+                   "hyjnë së pari në atë falas.",
+        "standfirst": "Të gjithë kërkojnë vendin e parë. Në telefon ka dy, "
+                      "fitohen ndryshe, dhe ai që ka më shumë rëndësi në "
+                      "zonë nuk kushton asgjë.",
+        "description": "Si të dalësh i pari në Google në Shqipëri: skeda në "
+                       "hartë dhe rezultatet poshtë janë gara të ndara, që "
+                       "fitohen nga gjëra të ndryshme. Cilën ta rregullosh e "
+                       "para, dhe çfarë do.",
+        "og_desc": "Dy vende të para, rregulla të ndryshme. Ai që nuk "
+                   "kushton asgjë zakonisht është ai që ia vlen të fitohet.",
+
+        "body": [
+            ("Dy vende të para, jo një", [
+                "<p>Kërko diçka në zonë nga telefoni dhe harta del para "
+                "gjithçkaje tjetër: tre biznese, një distancë, disa yje. "
+                "Poshtë saj rrinë rezultatet e zakonshme, ato që bota "
+                "nënkupton kur thotë faqe.</p>",
+                "<p>Janë gara të ndara. Harta punon me skedën tënde, me "
+                "vlerësimet dhe me sa afër je atij që kërkon. Rezultatet "
+                "poshtë punojnë me faqen tënde. Të rregullosh njërën bën "
+                "shumë pak për tjetrën.</p>",
+            ]),
+            ("Fito së pari atë falas", [
+                "<p>Skeda në hartë është një profil Google dhe nuk kushton "
+                "asgjë. Kategoritë, çdo shërbim i emërtuar, orare që janë "
+                "ende të sakta në Krishtlindje, foto të vendit të vërtetë, "
+                "dhe pyetjet që të bëjnë në telefon, të përgjigjura aty në "
+                "faqe.</p>",
+                "<p>Shumica plotësojnë rreth një të tretën dhe pastaj pyesin "
+                "pse dyqani në fund të rrugës rri sipër.</p>",
+            ]),
+            ("Pastaj pjesa që do muaj", [
+                "<p>Rezultatet poshtë lëvizin ngadalë, sepse krahasohesh me "
+                "këdo që merret me këtë prej më kohësh. Ajo punë është e "
+                "vërtetë dhe ia vlen, por kush ta premton brenda javësh po "
+                "të shet diçka.</p>",
+                "<p>Duhen faqe që i përgjigjen asaj që dikush shkroi, në "
+                "gjuhën në të cilën e shkroi, mbi një faqe mjaft të shpejtë "
+                "sa ai të jetë ende aty kur hapet.</p>",
+            ]),
+            ("Si doli për një dyqan", [
+                "<p>Një dyqan orësh në Durrës në maj nuk kishte faqe. Në "
+                "gusht kërkimi i dërgonte 560 klikime në tremujor, me "
+                "pozicion mesatar 8,4, që është fundi i faqes së parë dhe jo "
+                "maja e saj.</p>",
+                "<p>Kjo është forma e ndershme e punës: jo i pari për "
+                "gjithçka brenda një muaji, por i gjendshëm, duke nisur nga "
+                "zeroja, brenda një vere.</p>",
+            ]),
+            ("Çfarë të bësh këtë javë", [
+                "<p>Merr skedën nëse nuk është ende e jotja. Plotëso çdo "
+                "fushë. Kërkoju një vlerësim katër klientëve të fundit të "
+                "kënaqur, në çastin kur thonë se janë të kënaqur dhe jo dy "
+                "javë më vonë.</p>",
+                "<p>Asgjë nga këto nuk është projekt, dhe është gjysma e "
+                "punës që shumica e kapërcejnë ndërsa debatojnë për "
+                "faqen.</p>",
+            ]),
+        ],
+        "payoff": "Na dërgo adresën dhe të themi cilën nga të dy garat po "
+                  "humbet vërtet.",
+        "faq": [
+            ("Për sa kohë dal i pari?",
+             "Për hartën ndonjëherë javë, sepse as konkurrentët nuk e kanë "
+             "plotësuar skedën e tyre. Për rezultatet poshtë, gjashtë deri "
+             "në dymbëdhjetë muaj përballë dikujt të vendosur. Çdo datë më e "
+             "saktë se kaq është dikush që hamendëson me shpenzimet e tua."),
+            ("A mund t'i paguaj Google që të dal i pari?",
+             "Mund të paguash për të qëndruar sipër, me shkrim se është "
+             "reklamë, dhe mbaron ditën që ndalon së paguari. Vendi në hartë "
+             "dhe rezultatet poshtë nuk blihen, dhe pikërisht prandaj "
+             "vlejnë."),
+            ("A ka rëndësi që konkurrenti ka më shumë vlerësime?",
+             "Ka, dhe është hendeku më i riparueshëm i kësaj liste. "
+             "Vlerësimet kërkohen, nuk priten. Një grusht i qëndrueshëm dhe "
+             "i freskët ia kalon një grumbulli nga tre vjet më parë."),
+            ("Nuk kam faqe. A mjafton skeda?",
+             "Për disa zanate, për një farë kohe, sinqerisht po. Një ofiçinë "
+             "që arrihet nga një hartë dhe një numër mund të punojë ashtu. "
+             "Ajo që skeda nuk bën është të mbajë faqet që i përgjigjen asaj "
+             "që dikush shkroi, dhe aty jeton pjesa tjetër e punës."),
+            ("A duhet të jem në Tiranë që të dal në Tiranë?",
+             "Për hartën distanca ka rëndësi, ndaj kush kërkon duke qëndruar "
+             "në Tiranë sheh biznese të Tiranës. Për rezultatet poshtë, jo. "
+             "Ne jemi në Durrës dhe ndërtojmë nga distanca, dhe prandaj e "
+             "themi hapur në vend që të marrim me qira një adresë."),
+        ],
+        "related": [("/seo/", "SEO dhe kërkimi lokal"),
+                    ("/geo/", "Kërkimi me AI")],
+    },
+
+    {
+        "slug": "web-design-durres",
+        "src": "9ccd92d1",
+        "date": "2026-08-21",
+        "updated": "2026-08-21",
+        "topic": "Faqe interneti",
+        "work": "iglisi-watch",
+        "service": ("/web-design/", "Faqe interneti"),
+
+        "title": "Faqe interneti në Durrës",
+        "h1": "Ne jemi në Durrës, dhe po ashtu gjithçka që kemi ndërtuar.",
+        "summary": "Çfarë ndryshon vërtet kur e ke dikë në të njëjtin qytet, "
+                   "dhe katër adresat që mund të shkosh t'i shohësh.",
+        "standfirst": "Gati gjithçka në këtë faqe është bërë për një biznes "
+                      "brenda pak kilometrave nga këtu. Kjo e ndryshon punën "
+                      "më shumë nga sa e presin njerëzit.",
+        "description": "Faqe interneti në Durrës për dyqane, zanate dhe "
+                       "klinika. Çfarë përfshin një ndërtim vendas, për kë "
+                       "është bërë, dhe çfarë mund të shkosh ta kontrollosh "
+                       "vetë.",
+        "og_desc": "Katër biznese në këtë qytet, secili me një faqe që e hap "
+                   "dhe një adresë ku shkon në këmbë.",
+
+        "body": [
+            ("Për kë është", [
+                "<p>Dyqane në një rrugë ku klienti është tashmë aty afër. "
+                "Zanate që merren në telefon dhe nuk shfletohen. Klinika që "
+                "i kërkojnë pasi dikush u ka dhënë emrin.</p>",
+                "<p>Të treja gjenden në të njëjtën mënyrë, dhe asnjërës nuk "
+                "i duhet faqja që një agjenci ia shet një kompanie me zyrë "
+                "marketingu.</p>",
+            ]),
+            ("Çfarë ndryshon i njëjti qytet", [
+                "<p>Mund të kalosh nga zyra. Duket pak dhe është ndryshimi "
+                "mes gjashtë javëve dhe tri, sepse një pyetje merr përgjigje "
+                "po atë pasdite në vend që të rrijë ditë të tëra brenda një "
+                "bisede.</p>",
+                "<p>Do të thotë edhe që fotot janë të dhomës tënde me dritën "
+                "tënde, që është pjesa nga e cila një klient kupton nëse "
+                "vendi është i vërtetë.</p>",
+            ]),
+            ("Çfarë është ndërtuar këtu", [
+                "<p>Një dyqan orësh në Rrugën Aleksandër Goga, një butik, "
+                "një dyqan të brendshmesh dhe një shtypshkronjë. Secili ka "
+                "një faqe këtu që thotë çfarë u bë dhe çfarë ndodhi pas.</p>",
+                "<p>Dyqani i orëve është ai me numra bashkëngjitur, sepse në "
+                "maj nisi nga hiçi dhe ka një eksport për ta vënë pranë "
+                "pohimit.</p>",
+            ]),
+            ("Sa i madh është pellgu", [
+                "<p>Ky është treg më i vogël se kryeqyteti, dhe kjo pret nga "
+                "të dyja anët: më pak njerëz që shkruajnë, dhe shumë më pak "
+                "biznese që janë munduar fare të gjenden.</p>",
+                "<p>Gjysma e dytë është e çara. Shumica e konkurrentëve këtu "
+                "kanë një skedë të plotësuar një të tretën dhe pas saj asgjë "
+                "që ia vlen të lexohet.</p>",
+            ]),
+        ],
+        "payoff": "Na thuaj rrugën dhe çfarë shet, dhe të tregojmë kush rri "
+                  "sipër teje sot dhe çfarë e çoi atje.",
+        "faq": [
+            ("A duhet të vij në zyrë?",
+             "Jo, dhe nuk ka një të tillë në kuptimin që po e mendon. Gati "
+             "gjithçka kalon me mesazhe dhe një telefonatë. Të qenit në të "
+             "njëjtin qytet e bën takimin të lehtë kur ndihmon; nuk është "
+             "detyrim që ta vë kush."),
+            ("A merrni punë vetëm në këtë qytet?",
+             "Jo. Thjesht aty kanë qenë të katër klientët deri tani, dhe "
+             "prandaj çdo shembull është vendas. Ndërtimi bëhet nga "
+             "distanca, ndaj bregdeti, kryeqyteti dhe çdo vend tjetër i "
+             "vendit janë e njëjta punë."),
+            ("A mund të shoh diçka që keni bërë?",
+             "Po, dhe prandaj rrinë në faqe. Katër biznese, nga një faqe "
+             "secili, me adresën e vërtetë të shtypur sipër që ta hapësh "
+             "vetë gjënë në vend që të shohësh një pamje të saj."),
+            ("Sa kohë do?",
+             "Nga tri deri në gjashtë javë për shumicën e dyqaneve, dhe "
+             "ndryshorja gati kurrë nuk jemi ne. Është sa shpejt vijnë "
+             "tekstet dhe fotot, dhe prandaj kërkohen që në fillim fare."),
+            ("A duhet të jetë vetëm shqip?",
+             "Vetëm nëse ata janë vërtet klientët e tu. Mjaft tregti në këtë "
+             "bregdet bëhet italisht dhe anglisht, dhe një dyqan që ekziston "
+             "në një gjuhë nuk gjendet dot nga dy të tjerat."),
+        ],
+        "related": [("/web-design/", "Faqe interneti"),
+                    ("/seo/", "SEO dhe kërkimi lokal")],
+    },
+
+    {
+        "slug": "web-design-tirana",
+        "src": "e0f05b70",
+        "date": "2026-08-21",
+        "updated": "2026-08-21",
+        "topic": "Faqe interneti",
+        "work": None,
+        "service": ("/web-design/", "Faqe interneti"),
+
+        "title": "Faqe interneti në Tiranë",
+        "h1": "Nuk jemi në Tiranë, dhe për këtë punë kjo nuk ndryshon asgjë.",
+        "summary": "Një treg më i madh me shumë më tepër konkurrencë, i "
+                   "shërbyer nga tridhjetë e pesë kilometra, pa adresa të "
+                   "rreme.",
+        "standfirst": "Versioni i ndershëm: studioja është në Durrës, "
+                      "ndërtimi bëhet nga distanca, dhe e vetmja gjë që "
+                      "ndryshon vërtet në kryeqytet është kush është tashmë "
+                      "aty.",
+        "description": "Faqe interneti për biznese në Tiranë, ndërtuar nga "
+                       "distanca prej Durrësit. Çfarë ndryshon një treg më i "
+                       "madh, çfarë jo, dhe pse atje nuk ka zyrë.",
+        "og_desc": "Treg më i madh, konkurrencë më e ashpër, dhe askush që "
+                   "shtiret se rri brenda tij.",
+
+        "body": [
+            ("Ku është vërtet studioja", [
+                "<p>Në Durrës. Në kryeqytet nuk ka adresë dhe nuk do të ketë "
+                "një me qira, sepse gjëja e parë që një klient zbulon për "
+                "një adresë me qira është se brenda saj nuk rri askush.</p>",
+                "<p>Atë që vendos një ndërtim është nëse puna është e mirë "
+                "dhe nëse e arrin personin që e bën. Asnjëra nuk "
+                "përmirësohet duke qenë dyzet minuta më afër.</p>",
+            ]),
+            ("Çfarë ndryshon me të vërtetë", [
+                "<p>Më shumë njerëz që shkruajnë atë që shet, dhe shumë më "
+                "tepër biznese që e kuptuan të parët. Një frazë me tre "
+                "rivalë seriozë në këtë bregdet në kryeqytet mund të ketë "
+                "tridhjetë.</p>",
+                "<p>Pra metoda nuk ndryshon dhe durimi po. Kush të premton "
+                "të kundërtën nuk i ka hapur faqet e konkurrentëve të "
+                "tu.</p>",
+            ]),
+            ("Gjysma që e vendos distanca", [
+                "<p>Sa afër je ka rëndësi në hartë, ndaj kush kërkon duke "
+                "qëndruar në kryeqytet sheh biznese të kryeqytetit. Ai "
+                "avantazh është yti dhe askush nga jashtë nuk mund të ta "
+                "japë ose të ta heqë.</p>",
+                "<p>Dhe është edhe atje, sido që të jetë, gjysma që shumica "
+                "e konkurrentëve e kanë plotësuar vetëm pjesërisht.</p>",
+            ]),
+            ("Si rrjedh puna nga këtu", [
+                "<p>Mesazhe, një telefonatë kur telefonata e meriton vendin, "
+                "dhe një plan i shkruar para se të nisë gjë. Kur takimi "
+                "ndihmon vërtet, janë tridhjetë e pesë kilometra.</p>",
+                "<p>Fotot janë e vetmja gjë ku afërsia ndihmon, dhe "
+                "përgjigjja zakonisht është se të tuat i kalojnë tonat, "
+                "sepse janë të dhomës së vërtetë.</p>",
+            ]),
+        ],
+        "payoff": "Na dërgo adresën dhe frazën që do, dhe të themi pa dredha "
+                  "sa e mbushur është tashmë.",
+        "faq": [
+            ("Pse të marr dikë që nuk është këtu?",
+             "Vetëm nëse puna ose çmimi janë më të mirë. Të qenit afër "
+             "pushoi së qeni argument për këtë lloj pune vite më parë, dhe "
+             "një studio që nis nga afërsia zakonisht është studio që i kanë "
+             "mbaruar argumentet e tjera."),
+            ("A është më e vështirë të renditesh në kryeqytet?",
+             "Për rezultatet poshtë hartës po, sepse shumë më tepër biznese "
+             "garojnë për të njëjtat fraza. Vetë harta varet pjesërisht nga "
+             "sa afër është ai që kërkon, dhe ajo pjesë të favorizon kushdo "
+             "që ta ndërtojë faqen."),
+            ("A keni klientë atje?",
+             "Jo ende, dhe ta shkruaj kushton më pak se ta lë të kuptohet "
+             "dhe të zbulohet pastaj. Të katërt në këtë faqe janë nga një "
+             "qytet i vetëm, me adresat e shtypura në faqet e tyre."),
+            ("A mund të takohemi personalisht?",
+             "Po. Është pak rrugë dhe bëhet kur është e dobishme. Ajo që nuk "
+             "do ta bëjmë është të lëmë të kuptohet se takimi është ai që e "
+             "bën faqen të punojë."),
+            ("A ndryshon çmimi?",
+             "Jo. I njëjti projekt kushton njësoj kudo qoftë, sepse ndërtimi "
+             "bëhet nga distanca në të dyja rastet. Ndryshon sa kohë do "
+             "gjysma e kërkimit, dhe ta themi para se të pranosh."),
+        ],
+        "related": [("/web-design/", "Faqe interneti"),
+                    ("/seo/", "SEO dhe kërkimi lokal")],
+    },
+
+    {
+        "slug": "how-long-seo-takes",
+        "src": "2bec2bb8",
+        "date": "2026-08-21",
+        "updated": "2026-08-21",
+        "topic": "Kërkim lokal",
+        "work": "iglisi-watch",
+        "service": ("/seo/", "SEO dhe kërkimi lokal"),
+
+        "title": "Sa kohë do SEO për të punuar",
+        "h1": "Javë për njërën gjysmë, muaj për tjetrën.",
+        "summary": "Dy afate në vend të një, dhe prandaj një numër i vetëm "
+                   "tingëllon gjithmonë si shmangie.",
+        "standfirst": "Skeda mund të lëvizë brenda dy javësh. Rezultatet "
+                      "poshtë saj duan gati një vit. Një numër i vetëm që i "
+                      "mbulon të dyja është hamendje.",
+        "description": "Sa kohë do SEO në Shqipëri: javë për skedën në "
+                       "hartë, gjashtë deri në dymbëdhjetë muaj për "
+                       "rezultatet poshtë, me një shembull të vërtetë "
+                       "tremujor.",
+        "og_desc": "Dy afate. I shpejti është falas dhe shumica e "
+                   "konkurrentëve nuk e kanë mbaruar.",
+
+        "body": [
+            ("Gjysma e shpejtë", [
+                "<p>Një profil Google i mbaruar si duhet mund ta ndryshojë "
+                "atë që sheh brenda dy javësh, nganjëherë më shpejt. Jo nga "
+                "ndonjë marifet, por sepse shumica e rivalëve u ndalën në "
+                "një të tretën e tyre.</p>",
+                "<p>Pikërisht prandaj shkon e para. Kushton pak, është e "
+                "shpejtë, dhe fusha është e dobët.</p>",
+            ]),
+            ("Gjysma e ngadaltë", [
+                "<p>Të dalësh në rezultatet e zakonshme do të thotë të "
+                "peshohesh kundër kujtdo që publikon prej më kohësh. Gjashtë "
+                "deri në dymbëdhjetë muaj është diapazoni i ndershëm për një "
+                "faqe të re që ndjek një frazë me para.</p>",
+                "<p>Lëvizja e parë brenda asaj kohe zakonisht vjen rreth "
+                "javës së tetë dhe duket si asgjë: ca fraza më shumë për të "
+                "cilat del, më poshtë nga sa do të doje.</p>",
+            ]),
+            ("Si doli një tremujor", [
+                "<p>Iglisi Watch nisi pa asnjë faqe. Në tremujorin që pasoi "
+                "kërkimi solli 560 klikime, me pozicion mesatar 8,4 dhe "
+                "përqindje klikimesh 1%.</p>",
+                "<p>Katër javët e fundit sollën më shumë se tetë të parat, "
+                "që është forma e kësaj pune: rrafsh, rrafsh, pastaj një "
+                "ngjitje.</p>",
+            ]),
+            ("Kur të ndalosh së paguari dikë", [
+                "<p>Nëse në muajin e katërt nuk ka lëvizur asgjë, diçka nuk "
+                "shkon dhe duhet thënë me zë në vend që të pritet. Zakonisht "
+                "është se faqet nuk i përgjigjen asnjë pyetjeje që dikush e "
+                "shkruan vërtet.</p>",
+                "<p>Një muaj në të cilin nuk u përmirësua asgjë raportohet "
+                "si muaj në të cilin nuk u përmirësua asgjë. Një raport që "
+                "është lajm i mirë çdo herë ka pushuar së qeni raport.</p>",
+            ]),
+        ],
+        "payoff": "Na dërgo adresën dhe të themi cila gjysmë mungon, dhe "
+                  "afërsisht çfarë do të kërkojë tjetra.",
+        "faq": [
+            ("A mund ta garantojë dikush vendin e parë?",
+             "Jo, dhe ata që e bëjnë mbështeten te fakti se ti nuk "
+             "kontrollon pas. Radhën nuk e vendos askush jashtë Google, dhe "
+             "kush do të mundej vërtet nuk do ta shiste me këto çmime."),
+            ("Pse gjysma e ngadaltë do kaq shumë?",
+             "Sepse krahasimi është me faqe që ekzistojnë prej më kohësh dhe "
+             "janë lidhur më shpesh, dhe ai krahasim është gjithë mekanizmi. "
+             "Nuk ka version të tij që zgjidhet brenda dy javësh."),
+            ("A ka gjë më të shpejtë?",
+             "Skeda, dhe reklamat me pagesë. Reklamat punojnë ditën që i "
+             "ndez dhe mbarojnë ditën që i fik, gjë që i bën të dobishme për "
+             "të mbuluar boshllëkun ndërsa poshtë rritet puna e ngadaltë."),
+            ("A paguaj çdo muaj për një vit?",
+             "Jo domosdoshmërisht. Pjesa më e madhe e kësaj është punë që "
+             "një herë e bërë mbetet e bërë: struktura, faqet, skeda. Ajo që "
+             "përsëritet vërtet është shumë më e vogël nga sa faturojnë "
+             "shumica e agjencive."),
+            ("Konkurrenti im e bën prej vitesh. Atëherë?",
+             "Atëherë këtë vit nuk ia merr frazën e tij më të mirë. I merr "
+             "të dhjetat për të cilat nuk shkroi kurrë një faqe, që aty "
+             "ishin klientët gjithsesi."),
+        ],
+        "related": [("/seo/", "SEO dhe kërkimi lokal"),
+                    ("/geo/", "Kërkimi me AI")],
+    },
+
+    {
+        "slug": "google-business-profile-albania",
+        "src": "827e03f2",
+        "date": "2026-08-21",
+        "updated": "2026-08-21",
+        "topic": "Kërkim lokal",
+        "work": None,
+        "service": ("/seo/", "SEO dhe kërkimi lokal"),
+
+        "title": "Profili i Google për një biznes në Shqipëri",
+        "h1": "Gjëja falas që gati askush nuk e mbaron.",
+        "summary": "Një kalim fushë për fushë nëpër skedën që vendos nëse të "
+                   "merr në telefon dikush aty afër, dhe katër vendet ku "
+                   "njerëzit dorëzohen.",
+        "standfirst": "Nuk kushton asgjë, bëhet brenda një pasditeje, dhe "
+                      "rreth dy të tretat e bizneseve rreth teje e kanë lënë "
+                      "gati të gjithën bosh.",
+        "description": "Si ta ndërtosh si duhet një profil Google në "
+                       "Shqipëri: kategoritë, oraret, zonat e shërbimit, "
+                       "fotot, pyetjet dhe vlerësimet, dhe gabimet që e "
+                       "mbajnë skedën të padukshme.",
+        "og_desc": "Një pasdite e shkruar vendos nëse të sheh ndonjëherë "
+                   "dikush 400 metra larg.",
+
+        "body": [
+            ("Nis nga kategoria, sepse gjithçka varet prej saj", [
+                "<p>Kategoria kryesore është sinjali më i fortë i gjithë "
+                "skedës, dhe vendos për cilat kërkime je fare i pranueshëm. "
+                "Zgjidh atë që thotë çfarë bën kryesisht, jo më të gjerën që "
+                "gjendet.</p>",
+                "<p>Pastaj shto ato dytësoret për pjesën tjetër. Një ofiçinë "
+                "që bën edhe goma duhet ta thotë; një skedë me një kategori "
+                "të paqartë nuk garon për asgjë të caktuar.</p>",
+            ]),
+            ("Oraret, përfshirë ato që i zënë njerëzit në befasi", [
+                "<p>Oraret e zakonshme janë pjesa e lehtë. Ajo që të humbet "
+                "klientë janë ato të veçantat: ndryshimi i verës, festa, "
+                "pasditja kur mbyll më herët.</p>",
+                "<p>Një skedë që thotë hapur kur dera është e mbyllur fiton "
+                "një vlerësim të keq nga dikush që erdhi me makinë, dhe ai "
+                "vlerësim i mbijeton gabimit me vite.</p>",
+            ]),
+            ("Ku punon, nëse shkon ti te klienti", [
+                "<p>Kush lëviz duhet të vendosë një zonë shërbimi në vend që "
+                "të shtiret se furgoni është vitrinë. Është lloj tjetër "
+                "skede dhe sillet ndryshe në rezultate.</p>",
+                "<p>Mbaje të ndershme zonën. Të pretendosh gjithë vendin të "
+                "bën më të dobët kudo në vend që më të fortë diku.</p>",
+            ]),
+            ("Foto dhe pjesa që e kapërcejnë të gjithë", [
+                "<p>Fotot e vendit të vërtetë ia kalojnë çdo gjëje të blerë, "
+                "dhe një grusht të bëra me dritë dite mjafton. Brendësia ka "
+                "më shumë rëndësi se tabela, sepse pyetja që bëhet është si "
+                "është atje brenda.</p>",
+                "<p>Pastaj përgjigju pyetjeve që të bëjnë vazhdimisht në "
+                "telefon, brenda vetë skedës, në çdo gjuhë që përdorin "
+                "klientët e tu. Ai seksion rri bosh në gati çdo profil të "
+                "vendit.</p>",
+            ]),
+            ("Vlerësime, të kërkuara dhe jo të pritura", [
+                "<p>Kërkoji në çastin kur dikush thotë se është i kënaqur, "
+                "jo dy javë më vonë me mesazh. Një rrjedhë e qëndrueshme dhe "
+                "e freskët vlen më shumë se një grumbull nga tre vjet më "
+                "parë.</p>",
+                "<p>Përgjigju me qetësi dhe publikisht atyre të këqijave. "
+                "Përgjigjja nuk shkruhet për atë që u ankua; shkruhet për të "
+                "radhës që e lexon.</p>",
+            ]),
+        ],
+        "payoff": "Na dërgo skedën tënde dhe të themi cilat fusha janë bosh "
+                  "dhe cila prej tyre po të kushton telefonata.",
+        "faq": [
+            ("A është vërtet falas?",
+             "Krejtësisht, dhe mbetet falas. Kush të merr në telefon për të "
+             "të shitur një skedë Google ose për të ta verifikuar me pagesë "
+             "po të shet një gjë që e zotëron tashmë falas."),
+            ("Nuk kam dyqan fizik. A mund ta kem prapë?",
+             "Po, si biznes me zonë shërbimi. Jep një zonë që mbulon në vend "
+             "të një adrese ku mund të vijnë, dhe adresa jote mbetet e "
+             "fshehur. Ky është rregullimi i saktë për një zanat që punon me "
+             "furgon."),
+            ("Po nëse skedën e ka marrë dikush tjetër?",
+             "Ndodh, zakonisht vite më parë dhe shpesh nga një ish punonjës "
+             "ose nga një direktori. Ka një procedurë kërkese, do disa javë, "
+             "dhe ia vlen të nisë sot në vend që t'i ndërtosh përreth."),
+            ("Skeda duhet shkruar shqip apo anglisht?",
+             "Shkruaje në gjuhën në të cilën kërkojnë klientët e tu, që në "
+             "këtë bregdet shpesh është më shumë se një. Përshkrimi dhe "
+             "pyetjet mund të mbajnë më shumë se një gjuhë, dhe shumica e "
+             "konkurrentëve përdorin saktësisht një."),
+            ("A ndihmon të postosh përditësime?",
+             "Pak, dhe shumë më pak se fushat më sipër. Bëj së pari "
+             "kategoritë, oraret, fotot dhe vlerësimet. Nëse postimi është e "
+             "vetmja gjë për të cilën ke energji, është gjëja e gabuar ku ta "
+             "shpenzosh."),
+        ],
+        "related": [("/seo/", "SEO dhe kërkimi lokal"),
+                    ("/geo/", "Kërkimi me AI")],
+    },
+
+    {
+        "slug": "wordpress-or-a-built-site",
+        "src": "535f610a",
+        "date": "2026-08-21",
+        "updated": "2026-08-21",
+        "topic": "Faqe interneti",
+        "work": None,
+        "service": ("/web-design/", "Faqe interneti"),
+
+        "title": "WordPress apo një faqe e bërë për ty",
+        "h1": "Njërën e merr me qira, tjetra është e jotja.",
+        "summary": "Një krahasim i ndershëm nga dikush që nuk shet "
+                   "WordPress, përfshirë rastet ku WordPress është "
+                   "përgjigjja e duhur.",
+        "standfirst": "Të dyja punojnë. Prishen ndryshe, kushtojnë ndryshe "
+                      "përgjatë pesë vitesh, dhe zgjedhja ka të bëjë "
+                      "kryesisht me atë që do ta mirëmbajë.",
+        "description": "WordPress apo një faqe e ndërtuar me porosi në "
+                       "Shqipëri: sa kushton secila për pesë vjet, si "
+                       "prishet secila, dhe rastet ku WordPress është vërtet "
+                       "përgjigjja më e mirë.",
+        "og_desc": "Të dyja punojnë. Prishen ndryshe, dhe njëra vazhdon të "
+                   "të faturojë.",
+
+        "body": [
+            ("Për çfarë është vërtet i mirë WordPress", [
+                "<p>Dikush tjetër i ka zgjidhur tashmë një mijë probleme për "
+                "ty, dhe ka një shtojcë për gati gjithçka. Nëse muajin "
+                "tjetër të duhet një zonë anëtarësh, një forum ose një dyqan "
+                "i ndërlikuar, ai avantazh është i vërtetë.</p>",
+                "<p>Është edhe i lehtë për t'ia dorëzuar një zhvilluesi "
+                "tjetër, sepse e njohin shumë veta. Kjo ka më shumë rëndësi "
+                "nga sa e pranojnë zakonisht studiot si e jona.</p>",
+            ]),
+            ("Sa kushton pasi të jetë bërë", [
+                "<p>Shtojcat përditësohen, temat përditësohen, dhe ato që "
+                "pushojnë së mirëmbajturi bëhen mënyra si dikush hyn brenda. "
+                "Ajo mirëmbajtje është punë e vërtetë e përsëritur, qofsh ti "
+                "që e paguan apo ti që e bën në mesnatë.</p>",
+                "<p>Shto një strehim që e nxjerr dot, një licencë a dy, dhe "
+                "shifra mujore që të thanë del se nuk ishte shifra.</p>",
+            ]),
+            ("Çfarë heq dorë një faqe me porosi dhe çfarë mban", [
+                "<p>Heq dorë nga rafti i shtojcave. Nëse do një veçori që "
+                "nuk e ka shkruar askush, dikush duhet ta shkruajë, dhe ajo "
+                "është kohë.</p>",
+                "<p>Ajo që mban është shpejtësia dhe qetësia. Asgjë për të "
+                "përditësuar çdo javë, asgjë për të licencuar, dhe një faqe "
+                "që hapet para se klienti të heqë dorë sepse nuk ka gati "
+                "asgjë për t'u ngarkuar.</p>",
+            ]),
+            ("Pyetja që e vendos", [
+                "<p>Pyet kush do të merret me këtë pas dy vitesh. Nëse "
+                "përgjigjja është një njeri që e ka qejf, WordPress është në "
+                "rregull dhe fleksibël. Nëse përgjigjja është askush, një "
+                "faqe pa gjë për të mirëmbajtur është më e sigurta për ta "
+                "pasur.</p>",
+                "<p>Dyqanet në këtë faqe janë rasti i dytë. I ndryshojnë "
+                "vetë fjalët dhe fotot nga telefoni dhe nuk ka gjë tjetër "
+                "për ta mbajtur gjallë.</p>",
+            ]),
+        ],
+        "payoff": "Na thuaj çfarë duhet të bëjë faqja pas dy vitesh dhe të "
+                  "themi me ndershmëri cilën nga të dyja duhet të blesh.",
+        "faq": [
+            ("A refuzoni të punoni me WordPress?",
+             "Jo. Mjaft nga puna këtu është riparim faqesh që i ka ndërtuar "
+             "dikush tjetër, dhe një pjesë e mirë e tyre janë WordPress. Ajo "
+             "që nuk do ta bëjmë është të të faturojmë çdo muaj për një "
+             "platformë që i bën të pamundura riparimet e nevojshme."),
+            ("A është më e vështirë të ikësh nga një faqe me porosi?",
+             "Nuk duhet të jetë, dhe nga tonat nuk është: kodi dhe çdo "
+             "llogari janë në emrin tënd, dhe një zhvillues lexon HTML dhe "
+             "CSS të thjeshtë. Të jesh i vështirë për t'u lënë është model "
+             "biznesi, jo fakt teknik."),
+            ("Po Wix ose Shopify?",
+             "Shopify e meriton tarifën nëse shet vërtet online dhe në sasi, "
+             "sepse zgjidh pagesat, gjendjen dhe taksat. Wix është i njëjti "
+             "shkëmbim si WordPress me më pak kontroll dhe një faturë që nuk "
+             "mbaron kurrë."),
+            ("Cila është më e mirë për kërkimin?",
+             "Asnjëra, në vetvete. E vendosin shpejtësia, struktura dhe nëse "
+             "faqet i përgjigjen asaj që dikush shkroi. Një WordPress i "
+             "ngadaltë humbet përballë një të shpejti, dhe një faqe me "
+             "porosi e ngadaltë humbet përballë të dyjave."),
+            ("A mund ta ndryshoj vetë një faqe me porosi?",
+             "Po, dhe është kërkesë e jo shtesë. Nëse për të ndryshuar një "
+             "çmim duhet të na marrësh në telefon, çmimi pushon së "
+             "ndryshuari dhe faqja fillon të gënjejë për mallin tënd."),
+        ],
+        "related": [("/web-design/", "Faqe interneti"),
+                    ("/systems/", "Software me porosi")],
+    },
+
+    {
+        "slug": "website-or-just-instagram",
+        "src": "dfaa4878",
+        "date": "2026-08-21",
+        "updated": "2026-08-21",
+        "topic": "Faqe interneti",
+        "work": None,
+        "service": ("/web-design/", "Faqe interneti"),
+
+        "title": "Një faqe, apo mjafton Instagrami?",
+        "h1": "Në Instagram shohin. Nuk është aty ku kërkojnë.",
+        "summary": "Rastet e ndershme kur faqja mund të kapërcehet, dhe tri "
+                   "gjërat që një llogari sociale nga struktura nuk mund t'i "
+                   "bëjë për ty.",
+        "standfirst": "Për disa biznese një llogari vërtet mjafton, tani për "
+                      "tani. Ja si ta kuptosh nëse yti është një prej tyre.",
+        "description": "A të duhet një faqe nëse ke Instagram? Rastet kur "
+                       "një llogari sociale mjafton vërtet, dhe tri gjërat "
+                       "që nuk i bën dot me asnjë numër ndjekësish.",
+        "og_desc": "Ndonjëherë një llogari vërtet mjafton. Tri gjëra që "
+                   "prapë nuk i bën dot.",
+
+        "body": [
+            ("Kur një llogari vërtet mjafton", [
+                "<p>Nëse shet duke folur, klientët e tu të ndjekin tashmë, "
+                "dhe të rinjtë vijnë sepse dikush etiketoi një shok, atëherë "
+                "një faqe do të rrinte aty duke qenë e bukur dhe pa bërë "
+                "asgjë.</p>",
+                "<p>Kjo është situatë e vërtetë dhe përshkruan mjaft dyqane "
+                "të vogla. Shpenzoji ato para në mall ose në fotografi.</p>",
+            ]),
+            ("Gjëja e parë që nuk e bën dot: të kërkohet", [
+                "<p>Kujt shkruan një fustan dhe një qytet në një motor "
+                "kërkimi nuk do t'i dalë rrjeti yt i fotove. Motorët lexojnë "
+                "faqe, dhe një përshkrim brenda një aplikacioni nuk është "
+                "faqe që ata ta peshojnë.</p>",
+                "<p>Aty është gjithë hendeku. Jo se sociali nuk punon, por "
+                "se punon vetëm për ata që tashmë dinë të të kërkojnë.</p>",
+            ]),
+            ("E dyta: të citohet nga një asistent", [
+                "<p>Pyet një asistent për një dyqan si i yti dhe përgjigjet "
+                "nga tekst që mund ta lexojë e ta verifikojë. Një biznes që "
+                "ekziston vetëm brenda një aplikacioni nuk i jep gjë për të "
+                "lexuar, ndaj emërton dikë tjetër.</p>",
+                "<p>Kjo është më e re dhe po lëviz shpejt, dhe prandaj ia "
+                "vlen ta dish para se të bëhet urgjente.</p>",
+            ]),
+            ("E treta: të jetë e jotja", [
+                "<p>Një llogari është hua. Rregullat ndryshojnë, shtrirja "
+                "ndryshon, dhe herë pas here llogaria një të martë nuk është "
+                "më aty për një arsye që askush nuk do të ta shpjegojë.</p>",
+                "<p>Gjithçka mbi një domen tëndin i mbijeton gjithë kësaj, "
+                "dhe ky është argumenti për të pasur ku t'i ulësh njerëzit "
+                "edhe nëse shikimi ndodh gjetiu.</p>",
+            ]),
+        ],
+        "payoff": "Na dërgo llogarinë dhe çfarë shet, dhe të themi me "
+                  "ndershmëri nëse një faqe do t'i nxirrte paratë tashmë.",
+        "faq": [
+            ("A mund të kem skedë dhe llogari e asnjë faqe?",
+             "Për një farë kohe sinqerisht po, dhe për disa zanate "
+             "përgjithmonë. Skeda mbulon të gjendurit aty afër dhe llogaria "
+             "mbulon të shikuarit. Ajo që nuk e mbulon asnjëra është faqja "
+             "që i përgjigjet një pyetjeje me hollësi."),
+            ("A më sjell një faqe më shumë ndjekës?",
+             "Jo, dhe kush ta premton po ngatërron dy punë të ndryshme. Një "
+             "faqe sjell njerëz që po kërkonin atë që shet dhe nuk kishin "
+             "dëgjuar kurrë për ty, që është grup krejt tjetër."),
+            ("A mund ta tregojë faqja rrjetin tim të Instagramit?",
+             "Jo duke e tërhequr drejtpërdrejt. Asgjë në faqet që ndërtojmë "
+             "nuk ngarkohet nga dikush tjetër, dhe kjo është pjesë e arsyes "
+             "pse janë të shpejta."),
+            ("Cila është faqja më e vogël e dobishme?",
+             "Një faqe që thotë çfarë shet, ku je, kur je hapur dhe si të të "
+             "gjejnë, në gjuhët që përdorin klientët e tu. Është punë vërtet "
+             "e vogël dhe është më shumë nga sa kanë shumica e "
+             "konkurrentëve."),
+            ("Postoj çdo ditë dhe nuk po ecën. A e rregullon një faqe?",
+             "Ndoshta jo vetëm. Nëse postimi çdo ditë nuk kthen shitje, "
+             "problemi zakonisht është çfarë shet, kujt, ose me çfarë çmimi, "
+             "dhe një faqe e ndërtuar mbi atë pyetje nuk e zgjidh."),
+        ],
+        "related": [("/web-design/", "Faqe interneti"),
+                    ("/meta-ads/", "Meta ads")],
+    },
+
 ]
 
 # /blog/, the index over those records. The soft wraps are placed for this text

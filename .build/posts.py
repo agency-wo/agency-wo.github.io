@@ -61,7 +61,7 @@ POSTS = [
         "work": "iglisi-watch",
         "service": ("/seo/", "SEO and local search"),
 
-        "title": "What a new shop's first 3 months look like",
+        "title": "How long a new shop takes to rank on Google",
         "h1": "This is what a new shop's first 3 months on Google look like.",
         "summary": "The real Search Console chart for a business that started "
                    "with no website, including the parts nobody screenshots.",
@@ -157,7 +157,7 @@ POSTS = [
         "work": "iglisi-watch",
         "service": ("/geo/", "AI search"),
 
-        "title": "What nobody can promise you about AI search",
+        "title": "AI search: what nobody can promise you",
         "h1": "What nobody can promise you about AI search.",
         "summary": "The 40% figure everyone quotes does not mean what they "
                    "say. And 97% of llms.txt files have never been read.",
@@ -274,7 +274,7 @@ POSTS = [
         "work": "iglisi-watch",
         "service": ("/systems/", "Custom software"),
 
-        "title": "The 4 money lines that were really 5",
+        "title": "The money numbers a small shop should track",
         "h1": "The 4 money lines that were really 5.",
         "summary": "A bug that hid inside a chart for a whole phase, and what "
                    "it says about the software a small business runs on.",
@@ -369,7 +369,7 @@ POSTS = [
         "work": "iglisi-watch",
         "service": ("/web-design/", "Websites"),
 
-        "title": "A website in 3 languages that stays in step",
+        "title": "A website in Albanian, Italian and English",
         "h1": "A website in 3 languages, and nobody retypes anything.",
         "summary": "Most multilingual sites drift until 2 of the 3 languages "
                    "are wrong. Here is the build that cannot.",
@@ -441,7 +441,7 @@ POSTS = [
         "work": "iglisi-watch",
         "service": ("/seo/", "SEO and local search"),
 
-        "title": "The last 4 weeks beat the first 8",
+        "title": "SEO results: why month 3 beats month 1",
         "h1": "The last 4 weeks of the quarter beat the first 8.",
         "summary": "Of 560 clicks in a quarter, 301 arrived in the final 28 "
                    "days. What that curve means before you spend anything.",
@@ -509,7 +509,7 @@ POSTS = [
         "work": "victoria-boutique",
         "service": ("/web-design/", "Websites"),
 
-        "title": "The shop that updates its site from a phone",
+        "title": "A website you update yourself from a phone",
         "h1": "She updates the site from her phone, and pays nobody.",
         "summary": "New pieces go on the site in about a minute, from a "
                    "phone, with no licence and no monthly fee.",
@@ -574,7 +574,7 @@ POSTS = [
         "work": "pro-affy",
         "service": ("/meta-ads/", "Meta ads"),
 
-        "title": "The job goes to whoever answers first",
+        "title": "Why the fastest reply wins the job",
         "h1": "The job goes to whoever answers first.",
         "summary": "Ads buy the call. What decides whether you win the job "
                    "happens in the minutes after it.",
@@ -641,7 +641,7 @@ POSTS = [
         "work": "iglisi-watch",
         "service": ("/seo/", "SEO and local search"),
 
-        "title": "How a watch shop gets found",
+        "title": "SEO for watch shops and jewellers",
         "h1": "A watch shop is 2 businesses, and only 1 of them is urgent.",
         "summary": "Repairs get searched in a hurry. Watches get researched "
                    "for weeks. One shop has to answer both, and they do not "
@@ -752,7 +752,7 @@ POSTS = [
         "work": "victoria-boutique",
         "service": ("/web-design/", "Websites"),
 
-        "title": "A boutique site that is never out of date",
+        "title": "A website for a boutique with changing stock",
         "h1": "A boutique's problem is not traffic. It is going stale.",
         "summary": "Stock turns over weekly. A site that shows last season is "
                    "worse for a boutique than no site at all.",
@@ -852,7 +852,7 @@ POSTS = [
         "work": "intimo-bruna",
         "service": ("/web-design/", "Websites"),
 
-        "title": "Why lingerie sells in a conversation",
+        "title": "A website for a lingerie shop",
         "h1": "The checkout is the wrong thing to build here.",
         "summary": "Sizing is uncertain and the purchase is private. Both push "
                    "the customer towards asking rather than clicking buy.",
@@ -947,7 +947,7 @@ POSTS = [
         "work": "pro-affy",
         "service": ("/seo/", "SEO and local search"),
 
-        "title": "The trade that sells on the coldest day",
+        "title": "SEO for heating and cooling engineers",
         "h1": "Your busiest week decides most of your year.",
         "summary": "Heating demand arrives in a few cold days, from people "
                    "searching on a phone at an hour nobody plans for.",
@@ -1043,7 +1043,7 @@ POSTS = [
         "work": None,
         "service": ("/seo/", "SEO and local search"),
 
-        "title": "The menu nobody can read",
+        "title": "SEO for restaurants: the menu Google reads",
         "h1": "Your menu is a photograph, so nobody can search it.",
         "summary": "A menu saved as an image is invisible to Google and to "
                    "every assistant somebody asks for dinner.",
@@ -1143,7 +1143,7 @@ POSTS = [
         "work": None,
         "service": ("/geo/", "AI search"),
 
-        "title": "Where guests start looking has moved",
+        "title": "AI search for hotels and guesthouses",
         "h1": "The same guest costs you less if they arrive directly.",
         "summary": "Search is a smaller front door for hotels than it was, and "
                    "somebody else is charging you for the guests who use "
@@ -1243,7 +1243,7 @@ POSTS = [
         "work": None,
         "service": ("/web-design/", "Websites"),
 
-        "title": "A salon lives on the second visit",
+        "title": "A website for a hairdresser or salon",
         "h1": "Getting found is the easy half. Getting them back is the "
               "business.",
         "summary": "A salon does not have a traffic problem. It has a gap "
@@ -1337,7 +1337,7 @@ POSTS = [
         "work": None,
         "service": ("/web-design/", "Websites"),
 
-        "title": "Most patients arrive recommended",
+        "title": "A website for a dental clinic",
         "h1": "Somebody gave them your name. The site decides what happens "
               "next.",
         "summary": "A dentist is chosen on somebody's word far more often than "
@@ -1440,7 +1440,7 @@ POSTS = [
         "work": None,
         "service": ("/seo/", "SEO and local search"),
 
-        "title": "Nobody searches for a mechanic",
+        "title": "SEO for a garage: what customers search",
         "h1": "They search the noise the car is making.",
         "summary": "Drivers describe a symptom, not a service, and the garage "
                    "that wrote the symptom down is the one they find.",
@@ -1532,7 +1532,7 @@ POSTS = [
         "work": None,
         "service": ("/meta-ads/", "Meta ads"),
 
-        "title": "Your marketing is for sellers",
+        "title": "Facebook ads for estate agents",
         "h1": "The portal already has the buyers. You are competing for the "
               "seller.",
         "summary": "Buyers are on the portal whatever you do. The listing is "
@@ -1616,6 +1616,767 @@ POSTS = [
         "related": [("/meta-ads/", "Meta ads"),
                     ("/web-design/", "Websites")],
     },
+    {
+        "slug": "what-a-website-costs-in-albania",
+        "date": "2026-08-21",
+        "updated": "2026-08-21",
+        "topic": "Websites",
+        "work": None,
+        "service": ("/web-design/", "Websites"),
+
+        "title": "What a website costs in Albania",
+        "h1": "What a website costs here, and what moves the number.",
+        "summary": "The four things that decide the price, and why a quote "
+                   "given before anybody has looked is a guess wearing a "
+                   "number.",
+        "standfirst": "Nobody can price a website down the phone. These are "
+                      "the four things that actually move it, so you can "
+                      "work out roughly where you sit before you ask anyone.",
+        "description": "What a website costs in Albania and what decides the "
+                       "number: how many pages, how many languages, whether "
+                       "it holds stock or bookings, and whether the "
+                       "photographs exist yet.",
+        "og_desc": "Four things decide what a website costs. How clever the "
+                   "design looks is not one of them.",
+
+        "body": [
+            ("Why nobody quotes down the phone", [
+                "<p>A website is not a product with a shelf price. It is a "
+                "stack of decisions, and until somebody has seen what you "
+                "sell and who you are up against, a figure is a guess "
+                "wearing a number.</p>",
+                "<p>Looking before quoting is free, and it is not a sales "
+                "device. It is the only way to hand you a price that is "
+                "still true a month later.</p>",
+            ]),
+            ("The four things that move it", [
+                "<p><strong>How many pages.</strong> A shop with one thing "
+                "to say needs about five. A clinic describing eight "
+                "treatments needs eight more, and every one of them is a "
+                "page somebody has to write.</p>",
+                "<p><strong>How many languages.</strong> Albanian alone is "
+                "one job. Albanian, Italian and English is three, and not "
+                "three copies of one page: each language wants its own words "
+                "for the same idea.</p>",
+                "<p><strong>Whether it holds anything.</strong> Showing what "
+                "you sell is small. Taking payment, tracking what is left "
+                "and handling a return are three separate jobs with three "
+                "separate ways to go wrong.</p>",
+                "<p><strong>Whether the photographs exist.</strong> Pictures "
+                "of your own place already on your phone are a week saved. "
+                "Everything still to be shot is a week added.</p>",
+            ]),
+            ("What does not move it", [
+                "<p>How clever the design looks. A page that loads before "
+                "the customer gives up and answers in the language they "
+                "typed will outsell a beautiful one, and it is not the "
+                "expensive part to build.</p>",
+                "<p>Nor the platform, at least not the way people expect. "
+                "Nothing here is licensed by the month, so no fee sits "
+                "underneath the price forever.</p>",
+            ]),
+            ("The question behind the question", [
+                "<p>What people usually mean is whether they can afford to "
+                "start at all. Nearly always the answer is yes, because the "
+                "first thing worth doing costs nothing.</p>",
+                "<p>Fill in the Google Business Profile properly, in every "
+                "language your customers use. That is an afternoon, and it "
+                "is what decides whether somebody 400 metres away rings you "
+                "or the shop down the road.</p>",
+            ]),
+            ("What arrives before you commit", [
+                "<p>A written plan: what we would change, in what order, why "
+                "each part matters, and the price for all of it. One page, "
+                "before any work starts.</p>",
+                "<p>If the honest answer is that you do not need us yet, "
+                "that is what you get, and it costs the same as the "
+                "plan.</p>",
+            ]),
+        ],
+        "payoff": "Send us the site you have, or the address you would use, "
+                  "and we will tell you which of the four is driving your "
+                  "number.",
+        "faq": [
+            ("Can you give me a rough range right now?",
+             "Not honestly. A figure invented to keep you on the phone is "
+             "worth less to you than no figure. What we can do inside a day "
+             "is look at your site, your competitors and what people are "
+             "typing, and come back with a real number and the working "
+             "behind it."),
+            ("Is a cheaper site a worse site?",
+             "Not automatically. A cheap one that loads fast, says what you "
+             "sell and answers in your customer's language beats an "
+             "expensive one that does neither. What cheap usually costs you "
+             "is the part you cannot see: speed, structure, and whether "
+             "anything can find it."),
+            ("Do I pay every month?",
+             "Not to us, for the site itself. There is no licence and no "
+             "platform fee underneath it. A domain name costs something once "
+             "a year and that is usually the whole running cost. Ads are the "
+             "exception, and they are a flat fee kept separate."),
+            ("I already paid somebody and it went wrong. Start again?",
+             "Usually not. Most of the time the pages can be kept and only "
+             "the parts stopping them being found need repairing. Which of "
+             "the two you are looking at is something we can tell you before "
+             "you spend anything."),
+            ("Who owns it when it is finished?",
+             "You do: the domain, the code and every account, in your name "
+             "from the first day. That is not generosity, it is the only "
+             "arrangement that leaves you free to walk away from us."),
+        ],
+        "related": [("/web-design/", "Websites"),
+                    ("/seo/", "SEO and local search")],
+    },
+
+    {
+        "slug": "how-to-come-up-first-on-google",
+        "date": "2026-08-21",
+        "updated": "2026-08-21",
+        "topic": "Local search",
+        "work": "iglisi-watch",
+        "service": ("/seo/", "SEO and local search"),
+
+        "title": "How to come up first on Google",
+        "h1": "There are two first places, and one of them is free.",
+        "summary": "The map and the blue links are different competitions "
+                   "with different rules, and most small businesses should "
+                   "enter the free one first.",
+        "standfirst": "Everybody asks for first place. On a phone there are "
+                      "two of them, they are won differently, and the one "
+                      "that matters most locally costs nothing to enter.",
+        "description": "How to come up first on Google in Albania: the map "
+                       "listing and the results underneath are separate "
+                       "competitions, won by different things. Which to fix "
+                       "first.",
+        "og_desc": "Two first places, different rules. The one that costs "
+                   "nothing is usually the one worth winning.",
+
+        "body": [
+            ("Two first places, not one", [
+                "<p>Search for something local on a phone and the map comes "
+                "up before anything else: three businesses, a distance, a "
+                "star rating. Under it sit the ordinary results, the ones "
+                "people mean when they say website.</p>",
+                "<p>They are separate competitions. The map runs on your "
+                "listing, your reviews and how near you are to whoever is "
+                "searching. The results beneath run on your site. Fixing one "
+                "does very little for the other.</p>",
+            ]),
+            ("Win the free one first", [
+                "<p>The map listing is a Google Business Profile and it "
+                "costs nothing. Categories, every service named, hours that "
+                "are still right at Christmas, photographs of the real "
+                "place, and the questions people keep ringing to ask, "
+                "answered on the page.</p>",
+                "<p>Most businesses fill in about a third of it and then "
+                "wonder why the shop down the road is above them.</p>",
+            ]),
+            ("Then the part that takes months", [
+                "<p>The results underneath move slowly, because you are "
+                "being compared with everybody who has been at it longer. "
+                "That work is real and it is worth doing, but anybody "
+                "promising it in weeks is selling you something.</p>",
+                "<p>What it needs is pages that answer what somebody typed, "
+                "written in the language they typed it in, on a site fast "
+                "enough that they are still there when it loads.</p>",
+            ]),
+            ("What it looked like for one shop", [
+                "<p>A watch shop in Durres had no website in May. By August, "
+                "search was sending it 560 clicks a quarter at an average "
+                "position of 8.4, which is the bottom of the first page "
+                "rather than the top of it.</p>",
+                "<p>That is the honest shape of it: not first for everything "
+                "in a month, but findable, from nothing, in one summer.</p>",
+            ]),
+            ("What to do this week", [
+                "<p>Claim the listing if it is not yours yet. Fill in every "
+                "field. Ask the last four happy customers for a review, at "
+                "the moment they say they are pleased rather than a "
+                "fortnight later.</p>",
+                "<p>None of that is a project, and it is the half of the job "
+                "most people skip on their way to arguing about the "
+                "website.</p>",
+            ]),
+        ],
+        "payoff": "Send us the address and we will tell you which of the two "
+                  "competitions you are actually losing.",
+        "faq": [
+            ("How long before I am first?",
+             "For the map, sometimes weeks, because most competitors have "
+             "not filled their listing in either. For the results "
+             "underneath, six to twelve months against anybody established. "
+             "Any date more precise than that is somebody guessing at your "
+             "expense."),
+            ("Can I pay Google to be first?",
+             "You can pay to sit above it, labelled as an ad, and that stops "
+             "the day you stop paying. The map placement and the results "
+             "underneath cannot be bought, which is exactly why they are "
+             "worth having."),
+            ("Does it matter that my competitor has more reviews?",
+             "It matters, and it is the most fixable gap on this list. "
+             "Reviews are asked for, not waited for. A steady handful of "
+             "recent ones beats a pile from three years ago."),
+            ("I have no website. Is the listing enough?",
+             "For some trades, for a while, genuinely yes. A repair shop "
+             "reached from a map and a phone number can trade on that. What "
+             "the listing cannot do is hold the pages that answer what "
+             "somebody typed, which is where the rest of the work lives."),
+            ("Do I need to be in Tirana to rank in Tirana?",
+             "For the map, distance counts, so a Tirana searcher standing in "
+             "Tirana sees Tirana businesses. For the results underneath, no. "
+             "We are in Durres and the building is done remotely, which is "
+             "why we say so plainly rather than renting an address."),
+        ],
+        "related": [("/seo/", "SEO and local search"),
+                    ("/geo/", "AI search")],
+    },
+
+    {
+        "slug": "web-design-durres",
+        "date": "2026-08-21",
+        "updated": "2026-08-21",
+        "topic": "Websites",
+        "work": "iglisi-watch",
+        "service": ("/web-design/", "Websites"),
+
+        "title": "Web design in Durres",
+        "h1": "We are in Durres, and so is everything we have built.",
+        "summary": "What hiring somebody in the same city actually changes, "
+                   "and the four addresses you can go and look at.",
+        "standfirst": "Nearly everything on this site was made for a "
+                      "business within a few kilometres of here. That "
+                      "changes the work more than most people expect.",
+        "description": "Web design in Durres for shops, trades and clinics. "
+                       "What a local build involves, who it has been done "
+                       "for, and what you can go and check yourself.",
+        "og_desc": "Four businesses in this city, each with a page you can "
+                   "open and an address you can walk to.",
+
+        "body": [
+            ("Who this is for", [
+                "<p>Shops on a street where the customer is already nearby. "
+                "Trades who get rung rather than browsed. Clinics that "
+                "people look up after somebody handed them a name.</p>",
+                "<p>All three get found the same way, and none of them needs "
+                "the sort of site an agency sells to a company with a "
+                "marketing department.</p>",
+            ]),
+            ("What the same city changes", [
+                "<p>You can walk in. That sounds minor and it is the "
+                "difference between six weeks and three, because a question "
+                "gets answered the afternoon it comes up instead of sitting "
+                "in a thread for days.</p>",
+                "<p>It also means the pictures are of your own room in your "
+                "own light, which is the part a customer uses to work out "
+                "whether the place is real.</p>",
+            ]),
+            ("What has been built here", [
+                "<p>A watch shop on Rruga Aleksander Goga, a boutique, a "
+                "lingerie shop and a printing business. Each has a page on "
+                "this site saying what was made and what happened "
+                "afterwards.</p>",
+                "<p>The watch shop is the one carrying numbers, because it "
+                "began with nothing in May and there is an export to put "
+                "next to the claim.</p>",
+            ]),
+            ("The size of the pond", [
+                "<p>This is a smaller market than the capital, and that cuts "
+                "both ways: fewer people typing, and far fewer businesses "
+                "who have troubled themselves to be findable at all.</p>",
+                "<p>The second half is the opening. Most competitors here "
+                "have a listing filled in a third of the way and nothing "
+                "worth reading behind it.</p>",
+            ]),
+        ],
+        "payoff": "Tell us the street and what you sell, and we will show "
+                  "you who is sitting above you today and what put them "
+                  "there.",
+        "faq": [
+            ("Do I have to come to an office?",
+             "No, and there is not one in the way you are picturing. Most of "
+             "it happens by message and a call. Being in the same city makes "
+             "meeting easy when it helps; it is not a requirement anybody "
+             "imposes on you."),
+            ("Do you only take work in this city?",
+             "No. It is simply where the four clients so far have been, "
+             "which is why every example is local. The building is remote, "
+             "so the coast, the capital and anywhere else in the country are "
+             "the same job."),
+            ("Can I see something you made?",
+             "Yes, and that is why they are on the site. Four businesses, a "
+             "page each, with the live address printed on it so you can open "
+             "the real thing instead of looking at a screenshot of it."),
+            ("How long does a build take?",
+             "Three to six weeks for most shops, and the variable is almost "
+             "never us. It is how fast the words and the pictures arrive, "
+             "which is why both are asked for at the very start."),
+            ("Should it be in Albanian only?",
+             "Only if that is genuinely who buys from you. A good deal of "
+             "trade on this coast happens in Italian and English, and a shop "
+             "that exists in one language cannot be found by the other two."),
+        ],
+        "related": [("/web-design/", "Websites"),
+                    ("/seo/", "SEO and local search")],
+    },
+
+    {
+        "slug": "web-design-tirana",
+        "date": "2026-08-21",
+        "updated": "2026-08-21",
+        "topic": "Websites",
+        "work": None,
+        "service": ("/web-design/", "Websites"),
+
+        "title": "Web design in Tirana",
+        "h1": "We are not in Tirana, and for this work that changes nothing.",
+        "summary": "A bigger market with far more competition, built for "
+                   "from thirty five kilometres away, with no pretend "
+                   "address.",
+        "standfirst": "The honest version: the studio is in Durres, the "
+                      "building is remote, and the only thing that genuinely "
+                      "differs about the capital is who is already there.",
+        "description": "Web design for businesses in Tirana, built remotely "
+                       "from Durres. What a bigger market changes, what it "
+                       "does not, and why there is no office there.",
+        "og_desc": "A bigger market, harder competition, and nobody "
+                   "pretending to sit in it.",
+
+        "body": [
+            ("Where the studio actually is", [
+                "<p>Durres. There is no address in the capital and there is "
+                "not going to be a rented one, because the first thing a "
+                "client discovers about a rented address is that nobody is "
+                "sitting in it.</p>",
+                "<p>What decides a build is whether the work is any good and "
+                "whether you can reach the person doing it. Neither improves "
+                "by being forty minutes nearer to you.</p>",
+            ]),
+            ("What genuinely differs", [
+                "<p>More people typing what you sell, and a great many more "
+                "businesses who worked that out first. A phrase with three "
+                "serious rivals on this coast can have thirty in the "
+                "capital.</p>",
+                "<p>So the method does not change and the patience does. "
+                "Anybody promising you otherwise has not opened your "
+                "competitors' pages.</p>",
+            ]),
+            ("The half distance still decides", [
+                "<p>How near somebody is counts in the map, so a person "
+                "searching while standing in the capital is shown businesses "
+                "in the capital. That advantage is yours and nobody outside "
+                "can hand it to you or take it away.</p>",
+                "<p>It is also, even there, the half most competitors have "
+                "only partly filled in.</p>",
+            ]),
+            ("How the work runs from here", [
+                "<p>Messages, a call when a call earns its place, and a "
+                "written plan before anything begins. When meeting genuinely "
+                "helps, it is thirty five kilometres.</p>",
+                "<p>Photographs are the one thing proximity helps with, and "
+                "the usual answer is that yours beat ours anyway, because "
+                "they are of the real room.</p>",
+            ]),
+        ],
+        "payoff": "Send the address and the phrase you want, and we will "
+                  "tell you plainly how crowded that phrase already is.",
+        "faq": [
+            ("Why hire somebody who is not here?",
+             "Only if the work or the price is better. Being nearby stopped "
+             "being an argument for this kind of build years ago, and a "
+             "studio leading with proximity is usually a studio that has run "
+             "out of other things to lead with."),
+            ("Is it harder to rank in the capital?",
+             "For the results under the map, yes, because far more "
+             "businesses are competing for the same phrases. The map itself "
+             "is decided partly by how close the searcher is, and that part "
+             "favours you no matter who builds the site."),
+            ("Do you have clients there?",
+             "Not yet, and writing that is cheaper than implying otherwise "
+             "and being found out. The four on this site are all from one "
+             "city, with their addresses printed on their pages."),
+            ("Can we meet in person?",
+             "Yes. It is a short drive and it happens when it is useful. "
+             "What we will not do is suggest that the meeting is the thing "
+             "that makes the site work."),
+            ("Does the price change?",
+             "No. The same project costs the same wherever it is, because "
+             "the building is remote either way. What changes is how long "
+             "the search half takes, and you are told which before agreeing "
+             "to anything."),
+        ],
+        "related": [("/web-design/", "Websites"),
+                    ("/seo/", "SEO and local search")],
+    },
+
+    {
+        "slug": "how-long-seo-takes",
+        "date": "2026-08-21",
+        "updated": "2026-08-21",
+        "topic": "Local search",
+        "work": "iglisi-watch",
+        "service": ("/seo/", "SEO and local search"),
+
+        "title": "How long SEO takes to work",
+        "h1": "Weeks for one half of it, months for the other.",
+        "summary": "Two timelines rather than one, which is why a single "
+                   "number always sounds like an evasion.",
+        "standfirst": "The listing can move inside a fortnight. The results "
+                      "beneath it take the better part of a year. One number "
+                      "covering both is a guess.",
+        "description": "How long SEO takes in Albania: weeks for the map "
+                       "listing, six to twelve months for the results "
+                       "underneath, with a real three month example and when "
+                       "to stop paying.",
+        "og_desc": "Two timelines. The quick one is free and most "
+                   "competitors have not finished it.",
+
+        "body": [
+            ("The quick half", [
+                "<p>A properly finished Google Business Profile can change "
+                "what you see inside a fortnight, sometimes sooner. Not "
+                "because of any trick, but because most rivals stopped a "
+                "third of the way through theirs.</p>",
+                "<p>That is precisely why it goes first. It is cheap, it is "
+                "fast, and the field is weak.</p>",
+            ]),
+            ("The slow half", [
+                "<p>Appearing in the ordinary results means being weighed "
+                "against everybody who has been publishing for longer. Six "
+                "to twelve months is the honest range for a new site chasing "
+                "a phrase worth money.</p>",
+                "<p>The first movement inside that usually arrives around "
+                "week eight and looks like nothing much: a few more phrases "
+                "you show up for, lower down than you would like.</p>",
+            ]),
+            ("What one quarter looked like", [
+                "<p>Iglisi Watch began with no site at all. Across the "
+                "quarter that followed, search delivered 560 clicks at an "
+                "average position of 8.4 and a click rate of 1%.</p>",
+                "<p>The closing four weeks carried more of that than the "
+                "opening eight, which is the shape of this work: flat, flat, "
+                "then a slope.</p>",
+            ]),
+            ("When to stop paying somebody", [
+                "<p>If nothing has moved by the fourth month, something is "
+                "wrong and it should be named out loud rather than waited "
+                "out. Usually it is that the pages answer no question "
+                "anybody actually types.</p>",
+                "<p>A month in which nothing improved gets reported as a "
+                "month in which nothing improved. A report that is good news "
+                "every single time has stopped being a report.</p>",
+            ]),
+        ],
+        "payoff": "Send us the address and we will say which half is "
+                  "missing, and roughly what the other half is going to ask "
+                  "of you.",
+        "faq": [
+            ("Can anybody guarantee first place?",
+             "No, and the ones who do are counting on you not checking "
+             "afterwards. Nobody outside Google sets the order, and anybody "
+             "who genuinely could would not be selling it at these prices."),
+            ("Why does the slow half take so long?",
+             "Because the comparison is with sites that have existed longer "
+             "and been linked to more often, and that comparison is the "
+             "entire mechanism. There is no version of it that resolves "
+             "inside a fortnight."),
+            ("Is there anything quicker?",
+             "The listing, and paid ads. Ads work the day they are switched "
+             "on and stop the day they are switched off, which makes them "
+             "useful for covering the gap while the slower work builds "
+             "underneath."),
+            ("Am I paying every month for a year?",
+             "Not necessarily. A good deal of this is one job that stays "
+             "done: the structure, the pages, the listing. What genuinely "
+             "recurs is a great deal smaller than most agencies invoice for."),
+            ("My competitor has done this for years. Then what?",
+             "Then you do not take their best phrase this year. You take the "
+             "ten they never wrote a page for, which is generally where the "
+             "customers were anyway."),
+        ],
+        "related": [("/seo/", "SEO and local search"),
+                    ("/geo/", "AI search")],
+    },
+
+    {
+        "slug": "google-business-profile-albania",
+        "date": "2026-08-21",
+        "updated": "2026-08-21",
+        "topic": "Local search",
+        "work": None,
+        "service": ("/seo/", "SEO and local search"),
+
+        "title": "Google Business Profile in Albania",
+        "h1": "The free thing almost nobody finishes.",
+        "summary": "A field by field pass through the listing that decides "
+                   "whether somebody nearby rings you, and the four places "
+                   "people give up.",
+        "standfirst": "It costs nothing, it takes an afternoon, and roughly "
+                      "two thirds of the businesses around you have left "
+                      "most of it blank.",
+        "description": "How to set up a Google Business Profile properly in "
+                       "Albania: categories, hours, service areas, "
+                       "photographs and reviews, and the mistakes that keep "
+                       "a listing invisible.",
+        "og_desc": "An afternoon of typing decides whether somebody 400 "
+                   "metres away ever sees you.",
+
+        "body": [
+            ("Start with the category, because everything hangs off it", [
+                "<p>The primary category is the single strongest signal on "
+                "the whole listing, and it decides which searches you are "
+                "even eligible for. Pick the one that names what you mainly "
+                "do, not the broadest one available.</p>",
+                "<p>Then add the secondary categories for the rest. A garage "
+                "that also does tyres should say so; a listing with one "
+                "vague category competes for nothing in particular.</p>",
+            ]),
+            ("Hours, including the ones that catch people out", [
+                "<p>Regular hours are the easy part. What loses custom is "
+                "the special hours: the summer change, the public holiday, "
+                "the afternoon you close early.</p>",
+                "<p>A listing showing open when the door is locked earns a "
+                "bad review from somebody who drove there, and that review "
+                "outlives the mistake by years.</p>",
+            ]),
+            ("Where you work, if you go to the customer", [
+                "<p>Trades who travel should set a service area rather than "
+                "pretending the van is a shopfront. It is a different kind "
+                "of listing and it behaves differently in the results.</p>",
+                "<p>Keep the area honest. Claiming the whole country makes "
+                "you weaker everywhere rather than stronger anywhere.</p>",
+            ]),
+            ("Photographs and the part everyone skips", [
+                "<p>Pictures of the real place beat anything bought, and a "
+                "handful taken in daylight is enough. The inside matters "
+                "more than the sign, because the question being asked is "
+                "what it is like in there.</p>",
+                "<p>Then answer the questions people keep ringing to ask, in "
+                "the listing itself, in every language your customers use. "
+                "That section sits there empty on almost every profile in "
+                "the country.</p>",
+            ]),
+            ("Reviews, asked for rather than waited for", [
+                "<p>Ask at the moment somebody says they are pleased, not a "
+                "fortnight later by message. A steady trickle of recent ones "
+                "counts for more than a pile from three years ago.</p>",
+                "<p>Reply to the bad ones calmly and in public. The reply is "
+                "not written for the complainer; it is written for the next "
+                "person reading it.</p>",
+            ]),
+        ],
+        "payoff": "Send us your listing and we will tell you which fields "
+                  "are empty and which of them is costing you calls.",
+        "faq": [
+            ("Is it really free?",
+             "Completely, and it stays free. Anybody ringing to sell you a "
+             "Google listing or offering to verify it for a fee is selling "
+             "something you already own for nothing."),
+            ("I have no shopfront. Can I still have one?",
+             "Yes, as a service area business. You give an area you cover "
+             "instead of an address people can visit, and your address stays "
+             "hidden. That is the correct setup for a trade working out of a "
+             "van."),
+            ("What if somebody else claimed my business?",
+             "It happens, usually years ago and often by an old employee or "
+             "a directory. There is a claim process, it takes a few weeks, "
+             "and it is worth starting today rather than building around the "
+             "problem."),
+            ("Should the listing be in Albanian or English?",
+             "Write it in the language your customers search in, which on "
+             "this coast is often more than one. The description and the "
+             "questions can carry more than a single language, and most "
+             "competitors use exactly one."),
+            ("Does posting updates help?",
+             "A little, and much less than the fields above. Do the "
+             "categories, hours, photographs and reviews first. If posting "
+             "is the only thing you have energy for, it is the wrong thing "
+             "to spend it on."),
+        ],
+        "related": [("/seo/", "SEO and local search"),
+                    ("/geo/", "AI search")],
+    },
+
+    {
+        "slug": "wordpress-or-a-built-site",
+        "date": "2026-08-21",
+        "updated": "2026-08-21",
+        "topic": "Websites",
+        "work": None,
+        "service": ("/web-design/", "Websites"),
+
+        "title": "WordPress or a site built for you",
+        "h1": "One of them you rent, the other you own.",
+        "summary": "An honest comparison from somebody who does not sell "
+                   "WordPress, including the cases where WordPress is the "
+                   "right answer.",
+        "standfirst": "Both can work. They fail differently, they cost "
+                      "differently over five years, and the choice is mostly "
+                      "about who has to maintain the thing.",
+        "description": "WordPress or a custom built website in Albania: what "
+                       "each costs over five years, how each one fails, and "
+                       "the cases where WordPress is genuinely the better "
+                       "answer.",
+        "og_desc": "Both work. They fail differently, and one of them keeps "
+                   "charging you.",
+
+        "body": [
+            ("What WordPress is actually good at", [
+                "<p>Somebody else has already solved a thousand problems for "
+                "you, and there is a plugin for nearly anything. If you need "
+                "a membership area, a forum or a complicated shop next "
+                "month, that head start is real.</p>",
+                "<p>It is also easy to hand to another developer, because a "
+                "great many people know it. That matters more than studios "
+                "like ours usually admit.</p>",
+            ]),
+            ("What it costs after the build", [
+                "<p>Plugins update, themes update, and the ones that stop "
+                "being maintained become the way somebody gets in. That "
+                "maintenance is a real recurring job whether you pay for it "
+                "or do it yourself at midnight.</p>",
+                "<p>Add hosting that can run it, a licence or two, and the "
+                "monthly figure you were quoted turns out not to have been "
+                "the figure.</p>",
+            ]),
+            ("What a built site gives up and what it keeps", [
+                "<p>It gives up the plugin shelf. If you want a feature "
+                "nobody wrote, somebody has to write it, and that is "
+                "time.</p>",
+                "<p>What it keeps is speed and quiet. Nothing to update "
+                "weekly, nothing to license, and a page that loads before "
+                "the customer gives up because there is almost nothing to "
+                "load.</p>",
+            ]),
+            ("The question that decides it", [
+                "<p>Ask who is going to look after this in two years. If the "
+                "answer is a person who enjoys it, WordPress is fine and "
+                "flexible. If the answer is nobody, a site with nothing to "
+                "maintain is the safer thing to own.</p>",
+                "<p>The shops on this site are the second case. They change "
+                "their own words and pictures from a phone and there is "
+                "nothing else to keep alive.</p>",
+            ]),
+        ],
+        "payoff": "Tell us what the site has to do in two years and we will "
+                  "say honestly which of the two you should be buying.",
+        "faq": [
+            ("Do you refuse to work on WordPress?",
+             "No. Plenty of the work here is repairing sites somebody else "
+             "built, and a fair number of those are WordPress. What we will "
+             "not do is bill you monthly for a platform that makes the "
+             "necessary fixes impossible."),
+            ("Is a built site harder to move away from?",
+             "It should not be, and ours are not: the code and every account "
+             "are in your name, and a developer can read plain HTML and CSS. "
+             "Being hard to leave is a business model, not a technical fact."),
+            ("What about Wix or Shopify?",
+             "Shopify earns its fee if you genuinely sell online at volume, "
+             "because it solves payment, stock and tax. Wix is the same "
+             "trade as WordPress with less control and a bill that never "
+             "stops."),
+            ("Which is better for search?",
+             "Neither, inherently. What decides it is speed, structure and "
+             "whether the pages answer what somebody typed. A slow WordPress "
+             "site loses to a fast one, and a slow built site loses to both."),
+            ("Can I edit a built site myself?",
+             "Yes, and that is a requirement rather than an extra. If "
+             "changing a price means ringing us, the price stops being "
+             "changed and the site starts lying about your stock."),
+        ],
+        "related": [("/web-design/", "Websites"),
+                    ("/systems/", "Custom software")],
+    },
+
+    {
+        "slug": "website-or-just-instagram",
+        "date": "2026-08-21",
+        "updated": "2026-08-21",
+        "topic": "Websites",
+        "work": None,
+        "service": ("/web-design/", "Websites"),
+
+        "title": "A website, or just Instagram?",
+        "h1": "Instagram is where they look. It is not where they search.",
+        "summary": "The honest cases for skipping a website, and the three "
+                   "things a social account structurally cannot do for you.",
+        "standfirst": "For some businesses a social account really is enough "
+                      "for now. Here is how to tell whether yours is one of "
+                      "them.",
+        "description": "Do you need a website if you have Instagram? The "
+                       "cases where a social account is genuinely enough, "
+                       "and the three things it cannot do at any follower "
+                       "count.",
+        "og_desc": "Sometimes an account really is enough. Three things it "
+                   "still cannot do.",
+
+        "body": [
+            ("When an account genuinely is enough", [
+                "<p>If you sell through conversation, your customers already "
+                "follow you, and new ones arrive because somebody tagged a "
+                "friend, then a website would sit there being beautiful and "
+                "doing nothing.</p>",
+                "<p>That is a real situation and it describes plenty of "
+                "small shops. Spend the money on stock or on photographs "
+                "instead.</p>",
+            ]),
+            ("The first thing it cannot do: be searched", [
+                "<p>Somebody typing a dress and a city into a search box "
+                "will not be shown your grid. Search engines read pages, and "
+                "a caption inside an app is not one that they can weigh.</p>",
+                "<p>That is the whole gap. Not that social does not work, "
+                "but that it works only for people who already know to look "
+                "for you.</p>",
+            ]),
+            ("The second: be quoted by an assistant", [
+                "<p>Ask an assistant for a shop like yours and it answers "
+                "from text it can read and check. A business that exists "
+                "only inside an app has nothing for it to read, so it names "
+                "somebody else.</p>",
+                "<p>This is newer and it is moving quickly, which is why it "
+                "is worth knowing about before it is urgent.</p>",
+            ]),
+            ("The third: belong to you", [
+                "<p>An account is borrowed. The rules change, the reach "
+                "changes, and occasionally the account is gone on a Tuesday "
+                "for a reason nobody will explain to you.</p>",
+                "<p>Everything on a domain you own survives all of that, "
+                "which is the argument for having somewhere to land people "
+                "even if the looking happens elsewhere.</p>",
+            ]),
+        ],
+        "payoff": "Send us the account and what you sell, and we will tell "
+                  "you honestly whether a site would earn its money yet.",
+        "faq": [
+            ("Can I have a listing and an account and no website?",
+             "For a while, genuinely yes, and for some trades indefinitely. "
+             "A map listing covers being found nearby and the account covers "
+             "being looked at. What neither covers is the page that answers "
+             "a question in detail."),
+            ("Will a website get me more followers?",
+             "No, and anybody promising that is confusing two different "
+             "jobs. A site brings people who were searching for what you "
+             "sell and had never heard of you, which is a different group "
+             "entirely."),
+            ("Can the site show my Instagram feed?",
+             "Not pulled in live. Nothing on the sites we build loads from "
+             "anybody else, which is part of why they are fast, and an "
+             "embedded feed breaks the day the platform changes something. "
+             "Your best pictures get copied over and stay."),
+            ("What is the smallest useful website?",
+             "One page that says what you sell, where you are, when you are "
+             "open and how to reach you, in the languages your customers "
+             "use. That is a genuinely small job and it is more than most "
+             "competitors have."),
+            ("I post every day and it is not working. Would a site fix it?",
+             "Probably not on its own. If posting daily is not converting, "
+             "the problem is usually what you sell, to whom, or at what "
+             "price, and a website built on top of that question will not "
+             "answer it either."),
+        ],
+        "related": [("/web-design/", "Websites"),
+                    ("/meta-ads/", "Meta ads")],
+    },
+
 ]
 
 # /blog/, the index over those records. It is a page and a page's copy is copy,

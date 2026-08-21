@@ -71,11 +71,11 @@ PAGES = [
     # -------------------------------------------------------------- SYSTEMS --
     {
         "url": "/systems/",
-     "src": "cf23a60e",
+     "src": "c2a87692",
         "nav": "Software me porosi",
         # 38 characters against the 52 the title budget leaves once shell.head
         # appends " · minarank studio".
-        "title": "Software me porosi për dyqane të vogla",
+        "title": "Software me porosi për biznese në Shqipëri",
         "description": "Stoku, punët, klientët dhe paratë në një vend të vetëm. "
                        "Ndërtojmë software-in mbi të cilin funksionojnë vërtet "
                        "dyqanet e vogla dhe zejtarët, në Shqipëri dhe Itali.",

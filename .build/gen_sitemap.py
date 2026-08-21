@@ -12,6 +12,7 @@ assertions that say what harvesting is allowed to find.
 
 Run from the project root:  python .build/gen_sitemap.py
 """
+import datetime
 import io
 import os
 import re
@@ -47,13 +48,21 @@ WANT_HL = list(i18n.LANGS) + ["x-default"]
 
 
 def git_date(path):
-    """The page's last commit date, or today for a page git has never seen.
+    """The date this page last changed: today if it has, otherwise its commit.
 
-    The build runs before the commit that will record it, so a brand-new page
-    has no git history at sitemap time and the first 12 post URLs shipped with
-    no lastmod at all. Falling back to today is not a fabrication: an untracked
-    page is by definition being published today, and today is exactly the date
-    the commit is about to give it."""
+    Two cases answer today and they are the same case. The build runs BEFORE
+    the commit that will record it, so at sitemap time a page rewritten in this
+    build still carries the PREVIOUS commit's date, and a brand-new page has no
+    date at all. Both are being published today, and today is exactly the date
+    the commit about to be made will give them.
+
+    This is not cosmetic. Search Console schedules recrawls off lastmod, so a
+    page that was rewritten this morning and reports last month is a page
+    asking Google not to bother coming back. Ten posts were rewritten in one
+    day here and the sitemap went on claiming a date from the week before.
+    """
+    if path in shell.DIRTY:
+        return datetime.date.today().isoformat()
     try:
         out = subprocess.run(
             ["git", "log", "-1", "--format=%cs", "--", path],
@@ -63,7 +72,6 @@ def git_date(path):
             return d
     except Exception:
         pass
-    import datetime
     return datetime.date.today().isoformat()
 
 

@@ -24,7 +24,7 @@ SERVICES = [
         "slug": "seo",
         "nav": "SEO",
         "schema_name": "Search engine optimisation and local search",
-        "title": "Getting found on Google",
+        "title": "SEO and local search in Albania",
         "h1": "Get found by people who don't know your name yet.",
         "standfirst": "Two different jobs. The map listing decides who gets phoned "
                       "today. The results underneath decide who gets found next year.",
@@ -145,7 +145,7 @@ SERVICES = [
         "slug": "geo",
         "nav": "AI search",
         "schema_name": "Generative engine optimisation",
-        "title": "Getting named when someone asks an AI",
+        "title": "AI search in Albania, sometimes called GEO",
         "h1": "Be one of the 3 businesses the answer names.",
         "standfirst": "Ask ChatGPT for a watch repair shop in Durres and it names two "
                       "or three. Being one of them isn't luck.",
@@ -276,7 +276,7 @@ SERVICES = [
         "slug": "web-design",
         "nav": "Websites",
         "schema_name": "Web design and development",
-        "title": "Websites in Albania, built to be found and to sell",
+        "title": "Web design in Albania, built to be found",
         "h1": "A site that loads before your customer gives up.",
         "standfirst": "You're standing inside the example. Every claim on this page "
                       "can be checked on this page, in about 30 seconds.",
@@ -387,7 +387,7 @@ SERVICES = [
         "slug": "meta-ads",
         "nav": "Meta ads",
         "schema_name": "Meta advertising",
-        "title": "Facebook and Instagram ads",
+        "title": "Facebook and Instagram ads in Albania",
         "h1": "Get customers this week.",
         "standfirst": "Paid social is the fastest way to find out whether your offer "
                       "works, and the fastest way to spend money proving it doesn't.",

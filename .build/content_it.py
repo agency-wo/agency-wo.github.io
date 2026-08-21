@@ -34,12 +34,12 @@ SERVICES = [
     # ------------------------------------------------------------------ SEO --
     {
         "slug": "seo",
-        "src": "32e1012b",
+        "src": "b9bf72a7",
         "nav": "SEO",
         "schema_name": "Ottimizzazione per i motori di ricerca e ricerca locale",
         # 23 characters, the same as the English, and 41 with the suffix
         # shell.head appends.
-        "title": "Farsi trovare su Google",
+        "title": "SEO e ricerca locale in Albania",
         "h1": "Fatti trovare da chi non conosce ancora il tuo nome.",
         # glossary.TERMS: map listing -> scheda Google.
         "standfirst": "Due lavori diversi. La scheda Google decide chi riceve "
@@ -199,14 +199,14 @@ SERVICES = [
     # ------------------------------------------------------------------ GEO --
     {
         "slug": "geo",
-        "src": "8f2f9cdd",
+        "src": "26c4b09a",
         # glossary.TERMS: AI search -> ricerca AI, and glossary.BANNED fails on
         # "IA", which reads as a translation artefact to the people who buy
         # this. Matches chrome_it.FOOT_LABELS[0][1] exactly.
         "nav": "Ricerca AI",
         "schema_name": "Ottimizzazione per i motori generativi",
         # 45 characters.
-        "title": "Farsi nominare quando qualcuno chiede a un'AI",
+        "title": "Ricerca AI in Albania, o GEO",
         "h1": "Sii una delle 3 attività che la risposta nomina.",
         "standfirst": "Chiedi a ChatGPT un negozio di riparazione orologi a "
                       "Durazzo e te ne nomina due o tre. Essere uno di quelli "
@@ -357,11 +357,11 @@ SERVICES = [
     # ---------------------------------------------------------- WEB DESIGN --
     {
         "slug": "web-design",
-        "src": "d3640e4e",
+        "src": "65e7e462",
         "nav": "Siti web",
         "schema_name": "Progettazione e sviluppo di siti web",
         # 42 characters.
-        "title": "Siti web a Durazzo, costruiti per farsi trovare e vendere",
+        "title": "Siti web in Albania, fatti per farsi trovare",
         "h1": "Un sito che si carica prima che il cliente rinunci.",
         "standfirst": "Sei dentro l'esempio. Ogni affermazione di questa "
                       "pagina si può verificare su questa pagina, in circa 30 "
@@ -489,12 +489,12 @@ SERVICES = [
     # ------------------------------------------------------------ META ADS --
     {
         "slug": "meta-ads",
-        "src": "4de4f264",
+        "src": "a322b4e3",
         # In glossary.KEEP_ENGLISH, and identical in all 3 languages.
         "nav": "Meta ads",
         "schema_name": "Pubblicità su Meta",
         # 31 characters.
-        "title": "Annunci su Facebook e Instagram",
+        "title": "Annunci Facebook e Instagram in Albania",
         "h1": "Prendi clienti questa settimana.",
         "standfirst": "Il social a pagamento è il modo più rapido per scoprire "
                       "se la tua offerta funziona, e il modo più rapido per "

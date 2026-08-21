@@ -71,11 +71,11 @@ PAGES = [
     # -------------------------------------------------------------- SYSTEMS --
     {
         "url": "/systems/",
-     "src": "cf23a60e",
+     "src": "c2a87692",
         "nav": "Software su misura",
         # 37 characters against the 52 the title budget leaves once shell.head
         # appends " · minarank studio".
-        "title": "Software su misura per piccoli negozi",
+        "title": "Software su misura per piccole imprese in Albania",
         "description": "Magazzino, lavori, clienti e soldi in un posto solo. "
                        "Costruiamo il software su cui piccoli negozi e artigiani "
                        "lavorano davvero, in Albania e in Italia.",

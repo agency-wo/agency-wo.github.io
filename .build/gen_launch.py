@@ -110,6 +110,11 @@ Allow: /
 Disallow: /assets/proof/source/
 
 Sitemap: {shell.SITE}/sitemap.xml
+
+# The blog feed. A second discovery path that does not depend on the sitemap
+# being fetched, which is the point of having it: a studio that sells being
+# read by answer engines should not offer them exactly one way in.
+Sitemap: {shell.SITE}/feed.xml
 """
 
 

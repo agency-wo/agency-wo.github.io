@@ -11,6 +11,7 @@ file is a sentence, and nothing in those files is a tag.
 No em-dashes anywhere. The arrow is an inline SVG because Archivo has no
 U+2197, and because a drawn arrow beats a font-dependent one.
 """
+import datetime
 import io
 import os
 import re
@@ -231,13 +232,59 @@ OG_SIZE = {lg: _png_size(os.path.join(ROOT, p.lstrip("/")))
 _DATES = {}
 
 
-def git_date(path):
-    """The last commit date of one file as YYYY-MM-DD, or None.
+def dirty_paths():
+    """Every path git sees as changed: modified, staged or untracked.
 
-    None for a file git has never seen, and the caller then prints nothing.
-    A page claiming it was updated on a day nobody can check is worse than a
-    page that says nothing, which is rule 13 applied to a date.
+    ONE subprocess for the whole tree, because the alternative is asking per
+    file and there are 96 pages. Lives here rather than in gen_sitemap because
+    both this file's git_date and that one's need the same answer, and 2 copies
+    of a git parser is 1 too many.
+
+    -z separates records with NUL, so a filename carrying a space or a quote
+    arrives intact; the default porcelain format quotes it and would need
+    unquoting here.
     """
+    try:
+        out = subprocess.run(["git", "status", "--porcelain", "-z"],
+                             cwd=ROOT, capture_output=True, text=True, timeout=20)
+    except Exception:
+        return set()
+    parts = out.stdout.split("\0")
+    dirty, i = set(), 0
+    while i < len(parts):
+        rec, i = parts[i], i + 1
+        if len(rec) < 4:
+            continue
+        status, path = rec[:2], rec[3:]
+        dirty.add(path)
+        # A rename or copy record is followed by its OLD path as its own token.
+        # Stepping over it stops that path being read as a status line, which
+        # would take its first 3 characters for a status code.
+        if "R" in status or "C" in status:
+            i += 1
+    return dirty
+
+
+DIRTY = dirty_paths()
+
+
+def git_date(path):
+    """The date this file last changed: today if it has, else its last commit.
+
+    None only for a file git has never seen AND that is not sitting modified in
+    the tree, and the caller then prints nothing. A page claiming it was updated
+    on a day nobody can check is worse than a page that says nothing, which is
+    rule 13 applied to a date.
+
+    The dirty case is the one that was wrong. The build runs BEFORE the commit
+    that records it, so a page whose copy was rewritten this morning printed
+    the date of the PREVIOUS commit, and went on printing it until the next
+    build after the next commit. "Updated 14 August" on a page rewritten on the
+    20th is a small false claim, made in the reader's face, on a site whose
+    whole argument is that it does not make those.
+    """
+    if path in DIRTY:
+        return datetime.date.today().isoformat()
     if path not in _DATES:
         d = None
         try:
@@ -549,6 +596,18 @@ def head(page, lang):
     if page.get("author"):
         art += (f'{NL}  <meta property="article:author" content="{page["author"]}">'
                 f'{NL}  <meta name="author" content="{page["author"]}">')
+    # The blog feed, and ONLY on the English tree. feed.xml is English by
+    # design (RSS has no hreflang, so one feed in 3 languages is 3 duplicates
+    # to every consumer), and rel="alternate" claims this is an alternate
+    # representation of the page carrying it. Saying that on an Italian page
+    # about an English feed would be a false claim in the machine layer, which
+    # is the layer nobody looks at.
+    # No title attribute: it is optional, every reader shows the feed's own
+    # <title> instead, and inventing one here would mean a chrome string in 3
+    # languages for a link that only ever renders in 1.
+    feed = ("" if lang != "en" or page.get("noindex") else
+            f'{NL}  <link rel="alternate" type="application/rss+xml" '
+            f'href="{SITE}/feed.xml">')
     og_w, og_h = OG_SIZE[lang]
     return f'''<!DOCTYPE html>
 <html lang="{i18n.HTML_LANG[lang]}">
@@ -557,7 +616,7 @@ def head(page, lang):
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{page["title"]}</title>
   <meta name="description" content="{page["description"]}">{verify}
-{head_url}{alts}
+{head_url}{alts}{feed}
   <meta name="theme-color" content="#F0F1F3">
 
   <meta property="og:type" content="{page.get("og_type", "website")}">{art}

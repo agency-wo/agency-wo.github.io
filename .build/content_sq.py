@@ -36,11 +36,11 @@ SERVICES = [
     # ------------------------------------------------------------------ SEO --
     {
         "slug": "seo",
-        "src": "32e1012b",
+        "src": "b9bf72a7",
         "nav": "SEO",
         "schema_name": "Optimizim për motorët e kërkimit dhe kërkim lokal",
         # 21 characters, 2 fewer than the English.
-        "title": "Të gjendesh në Google",
+        "title": "SEO dhe kërkimi lokal në Shqipëri",
         "h1": "Të të gjejnë ata që ende nuk e dinë emrin tënd.",
         # glossary.TERMS: map listing -> profili në Google.
         "standfirst": "Dy punë të ndryshme. Profili në Google vendos kush merr "
@@ -187,13 +187,13 @@ SERVICES = [
     # ------------------------------------------------------------------ GEO --
     {
         "slug": "geo",
-        "src": "8f2f9cdd",
+        "src": "26c4b09a",
         # glossary.TERMS: AI search -> kërkimi me AI. Matches
         # chrome_sq.FOOT_LABELS[0][1] exactly.
         "nav": "Kërkimi me AI",
         "schema_name": "Optimizim për motorët gjenerativë",
         # 36 characters.
-        "title": "Të përmendesh kur dikush pyet një AI",
+        "title": "Kërkimi me AI në Shqipëri, ose GEO",
         "h1": "Bëhu një nga 3 bizneset që përmend përgjigjja.",
         "standfirst": "Pyet ChatGPT për një dyqan riparimi orësh në Durrës dhe "
                       "të përmend dy ose tre. Të jesh një prej tyre nuk është "
@@ -336,11 +336,11 @@ SERVICES = [
     # ---------------------------------------------------------- WEB DESIGN --
     {
         "slug": "web-design",
-        "src": "d3640e4e",
+        "src": "65e7e462",
         "nav": "Faqe interneti",
         "schema_name": "Dizajn dhe zhvillim faqesh interneti",
         # 50 characters.
-        "title": "Faqe interneti në Shqipëri, për t'u gjetur dhe për të shitur",
+        "title": "Faqe interneti në Shqipëri, për t'u gjetur",
         "h1": "Një faqe që hapet para se klienti të heqë dorë.",
         "standfirst": "Je brenda shembullit. Çdo pohim i kësaj faqeje mund të "
                       "kontrollohet në këtë faqe, për rreth 30 sekonda.",
@@ -465,12 +465,12 @@ SERVICES = [
     # ------------------------------------------------------------ META ADS --
     {
         "slug": "meta-ads",
-        "src": "4de4f264",
+        "src": "a322b4e3",
         # In glossary.KEEP_ENGLISH, and identical in all 3 languages.
         "nav": "Meta ads",
         "schema_name": "Reklamim në Meta",
         # 33 characters.
-        "title": "Reklama në Facebook dhe Instagram",
+        "title": "Reklama Facebook dhe Instagram në Shqipëri",
         "h1": "Merr klientë këtë javë.",
         "standfirst": "Rrjetet sociale me pagesë janë mënyra më e shpejtë për "
                       "të kuptuar nëse oferta jote funksionon, dhe mënyra më e "

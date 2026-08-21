@@ -111,8 +111,8 @@ everything checkable is checked by `verify.py`, which fails the build.
     reduced-motion get the finished page.
 33. Every `<img>` carries `width`, `height` and real `alt`. Gated.
 34. Build order: `gen_pages`, `gen_docs`, `gen_cases`, `gen_home`, `gen_blog`,
-    `gen_glossary`, `gen_404`, `gen_headers`, `gen_launch`, `gen_sitemap` last,
-    then `verify`.
+    `gen_glossary`, `gen_404`, `gen_feed`, `gen_headers`, `gen_launch`,
+    `gen_sitemap` last, then `verify`.
     `gen_blog` and `gen_launch` were missing from this line for a while, which
     would have stranded the 4 blog pages the first time SHARED:HEADER changed.
     `gen_404` then went missing the same way and was stranded for real: the day
@@ -166,6 +166,17 @@ everything checkable is checked by `verify.py`, which fails the build.
     a pose too. Being new is answered with counted, dated facts instead -- how
     many businesses, from when, with the export attached -- which is the same
     claim a superlative gestures at, except a reader can finish checking it.
+
+43. **A date on a page is the date the page changed, not the date git last
+    recorded it.** The build runs BEFORE the commit that will record it, so
+    reading `git log` alone makes every page rewritten this morning claim the
+    previous commit's date, and go on claiming it until the next build after
+    the next commit. `shell.dirty_paths()` is the single answer to "has this
+    changed", used by `shell.git_date` for the visible "Updated" line and by
+    `gen_sitemap.git_date` for `lastmod`. Do not simplify either back to a
+    plain `git log`: it reads as tidier and it reintroduces a page that told
+    its reader 14 August on the 20th, and a sitemap that asked Google not to
+    recrawl ten posts that had just been rewritten.
 
 **Never loosen a check to make it pass.** A gate that can be talked into
 passing is decoration.
