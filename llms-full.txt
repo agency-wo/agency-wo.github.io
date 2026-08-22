@@ -99,7 +99,27 @@ of taking it. If the honest answer is that you need a better offer rather
 than better marketing, that is the answer you get, and it is the one that
 costs us the job most often.
 How we work
-Updated 16 August 2026
+Updated 22 August 2026
+Before you send anything
+What does this cost?
+There is no price list. A shop with 4 pages and a shop with 400 are
+not the same job. The number comes out of the audit.
+How soon does it start working?
+Two clocks, running at different speeds. A map listing can move
+inside a month. Ordinary search takes far longer, which is why we
+gave it a whole page rather than a line here.
+What happens after we send the form?
+You get a written document, not an invitation to a meeting. It says
+what we would change and in what order. If the honest answer is that
+your money is better spent elsewhere, it says that instead.
+Do we have to replace our website?
+Usually not. Most sites need repairs rather than a rebuild, and a
+rebuild nobody needed throws away whatever ranking the old one had
+earned.
+What do you not do?
+Print, video production, and posting to social media on a schedule.
+We also do not run campaigns on budgets that cannot carry them.
+Hearing that now costs both of us less than hearing it in month 3.
 
 ## SEO and local search in Albania
 https://minarankstudio.com/seo/
@@ -154,9 +174,14 @@ SEO for watch shops and jewellers
 Google Business Profile in Albania
 How long SEO takes to work
 How to come up first on Google
+Builders and contractors
+Gyms and fitness studios
 How to get Google reviews
+Lawyers and notaries
 SEO for a brand new business
 What a website audit contains
+What SEO costs in Albania
+Why is my competitor above me?
 Why my website gets no visitors
 Also
 AI search
@@ -213,7 +238,9 @@ This moves slower than search rankings and is harder to measure. Expect the firs
 Written about this
 AI search for hotels and guesthouses
 AI search: what nobody can promise you
+How to appear in ChatGPT
 What AI search actually is
+Will AI replace Google?
 Also
 SEO and local search
 Websites
@@ -275,7 +302,9 @@ WordPress or a site built for you
 An agency or a freelancer?
 New website, or fix the one I have?
 How to choose a web designer
+How to sell online in Albania
 The website mistakes we see most often
+What to write on your website
 Also
 SEO and local search
 Custom software
@@ -325,6 +354,7 @@ A flat monthly fee for the work. Never a percentage of what you spend, because t
 Written about this
 Facebook ads for estate agents
 Why the fastest reply wins the job
+Google Ads or SEO?
 What Meta ads cost in Albania
 Also
 Websites
@@ -423,7 +453,7 @@ know.
 Do I own it?
 Yes. The code is yours, it runs on your accounts, and it is documented
 so somebody else could take it over.
-Updated 21 August 2026
+Updated 22 August 2026
 Running today
 One full operations system in a Durres watch shop. Two shops publishing
 their own websites from a phone. One till wired to a website. All of it
@@ -605,10 +635,18 @@ mistake we made. If it does not, it is not worth your time.
 Search the writing
 Filters the list as you type.
 Nothing matches that. Clear the search, or pick a topic above.
-SEO and local search 13
+SEO and local search 18
 Why my website gets no visitors
 22 August 2026
 The five ordinary reasons, in the order they are worth checking, starting with the one that costs nothing to rule out.
+Read it
+Why is my competitor above me?
+22 August 2026
+How to work out what the shop above you is doing, in an afternoon, without buying a tool to tell you.
+Read it
+What SEO costs in Albania
+22 August 2026
+What the money actually buys, why the same work is quoted three ways, and the question that tells you whether a quote is serious.
 Read it
 What a website audit contains
 22 August 2026
@@ -618,9 +656,21 @@ SEO for a brand new business
 22 August 2026
 What to do in the first three months, in order, when nobody has heard of you and the site was published last week.
 Read it
+Lawyers and notaries
+22 August 2026
+Why the usual advice fits this trade badly, and what to do instead when asking for reviews is not straightforward.
+Read it
 How to get Google reviews
 22 August 2026
 The mechanics: when to ask, the words to use, what you are not allowed to do, and how to make it one tap instead of a chore.
+Read it
+Gyms and fitness studios
+22 August 2026
+Two facts decide it, both usually missing, and a third thing that matters more here than in any other trade.
+Read it
+Builders and contractors
+22 August 2026
+What a person about to spend serious money is looking for, and why the phone matters more than the website.
 Read it
 How to come up first on Google
 21 August 2026
@@ -658,10 +708,18 @@ SEO for a garage: what customers search
 14 August 2026 Your trade
 Drivers describe a symptom, not a service, and the garage that wrote the symptom down is the one they find.
 Read it
-AI search 3
+AI search 5
+Will AI replace Google?
+22 August 2026
+What is actually changing, what it means for the work, and why the answer barely affects what you should do next.
+Read it
 What AI search actually is
 22 August 2026
 What changed, what it means for a small business, and the honest limits of anything anybody can do about it.
+Read it
+How to appear in ChatGPT
+22 August 2026
+The practical version: what assistants can read, what they cannot, and the order to fix it in.
 Read it
 AI search: what nobody can promise you
 14 August 2026
@@ -671,10 +729,18 @@ AI search for hotels and guesthouses
 14 August 2026 Your trade
 Search is a smaller front door for hotels than it was, and somebody else is charging you for the guests who use theirs.
 Read it
-Websites 15
+Websites 17
+What to write on your website
+22 August 2026
+A way to get the text out of your head and onto the page, without a copywriter and without a blank screen.
+Read it
 The website mistakes we see most often
 22 August 2026
 What actually turns up when you open small business sites here, one after another, and read them the way a customer would.
+Read it
+How to sell online in Albania
+22 August 2026
+What actually stops small businesses here, in the order it stops them, and the version that works before any of it is solved.
 Read it
 How to choose a web designer
 22 August 2026
@@ -732,10 +798,14 @@ A website you update yourself from a phone
 14 August 2026
 New pieces go on the site in about a minute, from a phone, with no licence and no monthly fee.
 Read it
-Meta ads 3
+Meta ads 4
 What Meta ads cost in Albania
 22 August 2026
 The fee and the budget are separate things, and an agency that blends them into a percentage is charging you more the better it does.
+Read it
+Google Ads or SEO?
+22 August 2026
+What each one is good at, what neither is good at, and how to decide without pretending the answer is the same for everybody.
 Read it
 Why the fastest reply wins the job
 14 August 2026
@@ -791,6 +861,95 @@ SEO and local search
 Also
 SEO and local search
 Websites
+Read next
+Why is my competitor above me?
+
+## Why is my competitor above me?
+https://minarankstudio.com/blog/why-is-my-competitor-above-me/
+
+Usually one of five reasons, and four are fixable.
+The most common question we get, and the one with the most checkable answer.
+By Henri Sila · 22 August 2026
+They have reviews and you do not
+Open both profiles side by side and count. This is the commonest answer and the least technical one, and it is decided by customers rather than by anything on your site.
+It is also the fastest gap to close, because most of your customers would leave one and have never been asked.
+Their listing is filled in and yours is not
+Hours, categories, services, photographs, the description. Compare field by field. An empty profile is a business that looks closed to a system deciding which one to show.
+They have pages about what people type
+Search the thing you want to be found for and read what actually ranks. If the page above you is about that exact thing and yours is a homepage mentioning it once, the result is not mysterious.
+This is the reason most worth acting on, because a page you do not have is a page you can write.
+Somebody else links to them
+A supplier, a local news site, a trade association, a partner. Each one is a vote from a machine's point of view, and they are hard to fake and slow to accumulate.
+You almost certainly have three of these available and unasked: whoever supplies you, whoever you have worked with, and whichever local directory your trade uses.
+They have simply been there longer
+This is the one you cannot fix, and it is the reason to be honest about timelines. A domain with years behind it starts ahead.
+It is also the least decisive of the five. Age alone loses to a shop with reviews, a filled profile and pages that answer the question.
+Doing the comparison properly
+Search from a phone, not from the computer you built the site on. Log out. Results are shaped by where you are and what you have clicked before, and your own screen is the least reliable one you own.
+Questions worth asking
+They are above me but their site looks worse. How?
+Because the page is not the only input. Reviews, the listing, how long they have existed and who links to them all count, and a plain site with those four in place beats a beautiful one without them.
+Does clicking their result help them?
+Not usefully, and clicking your own does not help you. Repeatedly searching for yourself mostly teaches your own browser to show you what you want to see, which is how people convince themselves they rank.
+Can I report them for something?
+Only for a listing that is genuinely fake: an invented address, a keyword stuffed name, a business that does not operate there. That does happen and reporting it works, but it is rarer than the people losing assume.
+How often should I check?
+Monthly is plenty. Daily checking measures noise, and results move enough between one search and the next that a bad day looks like a collapse when nothing has changed.
+What if they are a national chain?
+Then compete where size does not help. A chain cannot be local in your street, cannot answer a question about your town, and usually has one page covering the whole country where you can have one covering your city.
+Send us both addresses, yours and theirs, and we will tell you which of the five is doing the work.
+Get a free audit.
+Updated 22 August 2026
+The service
+SEO and local search
+Also
+SEO and local search
+A free audit
+Read next
+What to write on your website
+
+## What SEO costs in Albania
+https://minarankstudio.com/blog/what-seo-costs-in-albania/
+
+Nobody publishes a number, so here is how the number is built.
+Written for somebody who has asked two agencies and received two figures with nothing in between to compare.
+By Henri Sila · 22 August 2026
+Why nobody publishes a price
+Because the work is not one thing. Fixing a shop that already ranks and starting a business that has never been indexed share a name and almost nothing else.
+A published number would be wrong for most readers in one direction or the other, so the industry publishes nothing and everybody assumes the worst.
+The three shapes a quote comes in
+A one off project, a monthly retainer, or an hourly rate. The same job can honestly be sold as any of the three, which is exactly why two quotes for it can look unrelated.
+A project suits a site that needs repairing once. A retainer suits work that only compounds if somebody keeps doing it. An hourly rate suits neither of you, because it pays for time rather than for anything you can point at.
+What a monthly fee is actually paying for
+Roughly: things written, things fixed, and things watched. New pages answering questions people type. Technical faults corrected as they appear. Rankings, the profile and the enquiries checked so somebody notices when a number turns.
+If a proposal does not separate those three, ask which one the money is buying this month. A vague retainer becomes a report nobody reads by the fourth invoice.
+The cheap end, and what it really is
+Very low monthly fees exist here and they buy automated reports, a handful of directory submissions and links from sites built for the purpose. It is not a smaller version of the work.
+The directories cost you nothing but an hour of typing. The links are the part that can hurt, and undoing them takes longer than earning good ones would have.
+The question that sorts serious from not
+Ask what happens if it does not work. A serious answer names what would be reviewed, when, and what would change as a result.
+An answer promising a position, a timeline or a number of keywords is selling certainty that nobody selling it owns, because the ranking is decided by a system neither of you controls.
+What we would say about your case
+Whether the money is better spent on search at all. For some businesses the honest answer is a better offer, or ads while search catches up, and we would rather write that down than invoice around it.
+Questions worth asking
+Is a cheap monthly fee always bad?
+Not always, but ask what arrives for it. A small fee that buys genuine attention, however little of it, is honest work at a small scale. The same fee buying automated reports and bought links is a different product wearing the same word.
+Should we pay per keyword?
+No. It sounds measurable and is the opposite: it pays for a word climbing rather than for a customer arriving, and the words that are easiest to move are usually the ones nobody searches.
+How long before we should judge it?
+Long enough that the answer is uncomfortable. A map listing can shift in weeks, but ordinary results move on a scale of months, and judging at week 6 mostly measures how patient you were.
+Can we do some of it ourselves?
+Yes, and the parts you can do are the parts that pay first. Hours, photos, answering questions in writing, asking customers for reviews. None of that needs an agency and all of it needs somebody who cares.
+What if we already pay somebody?
+Then the useful spend is a second opinion rather than a second agency. You end up with either proof the money is working or a list the current one can act on, and both are cheaper than switching.
+Send us the address and we will tell you which of the three shapes fits, and roughly what the work would involve.
+Get a free audit.
+Updated 22 August 2026
+The service
+SEO and local search
+Also
+SEO and local search
+A free audit
 Read next
 What Meta ads cost in Albania
 
@@ -877,7 +1036,49 @@ Also
 SEO and local search
 AI search
 Read next
-How to get Google reviews
+Lawyers and notaries
+
+## Lawyers and notaries
+https://minarankstudio.com/blog/lawyers-and-notaries/
+
+Nobody searches for a lawyer. They search for a document.
+One of the few trades where the standard local search playbook needs rewriting rather than applying.
+By Henri Sila · 22 August 2026
+What people actually type
+Not the profession. The thing they need done: a sale contract, a power of attorney, an inheritance, a company registration, a translation certified.
+A site organised by practice area answers a question nobody asked. One page per document, named the way a client would name it, answers the question they typed.
+The two questions before any call
+How much, and how long. Neither is usually on the site, and both are asked on every first call, which is a lot of calls that could have been enquiries from people already decided.
+A range with the reason it varies is enough. Silence is read as expensive.
+Reviews, in a trade where asking is awkward
+Some clients will never be named and some matters cannot be discussed. That is real, and it is not a reason to have none.
+Ask the routine matters. A company registration, a property transfer, a certified copy. Those clients are usually pleased and have nothing sensitive to protect.
+Being findable in three languages
+Property here is bought by people who do not read Albanian. An office that publishes the same explanation in Italian and English is reachable by the buyers most likely to need a notary and least likely to have a recommendation.
+The listing does more here than usual
+People choose an office near the property or near the court, so proximity decides more of this than of most trades. Hours, the exact address, and a phone number somebody answers are the whole listing.
+Add the services as separate entries rather than one line. Each one is a thing somebody searches for by name.
+Questions worth asking
+Is it acceptable to publish prices?
+For standard, fixed work it is normal and it filters your calls. For anything that varies with the matter, publish the range and what moves it. The alternative is that people assume and usually assume high.
+Should each lawyer have their own page?
+Yes, if more than one works there. People search for a named person more often than firms expect, and a page with a photograph, the languages spoken and the areas covered is the one that gets found.
+What about client confidentiality on the site?
+Nothing about being findable requires naming a client or a matter. Describe the work generically, publish what a process involves, and let the specific cases stay where they belong.
+Do we need a blog?
+You need explanations of what people are about to sign. What a notary actually checks, what a power of attorney can and cannot do, what happens if a document is missing. That is not a blog, it is the service explained.
+Our clients come from recommendations. Why bother?
+Because the recommendation increasingly ends with somebody searching the name to check you exist. If nothing sensible comes back, the recommendation does less work than the person making it intended.
+Send us your address and we will tell you which documents you are findable for and which you are not.
+Get a free audit.
+Updated 22 August 2026
+The service
+SEO and local search
+Also
+SEO and local search
+Websites
+Read next
+How to sell online in Albania
 
 ## How to get Google reviews
 https://minarankstudio.com/blog/how-to-get-google-reviews/
@@ -921,6 +1122,91 @@ SEO and local search
 AI search
 Read next
 How to choose a web designer
+
+## Gyms and fitness studios
+https://minarankstudio.com/blog/gyms-and-fitness-studios/
+
+The decision is made before anybody walks in.
+Written after looking at what people actually check before choosing where to train.
+By Henri Sila · 22 August 2026
+Price and timetable, or nothing
+These are the two things every single person checks, and the two things most sites here leave out. A price you have to ask for reads as a price you will not like.
+The timetable is worse to omit, because somebody with a fixed work schedule cannot decide anything without it. They move on to a gym that published theirs.
+Photographs of the actual room
+Nobody joins a place they have not seen. Stock photographs of gleaming equipment in somebody else's building are worse than no photographs, because the disappointment happens after the visit rather than before it.
+Photograph the room when it is in use, from the door, in daylight. The size of the space is the thing people are trying to judge.
+The trial, and where it should be
+If there is a first session free, it belongs at the top of every page, not on a separate one. It is the only offer that removes the actual objection, which is not price but embarrassment.
+What people search that you can own
+Not the word gym. A class name, a time of day, a goal, a neighbourhood. Somebody looking for a morning class near where they live is a different search from somebody looking for a gym.
+Each of those is a page you can have and most competitors will not bother to write.
+The seasonal part, planned instead of endured
+Enquiries spike in January and September and collapse in summer. That is predictable, so the pages that answer January questions should be written in November rather than during the rush.
+Search takes months to move. Publishing a page in the week you need it is publishing it a season late.
+Questions worth asking
+Should we really publish prices?
+Yes, and the objection is always that competitors will see them. They already know. The person who does not know is the one deciding, and they decide against silence more often than against a number.
+Do we need an app or a booking system?
+Only when the timetable stops fitting on a page or people are turned away from full classes. Before that it is a cost that solves a problem you do not have yet.
+How do we compete with a big chain nearby?
+On the things size prevents. A named instructor, a class of eight rather than forty, a timetable that suits shift workers. A chain cannot describe your neighbourhood and will not try.
+Are before and after photographs a good idea?
+Only with permission, only real, and better with a sentence from the person in them. Bought or exaggerated ones are recognised instantly and cost the trust the page existed to build.
+Our members come from word of mouth. Is search worth it?
+Word of mouth still ends in a search. Somebody is told about you, looks you up, and finds no timetable and no price. The recommendation was doing its job right up until that moment.
+Send us your address and we will tell you what a person deciding between you and the next place cannot currently find out.
+Get a free audit.
+Updated 22 August 2026
+The service
+SEO and local search
+Also
+SEO and local search
+Meta ads
+Read next
+Google Ads or SEO?
+
+## Builders and contractors
+https://minarankstudio.com/blog/builders-and-contractors/
+
+You are hired on evidence. Most sites publish none.
+The trade where the gap between the good ones and the findable ones is widest.
+By Henri Sila · 22 August 2026
+Finished work, or nothing
+This is the whole trade. Somebody deciding whether to give you a large sum wants to see rooms you finished, with enough detail to believe you were there.
+Ten jobs, a few photographs each, what it was and roughly how long. That page outperforms every other page you could build, and almost nobody in this trade has one.
+Before and after, with the before included
+The finished kitchen alone proves nothing, because anybody can photograph a kitchen. The same room beforehand is what makes it yours and makes the work legible.
+Take the before photograph on every job from now on. It costs nothing and it is the only version of this that persuades.
+They search for the job, not for you
+Bathroom renovation, roof repair, an extension, underfloor heating. Each is its own search and deserves its own page saying what it involves, what affects the price, and how long it takes.
+A single page listing every service you offer competes for none of them.
+The part that beats any website
+Answering the phone. In this trade the commonest complaint is not price or quality, it is being ignored, and most work is won by whoever replied first.
+If you are on a roof and cannot answer, say on the site when you do call back, and then do. It converts better than anything a designer can arrange.
+The awkward things worth saying
+Whether you are licensed and insured. Whether there is a guarantee and for how long. What happens if the job runs over. Everybody wonders and almost nobody publishes it.
+Answering in writing is the cheapest way to separate yourself from the operators who make this trade hard to trust.
+Questions worth asking
+We have no photographs of old work. What now?
+Start today with the current job and ask two past clients if you may photograph the finished room. Most say yes. Within a season you have a page that did not exist and could not be bought.
+Should we publish prices?
+Not a fixed price, because nobody can quote a build from a website. Publish what drives it: the size, the state of what is there, the materials. That is more useful than a number and it is honest.
+Is it worth having a website at all?
+It is the only place a stranger can check you exist before handing over money. A profile with photographs and reviews does part of the job, and the part it cannot do is explain a job in your own words.
+What about bad reviews from difficult jobs?
+They happen in this trade more than most and a calm public reply is worth more than the review costs. People reading it are deciding whether you are the kind of firm that handles a problem or disappears.
+Do we need to be on every trade directory?
+No. Two or three that people here actually use, filled in properly and consistent with your site, beat twenty half filled ones. The consistency is the part that counts.
+Send us your address and we will tell you which jobs you could be found for and are not.
+Get a free audit.
+Updated 22 August 2026
+The service
+SEO and local search
+Also
+SEO and local search
+Websites
+Read next
+An agency or a freelancer?
 
 ## How to come up first on Google
 https://minarankstudio.com/blog/how-to-come-up-first-on-google/
@@ -1295,6 +1581,48 @@ Websites
 Read next
 A website in Albanian, Italian and English
 
+## Will AI replace Google?
+https://minarankstudio.com/blog/will-ai-replace-google/
+
+Wrong question for a small business. Here is the right one.
+Asked constantly, usually by people with no money riding on the answer.
+By Henri Sila · 22 August 2026
+What is actually happening
+Google is not being replaced so much as answered over. The results are still there, with a summary above them, and a growing number of people stop at the summary.
+Meanwhile assistants that are not Google at all answer the same questions for a different set of people. Both things are true and neither is a replacement.
+Why the question misleads
+It invites you to bet on a winner and then wait. A small business does not need to know who wins, because the work that gets you into an assistant's answer is the work that gets you into a search result.
+Clear pages, consistent details, real reviews, being readable. There is no version of the future in which those stop mattering.
+What does change
+The cost of being second. Ten links gave a fair number of businesses a share of the attention. An answer naming three does not, and the gap between third and fourth becomes the whole game.
+That is a reason to do the ordinary work properly rather than a reason to buy something new.
+Who is affected soonest
+Trades where people ask for a recommendation rather than browse. Services, repairs, professionals. Anything where somebody would previously have asked a friend.
+Shops that people walk past, or that get found on the map, are affected later and less.
+What we would not do about it
+Rebuild anything, buy a tool, or pay for a separate service with AI in the name. Nobody has enough evidence to justify that yet, and this studio would rather say so than sell it.
+Questions worth asking
+Should I stop caring about Google?
+No. It is still where most people start, by a wide margin, and it feeds the summaries as well. Treating it as finished is the most expensive mistake available in this conversation.
+Will people stop visiting websites?
+Some will, for some questions, and that is a real loss for anybody whose traffic was made of quick factual lookups. Being named in the answer is the compensation, and it goes to businesses that are readable.
+Is my industry going to be affected?
+Ask an assistant a question a customer would ask and see whether it names businesses at all. If it does, you are already in the market. If it answers generically, you have longer.
+Do I need to do something different this year?
+Almost certainly not something different. Something sooner, maybe. The list has not changed, it has just become less forgiving about being half done.
+What if the whole thing turns out to be a bubble?
+Then you have spent the year writing clear pages, collecting reviews and fixing your listing, which is what you should have been doing anyway. That is the reason to work this way: nothing here is wasted if the prediction is wrong.
+If you want to know where you stand today, ask us and we will check what a few assistants say about your trade.
+Get a free audit.
+Updated 22 August 2026
+The service
+AI search
+Also
+AI search
+SEO and local search
+Read next
+Why my website gets no visitors
+
 ## What AI search actually is
 https://minarankstudio.com/blog/what-is-ai-search/
 
@@ -1337,6 +1665,50 @@ AI search
 SEO and local search
 Read next
 What a website audit contains
+
+## How to appear in ChatGPT
+https://minarankstudio.com/blog/how-to-appear-in-chatgpt/
+
+There is no form to fill in. There is a shape to be.
+For somebody who has already asked one and found their competitor named instead.
+By Henri Sila · 22 August 2026
+First, check what they say now
+Ask three of them what they recommend in your trade and town. Write the answers down with the date. That is your starting position and it takes ten minutes.
+Most people skip this and then cannot tell whether anything changed. A note in a file beats a feeling six months later.
+Be readable at all
+An assistant reads text. A business living inside a social account, or one whose prices and services are pictures of words, is not there as far as a reader is concerned.
+This is the single biggest cause of absence we see, and it is typing rather than technology.
+Say the plain things plainly
+What you do, where you are, what it costs, when you are open, who you serve. In sentences, on a page, in the language your customers use.
+Assistants answer questions, so pages shaped like answers get lifted. A page of atmosphere gets skipped even when the atmosphere is lovely.
+Be corroborated somewhere else
+Your own site says you are good. That is expected and counts for little. A profile with reviews, a directory listing, a mention in something somebody else publishes are all outside your control and worth more for exactly that reason.
+Do not let a setting refuse them
+Some hosts and security products block AI crawlers by default, sometimes without saying so, and the file that refuses them is not in your project. Check what an assistant is actually served rather than what you wrote.
+We found exactly that on this site, and on 3 others we look after, in a single afternoon.
+Then ask again, later
+Assistants do not update on your schedule and there is no dashboard confirming anything. Repeat the questions from the first step every month and keep the notes.
+Questions worth asking
+Can I pay to be included?
+No, and anybody offering it is selling something else. There is no advertising slot and no submission process inside an assistant's answer, which is precisely what makes the position worth having.
+Does it help to mention ChatGPT on my site?
+No. Writing the name of an assistant into your pages does nothing except make the copy odd. What gets you named is answering the question somebody asked it.
+How long does it take?
+Unpredictable, and shorter than search when it moves at all, because assistants that fetch live pages can pick you up as soon as the page exists. The ones working from training data are on a schedule nobody outside publishes.
+Do I need a blog for this?
+You need answers, and a blog is just the usual place to put them. Five honest pages about what you actually get asked beat fifty written to fill a schedule.
+What if my competitor is named and I am not?
+Read what the assistant says about them and you will usually find the reason in the first sentence: reviews, a clear description of the service, or a page answering the exact question. It is a checkable gap, not a mystery.
+Send us your address and trade and we will ask a few assistants about you, then send you what they said.
+Get a free audit.
+Updated 22 August 2026
+The service
+AI search
+Also
+AI search
+SEO and local search
+Read next
+Gyms and fitness studios
 
 ## AI search: what nobody can promise you
 https://minarankstudio.com/blog/what-nobody-can-promise-ai-search/
@@ -1422,6 +1794,50 @@ Websites
 Read next
 SEO for heating and cooling engineers
 
+## What to write on your website
+https://minarankstudio.com/blog/what-to-write-on-your-website/
+
+You already know the words. You say them all day.
+The stage where most small business sites stall, often for months, with the design already finished.
+By Henri Sila · 22 August 2026
+Write down the questions first
+For one week, note every question a customer asks you. On the phone, in the shop, in messages. Do not edit them and do not tidy the wording.
+At the end of the week you have your site. Those questions are what people type, in the words they type them in, which is not a coincidence.
+Answer them the way you would out loud
+Say the answer to yourself, then write that. If a sentence would sound strange spoken to a customer standing in front of you, it is wrong on the page too.
+This is the whole technique. The formal voice people reach for when they open a blank document is the thing that makes small business sites read like each other.
+The five pages that carry it
+What you do, with prices or a range. Where you are and when you are open. Who you are. How to reach you. And one page per thing you actually sell, because that is what somebody searches for.
+Everything else is optional for a long time.
+The words to take out
+Quality, professional, solutions, passion, and any sentence beginning with a welcome. Every competitor has written them, so they distinguish nothing and take up the space where a fact could go.
+Replace each one with something checkable. Not quality repairs but a 6 month guarantee. Not fast delivery but the courier named and the cost shown.
+Say the price, or say the range
+The commonest question is what it costs and the commonest answer is silence. A range with the reason it varies beats nothing, and it filters out the enquiries you did not want.
+Then leave it alone for a week
+Come back and cut every sentence that is not doing work. Almost nobody adds on the second pass, which tells you what the first pass is really for.
+Questions worth asking
+How long should each page be?
+As long as the answer takes and no longer. A service page that answers the question in 200 words is finished, and padding it to look substantial makes it worse for both readers.
+Should I write in Albanian, Italian or English?
+In whichever your customers search in, which on this coast is often more than one. If you serve visitors as well as locals, one language is a choice to be invisible to the others.
+Can I use AI to write it?
+For a first draft of something you then rewrite in your own words, sometimes. Published as it comes out, it reads like every other site that did the same, which is the opposite of the point.
+What if I am not a good writer?
+Good writing here means clear, not literary. If you can explain the job to a customer on the phone you can write the page, and the phone version is usually better than the one people produce when they try.
+Do I need to keep adding pages forever?
+No. You need the questions answered, and then new pages only when new questions arrive. A site that stops growing because it is complete is fine, as long as the hours and prices stay true.
+Send us what you have written, even if it is a list of notes, and we will tell you what is missing.
+Get a free audit.
+Updated 22 August 2026
+The service
+Websites
+Also
+Websites
+SEO and local search
+Read next
+What SEO costs in Albania
+
 ## The website mistakes we see most often
 https://minarankstudio.com/blog/website-mistakes-albanian-businesses-make/
 
@@ -1467,6 +1883,49 @@ SEO and local search
 Read next
 SEO for a brand new business
 
+## How to sell online in Albania
+https://minarankstudio.com/blog/how-to-sell-online-in-albania/
+
+The hard part is not the shop. It is getting paid.
+Written after building shops for clients who all hit the same wall in the same order.
+By Henri Sila · 22 August 2026
+Start with the part everybody skips
+How does the money reach you. Card payment online is the question that decides the shape of everything else, and it is worth answering before a single product page exists.
+Businesses build the shop first, discover the answer, and rebuild. That order is the most common and the most expensive.
+The version that works immediately
+Product pages with real photographs, honest prices, and a WhatsApp button. No cart, no checkout, no card processing.
+It is not a compromise, it is how a great deal of trade here actually happens. People want to ask a question before they buy, and a conversation converts better than a form.
+Delivery decides your prices
+Work out what it costs to send one item, to a city, and to a village, before you publish a price. Free delivery that you have not costed is a discount you did not choose to give.
+Say the cost on the page. Delivery discovered at the last step is the commonest reason a full cart is abandoned.
+Returns, said out loud
+Write what happens if it does not fit or does not work, in one short paragraph, and put it where people can see it before they buy.
+Nobody enjoys writing it. Not having it is read as an answer anyway, and not a good one.
+Then the boring things that decide it
+Photographs of the actual item. Sizes and materials written out. Stock that is true today. A phone number that gets answered.
+None of that is a platform decision, and all of it separates the shops that sell from the shops that exist.
+Questions worth asking
+Do I need a proper e-commerce platform?
+Not to begin with. If you sell fewer than a few dozen items and talk to customers anyway, product pages and a WhatsApp button will carry you a long way, and you will learn what to build from real orders.
+Can I just sell on Instagram?
+You can, and many do, but you cannot be found there by somebody searching for the product. It is a good second channel and a bad only one, because nothing you post is readable by a search engine.
+What about selling abroad?
+Then payments and shipping change completely and the answer stops being local. It is worth doing properly rather than bolting onto a domestic shop, and it usually needs a conversation before a build.
+How many products before it is worth a real shop?
+When you cannot keep stock accurate by hand, or when writing back to every buyer takes longer than the order is worth. Both are signals from the work rather than from a number somebody made up.
+Is cash on delivery still normal here?
+Yes, and designing as though it were not is how a shop ends up with abandoned carts it does not understand. Offer it, price it honestly, and say so on the page.
+Tell us what you want to sell and we will tell you which of these you actually need to solve first.
+Get a free audit.
+Updated 22 August 2026
+The service
+Websites
+Also
+Websites
+Custom software
+Read next
+How to get Google reviews
+
 ## How to choose a web designer
 https://minarankstudio.com/blog/how-to-choose-a-web-designer/
 
@@ -1509,7 +1968,7 @@ Also
 Websites
 Custom software
 Read next
-New website, or fix the one I have?
+How to appear in ChatGPT
 
 ## New website, or fix the one I have?
 https://minarankstudio.com/blog/do-i-need-a-new-website-or-a-fix/
@@ -1549,7 +2008,7 @@ Also
 Websites
 SEO and local search
 Read next
-An agency or a freelancer?
+Builders and contractors
 
 ## An agency or a freelancer?
 https://minarankstudio.com/blog/agency-or-freelancer/
@@ -2030,7 +2489,7 @@ Also
 Websites
 Custom software
 Read next
-Why my website gets no visitors
+Will AI replace Google?
 
 ## What Meta ads cost in Albania
 https://minarankstudio.com/blog/what-meta-ads-cost-in-albania/
@@ -2074,6 +2533,49 @@ Meta ads
 Websites
 Read next
 What AI search actually is
+
+## Google Ads or SEO?
+https://minarankstudio.com/blog/google-ads-or-seo/
+
+One buys you today. The other buys you next year.
+The comparison every owner runs before spending, usually with somebody selling one of the two answering it.
+By Henri Sila · 22 August 2026
+The difference in one line
+Ads put you at the top of a page you have not earned, for as long as you keep paying. Search earns the position and keeps it after the spending stops.
+Everything else is detail, and most arguments about the two are really arguments about which of those two problems you have this quarter.
+When paying is clearly right
+When you need customers before search could possibly deliver them. A new business, a seasonal window, a location opening next month.
+Also when what you sell is urgent. Somebody with a burst pipe is not comparing five results, and being first for that minute is worth more than being respected for a year.
+When it is clearly wrong
+When the page they land on cannot convert them. Paying to send strangers to a site with no prices, no address and a form nobody has tested is buying traffic to prove a point.
+Also when the budget is small enough that the money disappears before anybody learns anything from it. A budget that cannot survive a fortnight of testing teaches you nothing.
+The part nobody mentions
+They are not really alternatives. Ads reveal, in weeks, which words actually bring people who buy, and that is the most expensive thing to learn any other way.
+Run for a month, read honestly, they tell you what the slower work should aim at. That is worth the money even if you never advertise again.
+What we would do with a small budget
+Fix the page first, because both routes end there. Then advertise narrowly, on the few words closest to a purchase, and read what comes back.
+Then spend the slow work on whatever the ads proved people want. The order matters more than the split.
+Questions worth asking
+Can we do both at once?
+Yes, and it is often the right answer, but only after the page they arrive on is worth arriving at. Doing both badly costs twice and teaches you half as much.
+Do ads help our normal rankings?
+No. Paying does not move the unpaid results, and Google has said so repeatedly. What ads do is tell you which words are worth the slower effort, which is a different kind of help and a real one.
+What about Meta ads instead?
+Different job. Search catches somebody already looking for you. Meta puts you in front of somebody who was not looking, which suits things people buy on sight and suits emergency plumbing very badly.
+How small is too small a budget?
+When a single click costs a noticeable share of the daily spend, you are not running a campaign, you are buying a few visitors. At that point the money does more on the site itself.
+If we stop advertising, do we lose everything?
+You lose the traffic immediately, which is the honest cost of renting the position. What you keep is what you learned and whatever the slower work built in the meantime, which is the argument for doing both.
+Tell us what you sell and where, and we will say which of the two we would start with and why.
+Get a free audit.
+Updated 22 August 2026
+The service
+Meta ads
+Also
+Meta ads
+SEO and local search
+Read next
+New website, or fix the one I have?
 
 ## Why the fastest reply wins the job
 https://minarankstudio.com/blog/whoever-answers-first/
@@ -2228,7 +2730,29 @@ on TechBehemoths, which somebody else runs, and a profile we do not
 control is worth more than a badge we drew ourselves.
 Written and built by Henri Sila in
 Durres. Questions go to info@minarankstudio.com.
-Updated 21 August 2026
+Questions we get asked
+Is this one person or a team?
+One person, and you always know which one. Henri Sila writes the
+plan, builds the pages and answers the mail. That is a limit as
+much as a promise: we take fewer clients than an agency can, and
+we would rather say so now than be slow later.
+Do we need to be in Durres?
+No. Most of this happens inside a browser and a document, and several
+clients have never been in the same room as us. If you are near, we
+come to you, because seeing the place usually changes the plan.
+What if somebody already handles this for us?
+Keep them, and take the audit as a second opinion. If what they are
+doing is working, you get proof of it in writing. If it is not, you
+get a list they can act on. Neither answer means hiring us.
+What happens if we outgrow you?
+It happens, and it is the good kind of problem. When a business
+needs a team of specialists instead of one person, we say so rather
+than stretch and hope. Handing over cleanly is part of the job.
+Can we speak to somebody you have worked with?
+Yes. Ask, and we introduce you to the client whose situation looks
+most like yours. The work is public either way: each of them has a
+page here saying what changed and what did not.
+Updated 22 August 2026
 
 ## Free website audit
 https://minarankstudio.com/start/
@@ -2288,7 +2812,7 @@ photographs and text already exist. That is why the audit comes first
 and costs nothing. You get the price with the plan, on one page, before
 any work starts. Meta ads are a flat fee rather than a cut of what you
 spend.
-Updated 21 August 2026
+Updated 22 August 2026
 Studio
 minarank studio, Durres, Albania
 info@minarankstudio.com
