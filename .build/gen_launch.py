@@ -468,8 +468,7 @@ def indexnow_ping(urls):
     for u in urls:
         q = urllib.parse.urlencode({"url": u, "key": INDEXNOW_KEY})
         try:
-            urllib.request.urlopen(
-                "https://api.indexnow.org/indexnow?" + q, timeout=10).close()
+            fetch("https://api.indexnow.org/indexnow?" + q)
             sent += 1
         except Exception as e:
             print("IndexNow: stopped after %d of %d (%s). Not a build "
@@ -477,6 +476,19 @@ def indexnow_ping(urls):
                   % (sent, len(urls), e))
             return
     print("IndexNow: pinged %d URL(s)" % sent)
+
+
+# urllib sends "Python-urllib/3.x" and the proxy in front of this site answers
+# that with a 403 while serving curl a 200. Everything below reads as a dead
+# site when it is only a rejected greeting, and live_is_open() fails closed by
+# design, so the symptom is a build that quietly stops pinging forever rather
+# than one that errors. Say who we are instead.
+UA = "minarank-build/1.0 (+%s; gen_launch.py)" % shell.SITE
+
+
+def fetch(url, timeout=10):
+    req = urllib.request.Request(url, headers={"User-Agent": UA})
+    return urllib.request.urlopen(req, timeout=timeout).read().decode("utf-8")
 
 
 def robots_groups(body):
@@ -551,8 +563,7 @@ def live_is_open():
     impression, and only one of those is recoverable.
     """
     try:
-        body = urllib.request.urlopen(
-            shell.SITE + "/robots.txt", timeout=10).read().decode("utf-8")
+        body = fetch(shell.SITE + "/robots.txt")
     except Exception as e:
         print("IndexNow: could not read the live robots.txt (%s), so nothing "
               "pinged. Re-run after the deploy" % e)
