@@ -247,7 +247,7 @@ CTA_NOTE = {
 # ------------------------------------------------------------- the parts ----
 
 def faq_section(indent, rec, en_rec, lang, toc, heading=None,
-                en_heading=None):
+                en_heading=None, wrap=None):
     """The FAQ heading is an h2 like any other and goes into the contents like
     any other. It is emitted from here rather than from the block list, which
     is exactly how a contents list built off rec["blocks"] would have missed
@@ -259,13 +259,25 @@ def faq_section(indent, rec, en_rec, lang, toc, heading=None,
     h = fill(heading if heading is not None else rec["faq_h"], lang)
     en_h = en_heading if en_heading is not None else en_rec["faq_h"]
     hid = "" if toc is None else f' id="{toc.add(en_h, h)}"'
-    rows = [pad + '<section class="faq" data-reveal-group>',
-            f'{pad}  <h2{hid}>{h}</h2>']
+    # The 3 doc pages sit inside a column that already carries the page gutter,
+    # so their FAQ needs no container and has never had one. The homepage lays
+    # its own sections out and gives each one a .wrap; without it this section
+    # had no max-width and no padding-inline, and ran off the left edge of the
+    # phone. It cannot be fixed by nesting a second <section> because check 15
+    # counts them, so the caller names a container class instead.
+    inner = indent + (2 if wrap else 0)
+    ipad = " " * inner
+    rows = [pad + '<section class="faq" data-reveal-group>']
+    if wrap:
+        rows.append(f'{pad}  <div class="{wrap}">')
+    rows.append(f'{ipad}  <h2{hid}>{h}</h2>')
     for (q, a), (en_q, _en_a) in zip(rec["faq"], en_rec["faq"]):
-        rows.append(pad + '  <div class="faq-item">')
-        rows.append(f'{pad}    <h3 class="faq-q" id="{slugify(en_q, "q-")}">'
-                    f'{txt(indent + 6, q, lang)}</h3>')
-        rows.append(f'{pad}    <p>{txt(indent + 6, a, lang)}</p>')
+        rows.append(ipad + '  <div class="faq-item">')
+        rows.append(f'{ipad}    <h3 class="faq-q" id="{slugify(en_q, "q-")}">'
+                    f'{txt(inner + 6, q, lang)}</h3>')
+        rows.append(f'{ipad}    <p>{txt(inner + 6, a, lang)}</p>')
+        rows.append(ipad + "  </div>")
+    if wrap:
         rows.append(pad + "  </div>")
     rows.append(pad + "</section>")
     return NL.join(rows)

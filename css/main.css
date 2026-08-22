@@ -777,6 +777,15 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
 .faq-item { border-top: 1px solid var(--edge); padding-block: var(--s-5); max-width: 66ch; }
 .faq-item:last-child { border-bottom: 1px solid var(--edge); }
 .faq-q { font-size: var(--fs-h3); margin-bottom: var(--s-3); }
+/* The item owns its own spacing, everywhere. `.prose h3` and `.prose p` are
+   (0,1,1) and .faq-q is (0,1,0), so on the 3 doc pages and all 135 blog pages
+   the prose rules were winning and adding 32px above every question and 24px
+   below every answer on top of the padding. The homepage sits in .wrap rather
+   than .prose and got none of it, so the same 5 questions were 188px an item
+   there and 277px on a post. Two renderings of one component is a bug whichever
+   is nicer, and the tighter one is also the one that was designed. */
+.faq .faq-q { margin-top: 0; }
+.faq .faq-item > p { margin-bottom: 0; }
 
 .payoff { margin-top: var(--s-5); font-weight: 700; display: flex;
   align-items: center; gap: var(--s-3); }
@@ -1286,6 +1295,17 @@ button.btn:disabled:hover { background: none; color: var(--ink); }
   .hero-af .field input { font-size: 1rem; }
   .hero { padding-bottom: var(--pad-section); }
   .af-done { padding-left: var(--s-4); }
+
+  /* The question block, tightened for a thumb. Measured at 390: the section
+     was 1165px, 1.4 screens of scrolling for 5 questions, and 240px of that
+     was item padding alone. The 96px above it is a deliberate register change
+     on a wide page (see .faq) and it survives here at 64, where the reader has
+     no horizontal separation to read the change from and every pixel is a
+     scroll. Answers keep 18px: a phone is where they are actually read, and
+     shrinking body text to win back height is the wrong trade. */
+  .faq { margin-top: var(--s-8); }
+  .faq-item { padding-block: var(--s-4); }
+  .faq .faq-q { margin-bottom: var(--s-2); }
 }
 /* the widest mark is 15.7:1, so a narrow phone needs it small or it overflows */
 @media (max-width: 419px) {

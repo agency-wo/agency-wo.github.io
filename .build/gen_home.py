@@ -506,7 +506,7 @@ def render(lang):
       </div>
     </section>
 
-{faq_section(4, h, i18n.load("home", "PAGE", "en"), lang, None)}
+{faq_section(4, h, i18n.load("home", "PAGE", "en"), lang, None, wrap="wrap")}
 '''
     return (shell.head(page, lang) + shell.header(lang, page["url"]) +
             '\n  <main id="main">\n' + body + '\n  </main>\n' +
