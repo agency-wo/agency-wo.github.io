@@ -699,7 +699,7 @@ The money numbers a small shop should track
 14 August 2026
 A bug that hid inside a chart for a whole phase, and what it says about the software a small business runs on.
 Read it
-Updated 21 August 2026
+Updated 22 August 2026
 
 ## How to come up first on Google
 https://minarankstudio.com/blog/how-to-come-up-first-on-google/
@@ -735,7 +735,7 @@ Do I need to be in Tirana to rank in Tirana?
 For the map, distance counts, so a Tirana searcher standing in Tirana sees Tirana businesses. For the results underneath, no. We are in Durres and the building is done remotely, which is why we say so plainly rather than renting an address.
 Send us the address and we will tell you which of the two competitions you are actually losing.
 Get a free audit.
-Updated 21 August 2026
+Updated 22 August 2026
 The service
 SEO and local search
 The business in this post
@@ -777,7 +777,7 @@ My competitor has done this for years. Then what?
 Then you do not take their best phrase this year. You take the ten they never wrote a page for, which is generally where the customers were anyway.
 Send us the address and we will say which half is missing, and roughly what the other half is going to ask of you.
 Get a free audit.
-Updated 21 August 2026
+Updated 22 August 2026
 The service
 SEO and local search
 The business in this post
@@ -822,7 +822,7 @@ Does posting updates help?
 A little, and much less than the fields above. Do the categories, hours, photographs and reviews first. If posting is the only thing you have energy for, it is the wrong thing to spend it on.
 Send us your listing and we will tell you which fields are empty and which of them is costing you calls.
 Get a free audit.
-Updated 21 August 2026
+Updated 22 August 2026
 The service
 SEO and local search
 Also
@@ -865,7 +865,7 @@ What decides the price?
 How many pieces you want listed, whether you take payment, and how many languages. A page that gets a repair shop found is small. A catalogue of two hundred pieces with stock and prices is a different job, and we say which one you are asking for.
 Tell us which half of your shop is quiet, the repairs or the sales, and we will tell you which search is missing.
 Get a free audit.
-Updated 21 August 2026
+Updated 22 August 2026
 The service
 SEO and local search
 The business in this post
@@ -896,7 +896,7 @@ Check it against your own chart
 If you have Search Console, look at your last 90 days and split them in 3. A healthy new site leans the same way: the last third beats the first 2. A flat line for 90 days is the thing to worry about, and worth a conversation.
 Send us your Search Console chart and we will read the curve with you, in plain words.
 Get a free audit.
-Updated 21 August 2026
+Updated 22 August 2026
 The service
 SEO and local search
 The business in this post
@@ -940,7 +940,7 @@ What decides the price of this?
 How long the menu is, how many languages it needs, and whether the photographs exist yet. A one page menu in Albanian is a small job. A hundred dishes in three languages with a booking form is not. You are told which one you are before you agree to anything.
 Send us your menu the way a customer finds it, and we will tell you which dishes are invisible.
 Get a free audit.
-Updated 21 August 2026
+Updated 22 August 2026
 The service
 SEO and local search
 Also
@@ -977,7 +977,7 @@ Check it yourself
 Search for watch repair in Durres. Then search for a watch shop in Durres. Do it in Albanian, then in Italian. We would rather you checked than took our word for it, and if the answer has moved since August, that is the honest state of this work rather than a screenshot we chose.
 The audit scores how you stand next to the businesses competing with you, which on a phone means that map. Send us your address and we will look.
 Get a free audit.
-Updated 21 August 2026
+Updated 22 August 2026
 The service
 SEO and local search
 The business in this post
@@ -1021,7 +1021,7 @@ What decides the price?
 How many areas you cover, how many services you list, and whether you need more than one language. Getting one van found in one city is a small job.
 Tell us what your quietest month is, and we will tell you what to have finished before the cold arrives.
 Get a free audit.
-Updated 21 August 2026
+Updated 22 August 2026
 The service
 SEO and local search
 The business in this post
@@ -1065,7 +1065,7 @@ What decides the price?
 How many services and makes you list, and how many languages. Getting one garage found in one city is small.
 Tell us the 3 complaints you hear most on the phone, word for word, and we will show you what people are typing.
 Get a free audit.
-Updated 21 August 2026
+Updated 22 August 2026
 The service
 SEO and local search
 Also
@@ -1105,7 +1105,7 @@ Try it on a real business
 Ask ChatGPT where to get a watch repaired in Durres, then ask it for a watch shop in Durres. We built watch.al and we would rather you ran that check than believed a screenshot.
 If somebody has quoted you a number about AI search, send it over with your website and we will tell you where that number came from.
 Get a free audit.
-Updated 21 August 2026
+Updated 22 August 2026
 The service
 AI search
 The business in this post
@@ -1149,7 +1149,7 @@ What decides the price?
 How many rooms you describe, whether you want direct booking, and how many languages, which for a guesthouse on this coast usually means at least three.
 Tell us roughly what share of your bookings arrive through an agency, and we will tell you which of them you were paying for twice.
 Get a free audit.
-Updated 21 August 2026
+Updated 22 August 2026
 The service
 AI search
 Also
@@ -1189,7 +1189,7 @@ Can I edit a built site myself?
 Yes, and that is a requirement rather than an extra. If changing a price means ringing us, the price stops being changed and the site starts lying about your stock.
 Tell us what the site has to do in two years and we will say honestly which of the two you should be buying.
 Get a free audit.
-Updated 21 August 2026
+Updated 22 August 2026
 The service
 Websites
 Also
@@ -1234,7 +1234,7 @@ Who owns it when it is finished?
 You do: the domain, the code and every account, in your name from the first day. That is not generosity, it is the only arrangement that leaves you free to walk away from us.
 Send us the site you have, or the address you would use, and we will tell you which of the four is driving your number.
 Get a free audit.
-Updated 21 August 2026
+Updated 22 August 2026
 The service
 Websites
 Also
@@ -1274,7 +1274,7 @@ I post every day and it is not working. Would a site fix it?
 Probably not on its own. If posting daily is not converting, the problem is usually what you sell, to whom, or at what price, and a website built on top of that question will not answer it either.
 Send us the account and what you sell, and we will tell you honestly whether a site would earn its money yet.
 Get a free audit.
-Updated 21 August 2026
+Updated 22 August 2026
 The service
 Websites
 Also
@@ -1314,7 +1314,7 @@ Does the price change?
 No. The same project costs the same wherever it is, because the building is remote either way. What changes is how long the search half takes, and you are told which before agreeing to anything.
 Send the address and the phrase you want, and we will tell you plainly how crowded that phrase already is.
 Get a free audit.
-Updated 21 August 2026
+Updated 22 August 2026
 The service
 Websites
 Also
@@ -1354,7 +1354,7 @@ Should it be in Albanian only?
 Only if that is genuinely who buys from you. A good deal of trade on this coast happens in Italian and English, and a shop that exists in one language cannot be found by the other two.
 Tell us the street and what you sell, and we will show you who is sitting above you today and what put them there.
 Get a free audit.
-Updated 21 August 2026
+Updated 22 August 2026
 The service
 Websites
 The business in this post
@@ -1397,7 +1397,7 @@ What decides the price?
 How much of the range goes online, whether you take payment, and how many languages. A page that shows what you stock and opens a conversation is small. A full shop with sizes, stock and checkout is a bigger build.
 Tell us how your last 10 orders actually reached you, and we will tell you whether a checkout would have helped.
 Get a free audit.
-Updated 21 August 2026
+Updated 22 August 2026
 The service
 Websites
 The business in this post
@@ -1441,7 +1441,7 @@ What decides the price?
 How many services you list, whether you want booking, and how many languages. A price list, photographs and a map is a small job.
 Tell us how a regular books with you today, and we will tell you what that arrangement is costing.
 Get a free audit.
-Updated 21 August 2026
+Updated 22 August 2026
 The service
 Websites
 Also
@@ -1483,7 +1483,7 @@ What decides the price?
 How many pieces you list, whether you take payment, and how many languages. Showing a rail of stock in one language is small. A shop with checkout, delivery and returns in three languages is not.
 Send us a photograph of something you put in the window this week, and we will tell you how long it would take to get it online.
 Get a free audit.
-Updated 21 August 2026
+Updated 22 August 2026
 The service
 Websites
 The business in this post
@@ -1528,7 +1528,7 @@ What decides the price?
 How many treatments you describe, how many people you introduce, and how many languages. A single practice with six treatments is a small job.
 Search your own clinic the way a patient would, with the name a friend would have given them, and tell us what you found.
 Get a free audit.
-Updated 21 August 2026
+Updated 22 August 2026
 The service
 Websites
 Also
@@ -1558,7 +1558,7 @@ What it means for a shop like yours
 If your customers search in more than one language, the languages are separate doors, and each one either exists or it does not. Our web design work builds all of them from one source, so a second door never means hiring somebody to keep it true.
 Tell us which languages your customers search in, and we will tell you what a site in all of them involves.
 Get a free audit.
-Updated 21 August 2026
+Updated 22 August 2026
 The service
 Websites
 The business in this post
@@ -1588,7 +1588,7 @@ Agencies sell subscriptions because subscriptions pay agencies. A site that cost
 Our sites are built this way by default. The running cost is a domain name.
 Ask us what your current site costs a year to keep, and what the same site would cost to own outright.
 Get a free audit.
-Updated 21 August 2026
+Updated 22 August 2026
 The service
 Websites
 The business in this post
@@ -1618,7 +1618,7 @@ Most of the result is decided in the 90 seconds after somebody taps. Does the pa
 Every step is fixable, and none of them is more ad spend. Which is why we will tell you when the honest fix is your reply time, not your budget.
 Ask us how fast your last enquiry got an answer. If you do not know, that is the answer.
 Get a free audit.
-Updated 21 August 2026
+Updated 22 August 2026
 The service
 Meta ads
 The business in this post
@@ -1662,7 +1662,7 @@ What decides the price?
 Whether you want the site, the ads or both, how many languages, and whether the listings come out of a system you already use. Ads on their own are a small setup.
 Tell us where your last 3 instructions came from, and we will tell you whether the portal had anything to do with it.
 Get a free audit.
-Updated 21 August 2026
+Updated 22 August 2026
 The service
 Meta ads
 Also
@@ -1701,7 +1701,7 @@ The part worth stealing
 If a number on your screen has never disagreed with anything, it has never been checked. Find the place your system adds something up, and go and add it up by hand once. That is a free afternoon and it is how we found ours.
 Tell us what you still count by hand every week. We will tell you whether it is worth building something, and we will say so when it is not.
 Get a free audit.
-Updated 21 August 2026
+Updated 22 August 2026
 The service
 Custom software
 The business in this post
