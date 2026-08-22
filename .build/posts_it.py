@@ -3409,6 +3409,1005 @@ POSTS = [
                     ("/seo/", "SEO e ricerca locale")],
     },
 
+    {
+        "slug": "what-seo-costs-in-albania",
+        "src": "c44fd2d6",
+        "date": "2026-08-22",
+        "updated": "2026-08-22",
+        "topic": "Ricerca locale",
+        "work": None,
+        "service": ("/seo/", "SEO e ricerca locale"),
+
+        "title": "Quanto costa la SEO in Albania",
+        "h1": "Nessuno pubblica una cifra, quindi ecco come si costruisce.",
+        "summary": "Cosa compra davvero quel denaro, perché lo stesso lavoro "
+                   "viene preventivato in tre modi, e la domanda che ti dice "
+                   "se un preventivo è serio.",
+        "standfirst": "Scritto per chi ha chiesto a due agenzie e si è "
+                      "ritrovato due numeri senza niente in mezzo da "
+                      "confrontare.",
+        "description": "Quanto costa la SEO in Albania: come si costruisce "
+                       "un preventivo, cosa paga un canone mensile, e come "
+                       "distinguere una cifra seria da una inventata.",
+        "og_desc": "Due preventivi, nessun modo di confrontarli. Ecco cosa "
+                   "c'è dietro ogni cifra.",
+
+        "body": [
+            ("Perché nessuno pubblica un prezzo", [
+                "<p>Perché il lavoro non è una cosa sola. Sistemare un "
+                "negozio che già si posiziona e far partire un'attività mai "
+                "indicizzata condividono il nome e quasi nient'altro.</p>",
+                "<p>Un numero pubblicato sarebbe sbagliato per quasi tutti "
+                "in una direzione o nell'altra, quindi il settore non "
+                "pubblica niente e tutti pensano al peggio.</p>",
+            ]),
+            ("Le tre forme di un preventivo", [
+                "<p>Un progetto una tantum, un canone mensile, o una tariffa "
+                "oraria. Lo stesso lavoro può essere venduto onestamente in "
+                "tutti e tre i modi, ed è esattamente per questo che due "
+                "preventivi sembrano scollegati.</p>",
+                "<p>Il progetto va bene per un sito da riparare una volta. "
+                "Il canone va bene per un lavoro che rende solo se qualcuno "
+                "continua a farlo. La tariffa oraria non va bene a nessuno "
+                "dei due, perché paga il tempo invece di qualcosa che puoi "
+                "indicare.</p>",
+            ]),
+            ("Cosa paga davvero un canone mensile", [
+                "<p>Grosso modo: cose scritte, cose sistemate, cose "
+                "osservate. Pagine nuove che rispondono a quello che la "
+                "gente digita. Difetti tecnici corretti quando compaiono. "
+                "Posizioni, scheda e richieste controllate perché qualcuno "
+                "si accorga quando un numero gira.</p>",
+                "<p>Se una proposta non separa questi tre, chiedi quale sta "
+                "comprando il denaro questo mese. Un canone vago diventa un "
+                "report che nessuno legge entro la quarta fattura.</p>",
+            ]),
+            ("La fascia bassa, e cos'è davvero", [
+                "<p>I canoni molto bassi esistono anche qui e comprano "
+                "report automatici, qualche iscrizione a directory e link da "
+                "siti costruiti apposta. Non è una versione più piccola del "
+                "lavoro.</p>",
+                "<p>Le directory non ti costano niente se non un'ora di "
+                "digitazione. I link sono la parte che può fare male, e "
+                "disfarli richiede più tempo di quanto ne servirebbe a "
+                "guadagnarne di buoni.</p>",
+            ]),
+            ("La domanda che separa il serio dal resto", [
+                "<p>Chiedi cosa succede se non funziona. Una risposta seria "
+                "dice cosa verrebbe rivisto, quando, e cosa cambierebbe di "
+                "conseguenza.</p>",
+                "<p>Una risposta che promette una posizione, una data o un "
+                "numero di parole chiave vende una certezza che chi la vende "
+                "non possiede, perché il posizionamento lo decide un sistema "
+                "che nessuno dei due controlla.</p>",
+            ]),
+            ("Cosa diremmo del tuo caso", [
+                "<p>Se quel denaro conviene spenderlo sulla ricerca. Per "
+                "certe attività la risposta onesta è un'offerta migliore, o "
+                "la pubblicità mentre la ricerca recupera, e preferiamo "
+                "scriverlo invece di fatturarci intorno.</p>",
+            ]),
+        ],
+        "payoff": "Mandaci l'indirizzo e ti diciamo quale delle tre forme ha "
+                  "senso, e grosso modo cosa comporterebbe il lavoro.",
+        "faq": [
+            ("Un canone basso è sempre un male?",
+             "Non sempre, ma chiedi cosa arriva in cambio. Un canone piccolo "
+             "che compra attenzione vera, per quanto poca, è lavoro onesto "
+             "su scala piccola. Lo stesso canone che compra report "
+             "automatici e link comprati è un altro prodotto con la stessa "
+             "parola sopra."),
+            ("Conviene pagare a parola chiave?",
+             "No. Sembra misurabile ed è il contrario: paga una parola che "
+             "sale invece di un cliente che arriva, e le parole più facili "
+             "da muovere di solito non le cerca nessuno."),
+            ("Dopo quanto possiamo giudicare?",
+             "Dopo abbastanza da rendere la risposta scomoda. Una scheda "
+             "sulla mappa può muoversi in settimane, ma i risultati normali "
+             "si muovono su scala di mesi, e giudicare alla sesta settimana "
+             "misura soprattutto quanto sei paziente."),
+            ("Possiamo farne una parte da soli?",
+             "Sì, e le parti che puoi fare sono quelle che rendono per "
+             "prime. Orari, foto, rispondere alle domande per iscritto, "
+             "chiedere recensioni ai clienti. Niente di tutto questo "
+             "richiede un'agenzia e tutto richiede qualcuno a cui importa."),
+            ("E se paghiamo già qualcuno?",
+             "Allora la spesa utile è un secondo parere, non una seconda "
+             "agenzia. Ti ritrovi o con la prova che i soldi lavorano o con "
+             "una lista su cui può agire chi c'è già, e sono entrambe più "
+             "economiche di un cambio."),
+        ],
+        "related": [("/seo/", "SEO e ricerca locale"),
+                    ("/start/", "Un audit gratuito")],
+    },
+
+    {
+        "slug": "google-ads-or-seo",
+        "src": "55118ad4",
+        "date": "2026-08-22",
+        "updated": "2026-08-22",
+        "topic": "Meta ads",
+        "work": None,
+        "service": ("/meta-ads/", "Meta ads"),
+
+        "title": "Google Ads o SEO?",
+        "h1": "Una ti compra oggi. L'altra ti compra l'anno prossimo.",
+        "summary": "In cosa è brava ciascuna, in cosa non è brava nessuna "
+                   "delle due, e come decidere senza far finta che la "
+                   "risposta sia uguale per tutti.",
+        "standfirst": "Il confronto che ogni titolare fa prima di spendere, "
+                      "di solito con qualcuno che vende una delle due a "
+                      "rispondere.",
+        "description": "Google Ads o SEO per una piccola attività: cosa "
+                       "compra ciascuna, quando pagare è la scelta giusta, e "
+                       "il caso in cui farle entrambe è quella sbagliata.",
+        "og_desc": "Una si ferma il giorno che smetti di pagare. L'altra ci "
+                   "mette mesi a partire. Contano tutti e due.",
+
+        "body": [
+            ("La differenza in una riga", [
+                "<p>La pubblicità ti mette in cima a una pagina che non hai "
+                "guadagnato, finché continui a pagare. La ricerca guadagna "
+                "la posizione e la tiene anche dopo che la spesa "
+                "finisce.</p>",
+                "<p>Tutto il resto è dettaglio, e quasi tutte le discussioni "
+                "sulle due sono in realtà discussioni su quale dei due "
+                "problemi hai questo trimestre.</p>",
+            ]),
+            ("Quando pagare è chiaramente giusto", [
+                "<p>Quando ti servono clienti prima di quando la ricerca "
+                "potrebbe portarli. Un'attività nuova, una finestra "
+                "stagionale, una sede che apre il mese prossimo.</p>",
+                "<p>Anche quando quello che vendi è urgente. Chi ha un tubo "
+                "rotto non confronta cinque risultati, ed essere primo per "
+                "quel minuto vale più che essere stimato per un anno.</p>",
+            ]),
+            ("Quando è chiaramente sbagliato", [
+                "<p>Quando la pagina su cui atterrano non li converte. "
+                "Pagare per mandare sconosciuti su un sito senza prezzi, "
+                "senza indirizzo e con un modulo che nessuno ha provato è "
+                "comprare visite per dimostrare qualcosa.</p>",
+                "<p>Anche quando il budget è così piccolo che i soldi "
+                "finiscono prima che qualcuno impari qualcosa. Un budget che "
+                "non sopravvive a due settimane di prove non ti insegna "
+                "niente.</p>",
+            ]),
+            ("La parte che nessuno dice", [
+                "<p>Non sono davvero alternative. La pubblicità rivela, in "
+                "settimane, quali parole portano davvero gente che compra, "
+                "ed è la cosa più cara da imparare in qualsiasi altro "
+                "modo.</p>",
+                "<p>Un mese di campagna, letto onestamente, ti dice a cosa "
+                "deve puntare il lavoro lento. Vale i soldi anche se non fai "
+                "pubblicità mai più.</p>",
+            ]),
+            ("Cosa faremmo con un budget piccolo", [
+                "<p>Prima sistemare la pagina, perché entrambe le strade "
+                "finiscono lì. Poi fare pubblicità stretta, sulle poche "
+                "parole più vicine a un acquisto, e leggere cosa torna.</p>",
+                "<p>Poi spendere il lavoro lento su quello che la pubblicità "
+                "ha dimostrato che la gente vuole. L'ordine conta più della "
+                "divisione.</p>",
+            ]),
+        ],
+        "payoff": "Dicci cosa vendi e dove, e ti diciamo con quale delle due "
+                  "partiremmo e perché.",
+        "faq": [
+            ("Possiamo fare entrambe insieme?",
+             "Sì, ed è spesso la risposta giusta, ma solo dopo che la pagina "
+             "su cui arrivano vale il viaggio. Farle entrambe male costa il "
+             "doppio e insegna la metà."),
+            ("La pubblicità aiuta il posizionamento normale?",
+             "No. Pagare non muove i risultati non pagati, e Google lo ha "
+             "detto più volte. Quello che fa la pubblicità è dirti quali "
+             "parole meritano il lavoro lento, che è un altro tipo di aiuto "
+             "ed è reale."),
+            ("E i Meta ads al posto loro?",
+             "Lavoro diverso. La ricerca prende chi ti sta già cercando. "
+             "Meta ti mette davanti a chi non cercava niente, cosa che va "
+             "bene per quello che si compra a colpo d'occhio e malissimo per "
+             "un'urgenza idraulica."),
+            ("Quanto è troppo piccolo un budget?",
+             "Quando un solo clic costa una fetta evidente della spesa "
+             "giornaliera non stai facendo una campagna, stai comprando "
+             "qualche visita. A quel punto i soldi rendono di più sul sito "
+             "stesso."),
+            ("Se smettiamo di pagare perdiamo tutto?",
+             "Perdi le visite subito, ed è il costo onesto di affittare la "
+             "posizione. Quello che resta è ciò che hai imparato e quello "
+             "che il lavoro lento ha costruito nel frattempo, che è "
+             "l'argomento per farle entrambe."),
+        ],
+        "related": [("/meta-ads/", "Meta ads"),
+                    ("/seo/", "SEO e ricerca locale")],
+    },
+
+    {
+        "slug": "why-is-my-competitor-above-me",
+        "src": "5d17475f",
+        "date": "2026-08-22",
+        "updated": "2026-08-22",
+        "topic": "Ricerca locale",
+        "work": None,
+        "service": ("/seo/", "SEO e ricerca locale"),
+
+        "title": "Perché il concorrente è sopra di me?",
+        "h1": "Di solito una di cinque ragioni, e quattro si sistemano.",
+        "summary": "Come capire cosa sta facendo il negozio sopra di te, in "
+                   "un pomeriggio, senza comprare uno strumento che te lo "
+                   "dica.",
+        "standfirst": "La domanda che ci fanno più spesso, e quella con la "
+                      "risposta più verificabile.",
+        "description": "Perché un concorrente si posiziona sopra di te su "
+                       "Google: le cinque ragioni solite, come controllarle "
+                       "da solo, e quali puoi sistemare questa settimana.",
+        "og_desc": "Cinque ragioni solite. Puoi controllarle tutte da solo "
+                   "questo pomeriggio.",
+
+        "body": [
+            ("Hanno recensioni e tu no", [
+                "<p>Apri le due schede affiancate e conta. È la risposta più "
+                "comune e la meno tecnica, e la decidono i clienti invece di "
+                "qualcosa sul tuo sito.</p>",
+                "<p>È anche la distanza che si colma più in fretta, perché "
+                "quasi tutti i tuoi clienti ne lascerebbero una e nessuno "
+                "gliel'ha mai chiesto.</p>",
+            ]),
+            ("La loro scheda è compilata e la tua no", [
+                "<p>Orari, categorie, servizi, foto, descrizione. Confronta "
+                "campo per campo. Una scheda vuota è un'attività che sembra "
+                "chiusa a un sistema che deve scegliere quale mostrare.</p>",
+            ]),
+            ("Hanno pagine su quello che la gente digita", [
+                "<p>Cerca la cosa per cui vuoi essere trovato e leggi cosa "
+                "si posiziona davvero. Se la pagina sopra di te parla "
+                "esattamente di quella cosa e la tua è una home che la "
+                "nomina una volta, il risultato non è un mistero.</p>",
+                "<p>È la ragione su cui conviene di più agire, perché una "
+                "pagina che non hai è una pagina che puoi scrivere.</p>",
+            ]),
+            ("Qualcun altro li collega", [
+                "<p>Un fornitore, un giornale locale, un'associazione di "
+                "categoria, un partner. Ognuno è un voto dal punto di vista "
+                "di una macchina, sono difficili da falsificare e lenti da "
+                "accumulare.</p>",
+                "<p>Quasi sicuramente ne hai tre disponibili e non chiesti: "
+                "chi ti fornisce, chi ha lavorato con te, e la directory "
+                "locale che usa il tuo settore.</p>",
+            ]),
+            ("Semplicemente sono lì da più tempo", [
+                "<p>Questa è quella che non si sistema, ed è il motivo per "
+                "essere onesti sui tempi. Un dominio con anni alle spalle "
+                "parte avanti.</p>",
+                "<p>È anche la meno decisiva delle cinque. L'età da sola "
+                "perde contro un negozio con recensioni, una scheda piena e "
+                "pagine che rispondono alla domanda.</p>",
+            ]),
+            ("Fare il confronto per bene", [
+                "<p>Cerca dal telefono, non dal computer su cui hai "
+                "costruito il sito. Esci dall'account. I risultati sono "
+                "modellati da dove sei e da cosa hai cliccato prima, e il "
+                "tuo schermo è il meno affidabile che possiedi.</p>",
+            ]),
+        ],
+        "payoff": "Mandaci i due indirizzi, il tuo e il loro, e ti diciamo "
+                  "quale delle cinque sta facendo il lavoro.",
+        "faq": [
+            ("Sono sopra di me ma il loro sito è peggiore. Come?",
+             "Perché la pagina non è l'unico ingrediente. Recensioni, "
+             "scheda, da quanto esistono e chi li collega contano tutti, e "
+             "un sito spoglio con quei quattro a posto batte uno bellissimo "
+             "senza."),
+            ("Cliccare sul loro risultato li aiuta?",
+             "Non in modo utile, e cliccare sul tuo non aiuta te. Cercarti "
+             "di continuo insegna soprattutto al tuo browser a mostrarti "
+             "quello che vuoi vedere, ed è così che ci si convince di "
+             "posizionarsi."),
+            ("Posso segnalarli per qualcosa?",
+             "Solo per una scheda davvero falsa: un indirizzo inventato, un "
+             "nome pieno di parole chiave, un'attività che lì non opera. "
+             "Succede e segnalarlo funziona, ma è più raro di quanto creda "
+             "chi sta perdendo."),
+            ("Ogni quanto dovrei controllare?",
+             "Una volta al mese basta. Controllare ogni giorno misura "
+             "rumore, e i risultati si muovono abbastanza tra una ricerca e "
+             "l'altra che una giornata storta sembra un crollo quando non è "
+             "cambiato niente."),
+            ("E se sono una catena nazionale?",
+             "Allora competi dove la dimensione non aiuta. Una catena non "
+             "può essere locale nella tua via, non può rispondere a una "
+             "domanda sulla tua città, e di solito ha una pagina per tutto "
+             "il paese dove tu puoi averne una per la tua."),
+        ],
+        "related": [("/seo/", "SEO e ricerca locale"),
+                    ("/start/", "Un audit gratuito")],
+    },
+
+    {
+        "slug": "how-to-appear-in-chatgpt",
+        "src": "6c93b31d",
+        "date": "2026-08-22",
+        "updated": "2026-08-22",
+        "topic": "Ricerca AI",
+        "work": None,
+        "service": ("/geo/", "Ricerca AI"),
+
+        "title": "Come apparire in ChatGPT",
+        "h1": "Non c'è un modulo da compilare. C'è una forma da avere.",
+        "summary": "La versione pratica: cosa riescono a leggere gli "
+                   "assistenti, cosa no, e in che ordine sistemarlo.",
+        "standfirst": "Per chi ne ha già interrogato uno e ha trovato "
+                      "nominato il concorrente.",
+        "description": "Come farsi nominare da ChatGPT e dagli altri "
+                       "assistenti: cosa leggono, cosa li ferma, e in che "
+                       "ordine lavorare.",
+        "og_desc": "Non esiste nessun modulo di iscrizione. Esiste una forma "
+                   "che ti fa nominare.",
+
+        "body": [
+            ("Prima, guarda cosa dicono adesso", [
+                "<p>Chiedi a tre di loro cosa consigliano nel tuo settore e "
+                "nella tua città. Scrivi le risposte con la data. Quella è "
+                "la tua posizione di partenza e ci vogliono dieci "
+                "minuti.</p>",
+                "<p>Quasi tutti saltano questo passaggio e poi non sanno "
+                "dire se è cambiato qualcosa. Un appunto in un file batte "
+                "una sensazione sei mesi dopo.</p>",
+            ]),
+            ("Essere leggibile e basta", [
+                "<p>Un assistente legge testo. Un'attività che vive dentro "
+                "un profilo social, o che ha prezzi e servizi come immagini "
+                "di parole, per chi legge non c'è.</p>",
+                "<p>È la causa di assenza più grande che vediamo, ed è "
+                "digitazione più che tecnologia.</p>",
+            ]),
+            ("Dire le cose semplici in modo semplice", [
+                "<p>Cosa fai, dove sei, quanto costa, quando sei aperto, chi "
+                "servi. In frasi, su una pagina, nella lingua che usano i "
+                "tuoi clienti.</p>",
+                "<p>Gli assistenti rispondono a domande, quindi le pagine "
+                "che rispondono a una domanda vengono prese. Una pagina di "
+                "atmosfera viene saltata anche quando l'atmosfera è "
+                "bellissima.</p>",
+            ]),
+            ("Farsi confermare da qualcun altro", [
+                "<p>Il tuo sito dice che sei bravo. È previsto e conta poco. "
+                "Una scheda con recensioni, un'iscrizione a una directory, "
+                "una menzione in qualcosa che pubblica qualcun altro sono "
+                "tutte fuori dal tuo controllo e valgono di più esattamente "
+                "per quello.</p>",
+            ]),
+            ("Non lasciare che un'impostazione li rifiuti", [
+                "<p>Certi hosting e prodotti di sicurezza bloccano i crawler "
+                "AI in modo predefinito, a volte senza dirlo, e il file che "
+                "li rifiuta non è nel tuo progetto. Controlla cosa viene "
+                "servito davvero a un assistente invece di cosa hai "
+                "scritto.</p>",
+                "<p>Abbiamo trovato esattamente questo su questo sito, e su "
+                "altri 3 che seguiamo, in un solo pomeriggio.</p>",
+            ]),
+            ("Poi richiedi, più avanti", [
+                "<p>Gli assistenti non si aggiornano secondo i tuoi tempi e "
+                "non c'è nessun pannello che confermi niente. Ripeti le "
+                "domande del primo passaggio ogni mese e tieni gli "
+                "appunti.</p>",
+            ]),
+        ],
+        "payoff": "Mandaci indirizzo e settore e chiediamo a qualche "
+                  "assistente di te, poi ti mandiamo cosa hanno detto.",
+        "faq": [
+            ("Posso pagare per essere incluso?",
+             "No, e chi te lo propone ti sta vendendo altro. Dentro la "
+             "risposta di un assistente non c'è nessuno spazio pubblicitario "
+             "e nessuna procedura di iscrizione, ed è proprio questo che "
+             "rende la posizione preziosa."),
+            ("Serve nominare ChatGPT sul mio sito?",
+             "No. Scrivere il nome di un assistente nelle tue pagine non fa "
+             "niente se non rendere strano il testo. Quello che ti fa "
+             "nominare è rispondere alla domanda che gli è stata fatta."),
+            ("Quanto ci vuole?",
+             "Non è prevedibile, ed è più breve della ricerca quando si "
+             "muove, perché gli assistenti che scaricano pagine dal vivo "
+             "possono prenderti appena la pagina esiste. Quelli che lavorano "
+             "sui dati di addestramento seguono un calendario che nessuno "
+             "pubblica."),
+            ("Mi serve un blog per questo?",
+             "Ti servono risposte, e il blog è solo il posto solito dove "
+             "metterle. Cinque pagine oneste su quello che ti chiedono "
+             "davvero battono cinquanta scritte per riempire un calendario."),
+            ("E se nominano il concorrente e non me?",
+             "Leggi cosa dice l'assistente di loro e di solito trovi il "
+             "motivo nella prima frase: recensioni, una descrizione chiara "
+             "del servizio, o una pagina che risponde alla domanda esatta. È "
+             "una distanza verificabile, non un mistero."),
+        ],
+        "related": [("/geo/", "Ricerca AI"),
+                    ("/seo/", "SEO e ricerca locale")],
+    },
+
+    {
+        "slug": "will-ai-replace-google",
+        "src": "e27309fe",
+        "date": "2026-08-22",
+        "updated": "2026-08-22",
+        "topic": "Ricerca AI",
+        "work": None,
+        "service": ("/geo/", "Ricerca AI"),
+
+        "title": "L'AI sostituirà Google?",
+        "h1": "Domanda sbagliata per una piccola attività. Ecco quella "
+              "giusta.",
+        "summary": "Cosa sta cambiando davvero, cosa significa per il "
+                   "lavoro, e perché la risposta cambia pochissimo di quello "
+                   "che devi fare.",
+        "standfirst": "Chiesta di continuo, di solito da chi non ha soldi in "
+                      "gioco sulla risposta.",
+        "description": "L'AI sostituirà la ricerca su Google? Cosa cambia "
+                       "davvero per le piccole attività, e perché la "
+                       "risposta pratica è la stessa in entrambi i casi.",
+        "og_desc": "La risposta onesta non cambia quasi niente di quello che "
+                   "dovresti fare questo mese.",
+
+        "body": [
+            ("Cosa sta succedendo davvero", [
+                "<p>Google non viene sostituito, viene risposto sopra. I "
+                "risultati ci sono ancora, con un riassunto in cima, e "
+                "sempre più gente si ferma al riassunto.</p>",
+                "<p>Intanto assistenti che non sono Google rispondono alle "
+                "stesse domande per un pubblico diverso. Sono vere entrambe "
+                "le cose e nessuna delle due è una sostituzione.</p>",
+            ]),
+            ("Perché la domanda inganna", [
+                "<p>Ti invita a scommettere su un vincitore e poi aspettare. "
+                "Una piccola attività non ha bisogno di sapere chi vince, "
+                "perché il lavoro che ti fa entrare nella risposta di un "
+                "assistente è lo stesso che ti fa entrare in un risultato di "
+                "ricerca.</p>",
+                "<p>Pagine chiare, dati coerenti, recensioni vere, essere "
+                "leggibile. Non esiste una versione del futuro in cui queste "
+                "smettono di contare.</p>",
+            ]),
+            ("Cosa cambia davvero", [
+                "<p>Il costo di essere secondo. Dieci link davano a "
+                "parecchie attività una fetta di attenzione. Una risposta "
+                "che ne nomina tre no, e la distanza tra il terzo e il "
+                "quarto diventa tutto.</p>",
+                "<p>È un motivo per fare bene il lavoro ordinario, non un "
+                "motivo per comprare qualcosa di nuovo.</p>",
+            ]),
+            ("Chi è toccato prima", [
+                "<p>I settori dove la gente chiede un consiglio invece di "
+                "sfogliare. Servizi, riparazioni, professionisti. Tutto "
+                "quello per cui prima si chiedeva a un amico.</p>",
+                "<p>I negozi davanti a cui si passa, o che si trovano sulla "
+                "mappa, sono toccati dopo e meno.</p>",
+            ]),
+            ("Cosa non faremmo a riguardo", [
+                "<p>Rifare qualcosa, comprare uno strumento, o pagare un "
+                "servizio a parte con AI nel nome. Nessuno ha abbastanza "
+                "prove per giustificarlo, e questo studio preferisce dirlo "
+                "invece di vendertelo.</p>",
+            ]),
+        ],
+        "payoff": "Se vuoi sapere a che punto sei oggi, chiedicelo e "
+                  "controlliamo cosa dicono un po' di assistenti del tuo "
+                  "settore.",
+        "faq": [
+            ("Devo smettere di occuparmi di Google?",
+             "No. È ancora da lì che parte quasi tutta la gente, con ampio "
+             "margine, e alimenta anche i riassunti. Considerarlo finito è "
+             "l'errore più caro disponibile in questa conversazione."),
+            ("La gente smetterà di visitare i siti?",
+             "Qualcuno sì, per certe domande, ed è una perdita vera per chi "
+             "aveva visite fatte di ricerche di fatti rapidi. Essere "
+             "nominato nella risposta è il compenso, e va alle attività che "
+             "si lasciano leggere."),
+            ("Il mio settore sarà toccato?",
+             "Fai a un assistente una domanda che farebbe un cliente e "
+             "guarda se nomina attività. Se lo fa, sei già nel mercato. Se "
+             "risponde in modo generico, hai più tempo."),
+            ("Devo fare qualcosa di diverso quest'anno?",
+             "Quasi sicuramente niente di diverso. Qualcosa prima, forse. La "
+             "lista non è cambiata, è solo diventata meno indulgente con le "
+             "cose fatte a metà."),
+            ("E se fosse tutta una bolla?",
+             "Allora avrai passato l'anno a scrivere pagine chiare, "
+             "raccogliere recensioni e sistemare la scheda, che è quello che "
+             "avresti dovuto fare comunque. È il motivo per lavorare così: "
+             "niente di tutto questo è sprecato se la previsione è "
+             "sbagliata."),
+        ],
+        "related": [("/geo/", "Ricerca AI"),
+                    ("/seo/", "SEO e ricerca locale")],
+    },
+
+    {
+        "slug": "how-to-sell-online-in-albania",
+        "src": "277591d0",
+        "date": "2026-08-22",
+        "updated": "2026-08-22",
+        "topic": "Siti web",
+        "work": None,
+        "service": ("/web-design/", "Siti web"),
+
+        "title": "Come vendere online in Albania",
+        "h1": "La parte difficile non è il negozio. È farsi pagare.",
+        "summary": "Cosa ferma davvero le piccole attività qui, nell'ordine "
+                   "in cui le ferma, e la versione che funziona prima di "
+                   "risolvere tutto.",
+        "standfirst": "Scritto dopo aver costruito negozi per clienti che "
+                      "hanno sbattuto tutti contro lo stesso muro nello "
+                      "stesso ordine.",
+        "description": "Vendere online dall'Albania: pagamenti, consegne, "
+                       "resi e la versione semplice che funziona prima di "
+                       "risolverne uno.",
+        "og_desc": "Costruire il negozio è la parte facile. Tutto quello che "
+                   "viene dopo è il lavoro.",
+
+        "body": [
+            ("Comincia dalla parte che saltano tutti", [
+                "<p>Come arrivano i soldi da te. Il pagamento con carta "
+                "online è la domanda che decide la forma di tutto il resto, "
+                "e conviene rispondere prima che esista una singola scheda "
+                "prodotto.</p>",
+                "<p>Le attività costruiscono prima il negozio, scoprono la "
+                "risposta, e rifanno. È l'ordine più comune e il più "
+                "caro.</p>",
+            ]),
+            ("La versione che funziona subito", [
+                "<p>Schede prodotto con foto vere, prezzi onesti, e un "
+                "pulsante WhatsApp. Niente carrello, niente cassa, nessuna "
+                "carta da processare.</p>",
+                "<p>Non è un compromesso, è come funziona buona parte del "
+                "commercio qui. La gente vuole fare una domanda prima di "
+                "comprare, e una conversazione converte meglio di un "
+                "modulo.</p>",
+            ]),
+            ("La consegna decide i tuoi prezzi", [
+                "<p>Calcola quanto costa spedire un articolo, in città e in "
+                "un paese, prima di pubblicare un prezzo. La consegna gratis "
+                "che non hai calcolato è uno sconto che non hai scelto di "
+                "fare.</p>",
+                "<p>Scrivi il costo sulla pagina. La consegna scoperta "
+                "all'ultimo passaggio è il motivo più comune per cui un "
+                "carrello pieno viene abbandonato.</p>",
+            ]),
+            ("I resi, detti ad alta voce", [
+                "<p>Scrivi cosa succede se non va bene o non funziona, in un "
+                "paragrafo breve, e mettilo dove si vede prima "
+                "dell'acquisto.</p>",
+                "<p>A nessuno piace scriverlo. Non averlo viene letto lo "
+                "stesso come una risposta, e non buona.</p>",
+            ]),
+            ("Poi le cose noiose che decidono tutto", [
+                "<p>Foto dell'articolo vero. Taglie e materiali scritti. "
+                "Disponibilità vera oggi. Un numero di telefono a cui "
+                "qualcuno risponde.</p>",
+                "<p>Niente di questo è una decisione di piattaforma, e tutto "
+                "separa i negozi che vendono da quelli che esistono.</p>",
+            ]),
+        ],
+        "payoff": "Dicci cosa vuoi vendere e ti diciamo quale di questi devi "
+                  "risolvere per primo.",
+        "faq": [
+            ("Mi serve una vera piattaforma e-commerce?",
+             "Non per cominciare. Se vendi meno di qualche decina di "
+             "articoli e parli con i clienti comunque, le schede prodotto e "
+             "un pulsante WhatsApp ti portano lontano, e impari cosa "
+             "costruire dagli ordini veri."),
+            ("Posso vendere solo su Instagram?",
+             "Puoi, e in tanti lo fanno, ma lì non ti trova chi sta cercando "
+             "il prodotto. È un buon secondo canale e un pessimo unico "
+             "canale, perché niente di quello che pubblichi è leggibile da "
+             "un motore di ricerca."),
+            ("E vendere all'estero?",
+             "Allora pagamenti e spedizioni cambiano del tutto e la risposta "
+             "smette di essere locale. Conviene farlo per bene invece di "
+             "attaccarlo a un negozio nazionale, e di solito serve una "
+             "conversazione prima di costruire."),
+            ("Quanti prodotti prima di un negozio vero?",
+             "Quando non riesci più a tenere aggiornata la disponibilità a "
+             "mano, o quando rispondere a ogni acquirente costa più di "
+             "quanto valga l'ordine. Sono segnali che arrivano dal lavoro "
+             "invece che da un numero inventato."),
+            ("Il contrassegno è ancora normale qui?",
+             "Sì, e progettare come se non lo fosse è il modo per ritrovarsi "
+             "carrelli abbandonati che non capisci. Offrilo, mettilo a "
+             "prezzo onesto, e dillo sulla pagina."),
+        ],
+        "related": [("/web-design/", "Siti web"),
+                    ("/systems/", "Software su misura")],
+    },
+
+    {
+        "slug": "what-to-write-on-your-website",
+        "src": "a65d1a67",
+        "date": "2026-08-22",
+        "updated": "2026-08-22",
+        "topic": "Siti web",
+        "work": None,
+        "service": ("/web-design/", "Siti web"),
+
+        "title": "Cosa scrivere sul tuo sito",
+        "h1": "Le parole le sai già. Le dici tutto il giorno.",
+        "summary": "Un modo per far uscire il testo dalla tua testa e "
+                   "metterlo sulla pagina, senza un copywriter e senza "
+                   "schermo bianco.",
+        "standfirst": "La fase dove si blocca quasi ogni sito di piccola "
+                      "attività, spesso per mesi, con il design già finito.",
+        "description": "Cosa scrivere sul sito di una piccola attività: un "
+                       "metodo pratico per mettere giù le parole, e le "
+                       "cinque pagine che fanno quasi tutto il lavoro.",
+        "og_desc": "La pagina bianca è il vero motivo per cui metà dei siti "
+                   "a metà non parte mai.",
+
+        "body": [
+            ("Prima scrivi le domande", [
+                "<p>Per una settimana annota ogni domanda che ti fa un "
+                "cliente. Al telefono, in negozio, nei messaggi. Non "
+                "correggerle e non sistemare le parole.</p>",
+                "<p>A fine settimana hai il tuo sito. Quelle domande sono "
+                "quello che la gente digita, con le parole con cui le "
+                "digita, e non è un caso.</p>",
+            ]),
+            ("Rispondi come risponderesti a voce", [
+                "<p>Dì la risposta a voce alta, poi scrivi quella. Se una "
+                "frase suonerebbe strana detta a un cliente davanti a te, è "
+                "sbagliata anche sulla pagina.</p>",
+                "<p>La tecnica è tutta qui. La voce formale che viene in "
+                "mente aprendo un documento vuoto è quello che fa somigliare "
+                "tra loro i siti delle piccole attività.</p>",
+            ]),
+            ("Le cinque pagine che reggono tutto", [
+                "<p>Cosa fai, con prezzi o una fascia. Dove sei e quando sei "
+                "aperto. Chi sei. Come raggiungerti. E una pagina per ogni "
+                "cosa che vendi davvero, perché è quello che la gente "
+                "cerca.</p>",
+                "<p>Tutto il resto è facoltativo per parecchio tempo.</p>",
+            ]),
+            ("Le parole da togliere", [
+                "<p>Qualità, professionale, soluzioni, passione, e ogni "
+                "frase che comincia con un benvenuto. Le hanno scritte tutti "
+                "i concorrenti, quindi non distinguono niente e occupano lo "
+                "spazio dove poteva stare un fatto.</p>",
+                "<p>Sostituisci ognuna con qualcosa di verificabile. Non "
+                "riparazioni di qualità ma 6 mesi di garanzia. Non consegna "
+                "veloce ma il corriere indicato e il costo scritto.</p>",
+            ]),
+            ("Scrivi il prezzo, o la fascia", [
+                "<p>La domanda più comune è quanto costa e la risposta più "
+                "comune è il silenzio. Una fascia con il motivo per cui "
+                "varia batte il niente, e ti toglie di mezzo le richieste "
+                "che non volevi.</p>",
+            ]),
+            ("Poi lascialo stare per una settimana", [
+                "<p>Torna e taglia ogni frase che non sta lavorando. Quasi "
+                "nessuno aggiunge alla seconda passata, il che ti dice a "
+                "cosa serve davvero la prima.</p>",
+            ]),
+        ],
+        "payoff": "Mandaci quello che hai scritto, anche se è una lista di "
+                  "appunti, e ti diciamo cosa manca.",
+        "faq": [
+            ("Quanto deve essere lunga ogni pagina?",
+             "Quanto serve alla risposta e non di più. Una pagina di "
+             "servizio che risponde in 200 parole è finita, e allungarla per "
+             "sembrare sostanziosa la peggiora per entrambi i lettori."),
+            ("Devo scrivere in albanese, italiano o inglese?",
+             "In quella in cui cercano i tuoi clienti, che su questa costa "
+             "spesso è più di una. Se servi anche i visitatori oltre ai "
+             "locali, una lingua sola è la scelta di essere invisibile alle "
+             "altre."),
+            ("Posso usare l'AI per scriverlo?",
+             "Per una prima bozza che poi riscrivi con parole tue, a volte. "
+             "Pubblicata così come esce, si legge come ogni altro sito che "
+             "ha fatto lo stesso, che è l'opposto del punto."),
+            ("E se non so scrivere?",
+             "Scrivere bene qui vuol dire chiaro, non letterario. Se sai "
+             "spiegare il lavoro a un cliente al telefono sai scrivere la "
+             "pagina, e la versione da telefono di solito è migliore di "
+             "quella che esce quando ci si prova."),
+            ("Devo continuare ad aggiungere pagine per sempre?",
+             "No. Ti servono le domande con risposta, e pagine nuove solo "
+             "quando arrivano domande nuove. Un sito che smette di crescere "
+             "perché è completo va bene, purché orari e prezzi restino veri."),
+        ],
+        "related": [("/web-design/", "Siti web"),
+                    ("/seo/", "SEO e ricerca locale")],
+    },
+
+    {
+        "slug": "lawyers-and-notaries",
+        "src": "82ea5f7d",
+        "date": "2026-08-22",
+        "updated": "2026-08-22",
+        "topic": "Ricerca locale",
+        "work": None,
+        "service": ("/seo/", "SEO e ricerca locale"),
+
+        "title": "Avvocati e notai",
+        "h1": "Nessuno cerca un avvocato. Cercano un documento.",
+        "summary": "Perché i consigli soliti stanno male a questo settore, e "
+                   "cosa fare quando chiedere recensioni non è semplice.",
+        "standfirst": "Uno dei pochi settori dove il manuale della ricerca "
+                      "locale va riscritto invece che applicato.",
+        "description": "Ricerca locale per avvocati e notai in Albania: "
+                       "perché la gente cerca il documento e non la "
+                       "professione, e cosa fare quando le recensioni sono "
+                       "difficili.",
+        "og_desc": "La gente digita il documento che le serve, non la "
+                   "professione. Questo cambia cosa deve essere il sito.",
+
+        "body": [
+            ("Cosa digita davvero la gente", [
+                "<p>Non la professione. La cosa che le serve: un contratto "
+                "di compravendita, una procura, una successione, la "
+                "registrazione di una società, una traduzione "
+                "asseverata.</p>",
+                "<p>Un sito organizzato per aree di pratica risponde a una "
+                "domanda che nessuno ha fatto. Una pagina per documento, "
+                "chiamata come la chiamerebbe un cliente, risponde alla "
+                "domanda che ha digitato.</p>",
+            ]),
+            ("Le due domande prima di ogni chiamata", [
+                "<p>Quanto costa, e quanto ci vuole. Di solito non ci sono "
+                "sul sito, ed entrambe vengono fatte a ogni prima chiamata, "
+                "che sono parecchie chiamate che potevano essere richieste "
+                "da gente già decisa.</p>",
+                "<p>Una fascia con il motivo per cui varia basta. Il "
+                "silenzio viene letto come caro.</p>",
+            ]),
+            ("Recensioni, in un settore dove chiedere è delicato", [
+                "<p>Certi clienti non verranno mai nominati e certe pratiche "
+                "non si possono discutere. È vero, e non è un motivo per non "
+                "averne nessuna.</p>",
+                "<p>Chiedi per le pratiche ordinarie. La registrazione di "
+                "una società, un passaggio di proprietà, una copia conforme. "
+                "Quei clienti di solito sono contenti e non hanno niente di "
+                "delicato da proteggere.</p>",
+            ]),
+            ("Farsi trovare in tre lingue", [
+                "<p>Qui gli immobili li comprano persone che non leggono "
+                "l'albanese. Uno studio che pubblica la stessa spiegazione "
+                "in italiano e in inglese è raggiungibile dagli acquirenti "
+                "che hanno più bisogno di un notaio e meno probabilità di "
+                "avere una raccomandazione.</p>",
+            ]),
+            ("La scheda conta più del solito", [
+                "<p>La gente sceglie uno studio vicino all'immobile o al "
+                "tribunale, quindi la vicinanza decide più che in quasi ogni "
+                "altro settore. Orari, indirizzo esatto, e un telefono a cui "
+                "qualcuno risponde sono tutta la scheda.</p>",
+                "<p>Metti i servizi come voci separate invece che una riga. "
+                "Ognuno è una cosa che qualcuno cerca per nome.</p>",
+            ]),
+        ],
+        "payoff": "Mandaci l'indirizzo e ti diciamo per quali documenti sei "
+                  "trovabile e per quali no.",
+        "faq": [
+            ("È accettabile pubblicare i prezzi?",
+             "Per il lavoro standard e a forfait è normale e ti filtra le "
+             "chiamate. Per tutto quello che varia con la pratica, pubblica "
+             "la fascia e cosa la muove. L'alternativa è che la gente "
+             "immagini, e di solito immagina alto."),
+            ("Ogni professionista deve avere la sua pagina?",
+             "Sì, se ne lavora più di uno. La gente cerca una persona per "
+             "nome più spesso di quanto gli studi credano, e la pagina con "
+             "una foto, le lingue parlate e le materie seguite è quella che "
+             "si trova."),
+            ("E la riservatezza del cliente sul sito?",
+             "Niente di quello che serve a farsi trovare richiede di "
+             "nominare un cliente o una pratica. Descrivi il lavoro in "
+             "generale, pubblica in cosa consiste un procedimento, e lascia "
+             "i casi specifici dove devono stare."),
+            ("Serve un blog?",
+             "Servono spiegazioni di quello che la gente sta per firmare. "
+             "Cosa controlla davvero un notaio, cosa può e non può fare una "
+             "procura, cosa succede se manca un documento. Non è un blog, è "
+             "il servizio spiegato."),
+            ("I nostri clienti arrivano per passaparola. Perché "
+             "preoccuparsi?",
+             "Perché il passaparola finisce sempre più spesso con qualcuno "
+             "che cerca il nome per verificare che esisti. Se non torna "
+             "niente di sensato, la raccomandazione lavora meno di quanto "
+             "intendesse chi l'ha fatta."),
+        ],
+        "related": [("/seo/", "SEO e ricerca locale"),
+                    ("/web-design/", "Siti web")],
+    },
+
+    {
+        "slug": "gyms-and-fitness-studios",
+        "src": "e23e88df",
+        "date": "2026-08-22",
+        "updated": "2026-08-22",
+        "topic": "Ricerca locale",
+        "work": None,
+        "service": ("/seo/", "SEO e ricerca locale"),
+
+        "title": "Palestre e studi fitness",
+        "h1": "La decisione è presa prima che qualcuno entri.",
+        "summary": "Due fatti decidono tutto, di solito mancano entrambi, e "
+                   "una terza cosa che qui conta più che in ogni altro "
+                   "settore.",
+        "standfirst": "Scritto dopo aver guardato cosa controlla davvero la "
+                      "gente prima di scegliere dove allenarsi.",
+        "description": "Ricerca locale per palestre e studi fitness: i due "
+                       "fatti che decidono, perché le foto qui contano di "
+                       "più, e cosa fare con il problema di gennaio.",
+        "og_desc": "Prezzo e orari. Mancano quasi sempre, e decidono tutto "
+                   "prima di una visita.",
+
+        "body": [
+            ("Prezzo e orari, o niente", [
+                "<p>Sono le due cose che controlla ogni singola persona, e "
+                "le due che quasi tutti i siti qui lasciano fuori. Un prezzo "
+                "che devi chiedere viene letto come un prezzo che non ti "
+                "piacerà.</p>",
+                "<p>Gli orari è peggio ometterli, perché chi ha un lavoro a "
+                "orario fisso non può decidere niente senza. Passa a una "
+                "palestra che i suoi li ha pubblicati.</p>",
+            ]),
+            ("Foto della sala vera", [
+                "<p>Nessuno si iscrive in un posto che non ha visto. Le foto "
+                "di repertorio con attrezzi luccicanti nell'edificio di "
+                "qualcun altro sono peggio di nessuna foto, perché la "
+                "delusione arriva dopo la visita invece che prima.</p>",
+                "<p>Fotografa la sala mentre è in uso, dalla porta, con la "
+                "luce del giorno. La dimensione dello spazio è quello che la "
+                "gente sta cercando di valutare.</p>",
+            ]),
+            ("La prova, e dove va messa", [
+                "<p>Se la prima seduta è gratis, va in cima a ogni pagina, "
+                "non su una pagina a parte. È l'unica offerta che toglie "
+                "l'obiezione vera, che non è il prezzo ma l'imbarazzo.</p>",
+            ]),
+            ("Cosa cerca la gente che puoi prenderti", [
+                "<p>Non la parola palestra. Il nome di un corso, un'ora del "
+                "giorno, un obiettivo, un quartiere. Chi cerca un corso "
+                "mattutino vicino a casa fa una ricerca diversa da chi cerca "
+                "una palestra.</p>",
+                "<p>Ognuna di quelle è una pagina che puoi avere e che quasi "
+                "nessun concorrente si prenderà la briga di scrivere.</p>",
+            ]),
+            ("La parte stagionale, pianificata invece che subita", [
+                "<p>Le richieste esplodono a gennaio e a settembre e "
+                "crollano d'estate. È prevedibile, quindi le pagine che "
+                "rispondono alle domande di gennaio vanno scritte a novembre "
+                "invece che durante la corsa.</p>",
+                "<p>La ricerca ci mette mesi a muoversi. Pubblicare una "
+                "pagina la settimana in cui ti serve è pubblicarla una "
+                "stagione tardi.</p>",
+            ]),
+        ],
+        "payoff": "Mandaci l'indirizzo e ti diciamo cosa non riesce a "
+                  "scoprire chi sta scegliendo tra te e il posto accanto.",
+        "faq": [
+            ("Dobbiamo davvero pubblicare i prezzi?",
+             "Sì, e l'obiezione è sempre che li vedranno i concorrenti. Li "
+             "sanno già. Chi non li sa è quello che sta decidendo, e decide "
+             "contro il silenzio più spesso che contro un numero."),
+            ("Ci serve un'app o un sistema di prenotazione?",
+             "Solo quando gli orari non stanno più su una pagina o si "
+             "rimanda via gente dai corsi pieni. Prima di allora è un costo "
+             "che risolve un problema che non hai ancora."),
+            ("Come competiamo con una catena qui vicino?",
+             "Su quello che la dimensione impedisce. Un istruttore con un "
+             "nome, un corso da otto invece che da quaranta, orari che vanno "
+             "bene a chi fa i turni. Una catena non può descrivere il tuo "
+             "quartiere e non ci proverà."),
+            ("Le foto prima e dopo sono una buona idea?",
+             "Solo con il permesso, solo vere, e meglio con una frase della "
+             "persona che c'è dentro. Quelle comprate o gonfiate si "
+             "riconoscono subito e costano la fiducia che la pagina doveva "
+             "costruire."),
+            ("I nostri iscritti arrivano a voce. La ricerca serve?",
+             "Il passaparola finisce comunque in una ricerca. A qualcuno "
+             "parlano di te, ti cerca, e non trova né orari né prezzo. La "
+             "raccomandazione stava lavorando fino a quel momento."),
+        ],
+        "related": [("/seo/", "SEO e ricerca locale"),
+                    ("/meta-ads/", "Meta ads")],
+    },
+
+    {
+        "slug": "builders-and-contractors",
+        "src": "a8c08da0",
+        "date": "2026-08-22",
+        "updated": "2026-08-22",
+        "topic": "Ricerca locale",
+        "work": None,
+        "service": ("/seo/", "SEO e ricerca locale"),
+
+        "title": "Imprese edili e artigiani",
+        "h1": "Ti assumono sulle prove. Quasi nessun sito ne pubblica.",
+        "summary": "Cosa cerca chi sta per spendere una cifra seria, e "
+                   "perché il telefono conta più del sito.",
+        "standfirst": "Il settore dove la distanza tra i bravi e i trovabili "
+                      "è più larga.",
+        "description": "Ricerca locale per imprese edili e artigiani: come "
+                       "devono essere le prove del lavoro fatto, perché "
+                       "rispondere al telefono decide più del sito, e cosa "
+                       "cerca la gente.",
+        "og_desc": "Nessuno consegna quella cifra su una promessa. Vuole "
+                   "vedere lavori finiti.",
+
+        "body": [
+            ("Lavori finiti, o niente", [
+                "<p>È tutto il settore. Chi sta decidendo se darti una somma "
+                "grossa vuole vedere stanze che hai finito, con abbastanza "
+                "dettaglio da credere che ci sei stato.</p>",
+                "<p>Dieci lavori, qualche foto ciascuno, cos'era e più o "
+                "meno quanto ci è voluto. Quella pagina batte ogni altra "
+                "pagina che potresti costruire, e quasi nessuno in questo "
+                "settore ce l'ha.</p>",
+            ]),
+            ("Prima e dopo, con il prima incluso", [
+                "<p>La cucina finita da sola non prova niente, perché una "
+                "cucina la può fotografare chiunque. La stessa stanza prima "
+                "è quello che la rende tua e rende leggibile il lavoro.</p>",
+                "<p>Da adesso scatta la foto del prima su ogni cantiere. Non "
+                "costa niente ed è l'unica versione di questa cosa che "
+                "convince.</p>",
+            ]),
+            ("Cercano il lavoro, non te", [
+                "<p>Rifacimento bagno, riparazione tetto, un ampliamento, "
+                "riscaldamento a pavimento. Ognuno è una ricerca a sé e "
+                "merita una pagina che dice in cosa consiste, cosa fa "
+                "cambiare il prezzo, e quanto ci vuole.</p>",
+                "<p>Una pagina sola che elenca tutti i servizi non compete "
+                "per nessuno di loro.</p>",
+            ]),
+            ("La parte che batte qualsiasi sito", [
+                "<p>Rispondere al telefono. In questo settore la lamentela "
+                "più comune non è il prezzo o la qualità, è essere ignorati, "
+                "e quasi tutto il lavoro lo prende chi ha risposto per "
+                "primo.</p>",
+                "<p>Se sei su un tetto e non puoi rispondere, scrivi sul "
+                "sito quando richiami, e poi richiama. Converte meglio di "
+                "qualsiasi cosa possa sistemare un designer.</p>",
+            ]),
+            ("Le cose scomode che vale la pena dire", [
+                "<p>Se sei in regola e assicurato. Se c'è una garanzia e per "
+                "quanto. Cosa succede se il cantiere sfora. Se lo chiedono "
+                "tutti e quasi nessuno lo pubblica.</p>",
+                "<p>Rispondere per iscritto è il modo più economico di "
+                "separarti da chi rende difficile fidarsi di questo "
+                "settore.</p>",
+            ]),
+        ],
+        "payoff": "Mandaci l'indirizzo e ti diciamo per quali lavori "
+                  "potresti essere trovato e non lo sei.",
+        "faq": [
+            ("Non abbiamo foto dei lavori vecchi. Adesso?",
+             "Comincia oggi dal cantiere in corso e chiedi a due clienti "
+             "passati se puoi fotografare la stanza finita. Quasi tutti "
+             "dicono di sì. In una stagione hai una pagina che non esisteva "
+             "e che non si poteva comprare."),
+            ("Dobbiamo pubblicare i prezzi?",
+             "Non un prezzo fisso, perché nessuno può preventivare un "
+             "cantiere da un sito. Pubblica cosa lo determina: la metratura, "
+             "lo stato di quello che c'è, i materiali. È più utile di un "
+             "numero ed è onesto."),
+            ("Vale la pena avere un sito?",
+             "È l'unico posto dove uno sconosciuto può verificare che esisti "
+             "prima di consegnare dei soldi. Una scheda con foto e "
+             "recensioni fa una parte del lavoro, e la parte che non può "
+             "fare è spiegare un lavoro con parole tue."),
+            ("E le recensioni negative dai cantieri difficili?",
+             "In questo settore capitano più che altrove e una risposta "
+             "pubblica e calma vale più di quanto costi la recensione. Chi "
+             "la legge sta decidendo se sei il tipo di impresa che gestisce "
+             "un problema o che sparisce."),
+            ("Dobbiamo stare su tutte le directory di settore?",
+             "No. Due o tre che qui la gente usa davvero, compilate bene e "
+             "coerenti con il sito, battono venti riempite a metà. La "
+             "coerenza è la parte che conta."),
+        ],
+        "related": [("/seo/", "SEO e ricerca locale"),
+                    ("/web-design/", "Siti web")],
+    },
+
 ]
 
 # /blog/, the index over those records. The soft wraps are placed for this text

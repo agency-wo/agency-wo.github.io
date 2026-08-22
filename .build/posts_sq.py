@@ -3379,6 +3379,989 @@ POSTS = [
                     ("/seo/", "SEO dhe kërkimi lokal")],
     },
 
+    {
+        "slug": "what-seo-costs-in-albania",
+        "src": "c44fd2d6",
+        "date": "2026-08-22",
+        "updated": "2026-08-22",
+        "topic": "Kërkim lokal",
+        "work": None,
+        "service": ("/seo/", "SEO dhe kërkim lokal"),
+
+        "title": "Sa kushton SEO në Shqipëri",
+        "h1": "Askush nuk publikon një shifër, ja si ndërtohet ajo.",
+        "summary": "Çfarë blejnë vërtet ato para, pse e njëjta punë kuotohet "
+                   "në tri mënyra, dhe pyetja që të tregon nëse një ofertë "
+                   "është serioze.",
+        "standfirst": "Shkruar për dikë që ka pyetur dy agjenci dhe ka marrë "
+                      "dy shifra pa asgjë në mes për t'i krahasuar.",
+        "description": "Sa kushton SEO në Shqipëri: si ndërtohet një ofertë, "
+                       "çfarë paguan një tarifë mujore, dhe si dallohet një "
+                       "shifër serioze nga një e shpikur.",
+        "og_desc": "Dy oferta, asnjë mënyrë për t'i krahasuar. Ja çfarë "
+                   "qëndron pas secilës shifër.",
+
+        "body": [
+            ("Pse askush nuk publikon një çmim", [
+                "<p>Sepse puna nuk është një gjë e vetme. Të rregullosh një "
+                "dyqan që pozicionohet tashmë dhe të nisësh një biznes që "
+                "nuk është indeksuar kurrë kanë të njëjtin emër dhe "
+                "pothuajse asgjë tjetër.</p>",
+                "<p>Një numër i publikuar do të ishte i gabuar për shumicën "
+                "e lexuesve në një drejtim ose në tjetrin, prandaj sektori "
+                "nuk publikon asgjë dhe të gjithë mendojnë më të keqen.</p>",
+            ]),
+            ("Tri format e një oferte", [
+                "<p>Një projekt i vetëm, një tarifë mujore, ose një tarifë "
+                "në orë. E njëjta punë mund të shitet ndershmërisht në të "
+                "tria mënyrat, dhe pikërisht prandaj dy oferta për të duken "
+                "pa lidhje.</p>",
+                "<p>Projekti i shkon një faqeje që duhet rregulluar një "
+                "herë. Tarifa mujore i shkon një pune që jep fryte vetëm "
+                "nëse dikush vazhdon ta bëjë. Tarifa në orë nuk i shkon "
+                "asnjërit prej jush, sepse paguan kohën në vend të diçkaje "
+                "që mund ta tregosh me gisht.</p>",
+            ]),
+            ("Çfarë paguan vërtet një tarifë mujore", [
+                "<p>Afërsisht: gjëra të shkruara, gjëra të rregulluara, "
+                "gjëra të vëzhguara. Faqe të reja që u përgjigjen pyetjeve "
+                "që shkruan bota. Difekte teknike të korrigjuara sapo "
+                "shfaqen. Pozicionet, skeda dhe kërkesat e kontrolluara që "
+                "dikush ta vërë re kur një numër kthehet.</p>",
+                "<p>Nëse një propozim nuk i ndan këto tri, pyet cilën po "
+                "blen paraja këtë muaj. Një tarifë e paqartë bëhet një "
+                "raport që nuk e lexon askush deri te fatura e katërt.</p>",
+            ]),
+            ("Skaji i lirë, dhe çfarë është vërtet", [
+                "<p>Tarifat shumë të ulëta ekzistojnë edhe këtu dhe blejnë "
+                "raporte automatike, ca regjistrime në direktori dhe lidhje "
+                "nga faqe të ndërtuara posaçërisht. Nuk është një version më "
+                "i vogël i punës.</p>",
+                "<p>Direktoritë nuk të kushtojnë asgjë veç një ore shkrimi. "
+                "Lidhjet janë pjesa që mund të dëmtojë, dhe t'i zhbësh "
+                "kërkon më shumë kohë se sa do të duhej për të fituar të "
+                "mira.</p>",
+            ]),
+            ("Pyetja që ndan serioz nga jo", [
+                "<p>Pyet çfarë ndodh nëse nuk funksionon. Një përgjigje "
+                "serioze thotë çfarë do të rishikohej, kur, dhe çfarë do të "
+                "ndryshonte si pasojë.</p>",
+                "<p>Një përgjigje që premton një pozicion, një afat ose një "
+                "numër fjalësh kyçe shet një siguri që nuk e zotëron kush e "
+                "shet, sepse pozicionin e vendos një sistem që nuk e "
+                "kontrollon asnjëri prej jush.</p>",
+            ]),
+            ("Çfarë do të thoshim për rastin tënd", [
+                "<p>Nëse ato para bëjnë më mirë të shkojnë te kërkimi fare. "
+                "Për disa biznese përgjigjja e ndershme është një ofertë më "
+                "e mirë, ose reklama ndërsa kërkimi e arrin hapin, dhe "
+                "preferojmë ta shkruajmë se sa të faturojmë përreth saj.</p>",
+            ]),
+        ],
+        "payoff": "Na dërgo adresën dhe të themi cila nga tri format i "
+                  "shkon, dhe afërsisht çfarë do të përfshinte puna.",
+        "faq": [
+            ("A është gjithmonë e keqe një tarifë e ulët?",
+             "Jo gjithmonë, por pyet çfarë vjen për të. Një tarifë e vogël "
+             "që blen vëmendje të vërtetë, sado pak, është punë e ndershme "
+             "në shkallë të vogël. E njëjta tarifë që blen raporte "
+             "automatike dhe lidhje të blera është produkt tjetër me të "
+             "njëjtën fjalë sipër."),
+            ("A duhet të paguajmë për fjalë kyçe?",
+             "Jo. Tingëllon e matshme dhe është e kundërta: paguan një fjalë "
+             "që ngjitet në vend të një klienti që vjen, dhe fjalët më të "
+             "lehta për t'i lëvizur zakonisht nuk i kërkon askush."),
+            ("Pas sa kohe duhet ta gjykojmë?",
+             "Pas aq sa përgjigjja të bëhet e pakëndshme. Një skedë në hartë "
+             "mund të lëvizë brenda javësh, por rezultatet e zakonshme "
+             "lëvizin në shkallë muajsh, dhe gjykimi në javën e gjashtë mat "
+             "kryesisht sa i duruar ishe."),
+            ("A mund të bëjmë një pjesë vetë?",
+             "Po, dhe pjesët që mund të bësh janë ato që japin fryte të "
+             "parat. Oraret, fotot, përgjigjet me shkrim, kërkimi i "
+             "vlerësimeve nga klientët. Asgjë prej tyre nuk kërkon agjenci "
+             "dhe e gjitha kërkon dikë që i intereson."),
+            ("Po nëse paguajmë tashmë dikë?",
+             "Atëherë shpenzimi i dobishëm është një mendim i dytë, jo një "
+             "agjenci e dytë. Përfundon ose me provën që paratë punojnë ose "
+             "me një listë mbi të cilën mund të veprojë ai që është, dhe të "
+             "dyja janë më lirë se ndërrimi."),
+        ],
+        "related": [("/seo/", "SEO dhe kërkim lokal"),
+                    ("/start/", "Një auditim falas")],
+    },
+
+    {
+        "slug": "google-ads-or-seo",
+        "src": "55118ad4",
+        "date": "2026-08-22",
+        "updated": "2026-08-22",
+        "topic": "Meta ads",
+        "work": None,
+        "service": ("/meta-ads/", "Meta ads"),
+
+        "title": "Google Ads apo SEO?",
+        "h1": "Njëra të blen sot. Tjetra të blen vitin tjetër.",
+        "summary": "Në çfarë është e mirë secila, në çfarë nuk është e mirë "
+                   "asnjëra, dhe si të vendosësh pa bërë sikur përgjigjja "
+                   "është e njëjtë për të gjithë.",
+        "standfirst": "Krahasimi që bën çdo pronar para se të shpenzojë, "
+                      "zakonisht me dikë që shet njërën nga të dyja duke u "
+                      "përgjigjur.",
+        "description": "Google Ads apo SEO për një biznes të vogël: çfarë "
+                       "blen secila, kur pagesa është zgjedhja e duhur, dhe "
+                       "rasti kur bërja e të dyjave është e gabuara.",
+        "og_desc": "Njëra ndalet ditën që ndalon pagesa. Tjetra do muaj që "
+                   "të nisë. Të dyja faktet kanë rëndësi.",
+
+        "body": [
+            ("Ndryshimi me një rresht", [
+                "<p>Reklama të vë në krye të një faqeje që nuk e ke fituar, "
+                "për aq kohë sa vazhdon të paguash. Kërkimi e fiton "
+                "pozicionin dhe e mban edhe pasi shpenzimi ndalet.</p>",
+                "<p>Gjithçka tjetër është detaj, dhe shumica e debateve për "
+                "të dyja janë në të vërtetë debate se cilin nga dy problemet "
+                "ke këtë tremujor.</p>",
+            ]),
+            ("Kur pagesa është qartë e drejtë", [
+                "<p>Kur të duhen klientë para se kërkimi të mund t'i sjellë. "
+                "Një biznes i ri, një dritare sezonale, një pikë që hapet "
+                "muajin tjetër.</p>",
+                "<p>Edhe kur ajo që shet është urgjente. Dikush me një tub "
+                "të plasur nuk krahason pesë rezultate, dhe të jesh i pari "
+                "për atë minutë vlen më shumë se të jesh i respektuar për "
+                "një vit.</p>",
+            ]),
+            ("Kur është qartë e gabuar", [
+                "<p>Kur faqja ku ata zbresin nuk i kthen në klientë. Të "
+                "paguash për të dërguar të panjohur në një faqe pa çmime, pa "
+                "adresë dhe me një formular që nuk e ka provuar askush është "
+                "të blesh vizita për të provuar diçka.</p>",
+                "<p>Edhe kur buxheti është aq i vogël sa paratë mbarojnë "
+                "para se dikush të mësojë gjë. Një buxhet që nuk i mbijeton "
+                "dy javëve provash nuk të mëson asgjë.</p>",
+            ]),
+            ("Pjesa që nuk e përmend askush", [
+                "<p>Nuk janë vërtet alternativa. Reklama zbulon, brenda "
+                "javësh, cilat fjalë sjellin vërtet njerëz që blejnë, dhe "
+                "kjo është gjëja më e shtrenjtë për ta mësuar në çdo mënyrë "
+                "tjetër.</p>",
+                "<p>Një muaj fushatë, i lexuar ndershmërisht, të thotë ku "
+                "duhet të synojë puna e ngadaltë. I vlejnë paratë edhe nëse "
+                "nuk reklamon më kurrë.</p>",
+            ]),
+            ("Çfarë do të bënim me një buxhet të vogël", [
+                "<p>Së pari rregullo faqen, sepse të dyja rrugët mbarojnë "
+                "atje. Pastaj reklamo ngushtë, mbi pak fjalët më afër një "
+                "blerjeje, dhe lexo çfarë kthehet.</p>",
+                "<p>Pastaj shpenzo punën e ngadaltë mbi atë që reklama "
+                "provoi se njerëzit e duan. Radha ka më shumë rëndësi se "
+                "ndarja.</p>",
+            ]),
+        ],
+        "payoff": "Na thuaj çfarë shet dhe ku, dhe të themi me cilën nga të "
+                  "dyja do të nisnim dhe pse.",
+        "faq": [
+            ("A mund t'i bëjmë të dyja njëherësh?",
+             "Po, dhe shpesh është përgjigjja e duhur, por vetëm pasi faqja "
+             "ku mbërrijnë ta vlejë mbërritjen. T'i bësh të dyja keq kushton "
+             "dyfish dhe të mëson gjysmën."),
+            ("A ndihmon reklama pozicionin e zakonshëm?",
+             "Jo. Pagesa nuk i lëviz rezultatet e papaguara, dhe Google e ka "
+             "thënë disa herë. Ajo që bën reklama është të të tregojë cilat "
+             "fjalë e vlejnë punën e ngadaltë, që është ndihmë tjetër dhe e "
+             "vërtetë."),
+            ("Po Meta ads në vend të tyre?",
+             "Punë tjetër. Kërkimi kap dikë që po të kërkon tashmë. Meta të "
+             "vë përpara dikujt që nuk kërkonte gjë, gjë që i shkon asaj që "
+             "blihet me sy dhe i shkon shumë keq një urgjence hidraulike."),
+            ("Sa i vogël është shumë i vogël një buxhet?",
+             "Kur një klikim i vetëm kushton një pjesë të dukshme të "
+             "shpenzimit ditor, nuk po bën fushatë, po blen ca vizita. Në "
+             "atë pikë paratë japin më shumë mbi vetë faqen."),
+            ("Nëse ndalojmë reklamën, humbim gjithçka?",
+             "Humb vizitat menjëherë, dhe ky është kostoja e ndershme e "
+             "marrjes me qira të pozicionit. Ajo që mbetet është çfarë "
+             "mësove dhe çfarë ndërtoi puna e ngadaltë ndërkohë, që është "
+             "arsyeja për t'i bërë të dyja."),
+        ],
+        "related": [("/meta-ads/", "Meta ads"),
+                    ("/seo/", "SEO dhe kërkim lokal")],
+    },
+
+    {
+        "slug": "why-is-my-competitor-above-me",
+        "src": "5d17475f",
+        "date": "2026-08-22",
+        "updated": "2026-08-22",
+        "topic": "Kërkim lokal",
+        "work": None,
+        "service": ("/seo/", "SEO dhe kërkim lokal"),
+
+        "title": "Pse konkurrenti është mbi mua?",
+        "h1": "Zakonisht një nga pesë arsye, dhe katër rregullohen.",
+        "summary": "Si ta kuptosh çfarë po bën dyqani mbi ty, brenda një "
+                   "pasditeje, pa blerë një mjet që të ta thotë.",
+        "standfirst": "Pyetja që na bëjnë më shpesh, dhe ajo me përgjigjen "
+                      "më të verifikueshme.",
+        "description": "Pse një konkurrent pozicionohet mbi ty në Google: "
+                       "pesë arsyet e zakonshme, si t'i kontrollosh vetë, "
+                       "dhe cilat mund t'i rregullosh këtë javë.",
+        "og_desc": "Pesë arsye të zakonshme. Mund t'i kontrollosh të gjitha "
+                   "vetë këtë pasdite.",
+
+        "body": [
+            ("Ata kanë vlerësime dhe ti jo", [
+                "<p>Hap të dyja skedat krah për krah dhe numëro. Kjo është "
+                "përgjigjja më e zakonshme dhe më pak teknikja, dhe e "
+                "vendosin klientët në vend të diçkaje mbi faqen tënde.</p>",
+                "<p>Është edhe hendeku që mbyllet më shpejt, sepse shumica e "
+                "klientëve të tu do të linin një dhe nuk u ka kërkuar kurrë "
+                "njeri.</p>",
+            ]),
+            ("Skeda e tyre është e plotësuar dhe jotja jo", [
+                "<p>Oraret, kategoritë, shërbimet, fotot, përshkrimi. "
+                "Krahaso fushë për fushë. Një skedë bosh është një biznes që "
+                "duket i mbyllur për një sistem që po vendos cilin të "
+                "tregojë.</p>",
+            ]),
+            ("Kanë faqe për atë që shkruan bota", [
+                "<p>Kërko gjënë për të cilën do të gjendesh dhe lexo çfarë "
+                "pozicionohet vërtet. Nëse faqja mbi ty flet pikërisht për "
+                "atë gjë dhe jotja është një kryefaqe që e përmend njëherë, "
+                "rezultati nuk është mister.</p>",
+                "<p>Kjo është arsyeja mbi të cilën ia vlen më shumë të "
+                "veprosh, sepse një faqe që nuk e ke është një faqe që mund "
+                "ta shkruash.</p>",
+            ]),
+            ("Dikush tjetër i lidh", [
+                "<p>Një furnitor, një gazetë lokale, një shoqatë e sektorit, "
+                "një partner. Secili është një votë nga këndvështrimi i një "
+                "makine, janë të vështira për t'u falsifikuar dhe të "
+                "ngadalta për t'u grumbulluar.</p>",
+                "<p>Pothuajse me siguri ke tri prej tyre në dispozicion dhe "
+                "të pakërkuara: kush të furnizon, kush ka punuar me ty, dhe "
+                "direktoria lokale që përdor sektori yt.</p>",
+            ]),
+            ("Thjesht janë aty prej më shumë kohe", [
+                "<p>Kjo është ajo që nuk rregullohet, dhe është arsyeja për "
+                "të qenë i ndershëm me afatet. Një domen me vite pas vetes "
+                "niset përpara.</p>",
+                "<p>Është edhe më pak vendimtarja e të pestave. Mosha vetëm "
+                "humbet përballë një dyqani me vlerësime, një skedë të plotë "
+                "dhe faqe që i përgjigjen pyetjes.</p>",
+            ]),
+            ("Ta bësh krahasimin si duhet", [
+                "<p>Kërko nga telefoni, jo nga kompjuteri ku ndërtove faqen. "
+                "Dil nga llogaria. Rezultatet i formëson vendi ku je dhe "
+                "çfarë ke klikuar më parë, dhe ekrani yt është më pak i "
+                "besueshmi që ke.</p>",
+            ]),
+        ],
+        "payoff": "Na dërgo të dyja adresat, tënden dhe të tyren, dhe të "
+                  "themi cila nga të pestat po bën punën.",
+        "faq": [
+            ("Janë mbi mua por faqja e tyre duket më keq. Si?",
+             "Sepse faqja nuk është i vetmi element. Vlerësimet, skeda, sa "
+             "kohë ekzistojnë dhe kush i lidh numërojnë të gjitha, dhe një "
+             "faqe e thjeshtë me ato katër në rregull e mund një të bukur pa "
+             "to."),
+            ("A i ndihmon nëse klikoj rezultatin e tyre?",
+             "Jo në mënyrë të dobishme, dhe të klikosh tëndin nuk të ndihmon "
+             "ty. Të kërkosh veten vazhdimisht i mëson kryesisht shfletuesit "
+             "tënd të të tregojë atë që do të shohësh, dhe kështu bindet "
+             "njeriu se pozicionohet."),
+            ("A mund t'i raportoj për diçka?",
+             "Vetëm për një skedë vërtet të rreme: një adresë të shpikur, "
+             "një emër plot fjalë kyçe, një biznes që nuk vepron aty. Ndodh "
+             "dhe raportimi funksionon, por është më i rrallë se sa mendojnë "
+             "ata që po humbin."),
+            ("Sa shpesh duhet të kontrolloj?",
+             "Një herë në muaj mjafton. Kontrolli i përditshëm mat zhurmë, "
+             "dhe rezultatet lëvizin mjaftueshëm nga një kërkim te tjetri sa "
+             "një ditë e keqe duket si shembje kur nuk ka ndryshuar asgjë."),
+            ("Po nëse janë një zinxhir kombëtar?",
+             "Atëherë konkurro aty ku madhësia nuk ndihmon. Një zinxhir nuk "
+             "mund të jetë lokal në rrugën tënde, nuk mund t'i përgjigjet "
+             "një pyetjeje për qytetin tënd, dhe zakonisht ka një faqe për "
+             "gjithë vendin ku ti mund të kesh një për qytetin."),
+        ],
+        "related": [("/seo/", "SEO dhe kërkim lokal"),
+                    ("/start/", "Një auditim falas")],
+    },
+
+    {
+        "slug": "how-to-appear-in-chatgpt",
+        "src": "6c93b31d",
+        "date": "2026-08-22",
+        "updated": "2026-08-22",
+        "topic": "Kërkimi me AI",
+        "work": None,
+        "service": ("/geo/", "Kërkimi me AI"),
+
+        "title": "Si të shfaqesh në ChatGPT",
+        "h1": "Nuk ka formular për të plotësuar. Ka një formë për të pasur.",
+        "summary": "Versioni praktik: çfarë arrijnë të lexojnë asistentët, "
+                   "çfarë jo, dhe në çfarë radhe ta rregullosh.",
+        "standfirst": "Për dikë që ka pyetur tashmë njërin prej tyre dhe ka "
+                      "gjetur të përmendur konkurrentin.",
+        "description": "Si të përmendesh nga ChatGPT dhe asistentët e tjerë: "
+                       "çfarë lexojnë, çfarë i ndalon, dhe në çfarë radhe të "
+                       "punosh.",
+        "og_desc": "Nuk ekziston asnjë formular regjistrimi. Ekziston një "
+                   "formë që të bën të përmendesh.",
+
+        "body": [
+            ("Së pari, shih çfarë thonë tani", [
+                "<p>Pyet tre prej tyre çfarë rekomandojnë në sektorin dhe "
+                "qytetin tënd. Shkruaj përgjigjet me datë. Ajo është pozita "
+                "jote e nisjes dhe të merr dhjetë minuta.</p>",
+                "<p>Shumica e kapërcejnë këtë dhe pastaj nuk dinë të thonë "
+                "nëse ndryshoi gjë. Një shënim në një skedar mund një ndjesi "
+                "gjashtë muaj më vonë.</p>",
+            ]),
+            ("Të jesh i lexueshëm fare", [
+                "<p>Një asistent lexon tekst. Një biznes që jeton brenda një "
+                "llogarie sociale, ose që i ka çmimet dhe shërbimet si "
+                "figura fjalësh, për atë që lexon nuk është aty.</p>",
+                "<p>Kjo është shkaku më i madh i mungesës që shohim, dhe "
+                "është shkrim më shumë se teknologji.</p>",
+            ]),
+            ("Thuaji gjërat e thjeshta thjesht", [
+                "<p>Çfarë bën, ku je, sa kushton, kur je hapur, kë shërben. "
+                "Me fjali, mbi një faqe, në gjuhën që përdorin klientët e "
+                "tu.</p>",
+                "<p>Asistentët u përgjigjen pyetjeve, prandaj faqet e bëra "
+                "që i përgjigjen një pyetjeje merren. Një faqe atmosfere kapërcehet "
+                "edhe kur atmosfera është e bukur.</p>",
+            ]),
+            ("Të konfirmohesh diku tjetër", [
+                "<p>Faqja jote thotë se je i mirë. Kjo pritet dhe numëron "
+                "pak. Një skedë me vlerësime, një regjistrim në një "
+                "direktori, një përmendje në diçka që publikon dikush tjetër "
+                "janë të gjitha jashtë kontrollit tënd dhe vlejnë më shumë "
+                "pikërisht për këtë.</p>",
+            ]),
+            ("Mos lejo një cilësim t'i refuzojë", [
+                "<p>Disa strehime dhe produkte sigurie i bllokojnë "
+                "crawler-at e AI si parazgjedhje, ndonjëherë pa e thënë, dhe "
+                "skedari që i refuzon nuk është në projektin tënd. Kontrollo "
+                "çfarë i shërbehet vërtet një asistenti në vend të asaj që "
+                "shkrove.</p>",
+                "<p>Gjetëm pikërisht këtë mbi këtë faqe, dhe mbi 3 të tjera "
+                "që mbajmë, brenda një pasditeje të vetme.</p>",
+            ]),
+            ("Pastaj pyet sërish, më vonë", [
+                "<p>Asistentët nuk përditësohen sipas orarit tënd dhe nuk ka "
+                "asnjë panel që të konfirmojë gjë. Përsërit pyetjet e hapit "
+                "të parë çdo muaj dhe mbaji shënimet.</p>",
+            ]),
+        ],
+        "payoff": "Na dërgo adresën dhe sektorin dhe pyesim ca asistentë për "
+                  "ty, pastaj të dërgojmë çfarë thanë.",
+        "faq": [
+            ("A mund të paguaj për t'u përfshirë?",
+             "Jo, dhe kush ta ofron po të shet diçka tjetër. Brenda "
+             "përgjigjes së një asistenti nuk ka asnjë hapësirë reklame dhe "
+             "asnjë procedurë regjistrimi, dhe pikërisht kjo e bën pozitën "
+             "me vlerë."),
+            ("A ndihmon të përmend ChatGPT në faqen time?",
+             "Jo. Të shkruash emrin e një asistenti nëpër faqet e tua nuk "
+             "bën gjë veç e bën tekstin të çuditshëm. Ajo që të bën të "
+             "përmendesh është t'i përgjigjesh pyetjes që i është bërë."),
+            ("Sa kohë do?",
+             "Nuk parashikohet, dhe është më e shkurtër se kërkimi kur lëviz "
+             "fare, sepse asistentët që marrin faqe të drejtpërdrejta mund "
+             "të të kapin sapo faqja ekziston. Ata që punojnë me të dhëna "
+             "trajnimi ndjekin një kalendar që nuk e publikon askush jashtë."),
+            ("A më duhet një blog për këtë?",
+             "Të duhen përgjigje, dhe blogu është thjesht vendi i zakonshëm "
+             "ku i vë. Pesë faqe të ndershme për atë që të pyesin vërtet i "
+             "mundin pesëdhjetë të shkruara për të mbushur një kalendar."),
+            ("Po nëse përmendin konkurrentin dhe jo mua?",
+             "Lexo çfarë thotë asistenti për ta dhe zakonisht e gjen arsyen "
+             "në fjalinë e parë: vlerësime, një përshkrim të qartë të "
+             "shërbimit, ose një faqe që i përgjigjet pyetjes së saktë. "
+             "Është hendek i verifikueshëm, jo mister."),
+        ],
+        "related": [("/geo/", "Kërkimi me AI"),
+                    ("/seo/", "SEO dhe kërkim lokal")],
+    },
+
+    {
+        "slug": "will-ai-replace-google",
+        "src": "e27309fe",
+        "date": "2026-08-22",
+        "updated": "2026-08-22",
+        "topic": "Kërkimi me AI",
+        "work": None,
+        "service": ("/geo/", "Kërkimi me AI"),
+
+        "title": "A do ta zëvendësojë AI Google?",
+        "h1": "Pyetje e gabuar për një biznes të vogël. Ja e drejta.",
+        "summary": "Çfarë po ndryshon vërtet, çfarë do të thotë për punën, "
+                   "dhe pse përgjigjja ndryshon fare pak nga ajo që duhet të "
+                   "bësh.",
+        "standfirst": "Bëhet vazhdimisht, zakonisht nga njerëz që nuk kanë "
+                      "para në lojë mbi përgjigjen.",
+        "description": "A do ta zëvendësojë AI kërkimin në Google? Çfarë "
+                       "ndryshon vërtet për bizneset e vogla, dhe pse "
+                       "përgjigjja praktike është e njëjtë në të dyja "
+                       "rastet.",
+        "og_desc": "Përgjigjja e ndershme nuk ndryshon pothuajse asgjë nga "
+                   "ajo që duhet të bësh këtë muaj.",
+
+        "body": [
+            ("Çfarë po ndodh vërtet", [
+                "<p>Google nuk po zëvendësohet, po i përgjigjen sipër. "
+                "Rezultatet janë ende aty, me një përmbledhje lart, dhe "
+                "gjithnjë e më shumë njerëz ndalen te përmbledhja.</p>",
+                "<p>Ndërkohë asistentë që nuk janë Google fare u përgjigjen "
+                "të njëjtave pyetje për një grup tjetër njerëzish. Të dyja "
+                "janë të vërteta dhe asnjëra nuk është zëvendësim.</p>",
+            ]),
+            ("Pse pyetja të çon gabim", [
+                "<p>Të fton të vësh bast mbi një fitues dhe pastaj të "
+                "presësh. Një biznes i vogël nuk ka nevojë të dijë kush "
+                "fiton, sepse puna që të fut në përgjigjen e një asistenti "
+                "është puna që të fut në një rezultat kërkimi.</p>",
+                "<p>Faqe të qarta, të dhëna të njëjta kudo, vlerësime të "
+                "vërteta, të jesh i lexueshëm. Nuk ka version të së ardhmes "
+                "ku këto pushojnë së pasuri rëndësi.</p>",
+            ]),
+            ("Çfarë ndryshon vërtet", [
+                "<p>Kostoja e të qenit i dyti. Dhjetë lidhje u jepnin mjaft "
+                "bizneseve një pjesë të vëmendjes. Një përgjigje që përmend "
+                "tre jo, dhe hendeku mes të tretit dhe të katërtit bëhet "
+                "gjithçka.</p>",
+                "<p>Kjo është arsye për ta bërë mirë punën e zakonshme, jo "
+                "arsye për të blerë diçka të re.</p>",
+            ]),
+            ("Kush preket më parë", [
+                "<p>Sektorët ku njerëzit kërkojnë një rekomandim në vend që "
+                "të shfletojnë. Shërbime, riparime, profesionistë. Çdo gjë "
+                "për të cilën më parë pyetej një mik.</p>",
+                "<p>Dyqanet para të cilave kalohet, ose që gjenden në hartë, "
+                "preken më vonë dhe më pak.</p>",
+            ]),
+            ("Çfarë nuk do të bënim për këtë", [
+                "<p>Të rindërtojmë gjë, të blejmë një mjet, ose të paguajmë "
+                "një shërbim më vete me AI në emër. Askush nuk ka prova të "
+                "mjaftueshme për ta justifikuar, dhe ky studio preferon ta "
+                "thotë se sa të ta shesë.</p>",
+            ]),
+        ],
+        "payoff": "Nëse do të dish ku qëndron sot, na pyet dhe kontrollojmë "
+                  "çfarë thonë ca asistentë për sektorin tënd.",
+        "faq": [
+            ("A duhet të pushoj së marri me Google?",
+             "Jo. Është ende vendi nga ku niset shumica, me diferencë të "
+             "madhe, dhe ushqen edhe përmbledhjet. Ta konsiderosh të mbaruar "
+             "është gabimi më i shtrenjtë në dispozicion në këtë bisedë."),
+            ("A do të pushojnë njerëzit së vizituari faqet?",
+             "Disa po, për disa pyetje, dhe kjo është humbje e vërtetë për "
+             "këdo që kishte vizita të bëra nga kërkime faktesh të shpejta. "
+             "Të përmendesh në përgjigje është kompensimi, dhe u shkon "
+             "bizneseve që lexohen."),
+            ("A do të preket sektori im?",
+             "Bëj një asistenti një pyetje që do të bënte një klient dhe "
+             "shih nëse përmend biznese fare. Nëse po, je tashmë në treg. "
+             "Nëse përgjigjet përgjithësisht, ke më shumë kohë."),
+            ("A duhet të bëj diçka ndryshe këtë vit?",
+             "Pothuajse me siguri asgjë ndryshe. Diçka më herët, ndoshta. "
+             "Lista nuk ka ndryshuar, thjesht është bërë më pak falëse me "
+             "gjërat e bëra përgjysmë."),
+            ("Po nëse e gjitha del një flluskë?",
+             "Atëherë do ta kesh kaluar vitin duke shkruar faqe të qarta, "
+             "duke mbledhur vlerësime dhe duke rregulluar skedën, që është "
+             "ajo që duhej bërë gjithsesi. Kjo është arsyeja për të punuar "
+             "kështu: asgjë këtu nuk humbet nëse parashikimi del i gabuar."),
+        ],
+        "related": [("/geo/", "Kërkimi me AI"),
+                    ("/seo/", "SEO dhe kërkim lokal")],
+    },
+
+    {
+        "slug": "how-to-sell-online-in-albania",
+        "src": "277591d0",
+        "date": "2026-08-22",
+        "updated": "2026-08-22",
+        "topic": "Faqe interneti",
+        "work": None,
+        "service": ("/web-design/", "Faqe interneti"),
+
+        "title": "Si të shesësh online në Shqipëri",
+        "h1": "Pjesa e vështirë nuk është dyqani. Është të paguhesh.",
+        "summary": "Çfarë i ndal vërtet bizneset e vogla këtu, në radhën që "
+                   "i ndal, dhe versioni që funksionon para se të zgjidhet "
+                   "asnjë prej tyre.",
+        "standfirst": "Shkruar pasi ndërtuam dyqane për klientë që u "
+                      "përplasën të gjithë me të njëjtin mur në të njëjtën "
+                      "radhë.",
+        "description": "Të shesësh online nga Shqipëria: pagesat, dërgesat, "
+                       "kthimet dhe versioni i thjeshtë që funksionon para "
+                       "se t'i zgjidhësh.",
+        "og_desc": "Ndërtimi i dyqanit është pjesa e lehtë. Gjithçka pas tij "
+                   "është puna.",
+
+        "body": [
+            ("Nis nga pjesa që e kapërcejnë të gjithë", [
+                "<p>Si të vijnë paratë. Pagesa me kartë online është pyetja "
+                "që vendos formën e gjithçkaje tjetër, dhe ia vlen t'i "
+                "përgjigjesh para se të ekzistojë një faqe e vetme "
+                "produkti.</p>",
+                "<p>Bizneset ndërtojnë fillimisht dyqanin, zbulojnë "
+                "përgjigjen, dhe rindërtojnë. Kjo radhë është më e "
+                "zakonshmja dhe më e shtrenjta.</p>",
+            ]),
+            ("Versioni që funksionon menjëherë", [
+                "<p>Faqe produkti me foto të vërteta, çmime të ndershme, dhe "
+                "një buton WhatsApp. Pa shportë, pa arkë, pa përpunim "
+                "kartash.</p>",
+                "<p>Nuk është kompromis, është mënyra si ndodh një pjesë e "
+                "mirë e tregtisë këtu. Njerëzit duan të bëjnë një pyetje "
+                "para se të blejnë, dhe një bisedë kthen më mirë se një "
+                "formular.</p>",
+            ]),
+            ("Dërgesa i vendos çmimet e tua", [
+                "<p>Llogarit sa kushton të dërgosh një artikull, në qytet "
+                "dhe në fshat, para se të publikosh një çmim. Dërgesa falas "
+                "që nuk e ke llogaritur është një zbritje që nuk zgjodhe ta "
+                "bësh.</p>",
+                "<p>Shkruaje koston mbi faqe. Dërgesa e zbuluar në hapin e "
+                "fundit është arsyeja më e zakonshme pse një shportë e plotë "
+                "braktiset.</p>",
+            ]),
+            ("Kthimet, thënë me zë", [
+                "<p>Shkruaj çfarë ndodh nëse nuk i vjen ose nuk punon, në "
+                "një paragraf të shkurtër, dhe vëre ku shihet para "
+                "blerjes.</p>",
+                "<p>Askujt nuk i pëlqen ta shkruajë. Të mos e kesh lexohet "
+                "gjithsesi si përgjigje, dhe jo e mirë.</p>",
+            ]),
+            ("Pastaj gjërat e mërzitshme që vendosin", [
+                "<p>Foto të artikullit të vërtetë. Masat dhe materialet të "
+                "shkruara. Gjendje e vërtetë sot. Një numër telefoni ku "
+                "përgjigjet dikush.</p>",
+                "<p>Asgjë prej tyre nuk është vendim platforme, dhe e gjitha "
+                "i ndan dyqanet që shesin nga dyqanet që ekzistojnë.</p>",
+            ]),
+        ],
+        "payoff": "Na thuaj çfarë do të shesësh dhe të themi cilën prej tyre "
+                  "duhet ta zgjidhësh e para.",
+        "faq": [
+            ("A më duhet një platformë e vërtetë e-commerce?",
+             "Jo për të nisur. Nëse shet më pak se disa dhjetëra artikuj dhe "
+             "flet me klientët gjithsesi, faqet e produkteve dhe një buton "
+             "WhatsApp të çojnë larg, dhe mëson çfarë të ndërtosh nga "
+             "porositë e vërteta."),
+            ("A mund të shes vetëm në Instagram?",
+             "Mundesh, dhe shumë e bëjnë, por atje nuk të gjen kush po "
+             "kërkon produktin. Është kanal i dytë i mirë dhe kanal i vetëm "
+             "i keq, sepse asgjë nga ajo që poston nuk lexohet nga një motor "
+             "kërkimi."),
+            ("Po të shes jashtë vendit?",
+             "Atëherë pagesat dhe transporti ndryshojnë krejt dhe përgjigjja "
+             "pushon së qeni lokale. Ia vlen ta bësh si duhet në vend që ta "
+             "ngjitësh mbi një dyqan vendas, dhe zakonisht kërkon një bisedë "
+             "para një ndërtimi."),
+            ("Sa produkte para se të vlejë një dyqan i vërtetë?",
+             "Kur nuk arrin më ta mbash gjendjen të saktë me dorë, ose kur "
+             "t'i shkruash çdo blerësi kushton më shumë se sa vlen porosia. "
+             "Të dyja janë sinjale nga puna dhe jo nga një numër i shpikur."),
+            ("A është ende normale pagesa në dorëzim këtu?",
+             "Po, dhe të projektosh sikur nuk është është mënyra për të "
+             "përfunduar me shporta të braktisura që nuk i kupton. Ofroje, "
+             "vendosi çmim të ndershëm, dhe thuaje mbi faqe."),
+        ],
+        "related": [("/web-design/", "Faqe interneti"),
+                    ("/systems/", "Software me porosi")],
+    },
+
+    {
+        "slug": "what-to-write-on-your-website",
+        "src": "a65d1a67",
+        "date": "2026-08-22",
+        "updated": "2026-08-22",
+        "topic": "Faqe interneti",
+        "work": None,
+        "service": ("/web-design/", "Faqe interneti"),
+
+        "title": "Çfarë të shkruash në faqen tënde",
+        "h1": "Fjalët i di tashmë. I thua gjithë ditën.",
+        "summary": "Një mënyrë për ta nxjerrë tekstin nga koka jote dhe për "
+                   "ta vënë mbi faqe, pa një kopjeshkrues dhe pa ekran bosh.",
+        "standfirst": "Faza ku ngec pothuajse çdo faqe biznesi i vogël, "
+                      "shpesh me muaj, me dizajnin tashmë të mbaruar.",
+        "description": "Çfarë të shkruash në faqen e një biznesi të vogël: "
+                       "një metodë praktike për t'i hedhur fjalët, dhe pesë "
+                       "faqet që bëjnë pjesën më të madhe të punës.",
+        "og_desc": "Faqja bosh është arsyeja e vërtetë pse gjysma e faqeve "
+                   "gjysmake nuk niset kurrë.",
+
+        "body": [
+            ("Së pari shkruaj pyetjet", [
+                "<p>Për një javë shëno çdo pyetje që të bën një klient. Në "
+                "telefon, në dyqan, në mesazhe. Mos i korrigjo dhe mos i "
+                "rregullo fjalët.</p>",
+                "<p>Në fund të javës e ke faqen tënde. Ato pyetje janë ajo "
+                "që shkruan bota, me fjalët me të cilat i shkruan, dhe kjo "
+                "nuk është rastësi.</p>",
+            ]),
+            ("Përgjigju si do të përgjigjeshe me zë", [
+                "<p>Thuaje përgjigjen me zë, pastaj shkruaje atë. Nëse një "
+                "fjali do të tingëllonte çuditshëm thënë një klienti para "
+                "teje, është e gabuar edhe mbi faqe.</p>",
+                "<p>Teknika është e gjitha këtu. Zëri formal që të vjen ndër "
+                "mend kur hap një dokument bosh është ajo që i bën faqet e "
+                "bizneseve të vogla t'i ngjajnë njëra-tjetrës.</p>",
+            ]),
+            ("Pesë faqet që e mbajnë", [
+                "<p>Çfarë bën, me çmime ose një interval. Ku je dhe kur je "
+                "hapur. Kush je. Si të të gjejnë. Dhe një faqe për çdo gjë "
+                "që shet vërtet, sepse ajo është çfarë kërkon bota.</p>",
+                "<p>Gjithçka tjetër është opsionale për një kohë të "
+                "gjatë.</p>",
+            ]),
+            ("Fjalët për t'u hequr", [
+                "<p>Cilësi, profesional, zgjidhje, pasion, dhe çdo fjali që "
+                "nis me një mirëseardhje. I ka shkruar çdo konkurrent, "
+                "prandaj nuk dallojnë asgjë dhe zënë vendin ku mund të "
+                "rrinte një fakt.</p>",
+                "<p>Zëvendëso secilën me diçka të verifikueshme. Jo riparime "
+                "cilësore por 6 muaj garanci. Jo dërgesë e shpejtë por "
+                "korrieri i emëruar dhe kostoja e shkruar.</p>",
+            ]),
+            ("Shkruaj çmimin, ose intervalin", [
+                "<p>Pyetja më e zakonshme është sa kushton dhe përgjigjja më "
+                "e zakonshme është heshtja. Një interval me arsyen pse "
+                "ndryshon e mund asgjënë, dhe të heq nga mesi kërkesat që "
+                "nuk i doje.</p>",
+            ]),
+            ("Pastaj lëre të qetë një javë", [
+                "<p>Kthehu dhe prit çdo fjali që nuk po punon. Pothuajse "
+                "askush nuk shton në kalimin e dytë, gjë që të tregon për "
+                "çfarë shërben vërtet i pari.</p>",
+            ]),
+        ],
+        "payoff": "Na dërgo atë që ke shkruar, edhe nëse është një listë "
+                  "shënimesh, dhe të themi çfarë mungon.",
+        "faq": [
+            ("Sa e gjatë duhet të jetë çdo faqe?",
+             "Sa i duhet përgjigjes dhe jo më shumë. Një faqe shërbimi që "
+             "përgjigjet me 200 fjalë ka mbaruar, dhe ta zgjatësh që të "
+             "duket e madhe e keqëson për të dy lexuesit."),
+            ("Të shkruaj shqip, italisht apo anglisht?",
+             "Në atë gjuhë ku kërkojnë klientët e tu, që në këtë bregdet "
+             "shpesh është më shumë se një. Nëse shërben edhe vizitorë "
+             "përveç vendasve, një gjuhë e vetme është zgjedhja për të qenë "
+             "i padukshëm për të tjerat."),
+            ("A mund ta shkruaj me AI?",
+             "Për një draft të parë që pastaj e rishkruan me fjalët e tua, "
+             "ndonjëherë. I publikuar ashtu siç del, lexohet si çdo faqe "
+             "tjetër që bëri të njëjtën gjë, që është e kundërta e qëllimit."),
+            ("Po nëse nuk di të shkruaj?",
+             "Të shkruash mirë këtu do të thotë qartë, jo letrarisht. Nëse "
+             "di t'ia shpjegosh punën një klienti në telefon di ta shkruash "
+             "faqen, dhe versioni i telefonit zakonisht është më i mirë se "
+             "ai që del kur provohet."),
+            ("A duhet të shtoj faqe përgjithmonë?",
+             "Jo. Të duhen pyetjet me përgjigje, dhe faqe të reja vetëm kur "
+             "vijnë pyetje të reja. Një faqe që pushon së rrituri sepse "
+             "është e plotë është në rregull, mjaft që oraret dhe çmimet të "
+             "mbeten të vërteta."),
+        ],
+        "related": [("/web-design/", "Faqe interneti"),
+                    ("/seo/", "SEO dhe kërkim lokal")],
+    },
+
+    {
+        "slug": "lawyers-and-notaries",
+        "src": "82ea5f7d",
+        "date": "2026-08-22",
+        "updated": "2026-08-22",
+        "topic": "Kërkim lokal",
+        "work": None,
+        "service": ("/seo/", "SEO dhe kërkim lokal"),
+
+        "title": "Avokatë dhe noterë",
+        "h1": "Askush nuk kërkon një avokat. Kërkojnë një dokument.",
+        "summary": "Pse këshillat e zakonshme i rrinë keq këtij sektori, dhe "
+                   "çfarë të bësh kur të kërkosh vlerësime nuk është e "
+                   "thjeshtë.",
+        "standfirst": "Një nga të paktët sektorë ku manuali i kërkimit lokal "
+                      "duhet rishkruar në vend që të zbatohet.",
+        "description": "Kërkimi lokal për avokatë dhe noterë në Shqipëri: "
+                       "pse bota kërkon dokumentin dhe jo profesionin, dhe "
+                       "çfarë të bësh kur vlerësimet janë të vështira.",
+        "og_desc": "Bota shkruan dokumentin që i duhet, jo profesionin. Kjo "
+                   "ndryshon çfarë duhet të jetë faqja.",
+
+        "body": [
+            ("Çfarë shkruan vërtet bota", [
+                "<p>Jo profesionin. Gjënë që i duhet: një kontratë "
+                "shitblerjeje, një prokurë, një trashëgimi, regjistrimin e "
+                "një shoqërie, një përkthim të noterizuar.</p>",
+                "<p>Një faqe e organizuar sipas fushave të praktikës i "
+                "përgjigjet një pyetjeje që nuk e bëri askush. Një faqe për "
+                "çdo dokument, e emërtuar si do ta emërtonte një klient, i "
+                "përgjigjet pyetjes që shkroi.</p>",
+            ]),
+            ("Dy pyetjet para çdo telefonate", [
+                "<p>Sa kushton, dhe sa kohë do. Zakonisht nuk janë mbi faqe, "
+                "dhe të dyja bëhen në çdo telefonatë të parë, që janë mjaft "
+                "telefonata që mund të ishin kërkesa nga njerëz tashmë të "
+                "vendosur.</p>",
+                "<p>Një interval me arsyen pse ndryshon mjafton. Heshtja "
+                "lexohet si e shtrenjtë.</p>",
+            ]),
+            ("Vlerësimet, në një sektor ku të kërkosh është delikate", [
+                "<p>Disa klientë nuk do të përmenden kurrë dhe disa çështje "
+                "nuk diskutohen. Kjo është e vërtetë, dhe nuk është arsye "
+                "për të mos pasur asnjë.</p>",
+                "<p>Kërko për çështjet e zakonshme. Regjistrimi i një "
+                "shoqërie, një kalim prone, një kopje e noterizuar. Ata "
+                "klientë zakonisht janë të kënaqur dhe nuk kanë gjë delikate "
+                "për të mbrojtur.</p>",
+            ]),
+            ("Të gjendesh në tri gjuhë", [
+                "<p>Këtu pronat i blejnë njerëz që nuk lexojnë shqip. Një "
+                "zyrë që publikon të njëjtin shpjegim në italisht dhe "
+                "anglisht arrihet nga blerësit që kanë më shumë nevojë për "
+                "noter dhe më pak gjasa të kenë një rekomandim.</p>",
+            ]),
+            ("Skeda bën më shumë këtu se zakonisht", [
+                "<p>Bota zgjedh një zyrë afër pronës ose afër gjykatës, "
+                "prandaj afërsia vendos më shumë këtu se në shumicën e "
+                "sektorëve. Oraret, adresa e saktë, dhe një telefon ku "
+                "përgjigjet dikush janë e gjithë skeda.</p>",
+                "<p>Vendosi shërbimet si zëra të veçantë në vend të një "
+                "rreshti. Secili është një gjë që dikush e kërkon me "
+                "emër.</p>",
+            ]),
+        ],
+        "payoff": "Na dërgo adresën dhe të themi për cilat dokumente je i "
+                  "gjetshëm dhe për cilat jo.",
+        "faq": [
+            ("A është e pranueshme të publikohen çmimet?",
+             "Për punën standarde dhe me tarifë fikse është normale dhe të "
+             "filtron telefonatat. Për gjithçka që ndryshon me çështjen, "
+             "publiko intervalin dhe çfarë e lëviz. Alternativa është që "
+             "bota të hamendësojë, dhe zakonisht hamendëson lart."),
+            ("A duhet të ketë secili profesionist faqen e vet?",
+             "Po, nëse punojnë më shumë se një. Bota kërkon një person me "
+             "emër më shpesh se sa mendojnë zyrat, dhe faqja me një foto, "
+             "gjuhët e folura dhe fushat e mbuluara është ajo që gjendet."),
+            ("Po konfidencialiteti i klientit mbi faqe?",
+             "Asgjë nga ajo që duhet për t'u gjetur nuk kërkon të përmendësh "
+             "një klient ose një çështje. Përshkruaje punën në përgjithësi, "
+             "publiko se në çfarë konsiston një procedurë, dhe lëri rastet "
+             "konkrete ku duhet të rrinë."),
+            ("A na duhet një blog?",
+             "Ju duhen shpjegime të asaj që bota po nënshkruan. Çfarë "
+             "kontrollon vërtet një noter, çfarë mund dhe nuk mund të bëjë "
+             "një prokurë, çfarë ndodh nëse mungon një dokument. Nuk është "
+             "blog, është shërbimi i shpjeguar."),
+            ("Klientët na vijnë nga goja në gojë. Pse të merremi?",
+             "Sepse goja në gojë gjithnjë e më shpesh mbaron me dikë që "
+             "kërkon emrin për të parë nëse ekziston. Nëse nuk kthehet gjë e "
+             "arsyeshme, rekomandimi punon më pak se sa donte ai që e bëri."),
+        ],
+        "related": [("/seo/", "SEO dhe kërkim lokal"),
+                    ("/web-design/", "Faqe interneti")],
+    },
+
+    {
+        "slug": "gyms-and-fitness-studios",
+        "src": "e23e88df",
+        "date": "2026-08-22",
+        "updated": "2026-08-22",
+        "topic": "Kërkim lokal",
+        "work": None,
+        "service": ("/seo/", "SEO dhe kërkim lokal"),
+
+        "title": "Palestra dhe studio fitnesi",
+        "h1": "Vendimi merret para se të hyjë njeri brenda.",
+        "summary": "Dy fakte vendosin gjithçka, zakonisht mungojnë të dyja, "
+                   "dhe një gjë e tretë që këtu peshon më shumë se në çdo "
+                   "sektor tjetër.",
+        "standfirst": "Shkruar pasi pamë çfarë kontrollon vërtet bota para "
+                      "se të zgjedhë ku të stërvitet.",
+        "description": "Kërkimi lokal për palestra dhe studio fitnesi: dy "
+                       "faktet që vendosin, pse fotot këtu peshojnë më "
+                       "shumë, dhe çfarë të bësh me problemin e janarit.",
+        "og_desc": "Çmimi dhe orari. Mungojnë pothuajse gjithmonë, dhe "
+                   "vendosin para një vizite.",
+
+        "body": [
+            ("Çmimi dhe orari, ose asgjë", [
+                "<p>Këto janë dy gjërat që kontrollon çdo person i vetëm, "
+                "dhe dy gjërat që shumica e faqeve këtu i lënë jashtë. Një "
+                "çmim që duhet ta kërkosh lexohet si një çmim që nuk do të "
+                "të pëlqejë.</p>",
+                "<p>Orari është më keq ta harrosh, sepse kush ka punë me "
+                "orar fiks nuk vendos dot asgjë pa të. Kalon te një palestër "
+                "që të vetin e ka publikuar.</p>",
+            ]),
+            ("Foto të sallës së vërtetë", [
+                "<p>Askush nuk regjistrohet në një vend që nuk e ka parë. "
+                "Fotot e gatshme me pajisje që shkëlqejnë në godinën e "
+                "dikujt tjetër janë më keq se asnjë foto, sepse zhgënjimi "
+                "vjen pas vizitës në vend që para saj.</p>",
+                "<p>Fotografoje sallën ndërsa përdoret, nga dera, me dritë "
+                "dite. Madhësia e hapësirës është ajo që bota po përpiqet të "
+                "gjykojë.</p>",
+            ]),
+            ("Prova, dhe ku duhet të jetë", [
+                "<p>Nëse seanca e parë është falas, i takon kreu i çdo "
+                "faqeje, jo një faqe më vete. Është e vetmja ofertë që heq "
+                "kundërshtimin e vërtetë, që nuk është çmimi por siklet.</p>",
+            ]),
+            ("Çfarë kërkon bota që mund ta marrësh", [
+                "<p>Jo fjalën palestër. Emrin e një kursi, një orë të ditës, "
+                "një synim, një lagje. Kush kërkon një kurs mëngjesi afër "
+                "shtëpisë bën kërkim tjetër nga kush kërkon një "
+                "palestër.</p>",
+                "<p>Secila prej tyre është një faqe që mund ta kesh dhe që "
+                "pothuajse asnjë konkurrent nuk do të mundohet ta "
+                "shkruajë.</p>",
+            ]),
+            ("Pjesa sezonale, e planifikuar në vend që e duruar", [
+                "<p>Kërkesat shpërthejnë në janar dhe shtator dhe bien në "
+                "verë. Kjo parashikohet, prandaj faqet që u përgjigjen "
+                "pyetjeve të janarit duhen shkruar në nëntor dhe jo gjatë "
+                "vrullit.</p>",
+                "<p>Kërkimi do muaj që të lëvizë. Ta publikosh një faqe "
+                "javën që të duhet është ta publikosh një sezon vonë.</p>",
+            ]),
+        ],
+        "payoff": "Na dërgo adresën dhe të themi çfarë nuk arrin të zbulojë "
+                  "ai që po zgjedh mes teje dhe vendit ngjitur.",
+        "faq": [
+            ("A duhet vërtet t'i publikojmë çmimet?",
+             "Po, dhe kundërshtimi është gjithmonë se do t'i shohin "
+             "konkurrentët. I dinë tashmë. Ai që nuk i di është ai që po "
+             "vendos, dhe vendos kundër heshtjes më shpesh se kundër një "
+             "numri."),
+            ("A na duhet një aplikacion apo sistem rezervimi?",
+             "Vetëm kur orari nuk hyn më në një faqe ose kur kthehet bota "
+             "mbrapsht nga kurset e mbushura. Para asaj është kosto që "
+             "zgjidh një problem që nuk e ke ende."),
+            ("Si të konkurrojmë me një zinxhir aty pranë?",
+             "Mbi atë që madhësia e pengon. Një instruktor me emër, një kurs "
+             "me tetë veta në vend të dyzet, orare që u shkojnë atyre me "
+             "turne. Një zinxhir nuk mund ta përshkruajë lagjen tënde dhe "
+             "nuk do të provojë."),
+            ("A janë ide e mirë fotot para dhe pas?",
+             "Vetëm me leje, vetëm të vërteta, dhe më mirë me një fjali nga "
+             "personi që është aty. Ato të blera ose të zmadhuara njihen "
+             "menjëherë dhe kushtojnë besimin që faqja donte të ndërtonte."),
+            ("Anëtarët na vijnë nga goja në gojë. A vlen kërkimi?",
+             "Goja në gojë mbaron gjithsesi në një kërkim. Dikujt i flasin "
+             "për ty, të kërkon, dhe nuk gjen as orar as çmim. Rekomandimi "
+             "po e bënte punën e vet deri në atë çast."),
+        ],
+        "related": [("/seo/", "SEO dhe kërkim lokal"),
+                    ("/meta-ads/", "Meta ads")],
+    },
+
+    {
+        "slug": "builders-and-contractors",
+        "src": "a8c08da0",
+        "date": "2026-08-22",
+        "updated": "2026-08-22",
+        "topic": "Kërkim lokal",
+        "work": None,
+        "service": ("/seo/", "SEO dhe kërkim lokal"),
+
+        "title": "Ndërtues dhe kontraktorë",
+        "h1": "Të marrin në punë me prova. Shumica e faqeve s'kanë asnjë.",
+        "summary": "Çfarë kërkon dikush që po shpenzon një shumë serioze, "
+                   "dhe pse telefoni peshon më shumë se faqja.",
+        "standfirst": "Sektori ku hendeku mes atyre të mirëve dhe atyre të "
+                      "gjetshëmve është më i gjerë.",
+        "description": "Kërkimi lokal për ndërtues dhe kontraktorë: si duhet "
+                       "të duken provat e punës së kryer, pse përgjigjja në "
+                       "telefon vendos më shumë se faqja, dhe çfarë kërkon "
+                       "bota.",
+        "og_desc": "Askush nuk dorëzon aq para mbi një premtim. Do të shohë "
+                   "punë të përfunduara.",
+
+        "body": [
+            ("Punë të përfunduara, ose asgjë", [
+                "<p>Ky është i gjithë sektori. Kush po vendos nëse të japë "
+                "një shumë të madhe do të shohë dhoma që i ke mbaruar, me aq "
+                "detaj sa të besojë se ke qenë atje.</p>",
+                "<p>Dhjetë punë, nga ca foto secila, çfarë ishte dhe "
+                "afërsisht sa zgjati. Ajo faqe i mund të gjitha faqet e "
+                "tjera që mund të ndërtoje, dhe pothuajse askush në këtë "
+                "sektor nuk e ka.</p>",
+            ]),
+            ("Para dhe pas, me para-në brenda", [
+                "<p>Kuzhina e mbaruar vetëm nuk provon gjë, sepse një "
+                "kuzhinë mund ta fotografojë kushdo. E njëjta dhomë më parë "
+                "është ajo që e bën tënden dhe e bën punën të lexueshme.</p>",
+                "<p>Që sot bëj foton e para-s në çdo kantier. Nuk kushton "
+                "asgjë dhe është i vetmi version i kësaj që bind.</p>",
+            ]),
+            ("Kërkojnë punën, jo ty", [
+                "<p>Rikonstruksion banjoje, riparim çatie, një shtesë, "
+                "ngrohje nën dysheme. Secila është kërkim më vete dhe "
+                "meriton faqen e vet që thotë në çfarë konsiston, çfarë e "
+                "ndryshon çmimin, dhe sa zgjat.</p>",
+                "<p>Një faqe e vetme që rendit çdo shërbim nuk konkurron për "
+                "asnjërën prej tyre.</p>",
+            ]),
+            ("Pjesa që mund çdo faqe interneti", [
+                "<p>Të përgjigjesh në telefon. Në këtë sektor ankesa më e "
+                "zakonshme nuk është çmimi ose cilësia, është të mos të "
+                "kthejnë përgjigje, dhe pjesën më të madhe të punës e merr "
+                "kush u përgjigj i pari.</p>",
+                "<p>Nëse je mbi një çati dhe nuk përgjigjesh dot, shkruaj "
+                "mbi faqe kur e kthen telefonatën, dhe pastaj ktheje. Kthen "
+                "më mirë se çdo gjë që mund të rregullojë një dizajner.</p>",
+            ]),
+            ("Gjërat e sikletshme që ia vlen t'i thuash", [
+                "<p>Nëse je i licencuar dhe i siguruar. Nëse ka garanci dhe "
+                "për sa. Çfarë ndodh nëse kantieri zgjatet. E pyesin të "
+                "gjithë dhe nuk e publikon pothuajse askush.</p>",
+                "<p>Të përgjigjesh me shkrim është mënyra më e lirë për t'u "
+                "ndarë nga ata që e bëjnë të vështirë të besosh këtë "
+                "sektor.</p>",
+            ]),
+        ],
+        "payoff": "Na dërgo adresën dhe të themi për cilat punë mund të "
+                  "gjendeshe dhe nuk gjendesh.",
+        "faq": [
+            ("Nuk kemi foto nga punët e vjetra. Tani?",
+             "Nis sot me kantierin në vazhdim dhe pyet dy klientë të kaluar "
+             "nëse mund ta fotografosh dhomën e mbaruar. Shumica thonë po. "
+             "Brenda një sezoni ke një faqe që nuk ekzistonte dhe që nuk "
+             "blihej."),
+            ("A duhet t'i publikojmë çmimet?",
+             "Jo një çmim fiks, sepse askush nuk kuoton dot një kantier nga "
+             "një faqe. Publiko çfarë e përcakton: sipërfaqja, gjendja e "
+             "asaj që është, materialet. Është më e dobishme se një numër "
+             "dhe është e ndershme."),
+            ("A ia vlen fare të kesh faqe interneti?",
+             "Është i vetmi vend ku një i panjohur mund të verifikojë se "
+             "ekziston para se të dorëzojë para. Një skedë me foto dhe "
+             "vlerësime bën një pjesë të punës, dhe pjesa që nuk e bën dot "
+             "është të shpjegojë një punë me fjalët e tua."),
+            ("Po vlerësimet e këqija nga kantieret e vështira?",
+             "Në këtë sektor ndodhin më shpesh se gjetkë dhe një përgjigje "
+             "publike e qetë vlen më shumë se sa kushton vlerësimi. Kush e "
+             "lexon po vendos nëse je lloji i firmës që e trajton një "
+             "problem apo që zhduket."),
+            ("A duhet të jemi në çdo direktori sektori?",
+             "Jo. Dy ose tri që bota këtu i përdor vërtet, të plotësuara si "
+             "duhet dhe në përputhje me faqen, i mundin njëzet të mbushura "
+             "përgjysmë. Përputhja është pjesa që numëron."),
+        ],
+        "related": [("/seo/", "SEO dhe kërkim lokal"),
+                    ("/web-design/", "Faqe interneti")],
+    },
+
 ]
 
 # /blog/, the index over those records. The soft wraps are placed for this text
