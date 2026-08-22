@@ -71,6 +71,17 @@ the token, rebuild, push. Empty means the tag is not emitted.
 Sign in at bing.com/webmasters and use "Import from Google Search Console".
 It is one click and brings the property and the sitemap with it.
 
+## 5b. Citations, and the one thing that moves fastest
+
+`.build/citations.md` carries the exact NAP strings from the site's own
+`#org` node, plus the directories in priority order. Paste from it rather than
+retyping: a second phone format or a different spelling of the city reads as a
+second business, and the signals split instead of stacking.
+
+Read the ordering there before doing any of it. **Reviews on the profile you
+already have outrank any new listing**, and the four clients have never been
+asked.
+
 ## 6. Google Business Profile
 
 Create the profile for minarank studio: Durres, the services, the hours, the
