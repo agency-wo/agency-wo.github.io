@@ -1,20 +1,42 @@
+# WHO SERVES THIS. GitHub Pages ignores this file entirely, and always has.
+# The line below is the source of truth for the four headers, and Cloudflare is
+# what puts them on the wire: the record is proxied and a Modify Response
+# Header rule carries these values. Change them here first, then paste, so the
+# repo and the edge cannot drift apart with nobody able to say which is right.
+#
+# THE 120 sha256 HASHES ARE GONE. Every one of them covered a
+# <script type="application/ld+json"> block, and CSP Level 3 is explicit that a
+# script whose type is not a JavaScript MIME type is a data block and is not
+# subject to script-src. Tested rather than believed: this page served under
+# exactly the policy below, with no hashes at all, logs zero violations, the
+# ld+json parses, and main.js runs. The policy went from 6,726 characters to
+# 246, which is also what let it fit in a response-header rule.
+#
+# The only executable script on any page is /js/main.js, loaded by src and
+# already covered by 'self'. Gate check 4 fails the build if a page ever grows
+# an inline one, which is the guarantee the hashes used to give by accident.
 /*
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-+qEy5+QZhlR1GD0vo0OpllKZLiTj5/ifv2U7QZTzkjA=' 'sha256-/7/hbwQ9r9mtmo7ooGwG6JUG9rHNbwPbA/OVW7Ic7ZI=' 'sha256-/k2G8xkuQec3nNWd0bRb3ViydhptPAEhBVgvcflIgsE=' 'sha256-/vWj8H5CZC2+Wa3EXJGiO99kXVc0jzI6Y10Cvws/OwY=' 'sha256-08SyqB6mWQXM86PLHO/KdI5lbArJTI8G8irlc5EL/cc=' 'sha256-0QeMp5kStSSsVwpgRe1mc4AqxnAnjFynSr5DeSuv57s=' 'sha256-0XZ0FXBKuYOfoaSDr6X6PH+wxkQLLZvjew8HHuQE7L4=' 'sha256-0wC0vwyZFPYK/+38PzGrXcG6S2anhprv5hl8WfnE3Q4=' 'sha256-1sT3SQZ+0IbeIxU9p7n+C365ICyq3+6nXOUY3yXTC28=' 'sha256-1y0VO14tzk65/ZtxMbakuY5BtW0f4xkgoTCN8eXee4A=' 'sha256-3HrhmcFkr5VTJSiR/mge/USB75wq7Z7uEJA/qDToZ58=' 'sha256-3U1tdMOpvQkTw37gdCFmgtGPJTrZfe/K3Gx01NURlpA=' 'sha256-3YEdSAXxZBSiISqfODlrC2MryJxOCc9GijUu1UwOoTk=' 'sha256-4+IAwD5mv/TSJ4x5lt6nZtYBi6/gdXNU1OA6mmhD7Wg=' 'sha256-4api4dIWqsxODt1I7NUBJqrCbrghH7bnNmfa7hn4loA=' 'sha256-5JAvyRyqKNVCWQmvYaEjHFjpav0ysWQ7ziozJsQS7kI=' 'sha256-5Lgihe23/9xlrH6I1i2UJTnAXjdiyaBH+1f3fdxNzek=' 'sha256-6E4gjynk1Rc6LSmeoIBNnh+cB+C+cYMj35uHZr+JzEE=' 'sha256-6JFcOfQk/LfjC43aHTkT12FZaOwIVVAKVuGqyl62mCU=' 'sha256-6pEfmPzlaRU+xtPn1ZFLCMTHA0eMrjdcTS6QkTW32is=' 'sha256-6qkRMs2CTAfVmMFRNTTif7zvDxudlQXd79wwPPeSBqg=' 'sha256-7vRFHuf8v3kS17J8hYM1AGVVuYcgOJOCABb2XV8unsk=' 'sha256-8fY3/bOGS+NK8T/gpAykyTD7e2Lx2dDPkQsasD7Urjg=' 'sha256-8mrbgZM/8IPvM3Va9UXtPh0ukNsk91tnD9JvCmGKRok=' 'sha256-9CUGE5e3cCjm8mTKcXJD/BExKdBw7FrqM9ivb6hUOZw=' 'sha256-9m8N26/ikY4rUbeOQq1o14ZrvKcfUdjKdi2Fw4N1RaU=' 'sha256-C7YOLRSIOovYYbmu4ZiQblQiI3Op0WvQLlEV1jpdrvY=' 'sha256-CLRIBjCAm7OseY23OAyDyGnhuvOYKkPy4RwhOR5fjZA=' 'sha256-D326JcBBdxTgfjKYfJOmTy0GX2OWZB52MyV9Y31sQaE=' 'sha256-DA7IpIhNKC80qVH9Tu3lvoqYF0XYqC/AspoM+Lbm638=' 'sha256-DnBKghFn3G5rCmfgq76tKtHL7xftg1aLdsmfj6zjWq8=' 'sha256-EUz+Z5cMGYLocEe51/UWf0cHYN/09QKXhTVlz1ymIZk=' 'sha256-EcgBioa2z/DDGfHQmmDZO+58lFAp1vf+DKfYhkO903s=' 'sha256-Eo7LYlSb3/UOdS7utks00hmnpzd42h2oK7zyKm5YQUg=' 'sha256-EvuqXkzZsu8edbXwVH3KHJ2JW/yJFuwIdB5JEkZsOJM=' 'sha256-FT+L9WeS0TK4FB5E3+kmdqo0XK1wbXNNStlF8dlUeqU=' 'sha256-FVZ6H1wMISGpF/7VA1ippExw+E7FP/8fAKavKHfjID4=' 'sha256-FdPZXbHi9Mop/YHKRVG1mURiIIEbrqQsB5CL+YrATd8=' 'sha256-G+OcLEAnVuQ/muK2HL5OEj91DrcKF1kRcQKbLKHbiow=' 'sha256-G/AnqAxjcdfn0PaOYytVN2usVI50QdQ2u11p1oLu9Zc=' 'sha256-G42d3jCoUeihZQ+h1szSiU7/etU+JDAQ4cP5G9Vub48=' 'sha256-GF4g6jTsbhRJNJidw6THvAopgTUJe/9aXp9twYK7VVU=' 'sha256-GWtyeIuDSwlN0iUmGXnBhVpMSoENCa93WWITCjHbrd0=' 'sha256-GcWrSt/vkaATglH/i/wWfu7IMKsHJCtFEkaSd8WSlQE=' 'sha256-GijirQjXC5owN1B9vvt+XDIL03XyH3yvxjxUHkyF4zM=' 'sha256-Gn+2oNDOSJakMq3Kg4Xl9nXqUwAcVMh8VsNStibwqkw=' 'sha256-GvR20IUBm7zoxQdJ4gKTzmZyBh9hIr3RT73TZ+Jb0OY=' 'sha256-H710UDIOrHT5q2C7WWqjW2ROvNwDINFTDgDAZpr/f40=' 'sha256-K4MlU1GLQrUDvQUdjJKShsv6nOv9PZ4FN6Uzecjdh4Y=' 'sha256-KRM4hsWRHvvHYyGD+ykXfHnZaMlorgXrpJDT4oGbcQM=' 'sha256-LSW/Gc/Jby2KaNhF90qNv4dyKuJcDm7Tg4s5gaKslpo=' 'sha256-LkRp7kO3A0iZo8WjBj+ss5kHb6V6qmIqK2bSfUOLe7k=' 'sha256-MXeLNJMANCXd0tqP0D07+5zqVgJCwB6vTp/iYPakUUI=' 'sha256-MjE2XLd/iQ3qWnZiItvO7icJlj4YDSIpgFaYRbRtBW8=' 'sha256-NIwYKlHZwoNtZ+ZUHFSUigCpdhJ++4L7GntFB8So2v8=' 'sha256-OWp/W/6Zee79aWfTBFH+PRmsTSzR4Rf0svX7qT3TKPE=' 'sha256-Oip5M1Ll33kWMqh4bZc4efQL2E7ZJTi45e3lVK4fW5s=' 'sha256-Om7aP4qxd1G3YqjnIIhUS4bJ/U3bmH6lbRVdWIRn1eU=' 'sha256-On/oiEsblxrUtf7FM5Z0AqwCLnMZcAZTFK4on6xIe+I=' 'sha256-P4oylh3+hEqelwU5H+ygT61aX/pGTP9X9JK1X9CyG3U=' 'sha256-PYfwJGkOnzANG3F95XtVmjx6J/uagupZ0kKBipsnxg0=' 'sha256-PraHj0bEVdNJsZMftcBYelGN8FpZ1EdmHA5kExUo0NM=' 'sha256-S48beBEQyBXdMswYFEQKeJUldupn/sP1XTSsSwhM78c=' 'sha256-SS9qUcCnlg6P9YyDAfrvwCkQwliiI5RvPz4Npitgp1U=' 'sha256-SzLfrUdR/0mrMqPmcw1GZa3ihWMPlW5UqRV63Nte2bQ=' 'sha256-T6L5RM9egPSUTiFzcHlKRKHH8gMXkvaQXIHKnNrojwc=' 'sha256-UdGDRFCrLyfam/ylU2ETEH/7MLtvvluYe7mSXJaonNk=' 'sha256-Uu0Pecbt7XakCRJ6g60et6oOkDKIPTFnjxysaX/f2Bw=' 'sha256-VmOL54uwPiAP/V8YPf+3vGgeWj2IJSuU6gO1+EasX98=' 'sha256-WowwZM/r9+kHz6xH+3vZMUXPhHhorajd+hRIYVW6CJw=' 'sha256-X0xOC1FVrk8t/costBSuzncx3hPc/IYTcNQISXg+GZI=' 'sha256-X5v0pjR7/GpeL4fyDvLiWOBKLNJQDBRGXUaNpJZ/uIM=' 'sha256-X7PzNMXluKER4tIZ0RZENE+BXEWXtee/E5vlCvudg1Y=' 'sha256-Yu9GsUDF1jeUOToQVvAd9h8Hd97pb20IYaIUP585RMw=' 'sha256-YuN/3kMmPHIcCQ4+LG01Ix6QJPHhGUCtQKA01JepjVw=' 'sha256-ZPMK0l8iTPW+GadwmhV4U/BRpcIs7RXvICvgLgXFc20=' 'sha256-Zt13WYKaOGnbn2j+bsGfVdY/Pxm0zKg5GtXMy+8VkDE=' 'sha256-aQBs/5WmDrcmtM0Lzz9HEpXeeX1S0ldOYYRYrzpz+LQ=' 'sha256-abrilsAZGisFV4BnpR1P65Fcr1hV6PDA8xBOF/mK2Tc=' 'sha256-baU2DOgrFRhskZs2cw/hA4vIkyWyWMUeQxe+8mSucSc=' 'sha256-cXBR7yIXolQGgpuGWm/TEJh0OoaTpn7M8BSfCcBRHaI=' 'sha256-d1UchZWYGkcNVNei/H8hoBDez3GQFHHzHPjcFS+vnqY=' 'sha256-d8xZNTPd33dLfOrAdzCRgn8cCQ3HAwDLRa5NlSHPAC4=' 'sha256-dQhBVPM+pgSPotNy+sdW0SAKHpHo2x5F9jJwwPuksVI=' 'sha256-e2gUPZzCMMK4zvDW5s71eM5e0L7Ccc0DOObyINIwOOs=' 'sha256-eGhoz+XJUZOi3A7+aCelz20mTyXMuGzxgNfMHO2bzow=' 'sha256-gEUStomVp010EBO9knRBne8ZyukPmRsbYglkoPUku2U=' 'sha256-hY8+jU3F8I0hDU63n8qE9nnUcXStrVONIIHbOXcdPV4=' 'sha256-hZD6Ry71NDVqcX5iKSTrlIjuJa3PwHu7WTSGEjy4Ezs=' 'sha256-igsQIkXYKRFgLRAvxjLNxz4qsHn6CMJXctYolaVM6K4=' 'sha256-imQcSKYKkYG6zXSPKjwrgTHcq9StskfE3unzzlhGYVk=' 'sha256-inMRPcYGfss/46d6K3Wenv5SVtl07jUcLPbM2u6LYbc=' 'sha256-jXfO+bDZC0d8aNaOd+2wonaTLWlaYuMXnlyPkFUIbPk=' 'sha256-jm/bLUv//lxCS30o1I8fGj7ElF5MiFZH2d53Qg7lwks=' 'sha256-jpB3WJ/APBfAymjqp9xZbKsvoZg/qIUHlQChss+v2Xw=' 'sha256-l0sirpQ+RDySVWpJRgQ6QFZzrG/18MALWRHmFFq655w=' 'sha256-l3ofHQYn/uuw/LnSwkgVM8uFwswRb0D5ZEwIKeWuecI=' 'sha256-mMWlyjK8kjhU02VK2C5xtI7+b0QkKFTQIUCzw+XKTh0=' 'sha256-nk2qUfC8vc0CjWejif2Na4FHOlKtA/IU4EcQcAiKbfo=' 'sha256-okDWiCnFR0gU9jfVqD7q2A/chk6umXpb6vdh2GF/rUw=' 'sha256-pNYNLH9DYE5/BAJC/ps1EZzpdzj9pSPjhHlwWi3hrBI=' 'sha256-pkqmngZuF+WTveaZTCVzJo3SeRo1KeDCykPqQKKJtnA=' 'sha256-qMq507P1nRwu+yPVH4Hf/UAkPlzRQIFSdH+ot/IhPgY=' 'sha256-qYuHuT8aNzoLQRUG9KBlwR6O6IlGjoCuLxYuy9x6YbQ=' 'sha256-qzxP0ZmF4SMX/3aOxqnRlm4qDjVIqhMDFMSclIkptII=' 'sha256-rL0hlw7SGnOCoQQEa9zXmU+LdDHCXp/JI3+8c3LfAl4=' 'sha256-rleBcp0m23LGLjI8zUn2JZC5EjukvddXAt/mgozH1qc=' 'sha256-rvuh1Ztf+WY+bFDZWWjWoWWmJAMy0RqLWny9WYOnpc4=' 'sha256-wyZRT2uNcZYopx9VLt2mpSPBwWNre+pI8gggZCZCZXY=' 'sha256-x+tKYu3aAXnZdEvSGPNK4J+jH2DOzlWplMDSzd6uJYw=' 'sha256-xWB38pXWckLzNdvu+2msmIae4fN5uomZaSza3Hyqxuk=' 'sha256-xYMHDsa8Pg/7SSduZicFC9HBiRkq7JM8GY8LpXDrJQ8=' 'sha256-yCMjp7zecHMLhsC038J6Sz2VD2Vcv2n4ncb05YzfPHg=' 'sha256-yxDIImpZ3owLtrHzJcXQsoa1wkYBMmsRdOqvC92/6iU=' 'sha256-z/ka8+cRl1YydDrZWa7F+b+rcfW/MNh9erS0ZB254AE=' 'sha256-z4roezNcQftEhgvmt1G6pRKmcvu2FqFmRBa9QLQztXk=' 'sha256-z6PlWQFeTdLTIEHNPLug0ftpNXp6WjkN8OqPhv3xZ/w=' 'sha256-zUNyeWlPbifChcQLYeDSgp059UPlRP6g9Goj/fQ474c=' 'sha256-zdaK4S3CjBRsOSuXX3Jd/i8BERj88/MKHsM5NTB9H1w=' 'sha256-ztdp73x4z740sj+3Fv9W11r3yOO+vt18rpx0/8qH/pg='; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://api.web3forms.com; object-src 'none'; base-uri 'self'; form-action 'self' https://api.web3forms.com; frame-ancestors 'self'
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://api.web3forms.com; object-src 'none'; base-uri 'self'; form-action 'self' https://api.web3forms.com; frame-ancestors 'self'
 
+# Cache lifetimes. On Cloudflare these are set as Cache Rules in the dashboard
+# rather than read from here; the values are kept in one place so the rule and
+# the repo agree. HTML is deliberately absent: it stays short so a deploy is
+# visible immediately.
 /assets/fonts/*
   Cache-Control: public, max-age=31536000, immutable
 
 /assets/logo/*
   Cache-Control: public, max-age=31536000, immutable
 
-# Honesty first: GitHub Pages ignores this file entirely, headers included,
-# and every rule in it takes effect only on a host that honours _headers
-# (Cloudflare Pages, Netlify). It is kept correct anyway so moving host is a
-# DNS change and not an audit.
-#
+/css/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
 # 30 days and NOT immutable, unlike the fonts and logos above: those change
 # by being renamed or never, while a proof chart is a Search Console
 # screenshot that gets re-taken under the same filename when the numbers

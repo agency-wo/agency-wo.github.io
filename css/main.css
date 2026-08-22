@@ -855,14 +855,21 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
     animation-delay: calc(200ms + var(--r) * 40ms); }
   @keyframes fade-in { to { opacity: 1; } }
 
-  .js:not(.played) .hero-rest { opacity: 0; transform: translateY(12px); }
+  /* transform only, and NO opacity. This block holds p.hero-sub, which is the
+     largest contentful paint on all 3 homepages, so starting it invisible meant
+     Google measured the page at 3264ms against a 2500ms threshold while the
+     same text was measured at 1256ms under ?static. The element now paints at
+     first paint and slides up from there. transform does not shift layout, so
+     CLS stays 0, and the wordmark keeps its own fade because ?static proves the
+     wordmark is not the largest element and cannot take LCP back. */
+  .js:not(.played) .hero-rest { transform: translateY(12px); }
   /* was 900ms. The last wordmark letter starts rising at 580ms and the climb
      finishes at 1230ms, so the copy used to land AFTER it, 1350ms past play,
      and play itself waits on document.fonts.ready or an 800ms cap. The form
      beside it has no entrance at all: a conversion element must never be the
      thing that has not arrived yet. */
   .play .hero-rest { animation: rest-in 450ms var(--ease-reveal) 400ms both; }
-  @keyframes rest-in { to { opacity: 1; transform: none; } }
+  @keyframes rest-in { to { transform: none; } }
 
   /* the line above it is a fact somebody has to keep true, so it breathes */
   .status .dot { animation: dot-pulse 2.4s var(--ease-reveal) infinite; }

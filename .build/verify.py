@@ -314,24 +314,43 @@ for p in all_pages:
     if n != 1:
         findings.append(f"[h1] {rel(p)} has {n} h1 elements")
 
-# 4. JSON-LD parses and its hash is pinned in _headers ----------------------
+# 4. JSON-LD parses, and no page carries an executable inline script --------
 # One pattern for every reader of the structured data. Checks 4, 44 and 48 all
 # want the same blocks, and a second copy of this regex is a place for the 3 to
 # disagree about what a JSON-LD block is.
+#
+# THE 120 sha256 HASHES ARE GONE, and this is what replaced them. Every one of
+# them covered a <script type="application/ld+json"> block, and CSP Level 3 is
+# explicit that a script whose type is not a JavaScript MIME type is a DATA
+# BLOCK and is not subject to script-src. Tested rather than believed: the
+# homepage served under a 227-character policy carrying no hashes at all logs
+# zero violations, the ld+json still parses, and main.js still runs. The 6,499
+# characters of hashes were protecting nothing, and they were the reason the
+# policy could not fit in the response-header rule that finally serves it.
+#
+# What the hashes did do by accident was fail loudly if a page grew an inline
+# script. That guarantee is worth keeping on purpose, so it is asserted here
+# instead: every <script> is either ld+json or has a src, both of which
+# script-src 'self' already allows. An executable inline script would be
+# blocked in the browser, and finding that out at build time beats finding it
+# out from a blank page.
 _LD = re.compile(r'<script type="application/ld\+json">(.*?)</script>', re.S)
-
-headers = read(os.path.join(ROOT, "_headers"))
-pinned = set(re.findall(r"'sha256-([A-Za-z0-9+/=]+)'", headers))
+_SCRIPT_OPEN = re.compile(r"<script\b([^>]*)>", re.I)
 for p in all_pages:
-    for block in _LD.findall(read(p)):
+    html = read(p)
+    for block in _LD.findall(html):
         try:
             json.loads(block)
         except json.JSONDecodeError as e:
             findings.append(f"[json-ld] {rel(p)} does not parse: {e}")
+    for attrs in _SCRIPT_OPEN.findall(html):
+        low = attrs.lower()
+        if "src=" in low or "application/ld+json" in low:
             continue
-        h = base64.b64encode(hashlib.sha256(block.encode("utf-8")).digest()).decode()
-        if h not in pinned:
-            findings.append(f"[csp] {rel(p)} json-ld hash missing from _headers")
+        findings.append(
+            f"[csp] {rel(p)} has an inline <script{attrs}>. script-src is "
+            f"'self', so the browser will refuse to run it. Give it a src, or "
+            f"it is not going to execute for anybody")
 
 # 5. canonical --------------------------------------------------------------
 for p in all_pages:

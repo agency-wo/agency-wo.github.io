@@ -45,7 +45,7 @@ breaks, and gen_blog.py re-indents it. It carries no meaning, so a translation
 places its own wraps rather than copying these.
 
 TO ADD A POST: copy a record, change every field, then run
-  python .build/gen_blog.py && python .build/gen_headers.py
+  python .build/gen_blog.py && python .build/gen_feed.py
   && python .build/gen_sitemap.py && python .build/verify.py
 """
 

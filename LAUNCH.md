@@ -25,6 +25,36 @@ gate passes, push. This rewrites robots.txt to welcome everybody, names the
 sitemap, and pings every URL to IndexNow (Bing and Yandex read it; Google
 does not, which is what steps 4 and 5 are for).
 
+## 3b. Put Cloudflare in front, so the headers are real
+
+GitHub Pages ignores `_headers`, and always has. Until this is done the site
+sends no Content-Security-Policy, no `X-Content-Type-Options`, no
+`Referrer-Policy` and no `Permissions-Policy`, and everything including the
+fonts and the stylesheet is cached for 10 minutes. The DNS is already on
+Cloudflare, so this is configuration and not a migration.
+
+**Order matters. SSL first, then the orange cloud**, or the site is briefly
+broken:
+
+1. **SSL/TLS -> Overview**: set the mode to **Full (strict)**. GitHub Pages
+   serves a valid certificate for the custom domain. Doing this second, or
+   leaving it on Flexible, gives a redirect loop.
+2. **DNS**: switch the apex record and `www` to **Proxied** (orange cloud).
+   Confirm with `curl -sI https://minarankstudio.com/` that `Server:` now says
+   cloudflare rather than GitHub.com.
+3. **Rules -> Transform Rules -> Modify Response Header**, one rule, applied to
+   all incoming requests. Add four static headers, copying the values verbatim
+   from `_headers` in this repo, which is the source of truth for them. The CSP
+   is 246 characters and pastes in one line.
+4. **Caching -> Cache Rules**: for `/assets/*`, `/css/*` and `/js/*`, set
+   Browser TTL to a year. Leave HTML alone so a deploy is visible immediately.
+
+Then check it landed, because a rule that was saved is not the same as a header
+that arrives:
+
+    curl -sI https://minarankstudio.com/ | grep -i 'content-security\|server'
+    curl -sI https://minarankstudio.com/assets/fonts/archivo-var.woff2 | grep -i cache
+
 ## 4. Google Search Console
 
 Add minarankstudio.com as a DOMAIN property, not a URL prefix. Choose DNS

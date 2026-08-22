@@ -111,8 +111,12 @@ everything checkable is checked by `verify.py`, which fails the build.
     reduced-motion get the finished page.
 33. Every `<img>` carries `width`, `height` and real `alt`. Gated.
 34. Build order: `gen_pages`, `gen_docs`, `gen_cases`, `gen_home`, `gen_blog`,
-    `gen_glossary`, `gen_404`, `gen_feed`, `gen_headers`, `gen_launch`,
-    `gen_sitemap` last, then `verify`.
+    `gen_glossary`, `gen_404`, `gen_feed`, `gen_launch`, `gen_sitemap` last,
+    then `verify`.
+    `gen_headers` was removed rather than left in: it existed only to pin a
+    sha256 per JSON-LD block, and those blocks are data, not script, so the
+    120 hashes were guarding nothing. `_headers` is now hand-held text and
+    check 4 asserts the thing the hashes guarded by accident.
     `gen_blog` and `gen_launch` were missing from this line for a while, which
     would have stranded the 4 blog pages the first time SHARED:HEADER changed.
     `gen_404` then went missing the same way and was stranded for real: the day
