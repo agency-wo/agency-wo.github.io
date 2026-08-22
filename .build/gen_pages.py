@@ -226,6 +226,7 @@ def jsonld(svc, lang):
          "areaServed": [{"@type": "City", "name": "Durres"},
                         {"@type": "City", "name": "Tirana"},
                         {"@type": "City", "name": "Pavia"},
+                        {"@type": "City", "name": "Milano"},
                         "AL", "IT", "Worldwide"],
          "availableLanguage": ["en", "it", "sq"]},
         # inLanguage goes HERE and not on the Service above it, and that is a

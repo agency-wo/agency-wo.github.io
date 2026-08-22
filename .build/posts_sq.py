@@ -4658,6 +4658,108 @@ POSTS = [
                     ("/start/", "Një auditim falas")],
     },
 
+    {
+        "slug": "seo-milano",
+        "src": "fb779ad0",
+        "date": "2026-08-22",
+        "updated": "2026-08-22",
+        "topic": "Kërkim lokal",
+        "work": None,
+        "service": ("/seo/", "SEO dhe kërkim lokal"),
+
+        "title": "SEO në Milano",
+        "h1": "Milano nuk është një treg. Janë dyzet.",
+        "summary": "Pse një biznes lagjeje paguan për një qytet të tërë, dhe "
+                   "çfarë ndryshon kur pushon së bëri këtë.",
+        "standfirst": "Për dikë që shërben tetë rrugë dhe vazhdon t'i "
+                      "ofrojnë një plan për dy milionë veta.",
+        "description": "SEO në Milano për një biznes lagjeje: pse qyteti "
+                       "ndahet në zona, cili gabim kushton më shumë, dhe kur "
+                       "jemi zgjedhja e gabuar.",
+        "og_desc": "Shërben tetë rrugë. Dikush të shiti një plan për dy "
+                   "milionë veta.",
+
+        "body": [
+            ("Qyteti thyhet në zona", [
+                "<p>Kërko nga Isola dhe merr Isolën. Kërko nga Citta Studi "
+                "dhe merr Citta Studin. Për shumë biznese konkurrenca e "
+                "vërtetë nuk është gjithë Milano, janë gjashtë a shtatë "
+                "vendet brenda të njëjtës ecje.</p>",
+                "<p>Kjo e ndryshon llogarinë brutalisht. Përballë gjithë "
+                "qytetit problemi yt është i stërmadh. Përballë rrezes sate "
+                "është një listë emrash që mund t'i hapësh një nga një "
+                "brenda një pasditeje.</p>",
+            ]),
+            ("Gabimi që kushton më shumë", [
+                "<p>Të blesh ambicie mbarëqytetëse për një biznes lagjeje. "
+                "Shitet lehtë, sepse numri i madh duket si numri i duhur, "
+                "dhe raportet që vijnë pas janë plot njerëz që nuk do të "
+                "vijnë kurrë te ti.</p>",
+                "<p>Shenja është gjithmonë e njëjta: shifrat ngjiten dhe "
+                "telefoni jo. Kur ndodh kjo, problemi pothuajse kurrë nuk "
+                "është sa punë u bë, është kundër cilës rreze u bë.</p>",
+            ]),
+            ("Çfarë e fiton vërtet një lagje", [
+                "<p>Të njëjtat gjëra të mërzitshme, por të matura kundër "
+                "atyre gjashtë a shtatë emrave në vend të dy mijëve. Orare "
+                "të vërteta, foto të vendit të vërtetë, një çmim ose një "
+                "interval, dhe vlerësime të freskëta.</p>",
+                "<p>Ndryshimi është se këtu e di saktësisht kë duhet të "
+                "kalosh, dhe janë aq pak sa mund t'i shohësh të gjithë para "
+                "se të vendosësh çfarë të bësh të parën.</p>",
+            ]),
+            ("Kur jemi zgjedhja e gabuar", [
+                "<p>Nëse të duhet një fushatë kombëtare, një strukturë që "
+                "mban disa furnitorë, ose dikush që rri në mbledhje të "
+                "brendshme çdo javë. Nuk jemi ajo dhe nuk bëjmë sikur "
+                "jemi.</p>",
+                "<p>Dhe nëse klientët e tu nuk janë të këtushëm. Kush shet "
+                "në gjithë Italinë, ose rron me turistë kalimtarë, po shikon "
+                "levën e gabuar, dhe preferojmë ta themi tani se pas tre "
+                "muajsh pune.</p>",
+            ]),
+            ("Çfarë mund të bëjmë që një studio në distancë nuk e bën", [
+                "<p>Të vijmë. Milano është gjysmë ore me tren nga Pavia, "
+                "prandaj një takim atje është diçka që "
+                "organizohet dhe jo një shprehje mirësjelljeje. Nëse ndihmon "
+                "të shihemi, e bëjmë.</p>",
+                "<p>Klientë italianë nuk kemi ende, dhe është shkruar këtu "
+                "në vend që të ta lëmë ta zbulosh. Ata që kemi janë mbi këtë "
+                "faqe me emër, me atë që ndryshoi për secilin.</p>",
+            ]),
+        ],
+        "payoff": "Na thuaj zonën tënde dhe kë e quan konkurrent, dhe të "
+                  "themi sa janë vërtet dhe çfarë i mban mbi ty.",
+        "faq": [
+            ("A mund të pozicionohet një biznes i vogël në Milano?",
+             "Brenda rrezes së vet po, dhe shpesh më lehtë se në një qytet "
+             "të vogël, sepse fqinjët janë pak dhe pothuajse asnjëri nuk e "
+             "ka plotësuar skedën si duhet. Përgjatë gjithë qytetit është "
+             "pyetje tjetër dhe përgjigjja zakonisht është jo."),
+            ("Si ta kuptoj cila është rrezja ime?",
+             "Shih nga vijnë klientët që ke tashmë. Nëse pothuajse të gjithë "
+             "vijnë në këmbë ose dy stacione metroje larg, ajo është rrezja, "
+             "dhe pjesa tjetër e qytetit është publik që po e paguan dhe nuk "
+             "e shërben dot."),
+            ("A nuk jeni shumë të vegjël për këtë qytet?",
+             "Për disa punë po, dhe e themi që në fillim. Për një dyqan, një "
+             "studio ose një lokal që do të gjendet në zonën e vet, madhësia "
+             "nuk është ajo që duhet: duhet dikush që e bën punën dhe "
+             "përgjigjet."),
+            ("A mund të takohemi para se të vendosim?",
+             "Po, dhe kjo është arsyeja pse ekziston kjo faqe. Një kafe nuk "
+             "na detyron asnjërin dhe sqaron brenda njëzet minutash atë që "
+             "një propozim me shkrim nuk e sqaron në dhjetë faqe."),
+            ("Si krahasohet kostoja me një agjenci të këtushme?",
+             "Më e ulët, por nuk është arsyeja për të zgjedhur. Arsyeja "
+             "është se flet me atë që e bën punën. Nëse çmimi është e vetmja "
+             "gjë që ka rëndësi, ka opsione më të lira se ne dhe do t'i "
+             "gjesh."),
+        ],
+        "related": [("/seo/", "SEO dhe kërkim lokal"),
+                    ("/blog/seo-pavia/", "SEO në Pavia")],
+    },
+
 ]
 
 # /blog/, the index over those records. The soft wraps are placed for this text

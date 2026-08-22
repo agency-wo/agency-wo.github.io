@@ -4704,6 +4704,108 @@ POSTS = [
                     ("/start/", "Un audit gratuito")],
     },
 
+    {
+        "slug": "seo-milano",
+        "src": "fb779ad0",
+        "date": "2026-08-22",
+        "updated": "2026-08-22",
+        "topic": "Ricerca locale",
+        "work": None,
+        "service": ("/seo/", "SEO e ricerca locale"),
+
+        "title": "SEO a Milano",
+        "h1": "Milano non è un mercato. Sono quaranta.",
+        "summary": "Perché un'attività di quartiere paga per una città "
+                   "intera, e cosa cambia quando smetti di farlo.",
+        "standfirst": "Per chi serve otto strade e si sente proporre un "
+                      "piano per due milioni di persone.",
+        "description": "SEO a Milano per un'attività di quartiere: perché la "
+                       "città si divide in zone, quale errore costa di più, "
+                       "e quando siamo la scelta sbagliata.",
+        "og_desc": "Servi otto strade. Ti hanno venduto un piano per due "
+                   "milioni di persone.",
+
+        "body": [
+            ("La città si spezza in zone", [
+                "<p>Chi cerca dall'Isola vede l'Isola. Chi cerca da Città "
+                "Studi vede Città Studi. Per moltissime attività la "
+                "concorrenza vera non è tutta Milano: sono i sei o sette "
+                "posti che stanno nello stesso raggio a piedi.</p>",
+                "<p>Questo cambia il conto in modo brutale. Contro tutta la "
+                "città il tuo problema è enorme. Contro il tuo raggio è una "
+                "lista di nomi che puoi aprire uno per uno in un "
+                "pomeriggio.</p>",
+            ]),
+            ("L'errore che costa di più", [
+                "<p>Comprare ambizione cittadina per un'attività di "
+                "quartiere. Si vende bene perché il numero grande sembra il "
+                "numero giusto, e i report che arrivano dopo sono pieni di "
+                "persone che non verranno mai da te.</p>",
+                "<p>La spia è sempre la stessa: le cifre salgono e il "
+                "telefono no. Quando succede, quasi mai il problema è quanto "
+                "lavoro è stato fatto, è su che raggio è stato fatto.</p>",
+            ]),
+            ("Cosa vince davvero un quartiere", [
+                "<p>Le solite cose noiose, ma misurate contro quei sei o "
+                "sette nomi invece che contro duemila. Orari veri, foto del "
+                "posto vero, un prezzo o una fascia, e recensioni "
+                "recenti.</p>",
+                "<p>La differenza è che qui sai esattamente chi devi "
+                "superare, e sono abbastanza pochi da poterli guardare tutti "
+                "prima di decidere cosa fare per primo.</p>",
+            ]),
+            ("Quando siamo la scelta sbagliata", [
+                "<p>Se ti serve una campagna nazionale, una struttura che "
+                "regge più fornitori, o qualcuno che sieda in riunioni "
+                "interne ogni settimana. Non lo siamo e non fingiamo di "
+                "esserlo.</p>",
+                "<p>E se i tuoi clienti non sono di qui. Chi vende in tutta "
+                "Italia, o campa di turisti di passaggio, sta guardando la "
+                "leva sbagliata, e preferiamo dirtelo prima che dopo tre "
+                "mesi di lavoro.</p>",
+            ]),
+            ("Cosa possiamo fare che uno studio a distanza non fa", [
+                "<p>Venire. Milano è mezz'ora di treno da Pavia, quindi un "
+                "incontro lì è una cosa che si organizza e "
+                "non una formula di cortesia. Se serve vedersi, si fa.</p>",
+                "<p>Clienti italiani non ne abbiamo ancora, e lo scriviamo "
+                "qui invece di lasciartelo scoprire. Quelli che abbiamo sono "
+                "su questo sito con nome e cognome e con quello che è "
+                "cambiato per ognuno.</p>",
+            ]),
+        ],
+        "payoff": "Dicci in che zona sei e chi consideri concorrente, e ti "
+                  "diciamo quanti sono davvero e cosa li tiene sopra.",
+        "faq": [
+            ("Un'attività piccola può posizionarsi a Milano?",
+             "Nel suo raggio sì, e spesso più facilmente che in una città "
+             "piccola, perché i vicini sono pochi e quasi nessuno ha "
+             "compilato la scheda per bene. Sulla città intera è un'altra "
+             "domanda e la risposta di solito è no."),
+            ("Come faccio a sapere qual è il mio raggio?",
+             "Guarda da dove arrivano i clienti che hai già. Se quasi tutti "
+             "vengono a piedi o con due fermate di metropolitana, quello è "
+             "il raggio, e tutto il resto della città è pubblico che stai "
+             "pagando per niente."),
+            ("Non siete troppo piccoli per questa città?",
+             "Per certi lavori sì, e lo diciamo prima. Per un negozio, uno "
+             "studio o un locale che vuole essere trovato nella sua zona, la "
+             "dimensione non serve: serve che qualcuno faccia le cose e "
+             "risponda."),
+            ("Possiamo incontrarci prima di decidere?",
+             "Sì, ed è il motivo per cui questa pagina esiste. Un caffè non "
+             "impegna nessuno dei due e chiarisce in venti minuti quello che "
+             "una proposta scritta non chiarisce in dieci pagine."),
+            ("Quanto costa rispetto a un'agenzia di qui?",
+             "Meno, ma non è il motivo per cui dovresti scegliere. Il motivo "
+             "è che parli con chi fa il lavoro. Se il prezzo è l'unica cosa "
+             "che conta, ci sono opzioni più economiche di noi e le "
+             "troverai."),
+        ],
+        "related": [("/seo/", "SEO e ricerca locale"),
+                    ("/blog/seo-pavia/", "SEO a Pavia")],
+    },
+
 ]
 
 # /blog/, the index over those records. The soft wraps are placed for this text

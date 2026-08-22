@@ -4609,6 +4609,110 @@ POSTS = [
                     ("/start/", "A free audit")],
     },
 
+    {
+        "slug": "seo-milano",
+        "date": "2026-08-22",
+        "updated": "2026-08-22",
+        "topic": "Local search",
+        "work": None,
+        "service": ("/seo/", "SEO and local search"),
+
+        "title": "SEO in Milan",
+        "h1": "Milan is not one market. It is forty.",
+        "summary": "Why a neighbourhood business pays for a whole city, and "
+                   "what changes when it stops.",
+        "standfirst": "For somebody who serves eight streets and keeps being "
+                      "offered a plan for two million people.",
+        "description": "SEO in Milan for a neighbourhood business: why the "
+                       "city splits into zones, which mistake costs most, "
+                       "and when we are the wrong call.",
+        "og_desc": "You serve eight streets. Somebody sold you a plan for "
+                   "two million people.",
+
+        "body": [
+            ("The city breaks into zones", [
+                "<p>Search from Isola and you get Isola. Search from Citta "
+                "Studi and you get Citta Studi. For a great many businesses "
+                "the real competition is not all of Milan, it is the six or "
+                "seven places inside the same walk.</p>",
+                "<p>That changes the arithmetic brutally. Against the whole "
+                "city your problem is enormous. Against your own radius it "
+                "is a list of names you can open one by one in an "
+                "afternoon.</p>",
+            ]),
+            ("The mistake that costs most", [
+                "<p>Buying city-wide ambition for a neighbourhood business. "
+                "It sells easily, because the big number looks like the "
+                "right number, and the reports that follow are full of "
+                "people who are never going to come to you.</p>",
+                "<p>The symptom is always the same: the figures climb and "
+                "the phone does not. When that happens the problem is almost "
+                "never how much work was done, it is what radius it was done "
+                "against.</p>",
+            ]),
+            ("What actually wins a neighbourhood", [
+                "<p>The same dull things, but measured against those six or "
+                "seven names instead of against two thousand. Real hours, "
+                "photographs of the real place, a price or a range, and "
+                "recent reviews.</p>",
+                "<p>The difference is that here you know exactly who you "
+                "have to pass, and there are few enough of them to look at "
+                "all of them before deciding what to do first.</p>",
+            ]),
+            ("When we are the wrong call", [
+                "<p>If you need a national campaign, an operation that can "
+                "hold several suppliers, or somebody sitting in internal "
+                "meetings every week. We are not that and we do not pretend "
+                "to be.</p>",
+                "<p>And if your customers are not from here. Anybody selling "
+                "across the country, or living off passing tourists, is "
+                "looking at the wrong lever, and we would rather say so now "
+                "than after three months of work.</p>",
+            ]),
+            ("What we can do that a remote studio cannot", [
+                "<p>Turn up. Milan is half an hour by train from Pavia, so a "
+                "meeting there is something we arrange rather "
+                "than a polite phrase. If seeing each other helps, we do "
+                "it.</p>",
+                "<p>We have no Italian clients yet, and it is written here "
+                "rather than left for you to discover. The ones we do have "
+                "are on this site by name, with what changed for each of "
+                "them.</p>",
+            ]),
+        ],
+        "payoff": "Tell us your zone and who you count as a competitor, and "
+                  "we will tell you how many there really are and what keeps "
+                  "them above you.",
+        "faq": [
+            ("Can a small business rank in Milan?",
+             "Inside its own radius yes, and often more easily than in a "
+             "small town, because the neighbours are few and almost none of "
+             "them has filled the profile in properly. Across the whole city "
+             "is a different question and the answer is usually no."),
+            ("How do I work out what my radius is?",
+             "Look at where the customers you already have come from. If "
+             "nearly all of them arrive on foot or two metro stops away, "
+             "that is the radius, and the rest of the city is an audience "
+             "you are paying for and cannot serve."),
+            ("Are you not too small for this city?",
+             "For some work yes, and we say so first. For a shop, a practice "
+             "or a place that wants to be found in its own area, size is not "
+             "what is needed: what is needed is somebody who does the work "
+             "and answers."),
+            ("Can we meet before deciding anything?",
+             "Yes, and it is the reason this page exists. A coffee commits "
+             "neither of us and settles in twenty minutes what a written "
+             "proposal does not settle in ten pages."),
+            ("How does the cost compare with an agency here?",
+             "Lower, but that is not the reason to choose. The reason is "
+             "that you talk to whoever does the work. If price is the only "
+             "thing that matters there are cheaper options than us and you "
+             "will find them."),
+        ],
+        "related": [("/seo/", "SEO and local search"),
+                    ("/blog/seo-pavia/", "SEO in Pavia")],
+    },
+
 ]
 
 # /blog/, the index over those records. It is a page and a page's copy is copy,
