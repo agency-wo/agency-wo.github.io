@@ -49,6 +49,13 @@ broken:
 4. **Caching -> Cache Rules**: for `/assets/*`, `/css/*` and `/js/*`, set
    Browser TTL to a year. Leave HTML alone so a deploy is visible immediately.
 
+   This is only safe because every one of those URLs now carries `?v=<hash of
+   the file>`, added on 2026-08-22. For one day it was not: the stylesheet was
+   linked unversioned and cached for a year, so a CSS fix shipped that day
+   would never have reached anybody who had already visited. If you ever add
+   an asset to the markup by hand, use `shell.stamped()` rather than a bare
+   path, or it inherits the same trap.
+
 Then check it landed, because a rule that was saved is not the same as a header
 that arrives:
 

@@ -12,6 +12,7 @@ No em-dashes anywhere. The arrow is an inline SVG because Archivo has no
 U+2197, and because a drawn arrow beats a font-dependent one.
 """
 import datetime
+import hashlib
 import io
 import os
 import re
@@ -178,6 +179,30 @@ def og_image(lang):
     goes through here, so a fourth language failing this lookup fails loudly
     with the language in the traceback, not silently with the English card."""
     return OG_IMAGE[lang]
+
+
+def stamped(path):
+    """A same-origin asset path with ?v=<8 hex of its own bytes>.
+
+    Cloudflare serves /css/* and /js/* with Cache-Control: max-age=31536000,
+    set deliberately on 2026-08-22 and correct for a file whose NAME changes
+    when its bytes do. These files never change name. Without a version in the
+    URL, everybody who has already visited keeps today's stylesheet until 2027
+    and every future CSS fix is invisible to exactly the people who came back.
+    Found by checking the response after shipping a layout fix, not before.
+
+    A query rather than a fingerprinted filename because Cloudflare caches on
+    the full URL including the query, GitHub Pages needs no rewrite rule for
+    it, and nothing in this repo has to learn a new file layout.
+
+    It also fails loudly on a missing file, so this replaces the existence
+    assert that asset() does rather than sitting beside it.
+    """
+    full = os.path.join(ROOT, path.lstrip("/"))
+    assert os.path.exists(full), (
+        path + " is named in the markup and is not in the repo")
+    with io.open(full, "rb") as fh:
+        return path + "?v=" + hashlib.sha1(fh.read()).hexdigest()[:8]
 
 
 def asset(path):
@@ -637,9 +662,9 @@ def head(page, lang):
 
   <link rel="preload" href="/assets/fonts/apfel-mittel.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/tokens.css">
-  <link rel="stylesheet" href="/css/fonts.css">
-  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="{stamped("/css/tokens.css")}">
+  <link rel="stylesheet" href="{stamped("/css/fonts.css")}">
+  <link rel="stylesheet" href="{stamped("/css/main.css")}">
 
 {ld}</head>
 <body>
@@ -929,7 +954,7 @@ def footer(lang, page_url=None, cta_heading=None, cta_note=None):
     </div>
   </div>
 
-{whatsapp(lang)}  <script src="/js/main.js" defer></script>
+{whatsapp(lang)}  <script src="{stamped("/js/main.js")}" defer></script>
 </body>
 </html>
 '''
