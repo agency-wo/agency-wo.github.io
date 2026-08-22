@@ -4555,6 +4555,109 @@ POSTS = [
                     ("/start/", "Një auditim falas")],
     },
 
+    {
+        "slug": "seo-pavia",
+        "src": "dec59fcb",
+        "date": "2026-08-22",
+        "updated": "2026-08-22",
+        "topic": "Kërkim lokal",
+        "work": None,
+        "service": ("/seo/", "SEO dhe kërkim lokal"),
+
+        "title": "SEO në Pavia",
+        "h1": "Milano është 35 kilometra larg, dhe problemi është i gjithi "
+              "aty.",
+        "summary": "Ku ikën kërkesa vendase, pse agjencitë e qytetit të madh "
+                   "kushtojnë sa ai qytet, dhe ku ndalet rrjedhja.",
+        "standfirst": "Për një biznes në Pavia që i sheh klientët të "
+                      "kërkojnë këtu dhe pastaj të blejnë diku tjetër.",
+        "description": "SEO në Pavia: pse kërkesa vendase rrëshqet drejt "
+                       "Milanos, ku ndalet, dhe çfarë mund të bëjë një "
+                       "biznes i qytetit pa paguar çmimet e kryeqendrës.",
+        "og_desc": "Njerëzit kërkojnë këtu dhe blejnë në Milano. Kërkimi "
+                   "lokal është aty ku ndalet ajo rrjedhje.",
+
+        "body": [
+            ("Kërkesa rrëshqet drejt veriut", [
+                "<p>Dikush në Pavia kërkon një gjë, nuk gjen asgjë bindëse "
+                "afër, dhe gjysmë ore më vonë e blen në Milano. Kjo nuk "
+                "është përtaci. Rezultati vendas nuk i dha asnjë arsye për "
+                "të mbetur.</p>",
+                "<p>Ndërkohë agjencitë e qytetit të madh bëjnë oferta për "
+                "një treg të kësaj madhësie me çmimet e një tregu disa herë "
+                "më të madh, prandaj biznesi i këtushëm shtrëngohet nga të "
+                "dyja anët njëherësh.</p>",
+            ]),
+            ("Ku ndalet vërtet rrjedhja", [
+                "<p>Dikujt që kërkon duke qëndruar në Pavia i shfaqet Pavia. "
+                "Ky është avantazh strukturor dhe jo taktikë, dhe të takon "
+                "ty e jo agjencisë në Milano që po provon të ta shesë.</p>",
+                "<p>Qëllimi nuk është të dalësh i pari për një fjalë të "
+                "gjerë. Është të kapësh dikë brenda njëzet minutave kur ende "
+                "po vendos nëse të udhëtojë, dhe ajo dritare fitohet me "
+                "gjëra të mërzitshme: orare të vërteta, një çmim, dhe një "
+                "numër ku përgjigjet dikush.</p>",
+            ]),
+            ("Popullsia këtu ndryshon gjatë vitit", [
+                "<p>Ky është qytet universitar, dhe kjo do të thotë më shumë "
+                "se sa që ka studentë. Do të thotë se një pjesë e klientelës "
+                "së shumë bizneseve mbërrin në vjeshtë, zhduket në korrik, "
+                "dhe rinis nga e para me njerëz të tjerë.</p>",
+                "<p>Kush i shet asaj pjese ka një publik që nuk e njeh dhe "
+                "që i kërkon të gjitha nga e para. Për ata ti ekziston vetëm "
+                "nëse gjendesh, sepse nuk kanë kë të pyesin.</p>",
+            ]),
+            ("Me çfarë konkurron vërtet brenda qytetit", [
+                "<p>Hap faqet e konkurrentëve të tu në Pavia. Një pjesë e "
+                "mirë janë ndërtuar vite më parë dhe nuk janë prekur që "
+                "atëherë, dhe faqja e tyre në Facebook është më e "
+                "përditësuar se faqja e internetit.</p>",
+                "<p>Kjo do të thotë se hendeku nuk mbyllet me diçka të "
+                "sofistikuar. Mbyllet me një faqe për çdo gjë që shet "
+                "vërtet, e shkruar ashtu si do ta shpjegoje me zë.</p>",
+            ]),
+            ("Çfarë nuk kemi ende", [
+                "<p>Klientë italianë. Asnjë deri tani, dhe ta themi këtu "
+                "është më e dobishme se sa ta zbulosh më vonë: agjencitë që "
+                "konkurrojnë për këtë faqe do të shkruajnë të gjitha për "
+                "dekada përvoje, dhe ti nuk ke asnjë mënyrë për të "
+                "verifikuar qoftë edhe një prej atyre pretendimeve.</p>",
+                "<p>Ajo që kemi janë katër klientë me emër, secili me një "
+                "faqe këtu që thotë çfarë ndryshoi dhe çfarë jo, puna e "
+                "dorëzuar në italisht, dhe një numër ku përgjigjet dikush. "
+                "Nëse do të takohemi në Pavia, kërkoje dhe e "
+                "organizojmë.</p>",
+            ]),
+        ],
+        "payoff": "Na dërgo adresën e faqes dhe e lexojmë në italisht, "
+                  "pastaj të themi çfarë do të ndryshonim dhe në çfarë "
+                  "radhe.",
+        "faq": [
+            ("A e keni selinë në Pavia?",
+             "Studioja është në Durrës, në Shqipëri, dhe puna për Italinë "
+             "bëhet në italisht. Nëse të duhet të takohemi personalisht në "
+             "Pavia, kërkoje dhe e organizojmë."),
+            ("A keni klientë italianë?",
+             "Jo, jo ende, dhe të bënim sikur po do të ishte fjalia e parë e "
+             "pandershme e kësaj faqeje. Klientët që kemi janë me emër mbi "
+             "këtë faqe, me atë që ndryshoi për secilin."),
+            ("Pse të mos marrim dikë nga Milano?",
+             "Mundesh, dhe për disa gjëra ka kuptim. Ajo që paguan është një "
+             "strukturë e përmasuar për klientë shumë më të mëdhenj se ti, "
+             "dhe puna jote shkon në fund të një radhe të ndërtuar për ata."),
+            ("Puna shkruhet në italisht apo përkthehet?",
+             "Shkruhet në italisht. Një faqe e përkthyer tradhtohet që në "
+             "rreshtin e dytë dhe klientët e tu e vënë re para Google, që "
+             "është arsyeja e vërtetë pse ka rëndësi."),
+            ("Nga nis?",
+             "Nga një auditim falas i faqes që ke, që thotë çfarë do të "
+             "ndryshonim dhe në çfarë radhe. Nuk të duhet të vendosësh gjë "
+             "më parë dhe nuk të detyron në asgjë."),
+        ],
+        "related": [("/seo/", "SEO dhe kërkim lokal"),
+                    ("/start/", "Një auditim falas")],
+    },
+
 ]
 
 # /blog/, the index over those records. The soft wraps are placed for this text

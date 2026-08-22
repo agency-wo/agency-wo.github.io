@@ -217,8 +217,15 @@ def jsonld(svc, lang):
          # writes Durres in prose: .build/citations.md exists to keep every
          # directory listing matching the schema rather than the copy, and a
          # second spelling here would split the entity it is protecting.
+         # Pavia joins the 2 Albanian cities on 2026-08-23. It is a claim about
+         # where the service is offered rather than about where the studio
+         # sits, which is the only reading areaServed has, and the org node has
+         # claimed IT since launch. The page for it says plainly that there are
+         # no Italian clients yet; this field would be the wrong place to say
+         # something the prose contradicts.
          "areaServed": [{"@type": "City", "name": "Durres"},
                         {"@type": "City", "name": "Tirana"},
+                        {"@type": "City", "name": "Pavia"},
                         "AL", "IT", "Worldwide"],
          "availableLanguage": ["en", "it", "sq"]},
         # inLanguage goes HERE and not on the Service above it, and that is a

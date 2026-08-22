@@ -4604,6 +4604,106 @@ POSTS = [
                     ("/start/", "Un audit gratuito")],
     },
 
+    {
+        "slug": "seo-pavia",
+        "src": "dec59fcb",
+        "date": "2026-08-22",
+        "updated": "2026-08-22",
+        "topic": "Ricerca locale",
+        "work": None,
+        "service": ("/seo/", "SEO e ricerca locale"),
+
+        "title": "SEO a Pavia",
+        "h1": "Milano è a 35 chilometri, e il problema è tutto lì.",
+        "summary": "Dove se ne va la domanda locale, perché le agenzie della "
+                   "città accanto costano quanto quella città, e dove si "
+                   "ferma la perdita.",
+        "standfirst": "Per un'attività di Pavia che vede i clienti cercare "
+                      "qui e poi comprare altrove.",
+        "description": "SEO a Pavia: perché la domanda locale scivola verso "
+                       "Milano, dove si ferma, e cosa può fare un'attività "
+                       "della città senza pagare i prezzi del capoluogo.",
+        "og_desc": "La gente cerca qui e compra a Milano. La ricerca locale "
+                   "è dove quella perdita si ferma.",
+
+        "body": [
+            ("La domanda scivola verso nord", [
+                "<p>Una persona a Pavia cerca una cosa, non trova niente di "
+                "convincente vicino, e mezz'ora dopo la compra a Milano. Non "
+                "è pigrizia: è che il risultato locale non gli ha dato un "
+                "motivo per restare.</p>",
+                "<p>Nel frattempo le agenzie del capoluogo fanno preventivi "
+                "per un mercato delle dimensioni di questo con i prezzi di "
+                "uno molto più grande, quindi l'attività di qui viene "
+                "stretta da due parti insieme.</p>",
+            ]),
+            ("Dove la perdita si ferma davvero", [
+                "<p>Chi cerca stando a Pavia vede risultati di Pavia. È un "
+                "vantaggio strutturale, non una tattica, e ce l'hai tu e non "
+                "l'agenzia di Milano che sta provando a vendertelo.</p>",
+                "<p>Il punto non è arrivare primo su una parola larga. È "
+                "intercettare qualcuno nei venti minuti in cui sta ancora "
+                "decidendo se muoversi, ed è una finestra che si vince con "
+                "informazioni banali: orari veri, un prezzo, e un numero a "
+                "cui risponde qualcuno.</p>",
+            ]),
+            ("Qui la popolazione cambia durante l'anno", [
+                "<p>Questa è una città universitaria, e non vuol dire solo "
+                "che ci sono studenti. Vuol dire che una parte della "
+                "clientela di molte attività arriva in autunno, sparisce a "
+                "luglio e ricomincia da capo con persone diverse.</p>",
+                "<p>Chi vende a quella parte ha un pubblico che non ti "
+                "conosce e che cerca tutto da zero. Per loro esisti solo se "
+                "ti trovano, perché non hanno nessuno a cui chiedere.</p>",
+            ]),
+            ("Con cosa competi davvero in città", [
+                "<p>Apri i siti dei tuoi concorrenti di Pavia. Buona parte è "
+                "stata costruita anni fa e non toccata da allora, e la loro "
+                "pagina Facebook è più aggiornata del sito.</p>",
+                "<p>Vuol dire che la distanza non si colma con qualcosa di "
+                "sofisticato. Si colma con una pagina per ogni cosa che "
+                "vendi davvero, scritta come la spiegheresti a voce.</p>",
+            ]),
+            ("Cosa non abbiamo ancora", [
+                "<p>Clienti italiani. Nessuno, per ora, e dirlo qui è più "
+                "utile che scoprirlo dopo: le agenzie che competono per "
+                "questa pagina scriveranno tutte di decenni di esperienza, e "
+                "tu non hai modo di verificarne nessuno.</p>",
+                "<p>Quello che abbiamo sono quattro clienti con nome e "
+                "cognome, ognuno con una pagina qui che dice cosa è cambiato "
+                "e cosa no, il lavoro consegnato in italiano, e un numero "
+                "che risponde. Se vuoi vederci di persona a Pavia, chiedilo "
+                "e lo organizziamo.</p>",
+            ]),
+        ],
+        "payoff": "Mandaci l'indirizzo del sito e lo leggiamo in italiano, "
+                  "poi ti diciamo cosa cambieremmo e in che ordine.",
+        "faq": [
+            ("Avete sede a Pavia?",
+             "Lo studio è a Durazzo, in Albania, e il lavoro per l'Italia si "
+             "fa in italiano. Se ti serve vederci di persona a Pavia, "
+             "chiedilo e lo organizziamo."),
+            ("Avete clienti italiani?",
+             "No, non ancora, e far finta di sì sarebbe la prima frase "
+             "disonesta di questa pagina. I clienti che abbiamo sono "
+             "nominati sul sito con quello che è cambiato per ognuno."),
+            ("Perché non prendere qualcuno di Milano?",
+             "Puoi, e per certe cose ha senso. Quello che paghi però è una "
+             "struttura dimensionata su clienti molto più grandi di te, e il "
+             "tuo lavoro finisce in fondo a una coda fatta per loro."),
+            ("Il lavoro lo fate in italiano o tradotto?",
+             "Scritto in italiano. Una pagina tradotta si sente alla seconda "
+             "riga e i tuoi clienti se ne accorgono prima di Google, che è "
+             "il motivo vero per cui conta."),
+            ("Da dove si comincia?",
+             "Da un audit gratuito del sito che hai, che dice cosa "
+             "cambieremmo e in che ordine. Non serve deciderlo prima e non "
+             "impegna a niente."),
+        ],
+        "related": [("/seo/", "SEO e ricerca locale"),
+                    ("/start/", "Un audit gratuito")],
+    },
+
 ]
 
 # /blog/, the index over those records. The soft wraps are placed for this text

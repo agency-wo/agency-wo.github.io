@@ -4508,6 +4508,107 @@ POSTS = [
                     ("/start/", "A free audit")],
     },
 
+    {
+        "slug": "seo-pavia",
+        "date": "2026-08-22",
+        "updated": "2026-08-22",
+        "topic": "Local search",
+        "work": None,
+        "service": ("/seo/", "SEO and local search"),
+
+        "title": "SEO in Pavia",
+        "h1": "Milan is 35 kilometres away, and that is the whole problem.",
+        "summary": "Where the local demand goes, why agencies from the "
+                   "bigger city cost what that city costs, and where the "
+                   "leak is stopped.",
+        "standfirst": "For a Pavia business watching customers search here "
+                      "and then buy somewhere else.",
+        "description": "SEO in Pavia: why local demand slides north to "
+                       "Milan, where it can be stopped, and what a business "
+                       "here can do without paying capital city prices.",
+        "og_desc": "People search here and buy in Milan. Local search is "
+                   "where that leak stops.",
+
+        "body": [
+            ("The demand slides north", [
+                "<p>Somebody in Pavia searches for a thing, finds nothing "
+                "convincing nearby, and buys it in Milan half an hour later. "
+                "That is not laziness. The local result gave them no reason "
+                "to stay.</p>",
+                "<p>Meanwhile agencies from the bigger city quote for a "
+                "market this size at prices set by one several times larger, "
+                "so a business here is squeezed from both directions at "
+                "once.</p>",
+            ]),
+            ("Where the leak actually stops", [
+                "<p>Somebody searching while standing in Pavia is shown "
+                "Pavia. That is a structural advantage rather than a tactic, "
+                "and it belongs to you rather than to the agency in Milan "
+                "trying to sell it to you.</p>",
+                "<p>The point is not to come first for a wide word. It is to "
+                "catch somebody in the twenty minutes while they are still "
+                "deciding whether to travel, and that window is won with "
+                "dull things: real opening hours, a price, and a number "
+                "somebody answers.</p>",
+            ]),
+            ("The population here changes during the year", [
+                "<p>This is a university city, and that means more than "
+                "students being around. It means part of the customer base "
+                "for a lot of businesses arrives in autumn, disappears in "
+                "July, and starts again with different people.</p>",
+                "<p>Whoever sells to that part has an audience that does not "
+                "know them and looks everything up from scratch. To those "
+                "customers you exist only if you are findable, because they "
+                "have nobody to ask.</p>",
+            ]),
+            ("What you are really competing with in town", [
+                "<p>Open your Pavia competitors' sites. A good share were "
+                "built years ago and have not been touched since, and their "
+                "Facebook page is more current than the website is.</p>",
+                "<p>Which means the gap is not closed with anything "
+                "sophisticated. It is closed with one page for each thing "
+                "you actually sell, written the way you would explain it out "
+                "loud.</p>",
+            ]),
+            ("What we do not have yet", [
+                "<p>Italian clients. None so far, and saying it here is more "
+                "use than you finding out later: the agencies competing for "
+                "this page will all write about decades of experience, and "
+                "you have no way to check a single one of those claims.</p>",
+                "<p>What we do have is four named clients, each with a page "
+                "here saying what changed and what did not, the work "
+                "delivered in Italian, and a number that gets answered. If "
+                "you want to meet in Pavia, ask and we will arrange it.</p>",
+            ]),
+        ],
+        "payoff": "Send us the site address and we will read it in Italian, "
+                  "then tell you what we would change and in what order.",
+        "faq": [
+            ("Are you based in Pavia?",
+             "The studio is in Durres, in Albania, and the work for Italy is "
+             "done in Italian. If you need to meet in person in Pavia, ask "
+             "and we will arrange it."),
+            ("Do you have Italian clients?",
+             "No, not yet, and pretending otherwise would be the first "
+             "dishonest sentence on this page. The clients we do have are "
+             "named on this site with what changed for each of them."),
+            ("Why not hire somebody in Milan?",
+             "You can, and for some things it makes sense. What you pay for "
+             "is an operation sized for clients much larger than you, and "
+             "your work goes to the back of a queue built for them."),
+            ("Is the work written in Italian or translated?",
+             "Written in Italian. A translated page gives itself away by the "
+             "second line and your customers notice before Google does, "
+             "which is the real reason it matters."),
+            ("Where does it start?",
+             "With a free audit of the site you have, saying what we would "
+             "change and in what order. You do not have to decide anything "
+             "first and it commits you to nothing."),
+        ],
+        "related": [("/seo/", "SEO and local search"),
+                    ("/start/", "A free audit")],
+    },
+
 ]
 
 # /blog/, the index over those records. It is a page and a page's copy is copy,
