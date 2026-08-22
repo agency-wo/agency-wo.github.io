@@ -55,6 +55,38 @@ that arrives:
     curl -sI https://minarankstudio.com/ | grep -i 'content-security\|server'
     curl -sI https://minarankstudio.com/assets/fonts/archivo-var.woff2 | grep -i cache
 
+## 3c. Turn off Cloudflare's managed robots.txt
+
+**Do this the same day as 3b.** Proxying the site turned on a Cloudflare
+default that rewrites `robots.txt` on the way out. The origin serves 507 bytes
+saying everyone is welcome; readers were served 2,343 bytes refusing nine
+crawlers by name, each with `Disallow: /`: Amazonbot, Applebot-Extended,
+Bytespider, CCBot, ClaudeBot, CloudflareBrowserRenderingCrawler,
+Google-Extended, GPTBot and meta-externalagent. It also stamps
+`Content-Signal: ai-train=no` onto the group that applies to everybody.
+
+Nothing is blocked at the edge, all of them still get 200, so this is invisible
+in the logs and invisible in the repository. It is only in the file they read
+first.
+
+For this site specifically that setting sells the opposite of the product. The
+first line of our own `robots.txt` is *"everyone is welcome, including AI
+crawlers. We are a GEO studio. Being read by answer engines is the entire
+point."*
+
+In the dashboard, on the **minarankstudio.com** zone, it lives under **AI Crawl
+Control** (older accounts show **Bots -> AI bots** or **Security -> Settings**).
+Turn off the managed `robots.txt` and any "block AI crawlers" toggle, then
+purge the cache.
+
+Verified by what arrives, not by what the dashboard claims:
+
+    curl -s https://minarankstudio.com/robots.txt | wc -c        # want 507, not 2343
+    curl -s https://minarankstudio.com/robots.txt | grep -c 'Disallow: /$'   # want 0
+
+`gen_launch` checks this on every build now and prints a line naming any agent
+the live file refuses that this repository welcomes.
+
 ## 4. Google Search Console
 
 Add minarankstudio.com as a DOMAIN property, not a URL prefix. Choose DNS

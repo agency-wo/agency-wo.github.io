@@ -479,6 +479,62 @@ def indexnow_ping(urls):
     print("IndexNow: pinged %d URL(s)" % sent)
 
 
+def robots_groups(body):
+    """robots.txt parsed the way a crawler reads it: [(agents, rules)].
+
+    A Disallow belongs to the User-agent lines directly above it and to
+    nothing else. That distinction did not matter while this file had one
+    author. It does now: the proxy in front of this site injects nine
+    named-agent blocks ahead of ours, each one ending Disallow: /, so a flat
+    search of the file for that shape reads somebody else's block as ours.
+    """
+    groups, agents, rules, seen_rule = [], set(), [], False
+    for raw in body.splitlines():
+        line = raw.split("#", 1)[0].strip()
+        if ":" not in line:
+            continue
+        field, value = line.split(":", 1)
+        field, value = field.strip().lower(), value.strip()
+        if field == "user-agent":
+            if seen_rule:                     # a rule line closed the last group
+                groups.append((agents, rules))
+                agents, rules, seen_rule = set(), [], False
+            agents.add(value.lower())
+        elif field in ("allow", "disallow"):
+            seen_rule = True
+            rules.append((field, value))
+    if agents:
+        groups.append((agents, rules))
+    return groups
+
+
+def blocks_everything(rules):
+    return any(f == "disallow" and v == "/" for f, v in rules)
+
+
+def report_injected_blocks(body):
+    """Name any agent the live file refuses that our own file welcomes.
+
+    Silent is the wrong default here. This studio sells being readable by
+    answer engines, its own robots.txt says so in the first line, and a proxy
+    that quietly answers otherwise contradicts the product without touching
+    the repository. Nothing on disk would ever show it.
+    """
+    ours = set()
+    for agents, rules in robots_groups(io.open("robots.txt", encoding="utf-8").read()):
+        if blocks_everything(rules):
+            ours |= agents
+    theirs = set()
+    for agents, rules in robots_groups(body):
+        if blocks_everything(rules):
+            theirs |= {a for a in agents if a != "*"}
+    injected = sorted(theirs - ours)
+    if injected:
+        print("robots.txt: the live file refuses %d agent(s) this repository "
+              "welcomes, so something between here and the reader is rewriting "
+              "it: %s" % (len(injected), ", ".join(injected)))
+
+
 def live_is_open():
     """Does the DEPLOYED robots.txt allow crawling right now?
 
@@ -501,9 +557,13 @@ def live_is_open():
         print("IndexNow: could not read the live robots.txt (%s), so nothing "
               "pinged. Re-run after the deploy" % e)
         return False
-    # The same bare block-everything shape check 30 matches, and nothing looser:
-    # "Disallow: /assets/proof/source/" is a line the OPEN file contains.
-    closed = re.search(r"^\s*Disallow:\s*/\s*$", body, re.M)
+    report_injected_blocks(body)
+    # Only the group a nameless crawler obeys. IndexNow submits to engines that
+    # have no group of their own here, so the * group is the one that decides,
+    # and "Disallow: /assets/proof/source/" is a line the OPEN file contains.
+    star = [r for agents, rules in robots_groups(body) if "*" in agents
+            for r in rules]
+    closed = blocks_everything(star)
     if closed:
         print("IndexNow: the live robots.txt is still closed, so nothing "
               "pinged. Push this build, then run gen_launch again")
