@@ -4660,7 +4660,7 @@ POSTS = [
 
     {
         "slug": "seo-milano",
-        "src": "fb779ad0",
+        "src": "ed388a23",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Kërkim lokal",
@@ -4719,8 +4719,8 @@ POSTS = [
                 "muajsh pune.</p>",
             ]),
             ("Çfarë mund të bëjmë që një studio në distancë nuk e bën", [
-                "<p>Të vijmë. Milano është gjysmë ore me tren nga Pavia, "
-                "prandaj një takim atje është diçka që "
+                "<p>Të vijmë. Një takim në Milano është diçka që "
+                ""
                 "organizohet dhe jo një shprehje mirësjelljeje. Nëse ndihmon "
                 "të shihemi, e bëjmë.</p>",
                 "<p>Klientë italianë nuk kemi ende, dhe është shkruar këtu "

@@ -4706,7 +4706,7 @@ POSTS = [
 
     {
         "slug": "seo-milano",
-        "src": "fb779ad0",
+        "src": "ed388a23",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Ricerca locale",
@@ -4765,8 +4765,8 @@ POSTS = [
                 "mesi di lavoro.</p>",
             ]),
             ("Cosa possiamo fare che uno studio a distanza non fa", [
-                "<p>Venire. Milano è mezz'ora di treno da Pavia, quindi un "
-                "incontro lì è una cosa che si organizza e "
+                "<p>Venire. Un incontro a Milano è una cosa che si organizza e "
+                ""
                 "non una formula di cortesia. Se serve vedersi, si fa.</p>",
                 "<p>Clienti italiani non ne abbiamo ancora, e lo scriviamo "
                 "qui invece di lasciartelo scoprire. Quelli che abbiamo sono "

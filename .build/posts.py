@@ -4670,8 +4670,8 @@ POSTS = [
                 "than after three months of work.</p>",
             ]),
             ("What we can do that a remote studio cannot", [
-                "<p>Turn up. Milan is half an hour by train from Pavia, so a "
-                "meeting there is something we arrange rather "
+                "<p>Turn up. A meeting in Milan is something we arrange rather "
+                ""
                 "than a polite phrase. If seeing each other helps, we do "
                 "it.</p>",
                 "<p>We have no Italian clients yet, and it is written here "
