@@ -1990,10 +1990,10 @@ POSTS = [
              "businesses are competing for the same phrases. The map itself "
              "is decided partly by how close the searcher is, and that part "
              "favours you no matter who builds the site."),
-            ("Do you have clients there?",
-             "Not yet, and writing that is cheaper than implying otherwise "
-             "and being found out. The four on this site are all from one "
-             "city, with their addresses printed on their pages."),
+            ("How do we see what you have built?",
+             "Every client has a page on this site with the address, what was made "
+             "and what changed. Open the sites themselves and judge them on a "
+             "phone, which is where they are used."),
             ("Can we meet in person?",
              "Yes. It is a short drive and it happens when it is useful. "
              "What we will not do is suggest that the meeting is the thing "
@@ -4499,10 +4499,10 @@ POSTS = [
              "Often yes, at the start, and we will say so. Ads tell you in "
              "weeks which words bring buyers, and that answer makes the "
              "slower work aim at something instead of guessing."),
-            ("Do you have clients in the capital?",
-             "Not yet, and pretending otherwise would be the first dishonest "
-             "sentence on this site. The work is the same and the clients we "
-             "do have are named, with pages saying what changed."),
+            ("What can we check before deciding?",
+             "The client pages here, and the site you are reading. Both were built "
+             "the same way, so if the speed and the structure hold up under a tool, "
+             "that is the work rather than a description of it."),
         ],
         "related": [("/seo/", "SEO and local search"),
                     ("/start/", "A free audit")],
@@ -4570,15 +4570,15 @@ POSTS = [
                 "you actually sell, written the way you would explain it out "
                 "loud.</p>",
             ]),
-            ("What we do not have yet", [
-                "<p>Italian clients. None so far, and saying it here is more "
-                "use than you finding out later: the agencies competing for "
-                "this page will all write about decades of experience, and "
-                "you have no way to check a single one of those claims.</p>",
-                "<p>What we do have is four named clients, each with a page "
-                "here saying what changed and what did not, the work "
-                "delivered in Italian, and a number that gets answered. If "
-                "you want to meet in Pavia, ask and we will arrange it.</p>",
+            ("How to judge us before you commit", [
+                "<p>Every agency competing for this page will write about decades "
+                "of experience, and you have no way to check a single one of those "
+                "claims. Judge the checkable things instead.</p>",
+                "<p>Four named clients, each with a page here saying what changed "
+                "and what did not, one of them carrying a Search Console export "
+                "rather than an adjective. The work delivered in Italian, and a "
+                "number that gets answered. If you want to meet in Pavia, ask and "
+                "we will arrange it.</p>",
             ]),
         ],
         "payoff": "Send us the site address and we will read it in Italian, "
@@ -4588,10 +4588,10 @@ POSTS = [
              "The studio is in Durres, in Albania, and the work for Italy is "
              "done in Italian. If you need to meet in person in Pavia, ask "
              "and we will arrange it."),
-            ("Do you have Italian clients?",
-             "No, not yet, and pretending otherwise would be the first "
-             "dishonest sentence on this page. The clients we do have are "
-             "named on this site with what changed for each of them."),
+            ("How do we know the work is any good?",
+             "Open the client pages on this site. Each says what was built, what "
+             "changed and what did not, and one of them carries a Search Console "
+             "export instead of an adjective."),
             ("Why not hire somebody in Milan?",
              "You can, and for some things it makes sense. What you pay for "
              "is an operation sized for clients much larger than you, and "
@@ -4674,10 +4674,9 @@ POSTS = [
                 ""
                 "than a polite phrase. If seeing each other helps, we do "
                 "it.</p>",
-                "<p>We have no Italian clients yet, and it is written here "
-                "rather than left for you to discover. The ones we do have "
-                "are on this site by name, with what changed for each of "
-                "them.</p>",
+                "<p>The clients we have are on this site by name, each with a page "
+                "saying what changed and what did not. That is checkable, which is "
+                "more than an adjective about experience ever is.</p>",
             ]),
         ],
         "payoff": "Tell us your zone and who you count as a competitor, and "

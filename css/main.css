@@ -779,6 +779,14 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
 a[href^="tel:"] { white-space: nowrap; }
 
 .faq { margin-top: var(--s-9); padding-block: 0; }
+/* Except on the homepage, where it is a SECTION among sections rather than a
+   block inside prose. Every other boundary on that page measures 0px, because
+   each section carries its own padding and none of them adds a margin; the FAQ
+   was opening a 96px hole under "Updated" that nothing else on the page does.
+   The .wrap child is the homepage's marker: gen_home passes wrap="wrap" to
+   faq_section() and the 3 doc pages pass nothing, so this cannot leak onto
+   them. Sibling padding instead of the margin, and the rhythm matches. */
+.faq:has(> .wrap) { margin-top: 0; padding-block: var(--pad-section); }
 .faq > h2 { margin-top: 0; }
 .faq-item { border-top: 1px solid var(--edge); padding-block: var(--s-5); max-width: 66ch; }
 .faq-item:last-child { border-bottom: 1px solid var(--edge); }
@@ -1317,6 +1325,7 @@ button.btn:disabled:hover { background: none; color: var(--ink); }
   .band-alt a { display: inline-block; padding-block: 4px; }
 
   .faq { margin-top: var(--s-8); }
+  .faq:has(> .wrap) { margin-top: 0; }
   .faq-item { padding-block: var(--s-4); }
   .faq .faq-q { margin-bottom: var(--s-2); }
 }

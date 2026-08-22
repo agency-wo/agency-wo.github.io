@@ -1952,7 +1952,7 @@ POSTS = [
 
     {
         "slug": "web-design-tirana",
-        "src": "e0f05b70",
+        "src": "18d9a54c",
         "date": "2026-08-21",
         "updated": "2026-08-21",
         "topic": "Faqe interneti",
@@ -2022,10 +2022,10 @@ POSTS = [
              "garojnë për të njëjtat fraza. Vetë harta varet pjesërisht nga "
              "sa afër është ai që kërkon, dhe ajo pjesë të favorizon kushdo "
              "që ta ndërtojë faqen."),
-            ("A keni klientë atje?",
-             "Jo ende, dhe ta shkruaj kushton më pak se ta lë të kuptohet "
-             "dhe të zbulohet pastaj. Të katërt në këtë faqe janë nga një "
-             "qytet i vetëm, me adresat e shtypura në faqet e tyre."),
+            ("Si i shohim gjërat që keni ndërtuar?",
+             "Çdo klient ka një faqe mbi këtë sajt me adresën, çfarë u bë dhe "
+             "çfarë ndryshoi. Hap vetë faqet dhe gjykoji nga telefoni, ku edhe "
+             "përdoren."),
             ("A mund të takohemi personalisht?",
              "Po. Është pak rrugë dhe bëhet kur është e dobishme. Ajo që nuk "
              "do ta bëjmë është të lëmë të kuptohet se takimi është ai që e "
@@ -4462,7 +4462,7 @@ POSTS = [
 
     {
         "slug": "seo-tirana",
-        "src": "4fa51bff",
+        "src": "c6852de1",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Kërkim lokal",
@@ -4546,10 +4546,10 @@ POSTS = [
              "Shpesh po, në fillim, dhe ta themi. Reklama të tregon brenda "
              "javësh cilat fjalë sjellin blerës, dhe ajo përgjigje e bën "
              "punën e ngadaltë të synojë diçka në vend që të hamendësojë."),
-            ("A keni klientë në kryeqytet?",
-             "Jo ende, dhe të bënim sikur po do të ishte fjalia e parë e "
-             "pandershme e kësaj faqeje. Puna është e njëjta dhe klientët që "
-             "kemi janë me emër, me faqe që thonë çfarë ndryshoi."),
+            ("Çfarë mund të kontrollojmë para se të vendosim?",
+             "Faqet e klientëve këtu, dhe faqja që po lexon. Janë ndërtuar në "
+             "të njëjtën mënyrë, prandaj nëse shpejtësia dhe struktura mbajnë "
+             "nën një mjet, ajo është puna dhe jo një përshkrim."),
         ],
         "related": [("/seo/", "SEO dhe kërkim lokal"),
                     ("/start/", "Një auditim falas")],
@@ -4557,7 +4557,7 @@ POSTS = [
 
     {
         "slug": "seo-pavia",
-        "src": "dec59fcb",
+        "src": "db967614",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Kërkim lokal",
@@ -4616,12 +4616,10 @@ POSTS = [
                 "sofistikuar. Mbyllet me një faqe për çdo gjë që shet "
                 "vërtet, e shkruar ashtu si do ta shpjegoje me zë.</p>",
             ]),
-            ("Çfarë nuk kemi ende", [
-                "<p>Klientë italianë. Asnjë deri tani, dhe ta themi këtu "
-                "është më e dobishme se sa ta zbulosh më vonë: agjencitë që "
-                "konkurrojnë për këtë faqe do të shkruajnë të gjitha për "
-                "dekada përvoje, dhe ti nuk ke asnjë mënyrë për të "
-                "verifikuar qoftë edhe një prej atyre pretendimeve.</p>",
+            ("Si të na gjykosh para se të angazhohesh", [
+                "<p>Çdo agjenci që konkurron për këtë faqe do të shkruajë për "
+                "dekada përvoje, dhe ti nuk ke asnjë mënyrë të verifikosh qoftë "
+                "edhe një prej tyre. Gjyko më mirë gjërat e verifikueshme.</p>",
                 "<p>Ajo që kemi janë katër klientë me emër, secili me një "
                 "faqe këtu që thotë çfarë ndryshoi dhe çfarë jo, puna e "
                 "dorëzuar në italisht, dhe një numër ku përgjigjet dikush. "
@@ -4637,10 +4635,10 @@ POSTS = [
              "Studioja është në Durrës, në Shqipëri, dhe puna për Italinë "
              "bëhet në italisht. Nëse të duhet të takohemi personalisht në "
              "Pavia, kërkoje dhe e organizojmë."),
-            ("A keni klientë italianë?",
-             "Jo, jo ende, dhe të bënim sikur po do të ishte fjalia e parë e "
-             "pandershme e kësaj faqeje. Klientët që kemi janë me emër mbi "
-             "këtë faqe, me atë që ndryshoi për secilin."),
+            ("Si e dimë se puna është e mirë?",
+             "Hap faqet e klientëve mbi këtë sajt. Secila thotë çfarë u ndërtua, "
+             "çfarë ndryshoi dhe çfarë jo, dhe njëra mban një eksport nga Search "
+             "Console në vend të një mbiemri."),
             ("Pse të mos marrim dikë nga Milano?",
              "Mundesh, dhe për disa gjëra ka kuptim. Ajo që paguan është një "
              "strukturë e përmasuar për klientë shumë më të mëdhenj se ti, "
@@ -4660,7 +4658,7 @@ POSTS = [
 
     {
         "slug": "seo-milano",
-        "src": "ed388a23",
+        "src": "e46f298c",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Kërkim lokal",
@@ -4723,9 +4721,10 @@ POSTS = [
                 ""
                 "organizohet dhe jo një shprehje mirësjelljeje. Nëse ndihmon "
                 "të shihemi, e bëjmë.</p>",
-                "<p>Klientë italianë nuk kemi ende, dhe është shkruar këtu "
-                "në vend që të ta lëmë ta zbulosh. Ata që kemi janë mbi këtë "
-                "faqe me emër, me atë që ndryshoi për secilin.</p>",
+                "<p>Klientët që kemi janë mbi këtë faqe me emër, secili me një "
+                "faqe që thotë çfarë ndryshoi dhe çfarë jo. Kjo është e "
+                "verifikueshme, që është më shumë se sa është ndonjëherë një "
+                "mbiemër për përvojën.</p>",
             ]),
         ],
         "payoff": "Na thuaj zonën tënde dhe kë e quan konkurrent, dhe të "

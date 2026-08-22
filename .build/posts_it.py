@@ -1969,7 +1969,7 @@ POSTS = [
 
     {
         "slug": "web-design-tirana",
-        "src": "e0f05b70",
+        "src": "18d9a54c",
         "date": "2026-08-21",
         "updated": "2026-08-21",
         "topic": "Siti web",
@@ -2038,10 +2038,10 @@ POSTS = [
              "si contendono le stesse frasi. La mappa invece dipende in "
              "parte da quanto è vicino chi cerca, e quella parte ti "
              "favorisce chiunque costruisca il sito."),
-            ("Avete clienti lì?",
-             "Non ancora, e scriverlo costa meno che lasciarlo intendere e "
-             "farsi scoprire. I quattro su questo sito sono tutti di una "
-             "sola città, con gli indirizzi stampati sulle loro pagine."),
+            ("Come vediamo quello che avete costruito?",
+             "Ogni cliente ha una pagina su questo sito con l’indirizzo, cosa è "
+             "stato fatto e cosa è cambiato. Apri i siti veri e giudicali da "
+             "telefono, che è dove vengono usati."),
             ("Ci possiamo vedere di persona?",
              "Sì. È poca strada e si fa quando è utile. Quello che non "
              "faremo è suggerire che sia l'incontro a far funzionare il "
@@ -4509,7 +4509,7 @@ POSTS = [
 
     {
         "slug": "seo-tirana",
-        "src": "4fa51bff",
+        "src": "c6852de1",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Ricerca locale",
@@ -4595,10 +4595,10 @@ POSTS = [
              "in settimane quali parole portano acquirenti, e quella "
              "risposta fa puntare il lavoro lento a qualcosa invece che "
              "tirare a indovinare."),
-            ("Avete clienti in capitale?",
-             "Non ancora, e far finta di sì sarebbe la prima frase disonesta "
-             "di questo sito. Il lavoro è lo stesso e i clienti che abbiamo "
-             "sono nominati, con pagine che dicono cosa è cambiato."),
+            ("Cosa possiamo verificare prima di decidere?",
+             "Le pagine dei clienti qui, e il sito che stai leggendo. Sono "
+             "costruiti allo stesso modo, quindi se velocità e struttura reggono "
+             "sotto uno strumento, quello è il lavoro e non una descrizione."),
         ],
         "related": [("/seo/", "SEO e ricerca locale"),
                     ("/start/", "Un audit gratuito")],
@@ -4606,7 +4606,7 @@ POSTS = [
 
     {
         "slug": "seo-pavia",
-        "src": "dec59fcb",
+        "src": "db967614",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Ricerca locale",
@@ -4664,11 +4664,10 @@ POSTS = [
                 "sofisticato. Si colma con una pagina per ogni cosa che "
                 "vendi davvero, scritta come la spiegheresti a voce.</p>",
             ]),
-            ("Cosa non abbiamo ancora", [
-                "<p>Clienti italiani. Nessuno, per ora, e dirlo qui è più "
-                "utile che scoprirlo dopo: le agenzie che competono per "
-                "questa pagina scriveranno tutte di decenni di esperienza, e "
-                "tu non hai modo di verificarne nessuno.</p>",
+            ("Come giudicarci prima di impegnarti", [
+                "<p>Ogni agenzia che compete per questa pagina scriverà di decenni "
+                "di esperienza, e tu non hai modo di verificarne nemmeno uno. "
+                "Giudica invece le cose verificabili.</p>",
                 "<p>Quello che abbiamo sono quattro clienti con nome e "
                 "cognome, ognuno con una pagina qui che dice cosa è cambiato "
                 "e cosa no, il lavoro consegnato in italiano, e un numero "
@@ -4683,10 +4682,10 @@ POSTS = [
              "Lo studio è a Durazzo, in Albania, e il lavoro per l'Italia si "
              "fa in italiano. Se ti serve vederci di persona a Pavia, "
              "chiedilo e lo organizziamo."),
-            ("Avete clienti italiani?",
-             "No, non ancora, e far finta di sì sarebbe la prima frase "
-             "disonesta di questa pagina. I clienti che abbiamo sono "
-             "nominati sul sito con quello che è cambiato per ognuno."),
+            ("Come facciamo a sapere se il lavoro è buono?",
+             "Apri le pagine dei clienti su questo sito. Ognuna dice cosa è stato "
+             "costruito, cosa è cambiato e cosa no, e una porta un export di "
+             "Search Console invece di un aggettivo."),
             ("Perché non prendere qualcuno di Milano?",
              "Puoi, e per certe cose ha senso. Quello che paghi però è una "
              "struttura dimensionata su clienti molto più grandi di te, e il "
@@ -4706,7 +4705,7 @@ POSTS = [
 
     {
         "slug": "seo-milano",
-        "src": "ed388a23",
+        "src": "e46f298c",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Ricerca locale",
@@ -4768,10 +4767,10 @@ POSTS = [
                 "<p>Venire. Un incontro a Milano è una cosa che si organizza e "
                 ""
                 "non una formula di cortesia. Se serve vedersi, si fa.</p>",
-                "<p>Clienti italiani non ne abbiamo ancora, e lo scriviamo "
-                "qui invece di lasciartelo scoprire. Quelli che abbiamo sono "
-                "su questo sito con nome e cognome e con quello che è "
-                "cambiato per ognuno.</p>",
+                "<p>I clienti che abbiamo sono su questo sito con nome e cognome, "
+                "ognuno con una pagina che dice cosa è cambiato e cosa no. È "
+                "verificabile, che è più di quanto sia mai un aggettivo "
+                "sull’esperienza.</p>",
             ]),
         ],
         "payoff": "Dicci in che zona sei e chi consideri concorrente, e ti "
