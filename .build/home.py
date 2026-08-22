@@ -175,6 +175,28 @@ PAGE = {
     "who_go": "How we work",
 
     # -- the one call to action ---------------------------------------------
+    "faq_h": "Before you send anything",
+    "faq": [
+        ("What does this cost?",
+         "There is no price list. A shop with 4 pages and a shop with 400 are" + NL +
+         "not the same job. The number comes out of the audit."),
+        ("How soon does it start working?",
+         "Two clocks, running at different speeds. A map listing can move" + NL +
+         "inside a month. Ordinary search takes far longer, which is why we" + NL +
+         "gave it a whole page rather than a line here."),
+        ("What happens after we send the form?",
+         "You get a written document, not an invitation to a meeting. It says" + NL +
+         "what we would change and in what order. If the honest answer is that" + NL +
+         "your money is better spent elsewhere, it says that instead."),
+        ("Do we have to replace our website?",
+         "Usually not. Most sites need repairs rather than a rebuild, and a" + NL +
+         "rebuild nobody needed throws away whatever ranking the old one had" + NL +
+         "earned."),
+        ("What do you not do?",
+         "Print, video production, and posting to social media on a schedule." + NL +
+         "We also do not run campaigns on budgets that cannot carry them." + NL +
+         "Hearing that now costs both of us less than hearing it in month 3."),
+    ],
     "cta": "Get found for what you offer.",
     "cta_note": "We answer with a plan and a straight price. If we are not the right "
                 "people, we will say so.",

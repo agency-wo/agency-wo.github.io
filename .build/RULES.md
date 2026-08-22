@@ -54,9 +54,12 @@ everything checkable is checked by `verify.py`, which fails the build.
     no `CASE`, no `EXH.`, no `Service 01`. No sequential numbering unless
     something genuinely refers back to it. The gate bans the old classes so
     the costume cannot reassemble.
-18. **Homepage stays compact:** 900 words and 7 sections, both gated. The
+18. **Homepage stays compact:** 1100 words and 8 sections, both gated. The
     order is one sentence saying what we do, the proof, the services, the
-    work, who we are, one CTA.
+    work, who we are, the questions, one CTA. It was 900 and 7 until
+    2026-08-22: the page was the only top-level one with no questions on it,
+    which on a site selling GEO is the wrong page to leave silent. The budget
+    moved rather than the argument being cut to fit.
 19. **Client work gets its own page** at `/work/<slug>/`. Each client's
     "what changed" heading is a required field, so nothing sits empty for the
     three without published numbers.

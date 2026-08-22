@@ -1,9 +1,13 @@
 """Emit index.html from home.py. The homepage was hand-authored and drifted;
 now it comes from the same shell as every other page.
 
-Seven blocks: what we do, the proof, the five doors, the businesses, why being
+Eight blocks: what we do, the proof, the five doors, the businesses, why being
 a new studio is the argument rather than the problem, the price, the refusal,
-one CTA. No values section, no process diagram, no stats bar.
+the questions, one CTA. No values section, no process diagram, no stats bar.
+
+The questions come from gen_docs.faq_section() and their FAQPage from
+gen_docs.faq_node(), so the block a person reads and the block a machine reads
+are the same strings and cannot drift apart.
 
 Every sentence lives in home.py so the page can be translated without anybody
 opening this file. What stays here is what a translator must not be able to
@@ -29,6 +33,14 @@ import shell  # noqa: E402
 import clients as client_data  # noqa: E402
 import proof_data  # noqa: E402
 from gen_pages import form_source, out, write  # noqa: E402
+# The question block and its FAQPage, both from gen_docs, so the homepage asks
+# in the same markup the service pages do and the schema is DERIVED from the
+# visible answers rather than retyped beside them. gen_docs.faq_node() carries
+# the argument for that at length. Importing runs nothing: every generator here
+# is guarded by __main__. The 4 tokens the two modules share expand identically,
+# checked before this import was written, so the copy below must stay off
+# {clients} and {email_href}, which only this module knows.
+from gen_docs import faq_node, faq_section  # noqa: E402
 
 S = shell.SITE
 NL = chr(10)
@@ -129,7 +141,12 @@ def jsonld(h, services, lang):
     site = {"@type": "WebSite", "@id": home + "#website", "url": home,
             "name": shell.BRAND, "inLanguage": lang,
             "publisher": {"@id": home + "#org"}}
-    return json.dumps({"@context": "https://schema.org", "@graph": [org, site]},
+    # The homepage is the page an assistant reaches first and the only one that
+    # had no questions on it at all. faq_node() returns None when a record has
+    # no faq and graph() drops None, so this is safe if the block is ever cut.
+    faq = faq_node(home.rstrip("/") + "/", h, lang)
+    return json.dumps({"@context": "https://schema.org",
+                       "@graph": [n for n in (org, site, faq) if n]},
                       indent=2, ensure_ascii=False)
 
 
@@ -488,6 +505,8 @@ def render(lang):
 {shell.updated("home", lang, 8)}
       </div>
     </section>
+
+{faq_section(4, h, i18n.load("home", "PAGE", "en"), lang, None)}
 '''
     return (shell.head(page, lang) + shell.header(lang, page["url"]) +
             '\n  <main id="main">\n' + body + '\n  </main>\n' +
@@ -511,11 +530,17 @@ def check(html, lang):
     # other page: failing a faithful translation for being Italian would tell
     # the translator to cut a sentence the English keeps, which is the one
     # thing TRANSLATING.md forbids.
-    assert lang != "en" or words <= 900, (
-        f"the homepage is {words} words, max 900. The audit form's copy counts, "
+    # 900 and 7 until 2026-08-22, when the page gained a question block. It was
+    # the only top-level page on a site that sells GEO with no questions on it
+    # at all, and an FAQ is the shape an assistant lifts an answer from. The
+    # budget moved rather than the block being squeezed in: 5 questions do not
+    # fit in 79 words, and cutting the argument to make room would have traded
+    # the thing that persuades a reader for the thing that feeds a machine.
+    assert lang != "en" or words <= 1100, (
+        f"the homepage is {words} words, max 1100. The audit form's copy counts, "
         f"and so does the confirmation panel nobody sees until they send")
-    assert secs <= 7, (
-        f"the homepage has {secs} sections, max 7. The audit form is a <div> "
+    assert secs <= 8, (
+        f"the homepage has {secs} sections, max 8. The audit form is a <div> "
         f"for this reason: wrapping it in a <section> spends the last slot")
     assert "style=" not in html, (
         "an inline style attribute is back in the homepage. style-src is "

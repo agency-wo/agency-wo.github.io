@@ -89,8 +89,8 @@ BANNED_CLASSES = ["fig-cap", "case-label", "finding-label", "result-stamp",
                   "rank-ghost", "rail-readout", "svc-num", "exhibit-b"]
 
 MAX_LABELS_PER_PAGE = 6      # measured ceiling on respected sites is about 3
-MAX_HOME_WORDS = 900
-MAX_HOME_SECTIONS = 7
+MAX_HOME_WORDS = 1100
+MAX_HOME_SECTIONS = 8
 
 
 def pages():

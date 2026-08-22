@@ -328,6 +328,37 @@ PAGES = [
             ("who", "Written and built by <strong>{founder}</strong> in" + NL +
                     "Durres. Questions go to {email}."),
         ],
+        "faq_h": "Questions we get asked",
+        "faq": [
+            ("Is this one person or a team?",
+             "One person, and you always know which one. {founder} writes the" + NL +
+             "plan, builds the pages and answers the mail. That is a limit as" + NL +
+             "much as a promise: we take fewer clients than an agency can, and" + NL +
+             "we would rather say so now than be slow later."),
+            ("Do we need to be in Durres?",
+             "No. Most of this happens inside a browser and a document, and "
+             "several" + NL +
+             "clients have never been in the same room as us. If you are near, "
+             "we" + NL +
+             "come to you, because seeing the place usually changes the plan."),
+            ("What if somebody already handles this for us?",
+             "Keep them, and take the audit as a second opinion. If what they "
+             "are" + NL +
+             "doing is working, you get proof of it in writing. If it is not, "
+             "you" + NL +
+             "get a list they can act on. Neither answer means hiring us."),
+            ("What happens if we outgrow you?",
+             "It happens, and it is the good kind of problem. When a business" + NL +
+             "needs a team of specialists instead of one person, we say so "
+             "rather" + NL +
+             "than stretch and hope. Handing over cleanly is part of the job."),
+            ("Can we speak to somebody you have worked with?",
+             "Yes. Ask, and we introduce you to the client whose situation "
+             "looks" + NL +
+             "most like yours. The work is public either way: each of them has "
+             "a" + NL +
+             "page here saying what changed and what did not."),
+        ],
         "cta": "Start with a conversation.",
         "cta_note": "No slides, no proposal until you want one.",
     },

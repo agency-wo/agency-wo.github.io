@@ -258,7 +258,7 @@ PAGES = [
     # --------------------------------------------------------------- STUDIO --
     {
         "url": "/studio/",
-     "src": "c5316581",
+     "src": "2adab52b",
         "nav": "Studio",
         "title": "Come lavoriamo",
         "description": "Come lavoriamo: prove prima delle opinioni, un documento "
@@ -341,6 +341,43 @@ PAGES = [
                   "più di un distintivo disegnato da noi."),
             ("who", "Scritto e costruito da <strong>{founder}</strong> a" + NL +
                     "Durazzo. Le domande vanno a {email}."),
+        ],
+        "faq_h": "Le domande che ci fanno",
+        "faq": [
+            ("Siete una persona sola o una squadra?",
+             "Una persona sola, e sai sempre quale. {founder} scrive il piano," + NL +
+             "costruisce le pagine e risponde alla posta. È un limite quanto "
+             "una" + NL +
+             "promessa: prendiamo meno clienti di un'agenzia, e preferiamo "
+             "dirtelo" + NL +
+             "adesso invece di essere lenti dopo."),
+            ("Dobbiamo essere a Durazzo?",
+             "No. Quasi tutto succede dentro un browser e un documento, e "
+             "diversi" + NL +
+             "clienti non sono mai stati nella stessa stanza con noi. Se sei "
+             "vicino" + NL +
+             "veniamo da te, perché vedere il posto di solito cambia il piano."),
+            ("E se qualcuno se ne occupa già?",
+             "Tienilo, e prendi l'audit come secondo parere. Se quello che sta" + NL +
+             "facendo funziona, ne hai la prova per iscritto. Se non funziona, "
+             "hai" + NL +
+             "una lista su cui può lavorare. Nessuna delle due risposte ti "
+             "obbliga" + NL +
+             "a chiamarci."),
+            ("Cosa succede se diventiamo troppo grandi per voi?",
+             "Succede, ed è il tipo di problema buono. Quando a un'azienda "
+             "serve" + NL +
+             "una squadra di specialisti invece di una persona, lo diciamo "
+             "invece" + NL +
+             "di tirare la corda e sperare. Passare il lavoro con ordine fa "
+             "parte" + NL +
+             "del mestiere."),
+            ("Possiamo parlare con qualcuno per cui avete lavorato?",
+             "Sì. Chiedi e ti presentiamo il cliente la cui situazione "
+             "somiglia di" + NL +
+             "più alla tua. Il lavoro è pubblico comunque: ognuno di loro ha "
+             "una" + NL +
+             "pagina qui che dice cosa è cambiato e cosa no."),
         ],
         "cta": "Comincia da una conversazione.",
         "cta_note": "Niente slide, nessuna proposta finché non la vuoi.",

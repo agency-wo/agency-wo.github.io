@@ -470,7 +470,16 @@ def studio_ld(rec, lang):
          "name": rec["nav"], "about": {"@id": org},
          "inLanguage": lang,
          "mainEntity": {"@id": url + "#founder"}},
-        person, crumb_node(url, rec["nav"], lang))
+        person,
+        # This page renders its questions through the same faq_section() as the
+        # other two, so leaving faq_node() out here meant the copy a person
+        # reads had 5 answers and the copy a machine reads had none. Asked who
+        # runs this studio, an assistant lands on exactly this page: it holds
+        # the Person node every BlogPosting on the site points its author at.
+        # Returns None when a record has no faq, so this stays safe if the key
+        # is ever removed again.
+        faq_node(url, rec, lang),
+        crumb_node(url, rec["nav"], lang))
 
 
 def start_ld(rec, lang):

@@ -249,7 +249,7 @@ PAGES = [
     # --------------------------------------------------------------- STUDIO --
     {
         "url": "/studio/",
-     "src": "c5316581",
+     "src": "2adab52b",
         "nav": "Studio",
         "title": "Si punojmë",
         "description": "Si punojmë: prova para mendimeve, një dokument i qartë, i bërë "
@@ -333,6 +333,42 @@ PAGES = [
                   "vizatuam vetë."),
             ("who", "Shkruar dhe ndërtuar nga <strong>{founder}</strong> në" + NL +
                     "Durrës. Pyetjet shkojnë te {email}."),
+        ],
+        "faq_h": "Pyetjet që na bëjnë",
+        "faq": [
+            ("Jeni një person apo një ekip?",
+             "Një person, dhe e di gjithmonë cili. {founder} shkruan planin," + NL +
+             "ndërton faqet dhe përgjigjet në postë. Është kufi po aq sa "
+             "premtim:" + NL +
+             "marrim më pak klientë se një agjenci, dhe preferojmë ta themi "
+             "tani" + NL +
+             "se sa të jemi të ngadaltë më vonë."),
+            ("A duhet të jemi në Durrës?",
+             "Jo. Pjesa më e madhe ndodh brenda një shfletuesi dhe një "
+             "dokumenti," + NL +
+             "dhe disa klientë nuk kanë qenë kurrë në të njëjtën dhomë me "
+             "ne." + NL +
+             "Nëse je afër, vijmë te ti, sepse të shohësh vendin zakonisht "
+             "e ndryshon planin."),
+            ("Po nëse dikush merret tashmë me këtë?",
+             "Mbaje, dhe merre auditimin si mendim të dytë. Nëse ajo që po bën" + NL +
+             "funksionon, e ke provën me shkrim. Nëse jo, ke një listë mbi të "
+             "cilën" + NL +
+             "mund të punojë. Asnjëra përgjigje nuk të detyron të na marrësh."),
+            ("Çfarë ndodh nëse rritemi shumë për ju?",
+             "Ndodh, dhe është lloji i mirë i problemit. Kur një biznesi i "
+             "duhet" + NL +
+             "një ekip specialistësh në vend të një personi, e themi në vend "
+             "që" + NL +
+             "ta tërheqim litarin dhe të shpresojmë. Dorëzimi me rregull "
+             "është" + NL +
+             "pjesë e punës."),
+            ("A mund të flasim me dikë për të cilin keni punuar?",
+             "Po. Kërko dhe të prezantojmë me klientin situata e të cilit "
+             "ngjan" + NL +
+             "më shumë me tënden. Puna është publike sidoqëftë: secili prej "
+             "tyre" + NL +
+             "ka një faqe këtu që thotë çfarë ndryshoi dhe çfarë jo."),
         ],
         "cta": "Nis me një bisedë.",
         "cta_note": "Pa slide, pa ofertë derisa ta duash.",

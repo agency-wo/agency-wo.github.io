@@ -100,7 +100,7 @@ STATS = [
 ]
 
 PAGE = {
-    "src": "47e7ac53",
+    "src": "8619c88c",
 
     # 39 characters against the 52 the title budget leaves once gen_home.py has
     # put "minarank studio ·" in front of it.
@@ -248,6 +248,28 @@ PAGE = {
     # -- the one call to action ---------------------------------------------
     # Both lines are the brief's own, word for word: they render in the ink
     # band on every Albanian page, and check 27 wants one CTA, not eighteen.
+    "faq_h": "Para se të dërgosh diçka",
+    "faq": [
+        ("Sa kushton?",
+         "Nuk ka listë çmimesh. Një dyqan me 4 faqe dhe një me 400 nuk janë e" + NL +
+         "njëjta punë. Numri del nga auditimi."),
+        ("Sa shpejt fillon të funksionojë?",
+         "Dy ritme të ndryshme. Një skedë në hartë mund të lëvizë brenda një" + NL +
+         "muaji. Kërkimi i zakonshëm është shumë më i ngadaltë, prandaj i kemi" + NL +
+         "kushtuar një faqe të tërë."),
+        ("Çfarë ndodh pasi dërgoj formularin?",
+         "Merr një dokument të shkruar, jo një ftesë për takim. Thotë çfarë do" + NL +
+         "të ndryshonim dhe në çfarë radhe. Nëse përgjigjja e ndershme është që" + NL +
+         "paratë e tua rrinë më mirë diku tjetër, thotë atë."),
+        ("A duhet ta ndërrojmë faqen?",
+         "Zakonisht jo. Shumica e faqeve kanë nevojë për riparime dhe jo për" + NL +
+         "një faqe të re, dhe një faqe e re që nuk duhej hedh poshtë" + NL +
+         "pozicionin që e vjetra kishte fituar."),
+        ("Çfarë nuk bëni?",
+         "Shtyp, prodhim videosh, dhe postime në rrjete sociale me kalendar. Nuk" + NL +
+         "menaxhojmë as fushata me buxhete që nuk i mbajnë. Ta dish tani" + NL +
+         "kushton më pak për të dy se ta dish në muajin e tretë."),
+    ],
     "cta": "Bëhu i gjetshëm për atë që ofron.",
     "cta_note": "Të përgjigjemi me një plan dhe një çmim të qartë. Nëse nuk "
                 "jemi njerëzit e duhur, ta themi.",

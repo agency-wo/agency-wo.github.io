@@ -101,7 +101,7 @@ STATS = [
 ]
 
 PAGE = {
-    "src": "47e7ac53",
+    "src": "8619c88c",
 
     # 38 characters against the 52 the title budget leaves once gen_home.py has
     # put "minarank studio ·" in front of it.
@@ -256,6 +256,28 @@ PAGE = {
     # -- the one call to action ---------------------------------------------
     # Both lines are the brief's own, word for word: they render in the ink
     # band on every Italian page, and check 27 wants one CTA, not eighteen.
+    "faq_h": "Prima di mandare qualcosa",
+    "faq": [
+        ("Quanto costa?",
+         "Non c'è un listino. Un negozio con 4 pagine e uno con 400 non sono" + NL +
+         "lo stesso lavoro. Il numero esce dall'audit."),
+        ("Quanto ci mette a funzionare?",
+         "Due orologi, che vanno a velocità diverse. Una scheda sulla mappa" + NL +
+         "può muoversi entro un mese. La ricerca normale è molto più lenta, ed" + NL +
+         "è per questo che le abbiamo dedicato una pagina intera."),
+        ("Cosa succede dopo che mando il modulo?",
+         "Ricevi un documento scritto, non un invito a una riunione. Dice cosa" + NL +
+         "cambieremmo e in che ordine. Se la risposta onesta è che i tuoi soldi" + NL +
+         "stanno meglio altrove, dice quello."),
+        ("Dobbiamo rifare il sito?",
+         "Di solito no. Quasi tutti i siti hanno bisogno di riparazioni e non" + NL +
+         "di un sito nuovo, e un sito nuovo che non serviva butta via il" + NL +
+         "posizionamento che il vecchio si era guadagnato."),
+        ("Cosa non fate?",
+         "Stampa, produzione video, e pubblicare sui social a calendario. Non" + NL +
+         "gestiamo nemmeno campagne con budget che non le reggono. Saperlo" + NL +
+         "adesso costa meno a tutti e due che saperlo al terzo mese."),
+    ],
     "cta": "Fatti trovare per quello che offri.",
     "cta_note": "Ti rispondiamo con un piano e un prezzo chiaro. Se non siamo "
                 "le persone giuste, te lo diciamo.",
