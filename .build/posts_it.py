@@ -4408,6 +4408,202 @@ POSTS = [
                     ("/web-design/", "Siti web")],
     },
 
+    {
+        "slug": "seo-durres",
+        "src": "3e596d1e",
+        "date": "2026-08-22",
+        "updated": "2026-08-22",
+        "topic": "Ricerca locale",
+        "work": "iglisi-watch",
+        "service": ("/seo/", "SEO e ricerca locale"),
+
+        "title": "SEO a Durazzo",
+        "h1": "In una città di queste dimensioni la mappa non è parte del "
+              "risultato. È il risultato.",
+        "summary": "Cosa decide davvero quali tre attività vengono mostrate "
+                   "qui, e perché il lavoro che le porta è più piccolo di "
+                   "quanto lasci intendere il settore.",
+        "standfirst": "Per un'attività i cui clienti stanno a pochi "
+                      "chilometri dalla porta.",
+        "description": "SEO a Durazzo: cosa decide le tre attività che "
+                       "Google mostra sulla mappa qui, quanto poche se lo "
+                       "sono guadagnato, e in cosa consiste il lavoro.",
+        "og_desc": "Decidono tre posti su una mappa. Quasi nessun "
+                   "concorrente ci ha provato sul serio.",
+
+        "body": [
+            ("Cosa mostra davvero lo schermo", [
+                "<p>Scrivi un mestiere e questa città su un telefono e conta "
+                "cosa compare sopra i risultati normali. Una mappa, poi tre "
+                "attività. Quello che sta sotto lo legge una minoranza e "
+                "quasi nessuno di fretta.</p>",
+                "<p>Quindi l'obiettivo onesto qui è uno di quei tre posti, e "
+                "tutto il resto o è una strada per arrivarci o è una "
+                "distrazione.</p>",
+            ]),
+            ("Cosa decide quali tre", [
+                "<p>Quanto sei vicino a chi sta cercando, che non puoi "
+                "cambiare. Quanto è completa la tua scheda, che puoi finire "
+                "questa settimana. E cosa hanno detto di te gli altri, che "
+                "puoi iniziare oggi e che quasi nessun rivale ha mai "
+                "fatto.</p>",
+                "<p>Due dei tre ingredienti sono del tutto sotto il tuo "
+                "controllo e nessuno dei due richiede di toccare il sito. È "
+                "la parte con cui non apre nessuno che vende canoni "
+                "mensili.</p>",
+            ]),
+            ("Lo stagno è basso abbastanza da vedere il fondo", [
+                "<p>Apri le schede delle attività che oggi stanno sopra di "
+                "te. Conta le foto, leggi la descrizione, guarda se i "
+                "servizi sono elencati uno per uno o per niente.</p>",
+                "<p>In questa città quell'esercizio finisce quasi sempre con "
+                "la stessa conclusione: chi sta vincendo non fa niente di "
+                "astuto, è solo l'unico che ha compilato il modulo.</p>",
+            ]),
+            ("Com'è stato partendo da zero", [
+                "<p>Un negozio di orologi qui è partito a maggio senza sito "
+                "e senza una scheda degna del nome. Il grafico sulla nostra "
+                "home è il suo export di Search Console, non un disegno, e "
+                "la pagina del caso dice quali parti erano la scheda e quali "
+                "il sito.</p>",
+                "<p>Quello che non mostra è una scorciatoia, perché non "
+                "c'era. Mostra il lavoro ordinario fatto in ordine.</p>",
+            ]),
+            ("Cosa non farà", [
+                "<p>Non riempirà un negozio in una settimana, e non servirà "
+                "a niente se quello che la gente trova è un numero a cui non "
+                "risponde nessuno.</p>",
+                "<p>E non salverà un'attività il cui problema è l'offerta. "
+                "L'abbiamo detto a gente venuta qui per comprare ricerca, e "
+                "preferiamo ridirlo che prendere i soldi.</p>",
+            ]),
+        ],
+        "payoff": "Mandaci il mestiere e lo cerchiamo qui, da telefono, e ti "
+                  "diciamo chi sta nei tre e perché.",
+        "faq": [
+            ("Quante recensioni servono per stare nei tre?",
+             "Meno di quante temi, perché l'asticella la mette chi c'è già e "
+             "non un numero. Guarda i tre attuali, conta le loro, e hai il "
+             "tuo obiettivo."),
+            ("Il sito conta se decide la mappa?",
+             "Conta per la decisione, non per la posizione. Uno ti prende "
+             "dalla mappa e poi controlla se sembri reale, e quel controllo "
+             "avviene sul tuo sito o su niente."),
+            ("Non sono in centro. È fatale?",
+             "No, perché non c'è un punto centrale da cui Google misura. "
+             "Misura da dove sta la persona che cerca, quindi essere vicino "
+             "ai tuoi clienti conta più che essere vicino al centro."),
+            ("Posso farlo senza assumere nessuno?",
+             "La scheda e le recensioni sì, e sono le due che si muovono per "
+             "prime. Quello che è difficile da soli è sapere quale cosa "
+             "ordinaria fare dopo, quando le ovvie sono finite."),
+            ("E se i miei clienti sono turisti invece che locali?",
+             "Allora la ricerca avviene in un'altra lingua e spesso prima "
+             "che arrivino, il che cambia cosa devono dire le pagine ma non "
+             "come funziona la mappa. Vale la pena dirlo nella prima "
+             "conversazione."),
+        ],
+        "related": [("/seo/", "SEO e ricerca locale"),
+                    ("/work/iglisi-watch/", "Iglisi Watch")],
+    },
+
+    {
+        "slug": "seo-tirana",
+        "src": "4fa51bff",
+        "date": "2026-08-22",
+        "updated": "2026-08-22",
+        "topic": "Ricerca locale",
+        "work": None,
+        "service": ("/seo/", "SEO e ricerca locale"),
+
+        "title": "SEO a Tirana",
+        "h1": "Le parole larghe sono prese. Non è la stessa cosa che il "
+              "mercato sia preso.",
+        "summary": "Contro cosa si trova davvero uno studio piccolo nella "
+                   "capitale, e il terreno dove vince ancora.",
+        "standfirst": "Una lettura onesta di un mercato dove diversi "
+                      "concorrenti hanno dieci anni di vantaggio.",
+        "description": "SEO a Tirana: contro cosa competi, perché il termine "
+                       "largo di solito è una trappola, e dove una piccola "
+                       "attività vince ancora le ricerche che pagano.",
+        "og_desc": "Perdere la parola più larga costa meno di quanto "
+                   "vorrebbe farti credere chi te la vende.",
+
+        "body": [
+            ("Cosa hai davvero davanti", [
+                "<p>Attività che pubblicano da prima che tu registrassi un "
+                "dominio, agenzie con un budget per questo, e qualche "
+                "marchio nazionale che si posiziona qui senza sforzo perché "
+                "si posiziona ovunque.</p>",
+                "<p>Niente di tutto questo si sistema con l'impegno "
+                "quest'anno, e ogni proposta che non parte da qui ti chiede "
+                "di finanziare la propria formazione.</p>",
+            ]),
+            ("La parola più larga di solito è il bersaglio sbagliato", [
+                "<p>Il singolo termine largo che vogliono tutti è caro, "
+                "lento e pieno di gente che sta ancora confrontando. Sotto "
+                "stanno le frasi che uno digita quando ha già deciso, e "
+                "quelle sono più silenziose, più economiche e valgono di più "
+                "a visita.</p>",
+                "<p>Vincere un termine di cui non parla nessuno, che "
+                "quindici persone a settimana digitano col portafoglio "
+                "aperto, batte perdere quello di cui parlano tutti.</p>",
+            ]),
+            ("Dove uno studio piccolo ha davvero il vantaggio", [
+                "<p>Velocità e reperibilità. Una pagina si riscrive il "
+                "giorno che lo chiedi, perché non c'è una coda, un account "
+                "manager o un ticket. Sembra poco finché non hai aspettato "
+                "tre settimane per un cambio di prezzo.</p>",
+                "<p>Più grande è l'agenzia con cui ti confrontano, più "
+                "questa è la cosa che non possono copiare.</p>",
+            ]),
+            ("Le recensioni decidono una volta che sei in gara", [
+                "<p>A questa dimensione diverse attività sono abbastanza "
+                "vicine su tutto il resto che la scelta la fa quello che "
+                "hanno scritto gli altri. Vale sia che tu sia terzo sia che "
+                "tu sia ottavo.</p>",
+                "<p>Ed è anche l'unica leva che non costa niente e su cui "
+                "quasi nessuno lavora con metodo.</p>",
+            ]),
+            ("Quando ti diremmo di lasciar perdere", [
+                "<p>Se quello che vendi si decide solo sul prezzo e qualcuno "
+                "più grande costa meno, la ricerca ti porterà visitatori che "
+                "se ne vanno. La pubblicità te lo direbbe in due settimane "
+                "per meno soldi di un anno di pazienza.</p>",
+                "<p>L'abbiamo detto a richieste dalla capitale. È la "
+                "risposta che ci costa il lavoro ed è comunque quella "
+                "giusta.</p>",
+            ]),
+        ],
+        "payoff": "Dicci il termine che vuoi e leggiamo chi lo tiene adesso "
+                  "e se vale la pena andarci dietro.",
+        "faq": [
+            ("È più difficile qui che sulla costa?",
+             "Per i termini larghi, parecchio. Per un servizio specifico in "
+             "un quartiere specifico, spesso no, perché chi tiene i termini "
+             "larghi raramente si disturba a scrivere le pagine specifiche."),
+            ("Serve un ufficio in capitale per posizionarsi lì?",
+             "Per i risultati normali no, non sono indirizzati a un luogo. "
+             "Per la mappa conta un indirizzo vero in città, e uno affittato "
+             "dove non lavora nessuno tende a essere scoperto."),
+            ("Dopo quanto ha senso giudicare?",
+             "Più che sulla costa, perché la concorrenza è più profonda e "
+             "tutto quello che stai provando a superare ha più storia. Metti "
+             "in conto mesi e sii contento se la scheda si muove prima."),
+            ("Non conviene pagare la pubblicità?",
+             "Spesso sì, all'inizio, e te lo diciamo. La pubblicità ti dice "
+             "in settimane quali parole portano acquirenti, e quella "
+             "risposta fa puntare il lavoro lento a qualcosa invece che "
+             "tirare a indovinare."),
+            ("Avete clienti in capitale?",
+             "Non ancora, e far finta di sì sarebbe la prima frase disonesta "
+             "di questo sito. Il lavoro è lo stesso e i clienti che abbiamo "
+             "sono nominati, con pagine che dicono cosa è cambiato."),
+        ],
+        "related": [("/seo/", "SEO e ricerca locale"),
+                    ("/start/", "Un audit gratuito")],
+    },
+
 ]
 
 # /blog/, the index over those records. The soft wraps are placed for this text

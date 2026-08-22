@@ -210,7 +210,16 @@ def jsonld(svc, lang):
          "serviceType": svc.get("schema_name", svc["nav"]),
          "description": svc["description"], "url": url,
          "provider": {"@id": home + "#org"},
-         "areaServed": ["AL", "IT", "Worldwide"],
+         # The 2 cities before the countries, because a local pack is decided
+         # at city level and nothing on this site named one in schema until
+         # 2026-08-23. Spelled the way the org node spells addressLocality,
+         # WITHOUT the diaeresis, which is the opposite of how this studio
+         # writes Durres in prose: .build/citations.md exists to keep every
+         # directory listing matching the schema rather than the copy, and a
+         # second spelling here would split the entity it is protecting.
+         "areaServed": [{"@type": "City", "name": "Durres"},
+                        {"@type": "City", "name": "Tirana"},
+                        "AL", "IT", "Worldwide"],
          "availableLanguage": ["en", "it", "sq"]},
         # inLanguage goes HERE and not on the Service above it, and that is a
         # schema decision rather than a placement. inLanguage is a property of

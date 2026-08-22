@@ -772,6 +772,12 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
    heading rhythm is 64: .faq's own margin, plus section{padding-block} landing
    inside .prose, plus the h2's margin. 96 is a deliberate 1.5x step at the one
    place the page genuinely changes register. */
+/* A phone number broken across 2 lines reads as a typo, and on a 390 screen
+   the band's contact row wrapped it after "+355 67". Nowrap on the link and
+   nowhere else: the row is still free to wrap BETWEEN the address, WhatsApp
+   and the number, which is what it should do on a narrow screen. */
+a[href^="tel:"] { white-space: nowrap; }
+
 .faq { margin-top: var(--s-9); padding-block: 0; }
 .faq > h2 { margin-top: 0; }
 .faq-item { border-top: 1px solid var(--edge); padding-block: var(--s-5); max-width: 66ch; }
@@ -1303,6 +1309,13 @@ button.btn:disabled:hover { background: none; color: var(--ink); }
      no horizontal separation to read the change from and every pixel is a
      scroll. Answers keep 18px: a phone is where they are actually read, and
      shrinking body text to win back height is the wrong trade. */
+  /* The band's contact row is the only place on a phone that carries all 3
+     ways of reaching this studio, and every one of them was a 16px tall target.
+     inline-block so the padding actually enlarges the hit area rather than just
+     overflowing the line box, 4px a side for 24px, which is the WCAG minimum.
+     The row looks the same; it is the invisible half that changes. */
+  .band-alt a { display: inline-block; padding-block: 4px; }
+
   .faq { margin-top: var(--s-8); }
   .faq-item { padding-block: var(--s-4); }
   .faq .faq-q { margin-bottom: var(--s-2); }

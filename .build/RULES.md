@@ -97,6 +97,10 @@ everything checkable is checked by `verify.py`, which fails the build.
 ## Facts
 
 27. Founder: **Henri Sila**. WhatsApp: **355675716090**. Both gated.
+    The number is now DISPLAYED as well as dialled, as `+355 67 571 6090` in the
+    footer and the band on all 181 pages. `shell.phone_display()` derives that
+    spacing from the same constant, so there is still exactly one number in this
+    repo and a directory checking NAP consistency finds one answer.
 28. Five services: SEO and local search, AI search, websites, Meta ads,
     custom software.
 29. English at the root, Italian and Albanian to follow at `/it/` and `/sq/`.

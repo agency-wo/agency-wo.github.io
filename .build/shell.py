@@ -78,6 +78,24 @@ EMAIL = "info@minarankstudio.com"
 WHATSAPP = "355675716090"
 FOUNDER = "Henri Sila"
 
+
+def phone_display():
+    """The one number, spaced the way .build/citations.md publishes it.
+
+    DERIVED and never typed. Rule 27 gates WHATSAPP because a number that
+    disagrees with itself across a site is the cheapest way to split a local
+    listing in two, and a second hand-typed copy for the display form would
+    reintroduce exactly that. Albanian mobiles are 355 + 2 + 3 + 4.
+
+    Until 2026-08-23 this number reached a reader only through a wa.me href and
+    a JSON-LD field, so somebody who wanted to ring rather than message had
+    nothing to tap and nothing to read. It is on all 181 pages now, as text,
+    which is also the NAP signal every directory in citations.md is checked
+    against.
+    """
+    n = WHATSAPP
+    return "+%s %s %s %s" % (n[:3], n[3:5], n[5:8], n[8:])
+
 # -- sameAs -----------------------------------------------------------------
 # The accounts that are the same entity somewhere else. It is the one property
 # in an Organization that a search engine can CHECK: everything else on the
@@ -419,9 +437,13 @@ FOOT_PATHS = [
     ["/studio/", "/blog/", "/start/"],
     # The last column's labels ARE its destinations, so chrome.py holds an
     # empty list for it and this is the one place they are written.
-    ["mailto:" + EMAIL, "https://wa.me/" + WHATSAPP],
+    ["mailto:" + EMAIL, "https://wa.me/" + WHATSAPP, "tel:+" + WHATSAPP],
 ]
-FOOT_LAST = [EMAIL, "WhatsApp"]
+# The labels ARE the destinations in this column, which is why an address and a
+# proper noun sit here untranslated. A phone number is the third thing that
+# reads the same in all 3 languages, so it needs no chrome string and no
+# re-stamp to join them.
+FOOT_LAST = [EMAIL, "WhatsApp", phone_display()]
 
 
 def ch(lang):
@@ -928,7 +950,7 @@ def footer(lang, page_url=None, cta_heading=None, cta_note=None):
           <p class="band-note">{cta_note}</p>
           <p class="band-actions">
             <a class="band-cta" href="{localise(AUDIT_URL, lang)}">{c.BAND_CTA}</a>
-            <span class="band-alt"><a href="mailto:{EMAIL}">{EMAIL}</a> {DOT} <a href="https://wa.me/{WHATSAPP}">WhatsApp</a></span>
+            <span class="band-alt"><a href="mailto:{EMAIL}">{EMAIL}</a> {DOT} <a href="https://wa.me/{WHATSAPP}">WhatsApp</a> {DOT} <a href="tel:+{WHATSAPP}">{phone_display()}</a></span>
           </p>
         </div>
 {clock(lang)}

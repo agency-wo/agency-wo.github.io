@@ -4362,6 +4362,199 @@ POSTS = [
                     ("/web-design/", "Faqe interneti")],
     },
 
+    {
+        "slug": "seo-durres",
+        "src": "3e596d1e",
+        "date": "2026-08-22",
+        "updated": "2026-08-22",
+        "topic": "Kërkim lokal",
+        "work": "iglisi-watch",
+        "service": ("/seo/", "SEO dhe kërkim lokal"),
+
+        "title": "SEO në Durrës",
+        "h1": "Në një qytet të kësaj madhësie harta nuk është pjesë e "
+              "rezultatit. Është rezultati.",
+        "summary": "Çfarë vendos vërtet cilat tri biznese shfaqen këtu, dhe "
+                   "pse puna që i sjell është më e vogël se sa lë të "
+                   "kuptohet sektori.",
+        "standfirst": "Për një biznes klientët e të cilit janë pak kilometra "
+                      "nga dera.",
+        "description": "SEO në Durrës: çfarë vendos tri bizneset që Google "
+                       "tregon në hartë këtu, sa pak prej tyre e kanë "
+                       "fituar, dhe në çfarë konsiston puna.",
+        "og_desc": "Vendosin tri vende në një hartë. Pothuajse asnjë "
+                   "konkurrent nuk ka provuar seriozisht.",
+
+        "body": [
+            ("Çfarë tregon vërtet ekrani", [
+                "<p>Shkruaj një zanat dhe këtë qytet në një telefon dhe "
+                "numëro çfarë del mbi rezultatet e zakonshme. Një hartë, "
+                "pastaj tri biznese. Atë që rri poshtë e lexon një pakicë "
+                "dhe pothuajse askush me nxitim.</p>",
+                "<p>Pra synimi i ndershëm këtu është njëri nga ata tri "
+                "vende, dhe gjithçka tjetër ose është rrugë drejt tij ose "
+                "është shpërqendrim.</p>",
+            ]),
+            ("Çfarë vendos cilat tri", [
+                "<p>Sa afër je me atë që po kërkon, që nuk e ndryshon dot. "
+                "Sa e plotë është skeda jote, që mund ta mbarosh këtë javë. "
+                "Dhe çfarë kanë thënë të tjerët për ty, që mund ta nisësh "
+                "sot dhe që shumica e rivalëve nuk e kanë bërë kurrë.</p>",
+                "<p>Dy nga tri përbërësit janë plotësisht nën kontrollin "
+                "tënd dhe asnjëri nuk kërkon të prekësh faqen. Kjo është "
+                "pjesa me të cilën nuk nis askush që shet tarifa mujore.</p>",
+            ]),
+            ("Pellgu është aq i cekët sa i shihet fundi", [
+                "<p>Hap skedat e bizneseve që sot rrinë mbi ty. Numëro "
+                "fotot, lexo përshkrimin, shih nëse shërbimet janë renditur "
+                "një nga një apo aspak.</p>",
+                "<p>Në këtë qytet ai ushtrim përfundon pothuajse gjithmonë "
+                "me të njëjtin përfundim: ai që po fiton nuk po bën gjë të "
+                "zgjuar, është thjesht i vetmi që e plotësoi formularin.</p>",
+            ]),
+            ("Si dukej duke nisur nga zeroja", [
+                "<p>Një dyqan orësh këtu nisi në maj pa faqe dhe pa një "
+                "skedë që ta meritojë emrin. Grafiku në kryefaqen tonë është "
+                "eksporti i tij nga Search Console, jo një vizatim, dhe "
+                "faqja e rastit thotë cilat pjesë ishin skeda dhe cilat "
+                "faqja.</p>",
+                "<p>Ajo që nuk tregon është një shkurtore, sepse nuk kishte. "
+                "Tregon punën e zakonshme të bërë me radhë.</p>",
+            ]),
+            ("Çfarë nuk do të bëjë", [
+                "<p>Nuk do ta mbushë një dyqan brenda javës, dhe nuk do të "
+                "ndihmojë fare nëse ajo që gjen bota është një numër ku nuk "
+                "përgjigjet askush.</p>",
+                "<p>Dhe nuk do të shpëtojë një biznes problemi i të cilit "
+                "është oferta. Ua kemi thënë njerëzve që erdhën këtu për të "
+                "blerë kërkim, dhe preferojmë ta themi sërish se sa t'i "
+                "marrim paratë.</p>",
+            ]),
+        ],
+        "payoff": "Na dërgo zanatin dhe e kërkojmë këtu, nga telefoni, dhe "
+                  "të themi kush është në të tria dhe pse.",
+        "faq": [
+            ("Sa vlerësime më duhen për të qenë në të tria?",
+             "Më pak se sa ke frikë, sepse cakun e vendos ai që është tashmë "
+             "aty dhe jo një numër. Shih të tria aktualet, numëro të tyret, "
+             "dhe e ke objektivin."),
+            ("A ka rëndësi faqja nëse vendos harta?",
+             "Ka rëndësi për vendimin, jo për pozicionin. Dikush të merr nga "
+             "harta dhe pastaj kontrollon nëse dukesh i vërtetë, dhe ai "
+             "kontroll ndodh mbi faqen tënde ose mbi asgjë."),
+            ("Nuk jam në qendër. A është fatale?",
+             "Jo, sepse nuk ka një pikë qendrore nga e cila mat Google. Mat "
+             "nga vendi ku rri personi që kërkon, prandaj të jesh afër "
+             "klientëve të tu ka më shumë rëndësi se të jesh afër mesit të "
+             "qytetit."),
+            ("A mund ta bëj pa punësuar askënd?",
+             "Skedën dhe vlerësimet po, dhe janë të dyja që lëvizin të "
+             "parat. Ajo që është e vështirë vetëm është të dish cilën gjë "
+             "të zakonshme të bësh më pas, kur të dukshmet kanë mbaruar."),
+            ("Po nëse klientët e mi janë vizitorë dhe jo vendas?",
+             "Atëherë kërkimi ndodh në një gjuhë tjetër dhe shpesh para se "
+             "të mbërrijnë, gjë që ndryshon çfarë duhet të thonë faqet por "
+             "jo si funksionon harta. Ia vlen ta themi që në bisedën e parë."),
+        ],
+        "related": [("/seo/", "SEO dhe kërkim lokal"),
+                    ("/work/iglisi-watch/", "Iglisi Watch")],
+    },
+
+    {
+        "slug": "seo-tirana",
+        "src": "4fa51bff",
+        "date": "2026-08-22",
+        "updated": "2026-08-22",
+        "topic": "Kërkim lokal",
+        "work": None,
+        "service": ("/seo/", "SEO dhe kërkim lokal"),
+
+        "title": "SEO në Tiranë",
+        "h1": "Fjalët e gjera janë zënë. Kjo nuk është njësoj sikur tregu të "
+              "jetë zënë.",
+        "summary": "Përballë çfarë ndodhet vërtet një studio e vogël në "
+                   "kryeqytet, dhe terreni ku ende fiton.",
+        "standfirst": "Një lexim i ndershëm i një tregu ku disa konkurrentë "
+                      "kanë dhjetë vjet avantazh.",
+        "description": "SEO në Tiranë: përballë çfarë konkurron, pse termi i "
+                       "gjerë zakonisht është kurth, dhe ku një biznes i "
+                       "vogël ende fiton kërkimet që paguajnë.",
+        "og_desc": "Të humbësh fjalën më të gjerë kushton më pak se sa do të "
+                   "donte të besoje ai që ta shet.",
+
+        "body": [
+            ("Çfarë ke vërtet përpara", [
+                "<p>Biznese që publikojnë që para se ti të regjistroje një "
+                "domen, agjenci me buxhet për këtë, dhe ca marka kombëtare "
+                "që pozicionohen këtu pa u munduar sepse pozicionohen "
+                "kudo.</p>",
+                "<p>Asgjë prej tyre nuk rregullohet me mund këtë vit, dhe "
+                "çdo propozim që nuk nis me këtë të kërkon të financosh një "
+                "shkollim.</p>",
+            ]),
+            ("Fjala më e gjerë zakonisht është objektivi i gabuar", [
+                "<p>Termi i vetëm i gjerë që e duan të gjithë është i "
+                "shtrenjtë, i ngadaltë dhe plot njerëz që ende po "
+                "krahasojnë. Poshtë tij rrinë frazat që shkruan dikush kur "
+                "ka vendosur tashmë, dhe ato janë më të qeta, më të lira dhe "
+                "vlejnë më shumë për vizitë.</p>",
+                "<p>Të fitosh një term për të cilin nuk flet askush, që "
+                "pesëmbëdhjetë veta në javë e shkruajnë me kuletën hapur, i "
+                "mund humbjen e atij për të cilin flasin të gjithë.</p>",
+            ]),
+            ("Ku një studio e vogël e ka vërtet avantazhin", [
+                "<p>Shpejtësia dhe të qenit i gjetshëm. Një faqe rishkruhet "
+                "ditën që e kërkon, sepse nuk ka radhë, nuk ka menaxher "
+                "llogarie dhe nuk ka biletë. Duket pak derisa ke pritur tri "
+                "javë për një ndryshim çmimi.</p>",
+                "<p>Sa më e madhe agjencia me të cilën të krahasojnë, aq më "
+                "shumë kjo është gjëja që nuk e kopjojnë dot.</p>",
+            ]),
+            ("Vlerësimet vendosin sapo je në garë", [
+                "<p>Në këtë madhësi disa biznese janë mjaftueshëm afër në "
+                "gjithçka tjetër sa zgjedhjen e bën ajo që shkruan të "
+                "tjerët. Vlen si kur je i treti ashtu edhe kur je i "
+                "teti.</p>",
+                "<p>Është edhe e vetmja levë që nuk kushton asgjë dhe mbi të "
+                "cilën pothuajse askush nuk punon me metodë.</p>",
+            ]),
+            ("Kur do të të thoshim mos u mundo", [
+                "<p>Nëse ajo që shet vendoset vetëm nga çmimi dhe dikush më "
+                "i madh kushton më pak, kërkimi do të të sjellë vizitorë që "
+                "ikin. Reklama do të ta thoshte brenda dy javësh me më pak "
+                "para se një vit durim.</p>",
+                "<p>Ua kemi thënë kërkesave nga kryeqyteti. Është përgjigjja "
+                "që na kushton punën dhe është prapëseprapë e drejta.</p>",
+            ]),
+        ],
+        "payoff": "Na thuaj termin që do dhe lexojmë kush e mban tani dhe "
+                  "nëse ia vlen t'i shkosh pas.",
+        "faq": [
+            ("A është më e vështirë këtu se në bregdet?",
+             "Për termat e gjerë, mjaft. Për një shërbim specifik në një "
+             "lagje specifike, shpesh jo, sepse ata që mbajnë termat e gjerë "
+             "rrallë mundohen të shkruajnë faqet specifike."),
+            ("A më duhet zyrë në kryeqytet për t'u pozicionuar atje?",
+             "Për rezultatet e zakonshme jo, ato nuk i drejtohen një vendi. "
+             "Për hartën vlen një adresë e vërtetë në qytet, dhe një e marrë "
+             "me qira ku nuk punon askush zakonisht zbulohet."),
+            ("Pas sa kohe ka kuptim ta gjykosh?",
+             "Më shumë se në bregdet, sepse konkurrenca është më e thellë "
+             "dhe gjithçka që po provon të kalosh ka më shumë histori. "
+             "Llogarit muaj dhe gëzohu nëse skeda lëviz më herët."),
+            ("A nuk ia vlen më mirë të paguaj reklamën?",
+             "Shpesh po, në fillim, dhe ta themi. Reklama të tregon brenda "
+             "javësh cilat fjalë sjellin blerës, dhe ajo përgjigje e bën "
+             "punën e ngadaltë të synojë diçka në vend që të hamendësojë."),
+            ("A keni klientë në kryeqytet?",
+             "Jo ende, dhe të bënim sikur po do të ishte fjalia e parë e "
+             "pandershme e kësaj faqeje. Puna është e njëjta dhe klientët që "
+             "kemi janë me emër, me faqe që thonë çfarë ndryshoi."),
+        ],
+        "related": [("/seo/", "SEO dhe kërkim lokal"),
+                    ("/start/", "Një auditim falas")],
+    },
+
 ]
 
 # /blog/, the index over those records. The soft wraps are placed for this text

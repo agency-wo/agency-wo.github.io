@@ -4312,6 +4312,202 @@ POSTS = [
                     ("/web-design/", "Websites")],
     },
 
+    {
+        "slug": "seo-durres",
+        "date": "2026-08-22",
+        "updated": "2026-08-22",
+        "topic": "Local search",
+        "work": "iglisi-watch",
+        "service": ("/seo/", "SEO and local search"),
+
+        "title": "SEO in Durres",
+        "h1": "In a city this size, the map is not part of the result. It is "
+              "the result.",
+        "summary": "What actually decides the three businesses shown here, "
+                   "and why the work that wins it is smaller than the "
+                   "industry implies.",
+        "standfirst": "For a business whose customers are within a few "
+                      "kilometres of the door.",
+        "description": "SEO in Durres: what decides the three businesses "
+                       "Google shows on the map here, how few of them have "
+                       "earned it, and what the work actually involves.",
+        "og_desc": "Three places on a map decide it. Most competitors have "
+                   "not seriously tried for one.",
+
+        "body": [
+            ("What the screen actually shows", [
+                "<p>Type a trade and this city into a phone and count what "
+                "appears above the ordinary results. A map, then three "
+                "businesses. Whatever sits underneath is read by a minority "
+                "of people and almost none of them in a hurry.</p>",
+                "<p>So the honest goal here is one of those three places, "
+                "and everything else is either a route to it or a "
+                "distraction from it.</p>",
+            ]),
+            ("What decides which three", [
+                "<p>How near you are to whoever is searching, which you "
+                "cannot change. How complete your profile is, which you can "
+                "finish this week. And what other people have said about "
+                "you, which you can start today and most of your rivals "
+                "never have.</p>",
+                "<p>Two of the three inputs are entirely inside your control "
+                "and neither requires a website change. That is the part "
+                "nobody selling monthly retainers leads with.</p>",
+            ]),
+            ("The pond is shallow enough to see the bottom", [
+                "<p>Open the profiles of the businesses currently above you. "
+                "Count the photographs, read the description, look at "
+                "whether the services are listed individually or not at "
+                "all.</p>",
+                "<p>In this city that exercise usually ends with the same "
+                "conclusion: the business winning is not doing something "
+                "clever, it is the only one that filled the form in.</p>",
+            ]),
+            ("What it looked like from zero", [
+                "<p>A watch shop here began in May with no website and no "
+                "listing worth the name. The chart on our homepage is its "
+                "Search Console export, not a drawing, and the case page "
+                "says which parts were the listing and which were the "
+                "site.</p>",
+                "<p>What it does not show is a shortcut, because there was "
+                "not one. It shows the ordinary work done in order.</p>",
+            ]),
+            ("What this will not do", [
+                "<p>It will not make a shop busy in a week, and it will not "
+                "help at all if the thing people find is a phone number "
+                "nobody answers.</p>",
+                "<p>It also will not save a business whose problem is the "
+                "offer. We have said that to people who came here to buy "
+                "search, and we would rather say it again than take the "
+                "money.</p>",
+            ]),
+        ],
+        "payoff": "Send us the trade and we will search it here, on a phone, "
+                  "and tell you who is in the three and why.",
+        "faq": [
+            ("How many reviews do I need to be in the three?",
+             "Fewer than you fear, because the bar is set by whoever is "
+             "already there rather than by a number. Look at the current "
+             "three, count theirs, and you have your target."),
+            ("Does my website matter if the map decides it?",
+             "It matters for the decision rather than the position. Somebody "
+             "picks you off the map and then checks whether you look real, "
+             "and that check happens on your site or on nothing."),
+            ("I am not in the centre. Is that fatal?",
+             "No, because there is no single centre point that Google "
+             "measures from. It measures from wherever the person searching "
+             "is standing, so being near your own customers matters more "
+             "than being near the middle of town."),
+            ("Can I do this without hiring anybody?",
+             "The profile and the reviews, yes, and those are the two that "
+             "move first. What is harder alone is knowing which of the "
+             "ordinary things to do next when the obvious ones are done."),
+            ("What if my customers are visitors rather than locals?",
+             "Then the search happens in another language and often before "
+             "they arrive, which changes what the pages have to say but not "
+             "how the map works. It is worth saying out loud in the first "
+             "conversation."),
+        ],
+        "related": [("/seo/", "SEO and local search"),
+                    ("/work/iglisi-watch/", "Iglisi Watch")],
+    },
+
+    {
+        "slug": "seo-tirana",
+        "date": "2026-08-22",
+        "updated": "2026-08-22",
+        "topic": "Local search",
+        "work": None,
+        "service": ("/seo/", "SEO and local search"),
+
+        "title": "SEO in Tirana",
+        "h1": "The broad words are taken. That is not the same as the market "
+              "being taken.",
+        "summary": "What a small studio is actually up against in the "
+                   "capital, and the ground where it still wins.",
+        "standfirst": "An honest read of a market where several competitors "
+                      "have a decade of head start.",
+        "description": "SEO in Tirana: what you are competing against, why "
+                       "the broad terms are usually a trap, and where a "
+                       "small business can still win the searches that pay.",
+        "og_desc": "Losing the widest word costs you less than the people "
+                   "selling it would like you to think.",
+
+        "body": [
+            ("What is actually in front of you", [
+                "<p>Businesses that have been publishing since before you "
+                "registered a domain, agencies with a budget for this, and a "
+                "handful of national brands who rank here without trying "
+                "because they rank everywhere.</p>",
+                "<p>None of that is fixable with effort this year, and any "
+                "proposal that does not begin by saying so is asking you to "
+                "fund an education.</p>",
+            ]),
+            ("The widest word is usually the wrong target", [
+                "<p>The single broad term everyone wants is expensive, slow "
+                "and full of people who are still comparing. Underneath it "
+                "sit the phrases somebody types when they have already "
+                "decided, and those are quieter, cheaper and worth more per "
+                "visit.</p>",
+                "<p>Winning one term nobody talks about, that fifteen people "
+                "a week type with a wallet open, beats losing the one "
+                "everybody talks about.</p>",
+            ]),
+            ("Where a small studio genuinely has the advantage", [
+                "<p>Speed and answerability. A page can be rewritten the day "
+                "you ask for it, because there is no queue, no account "
+                "manager and no ticket. That sounds small until you have "
+                "waited three weeks for a price change.</p>",
+                "<p>The larger the agency you are compared with, the more "
+                "this is the thing they cannot copy.</p>",
+            ]),
+            ("Reviews decide it once you are in the running", [
+                "<p>At this size several businesses are close enough on "
+                "everything else that the choice is made on what other "
+                "people wrote. That is true whether you are third or "
+                "eighth.</p>",
+                "<p>It is also the one lever that costs nothing and that "
+                "almost nobody works at systematically.</p>",
+            ]),
+            ("When we would tell you not to bother", [
+                "<p>If what you sell is decided on price alone and somebody "
+                "bigger is cheaper, search will bring you visitors who "
+                "leave. Ads would tell you that in a fortnight for less "
+                "money than a year of patience.</p>",
+                "<p>We have said this to enquiries from the capital. It is "
+                "the answer that costs us the job and it is still the right "
+                "one.</p>",
+            ]),
+        ],
+        "payoff": "Tell us the term you want and we will read who currently "
+                  "holds it and whether it is worth going after.",
+        "faq": [
+            ("Is it harder here than on the coast?",
+             "For the broad terms, considerably. For a specific service in a "
+             "specific district, often no, because the businesses holding "
+             "the broad terms rarely bother writing the specific pages."),
+            ("Do I need an office in the capital to rank there?",
+             "For the ordinary results, no, they are not addressed to a "
+             "place. For the map, a real address in the city is what counts, "
+             "and a rented one that nobody works from tends to be "
+             "discovered."),
+            ("How long before this is worth judging?",
+             "Longer than on the coast, because the competition is deeper "
+             "and everything you are trying to pass has more history. Assume "
+             "months and be pleased if the listing moves sooner."),
+            ("Should I just pay for ads instead?",
+             "Often yes, at the start, and we will say so. Ads tell you in "
+             "weeks which words bring buyers, and that answer makes the "
+             "slower work aim at something instead of guessing."),
+            ("Do you have clients in the capital?",
+             "Not yet, and pretending otherwise would be the first dishonest "
+             "sentence on this site. The work is the same and the clients we "
+             "do have are named, with pages saying what changed."),
+        ],
+        "related": [("/seo/", "SEO and local search"),
+                    ("/start/", "A free audit")],
+    },
+
 ]
 
 # /blog/, the index over those records. It is a page and a page's copy is copy,
