@@ -129,6 +129,17 @@ def jsonld(h, services, lang):
         "founder": {"@id": S + shell.localise("/studio/", lang) + "#founder"},
         "areaServed": ["AL", "IT", "Worldwide"],
         "knowsLanguage": ["en", "it", "sq"],
+        # What this studio is ABOUT, as opposed to what it sells. The Person
+        # node on /studio/ has carried these 6 topics since it was written and
+        # the organisation carried none, which is the wrong way round: an
+        # assistant deciding whether to name a studio reads the organisation.
+        #
+        # Read through i18n.load() from the /studio/ record rather than typed
+        # again here, for the usual reason: two lists claiming what one studio
+        # knows are two things that can disagree, and this one is translated
+        # per language so a second copy would have to be translated twice.
+        "knowsAbout": [r for r in i18n.load("docs", "PAGES", lang)
+                       if r["url"] == "/studio/"][0]["schema"]["knows_about"],
         "hasOfferCatalog": {
             "@type": "OfferCatalog", "name": h["catalogue"],
             "itemListElement": [

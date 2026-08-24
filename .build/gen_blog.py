@@ -92,6 +92,40 @@ def post_url(p):
 
 # ------------------------------------------------------------------- post --
 
+# The 6 posts that are ABOUT a city, and the Wikidata item for each. The same
+# 4 ids gen_pages.py puts on areaServed, so a city page and the service page it
+# points at name the same place rather than two similar strings. The Q-numbers
+# were looked up against the Wikidata API, because "Durres" on its own also
+# matches a 1926 patrol boat and "Pavia" a genus of plants.
+CITY_OF = {
+    "seo-durres":        ("Durres", "Q83285"),
+    "web-design-durres": ("Durres", "Q83285"),
+    "seo-tirana":        ("Tirana", "Q19689"),
+    "web-design-tirana": ("Tirana", "Q19689"),
+    "seo-pavia":         ("Pavia",  "Q6259"),
+    "seo-milano":        ("Milano", "Q490"),
+}
+
+
+def mentions(p, lang):
+    """What a post is about, derived from fields the record already carries.
+
+    The service is a link into this site's own graph, so an engine reading a
+    post can walk to the Service node instead of guessing which of the 5 it
+    means. The place is a link out, to the item everybody else uses for that
+    city.
+
+    Nothing here is typed per post: p["service"] has been a (url, label) tuple
+    since the first record, and the city comes from the slug.
+    """
+    out = [{"@id": shell.SITE + shell.localise(p["service"][0], lang) + "#service"}]
+    city = CITY_OF.get(p["slug"])
+    if city:
+        out.append({"@type": "Place", "name": city[0],
+                    "sameAs": "https://www.wikidata.org/wiki/" + city[1]})
+    return out
+
+
 def post_page(p, en_p, nxt, by_slug, band, lang):
     c = shell.ch(lang)
     url = S + shell.localise(post_url(p), lang)
@@ -118,6 +152,9 @@ def post_page(p, en_p, nxt, by_slug, band, lang):
          # post's graph does not claim the English picture. shell.asset()
          # fails the build if it ever stops existing.
          "image": shell.asset(shell.og_image(lang)),
+         # What the post is about: the Service it points at, and for a city page
+         # the place itself. mentions() above says why neither is typed per record.
+         "mentions": mentions(p, lang),
          # Counted off the rendered body, never typed. A wordCount somebody
          # types is a wordCount that is wrong by the second edit, and this one
          # is a claim a machine can check against the page in one pass.

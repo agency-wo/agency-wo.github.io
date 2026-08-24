@@ -778,6 +778,29 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
    and the number, which is what it should do on a narrow screen. */
 a[href^="tel:"] { white-space: nowrap; }
 
+/* Comparison tables, on the 5 posts that answer "X or Y".
+
+   A reader scanning for the difference finds it in one pass, and an assistant
+   answering the same question lifts a table instead of parsing five paragraphs
+   of prose. Nothing else on this site had a table, so this is the whole of it.
+
+   The scroller is the important part rather than the decoration: 3 columns on
+   a 320px screen cannot be made to fit, and a page that scrolls sideways is a
+   worse bug than a table that does. The overflow is contained here so the body
+   never moves. Cells are top-aligned because the left column is 2 words and
+   the others are rarely the same height. */
+.cmp-wrap { overflow-x: auto; margin: var(--s-6) 0; }
+.cmp { border-collapse: collapse; width: 100%; min-width: 30rem;
+  font-size: var(--fs-small); }
+.cmp caption { text-align: left; color: var(--slate); padding-bottom: var(--s-3);
+  font-size: var(--fs-small); }
+.cmp th, .cmp td { text-align: left; vertical-align: top; padding: var(--s-3) var(--s-4);
+  border-bottom: 1px solid var(--edge); }
+.cmp thead th { border-bottom: 2px solid var(--ink); font-weight: 700; }
+.cmp tbody th { font-weight: 400; color: var(--slate); white-space: nowrap; }
+.cmp tr:last-child td, .cmp tr:last-child th { border-bottom: 0; }
+
+
 .faq { margin-top: var(--s-9); padding-block: 0; }
 /* Except on the homepage, where it is a SECTION among sections rather than a
    block inside prose. Every other boundary on that page measures 0px, because

@@ -223,11 +223,22 @@ def jsonld(svc, lang):
          # claimed IT since launch. The page for it says plainly that there are
          # no Italian clients yet; this field would be the wrong place to say
          # something the prose contradicts.
-         "areaServed": [{"@type": "City", "name": "Durres"},
-                        {"@type": "City", "name": "Tirana"},
-                        {"@type": "City", "name": "Pavia"},
-                        {"@type": "City", "name": "Milano"},
-                        "AL", "IT", "Worldwide"],
+         # sameAs is what turns a string into a place. Looked up against the
+         # Wikidata API rather than recalled, because the same searches also
+         # return a 1926 Albanian Navy patrol boat called Durres, a plant genus
+         # called Pavia and a given name Milan: an assistant reading a bare
+         # name has to guess, and a wrong ID here would claim this studio
+         # serves somewhere it does not.
+         "areaServed": [
+             {"@type": "City", "name": "Durres",
+              "sameAs": "https://www.wikidata.org/wiki/Q83285"},
+             {"@type": "City", "name": "Tirana",
+              "sameAs": "https://www.wikidata.org/wiki/Q19689"},
+             {"@type": "City", "name": "Pavia",
+              "sameAs": "https://www.wikidata.org/wiki/Q6259"},
+             {"@type": "City", "name": "Milano",
+              "sameAs": "https://www.wikidata.org/wiki/Q490"},
+             "AL", "IT", "Worldwide"],
          "availableLanguage": ["en", "it", "sq"]},
         # inLanguage goes HERE and not on the Service above it, and that is a
         # schema decision rather than a placement. inLanguage is a property of
