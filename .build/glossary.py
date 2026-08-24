@@ -99,6 +99,11 @@ BANNED = [
 # fully taken and is what an Italian breadcrumb says; the rest are proper nouns
 # or markup. i18n.AUTONYM is kept out of this file for the same reason.
 IDENTICAL_BY_DESIGN = {
+    # Three product names, added when the comparison tables put them in a
+    # <th> on their own. A brand is spelled the same in every language and
+    # translating one would be an error, not a translation: nobody in Milan
+    # or Durres calls it anything else.
+    "Google Ads", "Instagram", "WordPress",
     "Menu", "Studio", "Home", "404", "Meta ads", "SEO", "AI search",
     # TERMS itself says the Italian for "audit" is "audit": Italian took the
     # word whole. It only became visible when /glossary/ put the bare term in

@@ -2251,7 +2251,7 @@ POSTS = [
 
     {
         "slug": "wordpress-or-a-built-site",
-        "src": "535f610a",
+        "src": "2ab018b7",
         "date": "2026-08-21",
         "updated": "2026-08-21",
         "topic": "Siti web",
@@ -2282,6 +2282,19 @@ POSTS = [
                 "<p>Ed è anche facile da passare a un altro sviluppatore, "
                 "perché lo conosce moltissima gente. Conta più di quanto "
                 "studi come il nostro ammettano di solito.</p>",
+              "<div class=\"cmp-wrap\"><table class=\"cmp\"><caption>Lo "
+              "scambio in una "
+              "vista</caption><thead><tr><th></th><th>WordPress</th><th>Fatto "
+              "su misura</th></tr></thead><tbody><tr><th>Costo "
+              "mensile</th><td>hosting e plugin</td><td>solo "
+              "hosting</td></tr><tr><th>Velocità</th><td>dipende dai "
+              "plugin</td><td>decisa in "
+              "costruzione</td></tr><tr><th>Aggiornamenti</th><td>tuoi da "
+              "fare sempre</td><td>niente da "
+              "aggiornare</td></tr><tr><th>Modificare il testo</th><td>lo fa "
+              "chiunque</td><td>chiedi, o un pannello</td></tr><tr><th>Si "
+              "rompe quando</th><td>un plugin si aggiorna</td><td>qualcuno "
+              "tocca il codice</td></tr></tbody></table></div>",
             ]),
             ("Quanto costa dopo che è fatto", [
                 "<p>I plugin si aggiornano, i temi si aggiornano, e quelli "
@@ -2345,7 +2358,7 @@ POSTS = [
 
     {
         "slug": "website-or-just-instagram",
-        "src": "dfaa4878",
+        "src": "a80f3b10",
         "date": "2026-08-21",
         "updated": "2026-08-21",
         "topic": "Siti web",
@@ -2372,6 +2385,16 @@ POSTS = [
                 "un sito starebbe lì a essere bello senza fare niente.</p>",
                 "<p>È una situazione vera e descrive parecchi negozi "
                 "piccoli. Spendi quei soldi in merce o in fotografie.</p>",
+              "<div class=\"cmp-wrap\"><table class=\"cmp\"><caption>Cosa sa "
+              "fare "
+              "ciascuno</caption><thead><tr><th></th><th>Instagram</th><th>Un "
+              "sito</th></tr></thead><tbody><tr><th>Trovato "
+              "cercando</th><td>a stento</td><td>sì</td></tr><tr><th>È "
+              "tuo</th><td>no</td><td>sì</td></tr><tr><th>Letto dagli "
+              "assistenti</th><td>no</td><td>sì</td></tr><tr><th>Costa</th><td>tempo</td><td>soldi "
+              "e poi tempo</td></tr><tr><th>Bravo a</th><td>mostrare "
+              "novità</td><td>rispondere a "
+              "domande</td></tr></tbody></table></div>",
             ]),
             ("La prima cosa che non può fare: essere cercato", [
                 "<p>Chi scrive un vestito e una città dentro un motore di "
@@ -2539,7 +2562,7 @@ POSTS = [
 
     {
         "slug": "agency-or-freelancer",
-        "src": "c310b179",
+        "src": "5f1ded9e",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Siti web",
@@ -2569,6 +2592,18 @@ POSTS = [
                 "contano. Quello che paghi in cambio è la struttura: un "
                 "ufficio, un responsabile, un commerciale, e un junior che "
                 "lavora mentre un senior firma.</p>",
+              "<div class=\"cmp-wrap\"><table class=\"cmp\"><caption>Cosa "
+              "stai comprando "
+              "davvero</caption><thead><tr><th></th><th>Agenzia</th><th>Una "
+              "persona</th></tr></thead><tbody><tr><th>Parli con</th><td>un "
+              "account manager</td><td>chi fa il "
+              "lavoro</td></tr><tr><th>Capacità</th><td>più "
+              "persone</td><td>una agenda sola</td></tr><tr><th>Una modifica "
+              "richiede</th><td>una coda</td><td>un "
+              "giorno</td></tr><tr><th>Se se ne vanno</th><td>continua un "
+              "altro</td><td>il lavoro si ferma</td></tr><tr><th>Adatto "
+              "a</th><td>molti pezzi in movimento</td><td>un lavoro "
+              "chiaro</td></tr></tbody></table></div>",
             ]),
             ("Cosa ti compra un freelance", [
                 "<p>Chi ha letto il tuo sito è chi lo sistema. Niente viene "
@@ -2830,7 +2865,7 @@ POSTS = [
 
     {
         "slug": "do-i-need-a-new-website-or-a-fix",
-        "src": "4ef65146",
+        "src": "260c5d13",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Siti web",
@@ -2860,6 +2895,16 @@ POSTS = [
                 "telefonare a qualcuno.</p>",
                 "<p>Sono tre guasti diversi con tre riparazioni diverse, e "
                 "solo uno dei tre si risolve con un disegno nuovo.</p>",
+              "<div class=\"cmp-wrap\"><table class=\"cmp\"><caption>Quale "
+              "dei due stai "
+              "guardando</caption><thead><tr><th></th><th>Riparare</th><th>Rifare</th></tr></thead><tbody><tr><th>Richiede</th><td>giorni</td><td>settimane</td></tr><tr><th>Tiene "
+              "il posizionamento</th><td>sì</td><td>a "
+              "rischio</td></tr><tr><th>Giusto quando</th><td>contenuti e "
+              "velocità</td><td>la piattaforma "
+              "blocca</td></tr><tr><th>Costa</th><td>una frazione</td><td>il "
+              "lavoro intero</td></tr><tr><th>Sbagliato quando</th><td>sotto "
+              "non funziona niente</td><td>le fondamenta "
+              "reggono</td></tr></tbody></table></div>",
             ]),
             ("Riparare di solito basta", [
                 "<p>Se le pagine dicono più o meno le cose giuste e gli "
@@ -3523,7 +3568,7 @@ POSTS = [
 
     {
         "slug": "google-ads-or-seo",
-        "src": "55118ad4",
+        "src": "448c45ab",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Meta ads",
@@ -3553,6 +3598,17 @@ POSTS = [
                 "<p>Tutto il resto è dettaglio, e quasi tutte le discussioni "
                 "sulle due sono in realtà discussioni su quale dei due "
                 "problemi hai questo trimestre.</p>",
+              "<div class=\"cmp-wrap\"><table class=\"cmp\"><caption>Le due "
+              "sugli stessi assi</caption><thead><tr><th></th><th>Google "
+              "Ads</th><th>Ricerca</th></tr></thead><tbody><tr><th>Comincia "
+              "a rendere</th><td>subito</td><td>dopo "
+              "mesi</td></tr><tr><th>Si ferma quando</th><td>smetti di "
+              "pagare</td><td>non si ferma</td></tr><tr><th>Costo per "
+              "visita</th><td>sale con la concorrenza</td><td>scende nel "
+              "tempo</td></tr><tr><th>Va bene per</th><td>urgenze, stagioni, "
+              "esordi</td><td>tutto ciò che si ripete</td></tr><tr><th>Ti "
+              "dice</th><td>quali parole vendono</td><td>niente in "
+              "fretta</td></tr></tbody></table></div>",
             ]),
             ("Quando pagare è chiaramente giusto", [
                 "<p>Quando ti servono clienti prima di quando la ricerca "

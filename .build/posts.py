@@ -2228,6 +2228,19 @@ POSTS = [
                 "<p>It is also easy to hand to another developer, because a "
                 "great many people know it. That matters more than studios "
                 "like ours usually admit.</p>",
+              "<div class=\"cmp-wrap\"><table class=\"cmp\"><caption>The "
+              "trade in one "
+              "view</caption><thead><tr><th></th><th>WordPress</th><th>Built "
+              "for you</th></tr></thead><tbody><tr><th>Monthly "
+              "cost</th><td>hosting and plugins</td><td>hosting "
+              "only</td></tr><tr><th>Speed</th><td>depends on "
+              "plugins</td><td>decided at "
+              "build</td></tr><tr><th>Updates</th><td>yours to keep "
+              "doing</td><td>nothing to update</td></tr><tr><th>Editing "
+              "text</th><td>anybody can</td><td>ask, or a small "
+              "panel</td></tr><tr><th>Breaks when</th><td>a plugin "
+              "updates</td><td>somebody edits the "
+              "code</td></tr></tbody></table></div>",
             ]),
             ("What it costs after the build", [
                 "<p>Plugins update, themes update, and the ones that stop "
@@ -2318,6 +2331,16 @@ POSTS = [
                 "<p>That is a real situation and it describes plenty of "
                 "small shops. Spend the money on stock or on photographs "
                 "instead.</p>",
+              "<div class=\"cmp-wrap\"><table class=\"cmp\"><caption>What "
+              "each one can "
+              "do</caption><thead><tr><th></th><th>Instagram</th><th>A "
+              "website</th></tr></thead><tbody><tr><th>Found by "
+              "searching</th><td>barely</td><td>yes</td></tr><tr><th>You own "
+              "it</th><td>no</td><td>yes</td></tr><tr><th>Read by "
+              "assistants</th><td>no</td><td>yes</td></tr><tr><th>Costs</th><td>time</td><td>money "
+              "then time</td></tr><tr><th>Best at</th><td>showing new "
+              "things</td><td>answering "
+              "questions</td></tr></tbody></table></div>",
             ]),
             ("The first thing it cannot do: be searched", [
                 "<p>Somebody typing a dress and a city into a search box "
@@ -2512,6 +2535,17 @@ POSTS = [
                 "What you pay for it is overhead: an office, a manager, a "
                 "salesperson, and a junior doing the work while a senior "
                 "signs it off.</p>",
+              "<div class=\"cmp-wrap\"><table class=\"cmp\"><caption>What "
+              "each is actually buying "
+              "you</caption><thead><tr><th></th><th>Agency</th><th>One "
+              "person</th></tr></thead><tbody><tr><th>You speak "
+              "to</th><td>an account manager</td><td>whoever does the "
+              "work</td></tr><tr><th>Capacity</th><td>several "
+              "people</td><td>one diary</td></tr><tr><th>A change "
+              "takes</th><td>a queue</td><td>a day</td></tr><tr><th>If they "
+              "leave</th><td>somebody else continues</td><td>the work "
+              "stops</td></tr><tr><th>Suits</th><td>many moving "
+              "parts</td><td>one clear job</td></tr></tbody></table></div>",
             ]),
             ("What a freelancer is buying you", [
                 "<p>The person who read your site is the person who fixes "
@@ -2796,6 +2830,16 @@ POSTS = [
                 "<p>Those are three different faults with three different "
                 "repairs, and only one of them is ever solved by a fresh "
                 "design.</p>",
+              "<div class=\"cmp-wrap\"><table class=\"cmp\"><caption>Which "
+              "one you are looking "
+              "at</caption><thead><tr><th></th><th>Repair</th><th>Rebuild</th></tr></thead><tbody><tr><th>Takes</th><td>days</td><td>weeks</td></tr><tr><th>Keeps "
+              "your rankings</th><td>yes</td><td>at "
+              "risk</td></tr><tr><th>Right when</th><td>content and "
+              "speed</td><td>the platform blocks "
+              "it</td></tr><tr><th>Costs</th><td>a fraction</td><td>the full "
+              "job</td></tr><tr><th>Wrong when</th><td>nothing underneath "
+              "works</td><td>the bones are "
+              "fine</td></tr></tbody></table></div>",
             ]),
             ("Repair is usually enough", [
                 "<p>If the pages say roughly the right things and the "
@@ -3478,6 +3522,17 @@ POSTS = [
                 "<p>Everything else is detail, and most arguments about the "
                 "two are really arguments about which of those two problems "
                 "you have this quarter.</p>",
+              "<div class=\"cmp-wrap\"><table class=\"cmp\"><caption>The two "
+              "on the same axes</caption><thead><tr><th></th><th>Google "
+              "Ads</th><th>Search</th></tr></thead><tbody><tr><th>Starts "
+              "working</th><td>immediately</td><td>months "
+              "later</td></tr><tr><th>Stops when</th><td>you stop "
+              "paying</td><td>it does not</td></tr><tr><th>Cost per "
+              "visit</th><td>rises with competition</td><td>falls over "
+              "time</td></tr><tr><th>Best for</th><td>urgent, seasonal, "
+              "new</td><td>anything repeated</td></tr><tr><th>Tells "
+              "you</th><td>which words sell</td><td>nothing "
+              "quickly</td></tr></tbody></table></div>",
             ]),
             ("When paying is clearly right", [
                 "<p>When you need customers before search could possibly "

@@ -789,7 +789,13 @@ a[href^="tel:"] { white-space: nowrap; }
    worse bug than a table that does. The overflow is contained here so the body
    never moves. Cells are top-aligned because the left column is 2 words and
    the others are rarely the same height. */
-.cmp-wrap { overflow-x: auto; margin: var(--s-6) 0; }
+/* min-width:0 is the whole fix and it is not decoration. The prose column is
+   a grid item, and a grid item defaults to min-width:auto, which means it
+   refuses to shrink below its own content. overflow-x on this wrapper was
+   therefore scrolling correctly while the wrapper itself still forced the page
+   wider: measured at 320px, 3 of the 5 posts pushed the document to 362, 334
+   and 336. This lets the wrapper be narrower than the table it holds. */
+.cmp-wrap { overflow-x: auto; min-width: 0; margin: var(--s-6) 0; }
 .cmp { border-collapse: collapse; width: 100%; min-width: 30rem;
   font-size: var(--fs-small); }
 .cmp caption { text-align: left; color: var(--slate); padding-bottom: var(--s-3);
@@ -798,7 +804,10 @@ a[href^="tel:"] { white-space: nowrap; }
   border-bottom: 1px solid var(--edge); }
 .cmp thead th { border-bottom: 2px solid var(--ink); font-weight: 700; }
 .cmp tbody th { font-weight: 400; color: var(--slate); white-space: nowrap; }
-.cmp tr:last-child td, .cmp tr:last-child th { border-bottom: 0; }
+/* tbody, and that is not tidiness. <thead> holds one <tr>, so that row is its
+   own :last-child and an unscoped rule was stripping the 2px rule under the
+   column headings while appearing to work everywhere else. */
+.cmp tbody tr:last-child td, .cmp tbody tr:last-child th { border-bottom: 0; }
 
 
 .faq { margin-top: var(--s-9); padding-block: 0; }
@@ -856,8 +865,17 @@ a[href^="tel:"] { white-space: nowrap; }
   display: flex; justify-content: space-between; align-items: baseline;
   gap: var(--s-6); flex-wrap: wrap; }
 .tail h2 { font-size: clamp(1.625rem, 2.6vw, 2.25rem); max-width: 20ch; }
+/* nowrap keeps the arrow on the last word, which is why it was there, and it
+   also means a long post title cannot wrap: "New website, or fix the one I
+   have" is 330px inside a 280px column on a 320px screen, and the arrow ended
+   up 42px past the edge of the page. Found while measuring the comparison
+   tables, which turned out to be innocent.
+
+   inline-block on the arrow alone keeps it glued to the last word without
+   holding the whole line rigid, so the link wraps and the page does not. */
 .cta { font-size: var(--fs-h3); text-decoration: none;
-  border-bottom: 2px solid var(--ink); padding-bottom: 2px; white-space: nowrap; }
+  border-bottom: 2px solid var(--ink); padding-bottom: 2px; }
+.cta .arrow { white-space: nowrap; }
 .cta:hover { border-bottom-color: var(--red); }
 .arrow { display: inline-block; width: 0.6em; height: 0.6em;
   margin-left: 0.25em; color: var(--red); }

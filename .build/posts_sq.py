@@ -2229,7 +2229,7 @@ POSTS = [
 
     {
         "slug": "wordpress-or-a-built-site",
-        "src": "535f610a",
+        "src": "2ab018b7",
         "date": "2026-08-21",
         "updated": "2026-08-21",
         "topic": "Faqe interneti",
@@ -2260,6 +2260,20 @@ POSTS = [
                 "<p>Është edhe i lehtë për t'ia dorëzuar një zhvilluesi "
                 "tjetër, sepse e njohin shumë veta. Kjo ka më shumë rëndësi "
                 "nga sa e pranojnë zakonisht studiot si e jona.</p>",
+              "<div class=\"cmp-wrap\"><table "
+              "class=\"cmp\"><caption>Shkëmbimi në një "
+              "pamje</caption><thead><tr><th></th><th>WordPress</th><th>Ndërtuar "
+              "për ty</th></tr></thead><tbody><tr><th>Kostoja "
+              "mujore</th><td>strehim dhe shtojca</td><td>vetëm "
+              "strehim</td></tr><tr><th>Shpejtësia</th><td>varet nga "
+              "shtojcat</td><td>vendoset në "
+              "ndërtim</td></tr><tr><th>Përditësimet</th><td>tëtë "
+              "përgjithmonë</td><td>asgjë për të "
+              "përditësuar</td></tr><tr><th>Të ndryshosh tekstin</th><td>e "
+              "bën kushdo</td><td>kërko, ose një "
+              "panel</td></tr><tr><th>Prishet kur</th><td>një shtojçë "
+              "përditësohet</td><td>dikush prek "
+              "kodin</td></tr></tbody></table></div>",
             ]),
             ("Sa kushton pasi të jetë bërë", [
                 "<p>Shtojcat përditësohen, temat përditësohen, dhe ato që "
@@ -2323,7 +2337,7 @@ POSTS = [
 
     {
         "slug": "website-or-just-instagram",
-        "src": "dfaa4878",
+        "src": "a80f3b10",
         "date": "2026-08-21",
         "updated": "2026-08-21",
         "topic": "Faqe interneti",
@@ -2351,6 +2365,17 @@ POSTS = [
                 "asgjë.</p>",
                 "<p>Kjo është situatë e vërtetë dhe përshkruan mjaft dyqane "
                 "të vogla. Shpenzoji ato para në mall ose në fotografi.</p>",
+              "<div class=\"cmp-wrap\"><table class=\"cmp\"><caption>Çfarë "
+              "di të bëjë "
+              "secili</caption><thead><tr><th></th><th>Instagram</th><th>Një "
+              "faqe</th></tr></thead><tbody><tr><th>Gjendet duke "
+              "kërkuar</th><td>me "
+              "vështirësi</td><td>po</td></tr><tr><th>Është "
+              "yti</th><td>jo</td><td>po</td></tr><tr><th>Lexohet nga "
+              "asistentët</th><td>jo</td><td>po</td></tr><tr><th>Kushton</th><td>kohë</td><td>para "
+              "dhe pastaj kohë</td></tr><tr><th>I mirë për</th><td>të "
+              "treguar risi</td><td>të pyetura me "
+              "përgjigje</td></tr></tbody></table></div>",
             ]),
             ("Gjëja e parë që nuk e bën dot: të kërkohet", [
                 "<p>Kujt shkruan një fustan dhe një qytet në një motor "
@@ -2515,7 +2540,7 @@ POSTS = [
 
     {
         "slug": "agency-or-freelancer",
-        "src": "c310b179",
+        "src": "5f1ded9e",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Faqe interneti",
@@ -2545,6 +2570,18 @@ POSTS = [
                 "rëndësi. Ajo që paguan në këmbim është struktura: një zyrë, "
                 "një përgjegjës, një shitës, dhe një fillestar që punon "
                 "ndërsa një i vjetër firmos.</p>",
+              "<div class=\"cmp-wrap\"><table class=\"cmp\"><caption>Çfarë "
+              "po blen "
+              "vërtet</caption><thead><tr><th></th><th>Agjenci</th><th>Një "
+              "person</th></tr></thead><tbody><tr><th>Flet me</th><td>një "
+              "menaxher llogarie</td><td>atë që e bën "
+              "punën</td></tr><tr><th>Kapaciteti</th><td>disa "
+              "veta</td><td>një axhendë e vetme</td></tr><tr><th>Një "
+              "ndryshim do</th><td>një radhë</td><td>një "
+              "ditë</td></tr><tr><th>Nëse ikin</th><td>vazhdon dikush "
+              "tjetër</td><td>puna ndalet</td></tr><tr><th>I "
+              "përshtatet</th><td>shumë pjesëve në lëvizje</td><td>një pune "
+              "të qartë</td></tr></tbody></table></div>",
             ]),
             ("Çfarë të blen një i pavarur", [
                 "<p>Ai që lexoi faqen tënde është ai që e rregullon. Asgjë "
@@ -2801,7 +2838,7 @@ POSTS = [
 
     {
         "slug": "do-i-need-a-new-website-or-a-fix",
-        "src": "4ef65146",
+        "src": "260c5d13",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Faqe interneti",
@@ -2833,6 +2870,15 @@ POSTS = [
                 "<p>Janë tri prishje të ndryshme me tri riparime të "
                 "ndryshme, dhe vetëm njëra prej të trejave zgjidhet me një "
                 "dizajn të ri.</p>",
+              "<div class=\"cmp-wrap\"><table class=\"cmp\"><caption>Cilën "
+              "prej të dyjave "
+              "ke</caption><thead><tr><th></th><th>Riparim</th><th>Rindërtim</th></tr></thead><tbody><tr><th>Do</th><td>ditë</td><td>javë</td></tr><tr><th>Ruan "
+              "pozicionin</th><td>po</td><td>në rrezik</td></tr><tr><th>I "
+              "duhur kur</th><td>përmbajtja dhe shpejtësia</td><td>platforma "
+              "e bllokon</td></tr><tr><th>Kushton</th><td>një "
+              "pjesë</td><td>punën e plotë</td></tr><tr><th>I gabuar "
+              "kur</th><td>poshtë nuk punon asgjë</td><td>themelet "
+              "mbajnë</td></tr></tbody></table></div>",
             ]),
             ("Riparimi zakonisht mjafton", [
                 "<p>Nëse faqet thonë pak a shumë gjërat e duhura dhe adresat "
@@ -3493,7 +3539,7 @@ POSTS = [
 
     {
         "slug": "google-ads-or-seo",
-        "src": "55118ad4",
+        "src": "448c45ab",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Meta ads",
@@ -3522,6 +3568,17 @@ POSTS = [
                 "<p>Gjithçka tjetër është detaj, dhe shumica e debateve për "
                 "të dyja janë në të vërtetë debate se cilin nga dy problemet "
                 "ke këtë tremujor.</p>",
+              "<div class=\"cmp-wrap\"><table class=\"cmp\"><caption>Të dyja "
+              "në të njëjtat boshte</caption><thead><tr><th></th><th>Google "
+              "Ads</th><th>Kërkimi</th></tr></thead><tbody><tr><th>Nis të "
+              "japë</th><td>menjëherë</td><td>pas "
+              "muajsh</td></tr><tr><th>Ndalet kur</th><td>ndalon "
+              "pagesa</td><td>nuk ndalet</td></tr><tr><th>Kostoja për "
+              "vizitë</th><td>rritet me konkurrencën</td><td>bie me "
+              "kohën</td></tr><tr><th>I shkon</th><td>urgjencave, sezoneve, "
+              "nisjeve</td><td>gjithçkaje që përsëritet</td></tr><tr><th>Të "
+              "tregon</th><td>cilat fjalë shesin</td><td>asgjë "
+              "shpejt</td></tr></tbody></table></div>",
             ]),
             ("Kur pagesa është qartë e drejtë", [
                 "<p>Kur të duhen klientë para se kërkimi të mund t'i sjellë. "
