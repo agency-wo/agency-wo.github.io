@@ -118,8 +118,11 @@ everything checkable is checked by `verify.py`, which fails the build.
     reduced-motion get the finished page.
 33. Every `<img>` carries `width`, `height` and real `alt`. Gated.
 34. Build order: `gen_pages`, `gen_docs`, `gen_cases`, `gen_home`, `gen_blog`,
-    `gen_glossary`, `gen_404`, `gen_feed`, `gen_launch`, `gen_sitemap` last,
-    then `verify`.
+    `gen_glossary`, `gen_term_pages`, `gen_404`, `gen_feed`, `gen_launch`,
+    `gen_sitemap` last, then `verify`.
+    `gen_term_pages` follows `gen_glossary` because the hub links at the 7 term
+    pages and both read `term_pages.py`: build them apart and the hub can offer
+    a link to a page that is not there yet.
     `gen_headers` was removed rather than left in: it existed only to pin a
     sha256 per JSON-LD block, and those blocks are data, not script, so the
     120 hashes were guarding nothing. `_headers` is now hand-held text and

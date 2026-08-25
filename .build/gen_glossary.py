@@ -32,6 +32,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import glossary  # noqa: E402
+import term_pages  # noqa: E402
 import i18n  # noqa: E402
 import shell  # noqa: E402
 from gen_pages import out, slugify, write  # noqa: E402
@@ -100,13 +101,25 @@ def render(page, rows, lang):
     # cut from the ENGLISH term, so /sq/glossary/#t-map-listing names the entry
     # /glossary/#t-map-listing names and a fragment survives being copied out
     # of one language into another.
+    # A term with its own page links at it from here. The link text is chrome
+    # (c.READ_IT), already translated, so terms_it.py and terms_sq.py need no
+    # edit and cannot drift out of step with this. It is also what keeps those
+    # 7 pages off check 46's list: a page reachable only from the header is a
+    # page the site does not really link to.
+    has_page = {p["term"]: p["slug"] for p in term_pages.PAGES}
+
     items = []
     for r, en_r in zip(rows, EN_ROWS):
         tid = slugify(en_r["term"], "t-")
+        slug = has_page.get(en_r["term"])
+        more = ""
+        if slug:
+            href = shell.localise("/glossary/" + slug + "/", lang)
+            more = ' <a class="term-more" href="' + href + '">' + c.READ_IT + '</a>' 
         items.append(
             f'          <div class="term">\n'
             f'            <dt id="{tid}">{html.escape(r["term"])}</dt>\n'
-            f'            <dd>{shell.localise_html(r["definition"], lang)}</dd>\n'
+            f'            <dd>{shell.localise_html(r["definition"], lang)}{more}</dd>\n'
             f'          </div>')
 
     body = f'''
