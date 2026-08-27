@@ -115,6 +115,13 @@ Sitemap: {shell.SITE}/sitemap.xml
 # being fetched, which is the point of having it: a studio that sells being
 # read by answer engines should not offer them exactly one way in.
 Sitemap: {shell.SITE}/feed.xml
+
+# Two client sites are served from paths on this domain. A robots.txt is only
+# ever read at the root of a host, so /dioro999/robots.txt and /sabiiex/robots.txt
+# are fetched by nobody and this is the only file that can name their sitemaps.
+# Leaving them out does not keep them quiet, it leaves them undiscoverable.
+Sitemap: {shell.SITE}/dioro999/sitemap.xml
+Sitemap: {shell.SITE}/sabiiex/sitemap.xml
 """
 
 

@@ -11,3 +11,10 @@ Sitemap: https://minarankstudio.com/sitemap.xml
 # being fetched, which is the point of having it: a studio that sells being
 # read by answer engines should not offer them exactly one way in.
 Sitemap: https://minarankstudio.com/feed.xml
+
+# Two client sites are served from paths on this domain. A robots.txt is only
+# ever read at the root of a host, so /dioro999/robots.txt and /sabiiex/robots.txt
+# are fetched by nobody and this is the only file that can name their sitemaps.
+# Leaving them out does not keep them quiet, it leaves them undiscoverable.
+Sitemap: https://minarankstudio.com/dioro999/sitemap.xml
+Sitemap: https://minarankstudio.com/sabiiex/sitemap.xml
