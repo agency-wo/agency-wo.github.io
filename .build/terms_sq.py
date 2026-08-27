@@ -20,12 +20,11 @@ shkurtesa, dhe përkthimi do të shpikte dy terma që askush nuk i kërkon.
 """
 
 PAGE = {
-    "src": "d4053b03",
+    "src": "d6d22036",
     "title": "Çfarë do të thonë fjalët",
     "h1": "Çfarë do të thonë fjalët.",
     "standfirst": "Zhargoni i kësaj faqeje, me fjalë të thjeshta. Nëse një "
-                  "fjalë këtu bën një punë që ti nuk e ke kërkuar, ia vlen ta "
-                  "dish para se t'i paguash dikujt për të.",
+                  "fjalë këtu bën një punë që ti nuk e ke kërkuar, zbuloje para se t'i paguash dikujt për të.",
     "description": "Përkufizime të thjeshta të fjalëve të kërkimit dhe të web-it "
                    "që përdor ky studio: SEO, GEO, renditje, profili në Google, "
                    "herë e shfaqur, përqindja e klikimeve dhe të tjerat.",

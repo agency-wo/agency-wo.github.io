@@ -206,5 +206,32 @@ everything checkable is checked by `verify.py`, which fails the build.
     its reader 14 August on the 20th, and a sitemap that asked Google not to
     recrawl ten posts that had just been rewritten.
 
+44. **Never tell the reader they have just been given an insight.** The studio
+    writes flat declaratives; the tell of generated copy is the little tag that
+    performs the discovery instead of leaving it on the page. Banned, in
+    English, because these are English constructions and their Italian and
+    Albanian equivalents read as ordinary language:
+
+    - "worth noting", "worth spotting", "worth knowing", "worth saying",
+      "worth having"
+    - "and that is the moment worth spotting", and every "that is the X worth
+      Ying" of that shape
+    - "X is not the problem. Y is." and "it is not X, it is Y", the corrective
+      reversal used for rhythm rather than because anybody was confused
+    - "the tell is", "that is the point", "that is the difference", "which is
+      the whole reason"
+
+    The objection to all of them is the same. Each one stops the argument to
+    announce that an argument was made, which is what a writer does when the
+    sentence underneath is not carrying its own weight. Cut the tag and the
+    sentence either stands on its own or was never true. "The second copy is the
+    problem" says everything "and that is the moment worth spotting" was added
+    to claim.
+
+    This is not a style preference, it is the same rule as 42 wearing different
+    clothes: a reader who catches one performed insight rereads the counted
+    facts wondering whether those were performed too. Gate check 54 fails the
+    build on every phrase above.
+
 **Never loosen a check to make it pass.** A gate that can be talked into
 passing is decoration.

@@ -64,8 +64,7 @@ SERVICES = [
                 "to a bad one that wins more work than the bad review cost you.</p>",
             ]),
             ("On the site, and off it", [
-                "<p>The trade splits the rest in two, and it's worth knowing which is "
-                "which, because you'll be sold both.</p>",
+                "<p>The trade splits the rest in two and you'll be sold both, so here is which is which.</p>",
                 "<p><strong>On-page</strong> is everything on your own website: what "
                 "each page is about, whether it answers the question somebody actually "
                 "typed, how it's written, how it's built, how fast it loads on a phone "

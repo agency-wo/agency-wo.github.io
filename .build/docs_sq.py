@@ -39,7 +39,7 @@ it: "Në pak fjalë", "Detaje", "Shih edhe", "Pyetjet e duhura", "Faqe interneti
 # Stamps for the attributes that have no record to hold a "src" key.
 # i18n.load() fails the build when the English is edited and this is not.
 SRC = {
-    "BRIEF": "4942d3d6",
+    "BRIEF": "c8537fba",
     "HOME_CRUMB": "8f3852d3",
 }
 
@@ -65,13 +65,13 @@ BRIEF = ("Përshëndetje {brand}," + NL + NL +
          "Faqja jonë:" + NL + NL +
          "Për çfarë duam të na gjejnë:" + NL + NL +
          "Çfarë nuk po funksionon tani:" + NL + NL +
-         "Çfarë tjetër ia vlen të dihet:" + NL + NL)
+         "Çfarë tjetër:" + NL + NL)
 
 PAGES = [
     # -------------------------------------------------------------- SYSTEMS --
     {
         "url": "/systems/",
-     "src": "c2a87692",
+     "src": "1471f9e9",
         "nav": "Software me porosi",
         # 38 characters against the 52 the title budget leaves once shell.head
         # appends " · minarank studio".
@@ -197,12 +197,11 @@ PAGES = [
             ("h2", "Për pjesët me AI"),
             ("p", "Disa ekrane përdorin AI për të përmbledhur një ditë ose për të "
                   "lexuar" + NL +
-                  "faturën e një furnitori nga një foto. Pjesa që ia vlen të dihet është "
-                  "çfarë u" + NL +
-                  "ndodh numrave: çdo shifër që nxjerr modeli kontrollohet me të dhënat "
-                  "e tua" + NL +
-                  "reale para se të mbërrijë në ekran, dhe rreshti hiqet nëse nuk "
-                  "përputhet."),
+                  "faturën e një furnitori nga një foto. Numrat janë pjesa për "
+                  "t'u parë: çdo" + NL +
+                  "shifër që nxjerr modeli kontrollohet me të dhënat e tua reale "
+                  "para se të" + NL +
+                  "mbërrijë në ekran, dhe rreshti hiqet nëse nuk përputhet."),
             ("p", "Një model e thotë një total që e ka shpikur. Ky nuk lejohet ta bëjë."),
         ],
         # Identical to chrome_sq.QUESTIONS, as in English.

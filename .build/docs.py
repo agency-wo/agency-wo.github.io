@@ -60,7 +60,7 @@ BRIEF = ("Hello {brand}," + NL + NL +
          "Our website:" + NL + NL +
          "What we want to be found for:" + NL + NL +
          "What is not working right now:" + NL + NL +
-         "Anything else worth knowing:" + NL + NL)
+         "Anything else:" + NL + NL)
 
 PAGES = [
     # -------------------------------------------------------------- SYSTEMS --
@@ -197,13 +197,13 @@ PAGES = [
                   "for your trade, and that is the part we design with you."),
 
             ("h2", "About the AI bits"),
-            ("p", "Some screens use AI to summarise a day or read a supplier invoice "
-                  "from a" + NL +
-                  "photo. The part worth knowing is what happens to the numbers: any "
-                  "figure" + NL +
-                  "the model produces is checked against your real data before it "
-                  "reaches the" + NL +
-                  "screen, and the line is dropped if it does not match."),
+            ("p", "Some screens use AI to summarise a day or read a supplier "
+                  "invoice from a" + NL +
+                  "photo. The numbers are the part to watch: any figure the model "
+                  "produces is" + NL +
+                  "checked against your real data before it reaches the screen, "
+                  "and the line" + NL +
+                  "is dropped if it does not match."),
             ("p", "A model will state a total it has invented. This one is not allowed "
                   "to."),
         ],

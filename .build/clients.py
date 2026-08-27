@@ -55,9 +55,7 @@ CLIENTS = [
             "Search for watch repair in Durres, then for a watch shop in Durres, "
             "in English, Albanian or Italian. Then ask ChatGPT the same questions. "
             "We would rather you checked than took our word for it.",
-            "The competition here is directory listings and Facebook pages. That "
-            "is worth saying, because the opening was there and nobody had taken "
-            "it.",
+            "The competition here is directory listings and Facebook pages. The opening was there and nobody had taken it.",
         ],
         "gsc": True,
         "stats": [("741", "clicks from Google"), ("71.1k", "times shown"),

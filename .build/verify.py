@@ -2507,6 +2507,56 @@ for _p in all_pages:
             f"href is a translated string no visitor will ever see")
 
 
+# 54. rule 44: no performed insight ----------------------------------------
+# The tell of generated copy is not a vocabulary, it is a move: stop the
+# argument and announce that an argument was made. "The second copy of it is,
+# and that is the moment worth spotting" says the first clause and then tells
+# the reader it was clever. Cut the tag and the clause either stands or was
+# never true, which is exactly why the tag was reached for.
+#
+# This is rule 42 in different clothes. A reader who catches one performed
+# insight goes back and rereads the 8.6 and the 1% wondering whether those were
+# performed too, and that is a real commercial cost rather than a matter of
+# taste.
+#
+# ENGLISH PAGES ONLY, and deliberately. These are English constructions; the
+# Italian "vale la pena sapere" and the Albanian "ia vlen ta dish" are ordinary
+# ways to say a thing and banning them would be importing an English problem
+# into two languages that do not have it.
+#
+# Matched against page TEXT, so markup, script and svg cannot hide a phrase and
+# cannot invent one either.
+_PERFORMED = [
+    (r"\bworth (?:noting|spotting|knowing|saying|having)\b",
+     "cut it, or say the thing itself"),
+    (r"\bthat is the [a-z ]{0,26}worth\b",
+     "the sentence before it already made the point"),
+    (r"\b(?:is|are) (?:rarely|not) the problem\b",
+     "state what IS the problem and drop the reversal"),
+    (r"\bthe tell is\b",
+     "name the signal without announcing that it is one"),
+    (r"\bwhich is the (?:whole|only|real) (?:reason|point|thing)\b",
+     "if it is the whole reason, the sentence can just say so"),
+    (r"\bit is not [a-z]+\.\s+it is\b",
+     "the corrective reversal, used for rhythm rather than for clarity"),
+    (r"\bis not [a-z]+, it is\b",
+     "same reversal, one comma shorter"),
+    (r"\bthat is (?:the point|the difference|the whole)\b",
+     "let the reader reach it"),
+]
+for _p in all_pages:
+    if lang_of(rel(_p)) != "en":
+        continue
+    _txt = text_of(read(_p))
+    for _pat, _why in _PERFORMED:
+        for _m in re.finditer(_pat, _txt, re.I):
+            _a = max(0, _m.start() - 58)
+            _b = min(len(_txt), _m.end() + 30)
+            findings.append(
+                f"[voice] {rel(_p)}: {_m.group(0)!r} is rule 44. {_why}. "
+                f"Context: ...{_txt[_a:_b].strip()}...")
+
+
 # ------------------------------------------------------------------- report
 print(f"pages checked: {len(all_pages)}")
 print(f"first load:    {kb:.1f} KB")

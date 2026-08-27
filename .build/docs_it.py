@@ -39,7 +39,7 @@ person wrote it: "In sintesi", "Dettagli", "Vedi anche", "Le domande giuste",
 # Stamps for the attributes that have no record to hold a "src" key.
 # i18n.load() fails the build when the English is edited and this is not.
 SRC = {
-    "BRIEF": "4942d3d6",
+    "BRIEF": "c8537fba",
     "HOME_CRUMB": "8f3852d3",
 }
 
@@ -65,13 +65,13 @@ BRIEF = ("Ciao {brand}," + NL + NL +
          "Il nostro sito:" + NL + NL +
          "Per cosa vogliamo farci trovare:" + NL + NL +
          "Cosa non funziona in questo momento:" + NL + NL +
-         "Altro che vale la pena sapere:" + NL + NL)
+         "Altro:" + NL + NL)
 
 PAGES = [
     # -------------------------------------------------------------- SYSTEMS --
     {
         "url": "/systems/",
-     "src": "c2a87692",
+     "src": "1471f9e9",
         "nav": "Software su misura",
         # 37 characters against the 52 the title budget leaves once shell.head
         # appends " · minarank studio".
@@ -200,13 +200,14 @@ PAGES = [
                   "il tuo mestiere, ed è quella la parte che progettiamo insieme a te."),
 
             ("h2", "Sulle parti con l'AI"),
-            ("p", "Alcune schermate usano l'AI per riassumere una giornata o leggere la "
-                  "fattura" + NL +
-                  "di un fornitore da una foto. La parte che vale la pena sapere è cosa "
-                  "succede ai" + NL +
-                  "numeri: ogni cifra prodotta dal modello viene confrontata con i tuoi "
+            ("p", "Alcune schermate usano l'AI per riassumere una giornata o "
+                  "leggere la" + NL +
+                  "fattura di un fornitore da una foto. I numeri sono la parte da "
+                  "guardare:" + NL +
+                  "ogni cifra prodotta dal modello viene confrontata con i tuoi "
                   "dati veri" + NL +
-                  "prima di arrivare allo schermo, e la riga viene scartata se non "
+                  "prima di arrivare allo schermo, e la riga viene scartata se "
+                  "non" + NL +
                   "corrisponde."),
             ("p", "Un modello dichiara un totale che si è inventato. Questo non può."),
         ],

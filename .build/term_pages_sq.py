@@ -172,7 +172,7 @@ PAGES = [
     },
     {
         "slug": "ai-search",
-        "src": "20f753a4",
+        "src": "e8c5cb8d",
         "key": "AI search",
         "term": "kërkimi me AI",
         "h1": "Çfarë është kërkimi me AI?",
@@ -208,8 +208,7 @@ PAGES = [
              "body": [
                  "<p>Bëhu përgjigjja më e qartë që gjendet për pyetjet që "
                  "bëjnë vërtet klientët e tu, dhe përshkruhu njësoj kudo ku "
-                 "një makinë mund të lexojë për ty. Kaq është e gjitha, dhe "
-                 "kjo është ajo që bën <a href=\"/geo/\">puna jonë për motorët "
+                 "një makinë mund të lexojë për ty. Këto dy gjëra janë ajo që bën <a href=\"/geo/\">puna jonë për motorët "
                  "e përgjigjeve</a>.</p>",
              ]},
         ],
@@ -404,7 +403,7 @@ PAGES = [
     },
     {
         "slug": "custom-software",
-        "src": "03b81225",
+        "src": "2c00d39f",
         "key": "custom software",
         "term": "software me porosi",
         "h1": "Çfarë është software me porosi?",
@@ -414,8 +413,7 @@ PAGES = [
                        "bëri për të gjithë, dhe prova e ndershme për t'i "
                        "dalluar dy rastet.",
         "og_desc": "Kur ndërtimi ia kalon qirasë, dhe kur nuk ia kalon.",
-        "standfirst": "Zakonisht përgjigjja e gabuar, dhe pikërisht kjo bën që "
-                      "të vlejë ta themi qartë kur është e duhura.",
+        "standfirst": "Zakonisht përgjigjja e gabuar, prandaj e themi qartë në ato raste të rralla kur është e duhura.",
         "sections": [
             {"h2": "Qiraja zakonisht është zgjedhja e duhur",
              "body": [

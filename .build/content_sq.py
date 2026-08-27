@@ -36,7 +36,7 @@ SERVICES = [
     # ------------------------------------------------------------------ SEO --
     {
         "slug": "seo",
-        "src": "887e8c8b",
+        "src": "676260d9",
         "nav": "SEO",
         "schema_name": "Optimizim për motorët e kërkimit dhe kërkim lokal",
         # 21 characters, 2 fewer than the English.
@@ -94,8 +94,7 @@ SERVICES = [
                 "vlerësim.</p>",
             ]),
             ("Një pjesë rri në faqe dhe tjetra jashtë", [
-                "<p>Zanati e ndan pjesën tjetër në dysh, dhe ia vlen ta dish "
-                "cila është cila, sepse do të t'i shesin të dyja.</p>",
+                "<p>Zanati e ndan pjesën tjetër në dysh dhe do të t'i shesin të dyja, prandaj ja cila është cila.</p>",
                 # Rule 9: the term stays English and the sentence that glosses
                 # it stays a sentence that glosses it. The <strong> stays on
                 # the word that carries the emphasis.

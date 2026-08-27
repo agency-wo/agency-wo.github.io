@@ -33,8 +33,7 @@ PAGE = {
     "title": "What the words mean",
     "h1": "What the words mean.",
     "standfirst": "The jargon on this site, in plain language. If a word here "
-                  "is doing work you did not ask for, that is worth knowing "
-                  "before you pay anybody for it.",
+                  "is doing work you did not ask for, find out before you pay anybody for it.",
     "description": "Plain definitions of the search and web words this studio "
                    "uses: SEO, GEO, ranking, map listing, times shown, click "
                    "rate and the rest. Written for shop owners, not agencies.",

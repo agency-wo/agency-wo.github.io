@@ -79,8 +79,7 @@ POSTS = [
                 "Iglisi Watch went from nothing in May to 741 clicks a quarter "
                 "by August. Average position 8.6. Click rate 1%.</p>",
                 "<p>Those are the numbers of a business Google has started "
-                "trusting and has not finished trusting. Both halves are worth "
-                "knowing before you hire anybody.</p>",
+                "trusting and has not finished trusting. Know both halves before you hire anybody.</p>",
             ]),
             ("What the chart actually shows", [
                 "<p>Two lines. Impressions, which is how often the shop came up "
@@ -1157,7 +1156,7 @@ POSTS = [
                 "<p>Being findable on your own is how you keep the difference "
                 "on the bookings that would have come anyway.</p>",
             ]),
-            ("The front door moved, and it is worth knowing where", [
+            ("The front door moved", [
                 "<p>SiteMinder's <a href=\"https://www.siteminder.com/changing-traveller-report/\" target=\"_blank\" rel=\"noopener\">Changing Traveller Report 2026</a> "
                 "found the share of travellers who begin researching a stay on "
                 "a search engine fell to 21%, from 36% the year before, while "
@@ -1459,14 +1458,12 @@ POSTS = [
                 "<a href=\"https://www.eea.europa.eu/en/analysis/publications/product-lifespans-monitoring-trends/evolution-of-the-average-passenger-car-age-in-the-eu-between-2013-and-2022\" target=\"_blank\" rel=\"noopener\">European Environment Agency figures</a> "
                 "drawn from Eurostat.</p>",
                 "<p>That is the EU and Albania is not in it, so the number "
-                "describes the neighbours rather than this market. It is worth "
-                "knowing anyway: an ageing fleet is a growing repair trade "
+                "describes the neighbours rather than this market. It holds anyway: an ageing fleet is a growing repair trade "
                 "everywhere it has been counted.</p>",
             ]),
             ("Write down what people actually bring you", [
                 "<p>Keep a note for a month of how customers describe what is "
-                "wrong when they ring. Those sentences, in their words, are "
-                "the pages worth having.</p>",
+                "wrong when they ring. Those sentences, in their words, are your pages.</p>",
                 "<p>It costs nothing, it needs no design, and it is closer to "
                 "what somebody types than any list of services a workshop "
                 "would write about itself.</p>",
@@ -1713,8 +1710,7 @@ POSTS = [
              "you spend anything."),
             ("Who owns it when it is finished?",
              "You do: the domain, the code and every account, in your name "
-             "from the first day. That is not generosity, it is the only "
-             "arrangement that leaves you free to walk away from us."),
+             "from the first day. It is the only arrangement that leaves you free to walk away from us."),
         ],
         "related": [("/web-design/", "Websites"),
                     ("/seo/", "SEO and local search")],
@@ -1802,8 +1798,7 @@ POSTS = [
             ("Can I pay Google to be first?",
              "You can pay to sit above it, labelled as an ad, and that stops "
              "the day you stop paying. The map placement and the results "
-             "underneath cannot be bought, which is exactly why they are "
-             "worth having."),
+             "underneath cannot be bought at any price."),
             ("Does it matter that my competitor has more reviews?",
              "It matters, and it is the most fixable gap on this list. "
              "Reviews are asked for, not waited for. A steady handful of "
@@ -2336,17 +2331,14 @@ POSTS = [
                 "<p>Somebody typing a dress and a city into a search box "
                 "will not be shown your grid. Search engines read pages, and "
                 "a caption inside an app is not one that they can weigh.</p>",
-                "<p>That is the whole gap. Not that social does not work, "
-                "but that it works only for people who already know to look "
-                "for you.</p>",
+                "<p>Social works, but only for people who already know to look for you.</p>",
             ]),
             ("The second: be quoted by an assistant", [
                 "<p>Ask an assistant for a shop like yours and it answers "
                 "from text it can read and check. A business that exists "
                 "only inside an app has nothing for it to read, so it names "
                 "somebody else.</p>",
-                "<p>This is newer and it is moving quickly, which is why it "
-                "is worth knowing about before it is urgent.</p>",
+                "<p>This is newer and it is moving quickly. Learn it before it is urgent.</p>",
             ]),
             ("The third: belong to you", [
                 "<p>An account is borrowed. The rules change, the reach "
@@ -2446,9 +2438,7 @@ POSTS = [
                 "means not stopping and restarting it. A small budget "
                 "running steadily beats a larger one switched on and off, "
                 "because every restart throws away what it learned.</p>",
-                "<p>If the number you can afford is genuinely small, that is "
-                "worth saying out loud before anybody takes a fee for "
-                "managing it. Sometimes the right answer is to spend it on "
+                "<p>If the number you can afford is genuinely small, say so out loud before anybody takes a fee for managing it. Sometimes the right answer is to spend it on "
                 "photographs instead.</p>",
             ]),
             ("Where the money actually leaks", [
@@ -2741,9 +2731,7 @@ POSTS = [
             ]),
             ("Ask who does the typing", [
                 "<p>Who writes the words, who takes the photographs, and who "
-                "will still be answering in month seven. Studios sell with a "
-                "senior and deliver with somebody else, and that is worth "
-                "knowing rather than discovering.</p>",
+                "will still be answering in month seven. Studios sell with a senior and deliver with somebody else. Ask which one you are getting.</p>",
             ]),
             ("Ask what happens when you want to change a price", [
                 "<p>If the answer involves emailing them, your prices will "
@@ -2945,8 +2933,7 @@ POSTS = [
             ]),
             ("You are competing for the wrong words", [
                 "<p>Chasing the broadest possible phrase against everybody "
-                "in the country is a losing bet for a small business. The "
-                "words worth having are longer, narrower and nearer.</p>",
+                "in the country is a losing bet for a small business. The words that pay are longer, narrower and nearer.</p>",
                 "<p>Somebody typing exactly what they want, in the town "
                 "where you are, is worth more than a hundred people typing "
                 "something vague.</p>",
@@ -3091,8 +3078,7 @@ POSTS = [
         "description": "How to get Google reviews: when to ask, what to say, "
                        "what is against the rules, and how to make leaving "
                        "one take a single tap.",
-        "og_desc": "Nearly everybody would leave one. The gap is not "
-                   "willingness, it is that nobody asks them.",
+        "og_desc": "Nearly everybody would leave one. Almost nobody is ever asked.",
 
         "body": [
             ("Make it one tap before you ask anybody", [
@@ -3279,8 +3265,7 @@ POSTS = [
         "summary": "What actually turns up when you open small business "
                    "sites here, one after another, and read them the way a "
                    "customer would.",
-        "standfirst": "None of these are exotic. That is the point: the "
-                      "common faults are common, and most of them are an "
+        "standfirst": "None of these are exotic. The common faults are common, and most of them are an "
                       "afternoon of typing.",
         "description": "The website mistakes small businesses in Albania "
                        "make most often, what each one costs, and which of "
@@ -3762,9 +3747,7 @@ POSTS = [
         "faq": [
             ("Can I pay to be included?",
              "No, and anybody offering it is selling something else. There "
-             "is no advertising slot and no submission process inside an "
-             "assistant's answer, which is precisely what makes the position "
-             "worth having."),
+             "is no advertising slot and no submission process inside an assistant's answer, so nobody can buy the place you earn there."),
             ("Does it help to mention ChatGPT on my site?",
              "No. Writing the name of an assistant into your pages does "
              "nothing except make the copy odd. What gets you named is "
@@ -4316,7 +4299,7 @@ POSTS = [
                 "when you do call back, and then do. It converts better than "
                 "anything a designer can arrange.</p>",
             ]),
-            ("The awkward things worth saying", [
+            ("The awkward things", [
                 "<p>Whether you are licensed and insured. Whether there is a "
                 "guarantee and for how long. What happens if the job runs "
                 "over. Everybody wonders and almost nobody publishes it.</p>",
@@ -4338,7 +4321,7 @@ POSTS = [
              "website. Publish what drives it: the size, the state of what "
              "is there, the materials. That is more useful than a number and "
              "it is honest."),
-            ("Is it worth having a website at all?",
+            ("Do I need a website at all?",
              "It is the only place a stranger can check you exist before "
              "handing over money. A profile with photographs and reviews "
              "does part of the job, and the part it cannot do is explain a "
@@ -4449,9 +4432,7 @@ POSTS = [
              "ordinary things to do next when the obvious ones are done."),
             ("What if my customers are visitors rather than locals?",
              "Then the search happens in another language and often before "
-             "they arrive, which changes what the pages have to say but not "
-             "how the map works. It is worth saying out loud in the first "
-             "conversation."),
+             "they arrive, which changes what the pages have to say but not how the map works. Say that out loud in the first conversation."),
         ],
         "related": [("/seo/", "SEO and local search"),
                     ("/work/iglisi-watch/", "Iglisi Watch")],
@@ -4562,7 +4543,7 @@ POSTS = [
         "service": ("/seo/", "SEO and local search"),
 
         "title": "SEO in Pavia",
-        "h1": "Milan is 35 kilometres away, and that is the whole problem.",
+        "h1": "Milan is 35 kilometres away, and it swallows the searches.",
         "summary": "Where the local demand goes, why agencies from the "
                    "bigger city cost what that city costs, and where the "
                    "leak is stopped.",
@@ -4643,8 +4624,7 @@ POSTS = [
              "your work goes to the back of a queue built for them."),
             ("Is the work written in Italian or translated?",
              "Written in Italian. A translated page gives itself away by the "
-             "second line and your customers notice before Google does, "
-             "which is the real reason it matters."),
+             "second line and your customers notice before Google does."),
             ("Where does it start?",
              "With a free audit of the site you have, saying what we would "
              "change and in what order. You do not have to decide anything "
@@ -4767,8 +4747,7 @@ POSTS = [
 
         "title": "When a spreadsheet stops being enough",
         "h1": "A spreadsheet fails the day it has to be in two places.",
-        "summary": "The spreadsheet is rarely the problem. The second copy of it is, and that "
-                   "is the moment worth spotting.",
+        "summary": "A spreadsheet holds up until somebody makes a second copy of it.",
         "standfirst": "One file, one person, one place is fine. The trouble starts at two.",
         "description": "How to tell when a spreadsheet has stopped fitting a small business, "
                        "using a Durres watch shop that ran on a notebook until it could not.",
@@ -4789,8 +4768,7 @@ POSTS = [
                 "<p>Iglisi Watch reached that point with a notebook. Repairs were written at "
                 "the workbench, sales happened at the counter, and the notebook could only "
                 "ever be at one of them.</p>",
-                "<p>The tell is not how much you are counting. It is a second place where the "
-                "truth is kept.</p>",
+                "<p>The signal is a second place where the truth is kept, whatever the volume.</p>",
             ]),
             ("What replaced it", [
                 "<p>Not a bigger spreadsheet. A system holding repair jobs, stock and the "
@@ -4837,7 +4815,7 @@ POSTS = [
                 "<p>The website says a thing is available. The shop sold it on Saturday. The "
                 "first person to find out is somebody who travelled in, or who waited for a "
                 "reply, and that is the worst possible way for it to come out.</p>",
-                "<p>It is not carelessness. It is two systems that were never introduced.</p>",
+                "<p>Nobody is being careless. The two systems were never introduced.</p>",
             ]),
             ("How it works at Iglisi Watch", [
                 "<p>A watch sold over the counter stops being offered on the site about a "
@@ -4876,18 +4854,16 @@ POSTS = [
         "h1": "The bill that does not arrive every month.",
         "summary": "Built software carries no licence. It still has costs, and they are worth "
                    "naming before you buy.",
-        "standfirst": "Nobody sends you an invoice in March. That is the point, and it is "
-                      "also the part people do not believe.",
+        "standfirst": "Nobody sends you an invoice in March. People do not believe that until the March after.",
         "description": "What it actually costs to keep custom software running for a small "
                        "business, what you own at the end of it, and when renting somebody "
                        "else's software is the better answer.",
-        "og_desc": "Nobody sends you an invoice in March. That is the point.",
+        "og_desc": "Nobody sends you an invoice in March. What it costs to keep custom software running, and what you own.",
 
         "body": [
             ("The cost that is missing", [
                 "<p>There is no charge per user and no yearly renewal, because there is "
-                "nobody to pay. That is the difference between owning a thing and renting it, "
-                "and across 5 years it is usually the largest figure in the comparison.</p>",
+                "nobody to pay. Owning and renting part company there, and across 5 years it is usually the largest figure in the comparison.</p>",
             ]),
             ("What does cost money", [
                 "<p>Hosting, which at this size is small. A domain. And change: the day the "

@@ -134,7 +134,7 @@ That listing is a Google Business Profile. It's free, it takes an afternoon to f
 We fill in all of it: the categories, every service you offer, hours that are still right at Christmas, real photographs of the place rather than stock ones, the description, and the questions people keep ringing up to ask. In Albanian, Italian and English, so the profile answers in the language somebody searched in.
 Then reviews, which is the part everyone finds awkward. There's a way to ask that doesn't feel like begging, and there's a way to reply to a bad one that wins more work than the bad review cost you.
 On the site, and off it
-The trade splits the rest in two, and it's worth knowing which is which, because you'll be sold both.
+The trade splits the rest in two and you'll be sold both, so here is which is which.
 On-page is everything on your own website: what each page is about, whether it answers the question somebody actually typed, how it's written, how it's built, how fast it loads on a phone on mobile data. You control all of it, so it's where we start.
 Off-page is everything happening elsewhere that decides whether Google believes you: other sites linking to yours, your business in the same directories your competitors are in, your name and address spelled identically everywhere, and those reviews again. You control less of it and it takes longer, which is why it's worth something once you have it.
 What it costs, and how long it takes
@@ -435,9 +435,9 @@ phone's microphone. You will not need those. You will need the equivalent
 for your trade, and that is the part we design with you.
 About the AI bits
 Some screens use AI to summarise a day or read a supplier invoice from a
-photo. The part worth knowing is what happens to the numbers: any figure
-the model produces is checked against your real data before it reaches the
-screen, and the line is dropped if it does not match.
+photo. The numbers are the part to watch: any figure the model produces is
+checked against your real data before it reaches the screen, and the line
+is dropped if it does not match.
 A model will state a total it has invented. This one is not allowed to.
 Questions worth asking
 Isn't this what a spreadsheet is for?
@@ -514,7 +514,7 @@ A system for the workbench and the counter: repair jobs, stock, the money kept i
 A link between the two, so a watch sold over the counter stops being offered on the website about a minute later, without anyone touching a computer.
 Where the shop shows up now
 Search for watch repair in Durres, then for a watch shop in Durres, in English, Albanian or Italian. Then ask ChatGPT the same questions. We would rather you checked than took our word for it.
-The competition here is directory listings and Facebook pages. That is worth saying, because the opening was there and nobody had taken it.
+The competition here is directory listings and Facebook pages. The opening was there and nobody had taken it.
 From nothing to 741 clicks a quarter.
 Updated 27 August 2026
 Iglisi Watch, watch.al
@@ -842,7 +842,7 @@ Read it
 Custom software 4
 When a spreadsheet stops being enough
 27 August 2026
-The spreadsheet is rarely the problem. The second copy of it is, and that is the moment worth spotting.
+A spreadsheet holds up until somebody makes a second copy of it.
 Read it
 What custom software costs to run
 27 August 2026
@@ -876,7 +876,7 @@ What you can win sooner is the map, because most competitors have not finished t
 It is too slow on the connection people use
 Not your office connection. A phone on mobile data, on a bus. If the page has not appeared by the time somebody looks up, they have gone, and no amount of writing recovers that.
 You are competing for the wrong words
-Chasing the broadest possible phrase against everybody in the country is a losing bet for a small business. The words worth having are longer, narrower and nearer.
+Chasing the broadest possible phrase against everybody in the country is a losing bet for a small business. The words that pay are longer, narrower and nearer.
 Somebody typing exactly what they want, in the town where you are, is worth more than a hundred people typing something vague.
 Questions worth asking
 How do I check whether Google knows about my site at all?
@@ -1077,7 +1077,7 @@ SEO in Pavia
 ## SEO in Pavia
 https://minarankstudio.com/blog/seo-pavia/
 
-Milan is 35 kilometres away, and that is the whole problem.
+Milan is 35 kilometres away, and it swallows the searches.
 For a Pavia business watching customers search here and then buy somewhere else.
 By Henri Sila · 22 August 2026
 The demand slides north
@@ -1103,7 +1103,7 @@ Open the client pages on this site. Each says what was built, what changed and w
 Why not hire somebody in Milan?
 You can, and for some things it makes sense. What you pay for is an operation sized for clients much larger than you, and your work goes to the back of a queue built for them.
 Is the work written in Italian or translated?
-Written in Italian. A translated page gives itself away by the second line and your customers notice before Google does, which is the real reason it matters.
+Written in Italian. A translated page gives itself away by the second line and your customers notice before Google does.
 Where does it start?
 With a free audit of the site you have, saying what we would change and in what order. You do not have to decide anything first and it commits you to nothing.
 Send us the site address and we will read it in Italian, then tell you what we would change and in what order.
@@ -1234,7 +1234,7 @@ No, because there is no single centre point that Google measures from. It measur
 Can I do this without hiring anybody?
 The profile and the reviews, yes, and those are the two that move first. What is harder alone is knowing which of the ordinary things to do next when the obvious ones are done.
 What if my customers are visitors rather than locals?
-Then the search happens in another language and often before they arrive, which changes what the pages have to say but not how the map works. It is worth saying out loud in the first conversation.
+Then the search happens in another language and often before they arrive, which changes what the pages have to say but not how the map works. Say that out loud in the first conversation.
 Send us the trade and we will search it here, on a phone, and tell you who is in the three and why.
 Get a free audit.
 Updated 27 August 2026
@@ -1393,7 +1393,7 @@ A single page listing every service you offer competes for none of them.
 The part that beats any website
 Answering the phone. In this trade the commonest complaint is not price or quality, it is being ignored, and most work is won by whoever replied first.
 If you are on a roof and cannot answer, say on the site when you do call back, and then do. It converts better than anything a designer can arrange.
-The awkward things worth saying
+The awkward things
 Whether you are licensed and insured. Whether there is a guarantee and for how long. What happens if the job runs over. Everybody wonders and almost nobody publishes it.
 Answering in writing is the cheapest way to separate yourself from the operators who make this trade hard to trust.
 Questions worth asking
@@ -1401,7 +1401,7 @@ We have no photographs of old work. What now?
 Start today with the current job and ask two past clients if you may photograph the finished room. Most say yes. Within a season you have a page that did not exist and could not be bought.
 Should we publish prices?
 Not a fixed price, because nobody can quote a build from a website. Publish what drives it: the size, the state of what is there, the materials. That is more useful than a number and it is honest.
-Is it worth having a website at all?
+Do I need a website at all?
 It is the only place a stranger can check you exist before handing over money. A profile with photographs and reviews does part of the job, and the part it cannot do is explain a job in your own words.
 What about bad reviews from difficult jobs?
 They happen in this trade more than most and a calm public reply is worth more than the review costs. People reading it are deciding whether you are the kind of firm that handles a problem or disappears.
@@ -1443,7 +1443,7 @@ Questions worth asking
 How long before I am first?
 For the map, sometimes weeks, because most competitors have not filled their listing in either. For the results underneath, six to twelve months against anybody established. Any date more precise than that is somebody guessing at your expense.
 Can I pay Google to be first?
-You can pay to sit above it, labelled as an ad, and that stops the day you stop paying. The map placement and the results underneath cannot be bought, which is exactly why they are worth having.
+You can pay to sit above it, labelled as an ad, and that stops the day you stop paying. The map placement and the results underneath cannot be bought at any price.
 Does it matter that my competitor has more reviews?
 It matters, and it is the most fixable gap on this list. Reviews are asked for, not waited for. A steady handful of recent ones beats a pile from three years ago.
 I have no website. Is the listing enough?
@@ -1674,7 +1674,7 @@ Position 8.6. A 1% click rate. One spike in July that had nothing to do with us.
 By Henri Sila · 14 August 2026
 The short answer
 If you are starting from no website, expect months, not weeks, and expect the first numbers to look unimpressive. Iglisi Watch went from nothing in May to 741 clicks a quarter by August. Average position 8.6. Click rate 1%.
-Those are the numbers of a business Google has started trusting and has not finished trusting. Both halves are worth knowing before you hire anybody.
+Those are the numbers of a business Google has started trusting and has not finished trusting. Know both halves before you hire anybody.
 What the chart actually shows
 Two lines. Impressions, which is how often the shop came up in a search. Clicks, which is how often somebody chose it. Impressions climbed steadily from June and spiked in the second week of July. Clicks followed, at a distance.
 The spike was not a campaign. Nothing was launched that week. Google reassessed a site it had been sampling for 6 weeks and started showing it for more things, which is what the first real move usually looks like: not a line going up, but a step.
@@ -1760,9 +1760,9 @@ A driver with a problem does not know what is broken. They know it makes a noise
 That is what gets typed. The garage that has written those words down somewhere is the one that turns up.
 The market is old cars, and it keeps getting older
 Passenger cars in the EU averaged 12.3 years old in 2022, up from 10.9 in 2013, on European Environment Agency figures drawn from Eurostat.
-That is the EU and Albania is not in it, so the number describes the neighbours rather than this market. It is worth knowing anyway: an ageing fleet is a growing repair trade everywhere it has been counted.
+That is the EU and Albania is not in it, so the number describes the neighbours rather than this market. It holds anyway: an ageing fleet is a growing repair trade everywhere it has been counted.
 Write down what people actually bring you
-Keep a note for a month of how customers describe what is wrong when they ring. Those sentences, in their words, are the pages worth having.
+Keep a note for a month of how customers describe what is wrong when they ring. Those sentences, in their words, are your pages.
 It costs nothing, it needs no design, and it is closer to what somebody types than any list of services a workshop would write about itself.
 The breakdown search is a map search
 Somebody stopped at the roadside is not reading. They want the nearest place that is open and a button that dials it. Hours, location and a phone number decide that, and all 3 are on the listing rather than the site.
@@ -1900,7 +1900,7 @@ Then ask again, later
 Assistants do not update on your schedule and there is no dashboard confirming anything. Repeat the questions from the first step every month and keep the notes.
 Questions worth asking
 Can I pay to be included?
-No, and anybody offering it is selling something else. There is no advertising slot and no submission process inside an assistant's answer, which is precisely what makes the position worth having.
+No, and anybody offering it is selling something else. There is no advertising slot and no submission process inside an assistant's answer, so nobody can buy the place you earn there.
 Does it help to mention ChatGPT on my site?
 No. Writing the name of an assistant into your pages does nothing except make the copy odd. What gets you named is answering the question somebody asked it.
 How long does it take?
@@ -1971,7 +1971,7 @@ By Henri Sila · 14 August 2026
 The short answer
 A guesthouse has 2 ways to be found: somebody searches, or an agency shows you to them and keeps a share of the rate. The second is easier and it is not free.
 Being findable on your own is how you keep the difference on the bookings that would have come anyway.
-The front door moved, and it is worth knowing where
+The front door moved
 SiteMinder's Changing Traveller Report 2026 found the share of travellers who begin researching a stay on a search engine fell to 21%, from 36% the year before, while the share starting on a booking agency rose to 26%.
 The same report put the share starting with an assistant at 4%, up from 1%. That is small, and it quadrupled in a year, and both halves of that sentence matter.
 Agencies are not the enemy and they are not free
@@ -2052,7 +2052,7 @@ What SEO costs in Albania
 https://minarankstudio.com/blog/website-mistakes-albanian-businesses-make/
 
 Eight things, and seven of them cost nothing to fix.
-None of these are exotic. That is the point: the common faults are common, and most of them are an afternoon of typing.
+None of these are exotic. The common faults are common, and most of them are an afternoon of typing.
 By Henri Sila · 22 August 2026
 Prices and hours that stopped being true
 The commonest fault and the most expensive, because it is the one that makes somebody drive to a closed door. Whatever cannot be updated from a phone will eventually be wrong.
@@ -2152,7 +2152,7 @@ Ask to see one on a phone
 Not a picture of a site, the site. Open it on your own phone on mobile data and count the seconds. Most people looking at your business will be doing exactly this.
 Then search for that business by name and see whether it comes up. A designer whose own clients cannot be found has built pretty things.
 Ask who does the typing
-Who writes the words, who takes the photographs, and who will still be answering in month seven. Studios sell with a senior and deliver with somebody else, and that is worth knowing rather than discovering.
+Who writes the words, who takes the photographs, and who will still be answering in month seven. Studios sell with a senior and deliver with somebody else. Ask which one you are getting.
 Ask what happens when you want to change a price
 If the answer involves emailing them, your prices will go stale, because everybody's do. You want to be able to change a number from a phone in the shop.
 This one question predicts more future frustration than any other on the list.
@@ -2354,7 +2354,7 @@ Not to us, for the site itself. There is no licence and no platform fee undernea
 I already paid somebody and it went wrong. Start again?
 Usually not. Most of the time the pages can be kept and only the parts stopping them being found need repairing. Which of the two you are looking at is something we can tell you before you spend anything.
 Who owns it when it is finished?
-You do: the domain, the code and every account, in your name from the first day. That is not generosity, it is the only arrangement that leaves you free to walk away from us.
+You do: the domain, the code and every account, in your name from the first day. It is the only arrangement that leaves you free to walk away from us.
 Send us the site you have, or the address you would use, and we will tell you which of the four is driving your number.
 Get a free audit.
 Updated 27 August 2026
@@ -2384,10 +2384,10 @@ Coststimemoney then time
 Best atshowing new thingsanswering questions
 The first thing it cannot do: be searched
 Somebody typing a dress and a city into a search box will not be shown your grid. Search engines read pages, and a caption inside an app is not one that they can weigh.
-That is the whole gap. Not that social does not work, but that it works only for people who already know to look for you.
+Social works, but only for people who already know to look for you.
 The second: be quoted by an assistant
 Ask an assistant for a shop like yours and it answers from text it can read and check. A business that exists only inside an app has nothing for it to read, so it names somebody else.
-This is newer and it is moving quickly, which is why it is worth knowing about before it is urgent.
+This is newer and it is moving quickly. Learn it before it is urgent.
 The third: belong to you
 An account is borrowed. The rules change, the reach changes, and occasionally the account is gone on a Tuesday for a reason nobody will explain to you.
 Everything on a domain you own survives all of that, which is the argument for having somewhere to land people even if the looking happens elsewhere.
@@ -2746,7 +2746,7 @@ How many campaigns are running, how many languages they run in, and whether the 
 Three campaigns in Albanian and Italian, with the images shot for them, is a different amount of work every single week, and it is priced as such.
 What to put in the budget
 Enough for the platform to learn, which in practice means not stopping and restarting it. A small budget running steadily beats a larger one switched on and off, because every restart throws away what it learned.
-If the number you can afford is genuinely small, that is worth saying out loud before anybody takes a fee for managing it. Sometimes the right answer is to spend it on photographs instead.
+If the number you can afford is genuinely small, say so out loud before anybody takes a fee for managing it. Sometimes the right answer is to spend it on photographs instead.
 Where the money actually leaks
 Not in the targeting. It leaks between the ad and the reply: an ad in one language landing on a page in another, or a message arriving on a Friday and answered on a Monday.
 Fix those two before raising the budget. They cost nothing and they are the difference between paying for attention and paying for attention you then drop.
@@ -2906,7 +2906,7 @@ We have talked people out of building software more than once, and the reason is
 The day it stops fitting
 Watch for the second copy. Somebody keeps a version on their phone because the one on the desk is not with them. Now there are two answers to the same question and nobody can say which is older.
 Iglisi Watch reached that point with a notebook. Repairs were written at the workbench, sales happened at the counter, and the notebook could only ever be at one of them.
-The tell is not how much you are counting. It is a second place where the truth is kept.
+The signal is a second place where the truth is kept, whatever the volume.
 What replaced it
 Not a bigger spreadsheet. A system holding repair jobs, stock and the money in 5 separate lines, plus a reference library that keeps working in a back room with no signal, because the back room is where the work happens.
 That last part matters more than it sounds. Software needing a connection to answer a question is unavailable exactly when somebody is standing in front of you waiting for the answer.
@@ -2930,10 +2930,10 @@ What custom software costs to run
 https://minarankstudio.com/blog/what-custom-software-costs-to-run/
 
 The bill that does not arrive every month.
-Nobody sends you an invoice in March. That is the point, and it is also the part people do not believe.
+Nobody sends you an invoice in March. People do not believe that until the March after.
 By Henri Sila · 27 August 2026
 The cost that is missing
-There is no charge per user and no yearly renewal, because there is nobody to pay. That is the difference between owning a thing and renting it, and across 5 years it is usually the largest figure in the comparison.
+There is no charge per user and no yearly renewal, because there is nobody to pay. Owning and renting part company there, and across 5 years it is usually the largest figure in the comparison.
 What does cost money
 Hosting, which at this size is small. A domain. And change: the day the business starts doing something new, somebody has to make the software agree. That is the genuine running cost and we would rather quote it than pretend it away.
 Nothing else turns up. No seat you forgot you were paying for, no tier you quietly outgrew.
@@ -2964,7 +2964,7 @@ Nobody sets out to advertise something they already sold. It happens because the
 By Henri Sila · 27 August 2026
 The failure nobody notices until a customer does
 The website says a thing is available. The shop sold it on Saturday. The first person to find out is somebody who travelled in, or who waited for a reply, and that is the worst possible way for it to come out.
-It is not carelessness. It is two systems that were never introduced.
+Nobody is being careless. The two systems were never introduced.
 How it works at Iglisi Watch
 A watch sold over the counter stops being offered on the site about a minute afterwards, and nobody opens a laptop to make that happen. The sale is recorded where the sale is, and the site follows.
 Adding one runs the same machinery the other way: the product page, the shop list, the sitemap and every figure written into the surrounding text all move together, in all 3 languages.
@@ -3164,7 +3164,7 @@ saves a round trip.
 https://minarankstudio.com/glossary/
 
 What the words mean.
-The jargon on this site, in plain language. If a word here is doing work you did not ask for, that is worth knowing before you pay anybody for it.
+The jargon on this site, in plain language. If a word here is doing work you did not ask for, find out before you pay anybody for it.
 Every trade has words that keep outsiders out. Ours has more than most, and an agency that leaves them unexplained is not being technical, it is being hard to check.
 These are the words we use on this site and what each one actually means. Nothing here is a promise about what any of them will do for you: that argument lives on the pages themselves.
 SEO
@@ -3189,7 +3189,7 @@ audit
 A read of a site against what search engines and readers need from it, written down. Ours names what is wrong, what it costs you and what we would do about it, in that order. Read it
 custom software
 A tool built for one business instead of rented from a company that built it for everybody. Worth it when the way you work is the thing that makes you money, and not otherwise. Read it
-Updated 14 August 2026
+Updated 27 August 2026
 
 ## What is AI search?
 https://minarankstudio.com/glossary/ai-search/
@@ -3202,13 +3202,13 @@ Why a shortlist is harder than a list
 Ten blue links had room for the tenth business. Three named companies do not. The gap between being included and being left out is now wider than the gap between third place and fourth ever was.
 That cuts both ways. A small studio that is genuinely the right answer to a narrow question can be named alongside companies many times its size, because the assistant is answering the question rather than ranking the budgets.
 What to do about it
-Be the clearest available answer to the questions your customers actually ask, and be described the same way everywhere a machine can read about you. That is the whole of it, and it is what our answer engine work does.
+Be the clearest available answer to the questions your customers actually ask, and be described the same way everywhere a machine can read about you. Those two things are what our answer engine work does.
 Questions worth asking
 Do assistants send real customers, or just curiosity?
 Both, and the split depends on the trade. For a decision somebody makes once every few years, like choosing a dentist or a builder, being named in the answer arrives very close to the moment they buy.
 Which assistant matters most here?
 The one your customers use, which in Albania and Italy is mostly ChatGPT today. That can change quickly, which is an argument for being readable by all of them rather than tuned to one.
-Updated 25 August 2026
+Updated 27 August 2026
 
 ## What is an audit?
 https://minarankstudio.com/glossary/audit/
@@ -3227,13 +3227,13 @@ How long should one take to read?
 Ten minutes for a small site. If it takes an hour, the person who wrote it has moved the work of deciding what matters onto you, which was the part you wanted done.
 Will you tell me the site is fine if it is?
 Yes, and it happens. Telling somebody their site is basically sound costs us a sale and buys the only thing worth more than one, which is being believed the next time we say something is wrong.
-Updated 25 August 2026
+Updated 27 August 2026
 
 ## What is custom software?
 https://minarankstudio.com/glossary/custom-software/
 
 What is custom software?
-Usually the wrong answer, which is what makes it worth saying clearly when it is the right one.
+Usually the wrong answer, so we say it clearly on the rare occasion it is the right one.
 Renting is normally correct
 Somebody else has already built accounting, email and shop software, they maintain it, and the monthly fee is smaller than the cost of the first month of building your own. Starting from nothing to do an ordinary thing is how money gets wasted.
 The test
@@ -3246,7 +3246,7 @@ What happens to it if you stop working with me?
 It keeps running, and you own it. We build tools that do not need us afterwards, which is a deliberate choice about what kind of relationship this is rather than a technical detail.
 Is a website custom software?
 Not usually, and it is worth keeping the words apart. Most sites are pages. It becomes software when it starts doing something, like reading your stock or answering a customer without anybody typing.
-Updated 25 August 2026
+Updated 27 August 2026
 
 ## What is GEO?
 https://minarankstudio.com/glossary/geo/
@@ -3265,7 +3265,7 @@ Does GEO replace SEO?
 No, and the overlap is large. Most of what makes a site quotable by an assistant is the same work that made it readable by a search engine, done with more care about answering the question directly.
 How would I know if it worked?
 By asking. Open each assistant, ask what it says about your trade in your town, and write the answer down before anybody starts work. Without that, there is nothing to compare against later.
-Updated 25 August 2026
+Updated 27 August 2026
 
 ## What is a map listing?
 https://minarankstudio.com/glossary/map-listing/
@@ -3284,7 +3284,7 @@ Does it cost anything?
 No. Claiming and running the profile is free, and the verification is usually a code sent by post or phone. Anybody charging you a monthly fee purely to keep it live is charging for something Google gives away.
 Do reviews really change how often it shows?
 They change how often it is shown and how often it is chosen, and the second effect is the larger one. A listing with recent reviews gets picked over an equally close one without them.
-Updated 25 August 2026
+Updated 27 August 2026
 
 ## What is ranking?
 https://minarankstudio.com/glossary/ranking/
@@ -3303,7 +3303,7 @@ So should I ignore position completely?
 No. Watch the direction rather than the number, over months rather than days, and only for the handful of searches that actually describe what you sell. A rising trend across those is meaningful.
 Why did I rank well for a week and then drop?
 New pages are sometimes shown prominently for a short period while the engine gathers evidence about them. What follows is not a penalty, it is the provisional position being replaced by an earned one.
-Updated 25 August 2026
+Updated 27 August 2026
 
 ## What is SEO?
 https://minarankstudio.com/glossary/seo/
@@ -3323,4 +3323,4 @@ Is SEO a one-off job or something ongoing?
 The technical half is largely one-off: fix it once and it stays fixed unless the site is rebuilt. The half that happens on other people's sites never finishes, because your competitors are still working too.
 Can I do any of it myself?
 Yes, and the most valuable part is the part only you can do: asking pleased customers for reviews, and writing down what you actually know about your trade. Neither needs an agency.
-Updated 25 August 2026
+Updated 27 August 2026

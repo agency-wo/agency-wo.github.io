@@ -40,7 +40,7 @@ NL = chr(10)
 CLIENTS = [
     {
         "slug": "iglisi-watch",
-        "src": "6b46ff5a",
+        "src": "1042c554",
         # Not copy: the file and its 2 dimensions.
         "mark": [("iglisi-watch.png", 195, 22)],
         "name": "Iglisi Watch",
@@ -90,8 +90,7 @@ CLIENTS = [
             "a ChatGPT. Preferiamo che tu controlli, invece di crederci sulla "
             "parola.",
             "Qui la concorrenza sono le schede negli elenchi online e le pagine "
-            "Facebook. Vale la pena dirlo, perché lo spazio c'era e nessuno "
-            "l'aveva preso.",
+            "Facebook. Lo spazio c'era e nessuno l'aveva preso.",
         ],
         "gsc": True,
         # The 4 numbers are the English strings, untouched: l10n.dec moves the

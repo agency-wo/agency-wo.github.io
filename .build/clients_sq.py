@@ -41,7 +41,7 @@ NL = chr(10)
 CLIENTS = [
     {
         "slug": "iglisi-watch",
-        "src": "6b46ff5a",
+        "src": "1042c554",
         # Not copy: the file and its 2 dimensions.
         "mark": [("iglisi-watch.png", 195, 22)],
         "name": "Iglisi Watch",
@@ -90,8 +90,7 @@ CLIENTS = [
             "anglisht, shqip ose italisht. Pastaj bëji ChatGPT-së të njëjtat "
             "pyetje. Duam më mirë ta kontrollosh vetë sesa të na besosh në fjalë.",
             "Konkurrenca këtu janë listimet në direktori online dhe faqet e "
-            "Facebook-ut. Ia vlen të thuhet, sepse hapësira ishte aty dhe askush "
-            "nuk e kishte zënë.",
+            "Facebook-ut. Hapësira ishte aty dhe askush nuk e kishte zënë.",
         ],
         "gsc": True,
         # The 4 numbers are the English strings, untouched: l10n.dec moves the

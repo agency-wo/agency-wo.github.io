@@ -17,12 +17,11 @@ sigle, e tradurle inventerebbe due termini che nessuno cerca.
 """
 
 PAGE = {
-    "src": "d4053b03",
+    "src": "d6d22036",
     "title": "Cosa vogliono dire le parole",
     "h1": "Cosa vogliono dire le parole.",
     "standfirst": "Il gergo di questo sito, in parole semplici. Se una parola "
-                  "qui fa un lavoro che non hai chiesto, vale la pena saperlo "
-                  "prima di pagare qualcuno per farlo.",
+                  "qui fa un lavoro che non hai chiesto, scoprilo prima di pagare qualcuno per farlo.",
     "description": "Definizioni semplici delle parole di ricerca e web che "
                    "questo studio usa: SEO, GEO, posizionamento, scheda "
                    "Google, volte mostrato, percentuale di clic e le altre.",

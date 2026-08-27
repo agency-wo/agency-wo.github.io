@@ -32,7 +32,7 @@ POSTS = [
     # ================================================================ SEO ===
     {
         "slug": "map-listing-first",
-        "src": "3b8e0f72",
+        "src": "791c51d8",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Kërkim lokal",
@@ -58,8 +58,7 @@ POSTS = [
                 "në maj në 741 klikime në tremujor deri në gusht. Pozicion "
                 "mesatar 8,6. Përqindje klikimesh 1%.</p>",
                 "<p>Janë numrat e një biznesi që Google ka nisur ta besojë dhe "
-                "nuk ka mbaruar ende së besuari. Të dyja gjysmat ia vlen t'i "
-                "dish para se të punësosh dikë.</p>",
+                "nuk ka mbaruar ende së besuari. Njihi të dyja gjysmat para se të punësosh dikë.</p>",
             ]),
             ("Çfarë tregon në të vërtetë grafiku", [
                 "<p>Dy vija. Herë e shfaqur, domethënë sa shpesh dyqani doli në "
@@ -1154,7 +1153,7 @@ POSTS = [
     # ===================================================== INDUSTRY: HOTELS ===
     {
         "slug": "hotels-and-guesthouses",
-        "src": "fd5807e2",
+        "src": "42a0fa96",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Kërkimi me AI",
@@ -1183,7 +1182,7 @@ POSTS = [
                 "<p>Të gjendesh vetë është mënyra si e mban ndryshimin te "
                 "rezervimet që do të kishin ardhur gjithsesi.</p>",
             ]),
-            ("Dera ka lëvizur, dhe ia vlen ta dish ku", [
+            ("Dera ka lëvizur", [
                 "<p><a href=\"https://www.siteminder.com/changing-traveller-report/\" target=\"_blank\" rel=\"noopener\">Changing Traveller Report 2026</a> i SiteMinder "
                 "gjeti se pjesa e udhëtarëve që nis kërkimin e një qëndrimi "
                 "nga një motor kërkimi ra në 21%, nga 36% një vit më parë, "
@@ -1457,7 +1456,7 @@ POSTS = [
     # ================================================== INDUSTRY: CAR REPAIR ===
     {
         "slug": "car-repair-and-garages",
-        "src": "e4985377",
+        "src": "8a314480",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Kërkim lokal",
@@ -1491,14 +1490,13 @@ POSTS = [
                 "<a href=\"https://www.eea.europa.eu/en/analysis/publications/product-lifespans-monitoring-trends/evolution-of-the-average-passenger-car-age-in-the-eu-between-2013-and-2022\" target=\"_blank\" rel=\"noopener\">shifrave të Agjencisë Evropiane të Mjedisit</a> "
                 "marrë nga Eurostat.</p>",
                 "<p>Ai është Bashkimi Evropian dhe Shqipëria nuk bën pjesë, "
-                "prandaj numri përshkruan fqinjët dhe jo këtë treg. Ia vlen ta "
-                "dish gjithsesi: një park makinash që plaket është një zanat "
+                "prandaj numri përshkruan fqinjët dhe jo këtë treg. Mbetet e vërtetë gjithsesi: një park makinash që plaket është një zanat "
                 "riparimi që rritet, kudo ku është numëruar.</p>",
             ]),
             ("Shkruaj atë që të sjellin vërtet njerëzit", [
                 "<p>Për një muaj mbaj shënim si e përshkruajnë klientët "
                 "prishjen kur marrin në telefon. Ato fjali, me fjalët e tyre, "
-                "janë faqet që ia vlen t'i kesh.</p>",
+                "janë faqet e tua.</p>",
                 "<p>Nuk kushton asgjë, s'ka nevojë për dizajn, dhe është më "
                 "afër asaj që shkruan dikush sesa çdo listë shërbimesh që një "
                 "ofiçinë do të shkruante për vete.</p>",
@@ -1640,7 +1638,7 @@ POSTS = [
     },
     {
         "slug": "what-a-website-costs-in-albania",
-        "src": "9c6d3edb",
+        "src": "0310b95c",
         "date": "2026-08-21",
         "updated": "2026-08-21",
         "topic": "Faqe interneti",
@@ -1741,8 +1739,7 @@ POSTS = [
              "ajo që i pengon të gjenden. Cili nga të dy rastet je mund të "
              "ta themi para se të shpenzosh gjë."),
             ("E kujt është kur mbaron?",
-             "E jotja: domeni, kodi dhe çdo llogari, në emrin tënd që ditën "
-             "e parë. Nuk është bujari, është e vetmja marrëveshje që të lë "
+             "E jotja: domeni, kodi dhe çdo llogari, në emrin tënd që ditën e parë. Është e vetmja marrëveshje që të lë "
              "të lirë të ikësh nga ne."),
         ],
         "related": [("/web-design/", "Faqe interneti"),
@@ -1751,7 +1748,7 @@ POSTS = [
 
     {
         "slug": "how-to-come-up-first-on-google",
-        "src": "e73891bc",
+        "src": "a9185a01",
         "date": "2026-08-21",
         "updated": "2026-08-21",
         "topic": "Kërkim lokal",
@@ -1831,9 +1828,7 @@ POSTS = [
              "saktë se kaq është dikush që hamendëson me shpenzimet e tua."),
             ("A mund t'i paguaj Google që të dal i pari?",
              "Mund të paguash për të qëndruar sipër, me shkrim se është "
-             "reklamë, dhe mbaron ditën që ndalon së paguari. Vendi në hartë "
-             "dhe rezultatet poshtë nuk blihen, dhe pikërisht prandaj "
-             "vlejnë."),
+             "reklamë, dhe mbaron ditën që ndalon së paguari. Vendi në hartë dhe rezultatet poshtë nuk blihen me asnjë çmim."),
             ("A ka rëndësi që konkurrenti ka më shumë vlerësime?",
              "Ka, dhe është hendeku më i riparueshëm i kësaj liste. "
              "Vlerësimet kërkohen, nuk priten. Një grusht i qëndrueshëm dhe "
@@ -2326,7 +2321,7 @@ POSTS = [
 
     {
         "slug": "website-or-just-instagram",
-        "src": "a80f3b10",
+        "src": "497bb77b",
         "date": "2026-08-21",
         "updated": "2026-08-21",
         "topic": "Faqe interneti",
@@ -2371,16 +2366,14 @@ POSTS = [
                 "kërkimi nuk do t'i dalë rrjeti yt i fotove. Motorët lexojnë "
                 "faqe, dhe një përshkrim brenda një aplikacioni nuk është "
                 "faqe që ata ta peshojnë.</p>",
-                "<p>Aty është gjithë hendeku. Jo se sociali nuk punon, por "
-                "se punon vetëm për ata që tashmë dinë të të kërkojnë.</p>",
+                "<p>Sociali punon, por vetëm për ata që tashmë dinë të të kërkojnë.</p>",
             ]),
             ("E dyta: të citohet nga një asistent", [
                 "<p>Pyet një asistent për një dyqan si i yti dhe përgjigjet "
                 "nga tekst që mund ta lexojë e ta verifikojë. Një biznes që "
                 "ekziston vetëm brenda një aplikacioni nuk i jep gjë për të "
                 "lexuar, ndaj emërton dikë tjetër.</p>",
-                "<p>Kjo është më e re dhe po lëviz shpejt, dhe prandaj ia "
-                "vlen ta dish para se të bëhet urgjente.</p>",
+                "<p>Kjo është më e re dhe po lëviz shpejt. Mësoje para se të bëhet urgjente.</p>",
             ]),
             ("E treta: të jetë e jotja", [
                 "<p>Një llogari është hua. Rregullat ndryshojnë, shtrirja "
@@ -2423,7 +2416,7 @@ POSTS = [
 
     {
         "slug": "what-meta-ads-cost-in-albania",
-        "src": "e4ac73e8",
+        "src": "2cbca205",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Meta ads",
@@ -2729,7 +2722,7 @@ POSTS = [
 
     {
         "slug": "how-to-choose-a-web-designer",
-        "src": "9aa52efc",
+        "src": "373479d5",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Faqe interneti",
@@ -2777,9 +2770,7 @@ POSTS = [
             ]),
             ("Pyet kush shkruan konkretisht", [
                 "<p>Kush i shkruan fjalët, kush i bën fotot, dhe kush do të "
-                "përgjigjet ende në muajin e shtatë. Studiot shesin me një "
-                "të vjetër dhe dorëzojnë me dikë tjetër, dhe kjo është më "
-                "mirë ta dish se ta zbulosh.</p>",
+                "përgjigjet ende në muajin e shtatë. Studiot shesin me një të vjetër dhe dorëzojnë me dikë tjetër. Pyet cilin prej të dyve do të kesh.</p>",
             ]),
             ("Pyet çfarë ndodh kur do të ndryshosh një çmim", [
                 "<p>Nëse përgjigjja përfshin t'u shkruash atyre, çmimet e "
@@ -2930,7 +2921,7 @@ POSTS = [
 
     {
         "slug": "why-my-website-gets-no-visitors",
-        "src": "28dc0094",
+        "src": "3a830b1c",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Kërkim lokal",
@@ -2983,9 +2974,7 @@ POSTS = [
             ]),
             ("Po garon për fjalët e gabuara", [
                 "<p>Të ndjekësh frazën më të gjerë të mundshme kundër gjithë "
-                "vendit është bast i humbur për një biznes të vogël. Fjalët "
-                "që ia vlejnë janë më të gjata, më të ngushta dhe më "
-                "afër.</p>",
+                "vendit është bast i humbur për një biznes të vogël. Fjalët që sjellin punë janë më të gjata, më të ngushta dhe më afër.</p>",
                 "<p>Dikush që shkruan saktësisht atë që do, në qytetin ku je "
                 "ti, vlen më shumë se njëqind që shkruajnë diçka të "
                 "paqartë.</p>",
@@ -3114,7 +3103,7 @@ POSTS = [
 
     {
         "slug": "how-to-get-google-reviews",
-        "src": "1346bc78",
+        "src": "196161ea",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Kërkim lokal",
@@ -3131,8 +3120,7 @@ POSTS = [
         "description": "Si të marrësh vlerësime në Google: kur të kërkosh, "
                        "çfarë të thuash, çfarë është e ndaluar, dhe si ta "
                        "bësh lënien e një vlerësimi punë e një prekjeje.",
-        "og_desc": "Gati të gjithë do të linin një. Problemi nuk është "
-                   "dëshira, është që askush nuk ua kërkon.",
+        "og_desc": "Gati të gjithë do të linin një. Gati askujt nuk i kërkohet.",
 
         "body": [
             ("Zvogëloje në një prekje para se t'i kërkosh kujtdo", [
@@ -3315,7 +3303,7 @@ POSTS = [
 
     {
         "slug": "website-mistakes-albanian-businesses-make",
-        "src": "ada4ef66",
+        "src": "da8cdf34",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Faqe interneti",
@@ -3328,8 +3316,7 @@ POSTS = [
         "summary": "Çfarë del vërtet kur hap faqet e bizneseve të vogla "
                    "këtu, njërën pas tjetrës, dhe i lexon ashtu si do t'i "
                    "lexonte një klient.",
-        "standfirst": "Asnjëra prej tyre nuk është ekzotike. Kjo është pika: "
-                      "gabimet e zakonshme janë të zakonshme, dhe shumica "
+        "standfirst": "Asnjëra prej tyre nuk është ekzotike. Gabimet e zakonshme janë të zakonshme, dhe shumica "
                       "janë një pasdite shkrimi.",
         "description": "Gabimet më të shpeshta në faqet e bizneseve të vogla "
                        "në Shqipëri, sa kushton secili, dhe cilat mund t'i "
@@ -3738,7 +3725,7 @@ POSTS = [
 
     {
         "slug": "how-to-appear-in-chatgpt",
-        "src": "6c93b31d",
+        "src": "c263bdce",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Kërkimi me AI",
@@ -3809,8 +3796,7 @@ POSTS = [
             ("A mund të paguaj për t'u përfshirë?",
              "Jo, dhe kush ta ofron po të shet diçka tjetër. Brenda "
              "përgjigjes së një asistenti nuk ka asnjë hapësirë reklame dhe "
-             "asnjë procedurë regjistrimi, dhe pikërisht kjo e bën pozitën "
-             "me vlerë."),
+             "asnjë procedurë regjistrimi, prandaj askush nuk mund ta blejë vendin që fiton aty."),
             ("A ndihmon të përmend ChatGPT në faqen time?",
              "Jo. Të shkruash emrin e një asistenti nëpër faqet e tua nuk "
              "bën gjë veç e bën tekstin të çuditshëm. Ajo që të bën të "
@@ -4313,7 +4299,7 @@ POSTS = [
 
     {
         "slug": "builders-and-contractors",
-        "src": "a8c08da0",
+        "src": "6e912b22",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Kërkim lokal",
@@ -4367,7 +4353,7 @@ POSTS = [
                 "mbi faqe kur e kthen telefonatën, dhe pastaj ktheje. Kthen "
                 "më mirë se çdo gjë që mund të rregullojë një dizajner.</p>",
             ]),
-            ("Gjërat e sikletshme që ia vlen t'i thuash", [
+            ("Gjërat e sikletshme", [
                 "<p>Nëse je i licencuar dhe i siguruar. Nëse ka garanci dhe "
                 "për sa. Çfarë ndodh nëse kantieri zgjatet. E pyesin të "
                 "gjithë dhe nuk e publikon pothuajse askush.</p>",
@@ -4389,7 +4375,7 @@ POSTS = [
              "një faqe. Publiko çfarë e përcakton: sipërfaqja, gjendja e "
              "asaj që është, materialet. Është më e dobishme se një numër "
              "dhe është e ndershme."),
-            ("A ia vlen fare të kesh faqe interneti?",
+            ("A më duhet fare një faqe interneti?",
              "Është i vetmi vend ku një i panjohur mund të verifikojë se "
              "ekziston para se të dorëzojë para. Një skedë me foto dhe "
              "vlerësime bën një pjesë të punës, dhe pjesa që nuk e bën dot "
@@ -4410,7 +4396,7 @@ POSTS = [
 
     {
         "slug": "seo-durres",
-        "src": "3e596d1e",
+        "src": "98a013c9",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Kërkim lokal",
@@ -4500,7 +4486,7 @@ POSTS = [
             ("Po nëse klientët e mi janë vizitorë dhe jo vendas?",
              "Atëherë kërkimi ndodh në një gjuhë tjetër dhe shpesh para se "
              "të mbërrijnë, gjë që ndryshon çfarë duhet të thonë faqet por "
-             "jo si funksionon harta. Ia vlen ta themi që në bisedën e parë."),
+             "jo si funksionon harta. Duhet thënë që në bisedën e parë."),
         ],
         "related": [("/seo/", "SEO dhe kërkim lokal"),
                     ("/work/iglisi-watch/", "Iglisi Watch")],
@@ -4603,7 +4589,7 @@ POSTS = [
 
     {
         "slug": "seo-pavia",
-        "src": "db967614",
+        "src": "09ca48d9",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Kërkim lokal",
@@ -4611,8 +4597,7 @@ POSTS = [
         "service": ("/seo/", "SEO dhe kërkim lokal"),
 
         "title": "SEO në Pavia",
-        "h1": "Milano është 35 kilometra larg, dhe problemi është i gjithi "
-              "aty.",
+        "h1": "Milano është 35 kilometra larg, dhe i merr kërkimet.",
         "summary": "Ku ikën kërkesa vendase, pse agjencitë e qytetit të madh "
                    "kushtojnë sa ai qytet, dhe ku ndalet rrjedhja.",
         "standfirst": "Për një biznes në Pavia që i sheh klientët të "
@@ -4691,8 +4676,7 @@ POSTS = [
              "dhe puna jote shkon në fund të një radhe të ndërtuar për ata."),
             ("Puna shkruhet në italisht apo përkthehet?",
              "Shkruhet në italisht. Një faqe e përkthyer tradhtohet që në "
-             "rreshtin e dytë dhe klientët e tu e vënë re para Google, që "
-             "është arsyeja e vërtetë pse ka rëndësi."),
+             "rreshtin e dytë dhe klientët e tu e vënë re para Google."),
             ("Nga nis?",
              "Nga një auditim falas i faqes që ke, që thotë çfarë do të "
              "ndryshonim dhe në çfarë radhe. Nuk të duhet të vendosësh gjë "
@@ -4807,7 +4791,7 @@ POSTS = [
 
     {
         "slug": "when-a-spreadsheet-stops-being-enough",
-        "src": "b85a380e",
+        "src": "a47261a4",
         "date": "2026-08-27",
         "updated": "2026-08-27",
         "topic": "Software me porosi",
@@ -4816,8 +4800,7 @@ POSTS = [
 
         "title": "Kur një fletëllogaritëse nuk mjafton më",
         "h1": "Një fletëllogaritëse dorëzohet ditën që duhet të jetë në dy vende.",
-        "summary": "Fletëllogaritësja rrallë është problemi. Problemi është kopja e dytë e "
-                   "saj, dhe ai moment ia vlen të dallohet.",
+        "summary": "Një fletëllogaritëse mban derisa dikush t'i bëjë një kopje të dytë.",
         "standfirst": "Një skedar, një person, një vend: shkëlqyeshëm. Telashet nisin te dy.",
         "description": "Si ta kuptosh që një fletëllogaritëse nuk i shkon më një biznesi të "
                        "vogël, treguar me një dyqan orësh në Durrës që mbajti një bllok sa "
@@ -4841,8 +4824,7 @@ POSTS = [
                 "<p>Iglisi Watch mbërriti aty me një bllok. Riparimet shkruheshin te banaku i "
                 "punës, shitjet ndodhnin te arka, dhe blloku mund të ishte vetëm në njërin "
                 "prej të dyve.</p>",
-                "<p>Shenja nuk është sa numëron. Është një vend i dytë ku mban të "
-                "vërtetën.</p>",
+                "<p>Shenja është një vend i dytë ku mbahet e vërteta, pavarësisht sasisë.</p>",
             ]),
             ("Çfarë e zëvendësoi", [
                 "<p>Jo një fletëllogaritëse më të madhe. Një sistem që mban riparimet, stokun "
@@ -4866,7 +4848,7 @@ POSTS = [
     },
     {
         "slug": "sold-in-the-shop-gone-from-the-site",
-        "src": "a830213f",
+        "src": "f0e41580",
         "date": "2026-08-27",
         "updated": "2026-08-27",
         "topic": "Software me porosi",
@@ -4888,8 +4870,7 @@ POSTS = [
                 "<p>Faqja thotë se diçka ka. Dyqani e shiti të shtunën. I pari që e merr vesh "
                 "është dikush që bëri rrugë, ose që priti përgjigje, dhe kjo është mënyra më "
                 "e keqe e mundshme që të dalë në shesh.</p>",
-                "<p>Nuk është pakujdesi. Janë dy sisteme që nuk u njohën kurrë me njëri "
-                "tjetrin.</p>",
+                "<p>Askush nuk është i pakujdesshëm. Dy sistemet nuk u njohën kurrë me njëri tjetrin.</p>",
             ]),
             ("Si funksionon te Iglisi Watch", [
                 "<p>Një orë e shitur te arka pushon së ofruari në faqe rreth një minutë më "
@@ -4918,7 +4899,7 @@ POSTS = [
     },
     {
         "slug": "what-custom-software-costs-to-run",
-        "src": "c9e185d0",
+        "src": "adffa99b",
         "date": "2026-08-27",
         "updated": "2026-08-27",
         "topic": "Software me porosi",
@@ -4929,17 +4910,15 @@ POSTS = [
         "h1": "Fatura që nuk vjen çdo muaj.",
         "summary": "Një software i ndërtuar nuk ka licencë. Ka gjithsesi kosto, dhe ia vlen "
                    "të thuhen para se të blesh.",
-        "standfirst": "Askush nuk të dërgon faturë në mars. Ky është thelbi, dhe është edhe "
-                      "pjesa që njerëzit nuk e besojnë.",
+        "standfirst": "Askush nuk të dërgon faturë në mars. Njerëzit nuk e besojnë deri në marsin tjetër.",
         "description": "Sa kushton vërtet të mbash në këmbë një software me porosi për një "
                        "biznes të vogël, ç'zotëron në fund, dhe kur qiraja e një software tjetër është përgjigjja më e mirë.",
-        "og_desc": "Askush nuk të dërgon faturë në mars. Ky është thelbi.",
+        "og_desc": "Askush nuk të dërgon faturë në mars. Sa kushton ta mbash në këmbë një software me porosi, dhe çfarë është e jotja.",
 
         "body": [
             ("Kostoja që mungon", [
                 "<p>Nuk ka pagesë për përdorues dhe nuk ka rinovim vjetor, sepse nuk ka kë të "
-                "paguash. Kjo është ndryshimi mes zotërimit të një gjëje dhe marrjes së saj "
-                "me qira, dhe përgjatë 5 vitesh zakonisht është shifra më e madhe në "
+                "paguash. Zotërimi dhe qiraja ndahen aty, dhe përgjatë 5 vitesh zakonisht është shifra më e madhe në "
                 "krahasim.</p>",
             ]),
             ("Çfarë kushton vërtet", [

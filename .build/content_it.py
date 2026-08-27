@@ -34,7 +34,7 @@ SERVICES = [
     # ------------------------------------------------------------------ SEO --
     {
         "slug": "seo",
-        "src": "887e8c8b",
+        "src": "676260d9",
         "nav": "SEO",
         "schema_name": "Ottimizzazione per i motori di ricerca e ricerca locale",
         # 23 characters, the same as the English, and 41 with the suffix
@@ -101,8 +101,7 @@ SERVICES = [
                 "di quanto quella recensione ti sia costata.</p>",
             ]),
             ("Una parte sta sul sito e l'altra fuori", [
-                "<p>Il settore divide il resto in due, e vale la pena sapere "
-                "qual è quale, perché te li venderanno tutti e due.</p>",
+                "<p>Il settore divide il resto in due e te li venderanno tutti e due, quindi ecco qual è quale.</p>",
                 # Rule 9: the term stays English and the sentence that glosses
                 # it stays a sentence that glosses it. The <strong> moves to
                 # nothing: it is already on the word that carries the emphasis.

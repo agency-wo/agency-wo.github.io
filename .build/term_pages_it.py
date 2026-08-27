@@ -174,7 +174,7 @@ PAGES = [
     },
     {
         "slug": "ai-search",
-        "src": "20f753a4",
+        "src": "e8c5cb8d",
         "key": "AI search",
         "term": "ricerca AI",
         "h1": "Cos'è la ricerca AI?",
@@ -211,8 +211,7 @@ PAGES = [
              "body": [
                  "<p>Sii la risposta più chiara che c'è alle domande che i "
                  "tuoi clienti fanno davvero, e fatti descrivere allo stesso "
-                 "modo ovunque una macchina possa leggere di te. È tutto qui, "
-                 "ed è quello che fa il nostro <a href=\"/geo/\">lavoro sui "
+                 "modo ovunque una macchina possa leggere di te. Queste due cose sono quello che fa il nostro <a href=\"/geo/\">lavoro sui "
                  "motori di risposta</a>.</p>",
              ]},
         ],
@@ -412,7 +411,7 @@ PAGES = [
     },
     {
         "slug": "custom-software",
-        "src": "03b81225",
+        "src": "2c00d39f",
         "key": "custom software",
         "term": "software su misura",
         "h1": "Cos'è il software su misura?",
@@ -422,8 +421,7 @@ PAGES = [
                        "prova onesta per capire in quale delle 2 situazioni "
                        "sei.",
         "og_desc": "Quando costruire batte affittare, e quando invece no.",
-        "standfirst": "Di solito è la risposta sbagliata, ed è proprio questo "
-                      "che rende utile dirlo chiaro quando è quella giusta.",
+        "standfirst": "Di solito è la risposta sbagliata, quindi lo diciamo chiaro nelle rare volte in cui è quella giusta.",
         "sections": [
             {"h2": "Affittare di solito è la scelta giusta",
              "body": [

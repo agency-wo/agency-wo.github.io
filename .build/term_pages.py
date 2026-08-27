@@ -199,8 +199,7 @@ PAGES = [
              "body": [
                  "<p>Be the clearest available answer to the questions your "
                  "customers actually ask, and be described the same way "
-                 "everywhere a machine can read about you. That is the whole "
-                 "of it, and it is what our <a href=\"/geo/\">answer engine "
+                 "everywhere a machine can read about you. Those two things are what our <a href=\"/geo/\">answer engine "
                  "work</a> does.</p>",
              ]},
         ],
@@ -399,8 +398,7 @@ PAGES = [
                        "from a company that built it for everybody, and the "
                        "honest test for telling the two situations apart.",
         "og_desc": "When building beats renting, and when it does not.",
-        "standfirst": "Usually the wrong answer, which is what makes it worth "
-                      "saying clearly when it is the right one.",
+        "standfirst": "Usually the wrong answer, so we say it clearly on the rare occasion it is the right one.",
         "sections": [
             {"h2": "Renting is normally correct",
              "body": [

@@ -32,7 +32,7 @@ POSTS = [
     # ================================================================ SEO ===
     {
         "slug": "map-listing-first",
-        "src": "3b8e0f72",
+        "src": "791c51d8",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Ricerca locale",
@@ -63,8 +63,7 @@ POSTS = [
                 "è passata da zero a maggio a 741 clic a trimestre ad agosto. "
                 "Posizione media 8,6. Percentuale di clic 1%.</p>",
                 "<p>Sono i numeri di un'attività di cui Google ha iniziato a "
-                "fidarsi e non ha finito di fidarsi. Vale la pena conoscere "
-                "tutte e due le metà prima di assumere qualcuno.</p>",
+                "fidarsi e non ha finito di fidarsi. Conosci tutte e due le metà prima di assumere qualcuno.</p>",
             ]),
             ("Cosa mostra davvero il grafico", [
                 "<p>Due linee. Le volte mostrato, cioè quanto spesso il negozio "
@@ -1155,7 +1154,7 @@ POSTS = [
     # ===================================================== INDUSTRY: HOTELS ===
     {
         "slug": "hotels-and-guesthouses",
-        "src": "fd5807e2",
+        "src": "42a0fa96",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Ricerca AI",
@@ -1186,7 +1185,7 @@ POSTS = [
                 "<p>Farsi trovare da soli è come ti tieni la differenza sulle "
                 "prenotazioni che sarebbero arrivate comunque.</p>",
             ]),
-            ("La porta si è spostata, e conviene sapere dove", [
+            ("La porta si è spostata", [
                 "<p>Il <a href=\"https://www.siteminder.com/changing-traveller-report/\" target=\"_blank\" rel=\"noopener\">Changing Traveller Report 2026</a> di SiteMinder "
                 "ha rilevato che la quota di viaggiatori che comincia a "
                 "cercare un soggiorno da un motore di ricerca è scesa al 21%, "
@@ -1463,7 +1462,7 @@ POSTS = [
     # ================================================== INDUSTRY: CAR REPAIR ===
     {
         "slug": "car-repair-and-garages",
-        "src": "e4985377",
+        "src": "8a314480",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Ricerca locale",
@@ -1498,15 +1497,13 @@ POSTS = [
                 "<a href=\"https://www.eea.europa.eu/en/analysis/publications/product-lifespans-monitoring-trends/evolution-of-the-average-passenger-car-age-in-the-eu-between-2013-and-2022\" target=\"_blank\" rel=\"noopener\">dati dell'Agenzia europea dell'ambiente</a> "
                 "presi da Eurostat.</p>",
                 "<p>Quella è l'Unione Europea e l'Albania non ne fa parte, "
-                "quindi il numero descrive i vicini e non questo mercato. Vale "
-                "la pena saperlo lo stesso: un parco auto che invecchia è un "
+                "quindi il numero descrive i vicini e non questo mercato. Resta vero lo stesso: un parco auto che invecchia è un "
                 "mestiere di riparazioni che cresce, ovunque lo abbiano "
                 "contato.</p>",
             ]),
             ("Scrivi quello che la gente ti porta davvero", [
                 "<p>Per un mese annota come i clienti descrivono il guasto "
-                "quando telefonano. Quelle frasi, con le loro parole, sono le "
-                "pagine che conviene avere.</p>",
+                "quando telefonano. Quelle frasi, con le loro parole, sono le tue pagine.</p>",
                 "<p>Non costa niente, non ha bisogno di design, ed è più "
                 "vicino a quello che uno digita di qualsiasi elenco di servizi "
                 "che un'officina scriverebbe su se stessa.</p>",
@@ -1655,7 +1652,7 @@ POSTS = [
     },
     {
         "slug": "what-a-website-costs-in-albania",
-        "src": "9c6d3edb",
+        "src": "0310b95c",
         "date": "2026-08-21",
         "updated": "2026-08-21",
         "topic": "Siti web",
@@ -1756,8 +1753,7 @@ POSTS = [
              "solo quello che impedisce di trovarle. Quale dei due casi sia "
              "il tuo possiamo dirtelo prima che tu spenda qualcosa."),
             ("Di chi è quando è finito?",
-             "Tuo: il dominio, il codice e ogni account, a tuo nome dal "
-             "primo giorno. Non è generosità, è l'unico accordo che ti "
+             "Tuo: il dominio, il codice e ogni account, a tuo nome dal primo giorno. È l'unico accordo che ti "
              "lascia libero di andartene da noi."),
         ],
         "related": [("/web-design/", "Siti web"),
@@ -1766,7 +1762,7 @@ POSTS = [
 
     {
         "slug": "how-to-come-up-first-on-google",
-        "src": "e73891bc",
+        "src": "a9185a01",
         "date": "2026-08-21",
         "updated": "2026-08-21",
         "topic": "Ricerca locale",
@@ -1845,9 +1841,7 @@ POSTS = [
              "più precisa è qualcuno che tira a indovinare a spese tue."),
             ("Posso pagare Google per stare primo?",
              "Puoi pagare per stare sopra, con scritto che è un annuncio, e "
-             "finisce il giorno che smetti di pagare. Il posto sulla mappa e "
-             "i risultati sotto non si comprano, ed è proprio per questo che "
-             "valgono."),
+             "finisce il giorno che smetti di pagare. Il posto sulla mappa e i risultati sotto non si comprano a nessun prezzo."),
             ("Conta che il mio concorrente abbia più recensioni?",
              "Conta, ed è il divario più rimediabile di questa lista. Le "
              "recensioni si chiedono, non si aspettano. Una manciata "
@@ -2346,7 +2340,7 @@ POSTS = [
 
     {
         "slug": "website-or-just-instagram",
-        "src": "a80f3b10",
+        "src": "497bb77b",
         "date": "2026-08-21",
         "updated": "2026-08-21",
         "topic": "Siti web",
@@ -2389,16 +2383,14 @@ POSTS = [
                 "ricerca non si vedrà comparire la tua griglia. I motori "
                 "leggono pagine, e una didascalia dentro un'app non è una "
                 "pagina che possano pesare.</p>",
-                "<p>È tutto qui lo scarto. Non che il social non funzioni, "
-                "ma che funziona solo per chi già sa di doverti cercare.</p>",
+                "<p>Il social funziona, ma solo per chi già sa di doverti cercare.</p>",
             ]),
             ("La seconda: essere citato da un assistente", [
                 "<p>Chiedi a un assistente un negozio come il tuo e risponde "
                 "partendo da testo che può leggere e verificare. Un'attività "
                 "che esiste solo dentro un'app non gli dà niente da leggere, "
                 "quindi nomina qualcun altro.</p>",
-                "<p>È una cosa più nuova e si muove in fretta, ed è per "
-                "questo che conviene saperlo prima che diventi urgente.</p>",
+                "<p>È una cosa più nuova e si muove in fretta. Imparala prima che diventi urgente.</p>",
             ]),
             ("La terza: essere tua", [
                 "<p>Un account è in prestito. Le regole cambiano, la portata "
@@ -2444,7 +2436,7 @@ POSTS = [
 
     {
         "slug": "what-meta-ads-cost-in-albania",
-        "src": "e4ac73e8",
+        "src": "2cbca205",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Meta ads",
@@ -2751,7 +2743,7 @@ POSTS = [
 
     {
         "slug": "how-to-choose-a-web-designer",
-        "src": "9aa52efc",
+        "src": "373479d5",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Siti web",
@@ -2801,9 +2793,7 @@ POSTS = [
             ]),
             ("Chiedi chi scrive materialmente", [
                 "<p>Chi scrive le parole, chi fa le foto, e chi risponderà "
-                "ancora al settimo mese. Gli studi vendono con un senior e "
-                "consegnano con qualcun altro, ed è meglio saperlo che "
-                "scoprirlo.</p>",
+                "ancora al settimo mese. Gli studi vendono con un senior e consegnano con qualcun altro. Chiedi quale dei due ti tocca.</p>",
             ]),
             ("Chiedi cosa succede quando vuoi cambiare un prezzo", [
                 "<p>Se la risposta prevede di scrivergli, i tuoi prezzi "
@@ -2954,7 +2944,7 @@ POSTS = [
 
     {
         "slug": "why-my-website-gets-no-visitors",
-        "src": "28dc0094",
+        "src": "3a830b1c",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Ricerca locale",
@@ -3009,9 +2999,7 @@ POSTS = [
             ]),
             ("Stai gareggiando per le parole sbagliate", [
                 "<p>Inseguire la frase più larga possibile contro tutto il "
-                "paese è una scommessa persa per un'attività piccola. Le "
-                "parole che valgono sono più lunghe, più strette e più "
-                "vicine.</p>",
+                "paese è una scommessa persa per un'attività piccola. Le parole che rendono sono più lunghe, più strette e più vicine.</p>",
                 "<p>Uno che scrive esattamente quello che vuole, nella città "
                 "dove sei tu, vale più di cento che scrivono qualcosa di "
                 "vago.</p>",
@@ -3144,7 +3132,7 @@ POSTS = [
 
     {
         "slug": "how-to-get-google-reviews",
-        "src": "1346bc78",
+        "src": "196161ea",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Ricerca locale",
@@ -3161,8 +3149,7 @@ POSTS = [
         "description": "Come ottenere recensioni su Google: quando chiedere, "
                        "cosa dire, cosa è vietato, e come far sì che "
                        "lasciarne una richieda un solo tocco.",
-        "og_desc": "Quasi tutti ne lascerebbero una. Il problema non è la "
-                   "voglia, è che nessuno glielo chiede.",
+        "og_desc": "Quasi tutti ne lascerebbero una. Quasi a nessuno viene chiesto.",
 
         "body": [
             ("Riducilo a un tocco prima di chiedere a chiunque", [
@@ -3341,7 +3328,7 @@ POSTS = [
 
     {
         "slug": "website-mistakes-albanian-businesses-make",
-        "src": "ada4ef66",
+        "src": "da8cdf34",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Siti web",
@@ -3353,8 +3340,7 @@ POSTS = [
         "summary": "Cosa salta fuori davvero aprendo i siti delle piccole "
                    "attività qui, uno dopo l'altro, e leggendoli come "
                    "farebbe un cliente.",
-        "standfirst": "Nessuno di questi è esotico. È il punto: i difetti "
-                      "comuni sono comuni, e quasi tutti sono un pomeriggio "
+        "standfirst": "Nessuno di questi è esotico. I difetti comuni sono comuni, e quasi tutti sono un pomeriggio "
                       "di scrittura.",
         "description": "Gli errori più frequenti sui siti delle piccole "
                        "attività in Albania, quanto costa ognuno, e quali "
@@ -3769,7 +3755,7 @@ POSTS = [
 
     {
         "slug": "how-to-appear-in-chatgpt",
-        "src": "6c93b31d",
+        "src": "c263bdce",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Ricerca AI",
@@ -3843,8 +3829,7 @@ POSTS = [
             ("Posso pagare per essere incluso?",
              "No, e chi te lo propone ti sta vendendo altro. Dentro la "
              "risposta di un assistente non c'è nessuno spazio pubblicitario "
-             "e nessuna procedura di iscrizione, ed è proprio questo che "
-             "rende la posizione preziosa."),
+             "e nessuna procedura di iscrizione, quindi nessuno può comprare il posto che ti guadagni lì."),
             ("Serve nominare ChatGPT sul mio sito?",
              "No. Scrivere il nome di un assistente nelle tue pagine non fa "
              "niente se non rendere strano il testo. Quello che ti fa "
@@ -4356,7 +4341,7 @@ POSTS = [
 
     {
         "slug": "builders-and-contractors",
-        "src": "a8c08da0",
+        "src": "6e912b22",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Ricerca locale",
@@ -4411,7 +4396,7 @@ POSTS = [
                 "sito quando richiami, e poi richiama. Converte meglio di "
                 "qualsiasi cosa possa sistemare un designer.</p>",
             ]),
-            ("Le cose scomode che vale la pena dire", [
+            ("Le cose scomode", [
                 "<p>Se sei in regola e assicurato. Se c'è una garanzia e per "
                 "quanto. Cosa succede se il cantiere sfora. Se lo chiedono "
                 "tutti e quasi nessuno lo pubblica.</p>",
@@ -4433,7 +4418,7 @@ POSTS = [
              "cantiere da un sito. Pubblica cosa lo determina: la metratura, "
              "lo stato di quello che c'è, i materiali. È più utile di un "
              "numero ed è onesto."),
-            ("Vale la pena avere un sito?",
+            ("Mi serve davvero un sito?",
              "È l'unico posto dove uno sconosciuto può verificare che esisti "
              "prima di consegnare dei soldi. Una scheda con foto e "
              "recensioni fa una parte del lavoro, e la parte che non può "
@@ -4454,7 +4439,7 @@ POSTS = [
 
     {
         "slug": "seo-durres",
-        "src": "3e596d1e",
+        "src": "98a013c9",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Ricerca locale",
@@ -4544,8 +4529,7 @@ POSTS = [
             ("E se i miei clienti sono turisti invece che locali?",
              "Allora la ricerca avviene in un'altra lingua e spesso prima "
              "che arrivino, il che cambia cosa devono dire le pagine ma non "
-             "come funziona la mappa. Vale la pena dirlo nella prima "
-             "conversazione."),
+             "come funziona la mappa. Va detto nella prima conversazione."),
         ],
         "related": [("/seo/", "SEO e ricerca locale"),
                     ("/work/iglisi-watch/", "Iglisi Watch")],
@@ -4650,7 +4634,7 @@ POSTS = [
 
     {
         "slug": "seo-pavia",
-        "src": "db967614",
+        "src": "09ca48d9",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Ricerca locale",
@@ -4658,7 +4642,7 @@ POSTS = [
         "service": ("/seo/", "SEO e ricerca locale"),
 
         "title": "SEO a Pavia",
-        "h1": "Milano è a 35 chilometri, e il problema è tutto lì.",
+        "h1": "Milano è a 35 chilometri, e si prende le ricerche.",
         "summary": "Dove se ne va la domanda locale, perché le agenzie della "
                    "città accanto costano quanto quella città, e dove si "
                    "ferma la perdita.",
@@ -4736,8 +4720,7 @@ POSTS = [
              "tuo lavoro finisce in fondo a una coda fatta per loro."),
             ("Il lavoro lo fate in italiano o tradotto?",
              "Scritto in italiano. Una pagina tradotta si sente alla seconda "
-             "riga e i tuoi clienti se ne accorgono prima di Google, che è "
-             "il motivo vero per cui conta."),
+             "riga e i tuoi clienti se ne accorgono prima di Google."),
             ("Da dove si comincia?",
              "Da un audit gratuito del sito che hai, che dice cosa "
              "cambieremmo e in che ordine. Non serve deciderlo prima e non "
@@ -4851,7 +4834,7 @@ POSTS = [
 
     {
         "slug": "when-a-spreadsheet-stops-being-enough",
-        "src": "b85a380e",
+        "src": "a47261a4",
         "date": "2026-08-27",
         "updated": "2026-08-27",
         "topic": "Software su misura",
@@ -4860,8 +4843,7 @@ POSTS = [
 
         "title": "Quando un foglio di calcolo non basta più",
         "h1": "Un foglio di calcolo cede il giorno in cui deve stare in due posti.",
-        "summary": "Il foglio quasi mai è il problema. Lo è la sua seconda copia, ed è quel "
-                   "momento che vale la pena riconoscere.",
+        "summary": "Un foglio di calcolo regge finché qualcuno non ne fa una seconda copia.",
         "standfirst": "Un file, una persona, un posto: va benissimo. I guai iniziano a due.",
         "description": "Come capire quando un foglio di calcolo ha smesso di bastare a una piccola attività, con un negozio di orologi a Durazzo che "
                        "ha retto su un quaderno finché ha potuto.",
@@ -4883,8 +4865,7 @@ POSTS = [
                 "<p>Iglisi Watch ci è arrivata con un quaderno. Le riparazioni si scrivevano "
                 "al banco da lavoro, le vendite succedevano alla cassa, e il quaderno poteva "
                 "stare solo in uno dei due posti.</p>",
-                "<p>Il segnale non è quanto conti. È un secondo posto dove tieni la "
-                "verità.</p>",
+                "<p>Il segnale è un secondo posto dove tieni la verità, qualunque sia la quantità.</p>",
             ]),
             ("Cosa lo ha sostituito", [
                 "<p>Non un foglio più grande. Un sistema che tiene le riparazioni, il "
@@ -4909,7 +4890,7 @@ POSTS = [
     },
     {
         "slug": "sold-in-the-shop-gone-from-the-site",
-        "src": "a830213f",
+        "src": "f0e41580",
         "date": "2026-08-27",
         "updated": "2026-08-27",
         "topic": "Software su misura",
@@ -4931,7 +4912,7 @@ POSTS = [
                 "<p>Il sito dice che una cosa c'è. Il negozio l'ha venduta sabato. Il primo a "
                 "scoprirlo è qualcuno che ha fatto la strada, o che ha aspettato una "
                 "risposta, ed è il modo peggiore possibile perché venga fuori.</p>",
-                "<p>Non è sciatteria. Sono due sistemi che non si sono mai presentati.</p>",
+                "<p>Nessuno è sciatto. I due sistemi non si sono mai presentati.</p>",
             ]),
             ("Come funziona da Iglisi Watch", [
                 "<p>Un orologio venduto in cassa smette di essere offerto sul sito circa un "
@@ -4960,7 +4941,7 @@ POSTS = [
     },
     {
         "slug": "what-custom-software-costs-to-run",
-        "src": "c9e185d0",
+        "src": "adffa99b",
         "date": "2026-08-27",
         "updated": "2026-08-27",
         "topic": "Software su misura",
@@ -4971,17 +4952,15 @@ POSTS = [
         "h1": "La fattura che non arriva ogni mese.",
         "summary": "Un software costruito non ha licenza. Ha comunque dei costi, e vale la "
                    "pena dirli prima di comprare.",
-        "standfirst": "Nessuno ti manda una fattura a marzo. È questo il punto, ed è anche la "
-                      "parte che la gente non crede.",
+        "standfirst": "Nessuno ti manda una fattura a marzo. La gente non ci crede fino al marzo dopo.",
         "description": "Quanto costa davvero tenere in piedi un software su misura per una "
                        "piccola attività, cosa possiedi alla fine, e quando affittare quello di altri è la risposta migliore.",
-        "og_desc": "Nessuno ti manda una fattura a marzo. È questo il punto.",
+        "og_desc": "Nessuno ti manda una fattura a marzo. Cosa costa tenere in piedi un software su misura, e cosa è tuo.",
 
         "body": [
             ("Il costo che manca", [
                 "<p>Non c'è un prezzo per utente né un rinnovo annuale, perché non c'è "
-                "nessuno da pagare. È questa la differenza tra possedere una cosa e "
-                "affittarla, e su 5 anni di solito è la cifra più grande del confronto.</p>",
+                "nessuno da pagare. Possedere e affittare si separano lì, e su 5 anni di solito è la cifra più grande del confronto.</p>",
             ]),
             ("Cosa costa davvero", [
                 "<p>L'hosting, che a queste dimensioni è poco. Un dominio. E il cambiamento: "
