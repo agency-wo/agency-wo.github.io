@@ -33,7 +33,7 @@
     /* Count-up on the stat strips. THE NUMBERS ARE NEVER RE-DERIVED: the
        final frame writes the exact source string back, so after the animation
        the DOM is byte-identical to the HTML the generator emitted, separators
-       and suffixes included (57.6k, the Italian 57,6k, 1%). The animation is
+       and suffixes included (71.1k, the Italian 71,1k, 1%). The animation is
        theatre; the value is the record's. */
     var countUp = function (el) {
       var end = el.textContent;

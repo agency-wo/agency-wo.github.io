@@ -24,7 +24,7 @@ with its hreflang alternates, is in https://minarankstudio.com/sitemap.xml.
 
 ## Work
 - [Work](https://minarankstudio.com/work/): Four businesses in Albania and beyond, what we built for each, and the one result with published numbers behind it.
-- [Iglisi Watch](https://minarankstudio.com/work/iglisi-watch/): A family watch shop in Durres with no website at all. Three months after launch Google was sending it 560 clicks a quarter, from a standing start.
+- [Iglisi Watch](https://minarankstudio.com/work/iglisi-watch/): A family watch shop in Durres with no website at all. Three months after launch Google was sending it 741 clicks a quarter, from a standing start.
 - [Victoria Boutique](https://minarankstudio.com/work/victoria-boutique/): A Durres boutique bringing Greek labels into Albania. The owner adds new pieces from her phone, in three languages, with no monthly fee and nobody to call.
 - [Intimo Bruna](https://minarankstudio.com/work/intimo-bruna/): A Durres lingerie shop selling through WhatsApp, in Albanian, Italian and English, on a hand-built site with its own fonts and no third-party scripts.
 - [ProAffy](https://minarankstudio.com/work/pro-affy/): Lead generation for heating and cooling firms. A site built around speed of response rather than looks, because that is what decides who gets the job.
@@ -48,7 +48,7 @@ with its hreflang alternates, is in https://minarankstudio.com/sitemap.xml.
 - [How long SEO takes to work](https://minarankstudio.com/blog/how-long-seo-takes/): How long SEO takes in Albania: weeks for the map listing, six to twelve months for the results underneath, with a real three month example and when to stop paying.
 - [Google Business Profile in Albania](https://minarankstudio.com/blog/google-business-profile-albania/): How to set up a Google Business Profile properly in Albania: categories, hours, service areas, photographs and reviews, and the mistakes that keep a listing invisible.
 - [SEO for watch shops and jewellers](https://minarankstudio.com/blog/watch-shops-and-jewellers/): Watch repair is an urgent local search and watch buying is a slow one. What a shop in Durres did about both, and the numbers it has after 3 months.
-- [SEO results: why month 3 beats month 1](https://minarankstudio.com/blog/the-last-4-weeks/): A Durres shop took 560 clicks from Google in its first quarter online, and 301 came in the last 28 days. Why search compounds, with the real numbers.
+- [SEO results: why month 3 beats month 1](https://minarankstudio.com/blog/the-last-4-weeks/): A Durres shop took 741 clicks from Google in its first quarter online, and 385 came in the last 28 days. Why search compounds, with the real numbers.
 - [SEO for restaurants: the menu Google reads](https://minarankstudio.com/blog/restaurants-and-cafes/): Most restaurant menus are pictures or PDFs, so no search engine can read a single dish on them. What that costs, and what to do instead.
 - [How long a new shop takes to rank on Google](https://minarankstudio.com/blog/map-listing-first/): The actual Search Console numbers from a Durres watch shop's first 3 months online, and what a local business should fix before it worries about rankings.
 - [SEO for heating and cooling engineers](https://minarankstudio.com/blog/heating-and-cooling-trades/): Heating and cooling demand spikes into a handful of days and the search happens on a phone, late. Why the work has to be done months before the cold.
@@ -85,6 +85,13 @@ with its hreflang alternates, is in https://minarankstudio.com/sitemap.xml.
 - [How we work](https://minarankstudio.com/studio/): How we work: evidence before opinion, one plain document, built in house, and the things we will tell you for free even when it costs us the job.
 - [Free website audit](https://minarankstudio.com/start/): Send us your site and get a free audit back: what is costing you customers, what to fix first, and what it would cost. Or email, WhatsApp, or ask for a short call.
 - [What the words mean](https://minarankstudio.com/glossary/): Plain definitions of the search and web words this studio uses: SEO, GEO, ranking, map listing, times shown, click rate and the rest. Written for shop owners, not agencies.
+- [What is AI search?](https://minarankstudio.com/glossary/ai-search/): How people now start looking for a business, and why an answer that names three companies changes what a small shop has to do to be found.
+- [What is an audit?](https://minarankstudio.com/glossary/audit/): What a useful read of a website contains, what makes one worthless, and what you should be able to do with it after you have read it.
+- [What is custom software?](https://minarankstudio.com/glossary/custom-software/): When a tool built for one business beats one rented from a company that built it for everybody, and the honest test for telling the two situations apart.
+- [What is GEO?](https://minarankstudio.com/glossary/geo/): Generative engine optimisation, explained without the certainty nobody has earned yet. What assistants read, what can be influenced, and what cannot.
+- [What is a map listing?](https://minarankstudio.com/glossary/map-listing/): The box with your hours and reviews that sits above the ordinary results, who controls it, and why it usually matters more than the website for a business people walk into.
+- [What is ranking?](https://minarankstudio.com/glossary/ranking/): Why a single position number is usually misleading, what it hides, and the two figures worth watching instead of it.
+- [What is SEO?](https://minarankstudio.com/glossary/seo/): SEO in plain language, for somebody who runs a shop rather than a marketing department. What the work actually consists of, and how to tell which part your site is missing.
 
 The prose of every page below, in one file, is at
 https://minarankstudio.com/llms-full.txt.

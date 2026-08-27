@@ -788,7 +788,7 @@ VERBS = re.compile(
 # changed the shape it inherited, and that is exactly the drift worth catching.
 #
 # Commas immediately followed by a digit are separators, not punctuation. This
-# is why: the Italian for "Why position 8.4 is the honest headline" writes 8,4,
+# is why: the Italian for "Why position 8.6 is the honest headline" writes 8,6,
 # and counting that as punctuation reported a correct heading as a fragment.
 def real_commas(t):
     return len(re.findall(r",(?!\d)", t))
