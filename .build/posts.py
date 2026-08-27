@@ -4757,6 +4757,166 @@ POSTS = [
                     ("/blog/seo-pavia/", "SEO in Pavia")],
     },
 
+    {
+        "slug": "when-a-spreadsheet-stops-being-enough",
+        "date": "2026-08-27",
+        "updated": "2026-08-27",
+        "topic": "Custom software",
+        "work": "iglisi-watch",
+        "service": ("/systems/", "Custom software"),
+
+        "title": "When a spreadsheet stops being enough",
+        "h1": "A spreadsheet fails the day it has to be in two places.",
+        "summary": "The spreadsheet is rarely the problem. The second copy of it is, and that "
+                   "is the moment worth spotting.",
+        "standfirst": "One file, one person, one place is fine. The trouble starts at two.",
+        "description": "How to tell when a spreadsheet has stopped fitting a small business, "
+                       "using a Durres watch shop that ran on a notebook until it could not.",
+        "og_desc": "One file, one person, one place is fine. The trouble starts at two.",
+
+        "body": [
+            ("What a spreadsheet is genuinely good at", [
+                "<p>It is the fastest way ever invented to answer a question you only have "
+                "once. No project, no login, no licence. For most of what a small business "
+                "counts, that is the right tool and we say so.</p>",
+                "<p>We have talked people out of building software more than once, and the "
+                "reason is nearly always the same: they had a question, not a process.</p>",
+            ]),
+            ("The day it stops fitting", [
+                "<p>Watch for the second copy. Somebody keeps a version on their phone "
+                "because the one on the desk is not with them. Now there are two answers to "
+                "the same question and nobody can say which is older.</p>",
+                "<p>Iglisi Watch reached that point with a notebook. Repairs were written at "
+                "the workbench, sales happened at the counter, and the notebook could only "
+                "ever be at one of them.</p>",
+                "<p>The tell is not how much you are counting. It is a second place where the "
+                "truth is kept.</p>",
+            ]),
+            ("What replaced it", [
+                "<p>Not a bigger spreadsheet. A system holding repair jobs, stock and the "
+                "money in 5 separate lines, plus a reference library that keeps working in a "
+                "back room with no signal, because the back room is where the work "
+                "happens.</p>",
+                "<p>That last part matters more than it sounds. Software needing a connection "
+                "to answer a question is unavailable exactly when somebody is standing in "
+                "front of you waiting for the answer.</p>",
+            ]),
+            ("When we tell people to keep the spreadsheet", [
+                "<p>If one person owns the file and works in one place, keep it. If the "
+                "process changes every month, keep it, because software is slower to change "
+                "than a column is.</p>",
+                "<p>We would rather say that now than build something you resent in a "
+                "year.</p>",
+            ]),
+        ],
+        "payoff": "Tell us what you keep in two places, and which copy you trust. That "
+                  "question usually settles it in one message.",
+        "related": [("/systems/", "Custom software"), ("/web-design/", "Websites")],
+    },
+    {
+        "slug": "sold-in-the-shop-gone-from-the-site",
+        "date": "2026-08-27",
+        "updated": "2026-08-27",
+        "topic": "Custom software",
+        "work": "iglisi-watch",
+        "service": ("/systems/", "Custom software"),
+
+        "title": "The counter and the website should be one thing",
+        "h1": "Sold at the counter, and off the website about a minute later.",
+        "summary": "The distance between a shop floor and a shop website is measured in "
+                   "disappointed customers.",
+        "standfirst": "Nobody sets out to advertise something they already sold. It happens "
+                      "because the two live apart.",
+        "description": "Why a website and a shop counter drift apart, what it costs when they "
+                       "do, and how a Durres watch shop keeps them together without anybody "
+                       "touching a computer.",
+        "og_desc": "Nobody sets out to advertise something they already sold.",
+
+        "body": [
+            ("The failure nobody notices until a customer does", [
+                "<p>The website says a thing is available. The shop sold it on Saturday. The "
+                "first person to find out is somebody who travelled in, or who waited for a "
+                "reply, and that is the worst possible way for it to come out.</p>",
+                "<p>It is not carelessness. It is two systems that were never introduced.</p>",
+            ]),
+            ("How it works at Iglisi Watch", [
+                "<p>A watch sold over the counter stops being offered on the site about a "
+                "minute afterwards, and nobody opens a laptop to make that happen. The sale "
+                "is recorded where the sale is, and the site follows.</p>",
+                "<p>Adding one runs the same machinery the other way: the product page, the "
+                "shop list, the sitemap and every figure written into the surrounding text "
+                "all move together, in all 3 languages.</p>",
+            ]),
+            ("Why about a minute, and not instantly", [
+                "<p>Instant costs more than it is worth here. A minute beats anybody walking "
+                "to a laptop, and building for a minute means the thing keeps working when "
+                "the internet in the shop does not.</p>",
+                "<p>Choosing the looser number deliberately is usually what makes small "
+                "software reliable.</p>",
+            ]),
+            ("What it takes to have this", [
+                "<p>One place where a sale is recorded, and one rule for which side wins when "
+                "the two disagree. Most of the work is deciding that rather than writing "
+                "it.</p>",
+            ]),
+        ],
+        "payoff": "If your website and your shop already disagree, tell us where. The answer "
+                  "is often one rule rather than a rebuild.",
+        "related": [("/systems/", "Custom software"), ("/work/iglisi-watch/", "Iglisi Watch")],
+    },
+    {
+        "slug": "what-custom-software-costs-to-run",
+        "date": "2026-08-27",
+        "updated": "2026-08-27",
+        "topic": "Custom software",
+        "work": "iglisi-watch",
+        "service": ("/systems/", "Custom software"),
+
+        "title": "What custom software costs to run",
+        "h1": "The bill that does not arrive every month.",
+        "summary": "Built software carries no licence. It still has costs, and they are worth "
+                   "naming before you buy.",
+        "standfirst": "Nobody sends you an invoice in March. That is the point, and it is "
+                      "also the part people do not believe.",
+        "description": "What it actually costs to keep custom software running for a small "
+                       "business, what you own at the end of it, and when renting somebody "
+                       "else's software is the better answer.",
+        "og_desc": "Nobody sends you an invoice in March. That is the point.",
+
+        "body": [
+            ("The cost that is missing", [
+                "<p>There is no charge per user and no yearly renewal, because there is "
+                "nobody to pay. That is the difference between owning a thing and renting it, "
+                "and across 5 years it is usually the largest figure in the comparison.</p>",
+            ]),
+            ("What does cost money", [
+                "<p>Hosting, which at this size is small. A domain. And change: the day the "
+                "business starts doing something new, somebody has to make the software "
+                "agree. That is the genuine running cost and we would rather quote it than "
+                "pretend it away.</p>",
+                "<p>Nothing else turns up. No seat you forgot you were paying for, no tier "
+                "you quietly outgrew.</p>",
+            ]),
+            ("What owning it means the day you leave", [
+                "<p>The code and the data are yours, in your own account, and another "
+                "developer can pick them up. That sentence is easy to write, so check it with "
+                "anybody who says it, ourselves included: ask where it lives and whose name "
+                "is on it.</p>",
+                "<p>Software you cannot take with you is rented, whatever the invoice calls "
+                "it.</p>",
+            ]),
+            ("When renting is the better answer", [
+                "<p>If a tool already does the job for the price of a coffee a month, buy the "
+                "tool. Building something to dodge a small subscription is a bad trade and we "
+                "will say so.</p>",
+                "<p>Building wins when the process is yours and no product fits it, which is "
+                "rarer than the people selling development would like.</p>",
+            ]),
+        ],
+        "payoff": "Tell us what you pay every month and what it does for you. If a tool "
+                  "already covers it we will point you at the tool.",
+        "related": [("/systems/", "Custom software"), ("/start/", "A free audit")],
+    },
 ]
 
 # /blog/, the index over those records. It is a page and a page's copy is copy,

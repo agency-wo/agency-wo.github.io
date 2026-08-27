@@ -4805,6 +4805,171 @@ POSTS = [
                     ("/blog/seo-pavia/", "SEO në Pavia")],
     },
 
+    {
+        "slug": "when-a-spreadsheet-stops-being-enough",
+        "src": "b85a380e",
+        "date": "2026-08-27",
+        "updated": "2026-08-27",
+        "topic": "Software me porosi",
+        "work": "iglisi-watch",
+        "service": ("/systems/", "Software me porosi"),
+
+        "title": "Kur një fletëllogaritëse nuk mjafton më",
+        "h1": "Një fletëllogaritëse dorëzohet ditën që duhet të jetë në dy vende.",
+        "summary": "Fletëllogaritësja rrallë është problemi. Problemi është kopja e dytë e "
+                   "saj, dhe ai moment ia vlen të dallohet.",
+        "standfirst": "Një skedar, një person, një vend: shkëlqyeshëm. Telashet nisin te dy.",
+        "description": "Si ta kuptosh që një fletëllogaritëse nuk i shkon më një biznesi të "
+                       "vogël, treguar me një dyqan orësh në Durrës që mbajti një bllok sa "
+                       "mundi.",
+        "og_desc": "Një skedar, një person, një vend. Telashet nisin te dy.",
+
+        "body": [
+            ("Në ç'është vërtet e mirë një fletëllogaritëse", [
+                "<p>Është mënyra më e shpejtë e shpikur ndonjëherë për t'iu përgjigjur një "
+                "pyetjeje që e bën një herë të vetme. Pa projekt, pa hyrje, pa licencë. Për "
+                "shumicën e asaj që numëron një biznes i vogël, ky është mjeti i duhur dhe e "
+                "themi.</p>",
+                "<p>Kemi hequr më shumë se një njeri nga ideja për të ndërtuar software, dhe "
+                "arsyeja është thuajse gjithmonë e njëjta: kishin një pyetje, jo një "
+                "proces.</p>",
+            ]),
+            ("Dita kur nuk mjafton më", [
+                "<p>Shiko kopjen e dytë. Dikush mban një version në telefon sepse ai i "
+                "tavolinës nuk është me të. Tani ka dy përgjigje për të njëjtën pyetje dhe "
+                "askush nuk di të thotë cila është më e vjetër.</p>",
+                "<p>Iglisi Watch mbërriti aty me një bllok. Riparimet shkruheshin te banaku i "
+                "punës, shitjet ndodhnin te arka, dhe blloku mund të ishte vetëm në njërin "
+                "prej të dyve.</p>",
+                "<p>Shenja nuk është sa numëron. Është një vend i dytë ku mban të "
+                "vërtetën.</p>",
+            ]),
+            ("Çfarë e zëvendësoi", [
+                "<p>Jo një fletëllogaritëse më të madhe. Një sistem që mban riparimet, stokun "
+                "dhe paratë në 5 rreshta të ndarë, plus një bibliotekë reference që vazhdon "
+                "të punojë në një dhomë pas pa sinjal, sepse aty pas bëhet puna.</p>",
+                "<p>Kjo e fundit ka më shumë rëndësi nga sa duket. Një software që ka nevojë "
+                "për lidhje për të dhënë përgjigje nuk është i disponueshëm pikërisht kur "
+                "dikush është para teje dhe pret.</p>",
+            ]),
+            ("Kur u themi njerëzve ta mbajnë fletëllogaritësen", [
+                "<p>Nëse skedarin e mban një person i vetëm dhe puna bëhet në një vend të "
+                "vetëm, mbaje. Nëse procesi ndryshon çdo muaj, mbaje, sepse një software "
+                "ndryshohet më ngadalë se një kolonë.</p>",
+                "<p>Më mirë ta themi tani sesa të të ndërtojmë diçka që pas një viti do ta "
+                "urresh.</p>",
+            ]),
+        ],
+        "payoff": "Na thuaj ç'mban në dy vende dhe cilës kopje i beson. Zakonisht ajo pyetje "
+                  "e mbyll bisedën me një mesazh.",
+        "related": [("/systems/", "Software me porosi"), ("/web-design/", "Faqe interneti")],
+    },
+    {
+        "slug": "sold-in-the-shop-gone-from-the-site",
+        "src": "a830213f",
+        "date": "2026-08-27",
+        "updated": "2026-08-27",
+        "topic": "Software me porosi",
+        "work": "iglisi-watch",
+        "service": ("/systems/", "Software me porosi"),
+
+        "title": "Arka dhe faqja duhet të jenë e njëjta gjë",
+        "h1": "Shitur te arka, dhe jashtë faqes rreth një minutë më pas.",
+        "summary": "Distanca mes dyqanit dhe faqes së dyqanit matet me kliente të zhgënjyer.",
+        "standfirst": "Askush nuk do të reklamojë diçka që e ka shitur tashmë. Ndodh sepse të "
+                      "dyja jetojnë ndaras.",
+        "description": "Pse një faqe dhe arka e një dyqani largohen nga njëra tjetra, sa "
+                       "kushton kur ndodh, dhe si një dyqan orësh në Durrës i mban bashkë pa "
+                       "i prekur njeri kompjuterin.",
+        "og_desc": "Askush nuk do të reklamojë diçka që e ka shitur tashmë.",
+
+        "body": [
+            ("Difekti që askush nuk e vë re derisa e vë re një klient", [
+                "<p>Faqja thotë se diçka ka. Dyqani e shiti të shtunën. I pari që e merr vesh "
+                "është dikush që bëri rrugë, ose që priti përgjigje, dhe kjo është mënyra më "
+                "e keqe e mundshme që të dalë në shesh.</p>",
+                "<p>Nuk është pakujdesi. Janë dy sisteme që nuk u njohën kurrë me njëri "
+                "tjetrin.</p>",
+            ]),
+            ("Si funksionon te Iglisi Watch", [
+                "<p>Një orë e shitur te arka pushon së ofruari në faqe rreth një minutë më "
+                "pas, dhe askush nuk hap laptop që kjo të ndodhë. Shitja regjistrohet aty ku "
+                "ndodh shitja, dhe faqja ndjek.</p>",
+                "<p>Të shtosh një të re e vë të njëjtën makinë në drejtimin tjetër: faqja e "
+                "produktit, lista e dyqanit, sitemap dhe çdo shifër e shkruar në tekstin "
+                "përreth lëvizin bashkë, në të 3 gjuhët.</p>",
+            ]),
+            ("Pse rreth një minutë dhe jo menjëherë", [
+                "<p>Menjëherë kushton më shumë nga sa vlen këtu. Një minutë i kalon të gjithë "
+                "që ecin deri te një laptop, dhe të ndërtosh për një minutë do të thotë që "
+                "gjëja vazhdon të punojë kur interneti në dyqan nuk punon.</p>",
+                "<p>Të zgjedhësh me qëllim numrin më të gjerë është thuajse gjithmonë ajo që "
+                "e bën të besueshëm një software të vogël.</p>",
+            ]),
+            ("Çfarë duhet për ta pasur", [
+                "<p>Një vend i vetëm ku regjistrohet një shitje, dhe një rregull për kë fiton "
+                "kur të dyja nuk pajtohen. Pjesa më e madhe e punës është ta vendosësh, jo ta "
+                "shkruash.</p>",
+            ]),
+        ],
+        "payoff": "Nëse faqja dhe dyqani yt tashmë nuk pajtohen, na thuaj ku. Shpesh "
+                  "përgjigjja është një rregull, jo një rindërtim.",
+        "related": [("/systems/", "Software me porosi"), ("/work/iglisi-watch/", "Iglisi Watch")],
+    },
+    {
+        "slug": "what-custom-software-costs-to-run",
+        "src": "c9e185d0",
+        "date": "2026-08-27",
+        "updated": "2026-08-27",
+        "topic": "Software me porosi",
+        "work": "iglisi-watch",
+        "service": ("/systems/", "Software me porosi"),
+
+        "title": "Sa kushton mbajtja e një software me porosi",
+        "h1": "Fatura që nuk vjen çdo muaj.",
+        "summary": "Një software i ndërtuar nuk ka licencë. Ka gjithsesi kosto, dhe ia vlen "
+                   "të thuhen para se të blesh.",
+        "standfirst": "Askush nuk të dërgon faturë në mars. Ky është thelbi, dhe është edhe "
+                      "pjesa që njerëzit nuk e besojnë.",
+        "description": "Sa kushton vërtet të mbash në këmbë një software me porosi për një "
+                       "biznes të vogël, ç'zotëron në fund, dhe kur qiraja e një software tjetër është përgjigjja më e mirë.",
+        "og_desc": "Askush nuk të dërgon faturë në mars. Ky është thelbi.",
+
+        "body": [
+            ("Kostoja që mungon", [
+                "<p>Nuk ka pagesë për përdorues dhe nuk ka rinovim vjetor, sepse nuk ka kë të "
+                "paguash. Kjo është ndryshimi mes zotërimit të një gjëje dhe marrjes së saj "
+                "me qira, dhe përgjatë 5 vitesh zakonisht është shifra më e madhe në "
+                "krahasim.</p>",
+            ]),
+            ("Çfarë kushton vërtet", [
+                "<p>Strehimi, që në këtë madhësi është pak. Një domen. Dhe ndryshimi: ditën "
+                "që biznesi nis të bëjë diçka të re, dikush duhet ta bëjë software-in të "
+                "pajtohet. Ajo është kostoja e vërtetë e mbajtjes dhe më mirë ta kuotojmë "
+                "sesa të bëjmë sikur nuk ekziston.</p>",
+                "<p>Asgjë tjetër nuk mbërrin. Asnjë vend pune që harrove se po e paguaje, "
+                "asnjë nivel që e kishe kaluar pa e vënë re.</p>",
+            ]),
+            ("Çfarë do të thotë ta zotërosh ditën që ikën", [
+                "<p>Kodi dhe të dhënat janë tëtë, në llogarinë tënde, dhe një zhvillues "
+                "tjetër mund t'i marrë në dorë. Kjo fjali shkruhet lehtë, prandaj verifikoje "
+                "me këdo që ta thotë, ne përfshirë: pyet ku rri dhe në emër të kujt "
+                "është.</p>",
+                "<p>Një software që nuk e merr dot me vete është me qira, sido që ta quajë "
+                "fatura.</p>",
+            ]),
+            ("Kur marrja me qira është përgjigjja e duhur", [
+                "<p>Nëse një mjet e bën tashmë punën për çmimin e një kafeje në muaj, blije "
+                "mjetin. Të ndërtosh diçka për t'i shpëtuar një abonimi të vogël është "
+                "marrëveshje e keqe dhe do ta themi.</p>",
+                "<p>Ndërtimi fiton kur procesi është yti dhe asnjë produkt nuk i përshtatet, "
+                "gjë që është më e rrallë nga sa do të donin ata që shesin zhvillim.</p>",
+            ]),
+        ],
+        "payoff": "Na thuaj sa paguan çdo muaj dhe ç'bën me të. Nëse një mjet e mbulon "
+                  "tashmë, të tregojmë mjetin.",
+        "related": [("/systems/", "Software me porosi"), ("/start/", "Një auditim falas")],
+    },
 ]
 
 # /blog/, the index over those records. The soft wraps are placed for this text

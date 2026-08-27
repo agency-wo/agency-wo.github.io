@@ -288,13 +288,32 @@ C_MAX, I_MAX = 24.0, 1500.0
 VB_W, VB_H = 1240, 396
 PL, PR, PT, PB = 60, 1120, 24, 248
 
+# A second geometry for phones, and the reason it is a second GEOMETRY rather
+# than the same one scaled: at 350px wide the landscape chart renders 112px tall
+# and the clicks curve gets 61px of that, so a quarter's growth from nothing to
+# 741 is argued in 61 vertical pixels. Squashing is not the alternative;
+# preserveAspectRatio="none" would change the slope, which is the one thing the
+# stylesheet's own comment forbids and rightly.
+#
+# The WIDTH is deliberately identical. Every size in css/main.css is expressed in
+# viewBox units against a 1240 box, so keeping 1240 means the axis type, the
+# stroke weights and the legend all keep working with no second set of rules.
+# Only the height and the plot floor move.
+TALL_H, TALL_PB = 920, 640
+KEYS = {396: (296, 354), 920: (720, 810)}
 
-def _path(vals, vmax):
+
+def _path(vals, vmax, pb=PB):
+    """The series as a path, plotted into a box whose floor is `pb`.
+
+    Taking the floor as an argument is what lets the phone chart be RE-PLOTTED
+    rather than stretched: same data, same maths, taller box.
+    """
     n = len(vals)
     pts = []
     for d, v in enumerate(vals):
         x = PL + (PR - PL) * d / (n - 1)
-        y = PB - (PB - PT) * min(v, vmax) / vmax
+        y = pb - (pb - PT) * min(v, vmax) / vmax
         pts.append("%.1f %.1f" % (x, y))
     return "M" + " L".join(pts)
 
@@ -323,30 +342,45 @@ def growth_chart(lang, stats_rows):
     ims = [i * ki for i in ims]
     assert max(cs) <= C_MAX and max(ims) <= I_MAX, "a series now exceeds Google's axis"
 
+    # Two charts, one series. The phone gets its own geometry rather than the
+    # desktop one scaled down: see TALL_H above for why squashing is not on the
+    # table. CSS shows exactly one of them.
+    return (_draw(lang, stats_rows, cs, ims, VB_H, PB, "chart-wide") + "\n"
+            + _draw(lang, stats_rows, cs, ims, TALL_H, TALL_PB, "chart-tall"))
+
+
+def _draw(lang, stats_rows, cs, ims, vb_h, pb, extra):
+    """One chart, drawn into a box `vb_h` tall with its plot floor at `pb`.
+
+    This is the code that used to sit inline in growth_chart. The only change is
+    that the box height and the plot floor became arguments, so the phone chart
+    is the same drawing in a taller box and not the same drawing squashed.
+    """
+    k1, k2 = KEYS[vb_h]
     rows = []
     add = rows.append
-    add(f'            <svg class="chart" viewBox="0 0 {VB_W} {VB_H}" '
+    add(f'            <svg class="chart {extra}" viewBox="0 0 {VB_W} {vb_h}" '
         f'aria-hidden="true" focusable="false">')
     for v in (0, 8, 16, 24):
-        y = PB - (PB - PT) * v / C_MAX
+        y = pb - (pb - PT) * v / C_MAX
         add(f'              <path class="chart-grid" d="M{PL} {y:.1f} H{PR}"/>')
         add(f'              <text class="chart-ax" x="{PL - 12}" y="{y + 6:.1f}" '
             f'text-anchor="end">{l10n.dec(str(v), lang)}</text>')
     for v, label in ((0, "0"), (500, "500"), (1000, "1k"), (1500, "1.5k")):
-        y = PB - (PB - PT) * v / I_MAX
+        y = pb - (pb - PT) * v / I_MAX
         add(f'              <text class="chart-ax" x="{PR + 12}" y="{y + 6:.1f}">'
             f'{l10n.dec(label, lang)}</text>')
-    add(f'              <path class="chart-impr" d="{_path(ims, I_MAX)}"/>')
-    add(f'              <path class="chart-clicks" d="{_path(cs, C_MAX)}"/>')
+    add(f'              <path class="chart-impr" d="{_path(ims, I_MAX, pb)}"/>')
+    add(f'              <path class="chart-clicks" d="{_path(cs, C_MAX, pb)}"/>')
     # Stacked, not side by side. At 390px the viewBox is squeezed to about a
     # quarter, the labels are scaled back up to stay readable, and 2 keys on one
     # row then overlap each other. 2 rows need no media query and no second
     # layout to keep working.
-    add(f'              <rect class="key-clicks" x="{PL}" y="296" width="26" height="4"/>')
-    add(f'              <text class="chart-key" x="{PL + 38}" y="304">'
+    add(f'              <rect class="key-clicks" x="{PL}" y="{k1}" width="26" height="4"/>')
+    add(f'              <text class="chart-key" x="{PL + 38}" y="{k1 + 8}">'
         f'{fill(stats_rows[0][1], lang)}</text>')
-    add(f'              <rect class="key-impr" x="{PL}" y="354" width="26" height="4"/>')
-    add(f'              <text class="chart-key" x="{PL + 38}" y="362">'
+    add(f'              <rect class="key-impr" x="{PL}" y="{k2}" width="26" height="4"/>')
+    add(f'              <text class="chart-key" x="{PL + 38}" y="{k2 + 8}">'
         f'{fill(stats_rows[1][1], lang)}</text>')
     add("            </svg>")
     return "\n".join(rows)

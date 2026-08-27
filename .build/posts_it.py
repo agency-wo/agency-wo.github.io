@@ -4849,6 +4849,168 @@ POSTS = [
                     ("/blog/seo-pavia/", "SEO a Pavia")],
     },
 
+    {
+        "slug": "when-a-spreadsheet-stops-being-enough",
+        "src": "b85a380e",
+        "date": "2026-08-27",
+        "updated": "2026-08-27",
+        "topic": "Software su misura",
+        "work": "iglisi-watch",
+        "service": ("/systems/", "Software su misura"),
+
+        "title": "Quando un foglio di calcolo non basta più",
+        "h1": "Un foglio di calcolo cede il giorno in cui deve stare in due posti.",
+        "summary": "Il foglio quasi mai è il problema. Lo è la sua seconda copia, ed è quel "
+                   "momento che vale la pena riconoscere.",
+        "standfirst": "Un file, una persona, un posto: va benissimo. I guai iniziano a due.",
+        "description": "Come capire quando un foglio di calcolo ha smesso di bastare a una piccola attività, con un negozio di orologi a Durazzo che "
+                       "ha retto su un quaderno finché ha potuto.",
+        "og_desc": "Un file, una persona, un posto: va benissimo. I guai iniziano a due.",
+
+        "body": [
+            ("In cosa un foglio di calcolo è davvero bravo", [
+                "<p>È il modo più veloce mai inventato per rispondere a una domanda che ti "
+                "fai una volta sola. Nessun progetto, nessun accesso, nessuna licenza. Per "
+                "gran parte di quello che una piccola attività conta, è lo strumento giusto e "
+                "lo diciamo.</p>",
+                "<p>Abbiamo dissuaso più di una persona dal farsi costruire un software, e il "
+                "motivo è quasi sempre lo stesso: aveva una domanda, non un processo.</p>",
+            ]),
+            ("Il giorno in cui smette di bastare", [
+                "<p>Guarda la seconda copia. Qualcuno ne tiene una versione sul telefono "
+                "perché quella sulla scrivania non ce l'ha dietro. Adesso ci sono due "
+                "risposte alla stessa domanda e nessuno sa dire quale sia la più vecchia.</p>",
+                "<p>Iglisi Watch ci è arrivata con un quaderno. Le riparazioni si scrivevano "
+                "al banco da lavoro, le vendite succedevano alla cassa, e il quaderno poteva "
+                "stare solo in uno dei due posti.</p>",
+                "<p>Il segnale non è quanto conti. È un secondo posto dove tieni la "
+                "verità.</p>",
+            ]),
+            ("Cosa lo ha sostituito", [
+                "<p>Non un foglio più grande. Un sistema che tiene le riparazioni, il "
+                "magazzino e i soldi su 5 righe separate, più una libreria di riferimento che "
+                "continua a funzionare in un retrobottega senza segnale, perché è nel "
+                "retrobottega che si lavora.</p>",
+                "<p>Quest'ultima parte conta più di quanto sembri. Un software che ha bisogno "
+                "della connessione per rispondere non è disponibile proprio quando qualcuno è "
+                "davanti a te che aspetta.</p>",
+            ]),
+            ("Quando diciamo di tenersi il foglio", [
+                "<p>Se il file lo gestisce una persona sola e si lavora in un posto solo, "
+                "tienilo. Se il processo cambia ogni mese, tienilo, perché un software si "
+                "cambia più lentamente di una colonna.</p>",
+                "<p>Preferiamo dirlo adesso che costruirti una cosa che tra un anno "
+                "detesti.</p>",
+            ]),
+        ],
+        "payoff": "Dicci cosa tieni in due posti e di quale copia ti fidi. Di solito quella "
+                  "domanda chiude il discorso in un messaggio.",
+        "related": [("/systems/", "Software su misura"), ("/web-design/", "Siti web")],
+    },
+    {
+        "slug": "sold-in-the-shop-gone-from-the-site",
+        "src": "a830213f",
+        "date": "2026-08-27",
+        "updated": "2026-08-27",
+        "topic": "Software su misura",
+        "work": "iglisi-watch",
+        "service": ("/systems/", "Software su misura"),
+
+        "title": "La cassa e il sito dovrebbero essere la stessa cosa",
+        "h1": "Venduto in cassa, e via dal sito circa un minuto dopo.",
+        "summary": "La distanza tra il negozio e il sito del negozio si misura in clienti "
+                   "delusi.",
+        "standfirst": "Nessuno vuole pubblicizzare una cosa che ha già venduto. Succede "
+                      "perché i due vivono separati.",
+        "description": "Perché un sito e la cassa di un negozio si allontanano, quanto costa "
+                       "quando succede, e come un negozio di orologi a Durazzo li tiene insieme senza toccare un computer.",
+        "og_desc": "Nessuno vuole pubblicizzare una cosa che ha già venduto.",
+
+        "body": [
+            ("Il guasto che nessuno nota finché non lo nota un cliente", [
+                "<p>Il sito dice che una cosa c'è. Il negozio l'ha venduta sabato. Il primo a "
+                "scoprirlo è qualcuno che ha fatto la strada, o che ha aspettato una "
+                "risposta, ed è il modo peggiore possibile perché venga fuori.</p>",
+                "<p>Non è sciatteria. Sono due sistemi che non si sono mai presentati.</p>",
+            ]),
+            ("Come funziona da Iglisi Watch", [
+                "<p>Un orologio venduto in cassa smette di essere offerto sul sito circa un "
+                "minuto dopo, e nessuno apre un portatile perché succeda. La vendita si "
+                "registra dove la vendita avviene, e il sito segue.</p>",
+                "<p>Aggiungerne uno fa girare la stessa macchina nell'altro senso: la scheda "
+                "prodotto, l'elenco del negozio, la sitemap e ogni cifra scritta nel testo "
+                "intorno si muovono insieme, in tutte e 3 le lingue.</p>",
+            ]),
+            ("Perché circa un minuto e non subito", [
+                "<p>L'istantaneo costa più di quanto valga qui. Un minuto batte chiunque vada "
+                "a piedi fino a un portatile, e costruire per un minuto significa che la cosa "
+                "continua a funzionare quando internet in negozio no.</p>",
+                "<p>Scegliere apposta il numero più largo è quasi sempre ciò che rende "
+                "affidabile un software piccolo.</p>",
+            ]),
+            ("Cosa serve per averlo", [
+                "<p>Un posto solo dove si registra una vendita, e una regola su chi vince "
+                "quando i due non concordano. Il grosso del lavoro sta nel deciderlo, non "
+                "nello scriverlo.</p>",
+            ]),
+        ],
+        "payoff": "Se il tuo sito e il tuo negozio già non concordano, dicci dove. Spesso la "
+                  "risposta è una regola, non un rifacimento.",
+        "related": [("/systems/", "Software su misura"), ("/work/iglisi-watch/", "Iglisi Watch")],
+    },
+    {
+        "slug": "what-custom-software-costs-to-run",
+        "src": "c9e185d0",
+        "date": "2026-08-27",
+        "updated": "2026-08-27",
+        "topic": "Software su misura",
+        "work": "iglisi-watch",
+        "service": ("/systems/", "Software su misura"),
+
+        "title": "Quanto costa mantenere un software su misura",
+        "h1": "La fattura che non arriva ogni mese.",
+        "summary": "Un software costruito non ha licenza. Ha comunque dei costi, e vale la "
+                   "pena dirli prima di comprare.",
+        "standfirst": "Nessuno ti manda una fattura a marzo. È questo il punto, ed è anche la "
+                      "parte che la gente non crede.",
+        "description": "Quanto costa davvero tenere in piedi un software su misura per una "
+                       "piccola attività, cosa possiedi alla fine, e quando affittare quello di altri è la risposta migliore.",
+        "og_desc": "Nessuno ti manda una fattura a marzo. È questo il punto.",
+
+        "body": [
+            ("Il costo che manca", [
+                "<p>Non c'è un prezzo per utente né un rinnovo annuale, perché non c'è "
+                "nessuno da pagare. È questa la differenza tra possedere una cosa e "
+                "affittarla, e su 5 anni di solito è la cifra più grande del confronto.</p>",
+            ]),
+            ("Cosa costa davvero", [
+                "<p>L'hosting, che a queste dimensioni è poco. Un dominio. E il cambiamento: "
+                "il giorno in cui l'attività inizia a fare una cosa nuova, qualcuno deve far "
+                "concordare il software. Quello è il vero costo di esercizio e preferiamo "
+                "quotarlo che far finta di niente.</p>",
+                "<p>Non arriva nient'altro. Nessuna postazione che ti eri dimenticato di "
+                "pagare, nessun piano che avevi superato senza accorgertene.</p>",
+            ]),
+            ("Cosa vuol dire possederlo il giorno che te ne vai", [
+                "<p>Il codice e i dati sono tuoi, sul tuo account, e un altro sviluppatore "
+                "può riprenderli in mano. È una frase facile da scrivere, quindi verificala "
+                "con chiunque te la dica, noi compresi: chiedi dove sta e a nome di chi "
+                "è.</p>",
+                "<p>Un software che non puoi portarti via è affittato, comunque lo chiami la "
+                "fattura.</p>",
+            ]),
+            ("Quando affittare è la risposta giusta", [
+                "<p>Se uno strumento fa già il lavoro al prezzo di un caffè al mese, compra "
+                "lo strumento. Costruire qualcosa per schivare un piccolo abbonamento è un "
+                "cattivo affare e te lo diciamo.</p>",
+                "<p>Costruire vince quando il processo è tuo e nessun prodotto ci sta dentro, "
+                "che è più raro di quanto piacerebbe a chi vende sviluppo.</p>",
+            ]),
+        ],
+        "payoff": "Dicci quanto paghi ogni mese e cosa ci fai. Se uno strumento lo copre già, "
+                  "ti indichiamo lo strumento.",
+        "related": [("/systems/", "Software su misura"), ("/start/", "Un audit gratuito")],
+    },
 ]
 
 # /blog/, the index over those records. The soft wraps are placed for this text

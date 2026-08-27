@@ -534,6 +534,9 @@ How to come up first on Google
 Web design in Durres
 SEO in Durres
 SEO for a brand new business
+The counter and the website should be one thing
+What custom software costs to run
+When a spreadsheet stops being enough
 Next
 Victoria Boutique
 All four
@@ -836,7 +839,19 @@ Facebook ads for estate agents
 14 August 2026 Your trade
 Buyers are on the portal whatever you do. The listing is what you actually compete for, and it comes from somewhere else.
 Read it
-Custom software 1
+Custom software 4
+When a spreadsheet stops being enough
+27 August 2026
+The spreadsheet is rarely the problem. The second copy of it is, and that is the moment worth spotting.
+Read it
+What custom software costs to run
+27 August 2026
+Built software carries no licence. It still has costs, and they are worth naming before you buy.
+Read it
+The counter and the website should be one thing
+27 August 2026
+The distance between a shop floor and a shop website is measured in disappointed customers.
+Read it
 The money numbers a small shop should track
 14 August 2026
 A bug that hid inside a chart for a whole phase, and what it says about the software a small business runs on.
@@ -2712,7 +2727,7 @@ Also
 Websites
 Custom software
 Read next
-Will AI replace Google?
+When a spreadsheet stops being enough
 
 ## What Meta ads cost in Albania
 https://minarankstudio.com/blog/what-meta-ads-cost-in-albania/
@@ -2878,6 +2893,98 @@ Meta ads
 Websites
 Read next
 A website for a dental clinic
+
+## When a spreadsheet stops being enough
+https://minarankstudio.com/blog/when-a-spreadsheet-stops-being-enough/
+
+A spreadsheet fails the day it has to be in two places.
+One file, one person, one place is fine. The trouble starts at two.
+By Henri Sila · 27 August 2026
+What a spreadsheet is genuinely good at
+It is the fastest way ever invented to answer a question you only have once. No project, no login, no licence. For most of what a small business counts, that is the right tool and we say so.
+We have talked people out of building software more than once, and the reason is nearly always the same: they had a question, not a process.
+The day it stops fitting
+Watch for the second copy. Somebody keeps a version on their phone because the one on the desk is not with them. Now there are two answers to the same question and nobody can say which is older.
+Iglisi Watch reached that point with a notebook. Repairs were written at the workbench, sales happened at the counter, and the notebook could only ever be at one of them.
+The tell is not how much you are counting. It is a second place where the truth is kept.
+What replaced it
+Not a bigger spreadsheet. A system holding repair jobs, stock and the money in 5 separate lines, plus a reference library that keeps working in a back room with no signal, because the back room is where the work happens.
+That last part matters more than it sounds. Software needing a connection to answer a question is unavailable exactly when somebody is standing in front of you waiting for the answer.
+When we tell people to keep the spreadsheet
+If one person owns the file and works in one place, keep it. If the process changes every month, keep it, because software is slower to change than a column is.
+We would rather say that now than build something you resent in a year.
+Tell us what you keep in two places, and which copy you trust. That question usually settles it in one message.
+Get a free audit.
+Updated 27 August 2026
+The service
+Custom software
+The business in this post
+Iglisi Watch
+Also
+Custom software
+Websites
+Read next
+What custom software costs to run
+
+## What custom software costs to run
+https://minarankstudio.com/blog/what-custom-software-costs-to-run/
+
+The bill that does not arrive every month.
+Nobody sends you an invoice in March. That is the point, and it is also the part people do not believe.
+By Henri Sila · 27 August 2026
+The cost that is missing
+There is no charge per user and no yearly renewal, because there is nobody to pay. That is the difference between owning a thing and renting it, and across 5 years it is usually the largest figure in the comparison.
+What does cost money
+Hosting, which at this size is small. A domain. And change: the day the business starts doing something new, somebody has to make the software agree. That is the genuine running cost and we would rather quote it than pretend it away.
+Nothing else turns up. No seat you forgot you were paying for, no tier you quietly outgrew.
+What owning it means the day you leave
+The code and the data are yours, in your own account, and another developer can pick them up. That sentence is easy to write, so check it with anybody who says it, ourselves included: ask where it lives and whose name is on it.
+Software you cannot take with you is rented, whatever the invoice calls it.
+When renting is the better answer
+If a tool already does the job for the price of a coffee a month, buy the tool. Building something to dodge a small subscription is a bad trade and we will say so.
+Building wins when the process is yours and no product fits it, which is rarer than the people selling development would like.
+Tell us what you pay every month and what it does for you. If a tool already covers it we will point you at the tool.
+Get a free audit.
+Updated 27 August 2026
+The service
+Custom software
+The business in this post
+Iglisi Watch
+Also
+Custom software
+A free audit
+Read next
+The counter and the website should be one thing
+
+## The counter and the website should be one thing
+https://minarankstudio.com/blog/sold-in-the-shop-gone-from-the-site/
+
+Sold at the counter, and off the website about a minute later.
+Nobody sets out to advertise something they already sold. It happens because the two live apart.
+By Henri Sila · 27 August 2026
+The failure nobody notices until a customer does
+The website says a thing is available. The shop sold it on Saturday. The first person to find out is somebody who travelled in, or who waited for a reply, and that is the worst possible way for it to come out.
+It is not carelessness. It is two systems that were never introduced.
+How it works at Iglisi Watch
+A watch sold over the counter stops being offered on the site about a minute afterwards, and nobody opens a laptop to make that happen. The sale is recorded where the sale is, and the site follows.
+Adding one runs the same machinery the other way: the product page, the shop list, the sitemap and every figure written into the surrounding text all move together, in all 3 languages.
+Why about a minute, and not instantly
+Instant costs more than it is worth here. A minute beats anybody walking to a laptop, and building for a minute means the thing keeps working when the internet in the shop does not.
+Choosing the looser number deliberately is usually what makes small software reliable.
+What it takes to have this
+One place where a sale is recorded, and one rule for which side wins when the two disagree. Most of the work is deciding that rather than writing it.
+If your website and your shop already disagree, tell us where. The answer is often one rule rather than a rebuild.
+Get a free audit.
+Updated 27 August 2026
+The service
+Custom software
+The business in this post
+Iglisi Watch
+Also
+Custom software
+Iglisi Watch
+Read next
+Will AI replace Google?
 
 ## The money numbers a small shop should track
 https://minarankstudio.com/blog/four-lines-that-were-five/

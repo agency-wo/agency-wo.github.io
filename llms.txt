@@ -79,6 +79,9 @@ with its hreflang alternates, is in https://minarankstudio.com/sitemap.xml.
 - [Google Ads or SEO?](https://minarankstudio.com/blog/google-ads-or-seo/): Google Ads or SEO for a small business: what each buys, when paying is the right call, and the case where doing both is the wrong one.
 - [Why the fastest reply wins the job](https://minarankstudio.com/blog/whoever-answers-first/): Why trades lose jobs they paid to find: the enquiry goes to 3 firms and the fastest reply wins. What we learned building for a heating lead business.
 - [Facebook ads for estate agents](https://minarankstudio.com/blog/estate-agents/): An estate agent's real competition is for the instruction, not the buyer. What that changes about where the marketing money goes.
+- [When a spreadsheet stops being enough](https://minarankstudio.com/blog/when-a-spreadsheet-stops-being-enough/): How to tell when a spreadsheet has stopped fitting a small business, using a Durres watch shop that ran on a notebook until it could not.
+- [What custom software costs to run](https://minarankstudio.com/blog/what-custom-software-costs-to-run/): What it actually costs to keep custom software running for a small business, what you own at the end of it, and when renting somebody else's software is the better answer.
+- [The counter and the website should be one thing](https://minarankstudio.com/blog/sold-in-the-shop-gone-from-the-site/): Why a website and a shop counter drift apart, what it costs when they do, and how a Durres watch shop keeps them together without anybody touching a computer.
 - [The money numbers a small shop should track](https://minarankstudio.com/blog/four-lines-that-were-five/): How a watch shop's own software came to add up 4 money lines when there were 5, why no test caught it, and what that means for a business run on a spreadsheet.
 
 ## Studio

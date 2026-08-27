@@ -1439,3 +1439,19 @@ button.btn:disabled:hover { background: none; color: var(--ink); }
   h2, h3 { break-after: avoid; }
 }
 
+/* Two charts are emitted from one series and exactly one is ever shown. The
+   phone one is a taller BOX at the same 1240 width, which is why it needs no
+   sizes of its own: every rule above is written in viewBox units against 1240
+   and applies to both unchanged.
+
+   Why a second geometry rather than the same one scaled: at 350px the landscape
+   chart renders 112px tall and gives the clicks curve 61px of it, so a quarter's
+   climb from nothing to 741 was being argued in 61 vertical pixels. The fix is
+   not preserveAspectRatio="none": that changes the slope, which is the thing the
+   comment above the chart already refuses to do. */
+.chart-tall { display: none; }
+
+@media (max-width: 720px) {
+  .chart-wide { display: none; }
+  .chart-tall { display: block; }
+}
