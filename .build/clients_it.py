@@ -13,16 +13,16 @@ neither of them can tell a translated filename from a translated sentence, so
 the discipline is here rather than in the gate.
 
 NUMBERS ARE REFORMATTED, NEVER RE-DERIVED, AND `stats` IS NOT REFORMATTED HERE
-AT ALL. gen_cases.py runs that list through l10n.dec, which turns 57.6k into
-57,6k and 8.4 into 8,4 on its own, so the figures in it stay in their English
-form and this file owns only the labels. Writing 57,6k here as well gave the
+AT ALL. gen_cases.py runs that list through l10n.dec, which turns 71.1k into
+71,1k and 8.6 into 8,6 on its own, so the figures in it stay in their English
+form and this file owns only the labels. Writing 71,1k here as well gave the
 number 2 owners and l10n.dec read the comma as a thousands separator, printing
-57.6k on the Italian page.
+71.1k on the Italian page.
 
 The figures inside `charts` are prose: they sit mid-sentence, where l10n.dec
 cannot go without turning a full stop into a comma, so those are moved by hand.
 Only Iglisi has published figures, they come from the client's own Search
-Console with permission, and the two weak ones stay weak: position 8,4 is not
+Console with permission, and the two weak ones stay weak: position 8,6 is not
 rounded to 8 and a 1% click rate is not described as anything other than 1%.
 The other 3 clients have no numbers on purpose, and the Italian must not invent
 the impression of one.
@@ -40,7 +40,7 @@ NL = chr(10)
 CLIENTS = [
     {
         "slug": "iglisi-watch",
-        "src": "cbb1f81d",
+        "src": "6b46ff5a",
         # Not copy: the file and its 2 dimensions.
         "mark": [("iglisi-watch.png", 195, 22)],
         "name": "Iglisi Watch",
@@ -55,10 +55,10 @@ CLIENTS = [
         # words; a translation answers the English rather than tidying it in
         # one field and not the other.
         "description": "Un negozio di orologi di famiglia a Durazzo senza nessun "
-                       "sito. Tre mesi dopo il lancio Google gli mandava 560 clic "
+                       "sito. Tre mesi dopo il lancio Google gli mandava 741 clic "
                        "a trimestre, partendo da zero.",
-        "og_desc": "Da nessun sito a 560 clic a trimestre, in 3 mesi.",
-        "summary": "A maggio nessun sito. Ad agosto, 560 clic a trimestre da "
+        "og_desc": "Da nessun sito a 741 clic a trimestre, in 3 mesi.",
+        "summary": "A maggio nessun sito. Ad agosto, 741 clic a trimestre da "
                    "Google, in 3 lingue.",
         "started": [
             # "Rruga Aleksander Goga" is a street name and stays exactly as it
@@ -97,29 +97,28 @@ CLIENTS = [
         # The 4 numbers are the English strings, untouched: l10n.dec moves the
         # separator at render time. Only the labels are this file's, and 3 of
         # the 4 are fixed by glossary.TERMS.
-        "stats": [("560", "clic da Google"), ("57.6k", "volte mostrato"),
-                  ("8.4", "posizione media"), ("1%", "percentuale di clic")],
+        "stats": [("741", "clic da Google"), ("71.1k", "volte mostrato"),
+                  ("8.6", "posizione media"), ("1%", "percentuale di clic")],
         # File, width and height are not copy. The alt and the caption are, and
         # the figures inside them are moved by hand because they sit inside a
-        # sentence: 57,6k, 27,5k, 8,6.
+        # sentence: 71,1k, 29,8k, 9,3.
         #
         # "impressioni" is banned by glossary.py, so the alt says "le volte in
         # cui il sito è stato mostrato": the label form works as a label and
         # needs a verb to work in prose. home_it.py's fig_alt makes the same
         # move for the same sentence.
         "charts": [
-            ("watch-al-3-months.webp", 1440, 592,
+            ("watch-al-3-months.webp", 1440, 576,
              "Google Search Console per watch.al su 3 mesi. I clic e le volte "
              "in cui il sito è stato mostrato partono entrambi quasi da zero "
-             "a metà maggio 2026 e salgono per tutto agosto.",
-             "Tre mesi: dal 12 maggio al 9 agosto 2026. 560 clic, 57,6k volte "
+             "a fine maggio 2026 e salgono per tutto agosto.",
+             "Tre mesi: dal 25 maggio al 24 agosto 2026. 741 clic, 71,1k volte "
              "mostrato, percentuale di clic dell'1%."),
-            ("watch-al-28-days.webp", 1440, 619,
+            ("watch-al-28-days.webp", 1440, 603,
              "Google Search Console per watch.al negli ultimi 28 giorni, con "
              "i clic e le volte in cui il sito è stato mostrato che restano "
              "stabili per tutto luglio e agosto 2026.",
-             "Gli ultimi 28 giorni da soli: dal 15 luglio all'11 agosto. 301 "
-             "clic, 27,5k volte mostrato, posizione media 8,6. Più della metà "
+             "Gli ultimi 28 giorni da soli: dal 28 luglio al 24 agosto. 385 clic, 29,8k volte mostrato, posizione media 9,3. Più della metà "
              "dei clic del trimestre è arrivata nelle ultime 4 settimane."),
         ],
         # Rule 23. It is deliberately not home_it.py's version of this line:
@@ -127,7 +126,7 @@ CLIENTS = [
         # pages, and the English keeps the 2 apart for the same reason.
         "taken": "Rilevato ad agosto 2026. Il posizionamento cambia, quindi "
                  "sarà diverso quando controlli.",
-        "payoff": "Da niente a 560 clic a trimestre.",
+        "payoff": "Da niente a 741 clic a trimestre.",
         # Only index 3 is copy. The alt says what is in the screenshot: the
         # cards carry a price in euro and the same price in lek beside it.
         "plate": ("iglisi-shop.webp", 1120, 777,
@@ -319,7 +318,7 @@ CLIENTS = [
 # text and not copied from the English: a newline here says where the emitted
 # line breaks and carries no meaning.
 WORK_INDEX = {
-    "src": "39522997",
+    "src": "fa0af050",
     # "Lavori" is what chrome_it.FOOT_HEADINGS[1] and CRUMB_WORK already call
     # this section, so the tab, the crumb and the footer say one word.
     "title": "Lavori",
@@ -332,7 +331,7 @@ WORK_INDEX = {
     "standfirst": "Uno è un negozio di orologi a Durazzo che nessuno" + NL +
                   "fuori città riusciva a trovare. Tre mesi dopo il lancio, "
                   "Google gli" + NL +
-                  "mandava 560 clic a trimestre.",
+                  "mandava 741 clic a trimestre.",
     # "Gli altri tre" spells the number out because the English spells it out.
     # A translation answers the English; tidying it here and nowhere else is
     # how one page ends up disagreeing with its own twin.

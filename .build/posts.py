@@ -65,19 +65,19 @@ POSTS = [
         "h1": "This is what a new shop's first 3 months on Google look like.",
         "summary": "The real Search Console chart for a business that started "
                    "with no website, including the parts nobody screenshots.",
-        "standfirst": "Position 8.4. A 1% click rate. One spike in July that "
+        "standfirst": "Position 8.6. A 1% click rate. One spike in July that "
                       "had nothing to do with us.",
         "description": "The actual Search Console numbers from a Durres watch "
                        "shop's first 3 months online, and what a local business "
                        "should fix before it worries about rankings.",
-        "og_desc": "560 clicks, 8.4 average position, and the parts nobody screenshots.",
+        "og_desc": "741 clicks, 8.6 average position, and the parts nobody screenshots.",
 
         "body": [
             ("The short answer", [
                 "<p>If you are starting from no website, expect months, not "
                 "weeks, and expect the first numbers to look unimpressive. "
-                "Iglisi Watch went from nothing in May to 560 clicks a quarter "
-                "by August. Average position 8.4. Click rate 1%.</p>",
+                "Iglisi Watch went from nothing in May to 741 clicks a quarter "
+                "by August. Average position 8.6. Click rate 1%.</p>",
                 "<p>Those are the numbers of a business Google has started "
                 "trusting and has not finished trusting. Both halves are worth "
                 "knowing before you hire anybody.</p>",
@@ -95,13 +95,13 @@ POSTS = [
                 "<p>You can see the whole chart, both windows, on "
                 "<a href=\"/work/iglisi-watch/\">the Iglisi Watch page</a>.</p>",
             ]),
-            ("Why position 8.4 is the honest headline", [
-                "<p>Average position 8.4 means the bottom of the first page. A "
+            ("Why position 8.6 is the honest headline", [
+                "<p>Average position 8.6 means the bottom of the first page. A "
                 "1% click rate is roughly what the bottom of the first page "
                 "pays. Most case studies would leave both out and print the "
-                "560.</p>",
+                "741.</p>",
                 "<p>They matter because they tell you where the next work is. "
-                "The site is being shown 57.6k times and converting 1% of that "
+                "The site is being shown 71.1k times and converting 1% of that "
                 "into visits. Moving from position 8 to position 3 does not "
                 "add impressions. It multiplies what those impressions are "
                 "already worth.</p>",
@@ -443,33 +443,25 @@ POSTS = [
 
         "title": "SEO results: why month 3 beats month 1",
         "h1": "The last 4 weeks of the quarter beat the first 8.",
-        "summary": "Of 560 clicks in a quarter, 301 arrived in the final 28 "
+        "summary": "Of 741 clicks in a quarter, 385 arrived in the final 28 "
                    "days. What that curve means before you spend anything.",
         "standfirst": "Search does not pay out evenly. The quarter that "
-                      "averaged position 8.4 put over half its clicks at "
+                      "averaged position 8.6 put over half its clicks at "
                       "the end.",
-        "description": "A Durres shop took 560 clicks from Google in its "
-                       "first quarter online, and 301 came in the last 28 "
+        "description": "A Durres shop took 741 clicks from Google in its "
+                       "first quarter online, and 385 came in the last 28 "
                        "days. Why search compounds, with the real numbers.",
-        "og_desc": "560 clicks in a quarter. 301 of them in the last 28 days.",
+        "og_desc": "741 clicks in a quarter. 385 of them in the last 28 days.",
 
         "body": [
             ("The short answer", [
                 "<p>Search work pays at the end, not evenly. In "
                 "<a href=\"/work/iglisi-watch/\">watch.al's</a> first "
-                "quarter online, Google sent 560 clicks, and 301 of them, "
-                "over half, arrived between 15 July and 11 August, the "
-                "final 28 days.</p>",
+                "quarter online, Google sent 741 clicks, and 385 of them, over half, arrived between 28 July and 24 August, the final 28 days.</p>",
             ]),
             ("The window on its own", [
-                "<p>Those 28 days alone: 301 clicks from 27.5k appearances "
-                "at an average position of 8.6. The quarter as a whole "
-                "averaged 8.4, so the position was not improving while the "
-                "clicks accelerated. It was fractionally worse.</p>",
-                "<p>That pair of facts matters more than either alone. The "
-                "growth did not come from ranking higher. It came from "
-                "being shown for more searches, which is what Google does "
-                "with a site it has decided to trust.</p>",
+                "<p>Those 28 days alone: 385 clicks from 29.8k appearances at an average position of 9.3. The quarter as a whole averaged 8.6, so the position got worse while the clicks accelerated. The click rate went the other way, 1% over the quarter and 1.3% in those 4 weeks.</p>",
+                "<p>That pair of facts matters more than either alone. The growth did not come from ranking higher, it came from being shown for more searches, which is what Google does with a site it has decided to trust. The shares say the same thing twice: half the quarter's clicks came from 42% of its appearances, so what arrived late converted better than what came first.</p>",
             ]),
             ("Why the curve looks like this", [
                 "<p>A new site spends its first weeks being sampled. "
@@ -696,8 +688,8 @@ POSTS = [
                 "website at all, so there is nothing flattering in the "
                 "starting number: it was zero. A page for each of 58 watches, "
                 "in 3 languages, plus the map listing.</p>",
-                "<p>3 months later Google was sending 560 clicks a quarter, at "
-                "an average position of 8.4 and a 1% click rate. Both of those "
+                "<p>3 months later Google was sending 741 clicks a quarter, at "
+                "an average position of 8.6 and a 1% click rate. Both of those "
                 "last 2 numbers are weak, and they are on the chart on "
                 "<a href=\"/work/iglisi-watch/\">their page</a> with the "
                 "screenshot they came from. Taken in August 2026, and search "
@@ -1782,8 +1774,8 @@ POSTS = [
             ]),
             ("What it looked like for one shop", [
                 "<p>A watch shop in Durres had no website in May. By August, "
-                "search was sending it 560 clicks a quarter at an average "
-                "position of 8.4, which is the bottom of the first page "
+                "search was sending it 741 clicks a quarter at an average "
+                "position of 8.6, which is the bottom of the first page "
                 "rather than the top of it.</p>",
                 "<p>That is the honest shape of it: not first for everything "
                 "in a month, but findable, from nothing, in one summer.</p>",
@@ -2049,9 +2041,7 @@ POSTS = [
                 "you show up for, lower down than you would like.</p>",
             ]),
             ("What one quarter looked like", [
-                "<p>Iglisi Watch began with no site at all. Across the "
-                "quarter that followed, search delivered 560 clicks at an "
-                "average position of 8.4 and a click rate of 1%.</p>",
+                "<p>Iglisi Watch began with no site at all. Across the quarter that followed, search delivered 741 clicks at an average position of 8.6 and a click rate of 1%. Expect the position to get worse before it gets better: in the last 4 weeks of that quarter it fell to 9.3 while the click rate rose to 1.3%, because a site that starts appearing for more searches appears for plenty of them near the bottom.</p>",
                 "<p>The closing four weeks carried more of that than the "
                 "opening eight, which is the shape of this work: flat, flat, "
                 "then a slope.</p>",
@@ -3011,7 +3001,7 @@ POSTS = [
         "description": "SEO for a brand new business in Albania: what to do "
                        "in the first three months, in order, with the "
                        "numbers a real shop produced starting from nothing.",
-        "og_desc": "One shop went from no website to 560 clicks a quarter. "
+        "og_desc": "One shop went from no website to 741 clicks a quarter. "
                    "This is the order it was done in.",
 
         "body": [
@@ -3040,8 +3030,8 @@ POSTS = [
             ]),
             ("Expect the shape, not a straight line", [
                 "<p>A watch shop here had no site in May. Across the "
-                "following quarter search brought it 560 clicks at an "
-                "average position of 8.4, which is the foot of the first "
+                "following quarter search brought it 741 clicks at an "
+                "average position of 8.6, which is the foot of the first "
                 "page rather than the top.</p>",
                 "<p>The closing weeks of that quarter carried more than the "
                 "opening ones. Flat, flat, then a slope, and knowing that in "

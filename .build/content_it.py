@@ -24,7 +24,7 @@ WHAT IS NOT COPY and is byte-identical to the English: "slug" (i18n.url_for
 derives every path from it), "fig" (a key into gen_pages.FIGS), every href
 inside a sentence, and the client names. Only the link TEXT is translated.
 
-Numbers are reformatted, never recomputed: 560 clic, 3 mesi, 6 a 12 mesi, 400
+Numbers are reformatted, never recomputed: 741 clic, 3 mesi, 6 a 12 mesi, 400
 metri, 90 secondi. Nothing here was rounded, softened or re-derived. Accented
 letters are literal ("attività", "è", "perché"), never HTML entities, and the
 apostrophe is the ASCII one the English already ships.
@@ -34,7 +34,7 @@ SERVICES = [
     # ------------------------------------------------------------------ SEO --
     {
         "slug": "seo",
-        "src": "b9bf72a7",
+        "src": "887e8c8b",
         "nav": "SEO",
         "schema_name": "Ottimizzazione per i motori di ricerca e ricerca locale",
         # 23 characters, the same as the English, and 41 with the suffix
@@ -77,7 +77,7 @@ SERVICES = [
                 "<p>Farsi trovare su Google significa due lavori: il Profilo "
                 "dell'attività su Google che mette il negozio sulla mappa, "
                 "e un sito che risponde a quello che la gente digita. watch.al "
-                "è partito senza sito e ha raggiunto 560 clic a trimestre "
+                "è partito senza sito e ha raggiunto 741 clic a trimestre "
                 "in 3 mesi. L'<a href=\"/start/\">audit gratuito</a> dà un "
                 "voto a 6 aree e ti dice da quale lavoro cominciare.</p>",
             ]),
@@ -126,9 +126,9 @@ SERVICES = [
                 "la gente compra davvero è un lavoro da 6 a 12 mesi. Chi "
                 "promette più in fretta sta descrivendo gli annunci a "
                 "pagamento.</p>",
-                # 560 and 3 are typed off Search Console. They move separators
+                # 741 and 3 are typed off Search Console. They move separators
                 # and nothing else; here neither of them even has one.
-                "<p>watch.al è passato da nessun sito a 560 clic da Google in "
+                "<p>watch.al è passato da nessun sito a 741 clic da Google in "
                 "3 mesi. Il grafico è sulla "
                 "<a href=\"/work/iglisi-watch/\">loro pagina</a>. Sono tempi "
                 "veri per un'attività che parte da zero in una città dove "

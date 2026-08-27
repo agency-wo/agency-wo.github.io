@@ -23,10 +23,10 @@ written as an HTML entity: watch.al carries both forms across 151 files and
 calls it its worst remaining legacy. Apostrophes are ASCII ("S'ka", "t'ia").
 
 THE NUMBERS ARE MOVED, NEVER RECOMPUTED, AND ONLY THE ONES IN PROSE ARE MOVED
-HERE. 57.6k -> 57,6k and 8.4 -> 8,4 is the whole change, and STATS does not get
+HERE. 71.1k -> 71,1k and 8.6 -> 8,6 is the whole change, and STATS does not get
 it: gen_home.py runs that list through l10n.dec, so the figures in it stay in
 their English form and this file owns only the labels. proof_p2 is prose and
-does the move by hand, keeping position 8,4 and the 1% click rate as the bad
+does the move by hand, keeping position 8,6 and the 1% click rate as the bad
 news they are: rule 22 says the weak numbers stay visible, and a translation
 that softens them has edited a claim while appearing to translate one.
 """
@@ -37,7 +37,7 @@ that softens them has edited a claim while appearing to translate one.
 SRC = {
     "AVAILABILITY": "868c31af",
     "SERVICES": "b417d875",
-    "STATS": "dcfd8814",
+    "STATS": "79c5087f",
 }
 
 NL = chr(10)
@@ -80,27 +80,27 @@ SERVICES = [
      "Stoku, punët, klientët, pagat dhe sa fitoi secila pjesë e biznesit"),
 ]
 
-# STAMP: STATS is a list of tuples too, so "src": "dcfd8814" lives in this
+# STAMP: STATS is a list of tuples too, so "src": "79c5087f" lives in this
 # comment for the same reason.
 #
 # Four figures from one Search Console export. THE FIGURES ARE THE ENGLISH
 # ONES AND THEY STAY THAT WAY: gen_home.py puts every one of them through
-# l10n.dec, which turns 57.6k into 57,6k and 8.4 into 8,4 on its own. Writing
-# 57,6k here as well gave the number 2 owners, and l10n.dec read that comma as
-# a thousands separator and printed 57.6k on the Albanian page: the exact
+# l10n.dec, which turns 71.1k into 71,1k and 8.6 into 8,6 on its own. Writing
+# 71,1k here as well gave the number 2 owners, and l10n.dec read that comma as
+# a thousands separator and printed 71.1k on the Albanian page: the exact
 # watch.al bug l10n.py exists to end, arrived at from the other direction.
 #
 # Only the labels are this file's. They are the glossary's words, and "herë e
 # shfaqur" is mandated because "pershtypje" is a banned variant.
 STATS = [
-    ("560", "klikime nga Google"),
-    ("57.6k", "herë e shfaqur"),
-    ("8.4", "pozicioni mesatar"),
+    ("741", "klikime nga Google"),
+    ("71.1k", "herë e shfaqur"),
+    ("8.6", "pozicioni mesatar"),
     ("1%", "përqindja e klikimeve"),
 ]
 
 PAGE = {
-    "src": "8619c88c",
+    "src": "6195f5ca",
 
     # 39 characters against the 52 the title budget leaves once gen_home.py has
     # put "minarank studio ·" in front of it.
@@ -151,7 +151,7 @@ PAGE = {
                   "është vërtet zero. Gjithçka në këtë grafik erdhi nga "
                   "kërkimi, jo nga një" + NL +
                   "buxhet reklamash.",
-    "stat_note": "Tre muaj, 12 maj deri më 9 gusht 2026. Search Console" + NL +
+    "stat_note": "Tre muaj, 25 maj deri më 24 gusht 2026. Search Console" + NL +
                  "raporton klikime, që nuk janë e njëjta gjë me njerëzit.",
     # Read aloud in place of the chart, so it describes the shape of the lines.
     # "herët e shfaqura" is the plural of the glossary's "herë e shfaqur";
@@ -159,7 +159,7 @@ PAGE = {
     # banning it.
     "fig_alt": "Google Search Console për watch.al. Klikimet dhe herët e "
                "shfaqura" + NL +
-               "nisin të dyja afër zeros në mes të majit 2026 dhe ngjiten "
+               "nisin të dyja afër zeros në fund të majit 2026 dhe ngjiten "
                "gjatë gushtit.",
     "fig_caption": "Vija vjollcë tregon sa herë doli dyqani në Google. "
                    "Vija" + NL +
@@ -171,11 +171,11 @@ PAGE = {
     # Rule 22. Both bad numbers stay, and so does the sentence that says a 1%
     # click rate is what the bottom of the first page pays. Nothing here is
     # hedged, softened or moved into a subordinate clause.
-    "proof_p2": "Pozicioni 8,4 është fundi i faqes së parë dhe përqindja e "
-                "klikimeve" + NL +
-                "prej 1% është pak a shumë sa paguan fundi i faqes së parë. "
-                "Ngritja e tij" + NL +
-                "është puna e radhës dhe aty është pjesa tjetër e rritjes.",
+    "proof_p2": "Pozicioni 8,6 është fundi i faqes së parë. Në 4 javët e "
+                  "fundit ra" + NL +
+                  "në 9,3 ndërsa përqindja e klikimeve u ngrit në 1,3%. Më "
+                  "shumë kërkime" + NL +
+                  "po e gjejnë dyqanin, jo më pak.",
     # The dare, and it has to be an instruction an Albanian speaker would
     # actually follow, so the two searches are typed the way they get typed:
     # "riparim orësh Durrës" and "dyqan orësh Durrës".
@@ -210,9 +210,9 @@ PAGE = {
     "open_p1": "{brand} ka nxjerrë online {clients} biznese, secili me faqen" + NL +
                "e vet. I pari nuk kishte fare faqe interneti në maj; në gusht "
                "Google i" + NL +
-               "dërgonte 560 klikime në tremujor.",
+               "dërgonte 741 klikime në tremujor.",
     "open_p2": "Shumica e agjencive tregojnë një mur me logo. Ne tregojmë" + NL +
-               "eksportin e Search Console, përfshirë pozicionin mesatar 8,4 dhe "
+               "eksportin e Search Console, përfshirë pozicionin mesatar 8,6 dhe "
                "përqindjen" + NL +
                "e klikimeve prej 1%, që askush nuk do t'i zgjidhte për botim. Një "
                "shifër" + NL +

@@ -14,7 +14,7 @@ The 5 rules in posts.py all survive the move, and 2 of them get harder:
 4. The 3 `payoff` lines ask for 3 different things, as in English: the map, the
    number somebody quoted you, and the thing you still count by hand.
 
-NUMBERS ARE REFORMATTED, NEVER RE-DERIVED. 8.4 -> 8,4, 57.6k -> 57,6k,
+NUMBERS ARE REFORMATTED, NEVER RE-DERIVED. 8.6 -> 8,6, 71.1k -> 71,1k,
 80.9% -> 80,9%, 137,210 -> 137.210. Every figure in here was typed by a person
 reading Search Console, and this file only ever moved a separator.
 
@@ -32,7 +32,7 @@ POSTS = [
     # ================================================================ SEO ===
     {
         "slug": "map-listing-first",
-        "src": "20a67441",
+        "src": "3b8e0f72",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Ricerca locale",
@@ -48,20 +48,20 @@ POSTS = [
         "summary": "Il grafico vero di Search Console di un'attività partita "
                    "senza sito, comprese le parti che nessuno mette nello "
                    "screenshot.",
-        "standfirst": "Posizione 8,4. Percentuale di clic dell'1%. Un picco a "
+        "standfirst": "Posizione 8,6. Percentuale di clic dell'1%. Un picco a "
                       "luglio che non c'entrava niente con noi.",
         "description": "I numeri di Search Console dei primi 3 mesi online di "
                        "un negozio di orologi a Durazzo, e cosa deve sistemare "
                        "un'attività locale prima di preoccuparsi del "
                        "posizionamento.",
-        "og_desc": "560 clic, posizione media 8,4 e le parti che nessuno mette nello screenshot.",
+        "og_desc": "741 clic, posizione media 8,6 e le parti che nessuno mette nello screenshot.",
 
         "body": [
             ("La risposta breve", [
                 "<p>Se parti senza sito, aspettati mesi, non settimane, e "
                 "aspettati che i primi numeri sembrino poca cosa. Iglisi Watch "
-                "è passata da zero a maggio a 560 clic a trimestre ad agosto. "
-                "Posizione media 8,4. Percentuale di clic 1%.</p>",
+                "è passata da zero a maggio a 741 clic a trimestre ad agosto. "
+                "Posizione media 8,6. Percentuale di clic 1%.</p>",
                 "<p>Sono i numeri di un'attività di cui Google ha iniziato a "
                 "fidarsi e non ha finito di fidarsi. Vale la pena conoscere "
                 "tutte e due le metà prima di assumere qualcuno.</p>",
@@ -80,13 +80,13 @@ POSTS = [
                 "<p>Puoi vedere tutto il grafico, tutte e due le finestre, su "
                 "<a href=\"/work/iglisi-watch/\">la pagina di Iglisi Watch</a>.</p>",
             ]),
-            ("Perché la posizione 8,4 è il titolo onesto", [
-                "<p>Posizione media 8,4 vuol dire in fondo alla prima pagina. "
+            ("Perché la posizione 8,6 è il titolo onesto", [
+                "<p>Posizione media 8,6 vuol dire in fondo alla prima pagina. "
                 "Una percentuale di clic dell'1% è più o meno quello che rende "
                 "il fondo della prima pagina. Quasi tutti i case study "
-                "lascerebbero fuori tutte e due e stamperebbero il 560.</p>",
+                "lascerebbero fuori tutte e due e stamperebbero il 741.</p>",
                 "<p>Contano perché ti dicono dov'è il lavoro successivo. Il "
-                "sito viene mostrato 57,6k volte e ne converte l'1% in visite. "
+                "sito viene mostrato 71,1k volte e ne converte l'1% in visite. "
                 "Passare dalla posizione 8 alla posizione 3 non aggiunge volte "
                 "mostrato. Moltiplica quello che quelle volte valgono già.</p>",
             ]),
@@ -442,7 +442,7 @@ POSTS = [
     # ============================================================= COMPOUND ===
     {
         "slug": "the-last-4-weeks",
-        "src": "ca60e01f",
+        "src": "8f81a108",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Ricerca locale",
@@ -451,36 +451,27 @@ POSTS = [
 
         "title": "Risultati SEO: perché il mese 3 batte il primo",
         "h1": "Le ultime 4 settimane del trimestre battono le prime 8.",
-        "summary": "Di 560 clic in un trimestre, 301 sono arrivati negli "
+        "summary": "Di 741 clic in un trimestre, 385 sono arrivati negli "
                    "ultimi 28 giorni. Cosa dice quella curva prima di "
                    "spendere qualcosa.",
         "standfirst": "La ricerca non paga in modo uniforme. Il trimestre "
-                      "con posizione media 8,4 ha messo oltre metà dei clic "
+                      "con posizione media 8,6 ha messo oltre metà dei clic "
                       "alla fine.",
-        "description": "Un negozio di Durazzo ha preso 560 clic da Google "
-                       "nel primo trimestre online, e 301 negli ultimi 28 "
+        "description": "Un negozio di Durazzo ha preso 741 clic da Google "
+                       "nel primo trimestre online, e 385 negli ultimi 28 "
                        "giorni. Perché la ricerca si accumula, con i numeri "
                        "veri.",
-        "og_desc": "560 clic in un trimestre. 301 negli ultimi 28 giorni.",
+        "og_desc": "741 clic in un trimestre. 385 negli ultimi 28 giorni.",
 
         "body": [
             ("La risposta breve", [
                 "<p>Il lavoro sulla ricerca paga alla fine, non in modo "
                 "uniforme. Nel primo trimestre online di "
-                "<a href=\"/work/iglisi-watch/\">watch.al</a>, Google ha "
-                "mandato 560 clic, e 301, oltre la metà, sono arrivati tra "
-                "il 15 luglio e l'11 agosto, gli ultimi 28 giorni.</p>",
+                "<a href=\"/work/iglisi-watch/\">watch.al</a>, Google ha mandato 741 clic, e 385, oltre la metà, sono arrivati tra il 28 luglio e il 24 agosto, gli ultimi 28 giorni.</p>",
             ]),
             ("La finestra da sola", [
-                "<p>Quei 28 giorni da soli: 301 clic da 27,5k volte "
-                "mostrato, a una posizione media di 8,6. Il trimestre nel "
-                "suo insieme faceva 8,4, quindi la posizione non stava "
-                "migliorando mentre i clic acceleravano. Era un filo "
-                "peggio.</p>",
-                "<p>Quella coppia di fatti conta più di ognuno da solo. La "
-                "crescita non è venuta dal posizionarsi più in alto. È "
-                "venuta dall'essere mostrati per più ricerche, che è ciò "
-                "che Google fa con un sito di cui ha deciso di fidarsi.</p>",
+                "<p>Quei 28 giorni da soli: 385 clic da 29,8k volte mostrato, a una posizione media di 9,3. Il trimestre nel suo insieme faceva 8,6, quindi la posizione è peggiorata mentre i clic acceleravano. La percentuale di clic è andata dall'altra parte, 1% sul trimestre e 1,3% in quelle 4 settimane.</p>",
+                "<p>Quella coppia di fatti conta più di ognuno da solo. La crescita non è venuta dal posizionarsi più in alto, è venuta dall'essere mostrati per più ricerche, che è ciò che Google fa con un sito di cui ha deciso di fidarsi. Le quote lo dicono due volte: metà dei clic del trimestre è arrivata dal 42% delle volte mostrato, quindi quello che è arrivato tardi ha reso meglio di quello che è arrivato prima.</p>",
             ]),
             ("Perché la curva ha questa forma", [
                 "<p>Un sito nuovo passa le prime settimane sotto "
@@ -659,7 +650,7 @@ POSTS = [
     # ====================================================== INDUSTRY: WATCH ===
     {
         "slug": "watch-shops-and-jewellers",
-        "src": "9a131e40",
+        "src": "19208388",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Ricerca locale",
@@ -722,8 +713,8 @@ POSTS = [
                 "aveva nessun sito, quindi nel numero di partenza non c'è "
                 "niente di lusinghiero: era zero. Una pagina per ognuno dei 58 "
                 "orologi, in 3 lingue, più la scheda Google.</p>",
-                "<p>3 mesi dopo Google mandava 560 clic a trimestre, con un "
-                "posizionamento medio di 8,4 e una percentuale di clic "
+                "<p>3 mesi dopo Google mandava 741 clic a trimestre, con un "
+                "posizionamento medio di 8,6 e una percentuale di clic "
                 "dell'1%. Questi ultimi 2 numeri sono deboli, e stanno sul "
                 "grafico della <a href=\"/work/iglisi-watch/\">loro "
                 "pagina</a> con la schermata da cui arrivano. Rilevato ad "
@@ -1775,7 +1766,7 @@ POSTS = [
 
     {
         "slug": "how-to-come-up-first-on-google",
-        "src": "56c65d65",
+        "src": "e73891bc",
         "date": "2026-08-21",
         "updated": "2026-08-21",
         "topic": "Ricerca locale",
@@ -1827,8 +1818,8 @@ POSTS = [
             ]),
             ("Com'è andata a un negozio", [
                 "<p>Un'orologeria a Durazzo a maggio non aveva sito. Ad "
-                "agosto la ricerca le mandava 560 clic a trimestre, con una "
-                "posizione media di 8,4, che è il fondo della prima pagina e "
+                "agosto la ricerca le mandava 741 clic a trimestre, con una "
+                "posizione media di 8,6, che è il fondo della prima pagina e "
                 "non la cima.</p>",
                 "<p>Questa è la forma onesta della cosa: non primo su tutto "
                 "in un mese, ma trovabile, partendo da zero, in "
@@ -2058,7 +2049,7 @@ POSTS = [
 
     {
         "slug": "how-long-seo-takes",
-        "src": "2bec2bb8",
+        "src": "82e5ba49",
         "date": "2026-08-21",
         "updated": "2026-08-21",
         "topic": "Ricerca locale",
@@ -2097,10 +2088,7 @@ POSTS = [
                 "in più per cui esci, più in basso di quanto vorresti.</p>",
             ]),
             ("Com'è andato un trimestre", [
-                "<p>Iglisi Watch è partita senza nessun sito. Nel trimestre "
-                "successivo la ricerca ha portato 560 clic, con una "
-                "posizione media di 8,4 e una percentuale di clic "
-                "dell'1%.</p>",
+                "<p>Iglisi Watch è partita senza nessun sito. Nel trimestre successivo la ricerca ha portato 741 clic, con una posizione media di 8,6 e una percentuale di clic dell'1%. Aspettati che la posizione peggiori prima di migliorare: nelle ultime 4 settimane di quel trimestre è scesa a 9,3 mentre la percentuale di clic saliva all'1,3%, perché un sito che inizia a comparire per più ricerche compare per parecchie di esse in fondo.</p>",
                 "<p>Le ultime quattro settimane ne hanno portate più delle "
                 "prime otto, che è la forma di questo lavoro: piatto, "
                 "piatto, poi una salita.</p>",
@@ -3063,7 +3051,7 @@ POSTS = [
 
     {
         "slug": "seo-for-a-new-business",
-        "src": "fc0b6040",
+        "src": "5455f883",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Ricerca locale",
@@ -3081,7 +3069,7 @@ POSTS = [
         "description": "SEO per un'attività appena nata in Albania: cosa "
                        "fare nei primi tre mesi, in ordine, con i numeri "
                        "veri prodotti da un negozio partito da zero.",
-        "og_desc": "Un negozio è passato da nessun sito a 560 clic a "
+        "og_desc": "Un negozio è passato da nessun sito a 741 clic a "
                    "trimestre. Questo è l'ordine in cui è stato fatto.",
 
         "body": [
@@ -3110,8 +3098,8 @@ POSTS = [
             ]),
             ("Aspettati la forma, non una linea dritta", [
                 "<p>Un'orologeria qui a maggio non aveva sito. Nel trimestre "
-                "successivo la ricerca le ha portato 560 clic con una "
-                "posizione media di 8,4, che è il fondo della prima pagina e "
+                "successivo la ricerca le ha portato 741 clic con una "
+                "posizione media di 8,6, che è il fondo della prima pagina e "
                 "non la cima.</p>",
                 "<p>Le ultime settimane di quel trimestre hanno portato più "
                 "delle prime. Piatto, piatto, poi una salita, e saperlo in "

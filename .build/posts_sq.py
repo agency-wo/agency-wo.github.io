@@ -14,7 +14,7 @@ The 5 rules in posts.py all survive the move, and 2 of them get harder:
 4. The 3 `payoff` lines ask for 3 different things, as in English: the map, the
    number somebody quoted you, and the thing you still count by hand.
 
-NUMBERS ARE REFORMATTED, NEVER RE-DERIVED. 8.4 -> 8,4, 57.6k -> 57,6k,
+NUMBERS ARE REFORMATTED, NEVER RE-DERIVED. 8.6 -> 8,6, 71.1k -> 71,1k,
 80.9% -> 80,9%, 137,210 -> 137.210. Every figure in here was typed by a person
 reading Search Console, and this file only ever moved a separator.
 
@@ -32,7 +32,7 @@ POSTS = [
     # ================================================================ SEO ===
     {
         "slug": "map-listing-first",
-        "src": "20a67441",
+        "src": "3b8e0f72",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Kërkim lokal",
@@ -44,19 +44,19 @@ POSTS = [
         "summary": "Grafiku i vërtetë i Search Console për një biznes që nisi "
                    "pa faqe interneti, përfshirë pjesët që askush nuk i vë në "
                    "screenshot.",
-        "standfirst": "Pozicioni 8,4. Përqindje klikimesh 1%. Një kulm në "
+        "standfirst": "Pozicioni 8,6. Përqindje klikimesh 1%. Një kulm në "
                       "korrik që nuk kishte lidhje me ne.",
         "description": "Numrat e vërtetë të Search Console nga 3 muajt e parë "
                        "online të një dyqani orësh në Durrës, dhe çfarë duhet "
                        "të rregullojë një biznes lokal para renditjes.",
-        "og_desc": "560 klikime, pozicion mesatar 8,4 dhe pjesët që askush nuk i vë në screenshot.",
+        "og_desc": "741 klikime, pozicion mesatar 8,6 dhe pjesët që askush nuk i vë në screenshot.",
 
         "body": [
             ("Përgjigjja e shkurtër", [
                 "<p>Nëse nis pa faqe interneti, prit muaj, jo javë, dhe prit që "
                 "numrat e parë të duken modestë. Iglisi Watch shkoi nga asgjë "
-                "në maj në 560 klikime në tremujor deri në gusht. Pozicion "
-                "mesatar 8,4. Përqindje klikimesh 1%.</p>",
+                "në maj në 741 klikime në tremujor deri në gusht. Pozicion "
+                "mesatar 8,6. Përqindje klikimesh 1%.</p>",
                 "<p>Janë numrat e një biznesi që Google ka nisur ta besojë dhe "
                 "nuk ka mbaruar ende së besuari. Të dyja gjysmat ia vlen t'i "
                 "dish para se të punësosh dikë.</p>",
@@ -75,13 +75,13 @@ POSTS = [
                 "<p>Të gjithë grafikun, të dyja dritaret, mund ta shohësh te "
                 "<a href=\"/work/iglisi-watch/\">faqja e Iglisi Watch</a>.</p>",
             ]),
-            ("Pse pozicioni 8,4 është titulli i ndershëm", [
-                "<p>Pozicion mesatar 8,4 do të thotë fundi i faqes së parë. Një "
+            ("Pse pozicioni 8,6 është titulli i ndershëm", [
+                "<p>Pozicion mesatar 8,6 do të thotë fundi i faqes së parë. Një "
                 "përqindje klikimesh 1% është pak a shumë sa paguan fundi i "
                 "faqes së parë. Shumica e studimeve të rastit do t'i linin "
-                "jashtë të dyja dhe do të printonin 560-shin.</p>",
+                "jashtë të dyja dhe do të printonin 741-shin.</p>",
                 "<p>Kanë rëndësi sepse të thonë ku është puna tjetër. Faqja "
-                "shfaqet 57,6k herë dhe e kthen 1% të kësaj në vizita. Kalimi "
+                "shfaqet 71,1k herë dhe e kthen 1% të kësaj në vizita. Kalimi "
                 "nga pozicioni 8 te pozicioni 3 nuk shton herë të shfaqura. "
                 "Shumëzon atë që ato herë vlejnë tashmë.</p>",
             ]),
@@ -453,7 +453,7 @@ POSTS = [
     # ============================================================= COMPOUND ===
     {
         "slug": "the-last-4-weeks",
-        "src": "ca60e01f",
+        "src": "8f81a108",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Kërkim lokal",
@@ -462,36 +462,27 @@ POSTS = [
 
         "title": "Rezultatet SEO: pse muaji 3 ia kalon të parit",
         "h1": "4 javët e fundit të tremujorit mundin 8 të parat.",
-        "summary": "Nga 560 klikime në një tremujor, 301 erdhën në 28 "
+        "summary": "Nga 741 klikime në një tremujor, 385 erdhën në 28 "
                    "ditët e fundit. Çfarë tregon ajo kurbë para se të "
                    "shpenzosh gjë.",
         "standfirst": "Kërkimi nuk paguan njëtrajtshëm. Tremujori me "
-                      "pozicion mesatar 8,4 i vuri mbi gjysmën e "
+                      "pozicion mesatar 8,6 i vuri mbi gjysmën e "
                       "klikimeve në fund.",
-        "description": "Një dyqan në Durrës mori 560 klikime nga Google në "
-                       "tremujorin e parë online, dhe 301 erdhën në 28 "
+        "description": "Një dyqan në Durrës mori 741 klikime nga Google në "
+                       "tremujorin e parë online, dhe 385 erdhën në 28 "
                        "ditët e fundit. Pse kërkimi grumbullohet, me "
                        "numrat e vërtetë.",
-        "og_desc": "560 klikime në një tremujor. 301 në 28 ditët e fundit.",
+        "og_desc": "741 klikime në një tremujor. 385 në 28 ditët e fundit.",
 
         "body": [
             ("Përgjigjja e shkurtër", [
                 "<p>Puna me kërkimin paguan në fund, jo njëtrajtshëm. Në "
                 "tremujorin e parë online të "
-                "<a href=\"/work/iglisi-watch/\">watch.al</a>, Google "
-                "dërgoi 560 klikime, dhe 301 prej tyre, mbi gjysma, "
-                "erdhën mes 15 korrikut dhe 11 gushtit, 28 ditët e "
-                "fundit.</p>",
+                "<a href=\"/work/iglisi-watch/\">watch.al</a>, Google dërgoi 741 klikime, dhe 385 prej tyre, mbi gjysma, erdhën mes 28 korrikut dhe 24 gushtit, 28 ditët e fundit.</p>",
             ]),
             ("Dritarja më vete", [
-                "<p>Ato 28 ditë më vete: 301 klikime nga 27,5k herë e "
-                "shfaqur, me pozicion mesatar 8,6. Tremujori në tërësi "
-                "bënte 8,4, pra pozicioni s'po përmirësohej ndërsa "
-                "klikimet shpejtonin. Ishte një fije më keq.</p>",
-                "<p>Ajo dyshe faktesh vlen më shumë se secili më vete. "
-                "Rritja s'erdhi nga renditja më lart. Erdhi nga shfaqja "
-                "për më shumë kërkime, që është ajo çfarë bën Google me "
-                "një faqe të cilës i ka zënë besë.</p>",
+                "<p>Ato 28 ditë më vete: 385 klikime nga 29,8k herë e shfaqur, me pozicion mesatar 9,3. Tremujori në tërësi bënte 8,6, pra pozicioni u këqesësua ndërsa klikimet shpejtonin. Përqindja e klikimeve shkoi nga ana tjetër, 1% për tremujorin dhe 1,3% në ato 4 javë.</p>",
+                "<p>Ajo dyshe faktesh vlen më shumë se secili më vete. Rritja s'erdhi nga renditja më lart, erdhi nga shfaqja për më shumë kërkime, që është ajo çfarë bën Google me një faqe të cilës i ka zënë besë. Pjesët e thonë të njëjtën dy herë: gjysma e klikimeve të tremujorit erdhi nga 42% e herëve të shfaqura, pra ajo që erdhi vonë ktheu më mirë se ajo që erdhi e para.</p>",
             ]),
             ("Pse kurba ka këtë formë", [
                 "<p>Një faqe e re i kalon javët e para nën provë. Google "
@@ -666,7 +657,7 @@ POSTS = [
     # ====================================================== INDUSTRY: WATCH ===
     {
         "slug": "watch-shops-and-jewellers",
-        "src": "9a131e40",
+        "src": "19208388",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Kërkim lokal",
@@ -727,8 +718,8 @@ POSTS = [
                 "kishte fare faqe, prandaj te numri i nisjes nuk ka asgjë për "
                 "t'u mburrur: ishte zero. Një faqe për secilën nga 58 orët, në "
                 "3 gjuhë, plus profili në Google.</p>",
-                "<p>3 muaj më vonë Google sillte 560 klikime në tremujor, me "
-                "renditje mesatare 8,4 dhe përqindje klikimesh 1%. Këta 2 "
+                "<p>3 muaj më vonë Google sillte 741 klikime në tremujor, me "
+                "renditje mesatare 8,6 dhe përqindje klikimesh 1%. Këta 2 "
                 "numrat e fundit janë të dobët, dhe rrinë te grafiku i "
                 "<a href=\"/work/iglisi-watch/\">faqes së tyre</a> bashkë me "
                 "pamjen nga erdhën. Marrë në gusht 2026, dhe kërkimi nuk rri "
@@ -1760,7 +1751,7 @@ POSTS = [
 
     {
         "slug": "how-to-come-up-first-on-google",
-        "src": "56c65d65",
+        "src": "e73891bc",
         "date": "2026-08-21",
         "updated": "2026-08-21",
         "topic": "Kërkim lokal",
@@ -1813,8 +1804,8 @@ POSTS = [
             ]),
             ("Si doli për një dyqan", [
                 "<p>Një dyqan orësh në Durrës në maj nuk kishte faqe. Në "
-                "gusht kërkimi i dërgonte 560 klikime në tremujor, me "
-                "pozicion mesatar 8,4, që është fundi i faqes së parë dhe jo "
+                "gusht kërkimi i dërgonte 741 klikime në tremujor, me "
+                "pozicion mesatar 8,6, që është fundi i faqes së parë dhe jo "
                 "maja e saj.</p>",
                 "<p>Kjo është forma e ndershme e punës: jo i pari për "
                 "gjithçka brenda një muaji, por i gjendshëm, duke nisur nga "
@@ -2041,7 +2032,7 @@ POSTS = [
 
     {
         "slug": "how-long-seo-takes",
-        "src": "2bec2bb8",
+        "src": "82e5ba49",
         "date": "2026-08-21",
         "updated": "2026-08-21",
         "topic": "Kërkim lokal",
@@ -2081,9 +2072,7 @@ POSTS = [
                 "cilat del, më poshtë nga sa do të doje.</p>",
             ]),
             ("Si doli një tremujor", [
-                "<p>Iglisi Watch nisi pa asnjë faqe. Në tremujorin që pasoi "
-                "kërkimi solli 560 klikime, me pozicion mesatar 8,4 dhe "
-                "përqindje klikimesh 1%.</p>",
+                "<p>Iglisi Watch nisi pa asnjë faqe. Në tremujorin që pasoi kërkimi solli 741 klikime, me pozicion mesatar 8,6 dhe përqindje klikimesh 1%. Prit që pozicioni të këqesësohet para se të përmirësohet: në 4 javët e fundit të atij tremujori ra në 9,3 ndërsa përqindja e klikimeve u ngrit në 1,3%, sepse një faqe që nis të shfaqet për më shumë kërkime shfaqet për mjaft prej tyre poshtë.</p>",
                 "<p>Katër javët e fundit sollën më shumë se tetë të parat, "
                 "që është forma e kësaj pune: rrafsh, rrafsh, pastaj një "
                 "ngjitje.</p>",
@@ -3035,7 +3024,7 @@ POSTS = [
 
     {
         "slug": "seo-for-a-new-business",
-        "src": "fc0b6040",
+        "src": "5455f883",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Kërkim lokal",
@@ -3051,7 +3040,7 @@ POSTS = [
         "description": "SEO për një biznes të porsahapur në Shqipëri: çfarë "
                        "të bësh në tre muajt e parë, me radhë, me numrat e "
                        "vërtetë që nxori një dyqan nga hiçi.",
-        "og_desc": "Një dyqan shkoi nga asnjë faqe në 560 klikime në "
+        "og_desc": "Një dyqan shkoi nga asnjë faqe në 741 klikime në "
                    "tremujor. Kjo është radha në të cilën u bë.",
 
         "body": [
@@ -3080,8 +3069,8 @@ POSTS = [
             ]),
             ("Prit formën, jo një vijë të drejtë", [
                 "<p>Një dyqan orësh këtu në maj nuk kishte faqe. Në "
-                "tremujorin që pasoi kërkimi i solli 560 klikime me pozicion "
-                "mesatar 8,4, që është fundi i faqes së parë dhe jo "
+                "tremujorin që pasoi kërkimi i solli 741 klikime me pozicion "
+                "mesatar 8,6, që është fundi i faqes së parë dhe jo "
                 "maja.</p>",
                 "<p>Javët e fundit të atij tremujori sollën më shumë se të "
                 "parat. Rrafsh, rrafsh, pastaj një ngjitje, dhe ta dish "
