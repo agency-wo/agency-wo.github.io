@@ -549,7 +549,7 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
   color: var(--slate); }
 
 /* -- the growth chart ------------------------------------------------------ */
-/* The same 90 days as the Google screenshot that still sits below it, in the
+/* The same window as the Google screenshot that still sits below it, in the
    studio's colours. gen_home.growth_chart asserts both series still sum to the
    2 figures printed directly above before it will emit this.
 

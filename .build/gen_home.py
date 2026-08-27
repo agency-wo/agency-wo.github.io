@@ -264,7 +264,7 @@ def audit_form(f, lang):
 
 # -- the growth chart -------------------------------------------------------
 # Google's own screenshot is still on the page underneath this, and it is still
-# blue and purple. This is the same 90 days in the studio's colours, drawn from
+# blue and purple. This is that same window in the studio's colours, drawn from
 # proof_data.DAILY, which .build/trace_proof.py read back out of that very
 # screenshot and checked against the 2 published totals before writing.
 #
