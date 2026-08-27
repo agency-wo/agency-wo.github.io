@@ -137,6 +137,17 @@ everything checkable is checked by `verify.py`, which fails the build.
     old one. Checks 7, 27 and 50 all fired on it, which is the only reason this
     line is now right. A generator absent from this list is a page that stops
     being built without anybody deciding to stop building it.
+    Run it with `python .build/build.py`, which is this list as code and takes
+    `--no-ping` to skip IndexNow's 3 minutes on a build that is not being
+    deployed. That exists because the list being right stopped being enough: on
+    27 August a rebuild typed by hand ran 10 of the 11 and left out
+    `gen_launch`, so llms.txt and llms-full.txt described the previous build for
+    5 days while every page carried a new Search Console reading. Nothing
+    failed, because every check in the gate reads pages. That was the third
+    generator to go missing from a build, and all three were caught by something
+    noticing the damage rather than by anything noticing the omission. Check 52
+    now holds this line, build.py's ORDER and the `gen_*.py` on disk to each
+    other, and check 51 fails when an llms file states a figure no page states.
 
 ## Writing, again
 

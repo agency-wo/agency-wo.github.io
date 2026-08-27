@@ -2386,6 +2386,94 @@ for _dirpath, _dirnames, _filenames in os.walk(ROOT):
                     f"exist, and prose is where that goes unnoticed")
 
 
+# 51. the llms files cannot outlive the pages they describe ------------------
+# gen_launch writes llms.txt and llms-full.txt by reading the emitted HTML, and
+# rule 34 runs it after every page generator for exactly that reason. Leave it
+# out of a rebuild and both files go on describing the previous build. That
+# happened on 27 August 2026: every page had been restated with a fresh Search
+# Console reading while the two files still carried the old one, 560 clicks
+# against 741, for 5 days. Every other check here reads pages, so the gate was
+# green the whole time.
+#
+# It is the worst file on the site to be wrong in. llms.txt is written for the
+# assistants this studio sells being read by, so the one artefact aimed
+# squarely at them was quoting a figure the site had retracted.
+#
+# Compared against page TEXT, never markup. In that same build 560 WAS still in
+# the HTML of all 3 homepages, as the 560px inside an img sizes attribute, so a
+# check that grepped the source would have passed while the site contradicted
+# itself. text_of() drops tags with their attributes, and that is what gives
+# this teeth: run against the files as they stood during the bug it reports
+# 560, 301, 8.4, 57.6k and 27.5k; against the files as they stand now, nothing.
+#
+# Stat-shaped figures only: 3 or more digits, a decimal, or a percentage. The
+# small integers in those files are prose, "3 languages" and "28 days", and
+# demanding those match too would report noise until somebody learned to scroll
+# past the whole check.
+#
+# English pages only, because gen_launch harvests English only. Widening the
+# corpus to all 3 languages would let an Italian page vouch for an English
+# figure, which is the near miss that would keep a stale file alive.
+_FIGURE = re.compile(r"\d+[.,]\d+k?%?|\b\d{3,}\b|\b\d+%")
+_said_by_pages = set()
+for _p in all_pages:
+    if lang_of(rel(_p)) == "en":
+        _said_by_pages |= set(_FIGURE.findall(text_of(read(_p))))
+for _fn in ("llms.txt", "llms-full.txt"):
+    _lp = os.path.join(ROOT, _fn)
+    if not os.path.exists(_lp):
+        findings.append(
+            f"[stale] {_fn} does not exist. gen_launch writes it and rule 34 "
+            f"runs gen_launch, so a build reached the gate without it")
+        continue
+    for _fig in sorted(set(_FIGURE.findall(read(_lp))) - _said_by_pages):
+        findings.append(
+            f"[stale] {_fn} states {_fig} and no English page says it. Both "
+            f"llms files are derived from the emitted HTML, so a figure only "
+            f"they still carry means gen_launch did not run in this build. "
+            f"Rerun it, or python .build/build.py, which cannot skip it")
+
+
+# 52. one build order, and three copies of it that have to agree -------------
+# Rule 34 names the order and cannot run it. build.py runs it and can drift
+# from the rule. The generators on disk are the ground truth and neither
+# document notices when one is added. So all 3 are compared, and any 2
+# disagreeing is a finding.
+#
+# Compared as a LIST and not a set. gen_launch and gen_sitemap both read the
+# emitted HTML, so either one moving earlier would describe the previous build
+# while failing nothing, which is check 51's bug arriving through another door.
+#
+# ORDER must also cover every gen_*.py in .build/. A generator added to the
+# directory and not to the list would simply never run: the site would build
+# clean and silently lack whatever that file emits, and nothing anywhere would
+# say so.
+import build as _build  # noqa: E402
+_rule34 = re.search(r"^34\..*?Build order:(.*?)then `verify`",
+                    read(os.path.join(ROOT, ".build", "RULES.md")), re.S | re.M)
+if not _rule34:
+    findings.append(
+        "[order] RULES.md no longer has a rule 34 naming the build order in the "
+        "form 'Build order: ... then `verify`'. Check 52 reads that sentence to "
+        "hold build.py to it, so the two can now drift unnoticed")
+else:
+    _named = re.findall(r"`([a-z0-9_]+)`", _rule34.group(1))
+    if _named != _build.ORDER:
+        findings.append(
+            f"[order] rule 34 orders the generators as {_named} and build.py "
+            f"runs them as {_build.ORDER}. Both are followed by somebody, so "
+            f"they cannot be allowed to differ")
+_on_disk = sorted(_f[:-3] for _f in os.listdir(os.path.join(ROOT, ".build"))
+                  if _f.startswith("gen_") and _f.endswith(".py"))
+if sorted(_build.ORDER) != _on_disk:
+    _never = sorted(set(_on_disk) - set(_build.ORDER))
+    _ghost = sorted(set(_build.ORDER) - set(_on_disk))
+    findings.append(
+        "[order] build.py's ORDER and the generators in .build/ disagree"
+        + (f". Never run by any build: {_never}" if _never else "")
+        + (f". Named but not on disk: {_ghost}" if _ghost else ""))
+
+
 # ------------------------------------------------------------------- report
 print(f"pages checked: {len(all_pages)}")
 print(f"first load:    {kb:.1f} KB")

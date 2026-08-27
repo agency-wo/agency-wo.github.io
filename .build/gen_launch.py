@@ -587,7 +587,17 @@ def live_is_open():
 # disk was open, blaming the wrong file for the wrong build -- and a status line
 # that misreports why it did nothing is how somebody spends an afternoon
 # debugging a working ping.
-if not OPEN_TO_CRAWLERS:
+# A third reason, and it is the operator's rather than the site's, so it is
+# tested first: nothing about robots.txt should be consulted to answer a
+# question that has already been answered on the command line. 213 URLs at one
+# request each is 3 minutes, which is the difference between rebuilding freely
+# and avoiding rebuilding, and the files this script exists to write are
+# written either way. Ping on the build that deploys, not on the 6 before it.
+if "--no-ping" in sys.argv:
+    print("IndexNow: --no-ping, so %d URL(s) were not submitted. The files are "
+          "written; run again without the flag once this build is live"
+          % len(all_urls))
+elif not OPEN_TO_CRAWLERS:
     print("IndexNow: OPEN_TO_CRAWLERS is False, nothing pinged. Open would "
           "submit %d URLs as https://api.indexnow.org/indexnow?url=<url>&key=%s"
           % (len(all_urls), INDEXNOW_KEY))
