@@ -230,6 +230,42 @@ def asset(path):
     return SITE + path
 
 
+def image_size(path):
+    """(width, height) of a PNG or a WebP, READ rather than typed.
+
+    PIL is deliberately not a build dependency: only trace_proof.py needs it and
+    that is run by hand. Both formats put the dimensions in a fixed header, so
+    a few bytes of struct are cheaper than a dependency every build carries.
+
+    This exists because a chart was recropped on 2026-08-23 and the markup went
+    on declaring the old height. A width and height attribute is a promise about
+    how much space to reserve, and a wrong one is a layout shift that no amount
+    of care in the copy makes up for.
+    """
+    full = os.path.join(ROOT, path.lstrip("/"))
+    with io.open(full, "rb") as fh:
+        head = fh.read(32)
+    # 89 50 4E 47 0D 0A 1A 0A, written as hex so the signature carries no
+    # escape sequences for a shell or an editor to mangle.
+    if head[:8] == bytes.fromhex("89504e470d0a1a0a"):
+        return _png_size(full)
+    assert head[:4] == b"RIFF" and head[8:12] == b"WEBP", (
+        path + " is neither a PNG nor a WebP, so its size cannot be read")
+    kind = head[12:16]
+    if kind == b"VP8 ":                      # lossy
+        w = struct.unpack("<H", head[26:28])[0] & 0x3FFF
+        h = struct.unpack("<H", head[28:30])[0] & 0x3FFF
+        return w, h
+    if kind == b"VP8L":                      # lossless
+        b = struct.unpack("<I", head[21:25])[0]
+        return (b & 0x3FFF) + 1, ((b >> 14) & 0x3FFF) + 1
+    if kind == b"VP8X":                      # extended, canvas size
+        w = int.from_bytes(head[24:27], "little") + 1
+        h = int.from_bytes(head[27:30], "little") + 1
+        return w, h
+    raise AssertionError(path + " has an unknown WebP chunk: " + repr(kind))
+
+
 def _png_size(path):
     """(width, height) out of a PNG's IHDR, which is always its first chunk.
 

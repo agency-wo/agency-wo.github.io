@@ -305,7 +305,12 @@ for p in all_pages:
     for u in sorted(set(img_urls)):
         if not u.startswith("/"):
             continue              # rule 30: nothing loads from anybody else
-        if not os.path.exists(os.path.join(ROOT, u.lstrip("/").replace("/", os.sep))):
+        # The ?v= that shell.stamped() adds is addressing, not a filename. A
+        # static host ignores it when resolving the file and so does this: the
+        # check is that the BYTES exist, and it must not start failing the day
+        # an asset earns a cache-busting version.
+        path = u.split("?", 1)[0]
+        if not os.path.exists(os.path.join(ROOT, path.lstrip("/").replace("/", os.sep))):
             findings.append(f"[link] {rel(p)} -> {u} (missing image file)")
 
 # 3. one h1 -----------------------------------------------------------------
@@ -489,6 +494,28 @@ for p in all_pages:
         m = re.search(r'alt="([^"]*)"', tag)
         if not m or not m.group(1).strip():
             findings.append(f"[img] {rel(p)} img missing alt text")
+        # AND the declared size must be the file's real size. Having the
+        # attributes present is only half the promise: on 2026-08-23 a chart was
+        # recropped from 592 to 576 and the markup went on reserving 592, which
+        # is a box that does not fit its picture and a shift a reader sees.
+        # Read off the file, so this cannot be satisfied by typing a number.
+        src = re.search(r'src="(/assets/[^"?]+)', tag)
+        wd = re.search(r'width="(\d+)"', tag)
+        ht = re.search(r'height="(\d+)"', tag)
+        if src and wd and ht:
+            try:
+                rw, rh = _shell.image_size(src.group(1))
+            except Exception as e:
+                findings.append(f"[img] {rel(p)} cannot size {src.group(1)}: {e}")
+            else:
+                # The width may be a rendition, so compare the RATIO, which is
+                # what actually reserves the box, to within a rounding pixel.
+                want = rw / rh
+                got = int(wd.group(1)) / int(ht.group(1))
+                if abs(want - got) > 0.01:
+                    findings.append(
+                        f"[img] {rel(p)} declares {wd.group(1)}x{ht.group(1)} for "
+                        f"{src.group(1)}, which is really {rw}x{rh}")
 
 # 9. the costume cannot reassemble ------------------------------------------
 css = read(os.path.join(ROOT, "css", "main.css"))

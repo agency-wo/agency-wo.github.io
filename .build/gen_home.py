@@ -43,6 +43,13 @@ from gen_pages import form_source, out, write  # noqa: E402
 from gen_docs import faq_node, faq_section  # noqa: E402
 
 S = shell.SITE
+
+# The homepage's one image, named once. Its height is READ off the file rather
+# than typed: the crop changed with the new screenshot and a declared 592
+# against a real 576 is a reserved box that does not match its picture.
+CHART = "/assets/proof/watch-al-3-months.webp"
+CHART_720 = "/assets/proof/watch-al-3-months-720.webp"
+CHART_H = shell.image_size(CHART)[1]
 NL = chr(10)
 
 
@@ -435,8 +442,8 @@ def render(lang):
         <div class="wrap">
           <div class="proof-body">
             <figure class="gsc" data-reveal>
-              <img src="/assets/proof/watch-al-3-months.webp" width="1440" height="592"
-                srcset="/assets/proof/watch-al-3-months-720.webp 720w, /assets/proof/watch-al-3-months.webp 1440w"
+              <img src="{shell.stamped(CHART)}" width="1440" height="{CHART_H}"
+                srcset="{shell.stamped(CHART_720)} 720w, {shell.stamped(CHART)} 1440w"
                 sizes="(min-width: 1280px) 1152px, 90vw"
                 alt="{txt(14, h["fig_alt"], lang)}"
                 loading="lazy" decoding="async">
