@@ -279,7 +279,7 @@ PAGE = {
 # panel is narrow, the 4 error messages are read aloud when a field is invalid,
 # and each one says what to do rather than what went wrong.
 FORM = {
-    "src": "b5bb98c5",
+    "src": "3ef828c9",
 
     # "auditim i faqes" is banned, so the audit is named and its object follows
     # separately. This is also NOT chrome_sq.BAND_CTA ("Merr një auditim
@@ -301,6 +301,8 @@ FORM = {
     "url_title": "Adresa jote e internetit, për shembull dyqaniyt.al",
     "url_err": "Një adresë interneti, si" + NL +
                "dyqaniyt.al.",
+    "no_site_label": "Nuk kam faqe",
+    "no_site_hint": "Atëherë planifikojmë një.",
     "owner_label": "Emri yt",
     "owner_err": "Kujt t'ia dërgojmë?",
     "email_label": "Email",

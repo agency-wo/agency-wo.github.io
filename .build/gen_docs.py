@@ -332,6 +332,10 @@ def audit_section(rec, lang):
               <input type="hidden" name="subject" value="{fill(f["subject"], lang)}">
               <input type="hidden" name="redirect" value="{shell.form_redirect(shell.localise(rec["url"], lang))}">
               <input type="hidden" name="source" value="{form_source("start-audit", lang)}">
+              <!-- Filled by js/main.js. Empty without JS, which is correct: an
+                   empty value is an honest "we do not know" and the lead still
+                   arrives. Named in the privacy line above the button. -->
+              <input type="hidden" name="landed_on" value="">
               <input class="af-hp" type="checkbox" name="botcheck" tabindex="-1"
                 autocomplete="off">
 
@@ -344,6 +348,13 @@ def audit_section(rec, lang):
                   title="{fill(f["url_title"], lang)}"
                   aria-describedby="af-url-err">
                 <span class="field-err" id="af-url-err">{txt(18, f["url_err"], lang)}</span>
+              </p>
+
+              <p class="field field-check">
+                <input id="af-nosite" name="no_site" type="checkbox" value="yes"
+                    aria-describedby="af-nosite-hint">
+                <label for="af-nosite">{fill(f["no_site_label"], lang)}</label>
+                <span class="field-hint" id="af-nosite-hint">{txt(20, f["no_site_hint"], lang)}</span>
               </p>
 
               <p class="field">

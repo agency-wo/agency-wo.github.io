@@ -271,6 +271,54 @@
   var T_SENDING_SAY = af && af.getAttribute("data-sending-say");
   var T_ERROR = af && af.getAttribute("data-error");
 
+  /* Which page earned the lead. 150 posts and no way to tell which one brought
+     somebody, so the first page of the session rides along with the form and
+     the notification names it.
+
+     sessionStorage and not a cookie: it dies with the tab, never leaves this
+     origin, and needs no banner. Wrapped in try/catch because private mode and
+     "block site data" both throw on the first access rather than returning
+     null, and a studio's contact form must not die for a metric. Failing that
+     way leaves the field empty, which is an honest "we do not know". */
+  try {
+    var landedKey = "mr.landed";
+    if (!sessionStorage.getItem(landedKey)) {
+      sessionStorage.setItem(landedKey, location.pathname);
+    }
+    var landedField = document.querySelector('input[name="landed_on"]');
+    if (landedField) {
+      landedField.value = sessionStorage.getItem(landedKey) || location.pathname;
+    }
+  } catch (e) { /* no storage: the field stays empty and the form still sends */ }
+
+  /* "I don't have a website yet". A required URL field turns away the one
+     visitor this studio most wants: the business with no site at all, which is
+     also what the Iglisi Watch case study is about. Ticking the box clears and
+     disables the field, which drops it from validation and from the payload in
+     one move.
+
+     Deliberately OUTSIDE the upgrade below. That block declines on an old
+     browser and leaves native validation in charge, and native validation is
+     exactly what would still be demanding a URL. This has to hold in both
+     cases. With JS off altogether the box cannot help, which is the one gap,
+     and it is why `required` stays in the markup rather than being added here:
+     a no-script visitor then gets a form that asks too much, rather than one
+     that silently accepts an empty submission from everybody. */
+  var noSite = document.getElementById("af-nosite");
+  var urlField = document.getElementById("af-url");
+  if (noSite && urlField) {
+    var syncNoSite = function () {
+      urlField.disabled = noSite.checked;
+      urlField.required = !noSite.checked;
+      if (noSite.checked) {
+        urlField.value = "";
+        urlField.setAttribute("aria-invalid", "false");
+      }
+    };
+    noSite.addEventListener("change", syncNoSite);
+    syncNoSite();          /* a reload can restore the box already ticked */
+  }
+
   /* Every hook and every string, tested BEFORE novalidate is set. This used to
      read `af && audit && ...`, set novalidate, and then throw on the first
      missing hook: that leaves a form which still posts natively AND has had

@@ -18,6 +18,7 @@ import os
 import re
 import struct
 import subprocess
+import urllib.parse
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -593,12 +594,27 @@ WA_PATH = ("M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 
 # The href works with JS off; js/main.js upgrades it with a prefilled message.
 def whatsapp(lang):
     """The floating button. Its 3 strings are all attributes, so nothing that
-    walks the DOM for text would ever find them untranslated."""
+    walks the DOM for text would ever find them untranslated.
+
+    WA_PREFILL used to reach the visitor through `data-wa` alone, and NOTHING
+    read it. The string was written, translated into 3 languages and shipped on
+    all 214 pages, and every visitor still arrived in WhatsApp at an empty
+    compose box: the one moment where having to invent an opening line is what
+    closes the tab. It now goes in the href, where the browser acts on it and no
+    script has to exist for it to work.
+
+    `data-wa` stays, holding the same value from the same variable so the two
+    cannot drift. It is not dead: verify.py's _ATTR_COPY scans it, which is how
+    the gate sees this string is translated at all. Inside the href it is
+    percent-encoded and no copy check would recognise it.
+    """
     c = ch(lang)
-    return (f'  <a class="wa" href="https://wa.me/{WHATSAPP}" target="_blank" '
+    prefill = c.WA_PREFILL.replace("{brand}", BRAND)
+    href = "https://wa.me/%s?text=%s" % (WHATSAPP, urllib.parse.quote(prefill))
+    return (f'  <a class="wa" href="{href}" target="_blank" '
             f'rel="noopener noreferrer" aria-label="{c.WA_LABEL}" '
             f'title="{c.WA_LABEL}" '
-            f'data-wa="{c.WA_PREFILL.replace("{brand}", BRAND)}">'
+            f'data-wa="{prefill}">'
             f'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="{WA_PATH}"/></svg>'
             f'</a>' + chr(10))
 

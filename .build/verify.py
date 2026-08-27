@@ -891,8 +891,9 @@ START = "start/index.html"
 # writes down what shape it is meant to be.
 FORM_SHAPES_EN = {
     #  english page        (visible field names, in source order),   csv_ready
-    "index.html":       (("url", "owner", "email", "category"),          False),
-    START:              (("url", "name", "category", "city",
+    "index.html":       (("url", "no_site", "owner", "email",
+                          "category"),                                  False),
+    START:              (("url", "no_site", "name", "category", "city",
                           "owner", "email"),                             True),
 }
 FORM_SHAPES = {rel_for(_en, _lg): _shape
@@ -2472,6 +2473,38 @@ if sorted(_build.ORDER) != _on_disk:
         "[order] build.py's ORDER and the generators in .build/ disagree"
         + (f". Never run by any build: {_never}" if _never else "")
         + (f". Named but not on disk: {_ghost}" if _ghost else ""))
+
+
+# 53. the WhatsApp prefill has to reach WhatsApp ----------------------------
+# WA_PREFILL was written, translated into 3 languages and emitted on all 214
+# pages as `data-wa`, and nothing anywhere ever read it. Every visitor who
+# tapped the button landed in an empty compose box, which is exactly the moment
+# where having to invent an opening line is what closes the tab. It cost the
+# bytes on every page and bought nothing, for as long as it existed.
+#
+# So the href is what gets checked, not the attribute. A copy check on `data-wa`
+# could never have caught this, because the attribute was always perfectly
+# correct and perfectly translated. It was simply never used, and "correct but
+# unreachable" is a shape no check here had gone looking for.
+#
+# Decoded and compared against the page's OWN language: an Italian page opening
+# WhatsApp in English is the same bug wearing a different hat.
+import urllib.parse as _urlparse  # noqa: E402
+_WA_CHROME = {"en": _chrome, "it": _chrome_it, "sq": _chrome_sq}
+for _p in all_pages:
+    _wa = re.search(r'class="wa"[^>]*href="([^"]+)"', read(_p))
+    if not _wa:
+        continue                  # not every page has to carry the button
+    _lg = lang_of(rel(_p))
+    _want = _WA_CHROME[_lg].WA_PREFILL.replace("{brand}", _shell.BRAND)
+    _got = _urlparse.parse_qs(
+        _urlparse.urlparse(_entities.unescape(_wa.group(1))).query
+    ).get("text", [""])[0]
+    if _got != _want:
+        findings.append(
+            f"[whatsapp] {rel(_p)}: the button opens WhatsApp with {_got!r}, and "
+            f"the {_lg} WA_PREFILL is {_want!r}. A prefill that never reaches the "
+            f"href is a translated string no visitor will ever see")
 
 
 # ------------------------------------------------------------------- report

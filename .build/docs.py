@@ -398,6 +398,8 @@ PAGES = [
             "url_title": "Your web address, for example yourshop.al",
             "url_err": "Type your web address," + NL +
                        "like yourshop.al.",
+            "no_site_label": "I don't have a website yet",
+            "no_site_hint": "Then the audit becomes a plan for building one.",
             "name_label": "Your business",
             "name_err": "The name your customers" + NL +
                         "know you by.",
@@ -419,8 +421,8 @@ PAGES = [
             "alt": "Rather not fill in a form? Write to" + NL +
                    "{email} or" + NL +
                    "<a href=\"{wa_href}\">message on WhatsApp</a>.",
-            "fine": "We keep your name, email and website only to run" + NL +
-                    "this audit and reply. The form runs on Web3Forms, we pass your" + NL +
+            "fine": "We keep your name, email, website and the page you" + NL +
+                    "arrived on, only to run this audit and reply. The form runs on Web3Forms, we pass your" + NL +
                     "details to nobody else, and one line to" + NL +
                     "{email_delete}" + NL +
                     "deletes them.",

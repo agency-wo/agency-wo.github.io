@@ -228,6 +228,13 @@ def audit_form(f, lang):
                 <span class="field-err" id="af-url-err">{txt(18, f["url_err"], lang)}</span>
               </p>
 
+              <p class="field field-check">
+                <input id="af-nosite" name="no_site" type="checkbox" value="yes"
+                    aria-describedby="af-nosite-hint">
+                <label for="af-nosite">{fill(f["no_site_label"], lang)}</label>
+                <span class="field-hint" id="af-nosite-hint">{txt(20, f["no_site_hint"], lang)}</span>
+              </p>
+
               <p class="field">
                 <label for="af-owner">{fill(f["owner_label"], lang)}</label>
                 <input id="af-owner" name="owner" type="text" autocomplete="name"

@@ -377,7 +377,7 @@ PAGES = [
     # ---------------------------------------------------------------- START --
     {
         "url": "/start/",
-     "src": "a466b9b3",
+     "src": "3d07fb52",
         "nav": "Nis një projekt",
         "title": "Auditim falas",
         "description": "Na dërgo faqen tënde dhe merr një auditim falas: çfarë po "
@@ -418,6 +418,8 @@ PAGES = [
             # every one of them says what to type, never what went wrong.
             "url_err": "Shkruaj adresën tënde të" + NL +
                        "internetit, si dyqaniyt.al.",
+            "no_site_label": "Nuk kam ende një faqe",
+            "no_site_hint": "Atëherë auditimi bëhet një plan për ta ndërtuar.",
             "name_label": "Biznesi yt",
             "name_err": "Emri me të cilin të" + NL +
                         "njohin klientët.",
@@ -439,8 +441,8 @@ PAGES = [
             "alt": "Nuk të pëlqen të plotësosh formularë? Shkruaj te" + NL +
                    "{email} ose" + NL +
                    "<a href=\"{wa_href}\">na dërgo mesazh në WhatsApp</a>.",
-            "fine": "I mbajmë emrin, email-in dhe faqen vetëm për të bërë" + NL +
-                    "këtë auditim dhe për t'u përgjigjur. Formulari punon me" + NL +
+            "fine": "I mbajmë emrin, email-in, faqen dhe adresën nga ku" + NL +
+                    "erdhe, vetëm për të bërë këtë auditim dhe për t'u përgjigjur. Formulari punon me" + NL +
                     "Web3Forms, të dhënat e tua nuk ia japim askujt tjetër, dhe" + NL +
                     "një rresht te {email_delete}" + NL +
                     "i fshin.",

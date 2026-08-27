@@ -1234,6 +1234,32 @@ a[href^="tel:"] { white-space: nowrap; }
 .field label { display: block; font-size: var(--fs-small); font-weight: 700;
   margin-bottom: var(--s-2); }
 .field-opt { font-weight: 400; color: var(--slate); }
+
+/* "I don't have a website yet": a checkbox, so it is the one field in the form
+   that reads left to right. .field stacks label over input, which is right for
+   something you type into and wrong for a box you tick, so the two rules below
+   undo exactly that and nothing else. The 44px min-height is the tap target,
+   not decoration: the label is the only thing worth hitting on a phone. */
+.field-check { display: flex; flex-wrap: wrap; align-items: center;
+  gap: 0 var(--s-3); margin-top: var(--s-4); }
+/* .field.field-check, not .field-check: `.field input { width: 100% }` lives
+   BELOW this block and matches with the same specificity, so source order was
+   deciding it and the box came out 387px wide, full bleed, with its label
+   pushed onto the next line. Two classes outrank one wherever it sits. */
+.field.field-check input { width: auto; flex: none; margin: 0;
+  inline-size: 20px; block-size: 20px; accent-color: var(--red); }
+/* 44px on the LABEL, not on the row: the row grows once the hint wraps under
+   it, and a tap target measured on the row would then be reported as met while
+   the thing you actually press stayed 20px tall. */
+.field.field-check label { display: inline-flex; align-items: center; min-height: 44px;
+  margin: 0; font-weight: 400; color: var(--ink); cursor: pointer; }
+/* flex-basis rather than a block: it has to break the row it shares with the
+   box and the label, and it is the only child that should. */
+.field.field-check .field-hint { flex-basis: 100%; margin: 0; }
+/* Disabled by the checkbox, not by the markup, so it must still read as text
+   somebody chose to switch off rather than as a field that failed. */
+.field input:disabled { color: var(--slate); background: var(--paper-2);
+  border-color: var(--rule); cursor: not-allowed; }
 /* --rule on --paper is 1.22:1 and WCAG 1.4.11 wants 3:1 for the boundary of
    a control. --slate is 5.56:1 and is already in the palette, so a box you can
    type into finally looks like one. */

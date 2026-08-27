@@ -221,6 +221,8 @@ FORM = {
     "url_title": "Your web address, for example yourshop.al",
     "url_err": "A web address, like" + NL +
                "yourshop.al.",
+    "no_site_label": "No website yet",
+    "no_site_hint": "Then we plan one.",
     "owner_label": "Your name",
     "owner_err": "Who should we send it" + NL +
                  "to?",

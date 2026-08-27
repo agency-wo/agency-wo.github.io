@@ -386,7 +386,7 @@ PAGES = [
     # ---------------------------------------------------------------- START --
     {
         "url": "/start/",
-     "src": "a466b9b3",
+     "src": "3d07fb52",
         "nav": "Inizia un progetto",
         "title": "Audit gratuito del sito",
         "description": "Mandaci il tuo sito e ricevi un audit gratuito: cosa ti "
@@ -425,6 +425,8 @@ PAGES = [
             # every one of them says what to type, never what went wrong.
             "url_err": "Scrivi il tuo indirizzo web," + NL +
                        "tipo iltuonegozio.it.",
+            "no_site_label": "Non ho ancora un sito",
+            "no_site_hint": "Allora l'audit diventa un piano per costruirlo.",
             "name_label": "La tua attività",
             "name_err": "Il nome con cui ti" + NL +
                         "conoscono i clienti.",
@@ -446,8 +448,8 @@ PAGES = [
             "alt": "Preferisci non compilare un modulo? Scrivi a" + NL +
                    "{email} oppure" + NL +
                    "<a href=\"{wa_href}\">mandaci un messaggio su WhatsApp</a>.",
-            "fine": "Teniamo nome, email e sito solo per fare questo" + NL +
-                    "audit e risponderti. Il modulo gira su Web3Forms, non passiamo" + NL +
+            "fine": "Teniamo nome, email, sito e la pagina da cui arrivi," + NL +
+                    "solo per fare questo audit e risponderti. Il modulo gira su Web3Forms, non passiamo" + NL +
                     "i tuoi dati a nessun altro, e una riga a" + NL +
                     "{email_delete}" + NL +
                     "li cancella.",
