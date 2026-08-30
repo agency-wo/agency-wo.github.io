@@ -4439,7 +4439,7 @@ POSTS = [
 
     {
         "slug": "seo-durres",
-        "src": "98a013c9",
+        "src": "4bece568",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Ricerca locale",
@@ -4447,8 +4447,7 @@ POSTS = [
         "service": ("/seo/", "SEO e ricerca locale"),
 
         "title": "SEO a Durazzo",
-        "h1": "In una città di queste dimensioni la mappa non è parte del "
-              "risultato. È il risultato.",
+        "h1": "A Durazzo la mappa non è parte del risultato. È il risultato.",
         "summary": "Cosa decide davvero quali tre attività vengono mostrate "
                    "qui, e perché il lavoro che le porta è più piccolo di "
                    "quanto lasci intendere il settore.",
@@ -4461,8 +4460,8 @@ POSTS = [
                    "concorrente ci ha provato sul serio.",
 
         "body": [
-            ("Cosa mostra davvero lo schermo", [
-                "<p>Scrivi un mestiere e questa città su un telefono e conta "
+            ("Cosa mostra davvero una ricerca a Durazzo", [
+                "<p>Scrivi un mestiere e Durazzo su un telefono e conta "
                 "cosa compare sopra i risultati normali. Una mappa, poi tre "
                 "attività. Quello che sta sotto lo legge una minoranza e "
                 "quasi nessuno di fretta.</p>",
@@ -4481,16 +4480,16 @@ POSTS = [
                 "la parte con cui non apre nessuno che vende canoni "
                 "mensili.</p>",
             ]),
-            ("Lo stagno è basso abbastanza da vedere il fondo", [
+            ("Durazzo è uno stagno basso abbastanza da vedere il fondo", [
                 "<p>Apri le schede delle attività che oggi stanno sopra di "
                 "te. Conta le foto, leggi la descrizione, guarda se i "
                 "servizi sono elencati uno per uno o per niente.</p>",
-                "<p>In questa città quell'esercizio finisce quasi sempre con "
+                "<p>A Durazzo quell'esercizio finisce quasi sempre con "
                 "la stessa conclusione: chi sta vincendo non fa niente di "
                 "astuto, è solo l'unico che ha compilato il modulo.</p>",
             ]),
             ("Com'è stato partendo da zero", [
-                "<p>Un negozio di orologi qui è partito a maggio senza sito "
+                "<p>Un negozio di orologi a Durazzo è partito a maggio senza sito "
                 "e senza una scheda degna del nome. Il grafico sulla nostra "
                 "home è il suo export di Search Console, non un disegno, e "
                 "la pagina del caso dice quali parti erano la scheda e quali "
@@ -4537,7 +4536,7 @@ POSTS = [
 
     {
         "slug": "seo-tirana",
-        "src": "c6852de1",
+        "src": "4a33f949",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Ricerca locale",
@@ -4545,8 +4544,7 @@ POSTS = [
         "service": ("/seo/", "SEO e ricerca locale"),
 
         "title": "SEO a Tirana",
-        "h1": "Le parole larghe sono prese. Non è la stessa cosa che il "
-              "mercato sia preso.",
+        "h1": "A Tirana le parole larghe sono prese. Il mercato no.",
         "summary": "Contro cosa si trova davvero uno studio piccolo nella "
                    "capitale, e il terreno dove vince ancora.",
         "standfirst": "Una lettura onesta di un mercato dove diversi "
@@ -4558,16 +4556,16 @@ POSTS = [
                    "vorrebbe farti credere chi te la vende.",
 
         "body": [
-            ("Cosa hai davvero davanti", [
+            ("Cosa ti mette davvero davanti Tirana", [
                 "<p>Attività che pubblicano da prima che tu registrassi un "
                 "dominio, agenzie con un budget per questo, e qualche "
-                "marchio nazionale che si posiziona qui senza sforzo perché "
+                "marchio nazionale che si posiziona a Tirana senza sforzo perché "
                 "si posiziona ovunque.</p>",
                 "<p>Niente di tutto questo si sistema con l'impegno "
                 "quest'anno, e ogni proposta che non parte da qui ti chiede "
                 "di finanziare la propria formazione.</p>",
             ]),
-            ("La parola più larga di solito è il bersaglio sbagliato", [
+            ("Il termine più largo di Tirana di solito è il bersaglio sbagliato", [
                 "<p>Il singolo termine largo che vogliono tutti è caro, "
                 "lento e pieno di gente che sta ancora confrontando. Sotto "
                 "stanno le frasi che uno digita quando ha già deciso, e "
@@ -4598,7 +4596,7 @@ POSTS = [
                 "più grande costa meno, la ricerca ti porterà visitatori che "
                 "se ne vanno. La pubblicità te lo direbbe in due settimane "
                 "per meno soldi di un anno di pazienza.</p>",
-                "<p>L'abbiamo detto a richieste dalla capitale. È la "
+                "<p>L'abbiamo detto a richieste da Tirana. È la "
                 "risposta che ci costa il lavoro ed è comunque quella "
                 "giusta.</p>",
             ]),
@@ -4634,7 +4632,7 @@ POSTS = [
 
     {
         "slug": "seo-pavia",
-        "src": "09ca48d9",
+        "src": "9341c67f",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Ricerca locale",
@@ -4642,7 +4640,7 @@ POSTS = [
         "service": ("/seo/", "SEO e ricerca locale"),
 
         "title": "SEO a Pavia",
-        "h1": "Milano è a 35 chilometri, e si prende le ricerche.",
+        "h1": "Pavia perde le sue ricerche a Milano, 35 chilometri più a nord.",
         "summary": "Dove se ne va la domanda locale, perché le agenzie della "
                    "città accanto costano quanto quella città, e dove si "
                    "ferma la perdita.",
@@ -4675,7 +4673,7 @@ POSTS = [
                 "informazioni banali: orari veri, un prezzo, e un numero a "
                 "cui risponde qualcuno.</p>",
             ]),
-            ("Qui la popolazione cambia durante l'anno", [
+            ("La popolazione di Pavia cambia durante l'anno", [
                 "<p>Questa è una città universitaria, e non vuol dire solo "
                 "che ci sono studenti. Vuol dire che una parte della "
                 "clientela di molte attività arriva in autunno, sparisce a "
@@ -4684,7 +4682,7 @@ POSTS = [
                 "conosce e che cerca tutto da zero. Per loro esisti solo se "
                 "ti trovano, perché non hanno nessuno a cui chiedere.</p>",
             ]),
-            ("Con cosa competi davvero in città", [
+            ("Con cosa competi davvero a Pavia", [
                 "<p>Apri i siti dei tuoi concorrenti di Pavia. Buona parte è "
                 "stata costruita anni fa e non toccata da allora, e la loro "
                 "pagina Facebook è più aggiornata del sito.</p>",

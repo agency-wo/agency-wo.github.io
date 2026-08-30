@@ -4396,7 +4396,7 @@ POSTS = [
 
     {
         "slug": "seo-durres",
-        "src": "98a013c9",
+        "src": "4bece568",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Kërkim lokal",
@@ -4404,8 +4404,7 @@ POSTS = [
         "service": ("/seo/", "SEO dhe kërkim lokal"),
 
         "title": "SEO në Durrës",
-        "h1": "Në një qytet të kësaj madhësie harta nuk është pjesë e "
-              "rezultatit. Është rezultati.",
+        "h1": "Në Durrës harta nuk është pjesë e rezultatit. Është rezultati.",
         "summary": "Çfarë vendos vërtet cilat tri biznese shfaqen këtu, dhe "
                    "pse puna që i sjell është më e vogël se sa lë të "
                    "kuptohet sektori.",
@@ -4418,8 +4417,8 @@ POSTS = [
                    "konkurrent nuk ka provuar seriozisht.",
 
         "body": [
-            ("Çfarë tregon vërtet ekrani", [
-                "<p>Shkruaj një zanat dhe këtë qytet në një telefon dhe "
+            ("Çfarë tregon vërtet një kërkim në Durrës", [
+                "<p>Shkruaj një zanat dhe Durrësin në një telefon dhe "
                 "numëro çfarë del mbi rezultatet e zakonshme. Një hartë, "
                 "pastaj tri biznese. Atë që rri poshtë e lexon një pakicë "
                 "dhe pothuajse askush me nxitim.</p>",
@@ -4436,16 +4435,16 @@ POSTS = [
                 "tënd dhe asnjëri nuk kërkon të prekësh faqen. Kjo është "
                 "pjesa me të cilën nuk nis askush që shet tarifa mujore.</p>",
             ]),
-            ("Pellgu është aq i cekët sa i shihet fundi", [
+            ("Durrësi është pellg aq i cekët sa i shihet fundi", [
                 "<p>Hap skedat e bizneseve që sot rrinë mbi ty. Numëro "
                 "fotot, lexo përshkrimin, shih nëse shërbimet janë renditur "
                 "një nga një apo aspak.</p>",
-                "<p>Në këtë qytet ai ushtrim përfundon pothuajse gjithmonë "
+                "<p>Në Durrës ai ushtrim përfundon pothuajse gjithmonë "
                 "me të njëjtin përfundim: ai që po fiton nuk po bën gjë të "
                 "zgjuar, është thjesht i vetmi që e plotësoi formularin.</p>",
             ]),
             ("Si dukej duke nisur nga zeroja", [
-                "<p>Një dyqan orësh këtu nisi në maj pa faqe dhe pa një "
+                "<p>Një dyqan orësh në Durrës nisi në maj pa faqe dhe pa një "
                 "skedë që ta meritojë emrin. Grafiku në kryefaqen tonë është "
                 "eksporti i tij nga Search Console, jo një vizatim, dhe "
                 "faqja e rastit thotë cilat pjesë ishin skeda dhe cilat "
@@ -4494,7 +4493,7 @@ POSTS = [
 
     {
         "slug": "seo-tirana",
-        "src": "c6852de1",
+        "src": "4a33f949",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Kërkim lokal",
@@ -4502,8 +4501,7 @@ POSTS = [
         "service": ("/seo/", "SEO dhe kërkim lokal"),
 
         "title": "SEO në Tiranë",
-        "h1": "Fjalët e gjera janë zënë. Kjo nuk është njësoj sikur tregu të "
-              "jetë zënë.",
+        "h1": "Në Tiranë fjalët e gjera janë zënë. Tregu jo.",
         "summary": "Përballë çfarë ndodhet vërtet një studio e vogël në "
                    "kryeqytet, dhe terreni ku ende fiton.",
         "standfirst": "Një lexim i ndershëm i një tregu ku disa konkurrentë "
@@ -4515,16 +4513,16 @@ POSTS = [
                    "donte të besoje ai që ta shet.",
 
         "body": [
-            ("Çfarë ke vërtet përpara", [
+            ("Çfarë të vë përpara vërtet Tirana", [
                 "<p>Biznese që publikojnë që para se ti të regjistroje një "
                 "domen, agjenci me buxhet për këtë, dhe ca marka kombëtare "
-                "që pozicionohen këtu pa u munduar sepse pozicionohen "
+                "që pozicionohen në Tiranë pa u munduar sepse pozicionohen "
                 "kudo.</p>",
                 "<p>Asgjë prej tyre nuk rregullohet me mund këtë vit, dhe "
                 "çdo propozim që nuk nis me këtë të kërkon të financosh një "
                 "shkollim.</p>",
             ]),
-            ("Fjala më e gjerë zakonisht është objektivi i gabuar", [
+            ("Fjala më e gjerë e Tiranës zakonisht është objektivi i gabuar", [
                 "<p>Termi i vetëm i gjerë që e duan të gjithë është i "
                 "shtrenjtë, i ngadaltë dhe plot njerëz që ende po "
                 "krahasojnë. Poshtë tij rrinë frazat që shkruan dikush kur "
@@ -4555,7 +4553,7 @@ POSTS = [
                 "i madh kushton më pak, kërkimi do të të sjellë vizitorë që "
                 "ikin. Reklama do të ta thoshte brenda dy javësh me më pak "
                 "para se një vit durim.</p>",
-                "<p>Ua kemi thënë kërkesave nga kryeqyteti. Është përgjigjja "
+                "<p>Ua kemi thënë kërkesave nga Tirana. Është përgjigjja "
                 "që na kushton punën dhe është prapëseprapë e drejta.</p>",
             ]),
         ],
@@ -4589,7 +4587,7 @@ POSTS = [
 
     {
         "slug": "seo-pavia",
-        "src": "09ca48d9",
+        "src": "9341c67f",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Kërkim lokal",
@@ -4597,7 +4595,7 @@ POSTS = [
         "service": ("/seo/", "SEO dhe kërkim lokal"),
 
         "title": "SEO në Pavia",
-        "h1": "Milano është 35 kilometra larg, dhe i merr kërkimet.",
+        "h1": "Pavia i humbet kërkimet e veta te Milano, 35 kilometra në veri.",
         "summary": "Ku ikën kërkesa vendase, pse agjencitë e qytetit të madh "
                    "kushtojnë sa ai qytet, dhe ku ndalet rrjedhja.",
         "standfirst": "Për një biznes në Pavia që i sheh klientët të "
@@ -4629,7 +4627,7 @@ POSTS = [
                 "gjëra të mërzitshme: orare të vërteta, një çmim, dhe një "
                 "numër ku përgjigjet dikush.</p>",
             ]),
-            ("Popullsia këtu ndryshon gjatë vitit", [
+            ("Popullsia e Pavias ndryshon gjatë vitit", [
                 "<p>Ky është qytet universitar, dhe kjo do të thotë më shumë "
                 "se sa që ka studentë. Do të thotë se një pjesë e klientelës "
                 "së shumë bizneseve mbërrin në vjeshtë, zhduket në korrik, "
@@ -4638,7 +4636,7 @@ POSTS = [
                 "që i kërkon të gjitha nga e para. Për ata ti ekziston vetëm "
                 "nëse gjendesh, sepse nuk kanë kë të pyesin.</p>",
             ]),
-            ("Me çfarë konkurron vërtet brenda qytetit", [
+            ("Me çfarë konkurron vërtet në Pavia", [
                 "<p>Hap faqet e konkurrentëve të tu në Pavia. Një pjesë e "
                 "mirë janë ndërtuar vite më parë dhe nuk janë prekur që "
                 "atëherë, dhe faqja e tyre në Facebook është më e "

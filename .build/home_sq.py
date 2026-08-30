@@ -100,7 +100,7 @@ STATS = [
 ]
 
 PAGE = {
-    "src": "6195f5ca",
+    "src": "9860c454",
 
     # 39 characters against the 52 the title budget leaves once gen_home.py has
     # put "minarank studio ·" in front of it.
@@ -123,8 +123,8 @@ PAGE = {
     # attached to "shet", and "what you sell right now" is not the claim. The
     # second half keeps "Ne", which Albanian can drop, because the site says
     # "we" and dropping it would leave the promise with no one making it.
-    "hero_say": "Dikush po kërkon pikërisht tani atë që shet." + NL +
-                "Ne sigurohemi që të të gjejnë në Google.",
+    "hero_claim": "Dikush në Durrës ose Tiranë po kërkon pikërisht tani atë që shet.",
+    "hero_say": "Ne sigurohemi që të të gjejnë në Google.",
     "hero_sub": "Google, harta dhe përgjigjet që japin ChatGPT dhe Gemini" + NL +
                 "kur dikush kërkon një dyqan si i yti. Pastaj vetë faqja e "
                 "internetit," + NL +

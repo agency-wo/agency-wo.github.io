@@ -101,11 +101,11 @@ STATS = [
 ]
 
 PAGE = {
-    "src": "6195f5ca",
+    "src": "9860c454",
 
     # 38 characters against the 52 the title budget leaves once gen_home.py has
     # put "minarank studio ·" in front of it.
-    "title": "presenza digitale per piccole attività a Durazzo",
+    "title": "presenza digitale per piccole attività in Italia e Albania",
     "description": "Qualcuno sta cercando quello che vendi proprio adesso. "
                    "Facciamo in modo che ti trovino su Google, sulla mappa e "
                    "in quello che dice ChatGPT. Durazzo, Albania.",
@@ -126,8 +126,8 @@ PAGE = {
     # read as "that YOU find yourself on Google", which is the opposite of the
     # promise. The plural cannot be misread and is what Italian uses for an
     # unnamed somebody anyway.
-    "hero_say": "Qualcuno sta cercando quello che vendi proprio adesso." + NL +
-                "Facciamo in modo che ti trovino su Google.",
+    "hero_claim": "Qualcuno in Italia sta cercando quello che vendi proprio adesso.",
+    "hero_say": "Facciamo in modo che ti trovino su Google.",
     "hero_sub": "Google, la mappa e le risposte che danno ChatGPT e Gemini" + NL +
                 "quando qualcuno chiede un negozio come il tuo. Poi il sito "
                 "stesso, e il" + NL +

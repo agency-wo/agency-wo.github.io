@@ -75,7 +75,7 @@ PAGES = [
         "nav": "Software su misura",
         # 37 characters against the 52 the title budget leaves once shell.head
         # appends " · minarank studio".
-        "title": "Software su misura per piccole imprese in Albania",
+        "title": "Software su misura per piccole imprese",
         "description": "Magazzino, lavori, clienti e soldi in un posto solo. "
                        "Costruiamo il software su cui piccoli negozi e artigiani "
                        "lavorano davvero, in Albania e in Italia.",

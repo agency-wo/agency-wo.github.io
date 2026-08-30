@@ -39,7 +39,7 @@ SERVICES = [
         "schema_name": "Ottimizzazione per i motori di ricerca e ricerca locale",
         # 23 characters, the same as the English, and 41 with the suffix
         # shell.head appends.
-        "title": "SEO e ricerca locale in Albania",
+        "title": "SEO e ricerca locale in Italia e Albania",
         "h1": "Fatti trovare da chi non conosce ancora il tuo nome.",
         # glossary.TERMS: map listing -> scheda Google.
         "standfirst": "Due lavori diversi. La scheda Google decide chi riceve "
@@ -205,7 +205,7 @@ SERVICES = [
         "nav": "Ricerca AI",
         "schema_name": "Ottimizzazione per i motori generativi",
         # 45 characters.
-        "title": "Ricerca AI in Albania, o GEO",
+        "title": "Ricerca AI in Italia e Albania, o GEO",
         "h1": "Sii una delle 3 attività che la risposta nomina.",
         "standfirst": "Chiedi a ChatGPT un negozio di riparazione orologi a "
                       "Durazzo e te ne nomina due o tre. Essere uno di quelli "
@@ -360,7 +360,7 @@ SERVICES = [
         "nav": "Siti web",
         "schema_name": "Progettazione e sviluppo di siti web",
         # 42 characters.
-        "title": "Siti web in Albania, fatti per farsi trovare",
+        "title": "Siti web in Italia e Albania, fatti per farsi trovare",
         "h1": "Un sito che si carica prima che il cliente rinunci.",
         "standfirst": "Sei dentro l'esempio. Ogni affermazione di questa "
                       "pagina si può verificare su questa pagina, in circa 30 "
@@ -493,7 +493,7 @@ SERVICES = [
         "nav": "Meta ads",
         "schema_name": "Pubblicità su Meta",
         # 31 characters.
-        "title": "Annunci Facebook e Instagram in Albania",
+        "title": "Annunci Facebook e Instagram in Italia e Albania",
         "h1": "Prendi clienti questa settimana.",
         "standfirst": "Il social a pagamento è il modo più rapido per scoprire "
                       "se la tua offerta funziona, e il modo più rapido per "

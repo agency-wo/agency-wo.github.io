@@ -4349,8 +4349,7 @@ POSTS = [
         "service": ("/seo/", "SEO and local search"),
 
         "title": "SEO in Durres",
-        "h1": "In a city this size, the map is not part of the result. It is "
-              "the result.",
+        "h1": "In Durres the map is not part of the result. It is the result.",
         "summary": "What actually decides the three businesses shown here, "
                    "and why the work that wins it is smaller than the "
                    "industry implies.",
@@ -4363,8 +4362,8 @@ POSTS = [
                    "not seriously tried for one.",
 
         "body": [
-            ("What the screen actually shows", [
-                "<p>Type a trade and this city into a phone and count what "
+            ("What a Durres search actually shows", [
+                "<p>Type a trade and Durres into a phone and count what "
                 "appears above the ordinary results. A map, then three "
                 "businesses. Whatever sits underneath is read by a minority "
                 "of people and almost none of them in a hurry.</p>",
@@ -4382,17 +4381,16 @@ POSTS = [
                 "and neither requires a website change. That is the part "
                 "nobody selling monthly retainers leads with.</p>",
             ]),
-            ("The pond is shallow enough to see the bottom", [
+            ("Durres is a shallow enough pond to see the bottom", [
                 "<p>Open the profiles of the businesses currently above you. "
                 "Count the photographs, read the description, look at "
                 "whether the services are listed individually or not at "
                 "all.</p>",
-                "<p>In this city that exercise usually ends with the same "
-                "conclusion: the business winning is not doing something "
+                "<p>In Durres that exercise usually ends with the same conclusion: the business winning is not doing something "
                 "clever, it is the only one that filled the form in.</p>",
             ]),
             ("What it looked like from zero", [
-                "<p>A watch shop here began in May with no website and no "
+                "<p>A watch shop in Durres began in May with no website and no "
                 "listing worth the name. The chart on our homepage is its "
                 "Search Console export, not a drawing, and the case page "
                 "says which parts were the listing and which were the "
@@ -4447,8 +4445,7 @@ POSTS = [
         "service": ("/seo/", "SEO and local search"),
 
         "title": "SEO in Tirana",
-        "h1": "The broad words are taken. That is not the same as the market "
-              "being taken.",
+        "h1": "In Tirana the broad words are taken. The market is not.",
         "summary": "What a small studio is actually up against in the "
                    "capital, and the ground where it still wins.",
         "standfirst": "An honest read of a market where several competitors "
@@ -4460,16 +4457,16 @@ POSTS = [
                    "selling it would like you to think.",
 
         "body": [
-            ("What is actually in front of you", [
+            ("What Tirana actually puts in front of you", [
                 "<p>Businesses that have been publishing since before you "
                 "registered a domain, agencies with a budget for this, and a "
-                "handful of national brands who rank here without trying "
+                "handful of national brands who rank in Tirana without trying "
                 "because they rank everywhere.</p>",
                 "<p>None of that is fixable with effort this year, and any "
                 "proposal that does not begin by saying so is asking you to "
                 "fund an education.</p>",
             ]),
-            ("The widest word is usually the wrong target", [
+            ("The widest Tirana term is usually the wrong target", [
                 "<p>The single broad term everyone wants is expensive, slow "
                 "and full of people who are still comparing. Underneath it "
                 "sit the phrases somebody types when they have already "
@@ -4500,7 +4497,7 @@ POSTS = [
                 "bigger is cheaper, search will bring you visitors who "
                 "leave. Ads would tell you that in a fortnight for less "
                 "money than a year of patience.</p>",
-                "<p>We have said this to enquiries from the capital. It is "
+                "<p>We have said this to enquiries from Tirana. It is "
                 "the answer that costs us the job and it is still the right "
                 "one.</p>",
             ]),
@@ -4543,7 +4540,7 @@ POSTS = [
         "service": ("/seo/", "SEO and local search"),
 
         "title": "SEO in Pavia",
-        "h1": "Milan is 35 kilometres away, and it swallows the searches.",
+        "h1": "Pavia loses its searches to Milan, 35 kilometres north.",
         "summary": "Where the local demand goes, why agencies from the "
                    "bigger city cost what that city costs, and where the "
                    "leak is stopped.",
@@ -4577,7 +4574,7 @@ POSTS = [
                 "dull things: real opening hours, a price, and a number "
                 "somebody answers.</p>",
             ]),
-            ("The population here changes during the year", [
+            ("The Pavia population changes during the year", [
                 "<p>This is a university city, and that means more than "
                 "students being around. It means part of the customer base "
                 "for a lot of businesses arrives in autumn, disappears in "
@@ -4587,7 +4584,7 @@ POSTS = [
                 "customers you exist only if you are findable, because they "
                 "have nobody to ask.</p>",
             ]),
-            ("What you are really competing with in town", [
+            ("What you are really competing with in Pavia", [
                 "<p>Open your Pavia competitors' sites. A good share were "
                 "built years ago and have not been touched since, and their "
                 "Facebook page is more current than the website is.</p>",

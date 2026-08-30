@@ -102,7 +102,11 @@ def jsonld(h, services, lang):
     # shared @id would make 3 pages claim to describe the same document.
     home = S + shell.localise("/", lang)
     org = {
-        "@type": "ProfessionalService",
+        # Dual-typed the way Google's own LocalBusiness examples and every
+        # comparable agency node do it. ProfessionalService alone is already a
+        # LocalBusiness subtype and was eligible; adding Organization makes the
+        # same node valid to consumers that look for the broader type first.
+        "@type": ["Organization", "ProfessionalService"],
         "@id": home + "#org",
         "name": shell.BRAND,
         "description": h["org_desc"],
@@ -441,11 +445,11 @@ def render(lang):
     <section class="hero">
       <div class="wrap hero-wrap">
         <h1 class="hero-title">
-          <span class="sr-only">{shell.BRAND}</span>
           <span class="wm-box" aria-hidden="true">
             <span class="serp">{rules}</span>
             <span class="wm">{letters}<span class="wm-studio">studio</span></span>
           </span>
+          <span class="hero-claim">{txt(10, h["hero_claim"], lang)}</span>
         </h1>
         <div class="hero-split">
           <div class="hero-rest">
