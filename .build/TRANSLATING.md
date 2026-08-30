@@ -120,9 +120,11 @@ then discover them.
 **Literal accented characters. Never HTML entities.** Write `ë`, `ç`, `à`, `è`,
 never `&euml;`, `&ccedil;`, `&agrave;`. Files are UTF-8.
 
-watch.al has 151 Albanian files carrying both `&euml;` and a literal `ë` in the
-same document, and its own notes call it the worst remaining legacy in the
-repo: any sweep, gate or find-and-replace has to match both forms or it reports
+watch.al has a large number of Albanian files carrying both `&euml;` and a
+literal `ë` in the same document, and its own notes call it the worst remaining
+legacy in that repo. The count is deliberately not written here: it said 151
+and was 173 when checked on 2026-08-30, and it belongs to a repo this file does
+not build. What matters is the shape, not the total: any sweep, gate or find-and-replace has to match both forms or it reports
 a corrupt corpus clean. This site is new enough to never have that problem.
 Gate check 40 keeps it that way.
 
