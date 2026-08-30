@@ -2,6 +2,18 @@
 
 In this order. Each step unblocks the one after it.
 
+**Status checked 2026-08-30, against the code rather than against this file.**
+Steps 1, 2, 3 and 6 are **done**: `shell.py:410` holds a real `WEB3FORMS_KEY`,
+`shell.py` holds 3 real `SAMEAS` URLs, `gen_launch.py:77` has
+`OPEN_TO_CRAWLERS = True`, and `shell.py:155` holds a live Google review link.
+They are left in place because the runbook is also the record of how the site
+was launched, but do not do them again.
+
+This file went stale in a way that cost real work: it said the four clients had
+never been asked for a review, that sentence was read as "the profile has zero
+reviews", and it was repeated as measured fact for a whole session. The profile
+had 9. **Check a claim in here against the code before repeating it.**
+
 ## 1. Paste the Web3Forms key
 
 Create a form at web3forms.com with info@minarankstudio.com as the inbox,
@@ -117,17 +129,30 @@ It is one click and brings the property and the sitemap with it.
 retyping: a second phone format or a different spelling of the city reads as a
 second business, and the signals split instead of stacking.
 
-Read the ordering there before doing any of it. **Reviews on the profile you
-already have outrank any new listing**, and the four clients have never been
-asked.
+Read the ordering in `citations.md` and trust that file over this one, because
+it is dated and this section was not. As of **30 August 2026** the profile
+carried **9 reviews** and three of the four clients had been asked; **Intimo
+Bruna is the one left**. `citations.md` reordered on the same date: with the
+review half working, links are now the weaker half of prominence, so Bing
+Places and the ProAffy backlink lead the list.
 
-## 6. Google Business Profile
+## 6. Google Business Profile · DONE
+
+The profile exists and is verified; the review link is live at
+`shell.GBP_REVIEW_URL`. What is still open is adding **Tirana as a service
+area**, which is what makes the studio eligible there at all. Kept below as the
+record of what was set up:
 
 Create the profile for minarank studio: Durres, the services, the hours, the
 WhatsApp number. We tell every client the profile is half of local search;
 our own absence from it would be the audit finding a prospect makes first.
 
 ## 7. Ask the four clients for a credit link
+
+**Three of the four are done.** watch.al, victoriaboutique.org and
+intimobruna.com all carry a followable credit link, verified live on
+2026-08-30. **proaffy.com is the one that does not**, and the message for it is
+drafted in `.build/outreach.md`.
 
 Iglisi Watch, Victoria Boutique, Intimo Bruna, ProAffy: a one-line footer
 credit linking to minarankstudio.com. Four relevant local links from real
