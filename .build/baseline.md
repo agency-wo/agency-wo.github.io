@@ -1,5 +1,7 @@
 # Baseline, 23 August 2026
 
+**Re-run 23 September 2026.** Every number below is a measurement of that day and several have already moved: the site was 192 URLs then and is 246 now, so 54 pages have never been in a clean crawl. Add the new answers underneath rather than replacing these.
+
 Where this site actually stands on the day the AI crawlers were let in. Taken so that in a month
 there is something to compare against rather than a feeling.
 
@@ -15,10 +17,10 @@ today the last clean before-picture available.
 `python .build/crawl.py`, run against the live site rather than the files on disk:
 
 ```
-sitemap:      192 URLs
+sitemap:      192 URLs      (as measured 2026-08-23; 246 on 2026-08-30)
 crawled:      192
 reachable:    192 of 192 by following links from the homepage
-CRAWL CLEAN: nothing to report across 192 pages
+CRAWL CLEAN: nothing to report across those 192 pages
 ```
 
 Checked per page and all clean: HTTP status, redirect chains, canonical pointing at itself,
