@@ -1,0 +1,19 @@
+/* MINARANK · self-hosted type, subset to Latin plus Albanian and Italian accents.
+   Apfel Grotezk: Luigi Gorlero, Collletttivo, SIL Open Font License.
+   Archivo: Omnibus-Type, SIL Open Font License. Licences ship alongside. */
+
+@font-face {
+  font-family: "Apfel Grotezk";
+  src: url("/assets/fonts/apfel-mittel.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Archivo;
+  src: url("/assets/fonts/archivo-var.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}

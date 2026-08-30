@@ -47,6 +47,9 @@ ROOT = os.path.dirname(HERE)
 # the previous build. verify is not here because it is not a generator; it runs
 # after all of them and its exit code becomes ours.
 ORDER = [
+    # first: shell.stamped() hashes the served css, so the pages must be
+    # built after the stylesheet they name, never before it.
+    "gen_css",
     "gen_pages", "gen_docs", "gen_cases", "gen_home", "gen_blog",
     "gen_glossary", "gen_term_pages", "gen_404", "gen_feed",
     "gen_launch", "gen_sitemap",

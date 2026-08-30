@@ -1,41 +1,16 @@
-/* ==========================================================================
-   MINARANK · design tokens
-
-   Colour. Ink, press white, and the red from the Albanian flag. Every value
-   has a source we can name to a client in one sentence. Red does the job
-   coral used to: it marks where ranking happens, and it is never body text.
-
-   Type. Apfel Grotezk (Collletttivo, Italian open-source cooperative) for
-   display only, above 2rem. Archivo (Omnibus-Type) for everything else.
-   Two faces, and the display face is not allowed to do nine jobs.
-   ========================================================================== */
-
 :root {
-  /* -- colour ------------------------------------------------------------ */
-  /* Two hairlines and a muted, not one token doing three jobs. --rule used to
-     be all three: 19 hairlines on paper AND 6 pieces of muted text on the ink
-     band, which is why nobody could darken it. At #D9DCE1 it was 1.22:1 on
-     paper, and --ink-2 was 1.27:1 on ink, so the footer's own divider had
-     never been seen by anybody.
 
-     3:1 is not the answer either. 3:1 on this paper is about #858B99, which is
-     --slate with extra steps, and 40 borders at --slate is a spreadsheet. So:
-     --rule stays quiet for decoration, --edge is the boundary you are meant to
-     be able to count, and --ink-mute is the dark side's caption colour. */
-  --ink:      #13161C;   /* printing black is never pure black */
-  --ink-2:    #3C4350;   /* hairlines on ink. 1.81:1, was 1.27 and invisible */
-  --red:      #D8232A;   /* the red in the Albanian flag */
-  --red-dk:   #A81B21;   /* hover, and red text where AA demands it */
-  --paper:    #F0F1F3;   /* cool press white, coated stock */
-  --surface:  #FFFFFF;   /* the same stock, inset. Names the white that was
-                            already here three times over as a literal, and
-                            is the only ground besides paper and ink */
-  --slate:    #5A6070;   /* captions and metadata only, never body */
-  --rule:     #BFC4CE;   /* quiet hairlines: crop marks, bylines, fine print */
-  --edge:     #A6ADB9;   /* structure: section rules, screenshot frames, 2:1 */
-  --ink-mute: #B4BAC5;   /* muted text ON ink. 9.21:1, and never a hairline */
+  --ink:      #13161C;
+  --ink-2:    #3C4350;
+  --red:      #D8232A;
+  --red-dk:   #A81B21;
+  --paper:    #F0F1F3;
+  --surface:  #FFFFFF;
+  --slate:    #5A6070;
+  --rule:     #BFC4CE;
+  --edge:     #A6ADB9;
+  --ink-mute: #B4BAC5;
 
-  /* -- type -------------------------------------------------------------- */
   --font-display: "Apfel Grotezk", "Arial Narrow", sans-serif;
   --font-body: Archivo, "Segoe UI", system-ui, sans-serif;
 
@@ -43,32 +18,28 @@
   --fs-h2:    clamp(2rem, 3.6vw, 3.25rem);
   --fs-h3:    clamp(1.25rem, 1.8vw, 1.5rem);
   --fs-lead:  clamp(1.1875rem, 1.4vw, 1.375rem);
-  --fs-body:  1.125rem;      /* 18px. Every site worth copying sits 18 to 24 */
+  --fs-body:  1.125rem;
   --fs-small: 0.9375rem;
-  --fs-label: 0.8125rem;     /* there is no smaller size on this site */
+  --fs-label: 0.8125rem;
 
   --track-label:   0.08em;
-  --track-display: -0.022em; /* Apfel is geometric; it needs negative tracking big */
+  --track-display: -0.022em;
   --lh-body: 1.6;
 
-  /* -- space ------------------------------------------------------------- */
   --s-2: 8px;   --s-3: 12px;  --s-4: 16px;  --s-5: 24px;
   --s-6: 32px;  --s-7: 48px;  --s-8: 64px;  --s-9: 96px;  --s-10: 128px;
 
-  /* three rhythm weights, not one. Uniform padding is a machine signature. */
   --pad-section: clamp(3.5rem, 7vh, 5.5rem);
   --pad-major:   clamp(5rem, 10vh, 8rem);
   --pad-hero:    clamp(6rem, 12vh, 9rem);
 
-  /* -- grid -------------------------------------------------------------- */
   --page-max: 1280px;
   --gutter: clamp(16px, 2.5vw, 32px);
   --margin: clamp(20px, 5vw, 64px);
 
-  /* -- motion ------------------------------------------------------------ */
   --ease-rise:   cubic-bezier(0.16, 1, 0.3, 1);
   --ease-reveal: cubic-bezier(0.22, 1, 0.36, 1);
-  --rise-step: 0.028em;      /* the climb, per letter */
+  --rise-step: 0.028em;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -84,8 +55,6 @@ img, svg { display: block; max-width: 100%; }
 
 ::selection { background: var(--red); color: var(--paper); }
 
-/* any checkbox, radio or progress this site ever grows is brand-coloured
-   rather than Chrome blue, without anybody remembering to do it */
 :root { accent-color: var(--red); }
 
 :focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }

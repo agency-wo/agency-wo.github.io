@@ -518,7 +518,10 @@ for p in all_pages:
                         f"{src.group(1)}, which is really {rw}x{rh}")
 
 # 9. the costume cannot reassemble ------------------------------------------
-css = read(os.path.join(ROOT, "css", "main.css"))
+# Reads the SOURCE, not the served file. gen_css strips comments out of what
+# ships, and a banned class named in a comment is a costume waiting to be
+# uncommented. Scanning the stripped copy would be a quietly weaker check.
+css = read(os.path.join(ROOT, ".build", "css", "main.css"))
 for cls in BANNED_CLASSES:
     if "." + cls in css:
         findings.append(f"[costume] .{cls} is back in main.css")
@@ -709,7 +712,7 @@ for p in all_pages:
 sys.path.insert(0, os.path.join(ROOT, ".build"))
 from clients import CLIENTS  # noqa: E402
 
-css = read(os.path.join(ROOT, "css", "main.css"))
+css = read(os.path.join(ROOT, ".build", "css", "main.css"))
 parts = 0
 for c in CLIENTS:
     for fn, _w, _h in c["mark"]:
@@ -720,7 +723,7 @@ for c in CLIENTS:
         # the URL lives in CSS, not a style attribute, because style-src is 'self'
         rule = re.search(r"\.mark-" + re.escape(stem) + r"\s*\{(.*?)\}", css, re.S)
         if not rule:
-            findings.append(f"[mark] css/main.css has no .mark-{stem} rule")
+            findings.append(f"[mark] .build/css/main.css has no .mark-{stem} rule")
         elif fn not in rule.group(1):
             findings.append(f"[mark] .mark-{stem} does not point at {fn}")
 # The marks are drawn assets and the row is the site's only proof above the
@@ -1211,7 +1214,7 @@ for lg in i18n.LANGS:
 # A rename in one of the three produces a page that looks finished and does
 # nothing at all.
 js_src = read(os.path.join(ROOT, "js", "main.js"))
-css_src = read(os.path.join(ROOT, "css", "main.css"))
+css_src = read(os.path.join(ROOT, ".build", "css", "main.css"))
 for hook, src, where in [("audit-form", js_src, "js/main.js"),
                          ("af-send-text", js_src, "js/main.js"),
                          ("sent=1", js_src, "js/main.js"),
@@ -1391,7 +1394,7 @@ for _meta_name, _tok in (("google-site-verification",
 # would otherwise re-authorise the colour it is retiring. That happened here
 # the same hour this line was written.
 tokens = re.sub(r"(?s)/\*.*?\*/", " ",
-                read(os.path.join(ROOT, "css", "tokens.css")))
+                read(os.path.join(ROOT, ".build", "css", "tokens.css")))
 ALLOWED = {m.upper() for m in re.findall(r"#[0-9A-Fa-f]{6}", tokens)}
 ALLOWED |= {"#000000", "#FFFFFF"}
 # gen_pages.py's three FIGS drawings hard-code their hexes and were NOT scanned

@@ -120,9 +120,15 @@ everything checkable is checked by `verify.py`, which fails the build.
 32. Every animation's final state is the CSS default, so no-JS, crawlers and
     reduced-motion get the finished page.
 33. Every `<img>` carries `width`, `height` and real `alt`. Gated.
-34. Build order: `gen_pages`, `gen_docs`, `gen_cases`, `gen_home`, `gen_blog`,
+34. Build order: `gen_css`, `gen_pages`, `gen_docs`, `gen_cases`, `gen_home`, `gen_blog`,
     `gen_glossary`, `gen_term_pages`, `gen_404`, `gen_feed`, `gen_launch`,
     `gen_sitemap` last, then `verify`.
+    `gen_css` leads because `shell.stamped()` appends a hash of the served
+    stylesheet's own bytes. Build a page before the css it names and every
+    page ships the previous hash, so the cache keeps serving the old sheet to
+    everybody who already had it. The css source lives in `.build/css/` with
+    its comments; the root gets the stripped copy, which is 46 KB smaller and
+    is the whole reason anything can be added to this site again.
     `gen_term_pages` follows `gen_glossary` because the hub links at the 7 term
     pages and both read `term_pages.py`: build them apart and the hub can offer
     a link to a page that is not there yet.

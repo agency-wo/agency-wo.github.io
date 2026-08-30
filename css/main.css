@@ -1,37 +1,9 @@
-/* ==========================================================================
-   MINARANK
-
-   Two rules decide most of this file:
-   1. The display face appears above 2rem and nowhere else. Everything at or
-      below --fs-h3 is Archivo 700. One face was doing nine jobs.
-   2. Body copy is ink. Slate is for captions and metadata only. Grey body
-      text is what made the old version read as a wireframe.
-
-   Red marks where ranking happens. Never body text: 4.2:1 on paper, which
-   is fine for large type, the wordmark's last letter, and marks.
-   ========================================================================== */
-
-/* Cross-document transitions. One at-rule, no JavaScript, no CSP allowance:
-   it is a CSS at-rule in a same-origin sheet, and a browser that does not know
-   it ignores it, so the degradation is literally nothing.
-
-   OPTED IN, not opted out. The blanket reduced-motion reset further down uses
-   *, *::before, *::after, which does NOT match ::view-transition-old(root) or
-   ::view-transition-new(root): those live in a separate pseudo tree on the
-   root. Declaring this unconditionally would animate for exactly the people
-   who asked it not to.
-
-   The header and the WhatsApp button are named because a sticky and a fixed
-   element are otherwise part of the root snapshot and cross-fade against
-   themselves, which is visible double-header ghosting for the whole
-   transition. */
 @media (prefers-reduced-motion: no-preference) {
   @view-transition { navigation: auto; }
   .site-head { view-transition-name: site-head; }
   .wa { view-transition-name: wa; }
 }
 
-/* -- shell ---------------------------------------------------------------- */
 .wrap { max-width: var(--page-max); margin-inline: auto; padding-inline: var(--margin); }
 .grid { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--gutter); }
 
@@ -42,7 +14,6 @@
 
 section { padding-block: var(--pad-section); }
 
-/* The one label style on the site. Three per page, maximum. */
 .eyebrow { font-size: var(--fs-label); letter-spacing: var(--track-label);
   text-transform: uppercase; color: var(--slate); font-weight: 600;
   margin-bottom: var(--s-4); }
@@ -53,25 +24,15 @@ h2 { font-family: var(--font-display); font-weight: 500; font-size: var(--fs-h2)
 h3, .faq-q, .ledger h3, .cta {
   font-family: var(--font-body); font-weight: 700; letter-spacing: -0.006em; }
 
-/* balance was on h2 alone, so every other heading on the site still stranded
-   its last word on a line of its own. Paragraphs keep pretty: balance is for
-   short blocks and browsers stop applying it past a few lines anyway. */
 h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
   text-wrap: balance; }
 
-/* The header is sticky at 72px. Only #audit and .af-done cleared it, so the
-   nav's own /#services link and the footer's #contact both landed their
-   heading UNDERNEATH the header. Every fragment target clears it now. */
 [id] { scroll-margin-top: calc(72px + var(--s-6)); }
 
 .sec-head { margin-bottom: var(--s-7); }
 
-/* -- header ---------------------------------------------------------------- */
 .site-head { position: sticky; top: 0; z-index: 5; background: var(--paper); }
-/* The default is the finished state (rule 32): with no script the sticky
-   header always has its edge, and the script only takes it away at the top of
-   the page where there is nothing to separate it from. It was the other way
-   round, so a JS-off visitor scrolled a header with no boundary at all. */
+
 .site-head::after { content: ""; display: block; height: 1px; background: var(--edge);
   transition: opacity 0.3s ease; }
 .js .site-head:not(.scrolled)::after { opacity: 0; }
@@ -79,94 +40,50 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
   height: 72px; gap: var(--s-5); }
 .head-logo { display: block; padding: 4px; margin: -4px; }
 .head-nav { display: flex; align-items: center; gap: var(--s-6); }
-/* nowrap, because a flex item shrinks before it overflows: with the switcher
-   in the row the Albanian CTA hit its min-content width at 720 and broke
-   "Nis një projekt" over 2 lines inside a row whose height is fixed at 72px.
-   Nothing then reported an overflow, because there was none. It stays one line
-   or the measurement is a lie. Below 720 they are display:none anyway. */
+
 .head-nav a { font-size: var(--fs-small); font-weight: 500; text-decoration: none;
   padding-block: 12px; margin-block: -12px; white-space: nowrap; }
-/* except in the panel, where the 4 links are a column and may use 2 lines */
+
 .menu-panel a { white-space: normal; }
-/* was color: var(--slate), which DIMMED the link on hover: 15.9:1 down to
-   5.56:1, so pointing at a nav item made it 3 times quieter. Same idiom as
-   .head-cta below, and the colour is not the only signal. */
+
 .head-nav a:hover { text-decoration: underline; text-underline-offset: 4px;
   text-decoration-thickness: 2px; text-decoration-color: var(--red); }
-/* The page you are on is marked by a rule under it rather than by weight
-   alone. Bold was the only signal and it is nearly invisible at 15px against
-   the 500 the others carry: 2 of the 5 nav items are one word long and there
-   is nothing to compare the weight against. Ink, not red, so it cannot be
-   confused with the red hover on any other item. */
+
 .head-nav a[aria-current="true"] { font-weight: 700;
   box-shadow: inset 0 -2px 0 0 var(--ink); }
 
-/* The CTA is an action, not a fifth destination, and it used to sit in the row
-   at the same gap and the same weight as the four links beside it. A hairline
-   separates the places you can go from the thing you can do. */
 .head-cta { margin-left: var(--s-2); padding-left: var(--s-6);
   border-left: 1px solid var(--edge); font-weight: 700 !important;
   text-decoration: underline !important; text-underline-offset: 4px;
   text-decoration-thickness: 2px; }
 .head-cta:hover { text-decoration-color: var(--red) !important; }
 
-/* -- the language switcher, in the header --------------------------------
-   It lived only in the footer, so an Italian reader who landed on an English
-   page had to scroll the entire document to get out of it. Three static <a>
-   pointing at the equivalent page: no script, which is what the CSP and rule
-   32 both want, and what the footer copy already was.
-
-   No new vocabulary. The hairline is the CTA's hairline in the same 1px
-   --edge, and the language you are reading carries the same 2px ink rule as
-   the current nav item, so the row is three declared groups (where you can
-   go, what you can read it in, what you can do) rather than eight loose
-   words. It sits on the navigation side of the CTA's divider, because a
-   switcher is navigation and the CTA stays the last thing in the row.
-
-   Below 720px the row copy goes with the nav links and the copy inside
-   .menu-panel takes over: 3 more links in a 72px row that already holds a
-   logo, a button and a disclosure is not a phone header, it is a wrapped
-   one. Emitted twice for the same reason the nav links are, and by the same
-   function.                                                                */
 .head-lang { display: flex; align-items: center; gap: var(--s-4);
   font-size: var(--fs-small); font-weight: 500; }
 .head-lang a { text-decoration: none; }
 .head-lang a:hover { text-decoration: underline; text-underline-offset: 4px;
   text-decoration-thickness: 2px; text-decoration-color: var(--red); }
-/* the current language is a span, so it inherits none of .head-nav a's box */
+
 .head-lang [aria-current="page"] { font-weight: 700;
   box-shadow: inset 0 -2px 0 0 var(--ink); }
 .head-nav > .head-lang { padding-left: var(--s-6);
   border-left: 1px solid var(--edge); }
 .head-nav > .head-lang > * { padding-block: 12px; margin-block: -12px; }
-/* in the panel it is a column under a rule, which is the same hairline doing
-   the same job turned 90 degrees */
+
 .menu-panel .head-lang { flex-direction: column; align-items: stretch;
   gap: 0; margin-top: var(--s-3); padding-top: var(--s-3);
   border-top: 1px solid var(--edge); }
-/* block, so the span is a row like the links are and the whole width of each
-   is the target; margin-block: 0 for the same reason .menu-panel a has it */
+
 .menu-panel .head-lang > * { display: block; padding-block: var(--s-3);
   margin-block: 0; }
-/* the rule under the current language would run the panel's full width here,
-   which reads as a divider rather than a mark. It underlines the word. */
+
 .menu-panel .head-lang [aria-current="page"] { box-shadow: none;
   text-decoration: underline; text-underline-offset: 4px;
   text-decoration-thickness: 2px; }
 
-/* 404.html is hand-authored and carries no header, footer or band, which is
-   why gate check 7 exempts it. Its styles were an inline <style> block until
-   style-src 'self' was pointed at them. */
-/* It has a header and a footer now, so it is a page rather than a splash: the
-   88vh centring it used to do would push the band off the bottom. */
 .err { max-width: var(--page-max); margin-inline: auto;
   padding-inline: var(--margin); padding-block: var(--pad-hero) var(--pad-major); }
-/* The 404's ten results, with nothing on any of them. .serp is reused
-   verbatim: it needs a positioned ancestor and nothing else, so this box is
-   the entire cost and the hero's own rules cannot regress.
 
-   The min-height is in em and explicit, so the box does not depend on the
-   display font having loaded and cannot shift when it does. */
 .err-box { position: relative; min-height: 3.4em;
   font-size: clamp(3rem, 10vw, 8rem); }
 .err h1 { font-family: var(--font-display); font-weight: 500;
@@ -175,50 +92,30 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
 .err p { color: var(--slate); margin-top: var(--s-5); max-width: 40ch; }
 .err a { color: var(--ink); font-weight: 700; }
 
-/* -- the phone menu --------------------------------------------------------
-   A <details>, so it needs no script at all: rule 32 is satisfied by the
-   element rather than by a rule about it, and with JS off it still opens.
-
-   The 4 links are emitted twice from shell.NAV, once per width. They are NOT
-   one list shown two ways: that needs ::details-content with
-   content-visibility:visible, which is Chrome 131, Safari 18.4 and Firefox
-   139, all 2025. On anything older the non-summary children sit in an
-   internal slot no author selector reaches, so the DESKTOP nav becomes a
-   closed disclosure and it fails silently. Two lists from one Python list is
-   the cheaper mistake.                                                      */
 .menu { display: none; position: relative; }
 .menu > summary { display: inline-flex; align-items: center; gap: 0.45em;
   cursor: pointer; list-style: none; padding-block: 12px; margin-block: -12px;
   font-size: var(--fs-small); font-weight: 500; }
 .menu > summary::-webkit-details-marker { display: none; }
-/* the marker is drawn, not a glyph: no font has to carry it and it can turn */
+
 .menu > summary::after { content: ""; width: 9px; height: 9px; flex: none;
   border-right: 2px solid currentColor; border-bottom: 2px solid currentColor;
   transform: translateY(-2px) rotate(45deg);
   transition: transform 160ms var(--ease-rise); }
 .menu[open] > summary::after { transform: translateY(1px) rotate(225deg); }
 .menu > summary:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
-/* Stated, not inherited. A closed <details> hides its non-summary children
-   through an internal slot the UA styles, and Chrome still reports a live
-   192x126 box for the panel inside it. It is not painted and not hit-tested,
-   but "not painted because of a UA slot" is not something to build a header
-   on. This says it. */
+
 .menu:not([open]) .menu-panel { display: none; }
 .menu-panel { position: absolute; right: 0; top: calc(100% + 18px);
   min-width: 12rem; display: flex; flex-direction: column;
   background: var(--paper); border: 1px solid var(--edge);
   padding: var(--s-3) var(--s-5) var(--s-4); }
-/* margin-block: 0 UNDOES .head-nav a's -12px, which is right in a 72px row and
-   wrong in a stacked panel: it left each link a 48px box on a 24px pitch, so
-   consecutive links overlapped by half and the later one won every hit test.
-   Tapping the bottom half of the word "Proof" opened Services, on every phone,
-   on all 51 pages. Measured with elementFromPoint at 390px, not by eye. */
+
 .menu-panel a { padding-block: var(--s-3); margin-block: 0; }
 
-/* -- hero ------------------------------------------------------------------ */
 .hero { padding-block: var(--pad-hero) var(--pad-major); }
 .hero-wrap { position: relative; }
-/* the one set of crop marks on the site */
+
 .hero-wrap::before, .hero-wrap::after { content: ""; position: absolute;
   top: -20px; width: 12px; height: 12px; pointer-events: none; }
 .hero-wrap::before { left: calc(var(--margin) - 18px);
@@ -231,11 +128,6 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
   padding-top: 0.22em; }
 .wm-box { display: block; position: relative; }
 
-/* ten results, and the wordmark climbs them.
-   The hairline was rgba(19,22,28,0.06), which is 1.09:1 on paper: ten lines
-   nobody has ever seen. The numerals were rgba(90,96,112,0.5), 2.10:1 at 10px.
-   This diagram is the hero's whole argument, so it is drawn in the site's own
-   hairline and its own caption colour rather than in 2 numbers typed once. */
 .serp { position: absolute; inset: 0; z-index: 0; }
 .serp i { position: absolute; left: 0; right: 2.6em; height: 1px;
   font-size: 10px; top: calc(4% + var(--r) * 10.2%);
@@ -244,12 +136,7 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
   transform: translateY(-50%); width: 1.6em; text-align: right;
   font-family: var(--font-body); font-variant-numeric: tabular-nums;
   font-size: 10px; letter-spacing: 0.06em; color: var(--slate); }
-/* --r and --i used to be style="" attributes on the elements, which
-   style-src 'self' blocks exactly as it blocks an inline <style>. Unset, the
-   calc()s below become invalid at computed-value time: the wordmark stops
-   climbing and all ten hairlines stack onto one line. The counts are fixed by
-   shell.WORDMARK (8) and gen_home's range(10), which is also what the 10.2%
-   step already assumes. */
+
 .serp i:nth-child(1) { --r: 0 }  .serp i:nth-child(2) { --r: 1 }
 .serp i:nth-child(3) { --r: 2 }  .serp i:nth-child(4) { --r: 3 }
 .serp i:nth-child(5) { --r: 4 }  .serp i:nth-child(6) { --r: 5 }
@@ -258,14 +145,6 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
 
 .wm { display: inline-block; white-space: nowrap; position: relative; z-index: 1; }
 
-/* The steady noun against the moving verb. "studio" does NOT climb: the climb
-   is the identity and the red k is red because it is last, so a 14-letter
-   lockup would put the accent on the 7th character and break rules 2 and 4 at
-   once. It sits in the wedge the climb opens under its high right end.
-
-   It lives INSIDE .wm, not beside it, so text-align right lands it under the
-   wordmark's own end. As a sibling it right-aligned to the whole page and
-   collided with the SERP numerals. */
 .wm-studio { display: block; text-align: right; margin-top: -0.14em;
   font-family: var(--font-body); font-weight: 500;
   font-size: clamp(0.85rem, 1.9vw, 1.5rem); letter-spacing: 0.34em;
@@ -289,77 +168,47 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
   line-height: 1.3; max-width: 26ch; letter-spacing: -0.012em; }
 .hero-sub { margin-top: var(--s-5); max-width: 54ch; text-wrap: pretty; }
 
-/* availability: a fact that has to be kept true */
 .status { display: inline-flex; align-items: baseline; gap: var(--s-3);
   margin-top: var(--s-7); font-size: var(--fs-small); }
 .status .dot { width: 7px; height: 7px; background: var(--red);
   border-radius: 50%; transform: translateY(-1px); flex: none; }
 
-/* -- the hero's second row -------------------------------------------------
-   The wordmark keeps the full width above: .serp is inset:0 on .wm-box, so its
-   ten hairlines and their numerals span the whole container and a column
-   BESIDE the h1 lands on top of them at every width. Below it, at none.
-
-   The proportion is .ask-row's 7/5, shared literally rather than restated. The
-   comment further down this file says four layout idioms on the homepage and
-   no more; this is one of the four, used twice.                             */
 .hero-split { margin-top: var(--s-8); display: grid;
   grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
   column-gap: var(--s-9); align-items: start; }
 .hero-split .hero-say { margin-top: 0; }
 
-/* The red rule is .check's rule, the same idiom for the same reason: this is
-   the one thing on the page that takes something rather than says something.
-   No border, no panel, no shadow. The site has no cards and this is not the
-   moment to introduce one. */
 .hero-af { border-left: 2px solid var(--red); padding-left: var(--s-5); }
 .hero-af .af { margin-top: var(--s-5); }
-/* .check p's exact register, not a second one 1.4px away from it. The two
-   red-rule blocks on this page are one idiom, and an idiom whose two uses
-   disagree about type size is two idioms. */
+
 .af-h { font-size: clamp(1.25rem, 2vw, 1.625rem); line-height: 1.15;
   max-width: 18ch; }
 .af-lead { margin-top: var(--s-3); font-size: var(--fs-small);
   color: var(--slate); max-width: 34ch; text-wrap: pretty; }
-/* the hero form is 4 stacked fields in a 5fr column, so the two-up pair and
-   the 54ch measures the /start/ form uses would both overflow it */
-/* Shorter than the /start/ form, at every width. In the 5fr column the form
-   was 741px against copy that ends near 500, so it overhung by a third of its
-   own height and the hero read bottom-heavy on the right. What gives is the
-   space between the controls; the input keeps a 44px thumb target. */
+
 .hero-af .field { margin-top: var(--s-3); }
 .hero-af .field label { margin-bottom: 4px; }
 .hero-af .field input { padding: 0.58em 0.75em; }
 .hero-af .af-say, .hero-af .af-alt, .hero-af .af-fine { max-width: none; }
 .hero-af .af-go { margin-top: var(--s-5); }
-/* The divider under the button, gone. .af-alt and .af-fine are 2 separate
-   keys in 6 modules and /start/'s "fine" is a 4-clause privacy sentence naming
-   Web3Forms and a deletion address, so the COPY is never merged. Only the
-   boxes are, and only here. */
+
 .hero-af .af-fine { margin-top: var(--s-2); padding-top: 0; border-top: 0; }
 .hero-af .af-say { margin-top: var(--s-3); }
 .hero-af .af-done { padding-left: 0; border-left: 0; }
 .hero-af .af-done h3 { font-size: clamp(1.25rem, 2vw, 1.625rem); }
 
-/* -- services -------------------------------------------------------------- */
 .services { padding-block: var(--pad-major); border-top: 1px solid var(--edge); }
-/* Five doors, not five paragraphs. Nothing in the nav points at the service
-   pages, so the whole row is the link surface and the arrow says so. */
+
 .svc-list { list-style: none; margin: 0; padding: 0; }
 .svc-list li { border-top: 1px solid var(--edge); position: relative; }
 .svc-list li:first-child { border-top: 0; }
-/* The mark on the active door. Absolutely positioned OUTSIDE the text column
-   rather than as a border or a padding change: a border would move all 5 rows
-   sideways the moment one lit up, and moving text to signal attention is the
-   opposite of what this is for. It scales from the top so the rule draws
-   downward rather than appearing, which is the same gesture .serp uses in the
-   hero. Hidden from assistive tech by being a ::before with no content. */
+
 .svc-list li::before { content: ""; position: absolute;
   left: calc(var(--s-4) * -1); top: 0; bottom: 0; width: 2px;
   background: var(--red); transform: scaleY(0); transform-origin: top;
   transition: transform 260ms var(--ease-rise); }
 .svc-list li.is-near::before { transform: scaleY(1); }
-/* 5/7, not 7/5: the name is short and the sell is the long half */
+
 .svc-list a { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
   gap: var(--s-6); align-items: baseline; padding-block: var(--s-6);
   text-decoration: none; color: inherit; }
@@ -371,23 +220,15 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
 .svc-say { font-size: var(--fs-lead); line-height: 1.35; }
 .svc-go { margin-top: var(--s-4); font-size: var(--fs-small); color: var(--slate);
   max-width: 46ch; }
-/* inline, not flex: a wrapped door line must not strand the arrow to the right */
+
 .svc-go .arrow { width: 0.75em; height: 0.75em; vertical-align: -0.05em;
   margin-left: 0.4em; }
-/* One gesture, everywhere the site draws an arrow. It lived on the service
-   rows alone, which read as an accident rather than as intent. */
+
 .arrow { transition: transform 160ms var(--ease-rise); }
 .svc-list a:hover .arrow, .cta:hover .arrow, .btn:hover .arrow,
 .case-said a:hover .arrow, .who-more a:hover .arrow,
 .band-cta:hover .arrow { transform: translate(2px, -2px); }
 
-/* THE ACTIVE DOOR, and the 2 ways to become one.
-   :hover is the desktop reader pointing at it. .is-near is js/main.js marking
-   whichever door is closest to the middle of the screen, which is the only
-   affordance a touch reader can get: below 719px these 5 collapse to one
-   column and a phone has no hover at all, so the interaction this section was
-   designed with never fired on the device this market reads on.
-   One selector list, so the 2 states cannot drift apart. */
 .svc-list a:hover h3,
 .svc-list li.is-near h3 { color: var(--red); }
 .svc-list a:hover .svc-go,
@@ -396,36 +237,21 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
 
 .svc-list a:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
 
-/* -- proof ----------------------------------------------------------------- */
-/* the border-top and the padding both moved into the zones. An --edge hairline
-   directly above an ink ground is invisible, and padding on the section would
-   have held the ink off the section's own top edge. */
 .proof { padding-block: 0; }
 .proof-head > p { max-width: 62ch; }
 .proof-head h2 { max-width: 20ch; margin-bottom: var(--s-5); }
 
-/* auto-fit, not a column count. The comment on .stat-strip is right and still
-   applies: the strip went from 3 figures to 4 when the click rate went back in,
-   and anything hard-coded stacks silently the next time it changes. auto-fit
-   spreads whatever it is given across the band. */
 .zone-ink .stat-strip { display: grid; gap: var(--s-7) var(--s-8);
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); }
 
-/* the zone already pays --pad-major at the top, so the chart's own top margin
-   would be charged twice */
 .zone > .wrap > .proof-body > .gsc:first-child { margin-top: 0; }
 
-/* the numbers are the argument, so on ink they get the display scale the hero
-   has and the strip is ruled in red. Red on ink is 3.4:1: fine for a 1px rule,
-   which is why it rules and never writes. */
 .zone-ink .stat-n { font-size: clamp(2.5rem, 5vw, 4.25rem); }
 .zone-ink .stat-strip { border-top: 2px solid var(--red);
   gap: var(--s-7) var(--s-9); margin-top: var(--s-8); }
 .proof-body > p { max-width: 62ch; margin-bottom: var(--s-5); }
 .proof-lead { font-size: var(--fs-lead); }
 
-/* flex-wrap, not a fixed column count: the strip grew from 3 stats to 4 when
-   the click rate went back in, and a hard-coded repeat(3) silently stacked it */
 .stat-strip { list-style: none; margin: var(--s-7) 0 var(--s-3); padding: var(--s-5) 0 0;
   display: flex; flex-wrap: wrap; gap: var(--s-6) var(--s-8);
   border-top: 1px solid var(--edge); }
@@ -436,14 +262,12 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
   color: var(--slate); }
 .stat-note { font-size: var(--fs-small); color: var(--slate); }
 
-/* the chart breaks the measure: one of three deliberate breaks */
 .gsc { margin: var(--s-7) 0 var(--s-6); max-width: 1000px; }
 .gsc img { width: 100%; height: auto; border: 1px solid var(--edge); }
 .gsc figcaption { margin-top: var(--s-3); font-size: var(--fs-small);
   color: var(--slate); max-width: 58ch; }
 .taken { font-size: var(--fs-small); color: var(--slate); margin-top: var(--s-6); }
 
-/* -- work list ------------------------------------------------------------- */
 .cases { list-style: none; margin: 0; padding: 0; }
 .cases > li { border-top: 1px solid var(--edge); padding-block: var(--s-7); }
 .case-name { font-family: var(--font-display); font-weight: 500;
@@ -454,41 +278,20 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
 .case-said { margin-top: var(--s-4); max-width: 60ch; text-wrap: pretty; }
 .case-grid { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 6fr);
   gap: var(--s-7); align-items: start; }
-/* the same 5/7 as the service doors, for the same reason: the name is short
-   and the sell is the long half. NOT .case-grid's 6/6, which is sized for a
-   text-and-screenshot pair and a post has no screenshot. Without it the blog
-   index was a narrow text column with the right half of the page blank. */
+
 .post-row { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
   column-gap: var(--s-6); align-items: start; }
 
-/* -- the blog index, in 2 groups ------------------------------------------
-   17 posts in one list was a scroll with nothing to orient by. The heading
-   carries its own count so the reader knows how much is under it before he
-   starts, which is the one thing the flat list would not say.
-
-   The group rule is --ink, heavier than the --edge hairline between rows: the
-   section break has to read as louder than the row break or the grouping does
-   not survive being skimmed, which is the only way this page is read. */
 .post-group + .post-group { margin-top: var(--s-9); }
 .group-h { font-family: var(--font-display); font-weight: 500;
   font-size: clamp(1.125rem, 1.4vw, 1.375rem); letter-spacing: var(--track-display);
   padding-top: var(--s-4); border-top: 2px solid var(--ink);
   display: flex; align-items: baseline; gap: var(--s-3); }
-/* The count is metadata, not a heading, so it takes the caption colour and
-   sits on the baseline rather than beside it at heading weight. */
+
 .group-n { font-family: var(--font-body); font-size: var(--fs-small);
   font-weight: 400; color: var(--slate); letter-spacing: 0; }
 .post-group .cases > li:first-child { border-top: none; }
 
-/* -- the blog filter ------------------------------------------------------
-   The pills are ANCHORS. Without JavaScript they jump to the group they name,
-   which is why they are styled as controls but marked up as links -- and why
-   they must never take class "btn": check 32 requires every .btn href to
-   start with "/", and these are fragments.
-
-   The active pill is the only new red on the page. Five colours, one per
-   topic, would be five colours the brand does not have; the palette is four
-   and the discipline is the point. */
 .blog-filter { margin: var(--s-5) 0 var(--s-6); }
 .blog-search { width: 100%; max-width: 34ch; padding: var(--s-3) var(--s-4);
   border: 1px solid var(--edge); border-radius: 999px; background: #fff;
@@ -507,20 +310,10 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
 .pill.is-on .pill-n { color: var(--edge); }
 .blog-empty { margin-top: var(--s-6); color: var(--slate); }
 
-/* Which posts are about a trade, readable in the All view rather than only
-   when the trade filter is on. Deliberately quiet: it is a tag, not a claim. */
 .row-trade { display: inline-block; margin-left: var(--s-3); padding: 0 var(--s-2);
   border: 1px solid var(--edge); border-radius: 3px;
   font-size: 0.8em; color: var(--slate); }
 
-/* -- density --------------------------------------------------------------
-   THIS is what made the page boring. 17 posts rendered 5,680px tall, roughly
-   334px a row and most of it empty, so the list read as eight screens of
-   nothing rather than as a body of work. The rows were never badly designed;
-   there were simply far too few of them per screen.
-
-   Scoped to the blog index (.post-group) so the client-work list, which has 4
-   entries and wants the air, is untouched. */
 .post-group .cases > li { padding-block: var(--s-5); }
 .post-group .post-row { gap: var(--s-5) var(--s-6); align-items: start; }
 .post-group .case-name { font-size: clamp(1.125rem, 1.6vw, 1.375rem); }
@@ -528,34 +321,17 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
 .post-group .case-where { margin-top: var(--s-2); }
 .post-group + .post-group { margin-top: var(--s-8); }
 
-/* The whole row reacts, not only the title. Two links to one place in one row
-   and only one of them lighting up is what made this read as a list of text
-   rather than a set of doors. :has means no wrapper element and no JS.
-
-   No background tint: this palette has no colour between --paper and --rule,
-   and inventing one for a hover state would be a new token carrying no meaning
-   anywhere else on the site. The title and the arrow are the hover vocabulary
-   every other link here already uses, so the row borrows it. */
 .cases > li:has(.post-row):hover .case-name a { color: var(--red); }
 .cases > li:has(.post-row):hover .arrow { transform: translate(2px, -2px); }
-/* the /work/ rows react the same way: one hover vocabulary for every list */
+
 .cases > li:has(.case-grid):hover .case-name a { color: var(--red); }
 .cases > li:has(.case-grid):hover .arrow { transform: translate(2px, -2px); }
 
-/* -- plates: real screenshots, no frame furniture -------------------------- */
 .plate { margin: 0; }
 .plate img { width: 100%; height: auto; border: 1px solid var(--edge); }
 .plate figcaption { margin-top: var(--s-3); font-size: var(--fs-small);
   color: var(--slate); }
 
-/* -- the growth chart ------------------------------------------------------ */
-/* The same window as the Google screenshot that still sits below it, in the
-   studio's colours. gen_home.growth_chart asserts both series still sum to the
-   2 figures printed directly above before it will emit this.
-
-   Impressions are --slate on purpose. Every lighter grey in the palette lands
-   above 7:1 on ink and would outshine --red at 3.4:1, which would make the
-   context louder than the point. Clicks are the argument, so clicks are red. */
 .chart-fig { margin: var(--s-8) 0 0; }
 .chart { width: 100%; height: auto; }
 .chart-grid { fill: none; stroke: var(--ink-2); stroke-width: 1; }
@@ -568,11 +344,6 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
 .key-clicks { fill: var(--red); }
 .key-impr { fill: var(--slate); }
 
-/* The chart is drawn in a 1240-unit viewBox, so on a 350px-wide phone every
-   unit is 0.28px and 19px type renders at 5. Everything here is in viewBox
-   units, scaled up to land back at a readable size once the SVG is squeezed.
-   The geometry is untouched: stretching a data chart to fit would misstate
-   the data, so it stays in proportion and only the ink gets heavier. */
 @media (max-width: 720px) {
   .chart-ax, .chart-key { font-size: 42px; }
   .chart-clicks { stroke-width: 7; }
@@ -580,31 +351,14 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
   .chart-grid { stroke-width: 2.5; }
 }
 
-/* -- tonal zones ----------------------------------------------------------- */
-/* The site was one flat --paper from the header to the footer, roughly 40,000px
-   of it, and .on-ink appeared in exactly one place: the footer band. So the
-   only tonal change a visitor saw arrived after they had finished reading.
-
-   A zone is the .band trick generalised. Full-bleed block, sits outside .wrap
-   and contains one, carries its own vertical padding because the section it
-   replaces no longer does.
-
-   It is a <div> and it is NEVER a <section>. Check 15 counts `<section` with a
-   regex and caps the homepage at 7, then asserts all 3 languages agree. A zone
-   that reached for <section> would spend a slot the copy needs and fail the
-   gate in two ways at once. */
 .zone { padding-block: var(--pad-major); }
 .zone-surface { background: var(--surface); }
 .zone-ink { background: var(--ink); color: var(--paper); }
 
-/* --slate is 2.44:1 on ink and cannot be a caption there. The footer band
-   already solved this: --ink-mute for muted text (9.21:1), --ink-2 for
-   hairlines. Zones reuse those answers rather than inventing paler greys. */
 .zone-ink .eyebrow,
 .zone-ink .stat-l,
 .zone-ink .stat-note { color: var(--ink-mute); }
 
-/* -- the ink band ---------------------------------------------------------- */
 .band { background: var(--ink); color: var(--paper);
   padding-block: var(--pad-major) var(--s-7); margin-top: var(--pad-section); }
 .band h2 { font-size: clamp(2.25rem, 4.4vw, 3.5rem); max-width: 16ch; }
@@ -617,7 +371,6 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
 .band-alt a { color: var(--ink-mute); text-underline-offset: 4px; }
 .band-alt a:hover { color: var(--paper); }
 
-/* -- footer ---------------------------------------------------------------- */
 .site-foot { margin-top: var(--s-9); border-top: 1px solid var(--ink-2);
   padding-top: var(--s-6); }
 .foot-index { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s-6); }
@@ -625,51 +378,24 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
   gap: var(--s-2); }
 .foot-h { font-size: var(--fs-small); color: var(--ink-mute);
   margin-bottom: var(--s-2); }
-/* info@minarankstudio.com is a 23-character unbreakable string in a column
-   that is one of four at 1440 and full width at 390 */
+
 .foot-col a { color: var(--paper); font-size: var(--fs-small); font-weight: 500;
   text-decoration: none; padding-block: 5px; overflow-wrap: anywhere; }
-/* was color: var(--rule), the same dimming defect as the nav had, on ink */
+
 .foot-col a:hover { color: var(--paper); text-decoration: underline;
   text-underline-offset: 4px; text-decoration-color: var(--red); }
 .foot-meta { display: flex; justify-content: space-between; gap: var(--s-6);
   flex-wrap: wrap; margin-top: var(--s-8); font-size: var(--fs-small);
   color: var(--ink-mute); }
-/* The trust line: directory links and the review ask, on ink, so they take
-   the band-alt treatment -- muted at rest, paper on hover. Quiet on purpose:
-   these are receipts, not calls to action, and the one loud block on a page
-   is the band CTA above them. */
+
 .foot-trust a { color: var(--ink-mute); text-underline-offset: 4px; }
 .foot-trust a:hover { color: var(--paper); }
 
-/* The footer clock. It sits inline at the end of the place line, so "Durres,
-   Albania" and the time are adjacent and the clock needs no caption to say
-   which city it is showing.
-
-   The dial is left unfilled rather than painted --ink: the band already IS
-   --ink, so a fill would be the same colour twice and would stop the clock
-   working if this element ever moved to a lighter surface. What draws the
-   shape is the --paper rim, which is what the founder asked for.
-
-   It lives in the band and not the meta row, in the half the heading leaves
-   empty. That half was going to hold a portrait and there is no portrait, so
-   rather than leave the band lopsided it holds the one honest thing this
-   studio can put there: what time it is where the studio is.
-
-   Sized off the viewport rather than in fixed px so it fills that half at any
-   width instead of floating in it, with a floor that keeps it legible and a
-   cap that stops it becoming a dinner plate on an ultrawide. auto height and
-   NO width/height attributes on the svg: the viewBox carries the ratio, and a
-   hardcoded attribute would fight the clamp. */
 .band-top { display: grid; grid-template-columns: minmax(0, 1fr) auto;
   gap: var(--s-7); align-items: center; }
 .band-say { min-width: 0; }
 .foot-clock { width: clamp(120px, 13vw, 190px); height: auto; }
-/* The footer switcher had no rules at all: 3 links laid out by .foot-meta's
-   flex, in the UA's underline, at the muted colour meant for captions. Same
-   shape as the header copy, in the ink band's colours: --paper for the links,
-   which is what every other link down here is, and the rule under the current
-   language in --paper too, because --ink on ink is a mark nobody can see. */
+
 .foot-lang { display: flex; align-items: center; gap: var(--s-4);
   flex-wrap: wrap; font-weight: 500; }
 .foot-lang > * { padding-block: 5px; }
@@ -679,9 +405,6 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
 .foot-lang [aria-current="page"] { color: var(--paper); font-weight: 700;
   box-shadow: inset 0 -2px 0 0 var(--paper); }
 
-/* ==========================================================================
-   SUBPAGES
-   ========================================================================== */
 .page-head { padding-block: var(--s-8) var(--s-7); }
 .crumbs { display: flex; align-items: center; gap: var(--s-3);
   font-size: var(--fs-small); color: var(--slate); margin-bottom: var(--s-5); }
@@ -693,16 +416,6 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
 .standfirst { margin-top: var(--s-5); font-size: var(--fs-lead);
   max-width: 42ch; text-wrap: pretty; }
 
-/* The post byline, under the standfirst. Small and quiet on purpose: it is
-   attribution, not argument, and it sits above a heading it must not compete
-   with. The <time> is not styled apart from the rest of the line, because a
-   date that looks like a link is a date people click.
-
-   --slate, NOT --ink-mute. The first draft used --ink-mute because "muted" is
-   what a byline wants, and measured 1.73:1 on paper: that token is the muted
-   colour for text ON ink, where it is 9.21:1, and every other use of it in
-   this file is inside .band. --slate is 5.56:1 here and its own comment in
-   tokens.css says captions and metadata, which is what this is. */
 .byline { margin-top: var(--s-3); font-size: var(--fs-small);
   color: var(--slate); }
 .byline a { color: inherit; text-decoration: underline;
@@ -711,10 +424,6 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
 
 .lead { font-size: var(--fs-lead); max-width: 60ch; margin-bottom: var(--s-6); }
 
-/* The glossary. A <dl> because 11 term/definition pairs is the one thing a
-   description list is for, and each pair is wrapped in a div so the term and
-   its definition stay together when the grid wraps at a narrow width.
-   Two columns at desktop, stacked on a phone. */
 .glossary { margin-top: var(--s-8); border-top: 1px solid var(--edge); }
 .glossary .term { display: grid; grid-template-columns: 15rem 1fr;
   gap: var(--s-4) var(--s-6); padding: var(--s-5) 0;
@@ -749,12 +458,10 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
   margin-bottom: var(--s-3); font-weight: 700; }
 .side-block p, .side-block li { font-size: var(--fs-small); text-wrap: pretty; }
 .side-list { list-style: none; margin: 0; padding: 0; }
-/* the padding moves from the li onto the a, so the whole row is the target
-   rather than a 16px strip of text inside it */
+
 .side-list li { border-bottom: 1px solid var(--edge); }
 .side-list a { display: block; padding-block: var(--s-3); text-decoration: none; }
-/* --red-dk, not --red. These inherit --fs-small from .side-block, and red on
-   paper is 4.2:1, under the 4.5:1 AA floor for text this size. 6.53:1. */
+
 .side-list a:hover { color: var(--red-dk); }
 
 .ledger { list-style: none; margin: var(--s-6) 0 0; padding: 0; }
@@ -768,33 +475,8 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
 .exclusions ul { list-style: none; margin: var(--s-4) 0 0; padding: 0; max-width: 62ch; }
 .exclusions li { padding-block: var(--s-3); }
 
-/* Measured 191px between the last block and this heading, on a page whose
-   heading rhythm is 64: .faq's own margin, plus section{padding-block} landing
-   inside .prose, plus the h2's margin. 96 is a deliberate 1.5x step at the one
-   place the page genuinely changes register. */
-/* A phone number broken across 2 lines reads as a typo, and on a 390 screen
-   the band's contact row wrapped it after "+355 67". Nowrap on the link and
-   nowhere else: the row is still free to wrap BETWEEN the address, WhatsApp
-   and the number, which is what it should do on a narrow screen. */
 a[href^="tel:"] { white-space: nowrap; }
 
-/* Comparison tables, on the 5 posts that answer "X or Y".
-
-   A reader scanning for the difference finds it in one pass, and an assistant
-   answering the same question lifts a table instead of parsing five paragraphs
-   of prose. Nothing else on this site had a table, so this is the whole of it.
-
-   The scroller is the important part rather than the decoration: 3 columns on
-   a 320px screen cannot be made to fit, and a page that scrolls sideways is a
-   worse bug than a table that does. The overflow is contained here so the body
-   never moves. Cells are top-aligned because the left column is 2 words and
-   the others are rarely the same height. */
-/* min-width:0 is the whole fix and it is not decoration. The prose column is
-   a grid item, and a grid item defaults to min-width:auto, which means it
-   refuses to shrink below its own content. overflow-x on this wrapper was
-   therefore scrolling correctly while the wrapper itself still forced the page
-   wider: measured at 320px, 3 of the 5 posts pushed the document to 362, 334
-   and 336. This lets the wrapper be narrower than the table it holds. */
 .cmp-wrap { overflow-x: auto; min-width: 0; margin: var(--s-6) 0; }
 .cmp { border-collapse: collapse; width: 100%; min-width: 30rem;
   font-size: var(--fs-small); }
@@ -804,32 +486,17 @@ a[href^="tel:"] { white-space: nowrap; }
   border-bottom: 1px solid var(--edge); }
 .cmp thead th { border-bottom: 2px solid var(--ink); font-weight: 700; }
 .cmp tbody th { font-weight: 400; color: var(--slate); white-space: nowrap; }
-/* tbody, and that is not tidiness. <thead> holds one <tr>, so that row is its
-   own :last-child and an unscoped rule was stripping the 2px rule under the
-   column headings while appearing to work everywhere else. */
+
 .cmp tbody tr:last-child td, .cmp tbody tr:last-child th { border-bottom: 0; }
 
-
 .faq { margin-top: var(--s-9); padding-block: 0; }
-/* Except on the homepage, where it is a SECTION among sections rather than a
-   block inside prose. Every other boundary on that page measures 0px, because
-   each section carries its own padding and none of them adds a margin; the FAQ
-   was opening a 96px hole under "Updated" that nothing else on the page does.
-   The .wrap child is the homepage's marker: gen_home passes wrap="wrap" to
-   faq_section() and the 3 doc pages pass nothing, so this cannot leak onto
-   them. Sibling padding instead of the margin, and the rhythm matches. */
+
 .faq:has(> .wrap) { margin-top: 0; padding-block: var(--pad-section); }
 .faq > h2 { margin-top: 0; }
 .faq-item { border-top: 1px solid var(--edge); padding-block: var(--s-5); max-width: 66ch; }
 .faq-item:last-child { border-bottom: 1px solid var(--edge); }
 .faq-q { font-size: var(--fs-h3); margin-bottom: var(--s-3); }
-/* The item owns its own spacing, everywhere. `.prose h3` and `.prose p` are
-   (0,1,1) and .faq-q is (0,1,0), so on the 3 doc pages and all 135 blog pages
-   the prose rules were winning and adding 32px above every question and 24px
-   below every answer on top of the padding. The homepage sits in .wrap rather
-   than .prose and got none of it, so the same 5 questions were 188px an item
-   there and 277px on a post. Two renderings of one component is a bug whichever
-   is nicer, and the tighter one is also the one that was designed. */
+
 .faq .faq-q { margin-top: 0; }
 .faq .faq-item > p { margin-bottom: 0; }
 
@@ -837,25 +504,12 @@ a[href^="tel:"] { white-space: nowrap; }
   align-items: center; gap: var(--s-3); }
 .tick { width: 12px; height: 12px; flex: none; }
 
-/* The last-updated line, at the foot of the prose on every page.
-
-   Slate at --fs-small, which is the same treatment .taken and .stat-note
-   already get, because it is the same kind of thing: rule 7 gives slate to
-   captions and metadata and this is metadata about the page rather than a
-   sentence in it. The gap above is --s-8 and not --s-5, so it reads as
-   something after the argument instead of the argument's last line. It is a
-   date. It is not allowed to compete with the payoff sitting a paragraph
-   above it. */
 .updated { margin-top: var(--s-8); font-size: var(--fs-small);
   color: var(--slate); }
 
 .fig { margin: 0 0 var(--s-7); max-width: 240px; }
 .fig svg { width: 100%; height: auto; }
 
-/* The same mark, moved out of the sidebar and into the prose. It is set in a
-   --surface plate rather than run to the full column width: the art is drawn
-   on a 160x160 square, so a full-bleed column would make it a 700px block of
-   mostly empty space. The plate breaks the text; the square stays readable. */
 .fig-body { max-width: none; margin: var(--s-9) 0; padding: var(--s-8) var(--s-7);
   background: var(--surface); border: 1px solid var(--edge); }
 .fig-body svg { width: 100%; max-width: 300px; margin-inline: auto; }
@@ -864,20 +518,12 @@ a[href^="tel:"] { white-space: nowrap; }
 .tail-inner { border-top: 2px solid var(--ink); padding-top: var(--s-6);
   display: flex; justify-content: space-between; align-items: baseline;
   gap: var(--s-6); flex-wrap: wrap; }
-/* flex-basis: .tail-inner is a space-between flex row, so without it this lands as a
-   third item on the heading's line. Muted: not a second CTA beside Read next. */
+
 .tail-pref { flex-basis: 100%; margin-top: var(--s-4); font-size: .8125rem; opacity: .62; }
 .tail-pref a { text-decoration: underline; text-underline-offset: 3px; }
 .tail-pref a:hover { opacity: 1; }
 .tail h2 { font-size: clamp(1.625rem, 2.6vw, 2.25rem); max-width: 20ch; }
-/* nowrap keeps the arrow on the last word, which is why it was there, and it
-   also means a long post title cannot wrap: "New website, or fix the one I
-   have" is 330px inside a 280px column on a 320px screen, and the arrow ended
-   up 42px past the edge of the page. Found while measuring the comparison
-   tables, which turned out to be innocent.
 
-   inline-block on the arrow alone keeps it glued to the last word without
-   holding the whole line rigid, so the link wraps and the page does not. */
 .cta { font-size: var(--fs-h3); text-decoration: none;
   border-bottom: 2px solid var(--ink); padding-bottom: 2px; }
 .cta .arrow { white-space: nowrap; }
@@ -885,24 +531,12 @@ a[href^="tel:"] { white-space: nowrap; }
 .arrow { display: inline-block; width: 0.6em; height: 0.6em;
   margin-left: 0.25em; color: var(--red); }
 
-/* /studio/ sits off the usual axis: the one page written as a person */
-/* was grid-column 2/9, which indented the body 99px while the h1 stayed
-   flush left. An axis shift that moves half a page is a broken edge. */
-/* /studio/ is the one page with no aside, and it kept the 62ch cap on the
-   COLUMN, so 8 grid columns were capped at about 740px and the rest of every
-   row was dead the whole way down the page. The measure belongs on the
-   paragraphs; the headings are then free to use the width, which is what fills
-   the space and gives the page its rhythm. One person talking, set large. */
 .studio-prose { grid-column: 1 / 11; max-width: none; }
 .studio-prose > p, .studio-prose > ul, .studio-prose > ol,
 .studio-prose > .lead { max-width: 62ch; }
 .studio-prose > h2 { max-width: 18ch; font-size: clamp(2rem, 4vw, 3rem);
   letter-spacing: var(--track-display); margin-top: var(--s-9); }
 
-/* ==========================================================================
-   MOTION. Final states are the CSS default, so no-JS, crawlers and
-   reduced-motion get the finished page.
-   ========================================================================== */
 @media (prefers-reduced-motion: no-preference) {
   .js:not(.played) .wm .l { opacity: 0; }
   .play .wm .l { animation: rise 650ms var(--ease-rise) both;
@@ -924,23 +558,11 @@ a[href^="tel:"] { white-space: nowrap; }
     animation-delay: calc(200ms + var(--r) * 40ms); }
   @keyframes fade-in { to { opacity: 1; } }
 
-  /* transform only, and NO opacity. This block holds p.hero-sub, which is the
-     largest contentful paint on all 3 homepages, so starting it invisible meant
-     Google measured the page at 3264ms against a 2500ms threshold while the
-     same text was measured at 1256ms under ?static. The element now paints at
-     first paint and slides up from there. transform does not shift layout, so
-     CLS stays 0, and the wordmark keeps its own fade because ?static proves the
-     wordmark is not the largest element and cannot take LCP back. */
   .js:not(.played) .hero-rest { transform: translateY(12px); }
-  /* was 900ms. The last wordmark letter starts rising at 580ms and the climb
-     finishes at 1230ms, so the copy used to land AFTER it, 1350ms past play,
-     and play itself waits on document.fonts.ready or an 800ms cap. The form
-     beside it has no entrance at all: a conversion element must never be the
-     thing that has not arrived yet. */
+
   .play .hero-rest { animation: rest-in 450ms var(--ease-reveal) 400ms both; }
   @keyframes rest-in { to { transform: none; } }
 
-  /* the line above it is a fact somebody has to keep true, so it breathes */
   .status .dot { animation: dot-pulse 2.4s var(--ease-reveal) infinite; }
   @keyframes dot-pulse { 0%, 100% { opacity: 1 } 50% { opacity: 0.35 } }
 
@@ -948,11 +570,6 @@ a[href^="tel:"] { white-space: nowrap; }
     transition: opacity 0.45s var(--ease-reveal), transform 0.45s var(--ease-reveal); }
   .js [data-reveal].in-view { opacity: 1; transform: none; }
 
-  /* A group hides its CHILDREN and reveals them on a stagger main.js sets as
-     a per-child transition-delay. The container itself never moves: sliding a
-     whole <ul> and its rows at once reads as the page lurching, sliding the
-     rows in sequence reads as the page arriving. Same 0.45s, same ease, so a
-     group and a lone [data-reveal] are one vocabulary. */
   .js [data-reveal-group] > * { opacity: 0; transform: translateY(14px);
     transition: opacity 0.45s var(--ease-reveal), transform 0.45s var(--ease-reveal); }
   .js [data-reveal-group].in-view > * { opacity: 1; transform: none; }
@@ -966,51 +583,22 @@ a[href^="tel:"] { white-space: nowrap; }
   }
 }
 
-/* ==========================================================================
-   RESPONSIVE
-   ========================================================================== */
 @media (max-width: 999px) {
-  /* The row carries 3 groups now, and Albanian is the longest of the 3
-     languages in all of them: "Prova Shërbime Shkrime Studio", the switcher,
-     and "Nis një projekt". At 32px gaps that measured 724px against a 720px
-     viewport, a 4px horizontal scroll at the one width where the phone menu
-     has not taken over yet. The GAP is what gives. Not the type size, which is
-     already the smallest on the site, and not the words, which are the nav.
 
-     16px is what the row below 720 already uses, and the groups do not close
-     up with it: they are separated by a hairline and its own 24 and 32px of
-     padding, not by the gap. Measured at 720, the tightest width the row is
-     ever asked to hold everything at: Albanian is the longest of the 3 in all
-     3 groups and clears it with 32px to spare. */
   .head-nav { gap: var(--s-4); }
   .head-nav > .head-lang { padding-left: var(--s-5); gap: var(--s-3); }
   .prose, .studio-prose { grid-column: 1 / 13; }
   .side { grid-column: 1 / 13; position: static; margin-top: var(--s-8); }
-  /* Below 1000 the sidebar stops being sticky and lands under the article, so
-     an index you reach by scrolling past everything it indexes is furniture.
-     It is hidden rather than moved: .side is a single grid item, so a
-     grid-row on it would drag the other 3 blocks above the prose with it. */
+
   .side-toc { display: none; }
   .case-grid, .post-row { grid-template-columns: 1fr; }
   .post-row > div + div { margin-top: var(--s-4); }
   .foot-index { grid-template-columns: repeat(2, 1fr); }
-  /* the form goes under the copy rather than beside it, and gets the red rule
-     across the full measure. It stays above the fold's second screen, which is
-     the whole point of it being in the hero. */
+
   .hero-split { grid-template-columns: 1fr; row-gap: var(--s-8); }
-  /* Stacked, the form stops being a column and inherits the whole measure: at
-     768 that gave it 691px-wide inputs, so "Your name" was a field you could
-     have written a paragraph in. A form needs a measure for the same reason
-     prose does. */
+
   .hero-af { max-width: 30rem; }
 
-  /* Tighter, because it is stacked.
-     Beside the copy the form is a column and reads as one. Under the copy it
-     measured 731px against an 844px viewport, 0.87 of a screen, which made the
-     hero 1665px on a phone: 2 full screens before the proof section starts.
-
-     What changes is the rhythm BETWEEN the controls, never the controls. The
-     input stays above 44px because that is the target a thumb needs. */
   .hero-split { row-gap: var(--s-6); }
   .hero-af .field { margin-top: var(--s-3); }
   .hero-af .field label { margin-bottom: 4px; }
@@ -1022,58 +610,35 @@ a[href^="tel:"] { white-space: nowrap; }
 }
 
 @media (max-width: 719px) {
-  /* The band stacks: a 16ch heading and a dial side by side on a phone leaves
-     the heading 2 words wide. The clock goes under the actions and shrinks,
-     because here it is a full-width row of its own rather than the thing
-     filling an empty half. */
+
   .band-top { grid-template-columns: 1fr; gap: var(--s-6);
     justify-items: start; }
   .foot-clock { width: 96px; }
   .svc-list a { grid-template-columns: 1fr; gap: var(--s-4); }
-  /* .wrap is 5vw a side here, so the desktop -16px offset puts the active
-     rule 4px off the screen edge, where it reads as a browser artefact
-     rather than as a mark on the row. -10 splits the gutter and belongs to
-     the row again. Measured at 360 and 390: no horizontal overflow either way. */
+
   .svc-list li::before { left: -10px; }
   .stat-strip { gap: var(--s-5); }
   .hero-wrap::before, .hero-wrap::after { display: none; }
   .serp i { right: 0; }
   .serp i::after { content: none; }
   .head-nav { gap: var(--s-4); }
-  /* '>' and NOT a descendant selector: the phone menu's copies of these four
-     links live inside .menu-panel, and a descendant selector here hides them
-     too, which is a menu that opens onto nothing. Gate check 33 fails the
-     build if this stops being a child combinator. */
+
   .head-nav > a:not(.head-cta) { display: none; }
-  /* the row copy of the switcher goes with them, and the copy inside
-     .menu-panel is what a phone reaches. Same '>' for the same reason. */
+
   .head-nav > .head-lang { display: none; }
   .menu { display: block; }
-  /* the CTA is the only item left in the row here, so it has nothing to be
-     divided from and the hairline would read as a stray mark */
+
   .head-cta { margin-left: 0; padding-left: 0; border-left: 0; }
   .foot-index { grid-template-columns: 1fr; }
   .foot-meta { flex-direction: column; }
   .band-actions { flex-direction: column; gap: var(--s-5); }
 }
 
-/* ==========================================================================
-   THE ASK, THE CHECK, AND THE WHATSAPP BUTTON
-   Four deliberate layout idioms on the homepage and no more: the 7/5 row, the
-   who split's empty column, the one wide service row, and a red rule down a
-   left edge. Two of them are now used twice: the 7/5 carries the hero split
-   and the ask row, and the red rule marks the check block and the hero's
-   audit form. One idiom used twice is a system. A FIFTH idiom is still the
-   line, and it would still make the page a demo reel.
-   ========================================================================== */
-
-/* the hero byline: small type on a hairline, so the hero has three weights */
 .hero-who { margin-top: var(--s-6); padding-top: var(--s-4);
   border-top: 1px solid var(--rule); max-width: 62ch;
   font-size: var(--fs-small); color: var(--slate); text-wrap: pretty; }
 .hero-who strong { color: var(--ink); font-weight: 700; }
 
-/* the free way to check the claim, promoted out of 15px slate */
 .check { margin-top: var(--s-7); border-left: 2px solid var(--red);
   padding: var(--s-2) 0 var(--s-2) var(--s-5); max-width: 54ch; }
 .check p { font-family: var(--font-display); font-weight: 500;
@@ -1082,10 +647,8 @@ a[href^="tel:"] { white-space: nowrap; }
 .check .taken { font-family: var(--font-body); font-size: var(--fs-small);
   color: var(--slate); margin-top: var(--s-3); letter-spacing: 0; }
 
-/* the chart is the widest element on the page */
 .gsc { max-width: none; }
 
-/* the ask: one question, one button, then the businesses themselves */
 .ask { border-top: 2px solid var(--ink); padding-block: var(--pad-major); }
 .ask-row { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
   column-gap: var(--s-9); align-items: end; }
@@ -1101,35 +664,18 @@ a[href^="tel:"] { white-space: nowrap; }
   transition: background 160ms ease, color 160ms ease; }
 .btn:hover { background: var(--ink); color: var(--paper); }
 .btn .arrow { color: currentColor; }
-/* the global ring is 2px ink at 2px offset, which lands against a 2px ink
-   border and is indistinguishable from it */
+
 .btn:focus-visible, button.btn:focus-visible { outline-offset: 4px; }
 
-/* -- the client marks ------------------------------------------------------
-   Logos drawn by four different people in four different colours. Each part is
-   a mask painted with currentColor, so the row arrives as one set and goes red
-   together on hover. Widths are the true aspect at the chosen height, so
-   nothing is squashed; heights differ because cap heights do.
-
-   justify-content is flex-start, NOT space-between. space-between spreads a
-   wrapped line to the container edges, which threw IGLISI and VICTORIA 523px
-   apart at 814 wide and read as a missing logo.
-
-   Adding a business is one file and one rule. Gate check 18 enforces it.     */
 .marks { --mgap: var(--s-8);
   list-style: none; margin: var(--s-9) 0 0; padding: var(--s-8) 0 0;
   border-top: 1px solid var(--edge); display: flex; flex-wrap: wrap;
   align-items: center; justify-content: flex-start; gap: var(--s-4) var(--mgap); }
-/* Below the width where all four fit on one line, go 2 per row rather than
-   letting the wrap strand the last one on a line of its own. Measured: four
-   fit from 1063px up, so 1079 is the last width that needs this. */
+
 @media (max-width: 1079px) {
   .marks > li { flex: 0 0 calc(50% - var(--mgap) / 2); }
 }
-/* These were 12.3px tall at 390: four links to real businesses with no
-   vertical hit area at all. WCAG 2.5.8 wants 24. The padding comes out of the
-   row gap above, so the rendered row height is unchanged and the hand-tuned
-   two-per-row breakpoints still hold. */
+
 .mark-link { display: flex; align-items: center; gap: 8px;
   padding-block: var(--s-3);
   color: var(--ink); text-decoration: none; transition: color 160ms ease; }
@@ -1147,91 +693,42 @@ a[href^="tel:"] { white-space: nowrap; }
                           --mw: 204px; --mh: 22px; }
 .mark-intimo-bruna      { --mark: url("/assets/logo/clients/intimo-bruna.svg");
                           --mw: 200px; --mh: 26px; }
-/* two parts: the symbol says nothing, so it gets its own name beside it */
+
 .mark-pro-affy          { --mark: url("/assets/logo/clients/pro-affy.png");
                           --mw: 28px;  --mh: 28px; }
 .mark-pro-affy-word     { --mark: url("/assets/logo/clients/pro-affy-word.svg");
                           --mw: 108px; --mh: 28px; }
 
-/* With no mask support an unmasked .mark is a solid ink block, which is worse
-   than nothing. Drop it and let the name that is already in the link show. */
 @supports not ((-webkit-mask-image: url("/favicon.svg")) or (mask-image: url("/favicon.svg"))) {
   .mark { display: none; }
   .mark-link .sr-only { position: static; width: auto; height: auto; margin: 0;
     overflow: visible; clip: auto; font-weight: 700; }
 }
 
-/* The claim. One sentence at display size and one underneath, because a
-   position you have to explain is not a position. It was 2 columns of
-   supporting detail once and read as an argument being made rather than a
-   fact being stated. */
-/* -- being new ------------------------------------------------------------- */
-/* Directly under the 4 client logos, because that is where a reader counts
-   them and thinks "only four". It answers with prose rather than another
-   exhibit, so it takes --pad-section and a 1px rule: the section above it
-   already owns the 2px ink border and the major padding, and two shouts in a
-   row is neither of them being heard.
-
-   The measure matches .proof-body exactly. Both are the same kind of block --
-   an argument in flowing text under a heading -- and giving them different
-   line lengths would be two answers to one question. */
 .open { padding-block: 0; }
 .open-body > p { max-width: 62ch; margin-bottom: var(--s-5); }
 .open-lead { font-size: var(--fs-lead); }
-/* No margin-top here on purpose: .eyebrow's own margin-bottom is larger and
-   wins the collapse, so one adds nothing and only invites somebody to "fix"
-   the spacing in two places. Measured against .proof: eyebrow to h2 is 24px in
-   both, h2 to lead is 0 in both. */
+
 .open-body h2 { max-width: 24ch; }
 
-/* The ownership promise, in .check's clothes and for .check's reason: a red
-   left rule on this site means "this is the load-bearing claim, and you can
-   test it". It is the one sentence here that promises something about the
-   world rather than about the page, which is exactly what a reader hesitating
-   over a studio this size is actually weighing. Gate check 52 keeps it present
-   in all 3 languages on both pages that make it. */
 .open-own { margin-top: var(--s-7); border-left: 2px solid var(--red);
   padding: var(--s-2) 0 var(--s-2) var(--s-5); max-width: 54ch;
   font-size: var(--fs-lead); text-wrap: pretty; }
 .open-own strong { font-weight: 700; }
 
-/* --pad-major fired 4 times consecutively on the homepage, against a token
-   file whose own comment says "three rhythm weights, not one". This is the
-   connective sentence between the proof and the refusal, not a third exhibit,
-   so it is the one section that can step down without losing status. */
 .place { border-top: 1px solid var(--edge); padding-block: var(--pad-section); }
 .place-say { font-size: clamp(2.25rem, 4.6vw, 3.75rem); line-height: 1.04;
   max-width: 22ch; }
 .place-more { margin-top: var(--s-6); max-width: 50ch; font-size: var(--fs-lead);
   text-wrap: pretty; }
 
-/* who: asymmetric, column 7 deliberately empty, the refusal is the headline */
 .who-say { grid-column: 1 / 7; }
 .who-more { grid-column: 8 / 13; align-self: end; }
 .who-more p { font-size: var(--fs-small); max-width: 40ch; }
 
-/* .mail no longer appears in the band. Rule 20 is one CTA per page and the
-   audit link takes that slot rather than joining it, so the address and
-   WhatsApp sit together in .band-alt as the alternates they now are. */
-
-/* -- the free audit form ---------------------------------------------------
-   The one place on the site that takes something rather than says something.
-
-   Two submit paths. Without JavaScript it is a native POST and Web3Forms sends
-   the visitor back to /start/#sent, where :target alone reveals the
-   confirmation: no script runs and the fallback still works, which is the one
-   thing every WhatsApp form in this workspace gets wrong. With JavaScript,
-   js/main.js intercepts and swaps in place.
-
-   Nothing here uses an inline style attribute, because style-src is 'self'.  */
 .audit { margin-bottom: var(--s-9); }
 .af { margin-top: var(--s-7); }
 
-/* The honeypot. display:none, NOT off-screen: an off-screen honeypot with a
-   label is reachable in a screen reader's browse mode, and a blind visitor who
-   ticks it gets their lead silently binned while the page says "Sent". This
-   takes it out of the accessibility tree, the tab order and axe's label rule
-   at once, and it is what Web3Forms' own documentation uses. */
 .af-hp { display: none; }
 
 .af-pair { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-5); }
@@ -1240,55 +737,37 @@ a[href^="tel:"] { white-space: nowrap; }
   margin-bottom: var(--s-2); }
 .field-opt { font-weight: 400; color: var(--slate); }
 
-/* "I don't have a website yet": a checkbox, so it is the one field in the form
-   that reads left to right. .field stacks label over input, which is right for
-   something you type into and wrong for a box you tick, so the two rules below
-   undo exactly that and nothing else. The 44px min-height is the tap target,
-   not decoration: the label is the only thing worth hitting on a phone. */
 .field-check { display: flex; flex-wrap: wrap; align-items: center;
   gap: 0 var(--s-3); margin-top: var(--s-4); }
-/* .field.field-check, not .field-check: `.field input { width: 100% }` lives
-   BELOW this block and matches with the same specificity, so source order was
-   deciding it and the box came out 387px wide, full bleed, with its label
-   pushed onto the next line. Two classes outrank one wherever it sits. */
+
 .field.field-check input { width: auto; flex: none; margin: 0;
   inline-size: 20px; block-size: 20px; accent-color: var(--red); }
-/* 44px on the LABEL, not on the row: the row grows once the hint wraps under
-   it, and a tap target measured on the row would then be reported as met while
-   the thing you actually press stayed 20px tall. */
+
 .field.field-check label { display: inline-flex; align-items: center; min-height: 44px;
   margin: 0; font-weight: 400; color: var(--ink); cursor: pointer; }
-/* flex-basis rather than a block: it has to break the row it shares with the
-   box and the label, and it is the only child that should. */
+
 .field.field-check .field-hint { flex-basis: 100%; margin: 0; }
-/* Disabled by the checkbox, not by the markup, so it must still read as text
-   somebody chose to switch off rather than as a field that failed. */
+
 .field input:disabled { color: var(--slate); background: var(--paper-2);
   border-color: var(--rule); cursor: not-allowed; }
-/* --rule on --paper is 1.22:1 and WCAG 1.4.11 wants 3:1 for the boundary of
-   a control. --slate is 5.56:1 and is already in the palette, so a box you can
-   type into finally looks like one. */
+
 .field input { width: 100%; font: inherit; font-size: var(--fs-body);
   color: var(--ink); background: var(--paper); padding: 0.7em 0.8em;
   border: 1px solid var(--slate); border-radius: 0;
   caret-color: var(--red);
   transition: border-color 160ms ease; }
-/* the UA default is undefined and usually fails contrast. --slate is 5.56:1
-   and is already the caption colour, which is what a placeholder is. */
+
 .field input::placeholder { color: var(--slate); opacity: 1; }
-/* was --slate, which is the default border at line above: the hover state
-   did nothing at all. */
+
 .field input:hover { border-color: var(--ink); }
 .field input:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px;
   border-color: var(--ink); }
 .field-hint { display: block; margin-top: var(--s-2);
   font-size: var(--fs-small); color: var(--slate); }
-/* --red-dk, not --red: this is 15px body text and needs 4.5:1. Colour is
-   never the only signal; the sentence underneath is. */
+
 .field-err { display: none; margin-top: var(--s-2); font-weight: 700;
   font-size: var(--fs-small); color: var(--red-dk); }
 
-/* nothing turns red before the visitor has tried to send */
 .af.was-validated :invalid ~ .field-err { display: block; }
 .af.was-validated :invalid { border-color: var(--red-dk); }
 
@@ -1297,9 +776,6 @@ button.btn { font-family: inherit; background: none; cursor: pointer; }
 button.btn:disabled { opacity: 0.55; cursor: default; }
 button.btn:disabled:hover { background: none; color: var(--ink); }
 
-/* One line is always reserved, so the status can appear without pushing the
-   page around. While the button is disabled and focus has fallen to the body,
-   this is the only thing a screen reader hears. */
 .af-say { min-height: 1.6em; margin: var(--s-4) 0 0; font-size: var(--fs-small);
   color: var(--slate); max-width: 54ch; }
 .af-say.is-err { color: var(--red-dk); font-weight: 700; }
@@ -1316,27 +792,18 @@ button.btn:disabled:hover { background: none; color: var(--ink); }
   font-size: var(--fs-h2); line-height: 1.08;
   letter-spacing: var(--track-display); max-width: 18ch; }
 .af-done p { margin-top: var(--s-4); max-width: 54ch; text-wrap: pretty; }
-/* :target is the no-JS reveal, .is-sent is the scripted one. The
-   confirmation sits BEFORE the form in the source, which is the only reason
-   this can be a plain sibling combinator rather than :has(): universal
-   support, and no fallback state where both show at once. */
+
 .af-done:target,       .audit.is-sent .af-done { display: block; }
 .af-done:target ~ .af, .audit.is-sent .af      { display: none; }
 .af-done:focus { outline: none; }
 .af-done:focus-visible { outline: 2px solid var(--ink); outline-offset: 6px; }
 
-/* the band's primary action, inverted against the ink */
 .band-cta { display: inline-flex; align-items: center; font-weight: 700;
   font-size: var(--fs-lead); line-height: 1; text-decoration: none;
   padding: 0.85em 1.3em; background: var(--paper); color: var(--ink);
   transition: background 160ms ease, color 160ms ease; }
 .band-cta:hover { background: var(--red); color: var(--paper); }
 
-/* -- floating WhatsApp ------------------------------------------------------
-   Built from the client sites: Victoria's inline SVG and focus ring, Intimo
-   Bruna's safe-area insets, and a static anchor so it does not depend on JS
-   to exist. z-index sits under the sticky header (5) is wrong: it must clear
-   page content but never the nav, so 4 with the header at 5. */
 .wa { position: fixed; z-index: 4;
   right: max(20px, env(safe-area-inset-right));
   bottom: max(20px, env(safe-area-inset-bottom));
@@ -1355,8 +822,7 @@ button.btn:disabled:hover { background: none; color: var(--ink); }
   .wa { width: 50px; height: 50px; }
   .wa svg { width: 26px; height: 26px; }
 }
-/* landscape phones: none of the client sites handle this, and the button
-   lands on top of form controls */
+
 @media (max-height: 480px) {
   .wa { width: 44px; height: 44px; bottom: max(12px, env(safe-area-inset-bottom)); }
   .wa svg { width: 22px; height: 22px; }
@@ -1374,26 +840,10 @@ button.btn:disabled:hover { background: none; color: var(--ink); }
   .marks { --mscale: 0.72; --mgap: var(--s-6); }
   .af-pair { grid-template-columns: 1fr; gap: 0; }
 
-  /* 16px, not 18: iOS zooms the whole page when a focused input is smaller
-     than 16px, and a zoomed page is a worse bug than a tall form. This is the
-     only phone-specific rule the form needs; the rest of its rhythm belongs to
-     being stacked, which starts 280px earlier. */
   .hero-af .field input { font-size: 1rem; }
   .hero { padding-bottom: var(--pad-section); }
   .af-done { padding-left: var(--s-4); }
 
-  /* The question block, tightened for a thumb. Measured at 390: the section
-     was 1165px, 1.4 screens of scrolling for 5 questions, and 240px of that
-     was item padding alone. The 96px above it is a deliberate register change
-     on a wide page (see .faq) and it survives here at 64, where the reader has
-     no horizontal separation to read the change from and every pixel is a
-     scroll. Answers keep 18px: a phone is where they are actually read, and
-     shrinking body text to win back height is the wrong trade. */
-  /* The band's contact row is the only place on a phone that carries all 3
-     ways of reaching this studio, and every one of them was a 16px tall target.
-     inline-block so the padding actually enlarges the hit area rather than just
-     overflowing the line box, 4px a side for 24px, which is the WCAG minimum.
-     The row looks the same; it is the invisible half that changes. */
   .band-alt a { display: inline-block; padding-block: 4px; }
 
   .faq { margin-top: var(--s-8); }
@@ -1401,41 +851,24 @@ button.btn:disabled:hover { background: none; color: var(--ink); }
   .faq-item { padding-block: var(--s-4); }
   .faq .faq-q { margin-bottom: var(--s-2); }
 }
-/* the widest mark is 15.7:1, so a narrow phone needs it small or it overflows */
+
 @media (max-width: 419px) {
   .marks { --mscale: 0.56; }
 }
 
-
-/* ==========================================================================
-   PRINT
-   This studio sends PDFs, so its own pages should survive being one. Last in
-   the file, so it wins on source order without a single !important.
-   ========================================================================== */
 @media print {
-  /* A green circle on every printed page is the worst thing here, and a nav
-     that cannot be clicked is the second. */
-  /* The clock joins them: frozen at whatever second somebody hit print, on
-     paper that will be read later, it is the one element here that is
-     guaranteed to be telling the wrong time. */
+
   .wa, .site-head, .skip, .foot-index, .menu, .af, .side-toc,
   .foot-clock { display: none; }
 
-  /* The ink band loses its background. A full-bleed #13161C rectangle across
-     a sheet of paper is toner nobody consented to. */
   .band { background: none; color: var(--ink); margin-top: var(--s-8);
     padding-block: var(--s-6) 0; }
   .band-note, .band-alt, .band-alt a, .foot-meta { color: var(--slate); }
   .band-cta { color: var(--ink); border: 0; padding: 0;
     border-bottom: 1px solid var(--ink); }
 
-  /* The form goes but its alternatives stay: on paper the address and the
-     number are the only part anybody can act on. */
   .af-h, .af-lead, .af-alt { display: block; }
 
-  /* External only. Every internal href is root-relative, so this costs
-     nothing to scope, and printing URLs after internal links would turn every
-     side list into parentheses. */
   .prose a[href^="http"]::after, .band-alt a[href^="http"]::after {
     content: " (" attr(href) ")"; font-size: 0.85em; color: var(--slate); }
 
@@ -1444,16 +877,6 @@ button.btn:disabled:hover { background: none; color: var(--ink); }
   h2, h3 { break-after: avoid; }
 }
 
-/* Two charts are emitted from one series and exactly one is ever shown. The
-   phone one is a taller BOX at the same 1240 width, which is why it needs no
-   sizes of its own: every rule above is written in viewBox units against 1240
-   and applies to both unchanged.
-
-   Why a second geometry rather than the same one scaled: at 350px the landscape
-   chart renders 112px tall and gives the clicks curve 61px of it, so a quarter's
-   climb from nothing to 741 was being argued in 61 vertical pixels. The fix is
-   not preserveAspectRatio="none": that changes the slope, which is the thing the
-   comment above the chart already refuses to do. */
 .chart-tall { display: none; }
 
 @media (max-width: 720px) {
@@ -1461,10 +884,5 @@ button.btn:disabled:hover { background: none; color: var(--ink); }
   .chart-tall { display: block; }
 }
 
-/* The h1's readable half. The wordmark beside it is aria-hidden decoration, so
-   before this the h1 carried only a screen-reader copy of the brand: no service,
-   no place, nothing a search for "SEO in Durres" could match. This is the line
-   that was already the visual headline, moved into the heading that names the
-   page. Sized from .hero-say because it IS that line. */
 .hero-claim { display: block; margin-top: var(--s-8);
   font-size: clamp(1.375rem, 2.4vw, 2rem); line-height: 1.22; }
