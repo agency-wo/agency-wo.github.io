@@ -864,6 +864,11 @@ a[href^="tel:"] { white-space: nowrap; }
 .tail-inner { border-top: 2px solid var(--ink); padding-top: var(--s-6);
   display: flex; justify-content: space-between; align-items: baseline;
   gap: var(--s-6); flex-wrap: wrap; }
+/* flex-basis: .tail-inner is a space-between flex row, so without it this lands as a
+   third item on the heading's line. Muted: not a second CTA beside Read next. */
+.tail-pref { flex-basis: 100%; margin-top: var(--s-4); font-size: .8125rem; opacity: .62; }
+.tail-pref a { text-decoration: underline; text-underline-offset: 3px; }
+.tail-pref a:hover { opacity: 1; }
 .tail h2 { font-size: clamp(1.625rem, 2.6vw, 2.25rem); max-width: 20ch; }
 /* nowrap keeps the arrow on the last word, which is why it was there, and it
    also means a long post title cannot wrap: "New website, or fix the one I

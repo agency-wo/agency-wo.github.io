@@ -283,6 +283,7 @@ def post_page(p, en_p, nxt, by_slug, band, lang):
         <div class="tail-inner">
           <h2>{c.READ_NEXT}</h2>
           <a class="cta" href="{shell.localise(post_url(nxt), lang)}">{nxt["title"]} {shell.ARROW}</a>
+          <p class="tail-pref"><a href="https://www.google.com/preferences/source?q={shell.SITE.split("//")[1]}" target="_blank" rel="noopener">{c.PREF_SOURCE}</a></p>
         </div>
       </div>
 '''

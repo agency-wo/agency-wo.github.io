@@ -117,6 +117,7 @@ SIDE_DID = "What we did"
 # so this is the only part of it anybody ever types.
 SIDE_ON_THIS_PAGE = "On this page"
 READ_NEXT = "Read next"
+PREF_SOURCE = "Add us as a preferred source on Google"
 READ_IT = "Read it"
 # The post byline. Every BlogPosting node has claimed an author since the posts
 # shipped and no post page ever showed one, so the schema asserted a person the

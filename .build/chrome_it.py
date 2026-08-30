@@ -84,6 +84,7 @@ SRC = {
     "QUESTIONS": "1579db95",
     "READ_IT": "89d4581e",
     "READ_NEXT": "3715bfd2",
+    "PREF_SOURCE": "24e56e54",
     "REVIEW_CTA": "915ab013",
     "SERVICE_BAND_NOTE": "4a124f73",
     "SIDE_ALL_FOUR": "6c234522",
@@ -222,6 +223,7 @@ SIDE_DID = "Cosa abbiamo fatto"
 # topic rather than as a place.
 SIDE_ON_THIS_PAGE = "In questa pagina"
 READ_NEXT = "Da leggere dopo"
+PREF_SOURCE = "Aggiungici come fonte preferita su Google"
 READ_IT = "Leggilo"
 # "Di Henri Sila". Not "Da", which is the agent of a passive and would read as
 # "written by" only if a verb were in front of it; a standalone byline in

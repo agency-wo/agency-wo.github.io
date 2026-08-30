@@ -86,6 +86,7 @@ SRC = {
     "QUESTIONS": "1579db95",
     "READ_IT": "89d4581e",
     "READ_NEXT": "3715bfd2",
+    "PREF_SOURCE": "24e56e54",
     "REVIEW_CTA": "915ab013",
     "SERVICE_BAND_NOTE": "4a124f73",
     "SIDE_ALL_FOUR": "6c234522",
@@ -231,6 +232,7 @@ SIDE_DID = "Çfarë bëmë"
 # file, because an entity here would land inside an aria-labelledby one day.
 SIDE_ON_THIS_PAGE = "Në këtë faqe"
 READ_NEXT = "Lexo më pas"
+PREF_SOURCE = "Na shto si burim të preferuar në Google"
 READ_IT = "Lexoje"
 # "Nga Henri Sila". Albanian marks the author with nga, the same preposition as
 # the agent, and it is what a byline on any Albanian publication uses.
