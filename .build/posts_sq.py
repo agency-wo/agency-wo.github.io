@@ -4949,6 +4949,676 @@ POSTS = [
                   "tashmë, të tregojmë mjetin.",
         "related": [("/systems/", "Software me porosi"), ("/start/", "Një auditim falas")],
     },
+    {
+        "slug": "seo-bergamo",
+        "src": "413c4dd7",
+        "date": "2026-08-30",
+        "updated": "2026-08-30",
+        "topic": "Kërkim lokal",
+        "work": None,
+        "service": ("/seo/", "SEO dhe kërkim lokal"),
+
+        "title": "SEO në Bergamo",
+        "h1": "Bergamo nuk ia dorëzon kërkimet e veta Milanos.",
+        "summary": "Pesëdhjetë kilometra nga qyteti që thith gjithçka, dhe kërkesa rri këtu. "
+                   "Kjo ndryshon kundër kujt po luan.",
+        "standfirst": "Një aeroport, një spital, një universitet dhe një popullsi që e quan veten "
+                      "bergamaske para se lombarde.",
+        "description": "Pse Bergamo e mban kërkesën lokale që qytetet më afër Milanos e humbin, "
+                       "kundër kujt konkurron vërtet, dhe ku shkon më larg një buxhet i vogël.",
+        "og_desc": "Pesëdhjetë kilometra nga Milano, dhe kërkesa rri këtu.",
+
+        "body": [
+            ("Kërkimet mbeten brenda qytetit", [
+                "<p>Kush në Bergamo ka kaldajën e prishur shkruan zanatin dhe qytetin, ose "
+                "shkruan zanatin dhe e lë telefonin ta vërë qytetin. T'ua zgjerojë kërkimin "
+                "deri në Milano nuk i shkon ndër mend, sepse asgjë në javën e tij nuk shkon "
+                "nga ajo anë.</p>",
+                "<p>Krahasoje me një qytet të së njëjtës madhësi brenda rrethit të Milanos, "
+                "ku e njëjta pyetje rrëshqet drejt veriut dhe biznesi dy rrugë më tutje nuk "
+                "del kurrë brenda saj.</p>",
+            ]),
+            ("Do të thotë që rivalin e ke në qytet", [
+                "<p>Nuk po luan kundër agjencive të kryeqytetit. Po luan kundër firmave të "
+                "tjera të zanatit tënd këtu, dhe ato numërohen. Ajo është një ndeshje që "
+                "një buxhet i vogël e fiton vërtet, gjë që 50 kilometra më në jug nuk ndodh "
+                "gati kurrë.</p>",
+                "<p>Hap një dritare anonime, kërko zanatin tënd plus Bergamo dhe shëno kush "
+                "del. Ajo listë është konkurrenca jote e vërtetë dhe zakonisht të habit se "
+                "sa e shkurtër është.</p>",
+            ]),
+            ("Këtu profili në Google bën pjesën më të madhe", [
+                "<p>Në një qytet të kësaj madhësie blloku i hartës rri mbi gjithçka dhe e "
+                "mbyll pyetjen para se lidhjet blu të marrin radhën. Një profil i plotë, me "
+                "foto të vërteta, orare të sakta dhe vlerësime të freskëta, e mund një faqe "
+                "më të mirë të lidhur me një profil bosh.</p>",
+                "<p>Dhe pastaj rregullimi nuk kushton asgjë, prandaj nisim nga aty dhe e "
+                "themi para se dikush të firmosë ndonjë gjë.</p>",
+            ]),
+            ("Ku e gabon çmimin një agjenci nga Milano", [
+                "<p>Mendon me volumet e Milanos dhe preventivon me volumet e Milanos. "
+                "Tarifa mujore që ka kuptim kundër 40 firmave të grumbulluara në një lagje "
+                "është forma e gabuar për një qytet ku gjithë fusha hyn në një ekran.</p>",
+            ]),
+            ("Si të na gjykosh para se të angazhohesh", [
+                "<p>Kërko auditimin, lexoje, dhe shih nëse gjëja e parë për të rregulluar "
+                "kushton para. Nëse kushton, pyet pse. Në shumicën e faqeve bergamaske tri "
+                "ndërhyrjet e para janë falas dhe duam ta dish që në javën e parë.</p>",
+            ]),
+        ],
+        "faq": [
+            ("A keni seli në Bergamo?",
+             "Jo. Punojmë nga Durrësi, në Shqipëri, dhe gjithçka bëhet nga larg, në "
+             "italisht. Të qenit fizikisht afër ka pushuar së vendosuri për këtë zanat "
+             "prej disa vitesh. Vendos nëse puna është e mirë dhe nëse në fund është e "
+             "jotja."),
+            ("A keni klientë italianë tashmë?",
+             "Jo ende. Rezultatet e botuara në këtë faqe vijnë nga biznese shqiptare, "
+             "dhe preferojmë ta shkruajmë atë fjali sesa të lëmë të kuptohet një "
+             "portofol që nuk e kemi fituar. Ajo që zhvendoset është metoda, dhe numrat "
+             "që botojmë mund t'i kontrollosh."),
+            ("Pse të mos marr dikë nga Bergamo?",
+             "Nëse është më i zoti ose kushton më pak për atë që të duhet, merre. Pyete "
+             "çfarë do të rregullonte të parën dhe nëse kushton gjë. Përgjigja thotë për "
+             "një studio më shumë se çdo faqe portofoli."),
+            ("Sa kalon para se të lëvizë diçka?",
+             "Profili në Google mund të lëvizë brenda pak javësh, sepse gati të gjithë "
+             "janë plotësuar përgjysmë. Rezultatet poshtë duan më shumë, zakonisht midis "
+             "6 dhe 12 muajve, dhe kush premton më shpejt po të shet diçka tjetër."),
+            ("Nga nis kjo punë?",
+             "Nga një auditim falas i faqes që ke tashmë. Merr një PDF që thotë çfarë "
+             "punon, çfarë jo, dhe çfarë do të rregullonim të parën, me radhë. Mbetet i "
+             "yti nëse na punëson ose jo."),
+        ],
+        "payoff": "Kërko zanatin tënd plus Bergamo dhe numëro kush del. Na dërgo atë listë "
+                  "dhe të themi çfarë të ndan nga ajo.",
+        "related": [("/blog/seo-milano/", "SEO në Milano"),
+                    ("/glossary/map-listing/", "Ç'është profili në Google?")],
+    },
+    {
+        "slug": "seo-brescia",
+        "src": "27ad92e6",
+        "date": "2026-08-30",
+        "updated": "2026-08-30",
+        "topic": "Kërkim lokal",
+        "work": None,
+        "service": ("/seo/", "SEO dhe kërkim lokal"),
+
+        "title": "SEO në Brescia",
+        "h1": "Tridhjetë kërkime në muaj mund të jenë numri i duhur.",
+        "summary": "Një qytet industrial ku pothuajse gjithçka u shitet bizneseve të tjera, "
+                   "dhe trafiku është gjëja e gabuar për t'u numëruar.",
+        "standfirst": "Brescia u shet më shumë ndërmarrjeve se sa kalimtarëve. Kur ndodh kjo, "
+                      "kërkimi punon ndryshe.",
+        "description": "Pse ndjekja e trafikut e lexon keq një qytet prodhues, sa vlen vërtet një "
+                       "kërkim me pak volum në Brescia, dhe si të dallosh një muaj të mirë nga një "
+                       "i ngarkuar.",
+        "og_desc": "Një qytet industrial ku trafiku është gjëja e gabuar për t'u numëruar.",
+
+        "body": [
+            ("Këtu paratë lëvizin mes ndërmarrjeve", [
+                "<p>Brescia rron me metalpunues, përpunime, valvola dhe firmat që i "
+                "furnizojnë. Kush kërkon një nënkontraktor nuk po shikon vitrinat. Ka një "
+                "vizatim, një tolerancë dhe një afat, dhe shkruan diçka të ngushtë e "
+                "teknike.</p>",
+                "<p>Atë kërkim ndoshta e bëjnë 30 veta në një muaj në gjithë provincën. Të "
+                "tridhjetët kanë një buxhet dhe një arsye.</p>",
+            ]),
+            ("Një raport trafiku do ta quajë muaj të dobët", [
+                "<p>Çdo panel i rendit faqet sipas vizitave, prandaj faqja që sjell 30 "
+                "blerës të kualifikuar bie poshtë artikullit që sjell 3.000 veta që nuk do "
+                "të blejnë kurrë asgjë. Studiot gjykohen mbi grafikun, prandaj ndjekin "
+                "grafikun.</p>",
+                "<p>Preferojmë të gjykohemi mbi cilat kërkesa mbërritën dhe sa vlenin, dhe "
+                "të themi kur një numër shkoi nga ana e gabuar dhe pse.</p>",
+            ]),
+            ("Shkruaj për vizatimin, jo për kategorinë", [
+                "<p>Një faqe me titull Përpunime mekanike konkurron me të gjithë. Një faqe "
+                "që thotë materialin, procesin, tolerancën që mban dhe masat që merr nuk "
+                "konkurron gati me askënd, dhe i përgjigjet pyetjes që blerësi shkroi "
+                "vërtet.</p>",
+                "<p>Ato faqe janë të mërzitshme për këdo jashtë zanatit. Brenda tij, janë "
+                "furnizuesi i parë që e kuptoi punën.</p>",
+            ]),
+            ("Çfarë të masësh në vend të vizitave", [
+                "<p>Numëro kërkesat që përmendin një pjesë ose një përpunim. Numëro ato që "
+                "erdhën me një vizatim bashkangjitur. Numëro sa u kthyen në ofertë. Tri të "
+                "tilla në një muaj janë faqe që punon, çfarëdo të thotë grafiku.</p>",
+            ]),
+            ("Kur nuk jemi studioja e duhur", [
+                "<p>Nëse i shet publikut me volum, gati gjithçka e shkruar më sipër pushon "
+                "së vlejturi dhe duhet një qasje tjetër. Thuaje në mesazhin e parë dhe të "
+                "themi me ndershmëri nëse jemi apo jo.</p>",
+            ]),
+        ],
+        "faq": [
+            ("A ka volum të mjaftueshëm sa t'ia vlejë?",
+             "Për një dyqan publiku jo, dhe do ta thoshim. Për një furnizues pyetja "
+             "është e gabuar: të duhen blerësit që ekzistojnë, jo më shumë blerës. Në "
+             "këtë zanat një klient i vetëm i ri mund të vlejë më shumë se një vit "
+             "trafik."),
+            ("Klientët tanë vijnë nga panairet dhe goja më gojë.",
+             "Gati të gjithë, dhe kjo nuk do të ndryshojë. Ndryshon çfarë ndodh pasi "
+             "dikush dëgjon emrin tënd dhe të kërkon, gjë që tani e bëjnë të gjithë. Një "
+             "faqe e hollë humb në heshtje rekomandime të fituara tashmë."),
+            ("A na duhet faqja edhe në anglisht?",
+             "Nëse eksporton po, dhe vlen më shumë se sa vlen për shumë faqe italiane. "
+             "Një blerës gjerman që kërkon në gjermanisht nuk gjen një faqe vetëm në "
+             "italisht, dhe një përkthim i bërë si duhet është punë më e vogël se vetë "
+             "faqja."),
+            ("Kush i shkruan faqet teknike?",
+             "Substancën e jep ti dhe shkrimin e bëjmë ne. Jashtë kapanonit tënd askush "
+             "nuk i njeh tolerancat e tua, dhe një faqe që i shpik e zbulon blerësi i "
+             "parë që e lexon."),
+            ("Sa kushton?",
+             "Varet nga sa faqe i duhen vërtet gamës sate, dhe kjo kuptohet vetëm duke "
+             "parë. Auditimi është falas dhe nuk sjell me vete asnjë takim."),
+        ],
+        "payoff": "Na thuaj gjënë më të ngushtë që një blerës mund të shkruajë duke pasur "
+                  "prapë nevojë për ty. Nga ajo fjali nis puna.",
+        "related": [("/blog/seo-bergamo/", "SEO në Bergamo"),
+                    ("/meta-ads/", "Meta ads")],
+    },
+    {
+        "slug": "seo-como",
+        "src": "98aa624e",
+        "date": "2026-08-30",
+        "updated": "2026-08-30",
+        "topic": "Kërkim lokal",
+        "work": None,
+        "service": ("/seo/", "SEO dhe kërkim lokal"),
+
+        "title": "SEO në Como",
+        "h1": "Në verë klientët të kërkojnë në një gjuhë që nuk e boton.",
+        "summary": "Një qytet liqeni publiku i të cilit ndryshon gjuhë dhe qëllim me stinën, "
+                   "dhe një faqe që i shërben vetëm njërit.",
+        "standfirst": "Në shkurt kërkimet janë italiane dhe praktike. Në korrik janë angleze e "
+                      "gjermane, dhe nisin nga larg.",
+        "description": "Si ndryshon gjatë vitit publiku që kërkon në Como, pse një faqe në një "
+                       "gjuhë të vetme humbet pjesën më të madhe, dhe çfarë duhet gatuar para se "
+                       "të nisë stina.",
+        "og_desc": "Në korrik klientët të kërkojnë në një gjuhë që faqja jote nuk e flet.",
+
+        "body": [
+            ("Viti në të vërtetë janë dy tregje", [
+                "<p>Jashtë stine kërkojnë ata që jetojnë këtu, në italisht, gjëra praktike. "
+                "Në stinë mbërrin një publik i dytë nga jashtë kufirit, që kërkon në "
+                "anglisht ose gjermanisht, shpesh para se të ketë dalë nga shtëpia.</p>",
+                "<p>Duan gjëra të ndryshme dhe i shkruajnë ndryshe. Një faqe e menduar për "
+                "publikun e parë është e padukshme për të dytin pikërisht në muajt që "
+                "paguajnë vitin.</p>",
+            ]),
+            ("Të përkthesh dhe të shkruash nuk janë e njëjta punë", [
+                "<p>Një faqe angleze e kaluar në një përkthyes ndihet që në rreshtin e "
+                "dytë, dhe kush po vendos ku të kalojë një javë e vë re para çdo motori. E "
+                "shkruar si duhet, në anglisht, nga dikush që lexoi çfarë ofron vërtet, ajo "
+                "faqe konkurron.</p>",
+                "<p>Kjo faqe del në tri gjuhë për të njëjtën arsye, dhe asnjëra nga të "
+                "trija nuk është kopja automatike e një tjetre.</p>",
+            ]),
+            ("Kërkojnë para se të nisen për udhëtim", [
+                "<p>Kush në Mynih po planifikon një javë në liqen kërkon në mars. Profili "
+                "yt, fotot e tua dhe çmimet e tua krahasohen ndërsa qyteti është bosh dhe "
+                "ndërsa ty të vjen më pak se kujtdo të mendosh për to.</p>",
+                "<p>Puna duhet mbaruar para stinës, që në praktikë do të thotë nisur gjatë "
+                "asaj të mëparshme.</p>",
+            ]),
+            ("Këtu fotot peshojnë më shumë se teksti", [
+                "<p>Aty ku njerëzit zgjedhin nëse të vijnë, vendosin pamjet. Fotografi të "
+                "vërteta të vendit të vërtetë, bërë me dritë të mirë, lëvizin më shumë "
+                "rezervime se çdo rishkrim, dhe nëse auditimi e gjen atë do të të themi të "
+                "shpenzosh më parë aty.</p>",
+            ]),
+            ("Çfarë nuk do të bënim këtu", [
+                "<p>Nuk do të të shisnim një gjuhë të katërt vetëm se mundet. Çdo gjuhë që "
+                "boton është një gjuhë që dikush duhet ta mbajë të përditësuar, dhe një "
+                "faqe gjermane e ngrirë është më keq se asnjë faqe gjermane.</p>",
+            ]),
+        ],
+        "faq": [
+            ("Cilat gjuhë sjellin vërtet këtu?",
+             "Italishtja për qarkullimin e banorëve, anglishtja si gjuhë e dytë e "
+             "përbashkët, gjermanishtja nga vijnë vizitorët. Radha ndryshon nga biznesi "
+             "në biznes dhe auditimi thotë cila vlen për tëndin në vend që ta "
+             "hamendësojë."),
+            ("Nuk mund të përdorim një përkthyes automatik?",
+             "Mundesh, dhe për një menu ndoshta mjafton. Për diçka mes së cilës dikush "
+             "po zgjedh lexohet si e lënë pas dore, dhe e lënë pas dore është e vetmja "
+             "ndjesi që kushton një rezervim."),
+            ("Kur duhet bërë puna?",
+             "Në vjeshtë dhe në dimër, që të jetë mbaruar dhe indeksuar para se dikush "
+             "të nisë të planifikojë. Një punë e porositur në qershor ndihmon vitin "
+             "tjetër, jo këtë."),
+            ("A punoni me hotele dhe bujtina?",
+             "Po, dhe në këtë faqe ka një shkrim më të gjatë se si portalet e zhvendosën "
+             "pikën nga ku nis ai kërkim. Shkurt: dera ka lëvizur dhe gati të gjithë po "
+             "lyejnë ende atë të vjetrën."),
+            ("A ia vlen profili në Google për ne?",
+             "Po, më shumë se në zanate të tjera, sepse mban bashkë fotot dhe vlerësimet "
+             "pikërisht aty ku njerëzit shohin të parën gjë."),
+        ],
+        "payoff": "Na thuaj cilët muaj e paguajnë vitin tënd. Të themi çfarë duhet të jetë "
+                  "gati para se të nisin.",
+        "related": [("/blog/seo-varese/", "SEO në Varese"),
+                    ("/glossary/seo/", "Ç'është SEO?")],
+    },
+    {
+        "slug": "seo-varese",
+        "src": "1476f870",
+        "date": "2026-08-30",
+        "updated": "2026-08-30",
+        "topic": "Kërkim lokal",
+        "work": None,
+        "service": ("/seo/", "SEO dhe kërkim lokal"),
+
+        "title": "SEO në Varese",
+        "h1": "Klienti yt kërkon nga ku punon, jo nga ku banon.",
+        "summary": "Një provincë udhëtarësh ku telefoni që bën pyetjen rri gjetkë gjithë "
+                   "ditën, dhe afër meje bie në vendin e gabuar.",
+        "standfirst": "Dhjetëra mijëra veta dalin nga Varese çdo mëngjes dhe kërkojnë gjëra "
+                      "ndërsa janë larg.",
+        "description": "Pse kërkimi i lidhur me vendndodhjen e gabon shenjën në një provincë "
+                       "udhëtarësh, çfarë u ndodh kërkimeve afër meje, dhe si të gjendesh "
+                       "gjithsesi.",
+        "og_desc": "Afër meje përgjigjet nga ku rri telefoni, jo nga ku jeton klienti.",
+
+        "body": [
+            ("Afër meje do të thotë afër telefonit", [
+                "<p>Një motor i përgjigjet një pyetjeje vendi nga aty ku ndodhet pajisja. "
+                "Për dikë që jeton në Varese dhe punon në Milano ose përtej kufirit, ai "
+                "vend është i gabuar për gati gjithë ditën, dhe biznesi yt nuk është në "
+                "përgjigjen që merr.</p>",
+                "<p>Nuk janë klientë të humbur. Janë klientë të cilëve u shfaqet dikush "
+                "tjetër ndërsa rrinë në tavolinë.</p>",
+            ]),
+            ("Prandaj qyteti duhet të jetë në fjalë", [
+                "<p>Nëse faqet e tua thonë vetëm zanatin, varesh nga telefoni për vendin, "
+                "dhe vendin do të ta vërë gabim. Faqet që përmendin komunën, komunat fqinje "
+                "dhe provincën gjenden nga dikush që kërkon 60 kilometra larg me gjithë "
+                "ndërmend të kthehet në shtëpi.</p>",
+                "<p>Është punë pa lavdi dhe është gati gjithë ndryshimi.</p>",
+            ]),
+            ("Oraret në profil po punojnë vërtet", [
+                "<p>Një udhëtar nuk kalon dot në orën dy të pasdites. Nëse profili thotë se "
+                "mbyll në pesë as nuk provon, dhe nëse ai orar është i gabuar sepse askush "
+                "nuk e ka prekur që vitin e kaluar, po nis larg pikërisht ata që mund të "
+                "mbërrinin.</p>",
+                "<p>E shtuna, mbrëmja vonë dhe fakti nëse u përgjigjesh mesazheve jashtë "
+                "orarit vendosin këtu më shumë se gjetkë.</p>",
+            ]),
+            ("Kufiri shton një qëllim të dytë", [
+                "<p>Një pjesë e kësaj province punon në Zvicër dhe fiton atje. Sa është e "
+                "gatshme të paguajë, dhe sa rrugë bën për të, nuk është ajo që parashikon "
+                "një model i ndërtuar mbi mesataret italiane.</p>",
+            ]),
+            ("Çfarë do të shihnim të parën", [
+                "<p>Nëse oraret e tua janë të vërteta, nëse emrat e komunave dalin diku në "
+                "tekstin e faqeve, dhe nëse dikush mund të të shkruajë jashtë orarit e të "
+                "marrë përgjigje. Asnjëra nga të trija nuk kushton asgjë.</p>",
+            ]),
+        ],
+        "faq": [
+            ("Si e marr vesh nëse problemi është ky?",
+             "Kërko zanatin tënd plus komunën nga një telefon ndërsa je gjetkë, dhe shih "
+             "nëse del. Gati të gjithë kanë kërkuar vetëm nga brenda dyqanit të tyre, ku "
+             "rezultati duket gjithmonë në rregull."),
+            ("A duhet të synoj edhe Milanon?",
+             "Zakonisht jo. Do të konkurroje me të gjithë në një treg shumë më të madh "
+             "për njerëz që nuk kanë arsye të vijnë te ti. Të fitosh provincën tënde dhe "
+             "udhëtarët e saj është ndeshje më e vogël dhe më e mirë."),
+            ("A vlen edhe për Gallarate dhe Busto Arsizio?",
+             "Po, dhe në mënyrë më të prerë, sepse aeroporti shton një skemë të tretë "
+             "mbi atë të udhëtimit. E njëjta punë, me emra të tjerë komunash brenda."),
+            ("Ne renditemi tashmë për komunën. Mjafton?",
+             "Është një nisje e mirë dhe nuk është gjithë provinca. Shih nga vijnë "
+             "vërtet klientët e tu me makinë, pastaj kontrollo nëse ato vende dalin diku "
+             "në faqen tënde."),
+            ("Çfarë mbulon auditimi falas?",
+             "Çfarë bën mirë faqja, ku janë boshllëqet, dhe çfarë do të rregullonim të "
+             "parën, me radhë. Vjen si PDF dhe për ta marrë nuk duhet asnjë takim."),
+        ],
+        "payoff": "Kërkohu nga zyra jote në një qytet tjetër dhe shih çfarë kthehet. Na dërgo "
+                  "pamjen e ekranit.",
+        "related": [("/blog/seo-pavia/", "SEO në Pavia"),
+                    ("/glossary/ranking/", "Ç'është renditja?")],
+    },
+    {
+        "slug": "what-seo-costs-in-italy",
+        "src": "1803d944",
+        "date": "2026-08-30",
+        "updated": "2026-08-30",
+        "topic": "Kërkim lokal",
+        "work": None,
+        "service": ("/seo/", "SEO dhe kërkim lokal"),
+
+        "title": "Sa kushton SEO në Itali",
+        "h1": "Askush nuk e jep dot një çmim të ndershëm pa parë më parë.",
+        "summary": "Çfarë e lëviz vërtet çmimin e punës për kërkimin në Itali, dhe pyetjet që "
+                   "tregojnë nëse një ofertë është menduar.",
+        "standfirst": "Katër gjëra e vendosin shifrën. Një studio që hedh një çmim pa njohur "
+                      "asnjërën prej tyre ka hamendësuar.",
+        "description": "Çfarë e përcakton koston e SEO për një biznes të vogël në Itali, si "
+                       "lexohet një ofertë, dhe çfarë duhet të të pyesë një studio para se të "
+                       "thotë ndonjë shifër.",
+        "og_desc": "Katër gjëra e vendosin shifrën, dhe një ofertë e dhënë para se t'i njohësh "
+                   "është hamendje.",
+
+        "body": [
+            ("Çfarë e lëviz vërtet shifrën", [
+                "<p>Sa faqe i duhen vërtet gamës sate. Sa konkurrencë rri tashmë mbi fjalët "
+                "që do. Nëse faqja që ke riparohet apo duhet rindërtuar. Dhe sa gjuhë "
+                "boton, sepse secila është shkrim më vete dhe një gjë më shumë për t'u "
+                "mbajtur e përditësuar.</p>",
+                "<p>Ndrysho njërën nga ato të katra dhe shifra lëviz shumë. Prandaj nuk "
+                "botojmë listë çmimesh.</p>",
+            ]),
+            ("Pse nuk shkruajmë një çmim nisjeje", [
+                "<p>Një minimum i botuar bën një nga dy gjërat. Ose është aq i ulët sa nuk "
+                "do të thotë asgjë, dhe çdo ofertë e vërtetë del sipër, ose është aq i "
+                "lartë sa largon biznese që do t'i kishim ndihmuar me pak. Në të dyja "
+                "rastet shërben për t'i shmangur bisedën.</p>",
+                "<p>Ajo që themi është se puna e parë që këshillojmë shumë shpesh është "
+                "falas, dhe themi cilat pjesë janë të tilla para se të flitet për para.</p>",
+            ]),
+            ("Si lexohet një ofertë që e ke tashmë në dorë", [
+                "<p>Pyet çfarë ndodh muajin e parë dhe çfarë ndodh të gjashtin, dhe shih "
+                "nëse përgjigjet ndryshojnë. Pyet çfarë të mbetet në fund. Pyet kush "
+                "shkruan. Që një studio të shesë me një të vjetër dhe të dorëzojë me një të "
+                "ri ndodh mjaft shpesh sa pyetja të jetë e drejtë.</p>",
+                "<p>Pastaj pyet çfarë do të bënin të parën nëse nuk paguaje asgjë. Ajo "
+                "është përgjigja që tregon më shumë.</p>",
+            ]),
+            ("Ku një ofertë italiane ndryshon nga një shqiptare", [
+                "<p>Nga konkurrenca, kryesisht. I njëjti zanat në një qytet lombard ka më "
+                "shumë rivalë të konsoliduar me faqe më të vjetra se sa ka në Durrës, "
+                "prandaj puna zgjat më shumë dhe shifra e thotë. Të bësh sikur jo do të "
+                "ishte mënyra më e shpejtë për të zhgënjyer dikë.</p>",
+            ]),
+            ("Çfarë të thotë auditimi falas para se të shpenzosh", [
+                "<p>Çfarë bën mirë faqja, ku janë boshllëqet, dhe çfarë do të riparonim të "
+                "parën, me radhë. Vjen si PDF brenda 24 orëve dhe mbetet i yti nëse punëson "
+                "dikë ose jo, edhe nëse e çon te një studio tjetër.</p>",
+            ]),
+        ],
+        "faq": [
+            ("Kushton më pak sepse nuk jeni në Itali?",
+             "Zakonisht po, dhe preferojmë ta themi qartë sesa të bëjmë sikur arsyeja "
+             "është diçka më lajkatare. Këtu kostot janë më të ulëta. Ajo që duhet të "
+             "krahasosh është puna dhe çfarë të mbetet në fund, jo kodi postar nga i "
+             "cili u bë."),
+            ("Punoni me tarifë mujore apo me projekt?",
+             "Ekzistojnë të dyja, dhe cila të leverdis varet nëse puna ka një fund. Një "
+             "rindërtim mbaron. Të konkurrosh mbi fjalët jo, sepse edhe bizneset sipër "
+             "teje vazhdojnë të punojnë."),
+            ("Çfarë më mbetet nëse ndalemi?",
+             "Domeni, kodi dhe çdo llogari, në emrin tënd që ditën e parë. Është e "
+             "vetmja marrëveshje që të lë të lirë të ikësh nga ne pa i kërkuar leje "
+             "askujt."),
+            ("A mund të nis me diçka të vogël?",
+             "Po, dhe zakonisht është radha e arsyeshme. Rregullo profilin, rregullo të "
+             "metat e dukshme të faqes, shih çfarë lëviz për ca muaj, pastaj vendos nëse "
+             "ia vlen të bësh diçka më të madhe."),
+            ("A do të më thoni nëse është më mirë të mos shpenzoj?",
+             "Po, dhe ndodh. Nëse këtë tremujor reklama të shërben më shumë se puna për "
+             "kërkimin, auditimi do ta thotë atë, edhe pse është përgjigja që na sjell "
+             "më pak."),
+        ],
+        "payoff": "Na dërgo adresën dhe fjalët për të cilat do të doje të dilje. Merr "
+                  "auditimin dhe nuk ka asnjë takim në mes.",
+        "related": [("/seo/", "SEO dhe kërkim lokal"),
+                    ("/glossary/audit/", "Ç'është një auditim?")],
+    },
+    {
+        "slug": "does-my-agency-do-ai-search",
+        "src": "fe5a4d3b",
+        "date": "2026-08-30",
+        "updated": "2026-08-30",
+        "topic": "Kërkimi me AI",
+        "work": None,
+        "service": ("/geo/", "Kërkimi me AI"),
+
+        "title": "A merret agjencia jote me kërkimin me AI?",
+        "h1": "Pyet çfarë thotë sot një asistent për biznesin tënd.",
+        "summary": "Një pyetje e vetme, dhe përgjigja tregon nëse studioja që paguan e ka vënë "
+                   "re ku ka lëvizur një pjesë e kërkimeve.",
+        "standfirst": "Nuk të duhet ta kuptosh mekanikën për ta bërë këtë pyetje. Të duhet të "
+                      "dëgjosh nëse kanë fare një përgjigje.",
+        "description": "Si ta kuptosh nëse agjencia që paguan tashmë po bën diçka për motorët e "
+                       "përgjigjeve, si tingëllon një përgjigje e vërtetë, dhe çfarë të bësh nëse "
+                       "nuk ka asnjë.",
+        "og_desc": "Një pyetje e vetme tregon nëse studioja që paguan e ka vënë re.",
+
+        "body": [
+            ("Përgjigja e shkurtër", [
+                "<p>Kërkoji agjencisë sate të të tregojë çfarë përgjigjen sot ChatGPT, "
+                "Gemini ose Perplexity kur dikush kërkon zanatin tënd në qytetin tënd. Jo "
+                "një raport. Përgjigjen e vërtetë, në ekran.</p>",
+                "<p>Nëse ta tregojnë, pyet çfarë kanë ndryshuar për ta ndikuar. Nëse nuk ia "
+                "dalin, nuk po punojnë për të, dhe ti i paguan çdo muaj ndërsa nuk "
+                "ndodh.</p>",
+                "<p>Për këtë nuk ka raport renditjeje, nuk ka hapësirë reklame dhe nuk ka "
+                "njeri që të garantojë një vend. Kush të ofron një nga ato tri gjëra po "
+                "përshkruan diçka që nuk ekziston.</p>",
+            ]),
+            ("Pse pyetja është e drejtë dhe jo armiqësore", [
+                "<p>Një pjesë e kërkimeve që nisnin nga Google tani nis nga një asistent, "
+                "dhe përgjigja përmend një grusht biznesesh në vend të dhjetëve. Të jesh "
+                "brenda ose jashtë është hendek më i gjerë se sa ka qenë kurrë ai mes "
+                "vendit të tretë dhe të katërt.</p>",
+                "<p>Një agjenci që nuk ka parë nuk është domosdoshmërisht e keqe. Është "
+                "prapa në një pjesë të zanatit, dhe ti ke të drejtë të pyesësh kur "
+                "ndryshon.</p>",
+            ]),
+            ("Si tingëllon një përgjigje e vërtetë", [
+                "<p>Do të flasin për t'u përshkruar njësoj kudo ku një makinë mund të "
+                "lexojë për ty, për t'iu përgjigjur pyetjeve që klientët bëjnë vërtet me "
+                "fjalët e tyre, dhe për burimet mbi të cilat mbështetet një asistent në "
+                "gjuhën tënde.</p>",
+                "<p>Një përgjigje e hollë përkundrazi premton një pozitë, ose ngjit një "
+                "tarifë mujore te një numër që askush nuk ta tregon dot.</p>",
+            ]),
+            ("Pjesa që askush nuk ta shet dot", [
+                "<p>Këtu nuk blihet asgjë. Brenda përgjigjes së një asistenti nuk ka "
+                "formular regjistrimi as hapësirë me pagesë, prandaj pozita fitohet ose "
+                "mungon. Pret nga të dyja anët: një studio e vogël që është vërtet "
+                "përgjigjja e duhur për një pyetje të ngushtë mund të përmendet krah "
+                "kompanive shumë herë më të mëdha.</p>",
+            ]),
+            ("Ku qëndron kjo studio", [
+                "<p>Jemi një person i vetëm që punon nga Durrësi, në Shqipëri, dhe boton në "
+                "shqip, italisht dhe anglisht. Shifrat e Search Console në këtë faqe vijnë "
+                "nga klientë shqiptarë, sepse ata janë ata që kemi. Një rast italian nuk e "
+                "kemi ende dhe nuk kemi interes ta lëmë të kuptohet.</p>",
+            ]),
+        ],
+        "faq": [
+            ("A mund të ma garantojë dikush daljen në ChatGPT?",
+             "Jo, dhe kush ofrohet ta bëjë është sinjali më i qartë se po të shesin "
+             "diçka tjetër. Nuk ka vend për t'u blerë as radhë për t'u futur."),
+            ("A duhet ta heq agjencinë time për këtë?",
+             "Jo vetëm për këtë. Bëje pyetjen, dëgjo përgjigjen dhe peshoje bashkë me "
+             "gjithçka tjetër që bëjnë. Një boshllëk është bisedë, jo arsye për të nisur "
+             "nga e para."),
+            ("A e zëvendëson kjo punën e zakonshme për kërkimin?",
+             "Jo. Rri mbi të dhe ndan gati të njëjtat themele. Një faqe që një asistent "
+             "e lexon qartë zakonisht është faqe që edhe një motor e lexon qartë."),
+            ("Si mund ta kontrolloj vetë?",
+             "Hap një asistent, kërkoji zanatin tënd në qytetin tënd si do të bënte një "
+             "klient, dhe lexo çfarë kthehet. Bëje ca herë, sepse përgjigjet ndryshojnë."),
+            ("Po nëse përgjigja përmend një konkurrent?",
+             "Atëherë ke mësuar diçka të saktë dhe falas. Shih çfarë boton ai konkurrent "
+             "që ti nuk e boton, sepse asistenti e ka lexuar diku."),
+        ],
+        "payoff": "Kërkoji një asistenti zanatin tënd në qytetin tënd dhe na dërgo çfarë "
+                  "përgjigjet. Të themi nga vjen ajo përgjigje.",
+        "related": [("/geo/", "Kërkimi me AI"),
+                    ("/glossary/ai-search/", "Ç'është kërkimi me AI?")],
+    },
+    {
+        "slug": "ai-search-in-italian",
+        "src": "da242d3e",
+        "date": "2026-08-30",
+        "updated": "2026-08-30",
+        "topic": "Kërkimi me AI",
+        "work": None,
+        "service": ("/geo/", "Kërkimi me AI"),
+
+        "title": "Kërkimi me AI përgjigjet në gjuhën e pyetjes",
+        "h1": "Pyet në italisht dhe merr një përgjigje me formë italiane.",
+        "summary": "Asistentët përgjigjen me material të shkruar në gjuhën e pyetjes, dhe gati "
+                   "të gjitha faqet e vogla botojnë në një.",
+        "standfirst": "E njëjta pyetje në dy gjuhë kthen dy grupe biznesesh të ndryshme. Vetëm "
+                      "njëri prej tyre mund të të përfshijë.",
+        "description": "Pse një asistent që përgjigjet në italisht mbështetet në burime italiane, "
+                       "çfarë do të thotë kjo për një biznes që boton në një gjuhë, dhe nga ku ia "
+                       "vlen të nisësh.",
+        "og_desc": "Boton në një gjuhë të vetme dhe mungon nga çdo përgjigje tjetër.",
+
+        "body": [
+            ("Përgjigja e shkurtër", [
+                "<p>Një asistent të cilit i kërkon diçka në italisht përgjigjet në pjesën "
+                "më të madhe me material të shkruar në italisht. Bëje të njëjtën pyetje në "
+                "anglisht dhe kthehet një grup tjetër biznesesh.</p>",
+                "<p>Nëse gjithçka që boton është në një gjuhë, ekziston brenda njërës prej "
+                "atyre përgjigjeve dhe mungon nga të gjitha të tjerat, sado e mirë të jetë "
+                "faqja jote.</p>",
+                "<p>Nuk është hile për t'u shfrytëzuar. Është arsye për të shkruar si duhet "
+                "në gjuhët që klientët e tu përdorin vërtet, që për shumicën e bizneseve "
+                "janë më pak nga sa druajnë dhe më shumë se një.</p>",
+            ]),
+            ("Të përkthesh dhe të shkruash nuk janë e njëjta punë", [
+                "<p>Një faqe e kaluar në një përkthyes e mbart me vete formën e fjalive të "
+                "gjuhës nga vjen. Një lexues e vë re që në rreshtin e dytë, dhe një makinë "
+                "që përmbledh biznesin tënd trashëgon gjithë ngathtësinë që ka brenda.</p>",
+                "<p>E shkruar si duhet në secilën gjuhë, nga dikush që lexoi çfarë ofron, e "
+                "njëjta faqe konkurron në të gjitha.</p>",
+            ]),
+            ("Cilat gjuhë ia vlen vërtet të botohen", [
+                "<p>Ajo që flasin klientët e tu, ajo në të cilën kërkojnë kur janë gjetkë, "
+                "dhe kaq. Çdo gjuhë e botuar është një gjuhë që dikush duhet ta mbajë të "
+                "vërtetë, dhe një faqe që përshkruan çmimet e vitit të kaluar bën më shumë "
+                "dëm në gjuhën e dytë se sa bënte në të parën.</p>",
+            ]),
+            ("Çfarë i duhet një asistenti nga një faqe e vogël", [
+                "<p>Përgjigje të thjeshta për pyetjet që bëjnë klientët, me fjalët e tyre, "
+                "në faqe që thonë kush je dhe ku. Të dhëna të njëjta kudo ku një makinë "
+                "mund t'i lexojë. Asgjë ekzotike, dhe gati e gjitha është punë që një motor "
+                "kërkimi e shpërblen gjithsesi.</p>",
+            ]),
+            ("Ku qëndron kjo studio", [
+                "<p>Kjo faqe del në tri gjuhë dhe asnjëra nuk është kopja automatike e një "
+                "tjetre, prandaj mund ta këshillojmë pa hile. Klientët numrat e të cilëve "
+                "botojmë janë shqiptarë. Puna italiane këtu është më e re dhe e themi në "
+                "vend që ta zbukurojmë.</p>",
+            ]),
+        ],
+        "faq": [
+            ("A vlen edhe për Google?",
+             "Në përgjithësi po, dhe vlen prej vitesh. Ajo që ndryshoi është se një "
+             "asistent kthen një grusht emrash në vend të një faqeje me lidhje, prandaj "
+             "të mbetesh jashtë kushton më shumë se sa kushtonte faqja e dytë."),
+            ("Më mirë një gjuhë e bërë mirë apo tri të bëra keq?",
+             "Gati gjithmonë një e bërë mirë. Tri gjuhë të mbajtura përgjysmë janë tri "
+             "mënyra për të dukur i braktisur. E dyta shtohet kur arrin ta mbash të "
+             "vërtetë."),
+            ("Cilën gjuhë duhet të botojë kush rri afër kufirit?",
+             "Atë në të cilën kërkojnë klientët që të paguajnë, dhe këtë duhet ta "
+             "kontrollosh në vend që ta marrësh të mirëqenë. Nganjëherë nuk është gjuha "
+             "që flitet në dyqan."),
+            ("A më duhet një faqe më vete për çdo gjuhë?",
+             "Jo, dhe nuk duhet. Një faqe e vetme me versione gjuhësore të bëra mirë dhe "
+             "etiketat e duhura që i lidhin është më e thjeshtë për t'u mbajtur e "
+             "vërtetë dhe lexohet si një biznes i vetëm."),
+            ("Si e provoj këtë?",
+             "Bëji një asistenti të njëjtën pyetje dy herë, një për çdo gjuhë, dhe "
+             "krahaso kush përmendet. Dallimi zakonisht duket menjëherë."),
+        ],
+        "payoff": "Pyet një asistent për zanatin tënd në dy gjuhë dhe krahaso emrat që "
+                  "kthehen. Na i dërgo të dyja.",
+        "related": [("/geo/", "Kërkimi me AI"), ("/glossary/geo/", "Ç'është GEO?")],
+    },
+    {
+        "slug": "hiring-a-studio-abroad",
+        "src": "473d1843",
+        "date": "2026-08-30",
+        "updated": "2026-08-30",
+        "topic": "Kërkim lokal",
+        "work": None,
+        "service": ("/seo/", "SEO dhe kërkim lokal"),
+
+        "title": "Të punësosh një studio në një vend tjetër",
+        "h1": "Çfarë lëshon, dhe çfarë të kthehet në këmbim.",
+        "summary": "Aritmetika e ndershme e punësimit të dikujt që nuk është pas cepit, "
+                   "përfshirë pjesët që luajnë kundër nesh.",
+        "standfirst": "Ka gjëra të vërteta që një studio larg nuk i bën dot. Ja ku janë, para se "
+                      "t'i zbulosh vetë.",
+        "description": "Çfarë humbet vërtet duke punësuar një studio në një vend tjetër, çfarë "
+                       "fiton vërtet, dhe pyetjet për t'i bërë kujtdo që punon nga larg.",
+        "og_desc": "Shkëmbimet e vërteta të punësimit të një studioje që nuk është pas cepit.",
+
+        "body": [
+            ("Çfarë nuk kemi", [
+                "<p>Nuk kemi zyrë në Itali dhe nuk kemi ende një rast italian. Nuk hyjmë "
+                "dot në dyqanin tënd, nuk fotografojmë dot mallin të martën, as nuk ulemi "
+                "dot në tavolinë me kontabilistin tënd. Nëse ndonjëra prej tyre të vlen më "
+                "shumë se vetë puna, merr dikë vendas dhe ta themi që në telefonatën e "
+                "parë.</p>",
+            ]),
+            ("Çfarë ka pushuar së kushtuari largësia", [
+                "<p>Çdo pjesë e ndërtimit dhe mirëmbajtjes së një faqeje bëhet nga larg "
+                "tani, edhe nga agjencitë vendase. Një studio në qytetin tënd të dërgon të "
+                "njëjtat skedarë me të njëjtat mjete. Afërsia mbetet rehati e vërtetë dhe "
+                "ka pushuar së qeni përparësi teknike prej disa vitesh.</p>",
+            ]),
+            ("Çfarë t'i pyesësh kujtdo që punon nga larg", [
+                "<p>Kush e shkruan italishten, dhe a është gjuha e tij. Sa i duhet një "
+                "përgjigjeje të mbërrijë dhe nga kush. Çfarë i ndodh punës nëse marrëdhënia "
+                "mbaron. Nëse mund të shohësh diçka që punon para se të angazhohesh për "
+                "diçka më të madhe.</p>",
+                "<p>Përgjigjet tona janë se italishtja shkruhet dhe nuk përkthehet, se "
+                "përgjigjemi brenda 24 orëve, se domeni dhe kodi rrinë në emrin tënd që "
+                "ditën e parë, dhe se auditimi ekziston pikërisht që ti ta gjykosh punën "
+                "para se të paguash ndonjë.</p>",
+            ]),
+            ("Provat që kemi nuk janë italiane", [
+                "<p>Shifrat e Search Console të botuara në këtë faqe janë të një dyqani "
+                "orësh në Durrës: 741 klikime dhe 71,1k herë e shfaqur në tre muaj, me "
+                "pozicion mesatar 8,6 dhe përqindje klikimesh 1%. Marrë në gusht 2026. "
+                "Pozicionet lëvizin, prandaj ajo që sheh ti sot nuk do të përputhet me "
+                "këtë.</p>",
+                "<p>I botojmë numrat e dobët krah atyre të mirë me qëllim. Pozicioni 8,6 "
+                "është fundi i faqes së parë dhe preferojmë ta shohësh sesa ta zbulosh.</p>",
+            ]),
+            ("Kur zgjedhja e duhur është thjesht ajo pranë", [
+                "<p>Nëse biznesi yt rron me njerëz që hyjnë dhe me shtrëngime duarsh, nëse "
+                "të duhet dikush fizikisht i pranishëm të fotografojë punën ndërsa ndodh, "
+                "ose nëse preferon të paguash më shumë për një fytyrë në dhomë, është "
+                "zgjedhje e ligjshme dhe nuk do të provojmë të ta ndryshojmë.</p>",
+            ]),
+        ],
+        "faq": [
+            ("Kush e bën materialisht punën?",
+             "Një person i vetëm, i njëjti me të cilin flet. Nuk ka ekip te i cili të të "
+             "kalojnë, gjë që është kufi po aq sa premtim: vë një tavan te sa klientë "
+             "ndjekim dot njëherësh."),
+            ("Italishtja shkruhet apo përkthehet?",
+             "Shkruhet. Një faqe e përkthyer tradhtohet vetë që në rreshtin e dytë dhe "
+             "klientët e tu e vënë re para Google."),
+            ("Po për faturën dhe taksat?",
+             "Faturojmë nga Shqipëria dhe kontabilisti yt e trajton si shërbim të blerë "
+             "jashtë Italisë. Është punë e zakonshme, dhe vlen një fjalë me të para se "
+             "të angazhohesh sesa pas."),
+            ("A mund të flasim në telefon?",
+             "Po, dhe në WhatsApp, që është si shkojnë gati të gjitha bisedat këtu. "
+             "Asgjë nga kjo nuk kërkon një takim për të nisur."),
+            ("Po nëse nuk funksionon?",
+             "Të mbeten domeni, kodi dhe çdo llogari, sepse ishin në emrin tënd që nga "
+             "fillimi. Nuk ka gjë për t'u kthyer ose për t'u kërkuar."),
+        ],
+        "payoff": "Na thuaj çfarë të shqetëson te punësimi nga larg. Nëse përgjigja e "
+                  "ndershme është se nuk të bëjmë punë, atë merr.",
+        "related": [("/work/iglisi-watch/", "Iglisi Watch"), ("/studio/", "Studio")],
+    },
 ]
 
 # /blog/, the index over those records. The soft wraps are placed for this text

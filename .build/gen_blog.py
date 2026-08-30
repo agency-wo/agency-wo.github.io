@@ -104,6 +104,10 @@ CITY_OF = {
     "web-design-tirana": ("Tirana", "Q19689"),
     "seo-pavia":         ("Pavia",  "Q6259"),
     "seo-milano":        ("Milano", "Q490"),
+    "seo-bergamo":       ("Bergamo", "Q628"),
+    "seo-brescia":       ("Brescia", "Q6221"),
+    "seo-como":          ("Como",    "Q1308"),
+    "seo-varese":        ("Varese",  "Q6285"),
 }
 
 

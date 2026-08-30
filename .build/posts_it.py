@@ -4990,6 +4990,685 @@ POSTS = [
                   "ti indichiamo lo strumento.",
         "related": [("/systems/", "Software su misura"), ("/start/", "Un audit gratuito")],
     },
+    {
+        "slug": "seo-bergamo",
+        "src": "413c4dd7",
+        "date": "2026-08-30",
+        "updated": "2026-08-30",
+        "topic": "Ricerca locale",
+        "work": None,
+        "service": ("/seo/", "SEO e ricerca locale"),
+
+        "title": "SEO a Bergamo",
+        "h1": "Bergamo non regala le sue ricerche a Milano.",
+        "summary": "Cinquanta chilometri dalla città che assorbe tutto, e la domanda resta "
+                   "qui. Cambia contro chi stai davvero giocando.",
+        "standfirst": "Un aeroporto, un ospedale, un'università e una popolazione che si dice "
+                      "bergamasca prima che lombarda.",
+        "description": "Perché Bergamo tiene la domanda locale che i paesi più vicini a Milano "
+                       "perdono, contro chi competi davvero, e dove un budget piccolo rende di "
+                       "più.",
+        "og_desc": "Cinquanta chilometri da Milano, e la domanda resta qui.",
+
+        "body": [
+            ("Le ricerche restano dentro la città", [
+                "<p>Chi a Bergamo ha la caldaia rotta scrive il mestiere e la città, oppure "
+                "scrive il mestiere e lascia che sia il telefono a mettere la città. "
+                "Allargare la ricerca a Milano non gli passa per la testa, perché niente "
+                "nella sua settimana punta da quella parte.</p>",
+                "<p>Prova a confrontarlo con un paese della stessa dimensione "
+                "nell'hinterland milanese, dove la stessa domanda scivola a nord e "
+                "l'attività a due strade non compare mai.</p>",
+            ]),
+            ("Quindi il rivale ce l'hai in città", [
+                "<p>Non stai giocando contro le agenzie del capoluogo. Stai giocando contro "
+                "le altre imprese del tuo mestiere qui, e si contano. Quella è una partita "
+                "che un budget piccolo può vincere davvero, cosa che 50 chilometri più a "
+                "sud non succede quasi mai.</p>",
+                "<p>Apri una finestra anonima, cerca il tuo mestiere più Bergamo e segnati "
+                "chi esce. Quella lista è la tua concorrenza vera e di solito stupisce per "
+                "quanto è corta.</p>",
+            ]),
+            ("Qui la scheda Google fa quasi tutto", [
+                "<p>In una città di queste dimensioni il blocco della mappa sta sopra tutto "
+                "e chiude la domanda prima che i link blu abbiano il loro turno. Una scheda "
+                "completa, con foto vere, orari giusti e recensioni recenti, batte un sito "
+                "migliore attaccato a una scheda vuota.</p>",
+                "<p>E poi non costa niente sistemarla, per questo partiamo da lì e lo "
+                "diciamo prima che qualcuno firmi qualcosa.</p>",
+            ]),
+            ("Dove un'agenzia di Milano sbaglia il prezzo", [
+                "<p>Ragiona sui volumi di Milano e preventiva sui volumi di Milano. Il "
+                "canone mensile che ha senso contro 40 imprese concentrate in un quartiere "
+                "è la forma sbagliata per una città dove tutto il campo sta in una "
+                "schermata.</p>",
+            ]),
+            ("Come giudicarci prima di impegnarti", [
+                "<p>Chiedi l'audit, leggilo, e guarda se la prima cosa da sistemare costa "
+                "soldi. Se costa, chiedi perché. Sulla maggior parte dei siti bergamaschi i "
+                "primi tre interventi sono gratis e preferiamo che tu lo sappia dalla prima "
+                "settimana.</p>",
+            ]),
+        ],
+        "faq": [
+            ("Avete sede a Bergamo?",
+             "No. Lavoriamo da Durazzo, in Albania, e tutto si fa a distanza, in "
+             "italiano. Essere fisicamente vicini ha smesso di decidere questo mestiere "
+             "qualche anno fa. Decide se il lavoro è buono e se alla fine è tuo."),
+            ("Avete già clienti italiani?",
+             "Non ancora. I risultati pubblicati su questo sito vengono da imprese "
+             "albanesi, e preferiamo scriverlo che lasciar intendere un portfolio che "
+             "non ci siamo guadagnati. Quello che si sposta è il metodo, e i numeri che "
+             "pubblichiamo li puoi controllare."),
+            ("Perché non prendere qualcuno di Bergamo?",
+             "Se è più bravo o costa meno per quello che ti serve, prendilo. Chiedigli "
+             "cosa sistemerebbe per primo e se costa qualcosa. La risposta dice di uno "
+             "studio più di qualsiasi pagina di portfolio."),
+            ("Quanto passa prima che si muova qualcosa?",
+             "La scheda Google può muoversi in poche settimane, perché quasi tutte sono "
+             "compilate a metà. I risultati sotto ci mettono di più, di solito fra i 6 e "
+             "i 12 mesi, e chi promette prima ti sta vendendo altro."),
+            ("Da dove si comincia?",
+             "Da un audit gratuito del sito che hai già. Ricevi un PDF che dice cosa "
+             "funziona, cosa no, e cosa sistemeremmo per primo, in ordine. Resta tuo che "
+             "ci assumi o no."),
+        ],
+        "payoff": "Cerca il tuo mestiere più Bergamo e conta chi esce. Mandaci quella lista e "
+                  "ti diciamo cosa ti separa da lei.",
+        "related": [("/blog/seo-milano/", "SEO a Milano"),
+                    ("/glossary/map-listing/", "Cos'è una scheda Google?")],
+    },
+    {
+        "slug": "seo-brescia",
+        "src": "27ad92e6",
+        "date": "2026-08-30",
+        "updated": "2026-08-30",
+        "topic": "Ricerca locale",
+        "work": None,
+        "service": ("/seo/", "SEO e ricerca locale"),
+
+        "title": "SEO a Brescia",
+        "h1": "Trenta ricerche al mese possono essere il numero giusto.",
+        "summary": "Una città industriale dove quasi tutto si vende ad altre aziende, e il "
+                   "traffico è la cosa sbagliata da contare.",
+        "standfirst": "Brescia vende ad altre imprese più che ai passanti. Quando succede, la "
+                      "ricerca funziona in un altro modo.",
+        "description": "Perché rincorrere il traffico legge male una città manifatturiera, quanto "
+                       "vale davvero una ricerca da pochi volumi, e come distinguere un buon mese "
+                       "da uno pieno.",
+        "og_desc": "Una città industriale dove il traffico è la cosa sbagliata da contare.",
+
+        "body": [
+            ("Qui i soldi si muovono fra aziende", [
+                "<p>Brescia vive di metalmeccanica, lavorazioni, valvole e delle imprese "
+                "che le riforniscono. Chi cerca un terzista non sta guardando le vetrine. "
+                "Ha un disegno, una tolleranza e una consegna, e scrive qualcosa di stretto "
+                "e tecnico.</p>",
+                "<p>Quella ricerca magari la fanno in 30 in un mese su tutta la provincia. "
+                "Tutti e 30 hanno un budget e un motivo.</p>",
+            ]),
+            ("Un report sul traffico lo chiamerà un mese storto", [
+                "<p>Ogni cruscotto ordina le pagine per visite, quindi la pagina che porta "
+                "30 compratori qualificati finisce sotto l'articolo che porta 3.000 persone "
+                "che non compreranno mai niente. Gli studi vengono giudicati sul grafico, e "
+                "quindi rincorrono il grafico.</p>",
+                "<p>Preferiamo essere giudicati su quali richieste sono arrivate e quanto "
+                "valevano, e ti diciamo quando un numero è andato dalla parte sbagliata e "
+                "perché.</p>",
+            ]),
+            ("Scrivi per il disegno, non per la categoria", [
+                "<p>Una pagina intitolata Lavorazioni meccaniche compete con tutti. Una "
+                "pagina che dice il materiale, il processo, la tolleranza che tieni e le "
+                "misure che riesci a prendere non compete quasi con nessuno, e risponde "
+                "alla domanda che il compratore ha scritto davvero.</p>",
+                "<p>Quelle pagine sono noiose per chi è fuori dal mestiere. Dentro, sono il "
+                "primo fornitore che ha capito il lavoro.</p>",
+            ]),
+            ("Cosa misurare al posto delle visite", [
+                "<p>Conta le richieste che nominano un pezzo o una lavorazione. Conta "
+                "quelle arrivate con un disegno allegato. Conta quante sono diventate un "
+                "preventivo. Tre di quelle in un mese sono un sito che funziona, qualunque "
+                "cosa dica il grafico.</p>",
+            ]),
+            ("Quando non siamo lo studio giusto", [
+                "<p>Se vendi al pubblico e a volume, quasi tutto quello scritto sopra "
+                "smette di valere e serve un altro approccio. Dillo nel primo messaggio e "
+                "ti diciamo con onestà se ci siamo o no.</p>",
+            ]),
+        ],
+        "faq": [
+            ("C'è abbastanza volume perché valga la pena?",
+             "Per un negozio al pubblico no, e lo diremmo. Per un fornitore la domanda è "
+             "sbagliata: ti servono i compratori che esistono, non più compratori. In "
+             "questo mestiere un solo cliente nuovo può contare più di un anno di "
+             "traffico."),
+            ("I nostri clienti arrivano da fiere e passaparola.",
+             "Quasi tutti, e non cambierà. Cambia cosa succede dopo che qualcuno sente "
+             "il tuo nome e ti cerca, che ormai fanno tutti. Un sito sottile perde in "
+             "silenzio segnalazioni già vinte."),
+            ("Ci serve il sito anche in inglese?",
+             "Se esporti sì, e conta più di quanto conti per molte pagine italiane. Un "
+             "compratore tedesco che cerca in tedesco non trova un sito solo in "
+             "italiano, e una traduzione fatta bene è un lavoro più piccolo del sito "
+             "stesso."),
+            ("Chi scrive le pagine tecniche?",
+             "La sostanza la dai tu e la scrittura la facciamo noi. Fuori dal tuo "
+             "capannone nessuno conosce le tue tolleranze, e una pagina che se le "
+             "inventa viene smontata dal primo compratore che la legge."),
+            ("Quanto costa?",
+             "Dipende da quante pagine serve davvero alla tua gamma, e si capisce solo "
+             "guardando. L'audit è gratuito e non porta con sé nessuna riunione."),
+        ],
+        "payoff": "Dicci la cosa più stretta che un compratore può scrivere avendo comunque "
+                  "bisogno di te. Da quella frase parte il lavoro.",
+        "related": [("/blog/seo-bergamo/", "SEO a Bergamo"),
+                    ("/meta-ads/", "Meta ads")],
+    },
+    {
+        "slug": "seo-como",
+        "src": "98aa624e",
+        "date": "2026-08-30",
+        "updated": "2026-08-30",
+        "topic": "Ricerca locale",
+        "work": None,
+        "service": ("/seo/", "SEO e ricerca locale"),
+
+        "title": "SEO a Como",
+        "h1": "D'estate i tuoi clienti cercano in una lingua che non pubblichi.",
+        "summary": "Una città sul lago il cui pubblico cambia lingua e intenzione con la "
+                   "stagione, e un sito che ne serve solo uno.",
+        "standfirst": "A febbraio le ricerche sono italiane e pratiche. A luglio sono inglesi e "
+                      "tedesche, e partono da lontano.",
+        "description": "Come cambia nell'arco dell'anno il pubblico che cerca a Como, perché un "
+                       "sito in una lingua sola ne perde la maggior parte, e cosa preparare prima "
+                       "della stagione.",
+        "og_desc": "A luglio i tuoi clienti cercano in una lingua che il tuo sito non parla.",
+
+        "body": [
+            ("L'anno in realtà sono due mercati", [
+                "<p>Fuori stagione cercano quelli che ci vivono, in italiano, cose "
+                "pratiche. In stagione arriva un secondo pubblico da fuori confine, che "
+                "cerca in inglese o in tedesco, spesso prima ancora di essere partito da "
+                "casa.</p>",
+                "<p>Vogliono cose diverse e le scrivono in modo diverso. Un sito pensato "
+                "per il primo pubblico è invisibile al secondo proprio nei mesi che pagano "
+                "l'anno.</p>",
+            ]),
+            ("Tradurre e scrivere non sono lo stesso lavoro", [
+                "<p>Una pagina inglese passata in un traduttore si sente alla seconda riga, "
+                "e chi sta decidendo dove passare una settimana se ne accorge prima di "
+                "qualsiasi motore. Scritta bene, in inglese, da chi ha letto cosa offri "
+                "davvero, quella pagina compete.</p>",
+                "<p>Questo sito esce in tre lingue per lo stesso motivo, e nessuna delle "
+                "tre è la copia automatica di un'altra.</p>",
+            ]),
+            ("Cercano prima di mettersi in viaggio", [
+                "<p>Chi a Monaco sta programmando una settimana sul lago cerca a marzo. La "
+                "tua scheda, le tue foto e i tuoi prezzi vengono confrontati mentre il "
+                "paese è vuoto e mentre tu hai meno voglia di tutti di pensarci.</p>",
+                "<p>Il lavoro deve essere finito prima della stagione, il che in pratica "
+                "vuol dire iniziato durante quella precedente.</p>",
+            ]),
+            ("Qui le foto pesano più del testo", [
+                "<p>Dove la gente sceglie se venire, decidono le immagini. Fotografie vere "
+                "del posto vero, fatte con luce decente, spostano più prenotazioni di "
+                "qualsiasi riscrittura, e se l'audit trova quello ti diremo di spendere "
+                "prima lì.</p>",
+            ]),
+            ("Cosa non faremmo qui", [
+                "<p>Non ti venderemmo una quarta lingua perché si può. Ogni lingua che "
+                "pubblichi è una lingua che qualcuno deve tenere aggiornata, e una pagina "
+                "tedesca ferma è peggio di nessuna pagina tedesca.</p>",
+            ]),
+        ],
+        "faq": [
+            ("Quali lingue rendono davvero qui?",
+             "L'italiano per il giro dei residenti, l'inglese come seconda lingua "
+             "comune, il tedesco da dove arrivano i visitatori. L'ordine cambia da "
+             "attività ad attività e l'audit dice quale vale per la tua invece di tirare "
+             "a indovinare."),
+            ("Non possiamo usare un traduttore automatico?",
+             "Puoi, e per un menu magari basta. Per qualcosa fra cui uno sta scegliendo "
+             "si legge come lasciato andare, e lasciato andare è l'unica sensazione che "
+             "costa una prenotazione."),
+            ("Quando andrebbe fatto il lavoro?",
+             "In autunno e in inverno, così è finito e indicizzato prima che qualcuno "
+             "inizi a programmare. Un lavoro commissionato a giugno aiuta l'anno dopo, "
+             "non questo."),
+            ("Lavorate con alberghi e case vacanza?",
+             "Sì, e su questo sito c'è un pezzo più lungo su come i portali hanno "
+             "spostato il punto da cui parte quella ricerca. In breve: la porta si è "
+             "spostata e quasi tutti stanno ancora verniciando quella vecchia."),
+            ("La scheda Google vale la fatica per noi?",
+             "Sì, più che in altri mestieri, perché tiene insieme le foto e le "
+             "recensioni proprio dove la gente guarda per prima cosa."),
+        ],
+        "payoff": "Dicci quali mesi pagano il tuo anno. Ti diciamo cosa deve essere pronto "
+                  "prima che inizino.",
+        "related": [("/blog/seo-varese/", "SEO a Varese"),
+                    ("/glossary/seo/", "Cos'è la SEO?")],
+    },
+    {
+        "slug": "seo-varese",
+        "src": "1476f870",
+        "date": "2026-08-30",
+        "updated": "2026-08-30",
+        "topic": "Ricerca locale",
+        "work": None,
+        "service": ("/seo/", "SEO e ricerca locale"),
+
+        "title": "SEO a Varese",
+        "h1": "Il tuo cliente cerca da dove lavora, non da dove abita.",
+        "summary": "Una provincia di pendolari dove il telefono che fa la domanda sta altrove "
+                   "tutto il giorno, e vicino a me sbaglia posto.",
+        "standfirst": "Decine di migliaia di persone escono da Varese ogni mattina e cercano cose "
+                      "mentre sono via.",
+        "description": "Perché la ricerca legata al luogo sbaglia bersaglio in una provincia di "
+                       "pendolari, cosa succede alle ricerche vicino a me, e come farsi trovare lo "
+                       "stesso.",
+        "og_desc": "Vicino a me risponde da dove sta il telefono, non da dove vive il cliente.",
+
+        "body": [
+            ("Vicino a me vuol dire vicino al telefono", [
+                "<p>Un motore risponde a una domanda di luogo da dove si trova il "
+                "dispositivo. Per chi vive a Varese e lavora a Milano o oltre confine, quel "
+                "posto è sbagliato per quasi tutta la giornata, e la tua attività non è "
+                "nella risposta che riceve.</p>",
+                "<p>Non sono clienti persi. Sono clienti a cui viene mostrato qualcun altro "
+                "mentre stanno alla scrivania.</p>",
+            ]),
+            ("Quindi la città deve stare nelle parole", [
+                "<p>Se le tue pagine dicono solo il mestiere, dipendi dal telefono per il "
+                "luogo, e il luogo te lo metterà sbagliato. Le pagine che nominano il "
+                "comune, i comuni vicini e la provincia vengono trovate da chi cerca a 60 "
+                "chilometri con tutta l'intenzione di tornare a casa.</p>",
+                "<p>È un lavoro senza gloria ed è quasi tutta la differenza.</p>",
+            ]),
+            ("Gli orari sulla scheda stanno lavorando davvero", [
+                "<p>Un pendolare non può passare alle due del pomeriggio. Se la scheda dice "
+                "che chiudi alle cinque non ci prova nemmeno, e se quell'orario è sbagliato "
+                "perché nessuno lo tocca dall'anno scorso, stai mandando via proprio chi "
+                "poteva arrivare.</p>",
+                "<p>Il sabato, la sera tardi e il fatto che tu risponda ai messaggi fuori "
+                "orario decidono qui più che altrove.</p>",
+            ]),
+            ("Il confine aggiunge una seconda intenzione", [
+                "<p>Una parte di questa provincia lavora in Svizzera e guadagna lì. Quanto "
+                "è disposta a pagare, e quanta strada fa per farlo, non è quello che "
+                "prevede un modello costruito sulle medie italiane.</p>",
+            ]),
+            ("Cosa guarderemmo per primo", [
+                "<p>Se i tuoi orari sono veri, se i nomi dei comuni compaiono da qualche "
+                "parte nel testo delle pagine, e se uno può scriverti fuori orario e "
+                "ricevere risposta. Nessuna delle tre costa niente.</p>",
+            ]),
+        ],
+        "faq": [
+            ("Come faccio a sapere se il problema e questo?",
+             "Cerca il tuo mestiere più il comune da un telefono mentre sei altrove, e "
+             "guarda se esci. Quasi tutti hanno cercato solo da dentro il proprio "
+             "negozio, dove il risultato sembra sempre a posto."),
+            ("Devo puntare anche su Milano?",
+             "Di solito no. Competeresti con tutti in un mercato molto più grande per "
+             "gente che non ha motivo di venire da te. Vincere la tua provincia e i suoi "
+             "pendolari è una partita più piccola e migliore."),
+            ("Vale anche per Gallarate e Busto Arsizio?",
+             "Sì, e in modo più netto, perché l'aeroporto aggiunge un terzo schema sopra "
+             "quello del pendolarismo. Stesso lavoro, con altri nomi di comune dentro."),
+            ("Ci posizioniamo già sul comune. Basta?",
+             "È un buon inizio e non è tutta la provincia. Guarda da dove arrivano "
+             "davvero i tuoi clienti in auto, poi controlla se quei posti compaiono da "
+             "qualche parte sul tuo sito."),
+            ("Cosa copre l'audit gratuito?",
+             "Cosa fa bene il sito, dove sono i buchi, e cosa sistemeremmo per primo, in "
+             "ordine. Arriva come PDF e per averlo non serve nessuna riunione."),
+        ],
+        "payoff": "Cercati dal tuo ufficio in un'altra città e guarda cosa torna indietro. "
+                  "Mandaci lo screenshot.",
+        "related": [("/blog/seo-pavia/", "SEO a Pavia"),
+                    ("/glossary/ranking/", "Cos'è il posizionamento?")],
+    },
+    {
+        "slug": "what-seo-costs-in-italy",
+        "src": "1803d944",
+        "date": "2026-08-30",
+        "updated": "2026-08-30",
+        "topic": "Ricerca locale",
+        "work": None,
+        "service": ("/seo/", "SEO e ricerca locale"),
+
+        "title": "Quanto costa la SEO in Italia",
+        "h1": "Nessuno può fare un prezzo onesto senza aver guardato.",
+        "summary": "Cosa sposta davvero il prezzo del lavoro sulla ricerca in Italia, e le "
+                   "domande che dicono se un preventivo è ragionato.",
+        "standfirst": "Quattro cose decidono la cifra. Uno studio che spara un prezzo senza "
+                      "conoscerne nemmeno una ha tirato a indovinare.",
+        "description": "Cosa determina il costo della SEO per una piccola impresa in Italia, come "
+                       "si legge un preventivo, e cosa dovrebbe chiederti uno studio prima di fare "
+                       "qualsiasi cifra.",
+        "og_desc": "Quattro cose decidono la cifra, e un preventivo fatto prima di conoscerle "
+                   "è una scommessa.",
+
+        "body": [
+            ("Cosa sposta davvero la cifra", [
+                "<p>Quante pagine servono davvero alla tua gamma. Quanta concorrenza è già "
+                "seduta sulle parole che vuoi. Se il sito che hai si ripara o va rifatto. E "
+                "quante lingue pubblichi, perché ognuna è un lavoro di scrittura a sé e una "
+                "cosa in più da tenere aggiornata.</p>",
+                "<p>Cambia una di quelle quattro e la cifra si muove parecchio. Per questo "
+                "non pubblichiamo un listino.</p>",
+            ]),
+            ("Perché non scriviamo un prezzo di partenza", [
+                "<p>Un minimo pubblicato fa una di due cose. O è talmente basso da non "
+                "voler dire niente, e ogni preventivo vero finisce sopra, oppure è alto "
+                "abbastanza da mandare via imprese che avremmo aiutato con poco. In tutti e "
+                "due i casi serve a evitare la conversazione.</p>",
+                "<p>Quello che diciamo è che il primo lavoro che consigliamo molto spesso è "
+                "gratis, e diciamo quali parti lo sono prima di parlare di soldi.</p>",
+            ]),
+            ("Come si legge un preventivo che hai già in mano", [
+                "<p>Chiedi cosa succede il primo mese e cosa succede il sesto, e guarda se "
+                "le risposte sono diverse. Chiedi cosa resta tuo alla fine. Chiedi chi "
+                "scrive. Che uno studio venda con un senior e consegni con un junior capita "
+                "abbastanza spesso da rendere la domanda legittima.</p>",
+                "<p>Poi chiedi cosa farebbero per primo se non pagassi niente. È quella la "
+                "risposta che dice di più.</p>",
+            ]),
+            ("Dove un preventivo italiano è diverso da uno albanese", [
+                "<p>Per la concorrenza, soprattutto. Lo stesso mestiere in una città "
+                "lombarda ha più rivali affermati con siti più vecchi di quanti ne abbia a "
+                "Durazzo, quindi il lavoro dura di più e la cifra lo dice. Far finta di no "
+                "sarebbe il modo più rapido di deludere qualcuno.</p>",
+            ]),
+            ("Cosa ti dice l'audit gratuito prima di spendere", [
+                "<p>Cosa fa bene il sito, dove sono i buchi, e cosa ripareremmo per primo, "
+                "in ordine. Arriva come PDF entro 24 ore ed è tuo che tu assuma qualcuno o "
+                "no, anche se lo porti a un altro studio.</p>",
+            ]),
+        ],
+        "faq": [
+            ("Costa meno perché non siete in Italia?",
+             "Di solito sì, e preferiamo dirlo chiaro invece di far finta che il motivo "
+             "sia qualcosa di più lusinghiero. Qui i costi sono più bassi. Quello che "
+             "devi confrontare è il lavoro e cosa resta tuo alla fine, non il codice "
+             "postale da cui è stato fatto."),
+            ("Lavorate a canone o a progetto?",
+             "Esistono tutti e due, e quale ti conviene dipende da se il lavoro ha una "
+             "fine. Un rifacimento finisce. Competere sulle parole no, perché anche le "
+             "imprese sopra di te continuano a lavorare."),
+            ("Cosa resta mio se ci fermiamo?",
+             "Il dominio, il codice e ogni account, a tuo nome dal primo giorno. È "
+             "l'unico accordo che ti lascia libero di andartene da noi senza dover "
+             "chiedere il permesso a nessuno."),
+            ("Posso iniziare da qualcosa di piccolo?",
+             "Sì, ed è di solito l'ordine sensato. Sistema la scheda, sistema i difetti "
+             "evidenti del sito, guarda cosa si muove in un paio di mesi, poi decidi se "
+             "vale la pena fare qualcosa di più grande."),
+            ("Mi direte se è meglio che non spenda niente?",
+             "Sì, e succede. Se in questo trimestre la pubblicità ti serve più del "
+             "lavoro sulla ricerca, l'audit dirà quello, anche se è la risposta che ci "
+             "fa guadagnare meno."),
+        ],
+        "payoff": "Mandaci l'indirizzo e le parole per cui vorresti comparire. Ricevi l'audit "
+                  "e non c'è nessuna riunione di mezzo.",
+        "related": [("/seo/", "SEO e ricerca locale"),
+                    ("/glossary/audit/", "Cos'è un audit?")],
+    },
+    {
+        "slug": "does-my-agency-do-ai-search",
+        "src": "fe5a4d3b",
+        "date": "2026-08-30",
+        "updated": "2026-08-30",
+        "topic": "Ricerca AI",
+        "work": None,
+        "service": ("/geo/", "Ricerca AI"),
+
+        "title": "La tua agenzia si occupa di ricerca AI?",
+        "h1": "Chiedi cosa dice oggi un assistente sulla tua attività.",
+        "summary": "Una domanda sola, e la risposta dice se lo studio che paghi si è accorto "
+                   "di dove si è spostata una parte delle ricerche.",
+        "standfirst": "Non serve capire la meccanica per fare questa domanda. Serve sentire se "
+                      "una risposta ce l'hanno.",
+        "description": "Come capire se l'agenzia che paghi già sta facendo qualcosa sui motori di "
+                       "risposta, come suona una risposta vera, e cosa fare se non ce n'è nessuna.",
+        "og_desc": "Una domanda sola dice se lo studio che paghi se n'è accorto.",
+
+        "body": [
+            ("La risposta breve", [
+                "<p>Chiedi alla tua agenzia di mostrarti cosa rispondono oggi ChatGPT, "
+                "Gemini o Perplexity quando qualcuno chiede il tuo mestiere nella tua "
+                "città. Non un report. La risposta vera, sullo schermo.</p>",
+                "<p>Se te la mostrano, chiedi cosa hanno cambiato per influenzarla. Se non "
+                "ci riescono, non ci stanno lavorando, e tu li paghi ogni mese mentre non "
+                "succede.</p>",
+                "<p>Per questo non esiste un report di posizionamento, non esiste uno "
+                "spazio pubblicitario e non esiste nessuno che possa garantirti un posto. "
+                "Chi ti offre una di quelle tre cose sta descrivendo qualcosa che non "
+                "c'è.</p>",
+            ]),
+            ("Perché è una domanda legittima e non ostile", [
+                "<p>Una parte delle ricerche che partivano da Google adesso parte da un "
+                "assistente, e la risposta nomina una manciata di imprese invece di dieci. "
+                "Esserci o non esserci è una distanza più larga di quanto sia mai stata "
+                "quella fra il terzo e il quarto posto.</p>",
+                "<p>Un'agenzia che non ha guardato non è per forza scarsa. È indietro su un "
+                "pezzo del mestiere, e tu hai il diritto di chiedere quando cambia.</p>",
+            ]),
+            ("Come suona una risposta vera", [
+                "<p>Ti parleranno di essere descritto allo stesso modo ovunque una macchina "
+                "possa leggere di te, di rispondere alle domande che i clienti fanno "
+                "davvero con le loro parole, e delle fonti su cui un assistente si appoggia "
+                "nella tua lingua.</p>",
+                "<p>Una risposta sottile invece promette una posizione, oppure attacca un "
+                "canone mensile a un numero che nessuno riesce a mostrarti.</p>",
+            ]),
+            ("La parte che nessuno può venderti", [
+                "<p>Qui non si compra niente. Dentro la risposta di un assistente non c'è "
+                "un modulo di iscrizione né uno spazio a pagamento, quindi la posizione si "
+                "guadagna o manca. Vale in tutte e due le direzioni: uno studio piccolo che "
+                "è davvero la risposta giusta a una domanda stretta può essere nominato "
+                "accanto ad aziende molto più grandi.</p>",
+            ]),
+            ("Dove sta questo studio", [
+                "<p>Siamo una persona sola che lavora da Durazzo, in Albania, e pubblica in "
+                "albanese, italiano e inglese. I numeri di Search Console su questo sito "
+                "vengono da clienti albanesi, perché sono quelli che abbiamo. Un caso "
+                "italiano non ce l'abbiamo ancora e non abbiamo interesse a lasciarlo "
+                "intendere.</p>",
+            ]),
+        ],
+        "faq": [
+            ("Qualcuno può garantirmi di comparire in ChatGPT?",
+             "No, e chi si offre di farlo è il segnale più chiaro che ti stanno vendendo "
+             "altro. Non c'è un posto da comprare né una fila a cui mettersi."),
+            ("Devo licenziare la mia agenzia per questo?",
+             "Non da solo. Fai la domanda, ascolta la risposta e pesala insieme a tutto "
+             "il resto di quello che fanno. Un buco è una conversazione, non un motivo "
+             "per ricominciare da capo."),
+            ("Questo sostituisce il lavoro normale sulla ricerca?",
+             "No. Ci sta sopra e condivide quasi tutte le fondamenta. Un sito che un "
+             "assistente legge con chiarezza di solito è un sito che anche un motore "
+             "legge con chiarezza."),
+            ("Come faccio a controllarlo da solo?",
+             "Apri un assistente, chiedigli il tuo mestiere nella tua città come farebbe "
+             "un cliente, e leggi cosa torna. Fallo qualche volta, perché le risposte "
+             "cambiano."),
+            ("E se la risposta nomina un concorrente?",
+             "Allora hai imparato qualcosa di preciso e gratis. Guarda cosa pubblica "
+             "quel concorrente che tu non pubblichi, perché l'assistente l'ha letto da "
+             "qualche parte."),
+        ],
+        "payoff": "Chiedi a un assistente il tuo mestiere nella tua città e mandaci cosa "
+                  "risponde. Ti diciamo da dove arriva quella risposta.",
+        "related": [("/geo/", "Ricerca AI"),
+                    ("/glossary/ai-search/", "Cos'è la ricerca AI?")],
+    },
+    {
+        "slug": "ai-search-in-italian",
+        "src": "da242d3e",
+        "date": "2026-08-30",
+        "updated": "2026-08-30",
+        "topic": "Ricerca AI",
+        "work": None,
+        "service": ("/geo/", "Ricerca AI"),
+
+        "title": "La ricerca AI risponde in italiano da fonti italiane",
+        "h1": "Chiedi in italiano e ottieni una risposta di forma italiana.",
+        "summary": "Gli assistenti rispondono con materiale scritto nella lingua della "
+                   "domanda, e quasi tutti i siti piccoli pubblicano in una.",
+        "standfirst": "La stessa domanda in due lingue restituisce due elenchi di imprese "
+                      "diversi. Solo uno dei due può contenerti.",
+        "description": "Perché un assistente che risponde in italiano attinge a fonti italiane, "
+                       "cosa significa per un'impresa che pubblica in una lingua sola, e da cosa "
+                       "conviene partire.",
+        "og_desc": "Pubblichi in una lingua sola e sei assente da tutte le altre risposte.",
+
+        "body": [
+            ("La risposta breve", [
+                "<p>Un assistente a cui chiedi qualcosa in italiano risponde in gran parte "
+                "con materiale scritto in italiano. Fai la stessa domanda in inglese e "
+                "torna un altro gruppo di imprese.</p>",
+                "<p>Se tutto quello che pubblichi è in una lingua, esisti dentro una di "
+                "quelle risposte e manchi da tutte le altre, per quanto buono sia il tuo "
+                "sito.</p>",
+                "<p>Non è un trucco da sfruttare. È un motivo per scrivere sul serio nelle "
+                "lingue che i tuoi clienti usano davvero, che per quasi tutte le imprese "
+                "sono meno di quante temono e più di una.</p>",
+            ]),
+            ("Tradurre e scrivere non sono lo stesso lavoro", [
+                "<p>Una pagina passata in un traduttore si porta dietro la forma delle "
+                "frasi della lingua da cui viene. Un lettore se ne accorge alla seconda "
+                "riga, e una macchina che riassume la tua attività eredita tutta la "
+                "goffaggine che c'è dentro.</p>",
+                "<p>Scritta come si deve in ogni lingua, da chi ha letto cosa offri, la "
+                "stessa pagina compete in tutte.</p>",
+            ]),
+            ("Quali lingue conviene davvero pubblicare", [
+                "<p>Quella che parlano i tuoi clienti, quella in cui cercano quando sono "
+                "altrove, e basta. Ogni lingua pubblicata è una lingua che qualcuno deve "
+                "tenere vera, e una pagina che descrive i prezzi dell'anno scorso fa più "
+                "danno nella seconda lingua di quanto ne facesse nella prima.</p>",
+            ]),
+            ("Cosa serve a un assistente da un sito piccolo", [
+                "<p>Risposte semplici alle domande che fanno i clienti, con le loro parole, "
+                "su pagine che dicono chi sei e dove. Dati coerenti ovunque una macchina "
+                "possa leggerli. Niente di esotico, e quasi tutto è lavoro che un motore di "
+                "ricerca premia comunque.</p>",
+            ]),
+            ("Dove sta questo studio", [
+                "<p>Questo sito esce in tre lingue e nessuna è la copia automatica di "
+                "un'altra, quindi possiamo consigliarlo senza girarci intorno. I clienti di "
+                "cui pubblichiamo i numeri sono albanesi. Il lavoro italiano qui è più "
+                "recente e lo diciamo invece di agghindarlo.</p>",
+            ]),
+        ],
+        "faq": [
+            ("Vale anche per Google?",
+             "In generale sì, e vale da anni. Quello che è cambiato è che un assistente "
+             "restituisce una manciata di nomi invece di una pagina di link, quindi "
+             "restare fuori costa più di quanto costasse la seconda pagina."),
+            ("Meglio una lingua fatta bene o tre fatte male?",
+             "Quasi sempre una fatta bene. Tre lingue tenute a metà sono tre modi di "
+             "sembrare abbandonati. La seconda si aggiunge quando riesci a tenerla vera."),
+            ("Quale lingua deve pubblicare chi sta vicino al confine?",
+             "Quella in cui cercano i clienti che ti pagano, e conviene controllarlo "
+             "invece di darlo per scontato. A volte non è la lingua che si parla in "
+             "negozio."),
+            ("Mi serve un sito separato per lingua?",
+             "No, e non dovresti. Un sito solo con versioni linguistiche fatte bene e i "
+             "tag giusti che le collegano è più semplice da tenere vero e si legge come "
+             "un'impresa sola invece che come tre."),
+            ("Come lo verifico?",
+             "Fai la stessa domanda a un assistente due volte, una per lingua, e "
+             "confronta chi viene nominato. La differenza di solito si vede subito."),
+        ],
+        "payoff": "Chiedi a un assistente del tuo mestiere in due lingue e confronta i nomi "
+                  "che tornano. Mandaci tutti e due.",
+        "related": [("/geo/", "Ricerca AI"), ("/glossary/geo/", "Cos'è la GEO?")],
+    },
+    {
+        "slug": "hiring-a-studio-abroad",
+        "src": "473d1843",
+        "date": "2026-08-30",
+        "updated": "2026-08-30",
+        "topic": "Ricerca locale",
+        "work": None,
+        "service": ("/seo/", "SEO e ricerca locale"),
+
+        "title": "Assumere uno studio in un altro paese",
+        "h1": "A cosa rinunci, e cosa ti torna indietro in cambio.",
+        "summary": "L'aritmetica onesta di assumere qualcuno che non è dietro l'angolo, "
+                   "comprese le parti che giocano contro di noi.",
+        "standfirst": "Ci sono cose vere che uno studio lontano non può fare. Eccole, prima che "
+                      "le scopra tu.",
+        "description": "Cosa si perde davvero assumendo uno studio in un altro paese, cosa si "
+                       "guadagna davvero, e le domande da fare a chiunque lavori a distanza.",
+        "og_desc": "I compromessi veri di assumere uno studio che non è dietro l'angolo.",
+
+        "body": [
+            ("Quello che non abbiamo", [
+                "<p>Non abbiamo un ufficio in Italia e non abbiamo ancora un caso italiano. "
+                "Non possiamo entrare nel tuo negozio, fotografare la merce di martedì, o "
+                "sederci a un tavolo con il tuo commercialista. Se una di quelle cose ti "
+                "conta più del lavoro in sé, prendi qualcuno di zona e te lo diciamo alla "
+                "prima chiamata.</p>",
+            ]),
+            ("Cosa ha smesso di costare la distanza", [
+                "<p>Ogni pezzo del costruire e mantenere un sito si fa a distanza adesso, "
+                "anche dalle agenzie di zona. Uno studio nella tua città ti manda gli "
+                "stessi file con gli stessi strumenti. La vicinanza resta una comodità vera "
+                "e ha smesso di essere un vantaggio tecnico qualche anno fa.</p>",
+            ]),
+            ("Cosa chiedere a chiunque lavori da remoto", [
+                "<p>Chi scrive l'italiano, ed è la sua lingua. Quanto ci mette una risposta "
+                "ad arrivare e da chi. Cosa succede al lavoro se il rapporto finisce. Se "
+                "puoi vedere qualcosa che gira prima di impegnarti su qualcosa di più "
+                "grande.</p>",
+                "<p>Le nostre risposte sono che l'italiano è scritto e non tradotto, che si "
+                "risponde entro 24 ore, che il dominio e il codice stanno a tuo nome dal "
+                "primo giorno, e che l'audit esiste apposta perché tu possa giudicare il "
+                "lavoro prima di pagarne uno.</p>",
+            ]),
+            ("Le prove che abbiamo non sono italiane", [
+                "<p>I numeri di Search Console pubblicati su questo sito sono di un negozio "
+                "di orologi a Durazzo: 741 clic e 71,1k volte mostrato in tre mesi, con una "
+                "posizione media di 8,6 e una percentuale di clic dell'1%. Rilevato ad "
+                "agosto 2026. Le posizioni si spostano, quindi quello che vedi tu oggi non "
+                "coinciderà con il nostro.</p>",
+                "<p>Pubblichiamo i numeri deboli accanto a quelli buoni di proposito. Una "
+                "posizione 8,6 è il fondo della prima pagina e preferiamo che tu la veda "
+                "invece di scoprirla.</p>",
+            ]),
+            ("Quando la scelta giusta è semplicemente quella vicina", [
+                "<p>Se la tua attività vive di gente che entra e di strette di mano, se ti "
+                "serve qualcuno fisicamente presente a fotografare il lavoro mentre "
+                "succede, o se preferisci pagare di più per una faccia in stanza, è una "
+                "scelta legittima e non proveremo a farti cambiare idea.</p>",
+            ]),
+        ],
+        "faq": [
+            ("Chi fa materialmente il lavoro?",
+             "Una persona sola, la stessa con cui parli. Non c'è una squadra a cui "
+             "passarti, che è un limite oltre che una promessa: mette un tetto a quanti "
+             "clienti riusciamo a seguire insieme."),
+            ("L'italiano è scritto o tradotto?",
+             "Scritto. Una pagina tradotta si annuncia da sola alla seconda riga e i "
+             "tuoi clienti se ne accorgono prima di Google."),
+            ("E per la fattura e le tasse?",
+             "Fatturiamo dall'Albania e il tuo commercialista la tratta come un servizio "
+             "comprato fuori dall'Italia. È ordinaria amministrazione, e vale una parola "
+             "con lui prima di impegnarti invece che dopo."),
+            ("Possiamo sentirci al telefono?",
+             "Sì, e su WhatsApp, che è come vanno quasi tutte le conversazioni qui. "
+             "Niente di tutto questo richiede una riunione per partire."),
+            ("E se non dovesse funzionare?",
+             "Ti restano il dominio, il codice e ogni account, perché erano a tuo nome "
+             "dall'inizio. Non c'è niente da farsi restituire o da chiedere."),
+        ],
+        "payoff": "Dicci cosa ti preoccupa dell'assumere a distanza. Se la risposta onesta è "
+                  "che non facciamo per te, quella ricevi.",
+        "related": [("/work/iglisi-watch/", "Iglisi Watch"), ("/studio/", "Studio")],
+    },
 ]
 
 # /blog/, the index over those records. The soft wraps are placed for this text
