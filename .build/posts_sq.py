@@ -4951,7 +4951,7 @@ POSTS = [
     },
     {
         "slug": "seo-bergamo",
-        "src": "413c4dd7",
+        "src": "7045c4a3",
         "date": "2026-08-30",
         "updated": "2026-08-30",
         "topic": "Kërkim lokal",
@@ -4960,13 +4960,13 @@ POSTS = [
 
         "title": "SEO në Bergamo",
         "h1": "Bergamo nuk ia dorëzon kërkimet e veta Milanos.",
-        "summary": "Pesëdhjetë kilometra nga qyteti që thith gjithçka, dhe kërkesa rri këtu. "
+        "summary": "50 kilometra nga qyteti që thith gjithçka, dhe kërkesa rri këtu. "
                    "Kjo ndryshon kundër kujt po luan.",
         "standfirst": "Një aeroport, një spital, një universitet dhe një popullsi që e quan veten "
                       "bergamaske para se lombarde.",
         "description": "Pse Bergamo e mban kërkesën lokale që qytetet më afër Milanos e humbin, "
                        "kundër kujt konkurron vërtet, dhe ku shkon më larg një buxhet i vogël.",
-        "og_desc": "Pesëdhjetë kilometra nga Milano, dhe kërkesa rri këtu.",
+        "og_desc": "50 kilometra nga Milano, dhe kërkesa rri këtu.",
 
         "body": [
             ("Kërkimet mbeten brenda qytetit", [
@@ -5037,7 +5037,7 @@ POSTS = [
     },
     {
         "slug": "seo-brescia",
-        "src": "27ad92e6",
+        "src": "ed8cab81",
         "date": "2026-08-30",
         "updated": "2026-08-30",
         "topic": "Kërkim lokal",
@@ -5045,7 +5045,7 @@ POSTS = [
         "service": ("/seo/", "SEO dhe kërkim lokal"),
 
         "title": "SEO në Brescia",
-        "h1": "Tridhjetë kërkime në muaj mund të jenë numri i duhur.",
+        "h1": "30 kërkime në muaj mund të jenë numri i duhur.",
         "summary": "Një qytet industrial ku pothuajse gjithçka u shitet bizneseve të tjera, "
                    "dhe trafiku është gjëja e gabuar për t'u numëruar.",
         "standfirst": "Brescia u shet më shumë ndërmarrjeve se sa kalimtarëve. Kur ndodh kjo, "

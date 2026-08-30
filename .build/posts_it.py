@@ -4992,7 +4992,7 @@ POSTS = [
     },
     {
         "slug": "seo-bergamo",
-        "src": "413c4dd7",
+        "src": "7045c4a3",
         "date": "2026-08-30",
         "updated": "2026-08-30",
         "topic": "Ricerca locale",
@@ -5001,14 +5001,14 @@ POSTS = [
 
         "title": "SEO a Bergamo",
         "h1": "Bergamo non regala le sue ricerche a Milano.",
-        "summary": "Cinquanta chilometri dalla città che assorbe tutto, e la domanda resta "
+        "summary": "50 chilometri dalla città che assorbe tutto, e la domanda resta "
                    "qui. Cambia contro chi stai davvero giocando.",
         "standfirst": "Un aeroporto, un ospedale, un'università e una popolazione che si dice "
                       "bergamasca prima che lombarda.",
         "description": "Perché Bergamo tiene la domanda locale che i paesi più vicini a Milano "
                        "perdono, contro chi competi davvero, e dove un budget piccolo rende di "
                        "più.",
-        "og_desc": "Cinquanta chilometri da Milano, e la domanda resta qui.",
+        "og_desc": "50 chilometri da Milano, e la domanda resta qui.",
 
         "body": [
             ("Le ricerche restano dentro la città", [
@@ -5080,7 +5080,7 @@ POSTS = [
     },
     {
         "slug": "seo-brescia",
-        "src": "27ad92e6",
+        "src": "ed8cab81",
         "date": "2026-08-30",
         "updated": "2026-08-30",
         "topic": "Ricerca locale",
@@ -5088,7 +5088,7 @@ POSTS = [
         "service": ("/seo/", "SEO e ricerca locale"),
 
         "title": "SEO a Brescia",
-        "h1": "Trenta ricerche al mese possono essere il numero giusto.",
+        "h1": "30 ricerche al mese possono essere il numero giusto.",
         "summary": "Una città industriale dove quasi tutto si vende ad altre aziende, e il "
                    "traffico è la cosa sbagliata da contare.",
         "standfirst": "Brescia vende ad altre imprese più che ai passanti. Quando succede, la "

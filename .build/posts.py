@@ -4903,14 +4903,14 @@ POSTS = [
 
         "title": "SEO in Bergamo",
         "h1": "Bergamo does not hand its searches to Milano.",
-        "summary": "Fifty kilometres from the city that absorbs everything, and the demand "
+        "summary": "50 kilometres from the city that absorbs everything, and the demand "
                    "stays home. That changes who you are bidding against.",
         "standfirst": "An airport, a hospital, a university and a population that calls itself "
                       "Bergamasco before it calls itself Lombard.",
         "description": "Why Bergamo keeps the local demand that towns nearer Milano lose, who a "
                        "small business here is actually competing with, and where a modest budget "
                        "goes furthest.",
-        "og_desc": "Fifty kilometres from Milano, and the demand stays home.",
+        "og_desc": "50 kilometres from Milano, and the demand stays home.",
 
         "body": [
             ("The searches stay inside the city", [
@@ -4991,7 +4991,7 @@ POSTS = [
         "service": ("/seo/", "SEO and local search"),
 
         "title": "SEO in Brescia",
-        "h1": "Thirty searches a month can be the better number.",
+        "h1": "30 searches a month can be the better number.",
         "summary": "An industrial city where most of the buying is business to business, and "
                    "traffic is the wrong thing to be counting.",
         "standfirst": "Brescia sells to other companies more than it sells to passers by. Search "
