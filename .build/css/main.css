@@ -1528,5 +1528,18 @@ button.btn:disabled:hover { background: none; color: var(--ink); }
    no place, nothing a search for "SEO in Durres" could match. This is the line
    that was already the visual headline, moved into the heading that names the
    page. Sized from .hero-say because it IS that line. */
+/* letter-spacing is NOT optional here, and leaving it out is not a missing
+   nicety, it is a broken line. An em letter-spacing computes to an absolute
+   length on the element that declares it and INHERITS as that length, not as
+   the ratio. .hero-title is --fs-hero, which clamps to 144px, and -0.03em of
+   144px is -4.32px. A child at 32px inherits the -4.32px, which is more than a
+   quarter of an em: the word spaces close up and the sentence renders as one
+   run. It looked like the display face had fallen back to Arial Narrow. It had
+   not. Matching .hero-say's own tracking is what makes this the same line at
+   the same size, which is what the rule below already claimed to be.
+
+   26ch on .hero-say, 30ch here: this one carries a place name in all three
+   languages and the Albanian is the longest. */
 .hero-claim { display: block; margin-top: var(--s-8);
-  font-size: clamp(1.375rem, 2.4vw, 2rem); line-height: 1.22; }
+  font-size: clamp(1.375rem, 2.4vw, 2rem); line-height: 1.22;
+  letter-spacing: -0.012em; max-width: 30ch; text-wrap: balance; }
