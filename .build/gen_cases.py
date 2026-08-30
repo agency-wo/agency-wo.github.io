@@ -207,7 +207,7 @@ def client_page(c, nxt, posts, band, lang):
 {shell.updated("clients", lang)}
         </div>
 
-        <aside class="side" aria-label="{ch.ARIA_DETAILS}">
+        <aside class="side" data-reveal-group aria-label="{ch.ARIA_DETAILS}">
           <div class="side-block">
             {plate(c, eager=True)}
           </div>

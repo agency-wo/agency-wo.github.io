@@ -288,7 +288,7 @@ def aside(indent, spec, lang, toc=None):
     so it is not, and it never leaves this file."""
     label, side_blocks = spec
     pad = " " * indent
-    rows = [f'{pad}<aside class="side" aria-label="{fill(label, lang)}">']
+    rows = [f'{pad}<aside class="side" data-reveal-group aria-label="{fill(label, lang)}">']
     if toc is not None:
         # Above the blocks that send a reader off the page, because it is the
         # only one in the column that moves him around the page he is on.

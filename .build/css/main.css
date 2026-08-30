@@ -29,6 +29,29 @@
   @view-transition { navigation: auto; }
   .site-head { view-transition-name: site-head; }
   .wa { view-transition-name: wa; }
+
+  /* Turning the feature on gets the UA default: a 250ms linear cross-fade,
+     which is what every site that has switched this on looks like. Naming the
+     two halves is what makes the navigation the site's own.
+
+     The outgoing page leaves faster than the incoming one arrives, so the two
+     are never both half-visible for long, and the new page rises the same 8px
+     that [data-reveal] uses further down. That is deliberate: content arriving
+     by navigation and content arriving by scroll should be one gesture, not
+     two. 8px and not more, because a page that slides a long way reads as a
+     slideshow rather than as a document.
+
+     The tokens resolve here because custom properties inherit into the
+     view-transition pseudo tree from the root. If a browser ever fails to,
+     the timing function falls back to ease and the transition still runs.
+
+     .site-head and .wa keep the default cross-fade, which is invisible on two
+     elements that are identical either side of the navigation. That is the
+     point of naming them: it is what stops them ghosting against themselves. */
+  ::view-transition-old(root) { animation: vt-out 180ms var(--ease-rise) both; }
+  ::view-transition-new(root) { animation: vt-in 320ms var(--ease-reveal) both; }
+  @keyframes vt-out { to { opacity: 0 } }
+  @keyframes vt-in { from { opacity: 0; transform: translateY(8px) } }
 }
 
 /* -- shell ---------------------------------------------------------------- */
@@ -734,9 +757,22 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
 .prose ul, .prose ol { margin: 0 0 var(--s-5); padding-left: 1.25em; }
 .prose li { margin-bottom: var(--s-3); text-wrap: pretty; }
 .prose li::marker { color: var(--slate); }
+/* The reading surface, and the one interaction an Italian prospect meets most
+   often: every in-text link on every post and service page. It went slate to
+   red in a single frame, which is the difference between a page that answers
+   and a page that twitches.
+
+   Both animated properties live BELOW the baseline. Neither thickness nor
+   colour can reflow a line, so the paragraph cannot move under the cursor,
+   which is the whole reason this is the underline and not the weight: the
+   variable axis is on Archivo, Archivo is the body face, and animating weight
+   on body text rewraps the paragraph being read. */
 .prose a, .studio-prose a { color: var(--ink); text-underline-offset: 3px;
-  text-decoration-thickness: 1px; text-decoration-color: var(--slate); }
-.prose a:hover, .studio-prose a:hover { text-decoration-color: var(--red); }
+  text-decoration-thickness: 1px; text-decoration-color: var(--slate);
+  transition: text-decoration-color 200ms var(--ease-rise),
+              text-decoration-thickness 200ms var(--ease-rise); }
+.prose a:hover, .studio-prose a:hover { text-decoration-color: var(--red);
+  text-decoration-thickness: 2px; }
 .prose > :first-child, .studio-prose > :first-child { margin-top: 0; }
 .prose code { font-family: ui-monospace, "Cascadia Mono", Menlo, monospace;
   font-size: 0.9em; background: rgba(19, 22, 28, 0.06); padding: 1px 5px; }
@@ -752,10 +788,15 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
 /* the padding moves from the li onto the a, so the whole row is the target
    rather than a 16px strip of text inside it */
 .side-list li { border-bottom: 1px solid var(--edge); }
-.side-list a { display: block; padding-block: var(--s-3); text-decoration: none; }
+.side-list a { display: block; padding-block: var(--s-3); text-decoration: none;
+  transition: color 200ms var(--ease-rise), transform 200ms var(--ease-rise); }
 /* --red-dk, not --red. These inherit --fs-small from .side-block, and red on
    paper is 4.2:1, under the 4.5:1 AA floor for text this size. 6.53:1. */
-.side-list a:hover { color: var(--red-dk); }
+/* transform, not padding and not margin. The row is a block link inside a
+   bordered li, so shifting it with padding would drag the hairline with it and
+   reflow every row underneath. A translate moves paint and nothing else. 3px
+   is the smallest step that still reads as an answer on a 13px row. */
+.side-list a:hover { color: var(--red-dk); transform: translateX(3px); }
 
 .ledger { list-style: none; margin: var(--s-6) 0 0; padding: 0; }
 .ledger > li { border-top: 1px solid var(--edge); padding-block: var(--s-5); }

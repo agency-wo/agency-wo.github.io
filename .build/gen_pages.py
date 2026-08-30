@@ -355,7 +355,7 @@ def render(svc, en_svc, posts, lang):
         a(upd + NL)
     a('        </div>\n\n')
 
-    a(f'        <aside class="side" aria-label="{c.ARIA_GLANCE}">\n')
+    a(f'        <aside class="side" data-reveal-group aria-label="{c.ARIA_GLANCE}">\n')
     # Above every block under it, because those 3 send a reader somewhere else
     # and this one is the only thing in the column that moves him around the
     # page he chose to be on.

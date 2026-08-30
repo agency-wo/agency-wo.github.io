@@ -267,7 +267,7 @@ def post_page(p, en_p, nxt, by_slug, band, lang):
 {shell.updated("posts", lang)}
         </div>
 
-        <aside class="side" aria-label="{c.ARIA_DETAILS}">
+        <aside class="side" data-reveal-group aria-label="{c.ARIA_DETAILS}">
 {contents}          <div class="side-block">
             <p class="side-h">{c.SIDE_SERVICE}</p>
             <ul class="side-list">
@@ -284,7 +284,7 @@ def post_page(p, en_p, nxt, by_slug, band, lang):
       </div>
 
       <div class="tail">
-        <div class="tail-inner">
+        <div class="tail-inner" data-reveal>
           <h2>{c.READ_NEXT}</h2>
           <a class="cta" href="{shell.localise(post_url(nxt), lang)}">{nxt["title"]} {shell.ARROW}</a>
           <p class="tail-pref"><a href="https://www.google.com/preferences/source?q={shell.SITE.split("//")[1]}" target="_blank" rel="noopener">{c.PREF_SOURCE}</a></p>

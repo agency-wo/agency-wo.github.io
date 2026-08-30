@@ -2,6 +2,11 @@
   @view-transition { navigation: auto; }
   .site-head { view-transition-name: site-head; }
   .wa { view-transition-name: wa; }
+
+  ::view-transition-old(root) { animation: vt-out 180ms var(--ease-rise) both; }
+  ::view-transition-new(root) { animation: vt-in 320ms var(--ease-reveal) both; }
+  @keyframes vt-out { to { opacity: 0 } }
+  @keyframes vt-in { from { opacity: 0; transform: translateY(8px) } }
 }
 
 .wrap { max-width: var(--page-max); margin-inline: auto; padding-inline: var(--margin); }
@@ -443,9 +448,13 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
 .prose ul, .prose ol { margin: 0 0 var(--s-5); padding-left: 1.25em; }
 .prose li { margin-bottom: var(--s-3); text-wrap: pretty; }
 .prose li::marker { color: var(--slate); }
+
 .prose a, .studio-prose a { color: var(--ink); text-underline-offset: 3px;
-  text-decoration-thickness: 1px; text-decoration-color: var(--slate); }
-.prose a:hover, .studio-prose a:hover { text-decoration-color: var(--red); }
+  text-decoration-thickness: 1px; text-decoration-color: var(--slate);
+  transition: text-decoration-color 200ms var(--ease-rise),
+              text-decoration-thickness 200ms var(--ease-rise); }
+.prose a:hover, .studio-prose a:hover { text-decoration-color: var(--red);
+  text-decoration-thickness: 2px; }
 .prose > :first-child, .studio-prose > :first-child { margin-top: 0; }
 .prose code { font-family: ui-monospace, "Cascadia Mono", Menlo, monospace;
   font-size: 0.9em; background: rgba(19, 22, 28, 0.06); padding: 1px 5px; }
@@ -460,9 +469,10 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
 .side-list { list-style: none; margin: 0; padding: 0; }
 
 .side-list li { border-bottom: 1px solid var(--edge); }
-.side-list a { display: block; padding-block: var(--s-3); text-decoration: none; }
+.side-list a { display: block; padding-block: var(--s-3); text-decoration: none;
+  transition: color 200ms var(--ease-rise), transform 200ms var(--ease-rise); }
 
-.side-list a:hover { color: var(--red-dk); }
+.side-list a:hover { color: var(--red-dk); transform: translateX(3px); }
 
 .ledger { list-style: none; margin: var(--s-6) 0 0; padding: 0; }
 .ledger > li { border-top: 1px solid var(--edge); padding-block: var(--s-5); }
