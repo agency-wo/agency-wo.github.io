@@ -248,7 +248,7 @@ PAGES = [
     # --------------------------------------------------------------- STUDIO --
     {
         "url": "/studio/",
-     "src": "2adab52b",
+     "src": "91f978b1",
         "nav": "Studio",
         "title": "Si punojmë",
         "description": "Si punojmë: prova para mendimeve, një dokument i qartë, i bërë "
@@ -348,7 +348,10 @@ PAGES = [
              "dhe disa klientë nuk kanë qenë kurrë në të njëjtën dhomë me "
              "ne." + NL +
              "Nëse je afër, vijmë te ti, sepse të shohësh vendin zakonisht "
-             "e ndryshon planin."),
+             "e ndryshon planin. "
+             "<a href=\"/blog/hiring-a-studio-abroad/\">Të punësosh një studio "
+             "në një vend tjetër</a> është shkruar i plotë, përfshirë kur "
+             "zgjedhja pranë është thjesht ajo e duhura."),
             ("Po nëse dikush merret tashmë me këtë?",
              "Mbaje, dhe merre auditimin si mendim të dytë. Nëse ajo që po bën" + NL +
              "funksionon, e ke provën me shkrim. Nëse jo, ke një listë mbi të "

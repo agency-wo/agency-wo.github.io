@@ -563,6 +563,13 @@ a[href^="tel:"] { white-space: nowrap; }
   .play .hero-rest { animation: rest-in 450ms var(--ease-reveal) 400ms both; }
   @keyframes rest-in { to { transform: none; } }
 
+  .js .chart-fig:not(.in-view) .chart-clicks,
+  .js .chart-fig:not(.in-view) .chart-impr { stroke-dashoffset: 1; }
+  .chart-clicks, .chart-impr { stroke-dasharray: 1; }
+  .chart-fig.in-view .chart-clicks { animation: draw 1500ms var(--ease-reveal) both; }
+  .chart-fig.in-view .chart-impr { animation: draw 1500ms var(--ease-reveal) 240ms both; }
+  @keyframes draw { from { stroke-dashoffset: 1 } to { stroke-dashoffset: 0 } }
+
   .status .dot { animation: dot-pulse 2.4s var(--ease-reveal) infinite; }
   @keyframes dot-pulse { 0%, 100% { opacity: 1 } 50% { opacity: 0.35 } }
 

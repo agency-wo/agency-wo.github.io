@@ -374,8 +374,10 @@ def _draw(lang, stats_rows, cs, ims, vb_h, pb, extra):
         y = pb - (pb - PT) * v / I_MAX
         add(f'              <text class="chart-ax" x="{PR + 12}" y="{y + 6:.1f}">'
             f'{l10n.dec(label, lang)}</text>')
-    add(f'              <path class="chart-impr" d="{_path(ims, I_MAX, pb)}"/>')
-    add(f'              <path class="chart-clicks" d="{_path(cs, C_MAX, pb)}"/>')
+    add(f'              <path class="chart-impr" pathLength="1" '
+        f'd="{_path(ims, I_MAX, pb)}"/>')
+    add(f'              <path class="chart-clicks" pathLength="1" '
+        f'd="{_path(cs, C_MAX, pb)}"/>')
     # Stacked, not side by side. At 390px the viewBox is squeezed to about a
     # quarter, the labels are scaled back up to stay readable, and 2 keys on one
     # row then overlap each other. 2 rows need no media query and no second
@@ -476,7 +478,7 @@ def render(lang):
 {stats}
             </ul>
             <p class="stat-note">{txt(12, h["stat_note"], lang)}</p>
-            <figure class="chart-fig">
+            <figure class="chart-fig" data-reveal>
 {chart}
             </figure>
           </div>

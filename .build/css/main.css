@@ -941,6 +941,27 @@ a[href^="tel:"] { white-space: nowrap; }
   @keyframes rest-in { to { transform: none; } }
 
   /* the line above it is a fact somebody has to keep true, so it breathes */
+  /* The chart draws itself. It is the most persuasive object on the site, 92
+     days from nothing to 741 clicks, and it sat completely still.
+
+     pathLength="1" is set in the markup so both curves are normalised to a
+     length of 1 whatever their real geometry, which is what lets one rule cover
+     the wide chart and the tall one. Measuring them and pasting a constant would
+     rot the first time the data changed.
+
+     Clicks lead and impressions follow a beat behind, because that is the order
+     the argument is made in: the red line is the one being claimed.
+
+     The undrawn state is scoped to .js. With scripting off there is no .in-view
+     to wait for, so no dasharray is ever applied and the chart is simply
+     finished, which is the rule the rest of this section follows. */
+  .js .chart-fig:not(.in-view) .chart-clicks,
+  .js .chart-fig:not(.in-view) .chart-impr { stroke-dashoffset: 1; }
+  .chart-clicks, .chart-impr { stroke-dasharray: 1; }
+  .chart-fig.in-view .chart-clicks { animation: draw 1500ms var(--ease-reveal) both; }
+  .chart-fig.in-view .chart-impr { animation: draw 1500ms var(--ease-reveal) 240ms both; }
+  @keyframes draw { from { stroke-dashoffset: 1 } to { stroke-dashoffset: 0 } }
+
   .status .dot { animation: dot-pulse 2.4s var(--ease-reveal) infinite; }
   @keyframes dot-pulse { 0%, 100% { opacity: 1 } 50% { opacity: 0.35 } }
 

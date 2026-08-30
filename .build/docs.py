@@ -340,7 +340,10 @@ PAGES = [
              "several" + NL +
              "clients have never been in the same room as us. If you are near, "
              "we" + NL +
-             "come to you, because seeing the place usually changes the plan."),
+             "come to you, because seeing the place usually changes the plan. "
+             "<a href=\"/blog/hiring-a-studio-abroad/\">Hiring a studio in "
+             "another country</a> is written out in full, down to when the "
+             "local choice is simply the better one."),
             ("What if somebody already handles this for us?",
              "Keep them, and take the audit as a second opinion. If what they "
              "are" + NL +

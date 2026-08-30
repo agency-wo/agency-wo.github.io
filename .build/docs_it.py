@@ -259,7 +259,7 @@ PAGES = [
     # --------------------------------------------------------------- STUDIO --
     {
         "url": "/studio/",
-     "src": "2adab52b",
+     "src": "91f978b1",
         "nav": "Studio",
         "title": "Come lavoriamo",
         "description": "Come lavoriamo: prove prima delle opinioni, un documento "
@@ -356,8 +356,11 @@ PAGES = [
              "No. Quasi tutto succede dentro un browser e un documento, e "
              "diversi" + NL +
              "clienti non sono mai stati nella stessa stanza con noi. Se sei "
-             "vicino" + NL +
-             "veniamo da te, perché vedere il posto di solito cambia il piano."),
+             "vicino," + NL +
+             "veniamo da te, perché vedere il posto di solito cambia il piano. "
+             "<a href=\"/blog/hiring-a-studio-abroad/\">Assumere uno studio in "
+             "un altro paese</a> è scritto per intero, compreso quando la "
+             "scelta vicina è semplicemente quella giusta."),
             ("E se qualcuno se ne occupa già?",
              "Tienilo, e prendi l'audit come secondo parere. Se quello che sta" + NL +
              "facendo funziona, ne hai la prova per iscritto. Se non funziona, "
