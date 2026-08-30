@@ -35,22 +35,30 @@ the diaeresis, this one does not. Copy the schema you have, not the sheet next d
 
 ## Where to place them, in order of value
 
-1. **Reviews on the Google Business Profile you already have.** Not a new listing. The profile is
-   verified and the review link is live at `shell.GBP_REVIEW_URL`. Four clients have never been
-   asked: Iglisi Watch, Victoria Boutique, Intimo Bruna, ProAffy. Ask at the moment somebody says
-   they are pleased, which is the advice `/seo/` already gives other people.
-2. **Bing Places.** Import from Google Business Profile, one click. Bing is what ChatGPT Search
-   reads, which matters more here than it would for most studios.
-3. **The ProAffy link.** Three of the four client sites already link back and are followable;
+This order changed on 30 August 2026. It used to put reviews first on the belief that there were
+none, which was read out of the line below saying four clients had not been asked. Those are not the
+same statement, and the profile in fact carried **9 reviews on 30 August 2026**. Google splits local
+prominence into links and reviews. Reviews are the half that is working here; links are the half
+that is not, so the list now leads with them.
+
+1. **Bing Places.** Import from Google Business Profile, one click, and still not done. Bing is what
+   ChatGPT Search reads, which matters more here than it would for most studios.
+2. **The ProAffy link.** Three of the four client sites already link back and are followable;
    proaffy.com is the one that does not. It is a site we built, so this is an ask to a client who
-   already said yes to the other three.
-4. **Albanian directories**, free, and they build the local entity before Google will trust a
+   already said yes to the other three, and links are now the weaker half of prominence.
+3. **Albanian directories**, free, and they build the local entity before Google will trust a
    Durres address:
    - biznes.al
    - alb-biz.com
    - shqiperia.com
    - gjejbiznes.al
    - yellowpages.al
+4. **Keep the reviews arriving, and reply to every one.** The profile is verified and the review
+   link is live at `shell.GBP_REVIEW_URL`. **9 reviews on 30 August 2026.** Three of the four
+   clients have been asked: Iglisi Watch, Victoria Boutique and ProAffy. **Intimo Bruna is the one
+   left.** Ask at the moment somebody says they are pleased, which is the advice `/seo/` already
+   gives other people. Google weighs recency and whether the owner replies, not the total alone, so
+   a steady trickle answered promptly beats a burst that is never acknowledged.
 5. **Agency directories.** TechBehemoths is done and is in `sameAs`. Missing: Sortlist, Clutch,
    GoodFirms. All three rank for the queries the service pages are chasing, so a listing there is
    visibility borrowed from a page that already ranks while this domain is still young.

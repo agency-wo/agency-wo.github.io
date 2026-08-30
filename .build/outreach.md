@@ -11,8 +11,12 @@ in one afternoon reads as a campaign, and a campaign is easier to ignore than a 
 
 ## 1. Review requests
 
-The three Durres clients get Albanian. ProAffy gets English. **Skip whichever one you have
-already asked** rather than sending twice.
+The three Durres clients get Albanian. ProAffy gets English.
+
+**As of 30 August 2026 only Intimo Bruna is still to ask.** Iglisi Watch, Victoria Boutique and
+ProAffy have been asked, and the profile carried 9 reviews on that date. The other three messages
+stay here because clients change and a second job earns a second ask, but do not send them again for
+work already covered.
 
 Each message names the specific job. That is not politeness, it is the difference between a
 review that says "good service" and one that says what you did, and only the second is worth
