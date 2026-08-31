@@ -1,7 +1,8 @@
 # minarank studio
 
-> Somebody is searching for what you sell right now. We make sure they find
-> you on Google, on the map, and in what ChatGPT says. Durres, Albania.
+> Right now, somebody nearby is searching for what only you offer. We make
+> sure they find you on Google, on the map, and in what ChatGPT says. Durres,
+> Albania.
 
 We publish this file because it costs nothing. No major provider has been
 shown to read one, and we say so on the AI search page rather than selling
@@ -13,7 +14,7 @@ Italiano at /it/, Shqip at /sq/. Every URL on the site, in all 3 languages and
 with its hreflang alternates, is in https://minarankstudio.com/sitemap.xml.
 
 ## Home
-- [minarank studio · digital presence for small businesses in Durres](https://minarankstudio.com/): Somebody is searching for what you sell right now. We make sure they find you on Google, on the map, and in what ChatGPT says. Durres, Albania.
+- [minarank studio · digital presence for small businesses in Durres](https://minarankstudio.com/): Right now, somebody nearby is searching for what only you offer. We make sure they find you on Google, on the map, and in what ChatGPT says. Durres, Albania.
 
 ## What we do
 - [SEO and local search in Albania](https://minarankstudio.com/seo/): SEO and local search for small businesses: your Google Business Profile, on-page work on the site, and off-page work everywhere else. English, Italian and Albanian.

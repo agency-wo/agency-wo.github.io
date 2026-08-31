@@ -61,10 +61,10 @@ PAGE = {
     # The brand comes first in this one title, because it is the only page
     # whose job is to say whose site this is.
     "title": "digital presence for small businesses in Durres",
-    "description": "Somebody is searching for what you sell right now. We make sure "
-                   "they find you on Google, on the map, and in what ChatGPT says. "
-                   "Durres, Albania.",
-    "og_desc": "Somebody is searching for what you sell right now.",
+    "description": "Right now, somebody nearby is searching for what only you offer. "
+                   "We make sure they find you on Google, on the map, and in what "
+                   "ChatGPT says. Durres, Albania.",
+    "og_desc": "Right now, somebody nearby is searching for what only you offer.",
     "org_desc": "Digital presence for small businesses: search, AI search, websites, "
                 "ads and custom software. English, Italian and Albanian.",
     "catalogue": "Services",

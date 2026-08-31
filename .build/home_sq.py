@@ -100,15 +100,15 @@ STATS = [
 ]
 
 PAGE = {
-    "src": "07b7fd29",
+    "src": "0b17a2d6",
 
     # 39 characters against the 52 the title budget leaves once gen_home.py has
     # put "minarank studio ·" in front of it.
     "title": "prezencë dixhitale për biznese të vogla në Durrës",
-    "description": "Dikush po kërkon pikërisht tani atë që shet. Ne sigurohemi "
-                   "që të të gjejnë në Google, në hartë dhe në atë që thotë "
-                   "ChatGPT. Durrës, Shqipëri.",
-    "og_desc": "Dikush po kërkon pikërisht tani atë që shet.",
+    "description": "Pikërisht tani, dikush pranë teje kërkon atë që "
+                   "vetëm ti e ofron. Sigurohemi që të të gjejnë në Google, "
+                   "në hartë dhe në ChatGPT. Durrës, Shqipëri.",
+    "og_desc": "Pikërisht tani, dikush pranë teje po kërkon atë që vetëm ti e ofron.",
     # The language list leads with Albanian, which is the decision chrome_sq.py
     # already made for FOOT_META: the reader of this page gets his answer in
     # the first word instead of the third.
