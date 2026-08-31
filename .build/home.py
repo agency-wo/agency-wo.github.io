@@ -70,7 +70,7 @@ PAGE = {
     "catalogue": "Services",
 
     # -- hero ---------------------------------------------------------------
-    "hero_claim": "Somebody in Albania is searching for what you sell right now.",
+    "hero_claim": "Right now, somebody nearby is searching for what only you offer.",
     "hero_say": "We make sure they find you on Google.",
     "hero_sub": "Google, the map, and the answers ChatGPT and Gemini give" + NL +
                 "when somebody asks for a shop like yours. Then the website itself, "
