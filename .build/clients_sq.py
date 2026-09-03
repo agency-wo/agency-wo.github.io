@@ -13,17 +13,17 @@ neither of them can tell a translated filename from a translated sentence, so
 the discipline is here rather than in the gate.
 
 NUMBERS ARE REFORMATTED, NEVER RE-DERIVED, AND `stats` IS NOT REFORMATTED HERE
-AT ALL. gen_cases.py runs that list through l10n.dec, which turns 71.1k into
-71,1k and 8.6 into 8,6 on its own, so the figures in it stay in their English
-form and this file owns only the labels. Writing 71,1k here as well gave the
+AT ALL. gen_cases.py runs that list through l10n.dec, which turns 82k into
+82k and 8.8 into 8,8 on its own, so the figures in it stay in their English
+form and this file owns only the labels. Writing 82k here as well gave the
 number 2 owners and l10n.dec read the comma as a thousands separator, printing
-71.1k on the Albanian page.
+82k on the Albanian page.
 
 The figures inside `charts` are prose: they sit mid-sentence, where l10n.dec
 cannot go without turning a full stop into a comma, so those are moved by hand.
 Only Iglisi has published figures, they come from the client's own Search
-Console with permission, and the two weak ones stay weak: position 8,6 is not
-rounded to 8 and a 1% click rate is not described as anything other than 1%.
+Console with permission, and the two weak ones stay weak: position 8,8 is not
+rounded to 9 and a 1,1% click rate is not described as anything other than 1,1%.
 The other 3 clients have no numbers on purpose, and the Albanian must not
 invent the impression of one.
 
@@ -41,7 +41,7 @@ NL = chr(10)
 CLIENTS = [
     {
         "slug": "iglisi-watch",
-        "src": "1042c554",
+        "src": "1121a5a1",
         # Not copy: the file and its 2 dimensions.
         "mark": [("iglisi-watch.png", 195, 22)],
         "name": "Iglisi Watch",
@@ -55,11 +55,11 @@ CLIENTS = [
         # words; a translation answers the English rather than tidying it in
         # one field and not the other.
         "description": "Një dyqan orësh familjar në Durrës pa asnjë faqe "
-                       "interneti. Tre muaj pas nisjes Google i dërgonte 741 "
+                       "interneti. Tre muaj pas nisjes Google i dërgonte 900 "
                        "klikime në tremujor, nga zero.",
-        "og_desc": "Nga asnjë faqe interneti te 741 klikime në tremujor, në 3 "
+        "og_desc": "Nga asnjë faqe interneti te 900 klikime në tremujor, në 3 "
                    "muaj.",
-        "summary": "Në maj asnjë faqe interneti. Në gusht, 741 klikime në "
+        "summary": "Në maj asnjë faqe interneti. Në gusht, 900 klikime në "
                    "tremujor nga Google, në 3 gjuhë.",
         "started": [
             # "Rruga Aleksander Goga" is a street name and is left exactly as
@@ -96,27 +96,27 @@ CLIENTS = [
         # The 4 numbers are the English strings, untouched: l10n.dec moves the
         # separator at render time. Only the labels are this file's, and 3 of
         # the 4 are fixed by glossary.TERMS.
-        "stats": [("741", "klikime nga Google"), ("71.1k", "herë e shfaqur"),
-                  ("8.6", "pozicioni mesatar"), ("1%", "përqindja e klikimeve")],
+        "stats": [("900", "klikime nga Google"), ("82k", "herë e shfaqur"),
+                  ("8.8", "pozicioni mesatar"), ("1.1%", "përqindja e klikimeve")],
         # File, width and height are not copy. The alt and the caption are, and
         # the figures inside them are moved by hand because they sit inside a
-        # sentence: 71,1k, 29,8k, 9,3.
+        # sentence: 82k, 33,7k, 9,7.
         #
         # "pershtypje" is banned by glossary.py, so the alt says "herët e
         # shfaqura", the plural of the glossary's "herë e shfaqur".
         # home_sq.py's fig_alt makes the same move for the same sentence.
         "charts": [
-            ("watch-al-3-months.webp", 1440, 576,
+            ("watch-al-3-months.webp", 1440, 571,
              "Google Search Console për watch.al gjatë 3 muajve. Klikimet dhe "
-             "herët e shfaqura nisin të dyja afër zeros në fund të majit 2026 "
+             "herët e shfaqura nisin të dyja afër zeros në fillim të qershorit 2026 "
              "dhe ngjiten gjatë gushtit.",
-             "Tre muaj: 25 maj deri më 24 gusht 2026. 741 klikime, 71,1k herë "
-             "e shfaqur, përqindje klikimesh 1%."),
-            ("watch-al-28-days.webp", 1440, 603,
+             "Tre muaj: 2 qershor deri më 30 gusht 2026. 900 klikime, 82k herë "
+             "e shfaqur, përqindje klikimesh 1,1%."),
+            ("watch-al-28-days.webp", 1440, 560,
              "Google Search Console për watch.al gjatë 28 ditëve të fundit, "
              "me klikimet dhe herët e shfaqura që qëndrojnë njësoj gjatë "
-             "korrikut dhe gushtit 2026.",
-             "28 ditët e fundit më vete: 28 korrik deri më 24 gusht. 385 klikime, 29,8k herë e shfaqur, pozicion mesatar 9,3. Më shumë "
+             "gushtit 2026.",
+             "28 ditët e fundit më vete: 3 gusht deri më 30 gusht. 458 klikime, 33,7k herë e shfaqur, pozicion mesatar 9,7. Më shumë "
              "se gjysma e klikimeve të tremujorit erdhën në 4 javët e fundit."),
         ],
         # Rule 23. It is deliberately not home_sq.py's version of this line:
@@ -124,7 +124,7 @@ CLIENTS = [
         # pages, and the English keeps the 2 apart for the same reason.
         "taken": "Marrë në gusht 2026. Renditja lëviz, ndaj do të duket "
                  "ndryshe kur ta kontrollosh.",
-        "payoff": "Nga asgjë te 741 klikime në tremujor.",
+        "payoff": "Nga asgjë te 900 klikime në tremujor.",
         # Only index 3 is copy. The alt says what is in the screenshot: the
         # cards carry a price in euro and the same price in lek beside it.
         "plate": ("iglisi-shop.webp", 1120, 777,
@@ -298,7 +298,7 @@ CLIENTS = [
 # text and not copied from the English: a newline here says where the emitted
 # line breaks and carries no meaning.
 WORK_INDEX = {
-    "src": "fa0af050",
+    "src": "9266bcee",
     # "Punët" is what chrome_sq.FOOT_HEADINGS[1] and CRUMB_WORK already call
     # this section, so the tab, the crumb and the footer say one word.
     "title": "Punët",
@@ -311,7 +311,7 @@ WORK_INDEX = {
     "standfirst": "Njëri është një dyqan orësh në Durrës që askush" + NL +
                   "jashtë qytetit nuk e gjente dot. Tre muaj pas nisjes, "
                   "Google i" + NL +
-                  "dërgonte 741 klikime në tremujor.",
+                  "dërgonte 900 klikime në tremujor.",
     # "Tre të tjerët" spells the number out because the English spells it out.
     # A translation answers the English; tidying it here and nowhere else is
     # how one page ends up disagreeing with its own twin.

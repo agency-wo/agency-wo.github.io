@@ -13,7 +13,7 @@ They are recoverable. The screenshot is a line chart with labelled axes, so the
 pixels ARE the data at the resolution the chart was drawn. This reads them back.
 
 What makes it honest rather than a drawing. Two totals are published
-independently of this file, 741 clicks and 71.1k impressions, and neither was
+independently of this file, 900 clicks and 82k impressions, and neither was
 used to produce the trace. Summing the traced days and comparing is therefore a
 real test, and it is one a hand-drawn approximation would fail:
 
@@ -41,13 +41,17 @@ ROOT = os.path.dirname(HERE)
 SRC = os.path.join(ROOT, "assets", "proof", "source", "3month.png")
 
 # Calibration, all of it measured off the image rather than guessed. Re-measured
-# on 2026-08-23 for the second screenshot; every constant here moved.
-# Horizontal gridlines sit at y = 354, 437 and 521, which is 83.5px per 8 clicks
-# and per 500 impressions, putting zero at 604.5. The clicks line bottoms out at
-# y = 604, which is the confirmation: the trace found the axis on its own.
-Y_ZERO, Y_PER = 604.5, 83.5
-CLICKS_PER_BAND, IMPR_PER_BAND = 8.0, 500.0
-X_FIRST, X_LAST, DAYS = 534, 1787, 92        # 25 May to 24 August 2026 inclusive
+# on 2026-08-31 for the third screenshot; every constant here moved again.
+# Horizontal gridlines sit at y = 368, 451 and 535, which is 83.5px per 10 clicks
+# and per 750 impressions, putting zero at 618.5. The clicks line bottoms out at
+# y = 618, which is the confirmation: the trace found the axis on its own.
+#
+# Google relabelled both axes for this window: clicks band at 10 where they
+# banded at 8, impressions at 750 where they banded at 500. The top impressions
+# tick reads "2.3k", which is 2250 rounded to two figures, not a fourth band.
+Y_ZERO, Y_PER = 618.5, 83.5
+CLICKS_PER_BAND, IMPR_PER_BAND = 10.0, 750.0
+X_FIRST, X_LAST, DAYS = 539, 1792, 90        # 2 June to 30 August 2026 inclusive
 BLUE, PURPLE = (66, 133, 244), (94, 53, 177)
 Y_TOP, Y_BOT = 340, 620
 
@@ -55,8 +59,8 @@ Y_TOP, Y_BOT = 340, 620
 # itself. Typed once. They sat in 5 places until 2026-08-23, which is 5 places
 # to miss when a new screenshot arrives, and a printout, a guard and a
 # generated docstring quietly disagreeing is the kind of wrong nobody sees.
-CLICKS, IMPRESSIONS = 741, 71100
-WINDOW = "25 May to 24 August 2026"
+CLICKS, IMPRESSIONS = 900, 82000
+WINDOW = "2 June to 30 August 2026"
 
 
 def _near(c, t, tol=40):

@@ -25,10 +25,10 @@ CLIENTS = [
         "site": "watch.al",
         "title": "Iglisi Watch",
         "description": "A family watch shop in Durres with no website at all. Three "
-                       "months after launch Google was sending it 741 clicks a "
+                       "months after launch Google was sending it 900 clicks a "
                        "quarter, from a standing start.",
-        "og_desc": "From no website to 741 clicks a quarter, in 3 months.",
-        "summary": "No website in May. By August, 741 clicks a quarter from "
+        "og_desc": "From no website to 900 clicks a quarter, in 3 months.",
+        "summary": "No website in May. By August, 900 clicks a quarter from "
                    "Google, in 3 languages.",
         "started": [
             "A family watch shop on Rruga Aleksander Goga. They repair watches, and "
@@ -58,8 +58,8 @@ CLIENTS = [
             "The competition here is directory listings and Facebook pages. The opening was there and nobody had taken it.",
         ],
         "gsc": True,
-        "stats": [("741", "clicks from Google"), ("71.1k", "times shown"),
-                  ("8.6", "average position"), ("1%", "click rate")],
+        "stats": [("900", "clicks from Google"), ("82k", "times shown"),
+                  ("8.8", "average position"), ("1.1%", "click rate")],
         # The 2 Search Console views printed under the stats, in order. The 3
         # months shows the shape, the 28 days shows it is still happening, and
         # together they answer "is this a one-off spike". Same tuple as
@@ -78,18 +78,18 @@ CLIENTS = [
         # on spelling ë or à as an entity, not on escaping a quote inside a
         # Python string that is already quoted twice.
         "charts": [
-            ("watch-al-3-months.webp", 1440, 576,
+            ("watch-al-3-months.webp", 1440, 571,
              "Google Search Console for watch.al over 3 months. Clicks and "
-             "impressions both start near zero in late May 2026 and climb "
+             "impressions both start near zero in early June 2026 and climb "
              "through August.",
-             "Three months: 25 May to 24 August 2026. 741 clicks, 71.1k times "
-             "shown, 1% click rate."),
-            ("watch-al-28-days.webp", 1440, 603,
+             "Three months: 2 June to 30 August 2026. 900 clicks, 82k times "
+             "shown, 1.1% click rate."),
+            ("watch-al-28-days.webp", 1440, 560,
              "Google Search Console for watch.al over the last 28 days, "
-             "showing clicks and impressions holding steady through July and "
+             "showing clicks and impressions holding steady through "
              "August 2026.",
-             "The last 28 days on their own: 28 July to 24 August. 385 clicks, "
-             "29.8k times shown, average position 9.3. More than half the "
+             "The last 28 days on their own: 3 August to 30 August. 458 clicks, "
+             "33.7k times shown, average position 9.7. More than half the "
              "quarter&apos;s clicks landed in the final 4 weeks."),
         ],
         # Rule 23: a performance claim carries a date and a self-check. It is
@@ -97,7 +97,7 @@ CLIENTS = [
         # 11 fails any sentence of 9 words or more that appears on 2 pages.
         "taken": "Taken August 2026. Rankings move, so it will look different "
                  "when you check.",
-        "payoff": "From nothing to 741 clicks a quarter.",
+        "payoff": "From nothing to 900 clicks a quarter.",
         "plate": ("iglisi-shop.webp", 1120, 777,
                   "The Iglisi Watch shop page, showing watches for sale with prices "
                   "in euro and lek"),
@@ -259,7 +259,7 @@ WORK_INDEX = {
     "h1": "Four businesses, and what changed.",
     "standfirst": "One is a watch shop in Durres that nobody outside the" + NL +
                   "town could find. Three months after launch, Google was "
-                  "sending it 741" + NL +
+                  "sending it 900" + NL +
                   "clicks a quarter.",
     # Rule 13, in one paragraph: the 3 clients with no published numbers get a
     # line saying what you can check instead, and no apology.

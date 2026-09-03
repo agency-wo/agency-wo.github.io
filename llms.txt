@@ -25,7 +25,7 @@ with its hreflang alternates, is in https://minarankstudio.com/sitemap.xml.
 
 ## Work
 - [Work](https://minarankstudio.com/work/): Four businesses in Albania and beyond, what we built for each, and the one result with published numbers behind it.
-- [Iglisi Watch](https://minarankstudio.com/work/iglisi-watch/): A family watch shop in Durres with no website at all. Three months after launch Google was sending it 741 clicks a quarter, from a standing start.
+- [Iglisi Watch](https://minarankstudio.com/work/iglisi-watch/): A family watch shop in Durres with no website at all. Three months after launch Google was sending it 900 clicks a quarter, from a standing start.
 - [Victoria Boutique](https://minarankstudio.com/work/victoria-boutique/): A Durres boutique bringing Greek labels into Albania. The owner adds new pieces from her phone, in three languages, with no monthly fee and nobody to call.
 - [Intimo Bruna](https://minarankstudio.com/work/intimo-bruna/): A Durres lingerie shop selling through WhatsApp, in Albanian, Italian and English, on a hand-built site with its own fonts and no third-party scripts.
 - [ProAffy](https://minarankstudio.com/work/pro-affy/): Lead generation for heating and cooling firms. A site built around speed of response rather than looks, because that is what decides who gets the job.
@@ -55,7 +55,7 @@ with its hreflang alternates, is in https://minarankstudio.com/sitemap.xml.
 - [How long SEO takes to work](https://minarankstudio.com/blog/how-long-seo-takes/): How long SEO takes in Albania: weeks for the map listing, six to twelve months for the results underneath, with a real three month example and when to stop paying.
 - [Google Business Profile in Albania](https://minarankstudio.com/blog/google-business-profile-albania/): How to set up a Google Business Profile properly in Albania: categories, hours, service areas, photographs and reviews, and the mistakes that keep a listing invisible.
 - [SEO for watch shops and jewellers](https://minarankstudio.com/blog/watch-shops-and-jewellers/): Watch repair is an urgent local search and watch buying is a slow one. What a shop in Durres did about both, and the numbers it has after 3 months.
-- [SEO results: why month 3 beats month 1](https://minarankstudio.com/blog/the-last-4-weeks/): A Durres shop took 741 clicks from Google in its first quarter online, and 385 came in the last 28 days. Why search compounds, with the real numbers.
+- [SEO results: why month 3 beats month 1](https://minarankstudio.com/blog/the-last-4-weeks/): A Durres shop took 900 clicks from Google in its first quarter online, and 458 came in the last 28 days. Why search compounds, with the real numbers.
 - [SEO for restaurants: the menu Google reads](https://minarankstudio.com/blog/restaurants-and-cafes/): Most restaurant menus are pictures or PDFs, so no search engine can read a single dish on them. What that costs, and what to do instead.
 - [How long a new shop takes to rank on Google](https://minarankstudio.com/blog/map-listing-first/): The actual Search Console numbers from a Durres watch shop's first 3 months online, and what a local business should fix before it worries about rankings.
 - [SEO for heating and cooling engineers](https://minarankstudio.com/blog/heating-and-cooling-trades/): Heating and cooling demand spikes into a handful of days and the search happens on a phone, late. Why the work has to be done months before the cold.

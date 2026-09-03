@@ -31,19 +31,19 @@ Iglisi Watch repairs watches and sells them, on
 Rruga Aleksander Goga in Durres. In May there was no website at all,
 so the starting number really is zero. Everything on this chart came
 from search, not from an ad budget.
-741clicks from Google
-71.1ktimes shown
-8.6average position
-1%click rate
-Three months, 25 May to 24 August 2026. Search
+900clicks from Google
+82ktimes shown
+8.8average position
+1.1%click rate
+Three months, 2 June to 30 August 2026. Search
 Console reports clicks, which is not the same as people.
 The purple line is how often the shop came up in Google. The
 blue line is how many people clicked.
 Ads stop the day you stop paying for them. This does not: the shop
 was put on the map once, and search has been sending people ever
 since.
-Position 8.6 is the bottom of the first page. In the last 4 weeks it
-slipped to 9.3 while the click rate rose to 1.3%. More searches are
+Position 8.8 is the bottom of the first page. In the last 4 weeks it
+slipped to 9.7 while the click rate rose to 1.4%. More searches are
 finding the shop, not fewer.
 Search for watch repair in Durres. Then search for a watch shop in
 Durres. Then ask ChatGPT both questions, and see whose name keeps
@@ -81,9 +81,9 @@ We are new, and we publish what older
 studios hide.
 minarank studio has put four businesses online, each with its
 own page. The first had no website in May; by August Google was
-sending it 741 clicks a quarter.
+sending it 900 clicks a quarter.
 Most agencies show a wall of logos. We show the Search Console
-export, including the 8.6 average position and the 1% click rate, which
+export, including the 8.8 average position and the 1.1% click rate, which
 nobody would choose to publish. A figure you cannot check is worth nothing.
 And whatever we build, you own: the domain, the code
 and every account, in your name from day one.
@@ -98,7 +98,7 @@ of taking it. If the honest answer is that you need a better offer rather
 than better marketing, that is the answer you get, and it is the one that
 costs us the job most often.
 How we work
-Updated 31 August 2026
+Updated 3 September 2026
 Before you send anything
 What does this cost?
 There is no price list. A shop with 4 pages and a shop with 400 are
@@ -127,7 +127,7 @@ Get found by people who don't know your name yet.
 Two different jobs. The map listing decides who gets phoned today. The results underneath decide who gets found next year.
 Search for a watch repair in Durres and Google shows a map with 3 shops on it before it shows a single website. Most small businesses aren't on that map, or they're on it with the wrong hours and a photo from 2019. It's usually the cheapest thing to fix and almost nobody fixes it.
 How do I get my shop to show up on Google?
-Showing up on Google is two jobs: the Google Business Profile that puts your shop on the map, and a site that answers what people type. watch.al started from no website and reached 741 clicks a quarter in 3 months. The free audit scores 6 areas and says which job to do first.
+Showing up on Google is two jobs: the Google Business Profile that puts your shop on the map, and a site that answers what people type. watch.al started from no website and reached 900 clicks a quarter in 3 months. The free audit scores 6 areas and says which job to do first.
 The map listing, first
 That listing is a Google Business Profile. It's free, it takes an afternoon to fill in properly, and it decides whether somebody 400 metres away calls you or the shop down the road.
 We fill in all of it: the categories, every service you offer, hours that are still right at Christmas, real photographs of the place rather than stock ones, the description, and the questions people keep ringing up to ask. In Albanian, Italian and English, so the profile answers in the language somebody searched in.
@@ -138,7 +138,7 @@ On-page is everything on your own website: what each page is about, whether it a
 Off-page is everything happening elsewhere that decides whether Google believes you: other sites linking to yours, your business in the same directories your competitors are in, your name and address spelled identically everywhere, and those reviews again. You control less of it and it takes longer, which is why it's worth something once you have it.
 What it costs, and how long it takes
 Technical fixes can move things within weeks. A new site competing for the phrases people actually buy on is a 6 to 12 month job. Anyone promising faster is describing paid ads.
-watch.al went from no website at all to 741 clicks from Google in 3 months. You can see the chart on their page. That's a real timeline for a business starting from zero in a town where the competition has no website either. In a crowded market it's slower, and we'll tell you which one you're in before you pay us anything.
+watch.al went from no website at all to 900 clicks from Google in 3 months. You can see the chart on their page. That's a real timeline for a business starting from zero in a town where the competition has no website either. In a crowded market it's slower, and we'll tell you which one you're in before you pay us anything.
 What we do
 The listing that gets you phoned
 Categories, services, hours, photos, the description, the questions people ask, and posts. In all three languages.
@@ -481,14 +481,14 @@ https://minarankstudio.com/work/
 
 Four businesses, and what changed.
 One is a watch shop in Durres that nobody outside the
-town could find. Three months after launch, Google was sending it 741
+town could find. Three months after launch, Google was sending it 900
 clicks a quarter.
 The other three are newer, so what you get there is the site itself and
 what it does, which you can go and look at. Ad accounts and analytics stay
 with the client, but everything on this page is public and checkable.
 Iglisi Watch
 Durres, Albania. Watch sales and repair.
-No website in May. By August, 741 clicks a quarter from Google, in 3 languages.
+No website in May. By August, 900 clicks a quarter from Google, in 3 languages.
 What we built
 Iglisi Watch, watch.al
 Victoria Boutique
@@ -506,7 +506,7 @@ English language. Heating and cooling.
 Heating firms don't lose jobs because the website is ugly. They lose them because somebody else answered first.
 What we built
 ProAffy, proaffy.com
-Updated 27 August 2026
+Updated 3 September 2026
 
 ## Iglisi Watch
 https://minarankstudio.com/work/iglisi-watch/
@@ -525,8 +525,8 @@ A link between the two, so a watch sold over the counter stops being offered on 
 Where the shop shows up now
 Search for watch repair in Durres, then for a watch shop in Durres, in English, Albanian or Italian. Then ask ChatGPT the same questions. We would rather you checked than took our word for it.
 The competition here is directory listings and Facebook pages. The opening was there and nobody had taken it.
-From nothing to 741 clicks a quarter.
-Updated 27 August 2026
+From nothing to 900 clicks a quarter.
+Updated 3 September 2026
 Iglisi Watch, watch.al
 What we did
 SEO and local search
@@ -550,12 +550,12 @@ When a spreadsheet stops being enough
 Next
 Victoria Boutique
 All four
-741clicks from Google
-71.1ktimes shown
-8.6average position
-1%click rate
-Three months: 25 May to 24 August 2026. 741 clicks, 71.1k times shown, 1% click rate.
-The last 28 days on their own: 28 July to 24 August. 385 clicks, 29.8k times shown, average position 9.3. More than half the quarter's clicks landed in the final 4 weeks.
+900clicks from Google
+82ktimes shown
+8.8average position
+1.1%click rate
+Three months: 2 June to 30 August 2026. 900 clicks, 82k times shown, 1.1% click rate.
+The last 28 days on their own: 3 August to 30 August. 458 clicks, 33.7k times shown, average position 9.7. More than half the quarter's clicks landed in the final 4 weeks.
 Taken August 2026. Rankings move, so it will look different when you check.
 
 ## Victoria Boutique
@@ -575,7 +575,7 @@ Who runs the website now
 She does. The shop updates its own site, which means the site keeps up with the stock instead of drifting a season behind it.
 This is also the build where a one-off became something we could hand to the next client.
 The shop updates its own website.
-Updated 27 August 2026
+Updated 3 September 2026
 Victoria Boutique, victoriaboutique.org
 What we did
 Websites
@@ -604,7 +604,7 @@ Where the sale happens
 In WhatsApp, deliberately. The site's job is to get someone there with the right item already in the message.
 It also loads fast on a phone on mobile data, which is how most of these customers will open it.
 Built for how this market buys.
-Updated 27 August 2026
+Updated 3 September 2026
 Intimo Bruna, intimobruna.com
 What we did
 Websites
@@ -632,7 +632,7 @@ What the site argues
 It argues about response time, not about craftsmanship, because that is the thing the customer is actually deciding on.
 This is copy and conversion work rather than design work, and it is here because it shows a different half of what we do.
 Written to win the callback.
-Updated 27 August 2026
+Updated 3 September 2026
 ProAffy, proaffy.com
 What we did
 Meta ads
@@ -748,7 +748,7 @@ Repairs get searched in a hurry. Watches get researched for weeks. One shop has 
 Read it
 SEO results: why month 3 beats month 1
 14 August 2026
-Of 741 clicks in a quarter, 385 arrived in the final 28 days. What that curve means before you spend anything.
+Of 900 clicks in a quarter, 458 arrived in the final 28 days. What that curve means before you spend anything.
 Read it
 SEO for restaurants: the menu Google reads
 14 August 2026 Your trade
@@ -1136,8 +1136,8 @@ What you should ask anybody working remotely
 Who writes the Italian, and is it their language. How quickly a message gets answered and by whom. What happens to the work if the arrangement ends. Whether you can see something running before you commit to anything larger.
 Our answers are that the Italian is written rather than translated, that replies come within 24 hours, that the domain and code sit in your name from day one, and that the audit exists so you can judge the work before paying for any.
 The proof we have is not Italian
-The Search Console figures published on this site belong to a watch shop in Durres: 741 clicks and 71.1k times shown across three months, at an average position of 8.6 and a 1% click rate. Taken August 2026. Positions drift, so what you see today will not match this.
-We publish the weak numbers next to the good ones on purpose. A position of 8.6 is the bottom of the first page and we would rather you saw it than found it.
+The Search Console figures published on this site belong to a watch shop in Durres: 900 clicks and 82k times shown across three months, at an average position of 8.8 and a 1.1% click rate. Taken August 2026. Positions drift, so what you see today will not match this.
+We publish the weak numbers next to the good ones on purpose. A position of 8.8 is the bottom of the first page and we would rather you saw it than found it.
 When local is simply the better answer
 If your business runs on walking in and shaking hands, if you need somebody physically present to photograph work as it happens, or if you would rather pay more for a face in the room, that is a legitimate choice and not one we will argue you out of.
 Questions worth asking
@@ -1487,7 +1487,7 @@ Being new helps here: there is nothing to undo, no old structure to work around,
 Ask for reviews from the first customers you get
 The first handful matter more than any later handful, because zero to five is a bigger change than twenty to twenty five. The moment to ask is while they are still standing there saying it.
 Expect the shape, not a straight line
-A watch shop here had no site in May. Across the following quarter search brought it 741 clicks at an average position of 8.6, which is the foot of the first page rather than the top.
+A watch shop here had no site in May. Across the following quarter search brought it 900 clicks at an average position of 8.8, which is the foot of the first page rather than the top.
 The closing weeks of that quarter carried more than the opening ones. Flat, flat, then a slope, and knowing that in advance is what stops people giving up in week six.
 What not to buy in the first months
 Links from anybody selling them, a monthly retainer for a site with four pages, or a guarantee of first place. None of the three survives contact with how this actually works.
@@ -1752,7 +1752,7 @@ Then the part that takes months
 The results underneath move slowly, because you are being compared with everybody who has been at it longer. That work is real and it is worth doing, but anybody promising it in weeks is selling you something.
 What it needs is pages that answer what somebody typed, written in the language they typed it in, on a site fast enough that they are still there when it loads.
 What it looked like for one shop
-A watch shop in Durres had no website in May. By August, search was sending it 741 clicks a quarter at an average position of 8.6, which is the bottom of the first page rather than the top of it.
+A watch shop in Durres had no website in May. By August, search was sending it 900 clicks a quarter at an average position of 8.8, which is the bottom of the first page rather than the top of it.
 That is the honest shape of it: not first for everything in a month, but findable, from nothing, in one summer.
 What to do this week
 Claim the listing if it is not yours yet. Fill in every field. Ask the last four happy customers for a review, at the moment they say they are pleased rather than a fortnight later.
@@ -1795,7 +1795,7 @@ The slow half
 Appearing in the ordinary results means being weighed against everybody who has been publishing for longer. Six to twelve months is the honest range for a new site chasing a phrase worth money.
 The first movement inside that usually arrives around week eight and looks like nothing much: a few more phrases you show up for, lower down than you would like.
 What one quarter looked like
-Iglisi Watch began with no site at all. Across the quarter that followed, search delivered 741 clicks at an average position of 8.6 and a click rate of 1%. Expect the position to get worse before it gets better: in the last 4 weeks of that quarter it fell to 9.3 while the click rate rose to 1.3%, because a site that starts appearing for more searches appears for plenty of them near the bottom.
+Iglisi Watch began with no site at all. Across the quarter that followed, search delivered 900 clicks at an average position of 8.8 and a click rate of 1.1%. Expect the position to get worse before it gets better: in the last 4 weeks of that quarter it fell to 9.7 while the click rate rose to 1.4%, because a site that starts appearing for more searches appears for plenty of them near the bottom.
 The closing four weeks carried more of that than the opening eight, which is the shape of this work: flat, flat, then a slope.
 When to stop paying somebody
 If nothing has moved by the fourth month, something is wrong and it should be named out loud rather than waited out. Usually it is that the pages answer no question anybody actually types.
@@ -1889,7 +1889,7 @@ The repair work pays the rent while the sales pages age into being findable. Sea
 Running only the fast half means starting from nothing every quarter. Running only the slow half means waiting months with an empty counter.
 What it took at a shop in Durres
 Iglisi Watch had no website at all, so there is nothing flattering in the starting number: it was zero. A page for each of 58 watches, in 3 languages, plus the map listing.
-3 months later Google was sending 741 clicks a quarter, at an average position of 8.6 and a 1% click rate. Both of those last 2 numbers are weak, and they are on the chart on their page with the screenshot they came from. Taken in August 2026, and search does not hold still, so your own check will show something else.
+3 months later Google was sending 900 clicks a quarter, at an average position of 8.8 and a 1.1% click rate. Both of those last 2 numbers are weak, and they are on the chart on their page with the screenshot they came from. Taken in August 2026, and search does not hold still, so your own check will show something else.
 Questions worth asking
 Most of my work is repairs, not sales. Does search help with that?
 Repairs are the easier half. Somebody with a stopped watch types the problem, the brand or the strap, and they are looking within a few kilometres. That is a search you can win. Selling is harder, because there you are against every online seller in Europe.
@@ -1919,13 +1919,13 @@ Add us as a preferred source on Google
 https://minarankstudio.com/blog/the-last-4-weeks/
 
 The last 4 weeks of the quarter beat the first 8.
-Search does not pay out evenly. The quarter that averaged position 8.6 put over half its clicks at the end.
+Search does not pay out evenly. The quarter that averaged position 8.8 put over half its clicks at the end.
 By Henri Sila · 14 August 2026
 The short answer
-Search work pays at the end, not evenly. In watch.al's first quarter online, Google sent 741 clicks, and 385 of them, over half, arrived between 28 July and 24 August, the final 28 days.
+Search work pays at the end, not evenly. In watch.al's first quarter online, Google sent 900 clicks, and 458 of them, over half, arrived between 3 August and 30 August, the final 28 days.
 The window on its own
-Those 28 days alone: 385 clicks from 29.8k appearances at an average position of 9.3. The quarter as a whole averaged 8.6, so the position got worse while the clicks accelerated. The click rate went the other way, 1% over the quarter and 1.3% in those 4 weeks.
-That pair of facts matters more than either alone. The growth did not come from ranking higher, it came from being shown for more searches, which is what Google does with a site it has decided to trust. The shares say the same thing twice: half the quarter's clicks came from 42% of its appearances, so what arrived late converted better than what came first.
+Those 28 days alone: 458 clicks from 33.7k appearances at an average position of 9.7. The quarter as a whole averaged 8.8, so the position got worse while the clicks accelerated. The click rate went the other way, 1.1% over the quarter and 1.4% in those 4 weeks.
+That pair of facts matters more than either alone. The growth did not come from ranking higher, it came from being shown for more searches, which is what Google does with a site it has decided to trust. The shares say the same thing twice: half the quarter's clicks came from 41% of its appearances, so what arrived late converted better than what came first.
 Why the curve looks like this
 A new site spends its first weeks being sampled. Google shows it a little, watches what people do, and widens or narrows accordingly. The clicks that arrive in month 3 were earned by work done in month 1.
 Judging search work at week 6 is judging bread halfway through baking. The honest check is the direction of the curve, not the height of it.
@@ -1994,18 +1994,18 @@ Add us as a preferred source on Google
 https://minarankstudio.com/blog/map-listing-first/
 
 This is what a new shop's first 3 months on Google look like.
-Position 8.6. A 1% click rate. One spike in July that had nothing to do with us.
+Position 8.8. A 1.1% click rate. One spike in July that had nothing to do with us.
 By Henri Sila · 14 August 2026
 The short answer
-If you are starting from no website, expect months, not weeks, and expect the first numbers to look unimpressive. Iglisi Watch went from nothing in May to 741 clicks a quarter by August. Average position 8.6. Click rate 1%.
+If you are starting from no website, expect months, not weeks, and expect the first numbers to look unimpressive. Iglisi Watch went from nothing in May to 900 clicks a quarter by August. Average position 8.8. Click rate 1.1%.
 Those are the numbers of a business Google has started trusting and has not finished trusting. Know both halves before you hire anybody.
 What the chart actually shows
 Two lines. Impressions, which is how often the shop came up in a search. Clicks, which is how often somebody chose it. Impressions climbed steadily from June and spiked in the second week of July. Clicks followed, at a distance.
 The spike was not a campaign. Nothing was launched that week. Google reassessed a site it had been sampling for 6 weeks and started showing it for more things, which is what the first real move usually looks like: not a line going up, but a step.
 You can see the whole chart, both windows, on the Iglisi Watch page.
-Why position 8.6 is the honest headline
-Average position 8.6 means the bottom of the first page. A 1% click rate is roughly what the bottom of the first page pays. Most case studies would leave both out and print the 741.
-They matter because they tell you where the next work is. The site is being shown 71.1k times and converting 1% of that into visits. Moving from position 8 to position 3 does not add impressions. It multiplies what those impressions are already worth.
+Why position 8.8 is the honest headline
+Average position 8.8 means the bottom of the first page. A 1.1% click rate is roughly what the bottom of the first page pays. Most case studies would leave both out and print the 900.
+They matter because they tell you where the next work is. The site is being shown 82k times and converting 1.1% of that into visits. Moving from position 8 to position 3 does not add impressions. It multiplies what those impressions are already worth.
 Fix the map listing before the website
 On a phone the map comes first: 3 businesses, a rating, a distance and a call button, all of it above the first website link. Plenty of people never scroll past it.
 That map is not your website. It is your Google Business Profile, it is free, and it is the one item on this list that takes an afternoon instead of months.
@@ -2512,7 +2512,7 @@ A guesthouse has 2 ways to be found: somebody searches, or an agency shows you t
 Being findable on your own is how you keep the difference on the bookings that would have come anyway.
 The front door moved
 SiteMinder's Changing Traveller Report 2026 found the share of travellers who begin researching a stay on a search engine fell to 21%, from 36% the year before, while the share starting on a booking agency rose to 26%.
-The same report put the share starting with an assistant at 4%, up from 1%. That is small, and it quadrupled in a year, and both halves of that sentence matter.
+The same report put the share starting with an assistant at 4%, up from 1.1%. That is small, and it quadrupled in a year, and both halves of that sentence matter.
 Agencies are not the enemy and they are not free
 An agency puts you in front of somebody who has never heard of your town. That is worth paying for, and for a new guesthouse it is often the only way to fill a first season.
 What it is not worth is paying that share on a guest who already knew your name and looked you up. Those are the bookings a site and a listing are for.

@@ -25,7 +25,7 @@ WHAT IS NOT COPY and is byte-identical to the English: "slug" (i18n.url_for
 derives every path from it), "fig" (a key into gen_pages.FIGS), every href
 inside a sentence, and the client names. Only the link TEXT is translated.
 
-Numbers are reformatted, never recomputed: 741 klikime, 3 muaj, 6 deri 12
+Numbers are reformatted, never recomputed: 900 klikime, 3 muaj, 6 deri 12
 muaj, 400 metra, 90 sekonda. Nothing here was rounded, softened or re-derived.
 Every ë and ç below is a real character and this file is UTF-8. None of them is
 ever written as an HTML entity: the neighbouring watch.al carries both forms
@@ -36,7 +36,7 @@ SERVICES = [
     # ------------------------------------------------------------------ SEO --
     {
         "slug": "seo",
-        "src": "676260d9",
+        "src": "2342a762",
         "nav": "SEO",
         "schema_name": "Optimizim për motorët e kërkimit dhe kërkim lokal",
         # 21 characters, 2 fewer than the English.
@@ -69,7 +69,7 @@ SERVICES = [
                 "<p>Të gjendesh në Google do të thotë dy punë: Profili i "
                 "Biznesit në Google që e vë dyqanin tënd në hartë, dhe një "
                 "faqe që i përgjigjet asaj që shkruajnë njerëzit. watch.al "
-                "nisi pa asnjë faqe dhe arriti 741 klikime në tremujor për 3 "
+                "nisi pa asnjë faqe dhe arriti 900 klikime në tremujor për 3 "
                 "muaj. <a href=\"/start/\">Auditimi falas</a> vlerëson 6 fusha "
                 "dhe të thotë nga cila punë të fillosh.</p>",
             ]),
@@ -115,9 +115,9 @@ SERVICES = [
                 "Një faqe e re që konkurron për frazat me të cilat njerëzit "
                 "blejnë vërtet është punë 6 deri 12 muajshe. Kush premton më "
                 "shpejt po përshkruan reklama me pagesë.</p>",
-                # 741 and 3 are typed off Search Console. They move separators
+                # 900 and 3 are typed off Search Console. They move separators
                 # and nothing else; here neither of them even has one.
-                "<p>watch.al kaloi nga asnjë faqe fare në 741 klikime nga "
+                "<p>watch.al kaloi nga asnjë faqe fare në 900 klikime nga "
                 "Google për 3 muaj. Grafikun e sheh te "
                 "<a href=\"/work/iglisi-watch/\">faqja e tyre</a>. Ky është "
                 "një afat i vërtetë për një biznes që niset nga zeroja në një "

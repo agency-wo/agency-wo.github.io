@@ -51,10 +51,10 @@ SERVICES = [
 # mean anything. The figures are stated again in the paragraphs underneath, so
 # an edit here is an edit there.
 STATS = [
-    ("741", "clicks from Google"),
-    ("71.1k", "times shown"),
-    ("8.6", "average position"),
-    ("1%", "click rate"),
+    ("900", "clicks from Google"),
+    ("82k", "times shown"),
+    ("8.8", "average position"),
+    ("1.1%", "click rate"),
 ]
 
 PAGE = {
@@ -90,22 +90,22 @@ PAGE = {
                   "so the starting number really is zero. Everything on this chart "
                   "came" + NL +
                   "from search, not from an ad budget.",
-    "stat_note": "Three months, 25 May to 24 August 2026. Search" + NL +
+    "stat_note": "Three months, 2 June to 30 August 2026. Search" + NL +
                  "Console reports clicks, which is not the same as people.",
     # Read aloud in place of the chart, so it is copy and describes the shape
     # of the lines rather than naming the file.
     "fig_alt": "Google Search Console for watch.al. Clicks and impressions both "
                "start" + NL +
-               "near zero in late May 2026 and climb through August.",
+               "near zero in early June 2026 and climb through August.",
     "fig_caption": "The purple line is how often the shop came up in Google. The" + NL +
                    "blue line is how many people clicked.",
     "proof_p1": "Ads stop the day you stop paying for them. This does not: the "
                 "shop" + NL +
                 "was put on the map once, and search has been sending people ever" + NL +
                 "since.",
-    "proof_p2": "Position 8.6 is the bottom of the first page. In the last 4 "
+    "proof_p2": "Position 8.8 is the bottom of the first page. In the last 4 "
                   "weeks it" + NL +
-                  "slipped to 9.3 while the click rate rose to 1.3%. More "
+                  "slipped to 9.7 while the click rate rose to 1.4%. More "
                   "searches are" + NL +
                   "finding the shop, not fewer.",
     "check": "Search for watch repair in Durres. Then search for a watch shop in" + NL +
@@ -142,12 +142,12 @@ PAGE = {
               "studios hide.",
     "open_p1": "{brand} has put {clients} businesses online, each with its" + NL +
                "own page. The first had no website in May; by August Google was" + NL +
-               "sending it 741 clicks a quarter.",
+               "sending it 900 clicks a quarter.",
     # Rule 22 is the argument here and not merely a constraint the block
     # survives: the weak numbers are the reason to believe the strong one, so
     # this says so rather than leaving a reader to notice.
     "open_p2": "Most agencies show a wall of logos. We show the Search Console" + NL +
-               "export, including the 8.6 average position and the 1% click rate, "
+               "export, including the 8.8 average position and the 1.1% click rate, "
                "which" + NL +
                "nobody would choose to publish. A figure you cannot check is worth "
                "nothing.",

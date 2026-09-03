@@ -19,7 +19,7 @@ length, and gate check 38 fails on a page whose element counts differ from its
 English twin, so violating this does not ship. It just wastes a round.
 
 **If a sentence cannot be translated without changing a fact, stop and say so.**
-Rule 21 is that only what is evidenced gets published. An agent smoothing "741
+Rule 21 is that only what is evidenced gets published. An agent smoothing "900
 clicks a quarter" into "hundreds of clicks" has changed a claim while appearing
 to translate one, and that is the single worst thing that can happen to this
 site, because the whole argument of it is that the numbers are checkable.
@@ -64,9 +64,9 @@ the separators; do not recompute anything.
 
 | English | Italian and Albanian |
 |---|---|
-| `8.6` | `8,6` |
-| `71.1k` | `71,1k` |
-| `29.8k` | `29,8k` |
+| `8.8` | `8,8` |
+| `33.7k` | `33,7k` |
+| `1.1%` | `1,1%` |
 | `80.9%` / `19.1%` | `80,9%` / `19,1%` |
 | `137,210` | `137.210` |
 

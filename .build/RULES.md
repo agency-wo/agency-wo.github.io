@@ -83,9 +83,9 @@ everything checkable is checked by `verify.py`, which fails the build.
     post loses its `about` node and its sidebar client link, which is the
     machine-readable version of the same honesty. A `work` that is set and
     unknown is still a typo and still fails the build.
-22. **Keep the weak numbers visible and explain them.** Position 8.6 and a
-    1% click rate stay in the picture, and so does the fact that the position
-    fell to 9.3 in the last 4 weeks while the click rate rose to 1.3%. The
+22. **Keep the weak numbers visible and explain them.** Position 8.8 and a
+    1.1% click rate stay in the picture, and so does the fact that the position
+    fell to 9.7 in the last 4 weeks while the click rate rose to 1.4%. The
     second reading is the more useful one: explaining why a number went the
     wrong way persuades better than conceding it did.
 23. **Any performance claim carries a date and a self-check:** "Taken August
@@ -194,8 +194,8 @@ everything checkable is checked by `verify.py`, which fails the build.
     repair. Softening the sentence is not.
 42. **Never a superlative the studio cannot measure.** "Fastest growing",
     "best in Albania", "#1", and the Italian and Albanian versions of each.
-    The reason is commercial and not delicate: this site publishes an 8.6
-    average position and a 1% click rate on purpose, and one unverifiable
+    The reason is commercial and not delicate: this site publishes an 8.8
+    average position and a 1.1% click rate on purpose, and one unverifiable
     boast standing next to them tells a reader that the checkable numbers were
     a pose too. Being new is answered with counted, dated facts instead -- how
     many businesses, from when, with the export attached -- which is the same

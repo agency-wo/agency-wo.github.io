@@ -22,10 +22,10 @@ apostrophes are ASCII ("l'audit", "nient'altro"), which is what elision costs
 in Italian and what rule 12 asks for.
 
 THE NUMBERS ARE MOVED, NEVER RECOMPUTED, AND ONLY THE ONES IN PROSE ARE MOVED
-HERE. 71.1k -> 71,1k and 8.6 -> 8,6 is the whole change, and STATS does not get
+HERE. 82k -> 82k and 8.8 -> 8,8 is the whole change, and STATS does not get
 it: gen_home.py runs that list through l10n.dec, so the figures in it stay in
 their English form and this file owns only the labels. proof_p2 is prose and
-does the move by hand, keeping position 8,6 and the 1% click rate as the bad
+does the move by hand, keeping position 8,8 and the 1,1% click rate as the bad
 news they are: rule 22 says the weak numbers stay visible, and a translation
 that softens them has edited a claim while appearing to translate one.
 """
@@ -36,7 +36,7 @@ that softens them has edited a claim while appearing to translate one.
 SRC = {
     "AVAILABILITY": "868c31af",
     "SERVICES": "b417d875",
-    "STATS": "79c5087f",
+    "STATS": "c27b7c6e",
 }
 
 NL = chr(10)
@@ -81,27 +81,27 @@ SERVICES = [
      "dell'attività"),
 ]
 
-# STAMP: STATS is a list of tuples too, so "src": "79c5087f" lives in this
+# STAMP: STATS is a list of tuples too, so "src": "c27b7c6e" lives in this
 # comment for the same reason.
 #
 # Four figures from one Search Console export. THE FIGURES ARE THE ENGLISH
 # ONES AND THEY STAY THAT WAY: gen_home.py puts every one of them through
-# l10n.dec, which turns 71.1k into 71,1k and 8.6 into 8,6 on its own. Writing
-# 71,1k here as well gave the number 2 owners, and l10n.dec read that comma as
-# a thousands separator and printed 71.1k on the Italian page: the exact
+# l10n.dec, which turns 82k into 82k and 8.8 into 8,8 on its own. Writing
+# 82k here as well gave the number 2 owners, and l10n.dec read that comma as
+# a thousands separator and printed 82k on the Italian page: the exact
 # watch.al bug l10n.py exists to end, arrived at from the other direction.
 #
 # Only the labels are this file's. They are the glossary's words, and "volte
 # mostrato" is mandated because "impressioni" is a banned variant.
 STATS = [
-    ("741", "clic da Google"),
-    ("71.1k", "volte mostrato"),
-    ("8.6", "posizione media"),
-    ("1%", "percentuale di clic"),
+    ("900", "clic da Google"),
+    ("82k", "volte mostrato"),
+    ("8.8", "posizione media"),
+    ("1.1%", "percentuale di clic"),
 ]
 
 PAGE = {
-    "src": "0b17a2d6",
+    "src": "0b45914c",
 
     # 38 characters against the 52 the title budget leaves once gen_home.py has
     # put "minarank studio ·" in front of it.
@@ -156,7 +156,7 @@ PAGE = {
                   "davvero zero. Tutto quello che c'è in questo grafico viene "
                   "dalla ricerca," + NL +
                   "non da un budget pubblicitario.",
-    "stat_note": "Tre mesi, dal 25 maggio al 24 agosto 2026. Search Console" + NL +
+    "stat_note": "Tre mesi, dal 2 giugno al 30 agosto 2026. Search Console" + NL +
                  "riporta i clic, che non sono la stessa cosa delle persone.",
     # Read aloud in place of the chart. "le volte in cui il sito è stato
     # mostrato" is the sentence form of the glossary's "volte mostrato": the
@@ -164,7 +164,7 @@ PAGE = {
     # is banned and would have been shorter, which is the point of banning it.
     "fig_alt": "Google Search Console per watch.al. I clic e le volte in cui "
                "il sito è" + NL +
-               "stato mostrato partono entrambi quasi da zero a metà maggio "
+               "stato mostrato partono entrambi quasi da zero a inizio giugno "
                "2026 e salgono" + NL +
                "per tutto agosto.",
     "fig_caption": "La linea viola mostra quante volte il negozio è comparso "
@@ -175,13 +175,13 @@ PAGE = {
                 "no: il negozio è stato messo sulla mappa una volta, e da "
                 "allora la" + NL +
                 "ricerca continua a mandare persone.",
-    # Rule 22. Both bad numbers stay, and so does the sentence that says a 1%
+    # Rule 22. Both bad numbers stay, and so does the sentence that says a 1,1%
     # click rate is what the bottom of the first page pays. Nothing here is
     # hedged, softened or moved into a subordinate clause.
-    "proof_p2": "La posizione 8,6 è il fondo della prima pagina. Nelle ultime "
+    "proof_p2": "La posizione 8,8 è il fondo della prima pagina. Nelle ultime "
                   "4 settimane" + NL +
-                  "è scesa a 9,3 mentre la percentuale di clic saliva "
-                  "all'1,3%. Sono più" + NL +
+                  "è scesa a 9,7 mentre la percentuale di clic saliva "
+                  "all'1,4%. Sono più" + NL +
                   "ricerche a trovare il negozio, non meno.",
     # The dare, and it has to be an instruction an Italian speaker would
     # actually follow, so the two searches are typed the way they get typed:
@@ -217,11 +217,11 @@ PAGE = {
     "open_p1": "{brand} ha portato online {clients} attività, ognuna con la" + NL +
                "sua pagina. La prima non aveva alcun sito a maggio; ad agosto "
                "Google le" + NL +
-               "mandava 741 clic a trimestre.",
+               "mandava 900 clic a trimestre.",
     "open_p2": "Quasi tutte le agenzie mostrano un muro di loghi. Noi mostriamo" + NL +
-               "l'export di Search Console, compresa la posizione media 8,6 e la "
+               "l'export di Search Console, compresa la posizione media 8,8 e la "
                "percentuale" + NL +
-               "di clic dell'1%, che nessuno sceglierebbe di pubblicare. Un dato "
+               "di clic dell'1,1%, che nessuno sceglierebbe di pubblicare. Un dato "
                "che non" + NL +
                "puoi verificare non vale niente.",
     # "a tuo nome" is the phrase an Italian reader recognises from a utility
