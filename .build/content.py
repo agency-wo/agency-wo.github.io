@@ -144,18 +144,19 @@ SERVICES = [
         "slug": "geo",
         "nav": "AI search",
         "schema_name": "Generative engine optimisation",
-        "title": "AI search in Albania, sometimes called GEO",
+        "title": "AI search in Albania, sometimes called GEO or AIO",
         "h1": "Be one of the 3 businesses the answer names.",
         "standfirst": "Ask ChatGPT for a watch repair shop in Durres and it names two "
                       "or three. Being one of them isn't luck.",
-        "description": "AI search, sometimes called GEO. Becoming one of the few "
-                       "businesses an assistant names when a customer asks it for a "
-                       "recommendation.",
+        "description": "AI search, also sold as GEO, AIO or AEO. Becoming one of "
+                       "the few businesses an assistant names when a customer asks "
+                       "it for a recommendation.",
         "og_desc": "When an assistant answers, it names two or three businesses.",
         "lead": "More people now ask an assistant before they open Google, and the "
                 "answer names a handful of businesses. Nobody tells you whether you "
                 "were one of them. There's no ranking report for this yet, which is "
-                "exactly why it's still cheap to win. If any of the words on "
+                "exactly why it's still cheap to win. It is also sold as "
+                "<a href=\"/blog/aio-aeo-geo/\">AIO or AEO</a>. If any of the words on "
                 "this page are new, <a href=\"/glossary/\">they are all "
                 "defined here</a>.",
         "sections": [

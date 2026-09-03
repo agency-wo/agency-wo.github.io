@@ -5312,6 +5312,238 @@ POSTS = [
                     ("/glossary/audit/", "What is an audit?")],
     },
     {
+        "slug": "aio-aeo-geo",
+        "date": "2026-09-03",
+        "updated": "2026-09-03",
+        "topic": "AI search",
+        "work": None,
+        "service": ("/geo/", "AI search"),
+
+        "title": "AIO, AEO and GEO are three names for one job",
+        "h1": "Three acronyms, one piece of work.",
+        "summary": "Three labels arrived for the same thing in about a year, and the "
+                   "difference between them is who is doing the naming.",
+        "standfirst": "The letters keep changing. What somebody has to do to your site "
+                      "does not.",
+        "description": "AIO, AEO and GEO explained side by side: where each label came "
+                       "from, what they actually share, and what it means when one of "
+                       "them arrives on a quote.",
+        "og_desc": "Three labels, one job, and one reason the naming keeps moving.",
+
+        "body": [
+            ("What each one stands for",
+             ["<p>AIO is AI optimisation. AEO is answer engine optimisation. GEO is "
+              "generative engine optimisation. All three describe getting named when "
+              "somebody asks an assistant for a business like yours.</p>",
+              "<p>No standards body handed those out. They were coined separately, "
+              "mostly by people who needed a word for a service they had started "
+              "selling, and all three stuck.</p>"]),
+            ("What the three have in common",
+             ["<p>Everything that matters. A page that answers the question under the "
+              "heading that asks it, details about the business that agree wherever a "
+              "machine finds them, and other sites that back up what yours claims.</p>",
+              "<p>Nobody has yet described a technique that helps under one of these "
+              "labels and not the others, because underneath they are pointed at the "
+              "same handful of systems.</p>"]),
+            ("Why the naming keeps moving",
+             ["<p>A new word is easier to sell than a crowded one. SEO carries twenty "
+              "years of arguments about what it costs and whether it worked. A fresh "
+              "acronym carries none of that yet, which is convenient for whoever "
+              "prints it first.</p>",
+              "<p>Nothing unusual in that, and nothing to resent. It just means the "
+              "label on a quote tells you when somebody started offering the service, "
+              "not how well they do it.</p>"]),
+            ("What to do when one turns up on a quote",
+             ["<p>Ask what changes on the site, in order, and what the first month "
+              "looks like. A real answer names pages and sentences. A thin one names "
+              "the acronym again and moves on.</p>",
+              "<p>Then ask what an assistant says about the business today, before any "
+              "work starts. Whoever cannot tell you that is not measuring the thing "
+              "the label refers to.</p>"]),
+        ],
+
+        "faq": [
+            ("Is AIO different work from GEO?",
+             "Not in any way anybody has been able to describe. Treat a quote that "
+              "separates them, and prices them separately, as one to ask about."),
+            ("Which of the three should I use?",
+             "Whichever your customers and your accountant understand. We write AI "
+              "search on this site because a shop owner reads it once and knows what "
+              "it means, and we put the acronyms next to it so the two meet."),
+            ("Will a new acronym replace these?",
+             "Probably, and it will describe the same work again. The test that "
+              "survives every rename is simple: open an assistant and see whether it "
+              "names you."),
+        ],
+
+        "payoff": "Send us the address and the town, and we will tell you which of the "
+                  "three your site is already ready for. It is usually the same answer "
+                  "for all three.",
+        "related": [("/geo/", "AI search"),
+                    ("/glossary/geo/", "What is GEO?")],
+    },
+    {
+        "slug": "ai-search-como",
+        "date": "2026-09-03",
+        "updated": "2026-09-03",
+        "topic": "AI search",
+        "work": None,
+        "service": ("/geo/", "AI search"),
+
+        "title": "AI search in Como",
+        "h1": "An assistant answers your summer visitor from somebody else's page.",
+        "summary": "The season changes the language of the question, and an assistant "
+                   "answers it either way, out of whatever it has read about the lake.",
+        "standfirst": "It will not say it does not know. It names three places, and one "
+                      "of them might be you.",
+        "description": "AI search in Como: why a question asked in German or English "
+                       "gets answered from a booking platform rather than your site, "
+                       "and what puts a lake business back into the answer.",
+        "og_desc": "Ask about the lake in German and something answers. Usually not "
+                   "your website.",
+
+        "body": [
+            ("The question changes language and the answer does not wait",
+             ["<p>Out of season somebody here asks in Italian about something "
+              "practical. In July somebody in Munich or Manchester asks a similar "
+              "thing in German or English, weeks before arriving. Both get an "
+              "answer.</p>",
+              "<p>What differs is where the answer was built from. When your own "
+              "pages say nothing in that language, an assistant assembles it out of "
+              "whatever else mentions the lake, and that is usually a booking "
+              "platform.</p>"]),
+            ("Ten results became three names",
+             ["<p>A results page handed a visitor ten options and let them scroll. An "
+              "assistant gives two or three and stops. Around a lake with hundreds of "
+              "places to eat and sleep, that filter is far harder than any ranking "
+              "was.</p>",
+              "<p>And it issues no report. Nobody informs you that you were left out "
+              "of an answer, which is why most owners here have no idea any of this "
+              "is happening.</p>"]),
+            ("Being listed on a platform is not being named",
+             ["<p>When the answer gives your town and then points at a booking site, "
+              "the visitor books through the booking site and you pay the commission "
+              "you were trying to avoid. You appear inside somebody else's page "
+              "instead of as a business with one of your own.</p>",
+              "<p>The remedy is the boring one. Pages in the languages your season "
+              "actually speaks, saying what you offer, carrying an address and a "
+              "number that gets answered.</p>"]),
+            ("The season puts the work in the wrong month",
+             ["<p>Somebody planning a July week on the lake is asking in March. "
+              "Whatever a machine can read about you in March is what it repeats. By "
+              "the time you are busy the answers have already settled.</p>",
+              "<p>So the writing belongs in the empty months, which are exactly the "
+              "months when paying for writing feels hardest to justify.</p>"]),
+            ("What we would not promise here",
+             ["<p>We cannot place you in an answer on request. Nobody can, and whoever "
+              "says otherwise is selling you the acronym. What we can do is read what "
+              "an assistant says about the lake today and show you which pages its "
+              "sentences came from.</p>"]),
+        ],
+
+        "faq": [
+            ("Does an assistant answer in the language of the question?",
+             "It answers in the language you used, whether or not anything on your own "
+             "site is written that way. That is this whole article in one sentence."),
+            ("Do we need German pages as well as English?",
+             "Only if German visitors are a real share of your season. One more "
+             "language is one more to keep current, and a page left to rot does more "
+             "harm than a missing one."),
+            ("Can we check this ourselves?",
+             "Yes, in five minutes. Ask an assistant in German for somewhere to eat or "
+             "stay on the lake and read the names it hands back. Repeat it a few times, "
+             "because they move."),
+            ("Does the map listing still matter for this?",
+             "Yes. The details on it are among the few facts about you that agree "
+             "everywhere, and agreement is most of what these systems check."),
+            ("Is this instead of the ordinary search work?",
+             "No, and the Como piece on ordinary search is still where to begin. This "
+             "is the same site read by a different reader."),
+        ],
+
+        "payoff": "Tell us which language your July actually speaks. We will read what "
+                  "an assistant already says about the lake and where it got it.",
+        "related": [("/geo/", "AI search"),
+                    ("/blog/seo-como/", "SEO in Como")],
+    },
+    {
+        "slug": "ai-search-pavia",
+        "date": "2026-09-03",
+        "updated": "2026-09-03",
+        "topic": "AI search",
+        "work": None,
+        "service": ("/geo/", "AI search"),
+
+        "title": "AI search in Pavia",
+        "h1": "An assistant does not know you are standing in Pavia.",
+        "summary": "The one advantage a business here had in ordinary search, being "
+                   "the nearest, is the first thing an assistant drops.",
+        "standfirst": "Google shows you Pavia because it knows where the phone is. An "
+                      "assistant answers from what it has read.",
+        "description": "AI search in Pavia: why an assistant drops the proximity "
+                       "advantage local search hands you, how the answer drifts north, "
+                       "and what puts the town back into it.",
+        "og_desc": "Google knows where the phone is. An assistant only knows what it "
+                   "has read.",
+
+        "body": [
+            ("Proximity was the advantage and it does not carry over",
+             ["<p>Somebody searching on a phone here is shown this town, because the "
+              "search knew where the phone was. That was structural, and it belonged "
+              "to you rather than to anybody who wanted to sell it to you.</p>",
+              "<p>An assistant has no map panel and no radius. It answers out of what "
+              "it has read, and what has been written about Milan is thicker than what "
+              "has been written about Pavia by a wide margin.</p>"]),
+            ("So the answer drifts thirty-five kilometres north",
+             ["<p>Ask for a trade in Pavia and you can get Milan names, or a mix of "
+              "both, because a machine reaches for the businesses it is able to "
+              "describe. The leak gets a second route.</p>",
+              "<p>Nobody sends you a report about that either. You find out because a "
+              "customer mentions they went north, if they mention anything.</p>"]),
+            ("The only thing that puts Pavia back in is the word Pavia",
+             ["<p>Written in sentences, on pages, beside the thing you actually sell. "
+              "Not in a page title on its own and not inside a picture. A reader that "
+              "never sees your layout still reads your text.</p>",
+              "<p>In practice that is one page per thing you sell, each naming the town "
+              "and the thing in the same paragraph. Unglamorous, and cheap.</p>"]),
+            ("The autumn intake asks a machine because it has nobody to ask",
+             ["<p>Part of the customer base here arrives in October knowing no one. "
+              "There is no neighbour to ask and no shop already trusted, so the "
+              "question gets typed, and more of it now gets typed into an "
+              "assistant.</p>",
+              "<p>To that audience you exist only if something readable says so.</p>"]),
+            ("What we will not claim",
+             ["<p>There is no position to buy inside an answer and no queue to join. "
+              "What we will do is ask an assistant for your trade in this town while "
+              "you watch, and tell you which pages its answer was built from.</p>"]),
+        ],
+
+        "faq": [
+            ("Does an assistant know where I am?",
+             "Not reliably, and frequently not at all. It answers from what it has "
+             "read, so a town has to be written down before it can be in the answer."),
+            ("Why would it name Milan businesses?",
+             "Because more has been written about them. Volume of readable text is "
+             "doing the job that distance used to do."),
+            ("Is this worth it for a market this size?",
+             "It costs little precisely because almost nobody local is doing it. Being "
+             "one of three named in a small town is cheaper than being one of ten in a "
+             "large one."),
+            ("Do I need a new website for this?",
+             "Usually not. Most of it is text on the site you already have, plus "
+             "details that agree wherever a machine finds them."),
+            ("How do I check it before paying anybody?",
+             "Open an assistant, ask for your trade in this town the way a customer "
+             "would, and read the names. If yours is absent you have learned something "
+             "for nothing."),
+        ],
+
+        "payoff": "Send us your site and the ten words a customer would type. We will "
+                  "tell you whether a machine can answer with your name in them.",
+        "related": [("/geo/", "AI search"),
+                    ("/blog/seo-pavia/", "SEO in Pavia")],
+    },
+    {
         "slug": "does-my-agency-do-ai-search",
         "date": "2026-08-30",
         "updated": "2026-08-30",

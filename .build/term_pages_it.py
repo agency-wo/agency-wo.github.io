@@ -111,7 +111,7 @@ PAGES = [
     },
     {
         "slug": "geo",
-        "src": "d731e9eb",
+        "src": "72ab0e6a",
         "key": None,
         "term": "GEO",
         "h1": "Cos'è la GEO?",
@@ -123,8 +123,9 @@ PAGES = [
         "og_desc": "Spiegata senza la sicurezza che nessuno si è ancora "
                    "guadagnato.",
         "standfirst": "Il lavoro per essere una delle attività che un "
-                      "assistente nomina. È una cosa vera, è una cosa giovane, "
-                      "e la versione onesta ammette la seconda metà.",
+                      "assistente nomina, venduto anche come AIO o AEO. È una "
+                      "cosa vera, è una cosa giovane, e la versione onesta "
+                      "ammette la seconda metà.",
         "sections": [
             {"h2": "Perché non è di nuovo SEO",
              "body": [

@@ -186,27 +186,29 @@ SERVICES = [
     # ------------------------------------------------------------------ GEO --
     {
         "slug": "geo",
-        "src": "26c4b09a",
+        "src": "b0dedcf0",
         # glossary.TERMS: AI search -> kërkimi me AI. Matches
         # chrome_sq.FOOT_LABELS[0][1] exactly.
         "nav": "Kërkimi me AI",
         "schema_name": "Optimizim për motorët gjenerativë",
-        # 36 characters.
-        "title": "Kërkimi me AI në Shqipëri, ose GEO",
+        # 38 characters.
+        "title": "Kërkimi me AI në Shqipëri, GEO ose AIO",
         "h1": "Bëhu një nga 3 bizneset që përmend përgjigjja.",
         "standfirst": "Pyet ChatGPT për një dyqan riparimi orësh në Durrës dhe "
                       "të përmend dy ose tre. Të jesh një prej tyre nuk është "
                       "fat.",
-        # 137 characters.
-        "description": "Kërkimi me AI, i quajtur ndonjëherë GEO. Të bëhesh një "
-                       "nga pak bizneset që një asistent përmend kur një "
-                       "klient i kërkon një rekomandim.",
+        # 144 characters.
+        "description": "Kërkimi me AI, i shitur edhe si GEO, AIO ose AEO. Të "
+                       "bëhesh një nga pak bizneset që një asistent përmend kur "
+                       "një klient i kërkon një rekomandim.",
         "og_desc": "Kur një asistent përgjigjet, përmend dy ose tre biznese.",
         "lead": "Gjithnjë e më shumë njerëz pyesin një asistent para se të "
                 "hapin Google, dhe përgjigjja përmend një grusht biznesesh. "
                 "Askush nuk të thotë nëse ishe një prej tyre. Për këtë ende "
                 "s'ka raport renditjeje, dhe pikërisht prandaj fitorja "
-                "kushton ende pak. Nëse ndonjë fjalë e kësaj faqeje është e "
+                "kushton ende pak. Shitet edhe si <a "
+                "href=\"/blog/aio-aeo-geo/\">AIO ose AEO</a>. Nëse ndonjë "
+                "fjalë e kësaj faqeje është e "
                 "re, <a href=\"/glossary/\">janë të gjitha të shpjeguara "
                 "këtu</a>.",
         "sections": [

@@ -160,7 +160,7 @@ What does this cost?
 It moves with how many places you need to be found in, how many services want a page of their own, and how many languages. One shop, one city, one language is the small end. Several branches in three languages is not. You get the number after we look, not before.
 Do you only work in Durres?
 Durres is where we are and where our clients are, which is why the proof on this site comes from here. The work itself is remote, so Tirana and the rest of Albania are the same job at the same rate, and we do it in Italian for businesses selling into Italy.
-Updated 27 August 2026
+Updated 3 September 2026
 Honest timeline
 Technical fixes: weeks. A new site competing on commercial phrases: 6 to 12 months. We'd rather lose the job than agree to a date we don't believe.
 Written about this
@@ -196,12 +196,12 @@ Also
 AI search
 Websites
 
-## AI search in Albania, sometimes called GEO
+## AI search in Albania, sometimes called GEO or AIO
 https://minarankstudio.com/geo/
 
 Be one of the 3 businesses the answer names.
 Ask ChatGPT for a watch repair shop in Durres and it names two or three. Being one of them isn't luck.
-More people now ask an assistant before they open Google, and the answer names a handful of businesses. Nobody tells you whether you were one of them. There's no ranking report for this yet, which is exactly why it's still cheap to win. If any of the words on this page are new, they are all defined here.
+More people now ask an assistant before they open Google, and the answer names a handful of businesses. Nobody tells you whether you were one of them. There's no ranking report for this yet, which is exactly why it's still cheap to win. It is also sold as AIO or AEO. If any of the words on this page are new, they are all defined here.
 How do I get ChatGPT to recommend my business?
 ChatGPT recommends businesses it can read and check somewhere else. Answer the question plainly under the heading that asks it, label the business so a machine knows what it is, and get named on sites you don't own. Ask it for a watch repair in Durres: it names Iglisi Watch.
 We've done this once already
@@ -241,7 +241,7 @@ What does this cost?
 Mostly it depends on how much of your business already exists as text a machine can read. A site with real pages and a filled-in listing needs far less work than one where everything lives inside photographs. The audit tells you which one you are, and it is free.
 Does this only work in English?
 No, and that is most of the point. An assistant asked in Albanian answers from Albanian sources, and the same question in Italian answers from Italian ones. A business that exists in one language is invisible in the other two, which is why everything we build ships in three.
-Updated 27 August 2026
+Updated 3 September 2026
 What to expect
 This moves slower than search rankings and is harder to measure. Expect the first signs in months, and expect them to be uneven between one assistant and another.
 Written about this
@@ -252,6 +252,9 @@ What AI search actually is
 Will AI replace Google?
 AI search answers Italian from Italian sources
 Is your agency doing anything about AI search?
+AI search in Como
+AI search in Pavia
+AIO, AEO and GEO are three names for one job
 Also
 SEO and local search
 Websites
@@ -295,7 +298,7 @@ What does this cost?
 The number of pages, the number of languages, and whether the site has to hold stock, bookings or payments. Five pages in one language is the small end. Three languages with a shop attached is a different build. Nothing starts until the number is in writing.
 Do you work outside Durres?
 Yes. Building is remote, so Tirana, the coast and anywhere else in Albania cost what they cost here. We also build in Italian for businesses whose customers are in Italy, which is a different job from translating an Albanian site.
-Updated 27 August 2026
+Updated 3 September 2026
 Checkable right now
 Nothing on this page is loaded from another company. Open the network tab and count.
 Written about this
@@ -359,7 +362,7 @@ What does this cost?
 Two numbers, kept separate on purpose. What you pay us to run it is a flat fee, decided by how many campaigns and how many languages. What you pay Meta is your budget, it never passes through us, and we never take a cut of it.
 Can you run ads in Italian?
 Yes. The ad, the page it lands on and the reply all have to be in the same language, or the money leaks at whichever step changes. That is true of Albanian and Italian equally, and it is the most common way an ad budget is wasted here.
-Updated 27 August 2026
+Updated 3 September 2026
 How we charge
 A flat monthly fee for the work. Never a percentage of what you spend, because that pays an agency to tell you to spend more.
 Written about this
@@ -763,7 +766,19 @@ SEO for a garage: what customers search
 14 August 2026 Your trade
 Drivers describe a symptom, not a service, and the garage that wrote the symptom down is the one they find.
 Read it
-AI search 7
+AI search 10
+AIO, AEO and GEO are three names for one job
+3 September 2026
+Three labels arrived for the same thing in about a year, and the difference between them is who is doing the naming.
+Read it
+AI search in Pavia
+3 September 2026
+The one advantage a business here had in ordinary search, being the nearest, is the first thing an assistant drops.
+Read it
+AI search in Como
+3 September 2026
+The season changes the language of the question, and an assistant answers it either way, out of whatever it has read about the lake.
+Read it
 Is your agency doing anything about AI search?
 30 August 2026
 One question, and the answer tells you whether the studio you pay has noticed where a share of the searching has moved.
@@ -895,7 +910,7 @@ The money numbers a small shop should track
 14 August 2026
 A bug that hid inside a chart for a whole phase, and what it says about the software a small business runs on.
 Read it
-Updated 30 August 2026
+Updated 3 September 2026
 
 ## What SEO costs in Italy
 https://minarankstudio.com/blog/what-seo-costs-in-italy/
@@ -929,7 +944,7 @@ Will you tell me if I should not spend anything?
 Yes, and it happens. If advertising would serve you better this quarter than search work, that is what the audit will say, even though it is the answer that earns us less.
 Send us the address and the words you wish you appeared for. You get the audit back and no meeting is involved.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 SEO and local search
 Also
@@ -971,7 +986,7 @@ What does the free audit cover?
 What the site does well, where the gaps are, and what we would fix first in order. It arrives as a PDF and no meeting is required to get it.
 Search for yourself from your office in another city and see what comes back. Send us the screenshot.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 SEO and local search
 Also
@@ -1013,7 +1028,7 @@ Is the map listing worth the effort for us?
 Yes, and more than in most trades, because it carries the photographs and the reviews together in the place people look first.
 Tell us which months pay for your year. We will tell you what has to be finished before they start.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 SEO and local search
 Also
@@ -1055,7 +1070,7 @@ What does this cost?
 It depends on how many pages your range actually needs, which we can only tell after looking. The audit is free and comes with no meeting attached.
 Tell us the narrowest thing a buyer could type and still need you. That sentence is usually where the work starts.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 SEO and local search
 Also
@@ -1097,7 +1112,7 @@ Where does this start?
 With a free audit of the site you already have. You get a PDF saying what works, what does not, and what we would fix first in order. It is yours whether you hire us or not.
 Search your own trade plus Bergamo and count who shows up. Send us that list and we will tell you what stands between you and it.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 SEO and local search
 Also
@@ -1138,7 +1153,7 @@ What happens if it does not work out?
 You keep the domain, the code and every account, because they were in your name from the beginning. Nothing has to be handed back or asked for.
 Tell us what worries you about hiring at a distance. If the honest answer is that we are wrong for you, that is what you get.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 SEO and local search
 Also
@@ -1181,7 +1196,7 @@ Is my website too small to rank?
 Size is not the measure; answering something is. A five page site that answers five real questions beats a forty page one that answers none, and it is a much easier thing to build.
 Send us the address and we will tell you which of the five is actually happening to you.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 SEO and local search
 Also
@@ -1226,7 +1241,7 @@ What if they are a national chain?
 Then compete where size does not help. A chain cannot be local in your street, cannot answer a question about your town, and usually has one page covering the whole country where you can have one covering your city.
 Send us both addresses, yours and theirs, and we will tell you which of the five is doing the work.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 SEO and local search
 Also
@@ -1272,7 +1287,7 @@ What if we already pay somebody?
 Then the useful spend is a second opinion rather than a second agency. You end up with either proof the money is working or a list the current one can act on, and both are cheaper than switching.
 Send us the address and we will tell you which of the three shapes fits, and roughly what the work would involve.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 SEO and local search
 Also
@@ -1315,7 +1330,7 @@ Will you keep contacting me afterwards?
 No. One reply with the document, and one follow-up if you asked a question in it. There is no sequence and there is no list, which is why the form asks for so little.
 Send the address and you get the document itself, which is a better argument than any description of it.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 SEO and local search
 Also
@@ -1359,7 +1374,7 @@ What can we check before deciding?
 The client pages here, and the site you are reading. Both were built the same way, so if the speed and the structure hold up under a tool, that is the work rather than a description of it.
 Tell us the term you want and we will read who currently holds it and whether it is worth going after.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 SEO and local search
 Also
@@ -1403,7 +1418,7 @@ Where does it start?
 With a free audit of the site you have, saying what we would change and in what order. You do not have to decide anything first and it commits you to nothing.
 Send us the site address and we will read it in Italian, then tell you what we would change and in what order.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 SEO and local search
 Also
@@ -1447,7 +1462,7 @@ How does the cost compare with an agency here?
 Lower, but that is not the reason to choose. The reason is that you talk to whoever does the work. If price is the only thing that matters there are cheaper options than us and you will find them.
 Tell us your zone and who you count as a competitor, and we will tell you how many there really are and what keeps them above you.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 SEO and local search
 Also
@@ -1489,7 +1504,7 @@ Can I do the first steps myself?
 Yes, and you should. The listing is an afternoon and nobody needs to be paid for it. Bring somebody in when the writing and the structure start costing more time than they are worth to you.
 Tell us what you have just started and we will tell you the first thing worth doing, which is usually free.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 SEO and local search
 The business in this post
@@ -1535,7 +1550,7 @@ What if my customers are visitors rather than locals?
 Then the search happens in another language and often before they arrive, which changes what the pages have to say but not how the map works. Say that out loud in the first conversation.
 Send us the trade and we will search it here, on a phone, and tell you who is in the three and why.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 SEO and local search
 The business in this post
@@ -1580,7 +1595,7 @@ Our clients come from recommendations. Why bother?
 Because the recommendation increasingly ends with somebody searching the name to check you exist. If nothing sensible comes back, the recommendation does less work than the person making it intended.
 Send us your address and we will tell you which documents you are findable for and which you are not.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 SEO and local search
 Also
@@ -1624,7 +1639,7 @@ Do reviews help anything besides the map?
 They help the decision, which is the part that pays. Somebody comparing two shops is usually reading reviews rather than websites, and they also feed what assistants say about you when somebody asks.
 If you cannot find your review link, send us the business name and we will find it and send it back.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 SEO and local search
 Also
@@ -1667,7 +1682,7 @@ Our members come from word of mouth. Is search worth it?
 Word of mouth still ends in a search. Somebody is told about you, looks you up, and finds no timetable and no price. The recommendation was doing its job right up until that moment.
 Send us your address and we will tell you what a person deciding between you and the next place cannot currently find out.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 SEO and local search
 Also
@@ -1711,7 +1726,7 @@ Do we need to be on every trade directory?
 No. Two or three that people here actually use, filled in properly and consistent with your site, beat twenty half filled ones. The consistency is the part that counts.
 Send us your address and we will tell you which jobs you could be found for and are not.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 SEO and local search
 Also
@@ -1755,7 +1770,7 @@ Do I need to be in Tirana to rank in Tirana?
 For the map, distance counts, so a Tirana searcher standing in Tirana sees Tirana businesses. For the results underneath, no. We are in Durres and the building is done remotely, which is why we say so plainly rather than renting an address.
 Send us the address and we will tell you which of the two competitions you are actually losing.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 SEO and local search
 The business in this post
@@ -1798,7 +1813,7 @@ My competitor has done this for years. Then what?
 Then you do not take their best phrase this year. You take the ten they never wrote a page for, which is generally where the customers were anyway.
 Send us the address and we will say which half is missing, and roughly what the other half is going to ask of you.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 SEO and local search
 The business in this post
@@ -1844,7 +1859,7 @@ Does posting updates help?
 A little, and much less than the fields above. Do the categories, hours, photographs and reviews first. If posting is the only thing you have energy for, it is the wrong thing to spend it on.
 Send us your listing and we will tell you which fields are empty and which of them is costing you calls.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 SEO and local search
 Also
@@ -1888,7 +1903,7 @@ What decides the price?
 How many pieces you want listed, whether you take payment, and how many languages. A page that gets a repair shop found is small. A catalogue of two hundred pieces with stock and prices is a different job, and we say which one you are asking for.
 Tell us which half of your shop is quiet, the repairs or the sales, and we will tell you which search is missing.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 SEO and local search
 The business in this post
@@ -1920,7 +1935,7 @@ Check it against your own chart
 If you have Search Console, look at your last 90 days and split them in 3. A healthy new site leans the same way: the last third beats the first 2. A flat line for 90 days is the thing to worry about, and worth a conversation.
 Send us your Search Console chart and we will read the curve with you, in plain words.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 SEO and local search
 The business in this post
@@ -1965,7 +1980,7 @@ What decides the price of this?
 How long the menu is, how many languages it needs, and whether the photographs exist yet. A one page menu in Albanian is a small job. A hundred dishes in three languages with a booking form is not. You are told which one you are before you agree to anything.
 Send us your menu the way a customer finds it, and we will tell you which dishes are invisible.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 SEO and local search
 Also
@@ -2003,7 +2018,7 @@ Check it yourself
 Search for watch repair in Durres. Then search for a watch shop in Durres. Do it in Albanian, then in Italian. We would rather you checked than took our word for it, and if the answer has moved since August, that is the honest state of this work rather than a screenshot we chose.
 The audit scores how you stand next to the businesses competing with you, which on a phone means that map. Send us your address and we will look.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 SEO and local search
 The business in this post
@@ -2048,7 +2063,7 @@ What decides the price?
 How many areas you cover, how many services you list, and whether you need more than one language. Getting one van found in one city is a small job.
 Tell us what your quietest month is, and we will tell you what to have finished before the cold arrives.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 SEO and local search
 The business in this post
@@ -2093,7 +2108,7 @@ What decides the price?
 How many services and makes you list, and how many languages. Getting one garage found in one city is small.
 Tell us the 3 complaints you hear most on the phone, word for word, and we will show you what people are typing.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 SEO and local search
 Also
@@ -2101,6 +2116,129 @@ SEO and local search
 Websites
 Read next
 A website in Albanian, Italian and English
+Add us as a preferred source on Google
+
+## AIO, AEO and GEO are three names for one job
+https://minarankstudio.com/blog/aio-aeo-geo/
+
+Three acronyms, one piece of work.
+The letters keep changing. What somebody has to do to your site does not.
+By Henri Sila · 3 September 2026
+What each one stands for
+AIO is AI optimisation. AEO is answer engine optimisation. GEO is generative engine optimisation. All three describe getting named when somebody asks an assistant for a business like yours.
+No standards body handed those out. They were coined separately, mostly by people who needed a word for a service they had started selling, and all three stuck.
+What the three have in common
+Everything that matters. A page that answers the question under the heading that asks it, details about the business that agree wherever a machine finds them, and other sites that back up what yours claims.
+Nobody has yet described a technique that helps under one of these labels and not the others, because underneath they are pointed at the same handful of systems.
+Why the naming keeps moving
+A new word is easier to sell than a crowded one. SEO carries twenty years of arguments about what it costs and whether it worked. A fresh acronym carries none of that yet, which is convenient for whoever prints it first.
+Nothing unusual in that, and nothing to resent. It just means the label on a quote tells you when somebody started offering the service, not how well they do it.
+What to do when one turns up on a quote
+Ask what changes on the site, in order, and what the first month looks like. A real answer names pages and sentences. A thin one names the acronym again and moves on.
+Then ask what an assistant says about the business today, before any work starts. Whoever cannot tell you that is not measuring the thing the label refers to.
+Questions worth asking
+Is AIO different work from GEO?
+Not in any way anybody has been able to describe. Treat a quote that separates them, and prices them separately, as one to ask about.
+Which of the three should I use?
+Whichever your customers and your accountant understand. We write AI search on this site because a shop owner reads it once and knows what it means, and we put the acronyms next to it so the two meet.
+Will a new acronym replace these?
+Probably, and it will describe the same work again. The test that survives every rename is simple: open an assistant and see whether it names you.
+Send us the address and the town, and we will tell you which of the three your site is already ready for. It is usually the same answer for all three.
+Get a free audit.
+Updated 3 September 2026
+The service
+AI search
+Also
+AI search
+What is GEO?
+Read next
+AI search in Pavia
+Add us as a preferred source on Google
+
+## AI search in Pavia
+https://minarankstudio.com/blog/ai-search-pavia/
+
+An assistant does not know you are standing in Pavia.
+Google shows you Pavia because it knows where the phone is. An assistant answers from what it has read.
+By Henri Sila · 3 September 2026
+Proximity was the advantage and it does not carry over
+Somebody searching on a phone here is shown this town, because the search knew where the phone was. That was structural, and it belonged to you rather than to anybody who wanted to sell it to you.
+An assistant has no map panel and no radius. It answers out of what it has read, and what has been written about Milan is thicker than what has been written about Pavia by a wide margin.
+So the answer drifts thirty-five kilometres north
+Ask for a trade in Pavia and you can get Milan names, or a mix of both, because a machine reaches for the businesses it is able to describe. The leak gets a second route.
+Nobody sends you a report about that either. You find out because a customer mentions they went north, if they mention anything.
+The only thing that puts Pavia back in is the word Pavia
+Written in sentences, on pages, beside the thing you actually sell. Not in a page title on its own and not inside a picture. A reader that never sees your layout still reads your text.
+In practice that is one page per thing you sell, each naming the town and the thing in the same paragraph. Unglamorous, and cheap.
+The autumn intake asks a machine because it has nobody to ask
+Part of the customer base here arrives in October knowing no one. There is no neighbour to ask and no shop already trusted, so the question gets typed, and more of it now gets typed into an assistant.
+To that audience you exist only if something readable says so.
+What we will not claim
+There is no position to buy inside an answer and no queue to join. What we will do is ask an assistant for your trade in this town while you watch, and tell you which pages its answer was built from.
+Questions worth asking
+Does an assistant know where I am?
+Not reliably, and frequently not at all. It answers from what it has read, so a town has to be written down before it can be in the answer.
+Why would it name Milan businesses?
+Because more has been written about them. Volume of readable text is doing the job that distance used to do.
+Is this worth it for a market this size?
+It costs little precisely because almost nobody local is doing it. Being one of three named in a small town is cheaper than being one of ten in a large one.
+Do I need a new website for this?
+Usually not. Most of it is text on the site you already have, plus details that agree wherever a machine finds them.
+How do I check it before paying anybody?
+Open an assistant, ask for your trade in this town the way a customer would, and read the names. If yours is absent you have learned something for nothing.
+Send us your site and the ten words a customer would type. We will tell you whether a machine can answer with your name in them.
+Get a free audit.
+Updated 3 September 2026
+The service
+AI search
+Also
+AI search
+SEO in Pavia
+Read next
+AI search in Como
+Add us as a preferred source on Google
+
+## AI search in Como
+https://minarankstudio.com/blog/ai-search-como/
+
+An assistant answers your summer visitor from somebody else's page.
+It will not say it does not know. It names three places, and one of them might be you.
+By Henri Sila · 3 September 2026
+The question changes language and the answer does not wait
+Out of season somebody here asks in Italian about something practical. In July somebody in Munich or Manchester asks a similar thing in German or English, weeks before arriving. Both get an answer.
+What differs is where the answer was built from. When your own pages say nothing in that language, an assistant assembles it out of whatever else mentions the lake, and that is usually a booking platform.
+Ten results became three names
+A results page handed a visitor ten options and let them scroll. An assistant gives two or three and stops. Around a lake with hundreds of places to eat and sleep, that filter is far harder than any ranking was.
+And it issues no report. Nobody informs you that you were left out of an answer, which is why most owners here have no idea any of this is happening.
+Being listed on a platform is not being named
+When the answer gives your town and then points at a booking site, the visitor books through the booking site and you pay the commission you were trying to avoid. You appear inside somebody else's page instead of as a business with one of your own.
+The remedy is the boring one. Pages in the languages your season actually speaks, saying what you offer, carrying an address and a number that gets answered.
+The season puts the work in the wrong month
+Somebody planning a July week on the lake is asking in March. Whatever a machine can read about you in March is what it repeats. By the time you are busy the answers have already settled.
+So the writing belongs in the empty months, which are exactly the months when paying for writing feels hardest to justify.
+What we would not promise here
+We cannot place you in an answer on request. Nobody can, and whoever says otherwise is selling you the acronym. What we can do is read what an assistant says about the lake today and show you which pages its sentences came from.
+Questions worth asking
+Does an assistant answer in the language of the question?
+It answers in the language you used, whether or not anything on your own site is written that way. That is this whole article in one sentence.
+Do we need German pages as well as English?
+Only if German visitors are a real share of your season. One more language is one more to keep current, and a page left to rot does more harm than a missing one.
+Can we check this ourselves?
+Yes, in five minutes. Ask an assistant in German for somewhere to eat or stay on the lake and read the names it hands back. Repeat it a few times, because they move.
+Does the map listing still matter for this?
+Yes. The details on it are among the few facts about you that agree everywhere, and agreement is most of what these systems check.
+Is this instead of the ordinary search work?
+No, and the Como piece on ordinary search is still where to begin. This is the same site read by a different reader.
+Tell us which language your July actually speaks. We will read what an assistant already says about the lake and where it got it.
+Get a free audit.
+Updated 3 September 2026
+The service
+AI search
+Also
+AI search
+SEO in Como
+Read next
+What SEO costs in Italy
 Add us as a preferred source on Google
 
 ## Is your agency doing anything about AI search?
@@ -2136,7 +2274,7 @@ What if the answer names a competitor?
 Then you have learned something specific and free. Look at what that competitor publishes that you do not, because the assistant read it somewhere.
 Ask an assistant for your trade in your city and send us what it answers. We will tell you where that answer came from.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 AI search
 Also
@@ -2178,7 +2316,7 @@ How do I test this?
 Ask an assistant the same question twice, once in each language, and compare who gets named. The difference is usually immediate.
 Ask an assistant about your trade in two languages and compare the names it returns. Send us both.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 AI search
 Also
@@ -2221,7 +2359,7 @@ What if the whole thing turns out to be a bubble?
 Then you have spent the year writing clear pages, collecting reviews and fixing your listing, which is what you should have been doing anyway. That is the reason to work this way: nothing here is wasted if the prediction is wrong.
 If you want to know where you stand today, ask us and we will check what a few assistants say about your trade.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 AI search
 Also
@@ -2265,7 +2403,7 @@ Is it worth paying for yet?
 As a separate service, for most small businesses, not yet. As a reason to do the ordinary work properly, yes, because that work pays either way and this is one more reason for it.
 Send us your address and we will ask a few assistants what they say about your trade in your town, and send you the answers.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 AI search
 Also
@@ -2310,7 +2448,7 @@ What if my competitor is named and I am not?
 Read what the assistant says about them and you will usually find the reason in the first sentence: reviews, a clear description of the service, or a page answering the exact question. It is a checkable gap, not a mystery.
 Send us your address and trade and we will ask a few assistants about you, then send you what they said.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 AI search
 Also
@@ -2351,7 +2489,7 @@ Try it on a real business
 Ask ChatGPT where to get a watch repaired in Durres, then ask it for a watch shop in Durres. We built watch.al and we would rather you ran that check than believed a screenshot.
 If somebody has quoted you a number about AI search, send it over with your website and we will tell you where that number came from.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 AI search
 The business in this post
@@ -2396,7 +2534,7 @@ What decides the price?
 How many rooms you describe, whether you want direct booking, and how many languages, which for a guesthouse on this coast usually means at least three.
 Tell us roughly what share of your bookings arrive through an agency, and we will tell you which of them you were paying for twice.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 AI search
 Also
@@ -2441,7 +2579,7 @@ Do I need to keep adding pages forever?
 No. You need the questions answered, and then new pages only when new questions arrive. A site that stops growing because it is complete is fine, as long as the hours and prices stay true.
 Send us what you have written, even if it is a list of notes, and we will tell you what is missing.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 Websites
 Also
@@ -2487,7 +2625,7 @@ My site has all eight. Start again?
 Almost certainly not. Seven of the eight are content and settings rather than construction, which means they are repairs to what you already have rather than a reason to throw it away.
 Send us your address and we will tell you which of the eight you have, and which you can fix yourself before we speak.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 Websites
 Also
@@ -2531,7 +2669,7 @@ Is cash on delivery still normal here?
 Yes, and designing as though it were not is how a shop ends up with abandoned carts it does not understand. Offer it, price it honestly, and say so on the page.
 Tell us what you want to sell and we will tell you which of these you actually need to solve first.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 Websites
 Also
@@ -2576,7 +2714,7 @@ Do I need a contract?
 You need something in writing that names who owns what, what is being delivered and what it costs. It does not have to be long. It does have to exist before money moves.
 Send us a quote you have been given and we will tell you which of the six it answers and which it dodges.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 Websites
 Also
@@ -2624,7 +2762,7 @@ What does a repair usually involve?
 Reading what is there, fixing what stops it being found, writing the pages that answer questions nobody answered, and finishing the listing. Almost none of it is visible, which is why it is undersold.
 Send the address and we will tell you which of the three faults you have, and whether it needs a rebuild or a repair.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 Websites
 Also
@@ -2672,7 +2810,7 @@ Do you turn work down?
 Yes, and it is usually for one of two reasons: the budget is too small to do the job properly, or the thing being asked for will not fix the problem described. Both are cheaper to hear now than in month three.
 Send us what you were quoted and what it covers, and we will tell you plainly whether it is a fair price for that work.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 Websites
 Also
@@ -2720,7 +2858,7 @@ Can I edit a built site myself?
 Yes, and that is a requirement rather than an extra. If changing a price means ringing us, the price stops being changed and the site starts lying about your stock.
 Tell us what the site has to do in two years and we will say honestly which of the two you should be buying.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 Websites
 Also
@@ -2766,7 +2904,7 @@ Who owns it when it is finished?
 You do: the domain, the code and every account, in your name from the first day. It is the only arrangement that leaves you free to walk away from us.
 Send us the site you have, or the address you would use, and we will tell you which of the four is driving your number.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 Websites
 Also
@@ -2814,7 +2952,7 @@ I post every day and it is not working. Would a site fix it?
 Probably not on its own. If posting daily is not converting, the problem is usually what you sell, to whom, or at what price, and a website built on top of that question will not answer it either.
 Send us the account and what you sell, and we will tell you honestly whether a site would earn its money yet.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 Websites
 Also
@@ -2855,7 +2993,7 @@ Does the price change?
 No. The same project costs the same wherever it is, because the building is remote either way. What changes is how long the search half takes, and you are told which before agreeing to anything.
 Send the address and the phrase you want, and we will tell you plainly how crowded that phrase already is.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 Websites
 Also
@@ -2896,7 +3034,7 @@ Should it be in Albanian only?
 Only if that is genuinely who buys from you. A good deal of trade on this coast happens in Italian and English, and a shop that exists in one language cannot be found by the other two.
 Tell us the street and what you sell, and we will show you who is sitting above you today and what put them there.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 Websites
 The business in this post
@@ -2940,7 +3078,7 @@ What decides the price?
 How much of the range goes online, whether you take payment, and how many languages. A page that shows what you stock and opens a conversation is small. A full shop with sizes, stock and checkout is a bigger build.
 Tell us how your last 10 orders actually reached you, and we will tell you whether a checkout would have helped.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 Websites
 The business in this post
@@ -2985,7 +3123,7 @@ What decides the price?
 How many services you list, whether you want booking, and how many languages. A price list, photographs and a map is a small job.
 Tell us how a regular books with you today, and we will tell you what that arrangement is costing.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 Websites
 Also
@@ -3028,7 +3166,7 @@ What decides the price?
 How many pieces you list, whether you take payment, and how many languages. Showing a rail of stock in one language is small. A shop with checkout, delivery and returns in three languages is not.
 Send us a photograph of something you put in the window this week, and we will tell you how long it would take to get it online.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 Websites
 The business in this post
@@ -3074,7 +3212,7 @@ What decides the price?
 How many treatments you describe, how many people you introduce, and how many languages. A single practice with six treatments is a small job.
 Search your own clinic the way a patient would, with the name a friend would have given them, and tell us what you found.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 Websites
 Also
@@ -3105,7 +3243,7 @@ What it means for a shop like yours
 If your customers search in more than one language, the languages are separate doors, and each one either exists or it does not. Our web design work builds all of them from one source, so a second door never means hiring somebody to keep it true.
 Tell us which languages your customers search in, and we will tell you what a site in all of them involves.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 Websites
 The business in this post
@@ -3136,7 +3274,7 @@ Agencies sell subscriptions because subscriptions pay agencies. A site that cost
 Our sites are built this way by default. The running cost is a domain name.
 Ask us what your current site costs a year to keep, and what the same site would cost to own outright.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 Websites
 The business in this post
@@ -3145,7 +3283,7 @@ Also
 Websites
 Custom software
 Read next
-What SEO costs in Italy
+AIO, AEO and GEO are three names for one job
 Add us as a preferred source on Google
 
 ## What Meta ads cost in Albania
@@ -3182,7 +3320,7 @@ Do I need new photographs?
 Usually yes, and usually not professional ones. Pictures of the real thing in daylight beat bought ones because people can tell, and the difference shows up in the click rate long before it shows up anywhere else.
 Tell us what you sell and who you sell it to, and we will say whether ads are the right thing for you at all yet.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 Meta ads
 Also
@@ -3233,7 +3371,7 @@ If we stop advertising, do we lose everything?
 You lose the traffic immediately, which is the honest cost of renting the position. What you keep is what you learned and whatever the slower work built in the meantime, which is the argument for doing both.
 Tell us what you sell and where, and we will say which of the two we would start with and why.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 Meta ads
 Also
@@ -3262,7 +3400,7 @@ Most of the result is decided in the 90 seconds after somebody taps. Does the pa
 Every step is fixable, and none of them is more ad spend. Which is why we will tell you when the honest fix is your reply time, not your budget.
 Ask us how fast your last enquiry got an answer. If you do not know, that is the answer.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 Meta ads
 The business in this post
@@ -3307,7 +3445,7 @@ What decides the price?
 Whether you want the site, the ads or both, how many languages, and whether the listings come out of a system you already use. Ads on their own are a small setup.
 Tell us where your last 3 instructions came from, and we will tell you whether the portal had anything to do with it.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 Meta ads
 Also
@@ -3338,7 +3476,7 @@ If one person owns the file and works in one place, keep it. If the process chan
 We would rather say that now than build something you resent in a year.
 Tell us what you keep in two places, and which copy you trust. That question usually settles it in one message.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 Custom software
 The business in this post
@@ -3369,7 +3507,7 @@ If a tool already does the job for the price of a coffee a month, buy the tool. 
 Building wins when the process is yours and no product fits it, which is rarer than the people selling development would like.
 Tell us what you pay every month and what it does for you. If a tool already covers it we will point you at the tool.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 Custom software
 The business in this post
@@ -3400,7 +3538,7 @@ What it takes to have this
 One place where a sale is recorded, and one rule for which side wins when the two disagree. Most of the work is deciding that rather than writing it.
 If your website and your shop already disagree, tell us where. The answer is often one rule rather than a rebuild.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 Custom software
 The business in this post
@@ -3442,7 +3580,7 @@ The part worth stealing
 If a number on your screen has never disagreed with anything, it has never been checked. Find the place your system adds something up, and go and add it up by hand once. That is a free afternoon and it is how we found ours.
 Tell us what you still count by hand every week. We will tell you whether it is worth building something, and we will say so when it is not.
 Get a free audit.
-Updated 30 August 2026
+Updated 3 September 2026
 The service
 Custom software
 The business in this post
@@ -3597,7 +3735,7 @@ These are the words we use on this site and what each one actually means. Nothin
 SEO
 Search engine optimisation: the work of making a site the thing Google shows when somebody searches for what you sell. It is not one job but several, and most of it is ordinary work done carefully. Read it
 GEO
-Generative engine optimisation: the same idea aimed at ChatGPT, Gemini and Perplexity instead of a results page. It is young enough that anybody selling you certainty about it is selling you something. Read it
+Generative engine optimisation: the same idea aimed at ChatGPT, Gemini and Perplexity instead of a results page. You will also see it called AIO or AEO, which name the same work. It is young enough that anybody selling you certainty about it is selling you something. Read it
 AI search
 Asking an assistant a question instead of typing keywords into Google. The answer names a few businesses and the person asking rarely checks further, which is why being one of them matters. Read it
 ranking
@@ -3616,7 +3754,7 @@ audit
 A read of a site against what search engines and readers need from it, written down. Ours names what is wrong, what it costs you and what we would do about it, in that order. Read it
 custom software
 A tool built for one business instead of rented from a company that built it for everybody. Worth it when the way you work is the thing that makes you money, and not otherwise. Read it
-Updated 27 August 2026
+Updated 3 September 2026
 
 ## What is AI search?
 https://minarankstudio.com/glossary/ai-search/
@@ -3635,7 +3773,7 @@ Do assistants send real customers, or just curiosity?
 Both, and the split depends on the trade. For a decision somebody makes once every few years, like choosing a dentist or a builder, being named in the answer arrives very close to the moment they buy.
 Which assistant matters most here?
 The one your customers use, which in Albania and Italy is mostly ChatGPT today. That can change quickly, which is an argument for being readable by all of them rather than tuned to one.
-Updated 27 August 2026
+Updated 3 September 2026
 
 ## What is an audit?
 https://minarankstudio.com/glossary/audit/
@@ -3654,7 +3792,7 @@ How long should one take to read?
 Ten minutes for a small site. If it takes an hour, the person who wrote it has moved the work of deciding what matters onto you, which was the part you wanted done.
 Will you tell me the site is fine if it is?
 Yes, and it happens. Telling somebody their site is basically sound costs us a sale and buys the only thing worth more than one, which is being believed the next time we say something is wrong.
-Updated 27 August 2026
+Updated 3 September 2026
 
 ## What is custom software?
 https://minarankstudio.com/glossary/custom-software/
@@ -3673,13 +3811,13 @@ What happens to it if you stop working with me?
 It keeps running, and you own it. We build tools that do not need us afterwards, which is a deliberate choice about what kind of relationship this is rather than a technical detail.
 Is a website custom software?
 Not usually, and it is worth keeping the words apart. Most sites are pages. It becomes software when it starts doing something, like reading your stock or answering a customer without anybody typing.
-Updated 27 August 2026
+Updated 3 September 2026
 
 ## What is GEO?
 https://minarankstudio.com/glossary/geo/
 
 What is GEO?
-The work of being one of the businesses an assistant names. It is real, it is young, and the honest version of it admits the second part.
+The work of being one of the businesses an assistant names, also sold as AIO or AEO. It is real, it is young, and the honest version of it admits the second part.
 Why it is not just SEO again
 A results page gives ten answers and lets the reader choose. An assistant gives one, built from a handful of sources, and the reader rarely looks past it. Being eleventh used to cost you some traffic. Now it costs you the conversation.
 What they read
@@ -3692,7 +3830,7 @@ Does GEO replace SEO?
 No, and the overlap is large. Most of what makes a site quotable by an assistant is the same work that made it readable by a search engine, done with more care about answering the question directly.
 How would I know if it worked?
 By asking. Open each assistant, ask what it says about your trade in your town, and write the answer down before anybody starts work. Without that, there is nothing to compare against later.
-Updated 27 August 2026
+Updated 3 September 2026
 
 ## What is a map listing?
 https://minarankstudio.com/glossary/map-listing/
@@ -3711,7 +3849,7 @@ Does it cost anything?
 No. Claiming and running the profile is free, and the verification is usually a code sent by post or phone. Anybody charging you a monthly fee purely to keep it live is charging for something Google gives away.
 Do reviews really change how often it shows?
 They change how often it is shown and how often it is chosen, and the second effect is the larger one. A listing with recent reviews gets picked over an equally close one without them.
-Updated 27 August 2026
+Updated 3 September 2026
 
 ## What is ranking?
 https://minarankstudio.com/glossary/ranking/
@@ -3730,7 +3868,7 @@ So should I ignore position completely?
 No. Watch the direction rather than the number, over months rather than days, and only for the handful of searches that actually describe what you sell. A rising trend across those is meaningful.
 Why did I rank well for a week and then drop?
 New pages are sometimes shown prominently for a short period while the engine gathers evidence about them. What follows is not a penalty, it is the provisional position being replaced by an earned one.
-Updated 27 August 2026
+Updated 3 September 2026
 
 ## What is SEO?
 https://minarankstudio.com/glossary/seo/
@@ -3750,4 +3888,4 @@ Is SEO a one-off job or something ongoing?
 The technical half is largely one-off: fix it once and it stays fixed unless the site is rebuilt. The half that happens on other people's sites never finishes, because your competitors are still working too.
 Can I do any of it myself?
 Yes, and the most valuable part is the part only you can do: asking pleased customers for reviews, and writing down what you actually know about your trade. Neither needs an agency.
-Updated 27 August 2026
+Updated 3 September 2026

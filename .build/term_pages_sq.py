@@ -110,7 +110,7 @@ PAGES = [
     },
     {
         "slug": "geo",
-        "src": "d731e9eb",
+        "src": "72ab0e6a",
         "key": None,
         "term": "GEO",
         "h1": "Çfarë është GEO?",
@@ -121,8 +121,9 @@ PAGES = [
                        "jo.",
         "og_desc": "Shpjeguar pa atë siguri që askush nuk e ka fituar ende.",
         "standfirst": "Puna për të qenë një nga bizneset që i emërton një "
-                      "asistent. Është gjë e vërtetë, është e re, dhe versioni "
-                      "i ndershëm i saj e pranon pjesën e dytë.",
+                      "asistent, e shitur edhe si AIO ose AEO. Është gjë e "
+                      "vërtetë, është e re, dhe versioni i ndershëm i saj e "
+                      "pranon pjesën e dytë.",
         "sections": [
             {"h2": "Pse nuk është thjesht SEO përsëri",
              "body": [

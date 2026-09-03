@@ -66,8 +66,9 @@ GLOSSARY = [
     {"key": None, "term": "GEO",
      "definition": "Generative engine optimisation: the same idea aimed at "
                    "ChatGPT, Gemini and Perplexity instead of a results page. "
-                   "It is young enough that anybody selling you certainty "
-                   "about it is selling you something."},
+                   "You will also see it called AIO or AEO, which name the "
+                   "same work. It is young enough that anybody selling you "
+                   "certainty about it is selling you something."},
     {"key": "AI search", "term": "AI search",
      "definition": "Asking an assistant a question instead of typing keywords "
                    "into Google. The answer names a few businesses and the "

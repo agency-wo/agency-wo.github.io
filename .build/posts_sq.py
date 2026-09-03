@@ -5367,6 +5367,248 @@ POSTS = [
                     ("/glossary/audit/", "Ç'është një auditim?")],
     },
     {
+        "slug": "aio-aeo-geo",
+        "src": "3f60a6e0",
+        "date": "2026-09-03",
+        "updated": "2026-09-03",
+        "topic": "Kërkimi me AI",
+        "work": None,
+        "service": ("/geo/", "Kërkimi me AI"),
+
+        "title": "AIO, AEO dhe GEO janë tre emra për një punë",
+        "h1": "Tre shkurtesa, një punë e vetme.",
+        "summary": "Tre etiketa arritën për të njëjtën gjë brenda një viti, dhe "
+                   "dallimi mes tyre është kush po e vë emrin.",
+        "standfirst": "Shkronjat vazhdojnë të ndryshojnë. Puna që duhet bërë në faqen "
+                      "tënde, jo.",
+        "description": "AIO, AEO dhe GEO krah për krah: nga vjen secila etiketë, çfarë "
+                       "kanë vërtet të përbashkët, dhe çfarë do të thotë kur një prej "
+                       "tyre shfaqet në një ofertë.",
+        "og_desc": "Tre etiketa, një punë, dhe një arsye pse emri vazhdon të lëvizë.",
+
+        "body": [
+            ("Çfarë do të thotë secila",
+             ["<p>AIO është AI optimisation. AEO është answer engine optimisation. GEO "
+              "është generative engine optimisation. Të tria përshkruajnë të njëjtën "
+              "gjë: të përmendesh kur dikush pyet një asistent për një biznes si i "
+              "yti.</p>",
+              "<p>Asnjë institucion nuk i ndau këta emra. U shpikën veç e veç, "
+              "kryesisht nga njerëz që kishin nevojë për një fjalë për një shërbim që "
+              "kishin nisur të shesin, dhe të tria mbetën.</p>"]),
+            ("Çfarë kanë të përbashkët",
+             ["<p>Gjithçka që ka peshë. Një faqe që i përgjigjet pyetjes nën titullin "
+              "që e bën, të dhëna të biznesit që përputhen kudo ku i gjen një makinë, "
+              "dhe faqe të tjera që e vërtetojnë atë që pretendon jotja.</p>",
+              "<p>Askush nuk ka përshkruar deri tani një teknikë që ndihmon nën një prej "
+              "këtyre etiketave dhe nën të tjerat jo, sepse në thelb i drejtohen po "
+              "atyre sistemeve të pakta.</p>"]),
+            ("Pse emri vazhdon të lëvizë",
+             ["<p>Një fjalë e re shitet më lehtë se një e mbushur. SEO mbart njëzet vjet "
+              "debate për sa kushton dhe nëse funksionoi. Një shkurtesë e sapoformuar "
+              "nuk mbart ende asnjë, dhe kjo i vjen për shtat atij që e shtyp i "
+              "pari.</p>",
+              "<p>Nuk ka gjë të pazakontë në këtë, dhe as gjë për t'u zemëruar. "
+              "Thjesht do të thotë që etiketa në një ofertë tregon kur dikush ka "
+              "nisur t'i ofrojë këtë shërbim, jo sa mirë e bën.</p>"]),
+            ("Çfarë të pyesësh kur një prej tyre shfaqet në një ofertë",
+             ["<p>Pyet çfarë ndryshon në faqe, me çfarë radhe, dhe si duket muaji i "
+              "parë. Një përgjigje e vërtetë përmend faqe dhe fjali. Një e zbrazët "
+              "përsërit shkurtesën dhe kalon më tej.</p>",
+              "<p>Pastaj pyet çfarë thotë sot një asistent për biznesin, para se puna "
+              "të nisë. Kush nuk mund ta thotë këtë, nuk po mat atë gjë që etiketa "
+              "pretendon.</p>"]),
+        ],
+
+        "faq": [
+            ("A është AIO punë e ndryshme nga GEO?",
+             "Në asnjë mënyrë që dikush ka arritur ta përshkruajë. Një ofertë që i ndan "
+             "dhe i çmon veç e veç është një ofertë për të cilën vlen të bëhen pyetje."),
+            ("Cilën nga të triat duhet të përdor?",
+             "Atë që kuptojnë klientët e tu dhe kontabilisti yt. Ne shkruajmë kërkim "
+             "me AI, sepse një dyqanxhi e lexon një herë dhe e kupton, dhe shkurtesat i "
+             "mbajmë pranë që të dyja të takohen."),
+            ("A do të vijë një shkurtesë e re t'i zëvendësojë?",
+             "Ka gjasa, dhe do të përshkruajë sërish të njëjtën punë. Prova që i mbijeton "
+             "çdo riemërtimi është e thjeshtë: hap një asistent dhe shih nëse të "
+             "përmend."),
+        ],
+
+        "payoff": "Dërgona adresën dhe qytetin, dhe të themi për cilën nga të triat "
+                  "faqja jote është gati. Zakonisht është e njëjta përgjigje për të "
+                  "tria.",
+        "related": [("/geo/", "Kërkimi me AI"),
+                    ("/glossary/geo/", "Ç'është GEO?")],
+    },
+    {
+        "slug": "ai-search-como",
+        "src": "845391f7",
+        "date": "2026-09-03",
+        "updated": "2026-09-03",
+        "topic": "Kërkimi me AI",
+        "work": None,
+        "service": ("/geo/", "Kërkimi me AI"),
+
+        "title": "Kërkimi me AI në Como",
+        "h1": "Një asistent i përgjigjet klientit tënd të verës nga faqja e një tjetri.",
+        "summary": "Stina ndryshon gjuhën e pyetjes, dhe një asistent përgjigjet "
+                   "sidoqoftë, me atë që ka lexuar për liqenin.",
+        "standfirst": "Nuk të thotë kurrë se nuk e di. Përmend tre vende, dhe një prej "
+                      "tyre mund të jesh ti.",
+        "description": "Kërkimi me AI në Como: pse një pyetje në gjermanisht a "
+                       "anglisht zgjidhet me një portal e jo me faqen tënde, dhe "
+                       "çfarë e kthen një biznes të liqenit në përgjigje.",
+        "og_desc": "Pyet për liqenin në gjermanisht dhe diçka përgjigjet. Zakonisht jo "
+                   "faqja jote.",
+
+        "body": [
+            ("Pyetja ndryshon gjuhë dhe përgjigja nuk pret",
+             ["<p>Jashtë stine këtu pyetet në italisht për gjëra praktike. Në korrik "
+              "dikush nga Mynihu a nga Mançesteri pyet një gjë të ngjashme në "
+              "gjermanisht a anglisht, javë para se të niset. Të dy marrin një "
+              "përgjigje.</p>",
+              "<p>Ajo që ndryshon është nga çfarë u ndërtua përgjigja. Kur faqet e tua "
+              "nuk thonë asgjë në atë gjuhë, një asistent e mbledh nga çdo gjë tjetër "
+              "që flet për liqenin, dhe zakonisht kjo është një platformë "
+              "rezervimesh.</p>"]),
+            ("Dhjetë rezultate u bënë tre emra",
+             ["<p>Një faqe rezultatesh i jepte vizitorit dhjetë opsione dhe e linte të "
+              "rrëshqiste. Një asistent jep dy ose tre dhe ndalon. Rreth një liqeni me "
+              "qindra vende për të ngrënë dhe për të fjetur, ai filtër është shumë më i "
+              "rreptë se çdo renditje.</p>",
+              "<p>Dhe nuk lëshon asnjë raport. Askush nuk të njofton që u le jashtë "
+              "një përgjigjeje, dhe prandaj shumica e pronarëve këtu nuk e dinë fare që "
+              "po ndodh.</p>"]),
+            ("Të jesh i listuar në një platformë nuk është të përmendesh",
+             ["<p>Kur përgjigja jep qytetin tënd dhe pastaj tregon një portal, "
+              "vizitori rezervon nga portali dhe ti paguan komisionin që po "
+              "përpiqeshe të shmangje. Shfaqesh brenda faqes së një tjetri e jo si një "
+              "biznes me një faqe të vetën.</p>",
+              "<p>Zgjidhja është ajo e mërzitshmja. Faqe në gjuhët që stina jote flet "
+              "vërtet, që thonë çfarë ofron, me një adresë dhe një numër që i përgjigjet "
+              "dikush.</p>"]),
+            ("Stina e vë punën në muajin e gabuar",
+             ["<p>Kush planifikon një javë në liqen për korrik, po pyet në mars. Ajo që "
+              "një makinë arrin të lexojë për ty në mars është ajo që përsërit. Kur ti "
+              "je në pikun e punës, përgjigjet janë ngulitur.</p>",
+              "<p>Pra shkrimi i takon muajve të zbrazët, që janë saktësisht muajt kur "
+              "pagesa për shkrim ndihet më e vështirë për t'u arsyetuar.</p>"]),
+            ("Çfarë nuk do të premtonim këtu",
+             ["<p>Nuk mund të të vendosim në një përgjigje me kërkesë. Nuk mundet "
+              "askush, dhe kush thotë të kundërtën po të shet shkurtesën. Ajo që mundemi "
+              "është të lexojmë çfarë thotë sot një asistent për liqenin dhe të tregojmë "
+              "nga cilat faqe vijnë fjalitë e tij.</p>"]),
+        ],
+
+        "faq": [
+            ("A përgjigjet një asistent në gjuhën e pyetjes?",
+             "Përgjigjet në gjuhën që përdore, pavarësisht nëse në faqen tënde ka gjë "
+             "të shkruar ashtu. Ky është i gjithë shkrimi në një rresht."),
+            ("Duhen faqe në gjermanisht përveç atyre në anglisht?",
+             "Vetëm nëse vizitorët gjermanë janë pjesë e vërtetë e stinës tënde. Një "
+             "gjuhë më shumë është një gjuhë më shumë për të mbajtur, dhe një faqe "
+             "e lënë pas dore bën më keq se një që mungon."),
+            ("A mund ta kontrollojmë vetë?",
+             "Po, brenda pesë minutash. Pyet një asistent në gjermanisht ku të hash a "
+             "të flesh në liqen dhe lexo emrat që kthen. Përsërite disa herë, sepse "
+             "lëvizin."),
+            ("A ka rëndësi profili në Google për këtë?",
+             "Po. Të dhënat që mbart janë ndër të paktat fakte për ty që përputhen "
+             "kudo, dhe përputhja është pjesa më e madhe e asaj që kontrollojnë këto "
+             "sisteme."),
+            ("A e zëvendëson punën e zakonshme të kërkimit?",
+             "Jo, dhe faqja për Como dhe kërkimin e zakonshëm mbetet pika e nisjes. Kjo "
+             "është e njëjta faqe e lexuar nga një lexues tjetër."),
+        ],
+
+        "payoff": "Thuajna cilën gjuhë flet vërtet korriku yt. Lexojmë çfarë thotë "
+                  "tashmë një asistent për liqenin dhe nga e mori.",
+        "related": [("/geo/", "Kërkimi me AI"),
+                    ("/blog/seo-como/", "SEO në Como")],
+    },
+    {
+        "slug": "ai-search-pavia",
+        "src": "c3ffcc26",
+        "date": "2026-09-03",
+        "updated": "2026-09-03",
+        "topic": "Kërkimi me AI",
+        "work": None,
+        "service": ("/geo/", "Kërkimi me AI"),
+
+        "title": "Kërkimi me AI në Pavia",
+        "h1": "Një asistent nuk e di që ndodhesh në Pavia.",
+        "summary": "Përparësia e vetme që një biznes i këtushëm kishte në kërkimin e "
+                   "zakonshëm, të ishte më i afërti, është gjëja e parë që një asistent "
+                   "e lëshon.",
+        "standfirst": "Google të shfaq Pavian sepse e di ku është telefoni. Një asistent "
+                      "përgjigjet me atë që ka lexuar.",
+        "description": "Kërkimi me AI në Pavia: pse një asistent lëshon përparësinë e "
+                       "afërsisë që kërkimi lokal ta fal, si përgjigja rrëshqet në "
+                       "veri, dhe çfarë e kthen qytetin brenda.",
+        "og_desc": "Google e di ku është telefoni. Një asistent di vetëm atë që ka "
+                   "lexuar.",
+
+        "body": [
+            ("Afërsia ishte përparësia dhe këtu nuk vlen",
+             ["<p>Kush kërkon nga telefoni duke qëndruar këtu, i shfaqet ky qytet, "
+              "sepse kërkimi e dinte ku ishte telefoni. Kjo ishte strukturore, dhe "
+              "ishte jotja e jo e atij që donte ta shiste.</p>",
+              "<p>Një asistent nuk ka kuti me hartë dhe nuk ka rreze. Përgjigjet me atë "
+              "që ka lexuar, dhe ajo që është shkruar për Milanon është më e trashë se "
+              "ajo që është shkruar për Pavian, me një diferencë të madhe.</p>"]),
+            ("Kështu përgjigja rrëshqet tridhjetë e pesë kilometra në veri",
+             ["<p>Pyet për një zanat në Pavia dhe mund të nxjerrë emra të Milanos, ose "
+              "një përzierje të dyjave, sepse një makinë kap ato biznese që arrin "
+              "t'i përshkruajë. Rrjedhja gjen një rrugë të dytë.</p>",
+              "<p>Edhe për këtë nuk të dërgon raport askush. E kupton se një klient "
+              "përmend që shkoi në veri, po qe se përmend gjë.</p>"]),
+            ("E vetmja gjë që e kthen Pavian brenda është fjala Pavia",
+             ["<p>Shkruar në fjali, në faqe, pranë gjësë që shet vërtet. Jo në një "
+              "titull faqeje të vetëm dhe jo brenda një fotografie. Një lexues që nuk e "
+              "shikon kurrë faqosjen tënde, lexon njëlloj tekstin tënd.</p>",
+              "<p>Në praktikë kjo është një faqe për çdo gjë që shet, dhe secila "
+              "përmend qytetin dhe gjënë në të njëjtin paragraf. Pa shkëlqim, dhe "
+              "lirë.</p>"]),
+            ("Kush mbërrin në tetor pyet një makinë sepse nuk ka kënd të pyesë",
+             ["<p>Një pjesë e klientëve të këtushëm mbërrin në tetor pa njohur "
+              "asnjeri. Nuk ka fqinj për t'i pyetur as dyqan që e besojnë tashmë, "
+              "kështu që pyetja shkruhet, dhe gjithnjë e më shumë shkruhet te një "
+              "asistent.</p>",
+              "<p>Për atë publik ekziston vetëm nëse diçka e lexueshme thotë se "
+              "ekziston.</p>"]),
+            ("Çfarë nuk do të pretendojmë",
+             ["<p>Brenda një përgjigjeje nuk ka pozicion për të blerë as radhë për t'u "
+              "vënë. Ajo që do të bëjmë është t'i kërkojmë një asistenti zanatin tënd në "
+              "këtë qytet ndërsa ti shikon, dhe të të tregojmë nga cilat faqe u ndërtua "
+              "përgjigja e tij.</p>"]),
+        ],
+
+        "faq": [
+            ("A e di një asistent ku ndodhem?",
+             "Jo në mënyrë të besueshme, dhe shpesh nuk e di fare. Përgjigjet me atë që "
+             "ka lexuar, kështu që një qytet duhet të jetë shkruar para se të mund të "
+             "ndodhet në përgjigje."),
+            ("Pse do të përmendte biznese të Milanos?",
+             "Sepse për ata është shkruar më shumë. Vëllimi i tekstit të lexueshëm po "
+             "bën punën që bënte më parë distanca."),
+            ("A ia vlen për një treg të kësaj madhësie?",
+             "Kushton pak pikërisht sepse pothuajse asnjeri këtu nuk e bën. Të jesh një "
+             "nga tre të përmendurit në një qytet të vogël kushton më lirë se të jesh "
+             "një nga dhjetë në një të madh."),
+            ("A më duhet faqe e re për këtë?",
+             "Zakonisht jo. Pjesa më e madhe është tekst në faqen që ke tashmë, plus "
+             "të dhëna që përputhen kudo ku i gjen një makinë."),
+            ("Si e kontrolloj para se t'i paguaj kujt?",
+             "Hap një asistent, pyet për zanatin tënd në këtë qytet si do të pyeste një "
+             "klient, dhe lexo emrat. Nëse i yti mungon, mësove diçka pa shpenzuar "
+             "asgjë."),
+        ],
+
+        "payoff": "Dërgona faqen dhe dhjetë fjalët që do të shkruante një klient. Të "
+                  "themi nëse një makinë arrin t'i përgjigjet me emrin tënd brenda.",
+        "related": [("/geo/", "Kërkimi me AI"),
+                    ("/blog/seo-pavia/", "SEO në Pavia")],
+    },
+    {
         "slug": "does-my-agency-do-ai-search",
         "src": "fe5a4d3b",
         "date": "2026-08-30",

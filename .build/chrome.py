@@ -45,11 +45,11 @@ TURNAROUND = "within 24 hours"
 SKIP = "Skip to content"
 MENU = "Menu"
 # The header button. It is NOT the same string as the "Start a project"
-# label in the footer column, even though the English happened to match:
-# one is a bordered button on all 51 pages and carries a width budget, the
-# other is a list item that does not. Sharing them would silently apply the
-# button's budget to a footer label the day somebody widened one.
-HEAD_CTA = "Start a project"
+# label in the footer column, and since the audit CTA landed the two no
+# longer even share their words. One is a bordered button on all 51 pages
+# and carries a width budget, the other is a list item that does not.
+# Sharing them would apply the button's budget to a footer label.
+HEAD_CTA = "Free site audit"
 ARIA_HOME = "{brand} home"          # {brand} is filled, never translated
 ARIA_PRIMARY = "Primary"
 ARIA_INDEX = "Site index"

@@ -75,7 +75,7 @@ SRC = {
     "FOOT_HEADINGS": "8a193087",
     "FOOT_LABELS": "967e86a8",
     "FOOT_META": "77f25e44",
-    "HEAD_CTA": "50bb03ab",
+    "HEAD_CTA": "d17fa7ec",
     "JS_ERROR": "e3741a63",
     "JS_SENDING": "29167c1d",
     "JS_SENDING_SAY": "21151b65",
@@ -140,11 +140,11 @@ SKIP = "Kalo te përmbajtja"
 # definite form and reads as a restaurant card rather than a control.
 MENU = "Menu"
 # The header button. It is NOT the same string as the "Start a project"
-# label in the footer column, even though the English happened to match:
-# one is a bordered button on all 51 pages and carries a width budget, the
-# other is a list item that does not. Sharing them would silently apply the
-# button's budget to a footer label the day somebody widened one.
-HEAD_CTA = "Nis një projekt"
+# label in the footer column, and since the audit CTA landed the two no
+# longer even share their words. One is a bordered button on all 51 pages
+# and carries a width budget, the other is a list item that does not.
+# Sharing them would apply the button's budget to a footer label.
+HEAD_CTA = "Auditim falas"
 # Albanian names the thing and then its owner, so the token moves to the end of
 # the label. It is still written literally. "Ballina" is the ordinary Albanian
 # word for a front page, which is why it is here and not "Home".

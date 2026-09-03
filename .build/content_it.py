@@ -198,28 +198,29 @@ SERVICES = [
     # ------------------------------------------------------------------ GEO --
     {
         "slug": "geo",
-        "src": "26c4b09a",
+        "src": "b0dedcf0",
         # glossary.TERMS: AI search -> ricerca AI, and glossary.BANNED fails on
         # "IA", which reads as a translation artefact to the people who buy
         # this. Matches chrome_it.FOOT_LABELS[0][1] exactly.
         "nav": "Ricerca AI",
         "schema_name": "Ottimizzazione per i motori generativi",
-        # 45 characters.
-        "title": "Ricerca AI in Italia e Albania, o GEO",
+        # 41 characters.
+        "title": "Ricerca AI in Italia e Albania, GEO o AIO",
         "h1": "Sii una delle 3 attività che la risposta nomina.",
         "standfirst": "Chiedi a ChatGPT un negozio di riparazione orologi a "
                       "Durazzo e te ne nomina due o tre. Essere uno di quelli "
                       "non è fortuna.",
-        # 137 characters.
-        "description": "Ricerca AI, a volte chiamata GEO. Diventare una delle "
-                       "poche attività che un assistente nomina quando un "
-                       "cliente gli chiede un consiglio.",
+        # 149 characters.
+        "description": "Ricerca AI, venduta anche come GEO, AIO o AEO. "
+                       "Diventare una delle poche attività che un assistente "
+                       "nomina quando un cliente gli chiede un consiglio.",
         "og_desc": "Quando un assistente risponde, nomina due o tre attività.",
         "lead": "Sempre più persone chiedono a un assistente prima di aprire "
                 "Google, e la risposta nomina una manciata di attività. "
-                "Nessuno ti dice se eri una di quelle. Per questo non esiste "
-                "ancora un report di posizionamento, ed è esattamente per "
-                "questo che vincere costa ancora poco. Se qualche parola di "
+                "Nessuno ti dice se eri una di quelle. Un report di "
+                "posizionamento per questa cosa non esiste ancora, ed è "
+                "esattamente per questo che vincere costa ancora poco. Si vende anche come "
+                "<a href=\"/blog/aio-aeo-geo/\">AIO o AEO</a>. Se qualche parola di "
                 "questa pagina è nuova, <a href=\"/glossary/\">sono tutte "
                 "spiegate qui</a>.",
         "sections": [

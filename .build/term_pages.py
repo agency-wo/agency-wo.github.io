@@ -115,8 +115,9 @@ PAGES = [
                        "what can be influenced, and what cannot.",
         "og_desc": "Explained without the certainty nobody has earned yet.",
         "standfirst": "The work of being one of the businesses an assistant "
-                      "names. It is real, it is young, and the honest version "
-                      "of it admits the second part.",
+                      "names, also sold as AIO or AEO. It is real, it is "
+                      "young, and the honest version of it admits the "
+                      "second part.",
         "sections": [
             {"h2": "Why it is not just SEO again",
              "body": [

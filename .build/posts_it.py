@@ -5413,6 +5413,254 @@ POSTS = [
                     ("/glossary/audit/", "Cos'è un audit?")],
     },
     {
+        "slug": "aio-aeo-geo",
+        "src": "3f60a6e0",
+        "date": "2026-09-03",
+        "updated": "2026-09-03",
+        "topic": "Ricerca AI",
+        "work": None,
+        "service": ("/geo/", "Ricerca AI"),
+
+        "title": "AIO, AEO e GEO sono tre nomi per un solo lavoro",
+        "h1": "Tre sigle, un solo lavoro.",
+        "summary": "Tre etichette sono arrivate per la stessa cosa in circa un anno, e "
+                   "la differenza fra loro sta in chi la sta nominando.",
+        "standfirst": "Le lettere continuano a cambiare. Quello che qualcuno deve fare "
+                      "al tuo sito, no.",
+        "description": "AIO, AEO e GEO messe a confronto: da dove arriva ognuna delle "
+                       "tre etichette, cosa hanno davvero in comune, e cosa vuol dire "
+                       "trovarne una su un preventivo.",
+        "og_desc": "Tre etichette, un solo lavoro, e un motivo per cui il nome "
+                   "continua a spostarsi.",
+
+        "body": [
+            ("Cosa vuol dire ognuna",
+             ["<p>AIO sta per AI optimisation. AEO per answer engine optimisation. GEO "
+              "per generative engine optimisation. Tutte e tre descrivono l'essere "
+              "nominati quando qualcuno chiede a un assistente un'attività come la "
+              "tua.</p>",
+              "<p>Nessun ente le ha assegnate. Sono nate separate, quasi sempre da chi "
+              "aveva bisogno di una parola per un servizio che aveva già iniziato a "
+              "vendere, e tutte e tre sono rimaste.</p>"]),
+            ("Cosa hanno in comune",
+             ["<p>Tutto quello che conta. Una pagina che risponde alla domanda sotto il "
+              "titolo che la fa, i dati dell'attività che coincidono in ogni posto dove "
+              "una macchina li trova, e altri siti che confermano quello che il tuo "
+              "dichiara.</p>",
+              "<p>Nessuno ha ancora descritto una tecnica che aiuta sotto una di queste "
+              "etichette e non sotto le altre, perché sotto sotto puntano agli stessi "
+              "pochi sistemi.</p>"]),
+            ("Perché il nome continua a spostarsi",
+             ["<p>Una parola nuova si vende meglio di una affollata. SEO si porta "
+              "dietro vent'anni di discussioni su quanto costa e se abbia funzionato. "
+              "Una sigla appena coniata non se ne porta ancora nessuna, il che è comodo "
+              "per chi la stampa per primo.</p>",
+              "<p>Non c'è niente di strano, e non c'è da prendersela. Vuol dire solo "
+              "che l'etichetta su un preventivo dice da quando qualcuno offre quel "
+              "servizio, non quanto bene lo fa.</p>"]),
+            ("Cosa chiedere quando ne trovi una su un preventivo",
+             ["<p>Chiedi cosa cambia sul sito, in che ordine, e com'è fatto il primo "
+              "mese. Una risposta vera nomina pagine e frasi. Una vuota ripete la sigla "
+              "e passa avanti.</p>",
+              "<p>Poi chiedi cosa dice oggi un assistente sull'attività, prima che il "
+              "lavoro cominci. Chi non sa dirtelo non sta misurando la cosa a cui "
+              "l'etichetta si riferisce.</p>"]),
+        ],
+
+        "faq": [
+            ("L'AIO è un lavoro diverso dalla GEO?",
+             "In nessun modo che qualcuno sia riuscito a descrivere. Un preventivo che "
+             "le separa, e le mette a listino una per una, è un preventivo su cui vale "
+             "la pena fare domande."),
+            ("Quale delle tre conviene usare?",
+             "Quella che capiscono i tuoi clienti e il tuo commercialista. Qui "
+             "scriviamo ricerca AI, perché un negoziante la legge una volta e sa di cosa "
+             "si parla, e le sigle le teniamo accanto così le due cose si incontrano."),
+            ("Arriverà una sigla nuova a sostituirle?",
+             "Probabilmente sì, e descriverà di nuovo lo stesso lavoro. La prova che "
+             "sopravvive a ogni cambio di nome è semplice: apri un assistente e guarda "
+             "se ti nomina."),
+        ],
+
+        "payoff": "Mandaci l'indirizzo e il paese, e ti diciamo per quale delle tre il "
+                  "tuo sito è già pronto. Di solito è la stessa risposta per tutte e "
+                  "tre.",
+        "related": [("/geo/", "Ricerca AI"),
+                    ("/glossary/geo/", "Cos'è la GEO?")],
+    },
+    {
+        "slug": "ai-search-como",
+        "src": "845391f7",
+        "date": "2026-09-03",
+        "updated": "2026-09-03",
+        "topic": "Ricerca AI",
+        "work": None,
+        "service": ("/geo/", "Ricerca AI"),
+
+        "title": "Ricerca AI a Como",
+        "h1": "Un assistente risponde al tuo cliente di luglio dalla pagina di un altro.",
+        "summary": "La stagione cambia la lingua della domanda, e un assistente risponde "
+                   "comunque, con quello che ha letto sul lago.",
+        "standfirst": "Non dirà che non lo sa. Nomina tre posti, e uno potrebbe essere "
+                      "il tuo.",
+        "description": "Ricerca AI a Como: perché una domanda in tedesco o in "
+                       "inglese viene risolta con un portale e non col tuo sito, e "
+                       "cosa rimette un'attività del lago nella risposta.",
+        "og_desc": "Chiedi del lago in tedesco e qualcosa risponde. Di solito non il "
+                   "tuo sito.",
+
+        "body": [
+            ("La domanda cambia lingua e la risposta non aspetta",
+             ["<p>Fuori stagione qui si chiede in italiano di cose pratiche. A luglio "
+              "qualcuno da Monaco o da Manchester chiede una cosa simile in tedesco o "
+              "in inglese, settimane prima di partire. Tutti e due ricevono una "
+              "risposta.</p>",
+              "<p>Quello che cambia è da dove quella risposta è stata costruita. Se le "
+              "tue pagine in quella lingua non dicono niente, un assistente la mette "
+              "insieme con qualunque altra cosa parli del lago, e di solito è una "
+              "piattaforma di prenotazioni.</p>"]),
+            ("Dieci risultati sono diventati tre nomi",
+             ["<p>Una pagina di risultati dava al visitatore dieci opzioni e lo "
+              "lasciava scorrere. Un assistente ne dà due o tre e si ferma. Su un lago "
+              "con centinaia di posti dove mangiare e dormire, quel filtro è molto più "
+              "duro di qualsiasi posizionamento.</p>",
+              "<p>E non emette nessun report. Nessuno ti avvisa che sei stato lasciato "
+              "fuori da una risposta, ed è per questo che qui quasi nessun titolare sa "
+              "che sta succedendo.</p>"]),
+            ("Essere elencato su una piattaforma non è essere nominato",
+             ["<p>Quando la risposta dà il tuo paese e poi rimanda a un portale, il "
+              "visitatore prenota dal portale e tu paghi la commissione che stavi "
+              "cercando di evitare. Compari dentro la pagina di un altro invece che "
+              "come un'attività con una sua.</p>",
+              "<p>Il rimedio è quello noioso. Pagine nelle lingue che la tua stagione "
+              "parla davvero, che dicono cosa offri, con un indirizzo e un numero a cui "
+              "risponde qualcuno.</p>"]),
+            ("La stagione mette il lavoro nel mese sbagliato",
+             ["<p>Chi programma una settimana sul lago a luglio sta chiedendo a marzo. "
+              "Quello che una macchina riesce a leggere di te a marzo è quello che "
+              "ripete. Quando sei nel pieno, le risposte si sono già assestate.</p>",
+              "<p>Quindi il lavoro di scrittura va nei mesi vuoti, che sono esattamente "
+              "i mesi in cui pagare per scrivere sembra più difficile da "
+              "giustificare.</p>"]),
+            ("Cosa non prometteremmo qui",
+             ["<p>Non possiamo metterti in una risposta a richiesta. Non può nessuno, e "
+              "chi dice il contrario ti sta vendendo la sigla. Quello che possiamo fare "
+              "è leggere cosa dice oggi un assistente sul lago e mostrarti da quali "
+              "pagine arrivano le sue frasi.</p>"]),
+        ],
+
+        "faq": [
+            ("Un assistente risponde nella lingua della domanda?",
+             "Risponde nella lingua che hai usato, che sul tuo sito ci sia qualcosa "
+             "scritto così oppure no. È tutto questo articolo in una riga."),
+            ("Servono pagine in tedesco oltre a quelle in inglese?",
+             "Solo se i visitatori tedeschi sono una fetta vera della tua stagione. "
+             "Una lingua in più è una lingua in più da mantenere, e una pagina "
+             "lasciata andare fa più danno di una che manca."),
+            ("Possiamo controllarlo da soli?",
+             "Sì, in cinque minuti. Chiedi a un assistente in tedesco dove mangiare o "
+             "dormire sul lago e leggi i nomi che restituisce. Rifallo qualche volta, "
+             "perché si spostano."),
+            ("La scheda Google conta ancora per questo?",
+             "Sì. I dati che porta sono fra i pochi fatti su di te che coincidono "
+             "ovunque, e la coincidenza è la maggior parte di quello che questi sistemi "
+             "controllano."),
+            ("Questo sostituisce il lavoro normale sulla ricerca?",
+             "No, e la pagina su Como e la ricerca normale resta il punto di partenza. "
+             "Questo è lo stesso sito letto da un lettore diverso."),
+        ],
+
+        "payoff": "Dicci quale lingua parla davvero il tuo luglio. Leggiamo cosa dice "
+                  "già un assistente sul lago e da dove l'ha preso.",
+        "related": [("/geo/", "Ricerca AI"),
+                    ("/blog/seo-como/", "SEO a Como")],
+    },
+    {
+        "slug": "ai-search-pavia",
+        "src": "c3ffcc26",
+        "date": "2026-09-03",
+        "updated": "2026-09-03",
+        "topic": "Ricerca AI",
+        "work": None,
+        "service": ("/geo/", "Ricerca AI"),
+
+        "title": "Ricerca AI a Pavia",
+        "h1": "Un assistente non sa che sei a Pavia.",
+        "summary": "L'unico vantaggio che un'attività di qui aveva nella ricerca "
+                   "normale, essere la più vicina, è la prima cosa che un assistente "
+                   "butta via.",
+        "standfirst": "Google ti mostra Pavia perché sa dov'è il telefono. Un "
+                      "assistente risponde con quello che ha letto.",
+        "description": "Ricerca AI a Pavia: perché un assistente butta via il "
+                       "vantaggio della vicinanza, come la risposta scivola a nord, "
+                       "e cosa rimette la città dentro.",
+        "og_desc": "Google sa dov'è il telefono. Un assistente sa solo quello che ha "
+                   "letto.",
+
+        "body": [
+            ("La vicinanza era il vantaggio e con un assistente non vale",
+             ["<p>Chi cerca dal telefono stando qui si vede mostrare questa città, "
+              "perché la ricerca sapeva dov'era il telefono. Era strutturale, ed era "
+              "tuo e non di chi voleva vendertelo.</p>",
+              "<p>Un assistente non ha un riquadro con la mappa e non ha un raggio. "
+              "Risponde con quello che ha letto, e quello che è stato scritto su Milano "
+              "è più spesso di quello che è stato scritto su Pavia, con un margine "
+              "largo.</p>"]),
+            ("Così la risposta scivola trentacinque chilometri a nord",
+             ["<p>Chiedi un mestiere a Pavia e possono uscire nomi di Milano, o un "
+              "misto dei due, perché una macchina si allunga verso le attività che "
+              "riesce a descrivere. La perdita trova una seconda strada.</p>",
+              "<p>E anche di questo nessuno ti manda un report. Lo scopri perché un "
+              "cliente accenna che è andato a nord, se accenna qualcosa.</p>"]),
+            ("L'unica cosa che rimette Pavia dentro è la parola Pavia",
+             ["<p>Scritta in frasi, sulle pagine, accanto alla cosa che vendi davvero. "
+              "Non in un titolo di pagina da solo e non dentro una fotografia. Un "
+              "lettore che non vede mai la tua impaginazione legge comunque il tuo "
+              "testo.</p>",
+              "<p>In pratica è una pagina per ogni cosa che vendi, e ognuna nomina la "
+              "città e la cosa nello stesso paragrafo. Poco affascinante, ed "
+              "economico.</p>"]),
+            ("Chi arriva a ottobre chiede a una macchina perché non conosce ancora nessuno",
+             ["<p>Una parte dei clienti di qui arriva a ottobre senza conoscere "
+              "nessuno. Non c'è un vicino da interpellare né un negozio di cui già si "
+              "fidano, quindi la domanda viene digitata, e sempre più spesso finisce "
+              "dentro un assistente.</p>",
+              "<p>Per quel pubblico esisti solo se qualcosa di leggibile dice che "
+              "esisti.</p>"]),
+            ("Cosa non ti diremo",
+             ["<p>Dentro una risposta non c'è una posizione da comprare né una fila a "
+              "cui mettersi. Quello che faremo è chiedere a un assistente il tuo "
+              "mestiere in questa città mentre guardi, e dirti da quali pagine è stata "
+              "costruita la sua risposta.</p>"]),
+        ],
+
+        "faq": [
+            ("Un assistente sa dove sono?",
+             "Non in modo affidabile, e spesso non lo sa affatto. Risponde con quello "
+             "che ha letto, quindi una città deve essere scritta prima di poter stare "
+             "nella risposta."),
+            ("Perché dovrebbe nominare attività di Milano?",
+             "Perché su di loro è stato scritto di più. Il volume di testo leggibile "
+             "sta facendo il lavoro che prima faceva la distanza."),
+            ("Ne vale la pena per un mercato di queste dimensioni?",
+             "Costa poco proprio perché quasi nessuno qui lo sta facendo. Essere uno "
+             "dei tre nominati in una città piccola costa meno che essere uno dei dieci "
+             "in una grande."),
+            ("Mi serve un sito nuovo per questo?",
+             "Di solito no. Quasi tutto è testo sul sito che hai già, più dati che "
+             "coincidono in ogni posto dove una macchina li trova."),
+            ("Come lo controllo prima di pagare qualcuno?",
+             "Apri un assistente, chiedigli il tuo mestiere in questa città come "
+             "farebbe un cliente, e leggi i nomi. Se il tuo non c'è, hai imparato una "
+             "cosa senza spendere niente."),
+        ],
+
+        "payoff": "Mandaci il sito e le dieci parole che digiterebbe un cliente. Ti "
+                  "diciamo se una macchina riesce a risponderle col tuo nome dentro.",
+        "related": [("/geo/", "Ricerca AI"),
+                    ("/blog/seo-pavia/", "SEO a Pavia")],
+    },
+    {
         "slug": "does-my-agency-do-ai-search",
         "src": "fe5a4d3b",
         "date": "2026-08-30",

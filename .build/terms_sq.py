@@ -48,9 +48,10 @@ GLOSSARY = [
                    "atë që Google shfaq kur dikush kërkon atë që ti shet. Nuk "
                    "është një punë e vetme, dhe pjesa më e madhe është punë e "
                    "zakonshme e bërë me kujdes."},
-    {"src": "2f0ab6f9", "key": None, "term": "GEO",
+    {"src": "c1478be3", "key": None, "term": "GEO",
      "definition": "E njëjta ide, drejtuar ChatGPT-së, Gemini-t dhe Perplexity-t "
-                   "në vend të një faqeje me rezultate. Është aq e re sa "
+                   "në vend të një faqeje me rezultate. Do ta hasësh edhe si "
+                   "AIO ose AEO, që emërtojnë të njëjtën punë. Është aq e re sa "
                    "kushdo që të shet siguri për të, po të shet diçka."},
     {"src": "fa08b075", "key": "AI search", "term": "kërkimi me AI",
      "definition": "T'i bësh një pyetje një asistenti në vend që të shkruash "

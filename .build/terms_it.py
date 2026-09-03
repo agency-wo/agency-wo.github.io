@@ -45,11 +45,12 @@ GLOSSARY = [
                    "del tuo sito quello che Google mostra quando qualcuno "
                    "cerca ciò che vendi. Non è un mestiere solo, ed è quasi "
                    "tutto lavoro ordinario fatto con cura."},
-    {"src": "2f0ab6f9", "key": None, "term": "GEO",
+    {"src": "c1478be3", "key": None, "term": "GEO",
      "definition": "La stessa idea rivolta a ChatGPT, Gemini e Perplexity "
-                   "invece che a una pagina di risultati. È abbastanza giovane "
-                   "che chi ti vende certezze su questo ti sta vendendo "
-                   "qualcosa."},
+                   "invece che a una pagina di risultati. Lo trovi chiamato "
+                   "anche AIO o AEO, che indicano lo stesso lavoro. È "
+                   "abbastanza giovane che chi ti vende certezze su questo ti "
+                   "sta vendendo qualcosa."},
     {"src": "fa08b075", "key": "AI search", "term": "ricerca AI",
      "definition": "Fare una domanda a un assistente invece di digitare parole "
                    "chiave su Google. La risposta nomina poche attività e chi "
