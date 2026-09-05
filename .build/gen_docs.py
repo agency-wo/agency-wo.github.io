@@ -44,6 +44,24 @@ CRLF = chr(13) + chr(10)
 # that carries the address and the number somebody came here for.
 NO_CONTENTS = ("/start/",)
 
+# Which page's form goes UNDER the prose instead of above it, and the hidden
+# `source` each form reports itself by. Both are keyed by URL for the reason
+# FIG_FOR gives 12 lines up: they are structure and protocol, not sentences, so
+# they may not live in docs.py where a translator could reach them.
+#
+# /start/ is an instruction sheet and its form is the instruction, so it opens
+# with it. /audit/ is an argument and its form is the conclusion, so it closes
+# with it. Nothing is lost by that: AUDIT_URL carries the #audit fragment, so
+# the header and the ink band land a decided reader on the form wherever it
+# sits, and an undecided one meets it after the case has been made.
+#
+# `source` is the column the founder sorts the inbox by. Two forms sharing a
+# value already fails gate check 26, and the failure it is really preventing is
+# downstream of the gate: leads from 2 pages merged into one bucket with
+# nothing in the mail saying which page was read.
+FORM_LAST = ("/audit/",)
+FORM_SOURCE = {"/start/": "start-audit", "/audit/": "audit-page"}
+
 # The founder's profiles live in shell.py beside the studio's, not here. They
 # are placeholders and the comment there says why they ship as placeholders
 # rather than as an empty list; what matters at this end is that one file
@@ -306,16 +324,57 @@ def aside(indent, spec, lang, toc=None):
 
 
 def audit_section(rec, lang):
-    """The long audit form, at /start/. Six fields, against the homepage
-    hero's four.
+    """The audit form. Six fields at /start/, four at /audit/.
 
     The field names, the pattern and the hidden inputs are protocol and stay
     here. The pattern in particular is copied and never retyped: browsers
     compile it with the regex v flag, where an unescaped / or - in a character
     class is a syntax error, and a pattern that fails to compile is IGNORED
     rather than reported.
+
+    TWO OPTIONAL FIELDS, and the record decides by carrying the copy or not
+    carrying it. /start/ is reached by somebody who has already decided, so it
+    asks six. /audit/ is read by somebody deciding, and that page promises in
+    its own aside that the address is the whole ask; six fields one screen
+    under that sentence would contradict the page.
+
+    The condition is the presence of the LABEL rather than a flag, because a
+    field with no label is a field nobody can name, and a record that carries
+    the copy for a field it does not want is a record that has not decided.
+    Gate check 26 reads the emitted order back out of the HTML and compares it
+    to FORM_SHAPES_EN, so neither half can drift alone.
     """
     f = rec["form"]
+
+    name_block = "" if "name_label" not in f else f'''
+
+              <p class="field">
+                <label for="af-name">{fill(f["name_label"], lang)}</label>
+                <input id="af-name" name="name" type="text"
+                  autocomplete="organization" required
+                  aria-describedby="af-name-err">
+                <span class="field-err" id="af-name-err">{txt(18, f["name_err"], lang)}</span>
+              </p>'''
+
+    pair_block = "" if "category_label" not in f else f'''
+
+              <div class="af-pair">
+                <p class="field">
+                  <label for="af-category">{fill(f["category_label"], lang)}
+                    <span class="field-opt">{fill(f["optional"], lang)}</span></label>
+                  <input id="af-category" name="category" type="text"
+                    aria-describedby="af-category-hint">
+                  <span class="field-hint" id="af-category-hint">{txt(20, f["category_hint"], lang)}</span>
+                </p>
+                <p class="field">
+                  <label for="af-city">{fill(f["city_label"], lang)}
+                    <span class="field-opt">{fill(f["optional"], lang)}</span></label>
+                  <input id="af-city" name="city" type="text"
+                    autocomplete="address-level2" aria-describedby="af-city-hint">
+                  <span class="field-hint" id="af-city-hint">{txt(20, f["city_hint"], lang)}</span>
+                </p>
+              </div>'''
+
     return f'''          <section class="audit" id="audit" aria-labelledby="audit-h">
             <h2 id="audit-h">{fill(f["h"], lang)}</h2>
             <p>{txt(14, f["lead"], lang)}</p>
@@ -331,7 +390,7 @@ def audit_section(rec, lang):
               <input type="hidden" name="access_key" value="{shell.WEB3FORMS_KEY}">
               <input type="hidden" name="subject" value="{fill(f["subject"], lang)}">
               <input type="hidden" name="redirect" value="{shell.form_redirect(shell.localise(rec["url"], lang))}">
-              <input type="hidden" name="source" value="{form_source("start-audit", lang)}">
+              <input type="hidden" name="source" value="{form_source(FORM_SOURCE[rec["url"]], lang)}">
               <!-- Filled by js/main.js. Empty without JS, which is correct: an
                    empty value is an honest "we do not know" and the lead still
                    arrives. Named in the privacy line above the button. -->
@@ -355,32 +414,7 @@ def audit_section(rec, lang):
                     aria-describedby="af-nosite-hint">
                 <label for="af-nosite">{fill(f["no_site_label"], lang)}</label>
                 <span class="field-hint" id="af-nosite-hint">{txt(20, f["no_site_hint"], lang)}</span>
-              </p>
-
-              <p class="field">
-                <label for="af-name">{fill(f["name_label"], lang)}</label>
-                <input id="af-name" name="name" type="text"
-                  autocomplete="organization" required
-                  aria-describedby="af-name-err">
-                <span class="field-err" id="af-name-err">{txt(18, f["name_err"], lang)}</span>
-              </p>
-
-              <div class="af-pair">
-                <p class="field">
-                  <label for="af-category">{fill(f["category_label"], lang)}
-                    <span class="field-opt">{fill(f["optional"], lang)}</span></label>
-                  <input id="af-category" name="category" type="text"
-                    aria-describedby="af-category-hint">
-                  <span class="field-hint" id="af-category-hint">{txt(20, f["category_hint"], lang)}</span>
-                </p>
-                <p class="field">
-                  <label for="af-city">{fill(f["city_label"], lang)}
-                    <span class="field-opt">{fill(f["optional"], lang)}</span></label>
-                  <input id="af-city" name="city" type="text"
-                    autocomplete="address-level2" aria-describedby="af-city-hint">
-                  <span class="field-hint" id="af-city-hint">{txt(20, f["city_hint"], lang)}</span>
-                </p>
-              </div>
+              </p>{name_block}{pair_block}
 
               <div class="af-pair">
                 <p class="field">
@@ -564,11 +598,17 @@ def render(rec, en_rec, lang):
              f'        <div class="{prose_class}">']
 
     chunks = []
-    if rec.get("form"):
+    form_last = rec["url"] in FORM_LAST
+    if rec.get("form") and not form_last:
         chunks.append(audit_section(rec, lang))
     chunks += blocks(10, rec["blocks"], en_rec["blocks"], lang, toc)
     if rec.get("faq"):
         chunks += ["", faq_section(10, rec, en_rec, lang, toc)]
+    # After the questions, which on /audit/ are headed "Before you send it" and
+    # read as the last thing between a reader and the field. Before the updated
+    # line, which is metadata and stays the final row in the column.
+    if rec.get("form") and form_last:
+        chunks += ["", audit_section(rec, lang)]
     if chunks and chunks[0] == "":
         chunks.pop(0)
 

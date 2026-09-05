@@ -349,7 +349,7 @@ PAGES = [
     },
     {
         "slug": "audit",
-        "src": "0f4ab687",
+        "src": "5e39a713",
         "key": "audit",
         "term": "auditim",
         "h1": "Çfarë është një auditim?",
@@ -384,7 +384,7 @@ PAGES = [
                  "<p>Ta japësh te një zhvillues tjetër dhe ai ta kuptojë "
                  "punën. Një auditim që ka kuptim vetëm nëse e bëjmë ne punën "
                  "nuk është auditim. Yni është falas dhe nuk ka asnjë takim të "
-                 "lidhur pas: <a href=\"/start/\">na dërgo adresën</a>.</p>",
+                 "lidhur pas: <a href=\"/audit/\">na dërgo adresën</a>.</p>",
              ]},
         ],
         "faq": [

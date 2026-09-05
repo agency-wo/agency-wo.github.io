@@ -394,7 +394,7 @@ PAGES = [
     # inglese: sono nomi propri, elencati in glossary.KEEP_ENGLISH.
     {
         "url": "/audit/",
-     "src": "96debdf1",
+     "src": "1da7e500",
         "nav": "L'audit",
         # 30 caratteri sui 52 che il budget lascia dopo " · minarank studio".
         "title": "Cosa misura l'audit gratuito",
@@ -416,6 +416,43 @@ PAGES = [
                       "{turnaround}: cosa funziona nel sito, dove stai perdendo "
                       "clienti," + NL +
                       "e cosa sistemeremmo per primo.",
+        # 4 campi contro i 6 di /start/. Nessun mestiere e nessuna citta: lo
+        # dice l'aside di questa pagina, l'indirizzo e tutto quello che
+        # chiediamo. Ogni frase e scritta da zero, non accorciata da /start/.
+        "form": {
+            "h": "Chiedi il tuo audit.",
+            "lead": "L'indirizzo, il tuo nome, e dove mandare il PDF." + NL +
+                    "Il modulo e tutto qui.",
+            "done_h": "Inviato. Non serve altro.",
+            "done": "Passa da una persona prima di arrivare a te." + NL +
+                    "Aspetta il PDF {turnaround}.",
+            # Arriva come oggetto dell'email, cosi dice quale modulo l'ha
+            # mandata. Il campo nascosto `source` sta in gen_docs.FORM_SOURCE.
+            "subject": "Richiesta di audit gratuito dalla pagina audit di {brand}",
+            "url_label": "Il tuo indirizzo web",
+            "url_placeholder": "iltuonegozio.it",
+            "url_title": "Il tuo indirizzo web, tipo iltuonegozio.it",
+            "url_err": "Ci serve l'indirizzo." + NL +
+                       "Tipo iltuonegozio.it.",
+            "no_site_label": "Non ne ho ancora uno",
+            "no_site_hint": "Allora ne progettiamo uno.",
+            "owner_label": "Il tuo nome",
+            "owner_err": "Dicci a chi va" + NL +
+                         "intestato.",
+            "email_label": "Email",
+            "email_err": "Qui arriva" + NL +
+                         "il PDF.",
+            "send": "Mandalo",
+            "alt": "Preferisci scrivere? {email}," + NL +
+                   "oppure <a href=\"{wa_href}\">WhatsApp</a>.",
+            "fine": "Teniamo l'indirizzo, il tuo nome, la tua email e la pagina "
+                    "da cui" + NL +
+                    "sei arrivato. Servono per fare l'audit e per risponderti, "
+                    "e non vanno" + NL +
+                    "altrove. Il modulo passa da Web3Forms. Una riga a "
+                    "{email_delete}" + NL +
+                    "cancella tutto.",
+        },
         "blocks": [
             ("lead", "È gratis e non ha nulla attaccato. Quasi tutto quello che "
                      "trova sta" + NL +
@@ -547,13 +584,13 @@ PAGES = [
                       "telefonata prima. Ti chiediamo solo l'indirizzo."),
             ]),
             ("Vedi anche", [
-                ("links", [("/start/", "Mandaci il tuo sito"),
+                ("links", [("/start/", "Inizia invece un progetto"),
                            ("/systems/", "Software su misura"),
                            ("/work/", "Dove sono in funzione i nostri lavori")]),
             ]),
         ]),
-        "cta": "Mandaci l'indirizzo.",
-        "cta_note": "È tutto quello che serve all'audit, e torna {turnaround}.",
+        "cta": "Sei sceso oltre il modulo?",
+        "cta_note": "Vuole l'indirizzo, un nome e un'email. Nient'altro.",
     },
 
     # ---------------------------------------------------------------- START --

@@ -66,8 +66,13 @@ everything checkable is checked by `verify.py`, which fails the build.
 20. **One ask per page.** The header link and the ink band appear on all 18
     pages: they are chrome, and chrome is not a page's ask. Below the chrome a
     page gets exactly one thing that takes something from a visitor, and it is
-    a form. The homepage's is the audit form in the hero; `/start/`'s is the
-    6-field version. Anything else styled as a button has to be a link to one
+    a form. The homepage's is the audit form in the hero, `/start/`'s is the
+    6-field version, and `/audit/`'s is a 4-field one placed under the argument
+    rather than above it. Three forms is not three asks: the test is per page,
+    which is what check 32 counts. Each asks for no more than the page above it
+    has earned, which is why `/audit/` takes an address, a name and an email
+    and stops, on a page whose own aside says the address is the whole ask.
+    Anything else styled as a button has to be a link to one
     of our own pages, which is why the homepage's other button says "See the
     work" and not "Send". The old wording said one CTA in the ink band, was
     false the day it was written, and nothing checked it. Check 32 does now.

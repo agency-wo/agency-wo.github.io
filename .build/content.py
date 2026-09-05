@@ -47,7 +47,7 @@ SERVICES = [
                 "Profile that puts your shop on the map, and a site that "
                 "answers what people type. watch.al started from no website "
                 "and reached 900 clicks a quarter in 3 months. The "
-                "<a href=\"/start/\">free audit</a> scores 6 areas and says "
+                "<a href=\"/audit/\">free audit</a> scores 5 areas and says "
                 "which job to do first.</p>",
             ]),
             ("The map listing, first", [

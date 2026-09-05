@@ -409,7 +409,14 @@ def updated(source, lang, indent=10):
 # by name in case anybody is ever tempted.
 WEB3FORMS_KEY = "2dcc706e-25be-4efa-83cb-416c74e4e2e9"
 FORM_ENDPOINT = "https://api.web3forms.com/submit"
-AUDIT_URL = "/start/#audit"
+# Where every "free audit" button on the site lands: the header CTA, the ink
+# band on 259 pages, and the link under every blog post's payoff line. It was
+# /start/#audit until /audit/ grew a form of its own, and the move is the point
+# of that page: the button now lands where the audit is ARGUED and taken, not
+# on a form a reader meets before being told what it buys. The fragment is what
+# keeps the other reader served, because it jumps a decided visitor straight
+# past the argument to the field.
+AUDIT_URL = "/audit/#audit"
 
 # Stated ONCE PER LANGUAGE, and only in chrome.py. It lived here as well for a
 # while, with the same value and no link between the two, which is precisely
@@ -423,7 +430,7 @@ def turnaround(lang):
 # no script. Drop the fragment and a JS-off visitor comes back to a blank form
 # and sees nothing happen.
 #
-# It is derived per page, not a constant. There are 2 forms now, and a form
+# It is derived per page, not a constant. There are 3 forms now, and a form
 # that returns the visitor to SOMEBODY ELSE'S confirmation panel is the same
 # failure with a nicer face: it is what a second form gets by default when the
 # redirect is one hardcoded string. Gate check 26 re-derives this the way check
@@ -802,7 +809,7 @@ def header(lang, page_url=None):
       </a>
       <nav class="head-nav" aria-label="{c.ARIA_PRIMARY}">
 {links}
-{switcher(lang, page_url, "head", 8)}        <a class="head-cta" href="{localise("/start/", lang)}">{c.HEAD_CTA}</a>
+{switcher(lang, page_url, "head", 8)}        <a class="head-cta" href="{localise(AUDIT_URL, lang)}">{c.HEAD_CTA}</a>
         <details class="menu">
           <summary>{c.MENU}</summary>
           <div class="menu-panel">

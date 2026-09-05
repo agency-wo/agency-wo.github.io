@@ -3430,7 +3430,7 @@ POSTS = [
 
     {
         "slug": "what-seo-costs-in-albania",
-        "src": "c44fd2d6",
+        "src": "6ec85917",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Ricerca locale",
@@ -3537,7 +3537,7 @@ POSTS = [
              "economiche di un cambio."),
         ],
         "related": [("/seo/", "SEO e ricerca locale"),
-                    ("/start/", "Un audit gratuito")],
+                    ("/audit/", "Un audit gratuito")],
     },
 
     {
@@ -3654,7 +3654,7 @@ POSTS = [
 
     {
         "slug": "why-is-my-competitor-above-me",
-        "src": "5d17475f",
+        "src": "d7bf6ab0",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Ricerca locale",
@@ -3750,7 +3750,7 @@ POSTS = [
              "il paese dove tu puoi averne una per la tua."),
         ],
         "related": [("/seo/", "SEO e ricerca locale"),
-                    ("/start/", "Un audit gratuito")],
+                    ("/audit/", "Un audit gratuito")],
     },
 
     {
@@ -4536,7 +4536,7 @@ POSTS = [
 
     {
         "slug": "seo-tirana",
-        "src": "4a33f949",
+        "src": "80bf027a",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Ricerca locale",
@@ -4627,12 +4627,12 @@ POSTS = [
              "sotto uno strumento, quello è il lavoro e non una descrizione."),
         ],
         "related": [("/seo/", "SEO e ricerca locale"),
-                    ("/start/", "Un audit gratuito")],
+                    ("/audit/", "Un audit gratuito")],
     },
 
     {
         "slug": "seo-pavia",
-        "src": "9341c67f",
+        "src": "931ae232",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Ricerca locale",
@@ -4725,7 +4725,7 @@ POSTS = [
              "impegna a niente."),
         ],
         "related": [("/seo/", "SEO e ricerca locale"),
-                    ("/start/", "Un audit gratuito")],
+                    ("/audit/", "Un audit gratuito")],
     },
 
     {
@@ -4939,7 +4939,7 @@ POSTS = [
     },
     {
         "slug": "what-custom-software-costs-to-run",
-        "src": "adffa99b",
+        "src": "c4b73d1e",
         "date": "2026-08-27",
         "updated": "2026-08-27",
         "topic": "Software su misura",
@@ -4986,7 +4986,7 @@ POSTS = [
         ],
         "payoff": "Dicci quanto paghi ogni mese e cosa ci fai. Se uno strumento lo copre già, "
                   "ti indichiamo lo strumento.",
-        "related": [("/systems/", "Software su misura"), ("/start/", "Un audit gratuito")],
+        "related": [("/systems/", "Software su misura"), ("/audit/", "Un audit gratuito")],
     },
     {
         "slug": "seo-bergamo",

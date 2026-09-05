@@ -34,7 +34,7 @@ SERVICES = [
     # ------------------------------------------------------------------ SEO --
     {
         "slug": "seo",
-        "src": "2342a762",
+        "src": "58ebdea2",
         "nav": "SEO",
         "schema_name": "Ottimizzazione per i motori di ricerca e ricerca locale",
         # 23 characters, the same as the English, and 41 with the suffix
@@ -79,7 +79,7 @@ SERVICES = [
                 "e un sito che risponde a quello che la gente digita. watch.al "
                 "è partito senza sito e ha raggiunto 900 clic a trimestre "
                 "in 3 mesi. L'<a href=\"/start/\">audit gratuito</a> dà un "
-                "voto a 6 aree e ti dice da quale lavoro cominciare.</p>",
+                "voto a 5 aree e ti dice da quale lavoro cominciare.</p>",
             ]),
             # The English heading is a verbless fragment with a comma in it,
             # which check 20 warns on. Italian gets a verb for free here, so it

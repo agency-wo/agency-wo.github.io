@@ -355,7 +355,7 @@ PAGES = [
     },
     {
         "slug": "audit",
-        "src": "0f4ab687",
+        "src": "5e39a713",
         "key": "audit",
         "term": "audit",
         "h1": "Cos'è un audit?",
@@ -391,7 +391,7 @@ PAGES = [
                  "<p>Darlo a uno sviluppatore diverso e vedere che capisce il "
                  "lavoro. Un audit che ha senso solo se il lavoro lo facciamo "
                  "noi non è un audit. Il nostro è gratuito e non ha nessuna "
-                 "riunione attaccata: <a href=\"/start/\">mandaci "
+                 "riunione attaccata: <a href=\"/audit/\">mandaci "
                  "l'indirizzo</a>.</p>",
              ]},
         ],

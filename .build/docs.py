@@ -373,10 +373,16 @@ PAGES = [
     # reader has been told what comes back for it, and the answer to that was
     # 4 lines of hero microcopy.
     #
-    # NO FORM HERE, and that is rule 20 rather than an omission. A page gets one
-    # ask, this page's is the ink band, and the band already points at
-    # /start/#audit in all 3 languages. A second form would also make this the
-    # 3rd copy of 6 fields to keep in step with check 26.
+    # THE FORM IS AT THE BOTTOM, under "What it costs", and that is rule 20
+    # satisfied rather than bent: a page gets exactly one thing that takes
+    # something from a visitor, and this page's is the form. The ink band is
+    # chrome and chrome is not a page's ask. Check 32 counts forms per page and
+    # this has one.
+    #
+    # It asks 4 things where /start/ asks 6, because the aside on this page
+    # says the address is the whole ask and 6 fields underneath that sentence
+    # would make the page a liar. gen_docs.audit_section() drops the business
+    # name and the trade/town pair when a record does not carry their labels.
     #
     # The engine is named. Minafy is ours, it is the thing that separates this
     # from a checklist score, and a studio that will not name its own tool is
@@ -402,6 +408,51 @@ PAGES = [
                       "back {turnaround}: what the site does well, where it's "
                       "losing you" + NL +
                       "customers, and what we'd fix first.",
+        # 4 fields against /start/'s 6 and the homepage hero's 5, and every
+        # sentence written fresh rather than trimmed from either: check 11
+        # fails any sentence of 9 words or more that appears on 2 pages, and
+        # all 3 forms are asking for the same 4 things in the same voice, which
+        # is exactly the condition that produces a collision.
+        #
+        # No trade and no town. Both would make the audit sharper and both are
+        # asked on /start/; asking them here would contradict the sentence in
+        # this page's own aside, and a page that argues for honesty and then
+        # adds 2 fields it said it did not need has spent the argument.
+        "form": {
+            "h": "Ask for your audit.",
+            "lead": "The address, your name, and where to send the PDF." + NL +
+                    "That's the whole form.",
+            "done_h": "Sent. That's all we needed.",
+            "done": "It goes to a person before it goes to you." + NL +
+                    "Expect the PDF {turnaround}.",
+            # Reaches us as the email's subject line, so it says which form
+            # sent it. The hidden `source` field says the same thing to a
+            # machine and lives in gen_docs.FORM_SOURCE, because a translator
+            # may not reach the column the inbox is sorted by.
+            "subject": "Free audit request from the audit page of {brand}",
+            "url_label": "Your web address",
+            "url_placeholder": "yourshop.al",
+            "url_title": "Your web address, like yourshop.al",
+            "url_err": "We need the address." + NL +
+                       "Like yourshop.al.",
+            "no_site_label": "I don't have one yet",
+            "no_site_hint": "Then we plan one instead.",
+            "owner_label": "Your name",
+            "owner_err": "Tell us who to address" + NL +
+                         "it to.",
+            "email_label": "Email",
+            "email_err": "This is where the PDF" + NL +
+                         "lands.",
+            "send": "Send it",
+            "alt": "Rather just write? {email}," + NL +
+                   "or <a href=\"{wa_href}\">WhatsApp</a>.",
+            "fine": "We keep the address, your name, your email and the page "
+                    "you came" + NL +
+                    "in on. They run the audit and the reply, and go nowhere "
+                    "else. The form" + NL +
+                    "posts to Web3Forms. One line to {email_delete}" + NL +
+                    "removes the lot.",
+        },
         "blocks": [
             ("lead", "It's free and there's nothing attached to it. Most of what "
                      "it finds" + NL +
@@ -534,13 +585,17 @@ PAGES = [
                       "The address is the whole ask."),
             ]),
             ("Also", [
-                ("links", [("/start/", "Send us your site"),
+                # /start/ is the OTHER route now, not this one. "Send us your
+                # site" pointing off a page that carries the form was a link
+                # arguing with the page around it, and check 46 still wants
+                # /start/ reached by a sentence rather than by the footer.
+                ("links", [("/start/", "Start a project instead"),
                            ("/systems/", "Custom software"),
                            ("/work/", "Where our work is running")]),
             ]),
         ]),
-        "cta": "Send us the address.",
-        "cta_note": "That's all the audit needs, and it comes back {turnaround}.",
+        "cta": "Scrolled past the form?",
+        "cta_note": "It wants the address, a name and an email. Nothing else.",
     },
 
     # ---------------------------------------------------------------- START --

@@ -371,7 +371,7 @@ PAGES = [
                  "<p>Hand it to a different developer and have them understand "
                  "the job. An audit that only makes sense if we do the work is "
                  "not an audit. Ours is free and there is no meeting attached "
-                 "to it: <a href=\"/start/\">send us the address</a>.</p>",
+                 "to it: <a href=\"/audit/\">send us the address</a>.</p>",
              ]},
         ],
         "faq": [

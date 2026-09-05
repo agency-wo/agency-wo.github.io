@@ -139,7 +139,7 @@
           <span aria-current="page">Italiano</span>
           <a href="/sq/audit/" hreflang="sq">Shqip</a>
         </nav>
-        <a class="head-cta" href="/it/start/">Audit gratuito</a>
+        <a class="head-cta" href="/it/audit/#audit">Audit gratuito</a>
         <details class="menu">
           <summary>Menu</summary>
           <div class="menu-panel">
@@ -297,7 +297,85 @@
                 non il contrario.</p>
             </div>
           </section>
-          <p class="updated">Aggiornato il <time datetime="2026-09-05">5 settembre 2026</time></p>
+
+          <section class="audit" id="audit" aria-labelledby="audit-h">
+            <h2 id="audit-h">Chiedi il tuo audit.</h2>
+            <p>L'indirizzo, il tuo nome, e dove mandare il PDF.
+              Il modulo e tutto qui.</p>
+
+            <div class="af-done" id="sent" tabindex="-1">
+              <h3>Inviato. Non serve altro.</h3>
+              <p>Passa da una persona prima di arrivare a te.
+                Aspetta il PDF entro 24 ore.</p>
+            </div>
+
+            <form class="af" id="audit-form" method="POST"
+              action="https://api.web3forms.com/submit"
+              data-sending="Invio"
+              data-sending-say="Stiamo inviando i tuoi dati."
+              data-error="Non è stato inviato. Usa l'email o il link WhatsApp qui sotto e lo riprendiamo da lì.">
+              <input type="hidden" name="access_key" value="2dcc706e-25be-4efa-83cb-416c74e4e2e9">
+              <input type="hidden" name="subject" value="Richiesta di audit gratuito dalla pagina audit di minarank studio">
+              <input type="hidden" name="redirect" value="https://minarankstudio.com/it/audit/?sent=1#sent">
+              <input type="hidden" name="source" value="audit-page-it">
+              <!-- Filled by js/main.js. Empty without JS, which is correct: an
+                   empty value is an honest "we do not know" and the lead still
+                   arrives. Named in the privacy line above the button. -->
+              <input type="hidden" name="landed_on" value="">
+              <input class="af-hp" type="checkbox" name="botcheck" tabindex="-1"
+                autocomplete="off">
+
+              <p class="field">
+                <label for="af-url">Il tuo indirizzo web</label>
+                <input id="af-url" name="url" type="text" inputmode="url"
+                  autocomplete="url" autocapitalize="none" spellcheck="false"
+                  required placeholder="iltuonegozio.it"
+                  pattern="(https?:\/\/)?[a-zA-Z0-9][a-zA-Z0-9.\-]*\.[a-zA-Z]{2,}(\/\S*)?"
+                  title="Il tuo indirizzo web, tipo iltuonegozio.it"
+                  aria-describedby="af-url-err">
+                <span class="field-err" id="af-url-err">Ci serve l'indirizzo.
+                  Tipo iltuonegozio.it.</span>
+              </p>
+
+              <p class="field field-check">
+                <input id="af-nosite" name="no_site" type="checkbox" value="yes"
+                    aria-describedby="af-nosite-hint">
+                <label for="af-nosite">Non ne ho ancora uno</label>
+                <span class="field-hint" id="af-nosite-hint">Allora ne progettiamo uno.</span>
+              </p>
+
+              <div class="af-pair">
+                <p class="field">
+                  <label for="af-owner">Il tuo nome</label>
+                  <input id="af-owner" name="owner" type="text"
+                    autocomplete="name" required aria-describedby="af-owner-err">
+                  <span class="field-err" id="af-owner-err">Dicci a chi va
+                    intestato.</span>
+                </p>
+                <p class="field">
+                  <label for="af-email">Email</label>
+                  <input id="af-email" name="email" type="email" inputmode="email"
+                    autocomplete="email" autocapitalize="none" spellcheck="false"
+                    required aria-describedby="af-email-err">
+                  <span class="field-err" id="af-email-err">Qui arriva
+                    il PDF.</span>
+                </p>
+              </div>
+
+              <p class="af-go">
+                <button class="btn" type="submit" id="af-send"><span
+                  id="af-send-text">Mandalo</span><svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+              </p>
+              <p class="af-say" id="af-say" role="status" aria-live="polite"></p>
+              <p class="af-alt">Preferisci scrivere? <a href="mailto:info@minarankstudio.com">info@minarankstudio.com</a>,
+                oppure <a href="https://wa.me/355675716090">WhatsApp</a>.</p>
+              <p class="af-fine">Teniamo l'indirizzo, il tuo nome, la tua email e la pagina da cui
+                sei arrivato. Servono per fare l'audit e per risponderti, e non vanno
+                altrove. Il modulo passa da Web3Forms. Una riga a <a href="mailto:info@minarankstudio.com?subject=Cancella%20i%20miei%20dati">info@minarankstudio.com</a>
+                cancella tutto.</p>
+            </form>
+          </section>
+          <p class="updated">Aggiornato il <time datetime="2026-09-06">6 settembre 2026</time></p>
         </div>
 
         <aside class="side" data-reveal-group aria-label="In sintesi">
@@ -320,7 +398,7 @@
           <div class="side-block">
             <p class="side-h">Vedi anche</p>
             <ul class="side-list">
-              <li><a href="/it/start/">Mandaci il tuo sito</a></li>
+              <li><a href="/it/start/">Inizia invece un progetto</a></li>
               <li><a href="/it/systems/">Software su misura</a></li>
               <li><a href="/it/work/">Dove sono in funzione i nostri lavori</a></li>
             </ul>
@@ -334,10 +412,10 @@
     <div class="wrap">
       <div class="band-top">
         <div class="band-say">
-          <h2>Mandaci l'indirizzo.</h2>
-          <p class="band-note">È tutto quello che serve all'audit, e torna entro 24 ore.</p>
+          <h2>Sei sceso oltre il modulo?</h2>
+          <p class="band-note">Vuole l'indirizzo, un nome e un'email. Nient'altro.</p>
           <p class="band-actions">
-            <a class="band-cta" href="/it/start/#audit">Chiedi un audit gratuito</a>
+            <a class="band-cta" href="/it/audit/#audit">Chiedi un audit gratuito</a>
             <span class="band-alt"><a href="mailto:info@minarankstudio.com">info@minarankstudio.com</a> · <a href="https://wa.me/355675716090">WhatsApp</a> · <a href="tel:+355675716090">+355 67 571 6090</a></span>
           </p>
         </div>

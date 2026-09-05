@@ -3464,7 +3464,7 @@ POSTS = [
              "switching."),
         ],
         "related": [("/seo/", "SEO and local search"),
-                    ("/start/", "A free audit")],
+                    ("/audit/", "A free audit")],
     },
 
     {
@@ -3672,7 +3672,7 @@ POSTS = [
              "have one covering your city."),
         ],
         "related": [("/seo/", "SEO and local search"),
-                    ("/start/", "A free audit")],
+                    ("/audit/", "A free audit")],
     },
 
     {
@@ -4528,7 +4528,7 @@ POSTS = [
              "that is the work rather than a description of it."),
         ],
         "related": [("/seo/", "SEO and local search"),
-                    ("/start/", "A free audit")],
+                    ("/audit/", "A free audit")],
     },
 
     {
@@ -4628,7 +4628,7 @@ POSTS = [
              "first and it commits you to nothing."),
         ],
         "related": [("/seo/", "SEO and local search"),
-                    ("/start/", "A free audit")],
+                    ("/audit/", "A free audit")],
     },
 
     {
@@ -4888,7 +4888,7 @@ POSTS = [
         ],
         "payoff": "Tell us what you pay every month and what it does for you. If a tool "
                   "already covers it we will point you at the tool.",
-        "related": [("/systems/", "Custom software"), ("/start/", "A free audit")],
+        "related": [("/systems/", "Custom software"), ("/audit/", "A free audit")],
     },
     {
         "slug": "seo-bergamo",

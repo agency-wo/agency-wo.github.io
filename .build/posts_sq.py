@@ -3403,7 +3403,7 @@ POSTS = [
 
     {
         "slug": "what-seo-costs-in-albania",
-        "src": "c44fd2d6",
+        "src": "6ec85917",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Kërkim lokal",
@@ -3510,7 +3510,7 @@ POSTS = [
              "dyja janë më lirë se ndërrimi."),
         ],
         "related": [("/seo/", "SEO dhe kërkim lokal"),
-                    ("/start/", "Një auditim falas")],
+                    ("/audit/", "Një auditim falas")],
     },
 
     {
@@ -3624,7 +3624,7 @@ POSTS = [
 
     {
         "slug": "why-is-my-competitor-above-me",
-        "src": "5d17475f",
+        "src": "d7bf6ab0",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Kërkim lokal",
@@ -3720,7 +3720,7 @@ POSTS = [
              "gjithë vendin ku ti mund të kesh një për qytetin."),
         ],
         "related": [("/seo/", "SEO dhe kërkim lokal"),
-                    ("/start/", "Një auditim falas")],
+                    ("/audit/", "Një auditim falas")],
     },
 
     {
@@ -4493,7 +4493,7 @@ POSTS = [
 
     {
         "slug": "seo-tirana",
-        "src": "4a33f949",
+        "src": "80bf027a",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Kërkim lokal",
@@ -4582,12 +4582,12 @@ POSTS = [
              "nën një mjet, ajo është puna dhe jo një përshkrim."),
         ],
         "related": [("/seo/", "SEO dhe kërkim lokal"),
-                    ("/start/", "Një auditim falas")],
+                    ("/audit/", "Një auditim falas")],
     },
 
     {
         "slug": "seo-pavia",
-        "src": "9341c67f",
+        "src": "931ae232",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Kërkim lokal",
@@ -4681,7 +4681,7 @@ POSTS = [
              "më parë dhe nuk të detyron në asgjë."),
         ],
         "related": [("/seo/", "SEO dhe kërkim lokal"),
-                    ("/start/", "Një auditim falas")],
+                    ("/audit/", "Një auditim falas")],
     },
 
     {
@@ -4897,7 +4897,7 @@ POSTS = [
     },
     {
         "slug": "what-custom-software-costs-to-run",
-        "src": "adffa99b",
+        "src": "c4b73d1e",
         "date": "2026-08-27",
         "updated": "2026-08-27",
         "topic": "Software me porosi",
@@ -4945,7 +4945,7 @@ POSTS = [
         ],
         "payoff": "Na thuaj sa paguan çdo muaj dhe ç'bën me të. Nëse një mjet e mbulon "
                   "tashmë, të tregojmë mjetin.",
-        "related": [("/systems/", "Software me porosi"), ("/start/", "Një auditim falas")],
+        "related": [("/systems/", "Software me porosi"), ("/audit/", "Një auditim falas")],
     },
     {
         "slug": "seo-bergamo",

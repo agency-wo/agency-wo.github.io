@@ -866,6 +866,7 @@ FORM_HOST = "https://api.web3forms.com"
 IGLISI_KEY = "b8cb1417-7408-4af4-a7da-9c2a163735fc"   # watch.al's. Not ours.
 KEY_RE = r"[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}"
 START = "start/index.html"
+AUDIT = "audit/index.html"
 
 # The shape of every form, DECLARED. Checks 22 and 26 used to read start_html
 # and were keyed to start/index.html by name, so the day a second form appeared
@@ -896,6 +897,13 @@ FORM_SHAPES_EN = {
     #  english page        (visible field names, in source order),   csv_ready
     "index.html":       (("url", "no_site", "owner", "email",
                           "category"),                                  False),
+    # /audit/ argues for the audit and then asks for it, and it asks for less
+    # than the other 2 on purpose: that page's aside promises the address is
+    # the whole ask. gen_docs.audit_section() drops the business name and the
+    # trade/town pair when the record carries no label for them, and this row
+    # is the other half of that decision. csv_ready is False because there is
+    # no `name` field to key a row on.
+    AUDIT:              (("url", "no_site", "owner", "email"),          False),
     START:              (("url", "no_site", "name", "category", "city",
                           "owner", "email"),                             True),
 }
@@ -1115,8 +1123,8 @@ for p in all_pages:
                         f"this page. A no-JS visitor lands on a confirmation for a "
                         f"form they did not fill in. Expected {own}?sent=1#sent")
 
-    # One inbox, two forms. The hidden source is the only thing that says which
-    # one a lead came from.
+    # One inbox, three forms. The hidden source is the only thing that says
+    # which one a lead came from.
     sc = re.search(r'name="source" value="([^"]+)"', f)
     if not sc:
         findings.append(f"[form] {key}: no hidden 'source' field")

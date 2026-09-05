@@ -19,7 +19,7 @@ had 9. **Check a claim in here against the code before repeating it.**
 Create a form at web3forms.com with info@minarankstudio.com as the inbox,
 copy the access key, and paste it into `WEB3FORMS_KEY` in `.build/shell.py`.
 Do not reuse watch.al's key: one key, one inbox, one form. This unblocks all
-6 forms on the site. Until it is done every other step ships a site whose
+9 forms on the site. Until it is done every other step ships a site whose
 forms reach nobody, which is why it is first.
 
 ## 2. Paste the three sameAs URLs

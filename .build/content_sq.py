@@ -36,7 +36,7 @@ SERVICES = [
     # ------------------------------------------------------------------ SEO --
     {
         "slug": "seo",
-        "src": "2342a762",
+        "src": "58ebdea2",
         "nav": "SEO",
         "schema_name": "Optimizim për motorët e kërkimit dhe kërkim lokal",
         # 21 characters, 2 fewer than the English.
@@ -70,7 +70,7 @@ SERVICES = [
                 "Biznesit në Google që e vë dyqanin tënd në hartë, dhe një "
                 "faqe që i përgjigjet asaj që shkruajnë njerëzit. watch.al "
                 "nisi pa asnjë faqe dhe arriti 900 klikime në tremujor për 3 "
-                "muaj. <a href=\"/start/\">Auditimi falas</a> vlerëson 6 fusha "
+                "muaj. <a href=\"/audit/\">Auditimi falas</a> vlerëson 5 fusha "
                 "dhe të thotë nga cila punë të fillosh.</p>",
             ]),
             # The English heading is a verbless fragment with a comma in it,

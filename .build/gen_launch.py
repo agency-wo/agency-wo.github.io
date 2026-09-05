@@ -28,7 +28,7 @@ before the domain resolved took the preview offline.
 That hazard is real and it is one-directional. It is about shipping CNAME too
 EARLY. It says nothing about the other order, and the other order is the one
 that matters now: the domain resolves, so serving it costs nothing, while
-opening robots.txt invites Google into a site whose 6 forms all reach nobody
+opening robots.txt invites Google into a site whose 9 forms all reach nobody
 because the Web3Forms key is still a placeholder. Being indexed with dead forms
 is worse than being indexed a week later.
 

@@ -383,7 +383,7 @@ PAGES = [
     # anglisht: janë emra të përveçëm, në glossary.KEEP_ENGLISH.
     {
         "url": "/audit/",
-     "src": "96debdf1",
+     "src": "1da7e500",
         "nav": "Auditimi",
         # 25 shkronja nga 52 që lë buxheti pas " · minarank studio".
         "title": "Çfarë mat auditimi falas",
@@ -405,6 +405,43 @@ PAGES = [
                       "{turnaround}: çfarë e ka mirë faqja, ku po humbet klientë," +
                       NL +
                       "dhe çfarë do të rregullonim të parën.",
+        # 4 fusha kundrejt 6-ve te /start/. Asnjë zanat dhe asnjë qytet: ky
+        # faqe e thotë vetë te anash, adresa është e gjitha çka kërkojmë. Çdo
+        # fjali është shkruar nga e para, jo shkurtuar nga /start/.
+        "form": {
+            "h": "Kërko auditimin tënd.",
+            "lead": "Adresa, emri yt, dhe ku ta dërgojmë PDF-në." + NL +
+                    "Kaq është i gjithë formulari.",
+            "done_h": "U dërgua. Kaq na duhej.",
+            "done": "Kalon nga një njeri para se të vijë te ti." + NL +
+                    "Prite PDF-në {turnaround}.",
+            # Vjen si subjekt i email-it, kështu thotë cili formular e dërgoi.
+            # Fusha e fshehur `source` rri te gen_docs.FORM_SOURCE.
+            "subject": "Kërkesë për auditim falas nga faqja e auditimit e {brand}",
+            "url_label": "Adresa jote e internetit",
+            "url_placeholder": "dyqaniyt.al",
+            "url_title": "Adresa jote e internetit, si dyqaniyt.al",
+            "url_err": "Na duhet adresa." + NL +
+                       "Si dyqaniyt.al.",
+            "no_site_label": "Nuk kam ende një",
+            "no_site_hint": "Atëherë planifikojmë një.",
+            "owner_label": "Emri yt",
+            "owner_err": "Na thuaj kujt t'ia" + NL +
+                         "drejtojmë.",
+            "email_label": "Email",
+            "email_err": "Këtu mbërrin" + NL +
+                         "PDF-ja.",
+            "send": "Dërgoje",
+            "alt": "Do më mirë të shkruash? {email}," + NL +
+                   "ose <a href=\"{wa_href}\">WhatsApp</a>.",
+            "fine": "Mbajmë adresën, emrin tënd, email-in tënd dhe faqen nga ku "
+                    "erdhe." + NL +
+                    "Shërbejnë për të bërë auditimin dhe për të të kthyer "
+                    "përgjigje, dhe nuk" + NL +
+                    "shkojnë gjetkë. Formulari kalon nga Web3Forms. Një rresht "
+                    "te {email_delete}" + NL +
+                    "i fshin të gjitha.",
+        },
         "blocks": [
             ("lead", "Është falas dhe nuk ka asgjë të lidhur pas. Pjesa më e madhe "
                      "e asaj që" + NL +
@@ -533,13 +570,13 @@ PAGES = [
                       "telefonatë më parë. Të kërkojmë vetëm adresën."),
             ]),
             ("Shih edhe", [
-                ("links", [("/start/", "Na dërgo faqen tënde"),
+                ("links", [("/start/", "Nis më mirë një projekt"),
                            ("/systems/", "Software me porosi"),
                            ("/work/", "Ku janë në punë punët tona")]),
             ]),
         ]),
-        "cta": "Na dërgo adresën.",
-        "cta_note": "Kaq i duhet auditimit, dhe kthehet {turnaround}.",
+        "cta": "E kalove formularin?",
+        "cta_note": "Do adresën, një emër dhe një email. Asgjë tjetër.",
     },
 
     # ---------------------------------------------------------------- START --
