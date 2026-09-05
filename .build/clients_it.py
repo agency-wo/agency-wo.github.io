@@ -138,7 +138,7 @@ CLIENTS = [
     },
     {
         "slug": "victoria-boutique",
-        "src": "114e16ac",
+        "src": "9c02b62d",
         "mark": [("victoria-boutique.svg", 204, 22)],
         "name": "Victoria Boutique",
         "where": "Durazzo, Albania",
@@ -189,14 +189,14 @@ CLIENTS = [
         # The screenshot is the hero: the wordmark in a serif, a photograph of
         # the shop with the mannequins in the window, and 2 buttons.
         "plate": ("victoria-home.webp", 900, 625,
-                  "La homepage di Victoria Boutique, un impaginato editoriale con "
-                  "la foto del negozio"),
+                  "La homepage di Victoria Boutique, il marchio su fondo calce accanto a "
+                  "una camicetta greca ricamata, con un meandro a separarli"),
         "services": [("/web-design/", "Siti web"),
                      ("/systems/", "Software su misura")],
     },
     {
         "slug": "intimo-bruna",
-        "src": "5cd92e91",
+        "src": "17f4477c",
         "mark": [("intimo-bruna.svg", 200, 26)],
         "name": "Intimo Bruna",
         "where": "Durazzo, Albania",
@@ -246,8 +246,8 @@ CLIENTS = [
         # and it does not. What is in it: a photograph of the inside of the
         # shop, the logo on a dark card over it, and a headline.
         "plate": ("bruna-home.webp", 900, 625,
-                  "La homepage di Intimo Bruna, il riquadro con il logo e un "
-                  "titolo sopra la fotografia dell'interno del negozio"),
+                  "La homepage di Intimo Bruna, un titolo su fondo lino accanto alla "
+                  "fotografia di reggiseni in tonalita naturali"),
         "services": [("/web-design/", "Siti web"),
                      ("/systems/", "Software su misura")],
     },

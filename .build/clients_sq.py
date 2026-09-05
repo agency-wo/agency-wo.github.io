@@ -137,7 +137,7 @@ CLIENTS = [
     },
     {
         "slug": "victoria-boutique",
-        "src": "114e16ac",
+        "src": "9c02b62d",
         "mark": [("victoria-boutique.svg", 204, 22)],
         "name": "Victoria Boutique",
         "where": "Durrës, Shqipëri",
@@ -182,14 +182,14 @@ CLIENTS = [
         # The screenshot is the hero: the wordmark in a serif, a photograph of
         # the shop with the mannequins in the window, and 2 buttons.
         "plate": ("victoria-home.webp", 900, 625,
-                  "Ballina e Victoria Boutique, një faqosje editoriale me foton e "
-                  "dyqanit"),
+                  "Ballina e Victoria Boutique, marka mbi sfond gëlqereje pranë një bluze "
+                  "greke të qëndisur, me një meandër që i ndan"),
         "services": [("/web-design/", "Faqe interneti"),
                      ("/systems/", "Software me porosi")],
     },
     {
         "slug": "intimo-bruna",
-        "src": "5cd92e91",
+        "src": "17f4477c",
         "mark": [("intimo-bruna.svg", 200, 26)],
         "name": "Intimo Bruna",
         "where": "Durrës, Shqipëri",
@@ -240,8 +240,8 @@ CLIENTS = [
         # rather than "e brendshme", which is this shop's own word for what it
         # sells and would read as a photograph of the underwear.
         "plate": ("bruna-home.webp", 900, 625,
-                  "Ballina e Intimo Bruna, karta me logon dhe një titull mbi "
-                  "një fotografi brenda dyqanit"),
+                  "Ballina e Intimo Bruna, një titull mbi sfond liri pranë fotografisë së "
+                  "sytjenave në ngjyra natyrale"),
         "services": [("/web-design/", "Faqe interneti"),
                      ("/systems/", "Software me porosi")],
     },

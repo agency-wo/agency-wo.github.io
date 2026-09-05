@@ -144,8 +144,8 @@ CLIENTS = [
         "stats": [],
         "payoff": "The shop updates its own website.",
         "plate": ("victoria-home.webp", 900, 625,
-                  "The Victoria Boutique homepage, an editorial layout with the shop "
-                  "photographed"),
+                  "The Victoria Boutique homepage, the wordmark set on limewash beside a "
+                  "Greek embroidered blouse, a meander running down between them"),
         "services": [("/web-design/", "Websites"), ("/systems/", "Custom software")],
     },
     {
@@ -194,8 +194,8 @@ CLIENTS = [
         # asks for real alt text and describing furniture that is not on the
         # page is worse than describing nothing.
         "plate": ("bruna-home.webp", 900, 625,
-                  "The Intimo Bruna homepage, a logo card and a headline over "
-                  "a photograph of the inside of the shop"),
+                  "The Intimo Bruna homepage, a headline on linen beside a photograph of "
+                  "bras in natural tones"),
         "services": [("/web-design/", "Websites"), ("/systems/", "Custom software")],
     },
     {
