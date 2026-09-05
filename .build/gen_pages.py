@@ -72,6 +72,23 @@ FIGS = {
               <path fill="none" stroke="#13161C" stroke-width="2" d="M104 134 H144"/>
               <rect x="108" y="140" width="36" height="6" fill="#D8232A"/>''',
 
+    # /audit/. A scorecard: 5 tracks, 4 of them filled to different lengths and
+    # the 5th left as an empty dashed track, which is the page's own claim drawn
+    # rather than written. The red is on the shortest bar, where ranking is
+    # being lost and where the plan starts. Rule 17 forbids numerals in a
+    # figure, so the scores are lengths and nothing is labelled.
+    "scorecard": '''<path fill="none" stroke="#13161C" stroke-width="2" d="M22 12 V148 H152"/>
+              <rect x="22" y="26" width="112" height="9" fill="#A6ADB9"/>
+              <rect x="22" y="26" width="88" height="9" fill="#13161C"/>
+              <rect x="22" y="52" width="112" height="9" fill="#A6ADB9"/>
+              <rect x="22" y="52" width="104" height="9" fill="#13161C"/>
+              <rect x="22" y="78" width="112" height="9" fill="#A6ADB9"/>
+              <rect x="22" y="78" width="36" height="9" fill="#13161C"/>
+              <rect x="22" y="104" width="112" height="9" fill="#A6ADB9"/>
+              <rect x="22" y="104" width="66" height="9" fill="#13161C"/>
+              <rect x="22.5" y="130.5" width="111" height="8" fill="none" stroke="#5A6070" stroke-width="1" stroke-dasharray="4 4"/>
+              <path fill="none" stroke="#D8232A" stroke-width="2" d="M60 73 V92"/>''',
+
     "crossover": '''<path fill="none" stroke="#5A6070" stroke-width="1.5" stroke-dasharray="5 4" d="M8 84 H56 V80 H104 V76 H152"/>
               <path fill="none" stroke="#13161C" stroke-width="2" d="M8 140 H36 V124 H62 V104 H86 V72 H110 V50 H134 V28 H152"/>
               <rect x="84" y="78" width="4" height="4" fill="#D8232A"/>''',

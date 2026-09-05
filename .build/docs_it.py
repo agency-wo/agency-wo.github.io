@@ -71,7 +71,7 @@ PAGES = [
     # -------------------------------------------------------------- SYSTEMS --
     {
         "url": "/systems/",
-     "src": "1471f9e9",
+     "src": "17cce9f1",
         "nav": "Software su misura",
         # 37 characters against the 52 the title budget leaves once shell.head
         # appends " · minarank studio".
@@ -248,7 +248,8 @@ PAGES = [
             ]),
             ("Vedi anche", [
                 ("links", [("/work/", "Dove sono in funzione"),
-                           ("/web-design/", "Siti web")]),
+                           ("/web-design/", "Siti web"),
+                           ("/audit/", "Cosa misura l'audit gratuito")]),
             ]),
         ]),
         "cta": "Quale di quelle 5 è la tua?",
@@ -387,10 +388,178 @@ PAGES = [
         "cta_note": "Niente slide, nessuna proposta finché non la vuoi.",
     },
 
+    # ---------------------------------------------------------------- AUDIT --
+    # "In sintesi" e "Vedi anche" sono chrome_it.ARIA_GLANCE e
+    # chrome_it.SIDE_ALSO, parola per parola. "Minafy" e "PDF" restano in
+    # inglese: sono nomi propri, elencati in glossary.KEEP_ENGLISH.
+    {
+        "url": "/audit/",
+     "src": "96debdf1",
+        "nav": "L'audit",
+        # 30 caratteri sui 52 che il budget lascia dopo " · minarank studio".
+        "title": "Cosa misura l'audit gratuito",
+        "description": "L'audit gratuito, spiegato: le 5 cose che misuriamo sul "
+                       "sito che hai già, cosa torna indietro nel PDF, e quanto "
+                       "costa chiederlo.",
+        "og_desc": "Mandaci l'indirizzo. Nient'altro.",
+        "schema": {
+            "name": "Audit gratuito del sito",
+            "type": "Audit di siti web",
+            "description": "Un audit gratuito di un sito esistente: velocità e "
+                           "sicurezza, cosa dicono le pagine, visibilità dentro "
+                           "gli assistenti AI, presenza locale e chiarezza alla "
+                           "prima visita, ognuna con un voto su 100 e un PDF con "
+                           "le correzioni in ordine.",
+        },
+        "h1": "Misuriamo il sito che hai già.",
+        "standfirst": "Mandaci l'indirizzo e nient'altro. L'audit torna" + NL +
+                      "{turnaround}: cosa funziona nel sito, dove stai perdendo "
+                      "clienti," + NL +
+                      "e cosa sistemeremmo per primo.",
+        "blocks": [
+            ("lead", "È gratis e non ha nulla attaccato. Quasi tutto quello che "
+                     "trova sta" + NL +
+                     "dietro al design e non dentro: se chi nella tua città cerca "
+                     "quello che" + NL +
+                     "vendi arriva davvero, e se resta una volta arrivato."),
+
+            ("h2", "Cosa misuriamo"),
+            ("ledger", [
+                ("Velocità e sicurezza",
+                 "Se il sito si apre in fretta da telefono con i dati mobili, se è "
+                 "sicuro," + NL +
+                 "e se qualcosa dentro è rotto. Quasi tutti i tuoi visitatori sono "
+                 "al" + NL +
+                 "telefono, sotto rete, fermi per strada."),
+                ("Cosa dicono davvero le tue pagine",
+                 "Se Google capisce cosa vendi e in che città sei dalla pagina "
+                 "stessa, o se" + NL +
+                 "deve indovinare. Titoli, intestazioni, le parole sulla pagina, e "
+                 "la" + NL +
+                 "descrizione sotto che legge solo una macchina."),
+                ("Se gli assistenti ti trovano",
+                 "Oggi la gente chiede a ChatGPT quello che prima scriveva su "
+                 "Google. Noi" + NL +
+                 "chiediamo del tuo mestiere nella tua città e guardiamo se esci "
+                 "nella" + NL +
+                 "risposta, e se il tuo sito è leggibile per chi quella risposta la "
+                 "scrive."),
+                ("La tua presenza nella tua città",
+                 "La scheda sulla mappa, gli orari, il numero di telefono e le "
+                 "recensioni, e" + NL +
+                 "se tutti dicono la stessa cosa. Di solito no, ed è quel "
+                 "disaccordo a tenere" + NL +
+                 "un negozio fuori dal risultato sulla mappa."),
+                ("I primi 5 secondi",
+                 "Se chi arriva sul sito capisce cosa fai, dove sei e come "
+                 "raggiungerti," + NL +
+                 "prima di decidere di andarsene. Questa è quella che un titolare "
+                 "può" + NL +
+                 "controllare da solo, e quasi nessuno lo fa."),
+            ]),
+
+            ("h2", "Cosa torna indietro"),
+            ("ul", [
+                "<strong>Un voto su 100 per ognuna delle 5</strong>, con accanto "
+                "quanta parte" + NL +
+                "di quell'area siamo davvero riusciti a controllare.",
+                "<strong>Le lacune, in parole semplici</strong>, ognuna con quanto "
+                "ti sta" + NL +
+                "costando. Se un audit ha bisogno di un glossario, è scritto male.",
+                "<strong>Cosa sistemeremmo per primo</strong>, in ordine, con le "
+                "cose da poco" + NL +
+                "dette da poco. Un piano, non 60 problemi senza una priorità.",
+                "<strong>Come stai rispetto alla concorrenza</strong>: le attività "
+                "che escono" + NL +
+                "quando qualcuno cerca quello che vendi, e cosa fanno loro che tu "
+                "non fai.",
+            ]),
+
+            ("h2", "I problemi che ti bruciano la pubblicità in silenzio"),
+            ("p", "Puoi pagare il clic e perdere lo stesso il cliente appena "
+                  "arriva. Una pagina" + NL +
+                  "che ci mette 6 secondi ad aprirsi da telefono. Un pulsante di "
+                  "contatto che" + NL +
+                  "non porta da nessuna parte. 3 numeri di telefono diversi sparsi "
+                  "per internet," + NL +
+                  "così la mappa ne mostra uno e il sito un altro."),
+            ("p", "Niente di tutto questo esce in un pannello di pubblicità. Esce "
+                  "come soldi" + NL +
+                  "spesi e nessuno che chiama. L'audit lo nomina, nell'ordine in "
+                  "cui lo" + NL +
+                  "sistemeremmo."),
+
+            ("h2", "Il motore è nostro e si chiama Minafy"),
+            ("p", "Non abbiamo comprato l'audit da uno scaffale per metterci sopra "
+                  "il nostro" + NL +
+                  "nome. Minafy è software scritto da noi. Legge il sito, lo "
+                  "misura, controlla" + NL +
+                  "dove si posiziona l'attività e come compare dentro gli "
+                  "assistenti AI, poi" + NL +
+                  "scrive la bozza del report. Ogni report lo legge una persona "
+                  "prima che parta."),
+            ("p", "Non ha il permesso di inventare un numero. Dove qualcosa non si "
+                  "è potuto" + NL +
+                  "misurare, una scheda che non siamo riusciti a raggiungere o un "
+                  "controllo che" + NL +
+                  "il sito ha rifiutato, il report scrive <strong>non "
+                  "valutato</strong> invece di darti" + NL +
+                  "zero, e ogni sezione stampa quanta parte abbiamo visto. Un voto "
+                  "costruito su" + NL +
+                  "metà delle prove deve dirlo."),
+
+            ("h2", "Quanto costa"),
+            ("p", "Niente. Il PDF resta tuo che tu ci assuma o no. Se la risposta "
+                  "onesta è che" + NL +
+                  "il sito va bene e i tuoi soldi servono da un'altra parte, è "
+                  "quello che" + NL +
+                  "ci troverai scritto."),
+        ],
+        "faq_h": "Prima di mandarlo",
+        "faq": [
+            ("Devo darvi accesso a qualcosa?",
+             "No. Solo l'indirizzo del sito. Misuriamo tutto da fuori, come lo "
+             "vedono un" + NL +
+             "cliente e un motore di ricerca."),
+            ("E se non ho ancora un sito?",
+             "Allora diventa un piano per farne uno. Per cosa si posiziona la "
+             "concorrenza," + NL +
+             "cosa cerca la gente vicino a te, e cosa dovrebbe dire il sito per "
+             "rispondere" + NL +
+             "a quelle ricerche."),
+            ("È lo stesso di un punteggio gratuito di uno strumento online?",
+             "No. Quelli danno un voto a una pagina su una lista di controllo in "
+             "20 secondi." + NL +
+             "Questo legge tutto il sito, controlla le tue schede e la tua "
+             "concorrenza, chiede" + NL +
+             "agli assistenti del tuo mestiere, e lo legge una persona prima che "
+             "parta."),
+            ("Poi mi chiama qualcuno?",
+             "No. Il report finisce con cosa faremmo e più o meno quanto costa. "
+             "Se ne vuoi" + NL +
+             "parlare scrivi tu a {email}," + NL +
+             "non il contrario."),
+        ],
+        "aside": ("In sintesi", [
+            ("Cosa non ci serve", [
+                ("p", "Nessuna password, nessun accesso alle statistiche, "
+                      "nessuna" + NL +
+                      "telefonata prima. Ti chiediamo solo l'indirizzo."),
+            ]),
+            ("Vedi anche", [
+                ("links", [("/start/", "Mandaci il tuo sito"),
+                           ("/systems/", "Software su misura"),
+                           ("/work/", "Dove sono in funzione i nostri lavori")]),
+            ]),
+        ]),
+        "cta": "Mandaci l'indirizzo.",
+        "cta_note": "È tutto quello che serve all'audit, e torna {turnaround}.",
+    },
+
     # ---------------------------------------------------------------- START --
     {
         "url": "/start/",
-     "src": "3d07fb52",
+     "src": "9bc5e27f",
         "nav": "Inizia un progetto",
         "title": "Audit gratuito del sito",
         "description": "Mandaci il tuo sito e ricevi un audit gratuito: cosa ti "
@@ -412,7 +581,8 @@ PAGES = [
                     "assuma o no, è scritto in inglese, e arriva {turnaround}.",
             "done_h": "Inviato. Il tuo audit è in arrivo.",
             # {turnaround} 3 of 3.
-            "done": "Dà un voto a 6 aree, dalle basi tecniche a come stai" + NL +
+            # 5, perché il motore valuta 5 aree. Vedi la nota nell'inglese.
+            "done": "Dà un voto a 5 aree, dalle basi tecniche a come stai" + NL +
                     "rispetto alle attività che ti fanno concorrenza, e finisce" + NL +
                     "con quello che sistemeremmo per primo. Il PDF arriva" + NL +
                     "{turnaround}. Se non è arrivato, scrivi a {email}" + NL +
@@ -459,6 +629,12 @@ PAGES = [
                     "li cancella.",
         },
         "blocks": [
+            ("p", "L'audit misura 5 aree del sito e dà a ognuna un voto su "
+                  "100." + NL +
+                  "<a href=\"/audit/\">Ecco quali sono</a>, e cosa dice il PDF "
+                  "sotto" + NL +
+                  "ognuna di esse."),
+
             ("h2", "Oppure per email con le domande già scritte"),
             ("p", "Questo apre la tua app di posta con dentro un breve elenco di "
                   "domande." + NL +

@@ -71,7 +71,7 @@ PAGES = [
     # -------------------------------------------------------------- SYSTEMS --
     {
         "url": "/systems/",
-     "src": "1471f9e9",
+     "src": "17cce9f1",
         "nav": "Software me porosi",
         # 38 characters against the 52 the title budget leaves once shell.head
         # appends " · minarank studio".
@@ -237,7 +237,8 @@ PAGES = [
             ]),
             ("Shih edhe", [
                 ("links", [("/work/", "Ku janë në punë"),
-                           ("/web-design/", "Faqe interneti")]),
+                           ("/web-design/", "Faqe interneti"),
+                           ("/audit/", "Çfarë mat auditimi falas")]),
             ]),
         ]),
         "cta": "Cila nga ato 5 është e jotja?",
@@ -376,10 +377,175 @@ PAGES = [
         "cta_note": "Pa slide, pa ofertë derisa ta duash.",
     },
 
+    # ---------------------------------------------------------------- AUDIT --
+    # "Në pak fjalë" dhe "Shih edhe" janë chrome_sq.ARIA_GLANCE dhe
+    # chrome_sq.SIDE_ALSO, fjalë për fjalë. "Minafy" dhe "PDF" mbeten në
+    # anglisht: janë emra të përveçëm, në glossary.KEEP_ENGLISH.
+    {
+        "url": "/audit/",
+     "src": "96debdf1",
+        "nav": "Auditimi",
+        # 25 shkronja nga 52 që lë buxheti pas " · minarank studio".
+        "title": "Çfarë mat auditimi falas",
+        "description": "Auditimi falas, i shpjeguar: 5 gjërat që matim te faqja "
+                       "që ke tashmë, çfarë të kthehet në PDF, dhe sa të kushton "
+                       "ta kërkosh.",
+        "og_desc": "Na dërgo adresën. Asgjë tjetër.",
+        "schema": {
+            "name": "Auditim falas i faqes",
+            "type": "Auditim faqesh interneti",
+            "description": "Një auditim falas i një faqeje ekzistuese: shpejtësia "
+                           "dhe siguria, çfarë thonë faqet, dukshmëria brenda "
+                           "asistentëve AI, prania vendore dhe qartësia në "
+                           "vizitën e parë, secila me notë me 100 dhe një PDF me "
+                           "rregullimet me radhë.",
+        },
+        "h1": "Matim faqen që ke tashmë.",
+        "standfirst": "Na dërgo adresën dhe asgjë tjetër. Auditimi kthehet" + NL +
+                      "{turnaround}: çfarë e ka mirë faqja, ku po humbet klientë," +
+                      NL +
+                      "dhe çfarë do të rregullonim të parën.",
+        "blocks": [
+            ("lead", "Është falas dhe nuk ka asgjë të lidhur pas. Pjesa më e madhe "
+                     "e asaj që" + NL +
+                     "gjen rri prapa dizajnit, jo brenda tij: nëse dikush në "
+                     "qytetin tënd që" + NL +
+                     "kërkon atë që shet arrin vërtet, dhe nëse rri pasi arrin."),
+
+            ("h2", "Çfarë matim"),
+            ("ledger", [
+                ("Shpejtësia dhe siguria",
+                 "Nëse faqja hapet shpejt në telefon me internet celular, nëse "
+                 "është e" + NL +
+                 "sigurt, dhe nëse diçka brenda është prishur. Pjesa më e madhe e "
+                 "vizitorëve" + NL +
+                 "janë në telefon, me sinjal, në këmbë në rrugë."),
+                ("Çfarë thonë vërtet faqet e tua",
+                 "Nëse Google e kupton çfarë shet dhe në cilin qytet je nga vetë "
+                 "faqja, apo" + NL +
+                 "duhet ta hamendësojë. Titujt, kryetitujt, fjalët në faqe, dhe "
+                 "përshkrimi" + NL +
+                 "poshtë tyre që e lexon vetëm një makinë."),
+                ("Nëse asistentët të gjejnë",
+                 "Sot njerëzit e pyesin ChatGPT-në atë që dikur e shkruanin në "
+                 "Google. Ne" + NL +
+                 "pyesim për zanatin tënd në qytetin tënd dhe shohim nëse del në "
+                 "përgjigje," + NL +
+                 "dhe nëse faqja jote lexohet fare nga ai që e shkruan atë "
+                 "përgjigje."),
+                ("Prania jote në qytetin tënd",
+                 "Profili në hartë, oraret, numri i telefonit dhe vlerësimet, dhe "
+                 "nëse të" + NL +
+                 "gjitha thonë të njëjtën gjë. Zakonisht jo, dhe ai mospërputhje e "
+                 "mban një" + NL +
+                 "dyqan jashtë rezultatit në hartë."),
+                ("5 sekondat e para",
+                 "Nëse ai që bie te faqja e kupton çfarë bën, ku je dhe si të të "
+                 "gjejë," + NL +
+                 "para se të vendosë të ikë. Kjo është ajo që një pronar e "
+                 "kontrollon vetë," + NL +
+                 "dhe pothuajse askush nuk e bën."),
+            ]),
+
+            ("h2", "Çfarë të kthehet"),
+            ("ul", [
+                "<strong>Një notë me 100 për secilën nga 5</strong>, me sa pjesë "
+                "të asaj fushe" + NL +
+                "arritëm vërtet të kontrollojmë shkruar pranë.",
+                "<strong>Boshllëqet, me fjalë të thjeshta</strong>, secili me atë "
+                "që po të" + NL +
+                "kushton. Nëse një auditim ka nevojë për fjalor, është shkruar "
+                "keq.",
+                "<strong>Çfarë do të rregullonim të parën</strong>, me radhë, me "
+                "të lirat" + NL +
+                "quajtur të lira. Një plan, jo 60 probleme pa asnjë radhë.",
+                "<strong>Ku qëndron përballë konkurrencës</strong>: bizneset që "
+                "dalin kur" + NL +
+                "dikush kërkon atë që shet, dhe çfarë bëjnë ata që ti nuk e bën.",
+            ]),
+
+            ("h2", "Problemet që ta hanë reklamën pa zhurmë"),
+            ("p", "Mund ta paguash klikimin dhe prapë ta humbasësh klientin sapo "
+                  "mbërrin. Një" + NL +
+                  "faqe që i do 6 sekonda të hapet në telefon. Një buton kontakti "
+                  "që nuk të" + NL +
+                  "çon askund. 3 numra telefoni të ndryshëm të shpërndarë nëpër "
+                  "internet, kështu" + NL +
+                  "që harta tregon njërin dhe faqja tjetrin."),
+            ("p", "Asnjë nga këto nuk del në një panel reklamash. Del si para të "
+                  "shpenzuara" + NL +
+                  "dhe askush që merr në telefon. Auditimi i emërton, me radhën me "
+                  "të cilën do" + NL +
+                  "t'i rregullonim."),
+
+            ("h2", "Motori është yni dhe quhet Minafy"),
+            ("p", "Nuk e blemë auditimin gati për t'i vënë emrin tonë sipër. "
+                  "Minafy është" + NL +
+                  "software i shkruar nga ne. Lexon faqen, e mat, kontrollon ku "
+                  "renditet" + NL +
+                  "biznesi dhe si duket brenda asistentëve AI, pastaj shkruan "
+                  "draftin e" + NL +
+                  "raportit. Çdo raport e lexon një njeri para se të nisë."),
+            ("p", "Nuk ka të drejtë të shpikë një shifër. Aty ku diçka nuk u mat "
+                  "dot, një" + NL +
+                  "profil që nuk e arritëm dot ose një kontroll që faqja nuk e "
+                  "lejoi, raporti" + NL +
+                  "shkruan <strong>e pavlerësuar</strong> në vend që të të japë "
+                  "zero, dhe çdo pjesë" + NL +
+                  "shkruan sa arritëm të shohim. Një notë e ndërtuar mbi gjysmën e "
+                  "provave" + NL +
+                  "duhet ta thotë."),
+
+            ("h2", "Sa kushton"),
+            ("p", "Asgjë. PDF-ja mbetet jotja, na marrësh në punë ose jo. Nëse "
+                  "përgjigjja e" + NL +
+                  "ndershme është që faqja është në rregull dhe paratë e tua duhen "
+                  "diku" + NL +
+                  "tjetër, ajo do të jetë e shkruar brenda."),
+        ],
+        "faq_h": "Para se ta dërgosh",
+        "faq": [
+            ("A duhet të të jap akses diku?",
+             "Jo. Vetëm adresën e faqes. Gjithçka matet nga jashtë, ashtu si e "
+             "shohin një" + NL +
+             "klient dhe një motor kërkimi."),
+            ("Po nëse s'kam ende faqe?",
+             "Atëherë bëhet plan për të ndërtuar një. Për çfarë renditet "
+             "konkurrenca, çfarë" + NL +
+             "kërkojnë njerëzit pranë teje, dhe çfarë do të duhej të thoshte faqja "
+             "për t'u" + NL +
+             "përgjigjur."),
+            ("A është njësoj si një notë falas nga një mjet online?",
+             "Jo. Ata i vënë notë një faqeje sipas një liste kontrolli për 20 "
+             "sekonda. Ky" + NL +
+             "lexon gjithë faqen, kontrollon profilet e tua dhe konkurrencën, pyet "
+             "asistentët" + NL +
+             "për zanatin tënd, dhe e lexon një njeri para se të nisë."),
+            ("A do të më marrë njeri në telefon pastaj?",
+             "Jo. Raporti mbyllet me atë që do të bënim dhe afërsisht sa kushton. "
+             "Nëse do" + NL +
+             "të flasësh për të, na shkruan ti te {email}," + NL +
+             "jo e kundërta."),
+        ],
+        "aside": ("Në pak fjalë", [
+            ("Çfarë nuk na duhet", [
+                ("p", "Asnjë fjalëkalim, asnjë akses te statistikat, asnjë" + NL +
+                      "telefonatë më parë. Të kërkojmë vetëm adresën."),
+            ]),
+            ("Shih edhe", [
+                ("links", [("/start/", "Na dërgo faqen tënde"),
+                           ("/systems/", "Software me porosi"),
+                           ("/work/", "Ku janë në punë punët tona")]),
+            ]),
+        ]),
+        "cta": "Na dërgo adresën.",
+        "cta_note": "Kaq i duhet auditimit, dhe kthehet {turnaround}.",
+    },
+
     # ---------------------------------------------------------------- START --
     {
         "url": "/start/",
-     "src": "3d07fb52",
+     "src": "9bc5e27f",
         "nav": "Nis një projekt",
         "title": "Auditim falas",
         "description": "Na dërgo faqen tënde dhe merr një auditim falas: çfarë po "
@@ -403,7 +569,8 @@ PAGES = [
                     "mbërrin {turnaround}.",
             "done_h": "U dërgua. Auditimi yt është rrugës.",
             # {turnaround} 3 of 3.
-            "done": "Vlerëson 6 fusha, nga bazat teknike te mënyra si" + NL +
+            # 5, sepse motori vlerëson 5 fusha. Shih shënimin në anglisht.
+            "done": "Vlerëson 5 fusha, nga bazat teknike te mënyra si" + NL +
                     "qëndron përballë bizneseve që konkurrojnë me ty, dhe mbyllet" + NL +
                     "me atë që do të rregullonim të parën. PDF-ja mbërrin" + NL +
                     "{turnaround}. Nëse nuk ka mbërritur, shkruaj te {email}" + NL +
@@ -450,6 +617,12 @@ PAGES = [
                     "i fshin.",
         },
         "blocks": [
+            ("p", "Auditimi mat 5 fusha të faqes dhe secilës i vë një notë me "
+                  "100." + NL +
+                  "<a href=\"/audit/\">Ja cilat janë</a>, dhe çfarë thotë PDF-ja "
+                  "nën" + NL +
+                  "secilën prej tyre."),
+
             ("h2", "Ose me email që i ka pyetjet tashmë të shkruara"),
             ("p", "Kjo hap aplikacionin tënd të email-it me një listë të shkurtër "
                   "pyetjesh" + NL +

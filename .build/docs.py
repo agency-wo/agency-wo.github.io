@@ -239,7 +239,8 @@ PAGES = [
             ]),
             ("Also", [
                 ("links", [("/work/", "Where these are running"),
-                           ("/web-design/", "Websites")]),
+                           ("/web-design/", "Websites"),
+                           ("/audit/", "What the free audit measures")]),
             ]),
         ]),
         "cta": "Which of those 5 is yours?",
@@ -366,6 +367,182 @@ PAGES = [
         "cta_note": "No slides, no proposal until you want one.",
     },
 
+    # ---------------------------------------------------------------- AUDIT --
+    # /start/ is where somebody acts. This is where somebody decides, and the
+    # two are different pages on purpose: the form asks for an address before a
+    # reader has been told what comes back for it, and the answer to that was
+    # 4 lines of hero microcopy.
+    #
+    # NO FORM HERE, and that is rule 20 rather than an omission. A page gets one
+    # ask, this page's is the ink band, and the band already points at
+    # /start/#audit in all 3 languages. A second form would also make this the
+    # 3rd copy of 6 fields to keep in step with check 26.
+    #
+    # The engine is named. Minafy is ours, it is the thing that separates this
+    # from a checklist score, and a studio that will not name its own tool is
+    # asking to be read as a reseller of somebody else's.
+    {
+        "url": "/audit/",
+        "nav": "The audit",
+        "title": "What the free audit measures",
+        "description": "The free audit, explained: the 5 things we measure on the "
+                       "site you already have, what comes back in the PDF, and "
+                       "what it costs to ask.",
+        "og_desc": "Send the address. Nothing else.",
+        "schema": {
+            "name": "Free website audit",
+            "type": "Website audit",
+            "description": "A free audit of an existing website: speed and safety, "
+                           "what the pages say, visibility inside AI assistants, "
+                           "local presence and first-visit clarity, each scored out "
+                           "of 100 and returned as a PDF with the fixes in order.",
+        },
+        "h1": "We measure the site you already have.",
+        "standfirst": "Send us the address and nothing else. The audit comes" + NL +
+                      "back {turnaround}: what the site does well, where it's "
+                      "losing you" + NL +
+                      "customers, and what we'd fix first.",
+        "blocks": [
+            ("lead", "It's free and there's nothing attached to it. Most of what "
+                     "it finds" + NL +
+                     "sits behind the design rather than in it: whether somebody "
+                     "in your town" + NL +
+                     "searching for what you sell ever arrives, and whether they "
+                     "stay once they" + NL +
+                     "do."),
+
+            ("h2", "What we measure"),
+            ("ledger", [
+                ("Speed and safety",
+                 "Whether the site opens quickly on a phone on mobile data, "
+                 "whether it's" + NL +
+                 "secure, and whether anything on it is broken. Most of your "
+                 "visitors are on" + NL +
+                 "a phone, on a signal, standing in the street."),
+                ("What your pages actually say",
+                 "Whether Google can tell what you sell and which town you're in "
+                 "from the" + NL +
+                 "page itself, or whether it has to guess. Titles, headings, the "
+                 "words on the" + NL +
+                 "page, and the description underneath them that only a machine "
+                 "reads."),
+                ("Whether the assistants can find you",
+                 "People now ask ChatGPT what they used to type into Google. We "
+                 "ask about" + NL +
+                 "your trade in your town and see whether you come back in the "
+                 "answer, and" + NL +
+                 "whether your site is even readable to the thing writing it."),
+                ("Your presence in your own town",
+                 "Your map listing, your hours, your phone number and your "
+                 "reviews, and" + NL +
+                 "whether all of them agree with each other. They usually don't, "
+                 "and that" + NL +
+                 "disagreement is what keeps a shop out of the map result."),
+                ("The first 5 seconds",
+                 "Whether somebody landing on the site can tell what you do, where "
+                 "you are" + NL +
+                 "and how to reach you, before they decide to leave. This is the "
+                 "one an owner" + NL +
+                 "can check without us, and almost nobody does."),
+            ]),
+
+            ("h2", "What comes back"),
+            ("ul", [
+                "<strong>A score out of 100 for each of the 5</strong>, with how "
+                "much of that" + NL +
+                "area we were actually able to check printed beside it.",
+                "<strong>The gaps, in plain language</strong>, each one with what "
+                "it's costing" + NL +
+                "you. If an audit needs a glossary, it was written badly.",
+                "<strong>What we'd fix first</strong>, in order, with the cheap "
+                "ones named as" + NL +
+                "cheap. A plan, not 60 problems with no priority on them.",
+                "<strong>Where you stand next to your competition</strong>: the "
+                "businesses" + NL +
+                "that come up when somebody searches for what you sell, and what "
+                "they're" + NL +
+                "doing that you aren't.",
+            ]),
+
+            ("h2", "The problems that quietly waste your advertising"),
+            ("p", "You can pay for the click and still lose the customer on "
+                  "arrival. A page" + NL +
+                  "that takes 6 seconds to open on a phone. A contact button that "
+                  "goes" + NL +
+                  "nowhere. 3 different phone numbers spread across the internet, "
+                  "so the map" + NL +
+                  "shows one and the site shows another."),
+            ("p", "None of that shows up in an ads dashboard. It shows up as money "
+                  "spent and" + NL +
+                  "nobody calling. The audit names it, in the order we would fix "
+                  "it."),
+
+            ("h2", "The engine is ours, and it's called Minafy"),
+            ("p", "We didn't buy the audit off a shelf and put our name on it. "
+                  "Minafy is" + NL +
+                  "software we wrote. It reads the site, measures it, checks where "
+                  "the" + NL +
+                  "business ranks and how it appears inside AI assistants, then "
+                  "drafts the" + NL +
+                  "report. A person reads every one before it goes out."),
+            ("p", "It isn't allowed to invent a number. Where something couldn't "
+                  "be measured, a" + NL +
+                  "listing we couldn't reach or a check the site refused, the "
+                  "report says <strong>not" + NL +
+                  "assessed</strong> instead of scoring you zero, and every "
+                  "section prints how much" + NL +
+                  "of it we could see. A score built on half the evidence should "
+                  "say so."),
+
+            ("h2", "What it costs"),
+            ("p", "Nothing. You keep the PDF whether you hire us or not. If the "
+                  "honest answer" + NL +
+                  "is that the site is fine and your money belongs somewhere else, "
+                  "that's what" + NL +
+                  "it'll say."),
+        ],
+        "faq_h": "Before you send it",
+        "faq": [
+            ("Do I have to give you access to anything?",
+             "No. Just the web address. Everything is measured from outside, "
+             "the way a" + NL +
+             "customer and a search engine see it."),
+            ("What if I don't have a website yet?",
+             "Then it becomes a plan for one. What your competitors rank for, "
+             "what people" + NL +
+             "near you are searching for, and what the site would have to say to "
+             "answer" + NL +
+             "them."),
+            ("Is this the same as a free score from an online tool?",
+             "No. Those grade one page against a checklist in 20 seconds. This "
+             "one reads" + NL +
+             "the whole site, checks your listings and your competitors, asks the "
+             "assistants" + NL +
+             "about your trade, and is read by a person before it goes out."),
+            ("Will somebody ring me afterwards?",
+             "No. The report ends with what we'd do and roughly what that costs. "
+             "If you" + NL +
+             "want to talk it through you write to {email}," + NL +
+             "not the other way round."),
+        ],
+        # "At a glance" is chrome.ARIA_GLANCE, the same label /systems/ uses.
+        # A second wording for the same furniture is 2 more strings to translate
+        # and nothing gained.
+        "aside": ("At a glance", [
+            ("What we don't need", [
+                ("p", "No password, no analytics access, and no call first." + NL +
+                      "The address is the whole ask."),
+            ]),
+            ("Also", [
+                ("links", [("/start/", "Send us your site"),
+                           ("/systems/", "Custom software"),
+                           ("/work/", "Where our work is running")]),
+            ]),
+        ]),
+        "cta": "Send us the address.",
+        "cta_note": "That's all the audit needs, and it comes back {turnaround}.",
+    },
+
     # ---------------------------------------------------------------- START --
     {
         "url": "/start/",
@@ -388,7 +565,11 @@ PAGES = [
                     "or" + NL +
                     "not, it's written in English, and it arrives {turnaround}.",
             "done_h": "Sent. Your audit is on its way.",
-            "done": "It scores 6 areas, from the technical basics to how you stand" + NL +
+            # 5, because the engine scores 5: technical, on-page, AI search,
+            # local and the first visit. It said 6 from the day it was written
+            # and nothing on this site could check a number stated in prose
+            # against a number the tool produces.
+            "done": "It scores 5 areas, from the technical basics to how you stand" + NL +
                     "next to the businesses competing with you, and it ends with "
                     "what" + NL +
                     "we'd fix first. The PDF arrives {turnaround}. If it hasn't," + NL +
@@ -431,6 +612,16 @@ PAGES = [
                     "deletes them.",
         },
         "blocks": [
+            # Directly under the form, because that is where somebody stalls:
+            # the field wants an address and nothing above it has said what the
+            # address buys. Gate check 46 also wants /audit/ reached by a
+            # sentence rather than by the chrome, and this is the sentence.
+            ("p", "The audit measures 5 areas of the site and scores each one "
+                  "out of 100." + NL +
+                  "<a href=\"/audit/\">Here is what they are</a>, and what the "
+                  "PDF says under" + NL +
+                  "every one of them."),
+
             ("h2", "Or email, with the questions already written"),
             ("p", "This opens your email app with a short list of questions in it. "
                   "Answer the" + NL +

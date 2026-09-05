@@ -99,6 +99,7 @@ with its hreflang alternates, is in https://minarankstudio.com/sitemap.xml.
 ## Studio
 - [How we work](https://minarankstudio.com/studio/): How we work: evidence before opinion, one plain document, built in house, and the things we will tell you for free even when it costs us the job.
 - [Free website audit](https://minarankstudio.com/start/): Send us your site and get a free audit back: what is costing you customers, what to fix first, and what it would cost. Or email, WhatsApp, or ask for a short call.
+- [What the free audit measures](https://minarankstudio.com/audit/): The free audit, explained: the 5 things we measure on the site you already have, what comes back in the PDF, and what it costs to ask.
 - [What the words mean](https://minarankstudio.com/glossary/): Plain definitions of the search and web words this studio uses: SEO, GEO, ranking, map listing, times shown, click rate and the rest. Written for shop owners, not agencies.
 - [What is AI search?](https://minarankstudio.com/glossary/ai-search/): How people now start looking for a business, and why an answer that names three companies changes what a small shop has to do to be found.
 - [What is an audit?](https://minarankstudio.com/glossary/audit/): What a useful read of a website contains, what makes one worthless, and what you should be able to do with it after you have read it.

@@ -30,7 +30,7 @@ from gen_pages import (FIGS, Contents, form_source, out, slugify,  # noqa: E402
 #
 # /studio/ and /start/ get nothing: one is a person talking and the other is an
 # instruction sheet, and neither has a mechanism worth drawing.
-FIG_FOR = {"/systems/": "ledger"}
+FIG_FOR = {"/systems/": "ledger", "/audit/": "scorecard"}
 
 S = shell.SITE
 NL = chr(10)
@@ -522,7 +522,15 @@ def start_ld(rec, lang):
 # A service, a person and a way of getting in touch are three different things
 # to a search engine, so each page gets its own graph. Which one is a decision
 # about schema, not about words, so it is made here and not named in docs.py.
-LD = {"/systems/": systems_ld, "/studio/": studio_ld, "/start/": start_ld}
+#
+# /audit/ shares systems_ld rather than growing a 4th builder, because the free
+# audit IS a Service this studio offers and the node systems_ld emits is exactly
+# that: a name, a serviceType, a description, the provider and the area served,
+# with the page's own FAQ hung off it. A 4th function would be the same 6 keys
+# under a different name. What it must NOT be is a second Service node with the
+# same @id, and it is not: the @id is derived from the page's own URL.
+LD = {"/systems/": systems_ld, "/audit/": systems_ld,
+      "/studio/": studio_ld, "/start/": start_ld}
 
 
 # ------------------------------------------------------------------ emit ----

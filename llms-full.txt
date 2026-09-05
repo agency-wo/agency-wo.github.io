@@ -467,7 +467,7 @@ know.
 Do I own it?
 Yes. The code is yours, it runs on your accounts, and it is documented
 so somebody else could take it over.
-Updated 30 August 2026
+Updated 5 September 2026
 Running today
 One full operations system in a Durres watch shop. Two shops publishing
 their own websites from a phone. One till wired to a website. All of it
@@ -475,6 +475,7 @@ costs nothing per month.
 Also
 Where these are running
 Websites
+What the free audit measures
 
 ## Work
 https://minarankstudio.com/work/
@@ -3654,7 +3655,7 @@ Can we speak to somebody you have worked with?
 Yes. Ask, and we introduce you to the client whose situation looks
 most like yours. The work is public either way: each of them has a
 page here saying what changed and what did not.
-Updated 30 August 2026
+Updated 5 September 2026
 
 ## Free website audit
 https://minarankstudio.com/start/
@@ -3667,11 +3668,14 @@ You get a PDF: what the site does well, where the gaps are, and
 what we'd fix first, in order. It's yours whether you hire us or
 not, it's written in English, and it arrives within 24 hours.
 Sent. Your audit is on its way.
-It scores 6 areas, from the technical basics to how you stand
+It scores 5 areas, from the technical basics to how you stand
 next to the businesses competing with you, and it ends with what
 we'd fix first. The PDF arrives within 24 hours. If it hasn't,
 write to info@minarankstudio.com and
 we'll send it again.
+The audit measures 5 areas of the site and scores each one out of 100.
+Here is what they are, and what the PDF says under
+every one of them.
 Or email, with the questions already written
 This opens your email app with a short list of questions in it. Answer the
 ones that apply, delete the rest. The more you fill in, the more specific
@@ -3714,7 +3718,7 @@ photographs and text already exist. That is why the audit comes first
 and costs nothing. You get the price with the plan, on one page, before
 any work starts. Meta ads are a flat fee rather than a cut of what you
 spend.
-Updated 30 August 2026
+Updated 5 September 2026
 Studio
 minarank studio, Durres, Albania
 info@minarankstudio.com
@@ -3724,6 +3728,93 @@ English, Italian, Albanian.
 Before you write
 Nothing is required. If you already know your budget range, saying so
 saves a round trip.
+
+## What the free audit measures
+https://minarankstudio.com/audit/
+
+We measure the site you already have.
+Send us the address and nothing else. The audit comes
+back within 24 hours: what the site does well, where it's losing you
+customers, and what we'd fix first.
+It's free and there's nothing attached to it. Most of what it finds
+sits behind the design rather than in it: whether somebody in your town
+searching for what you sell ever arrives, and whether they stay once they
+do.
+What we measure
+Speed and safety
+Whether the site opens quickly on a phone on mobile data, whether it's
+secure, and whether anything on it is broken. Most of your visitors are on
+a phone, on a signal, standing in the street.
+What your pages actually say
+Whether Google can tell what you sell and which town you're in from the
+page itself, or whether it has to guess. Titles, headings, the words on the
+page, and the description underneath them that only a machine reads.
+Whether the assistants can find you
+People now ask ChatGPT what they used to type into Google. We ask about
+your trade in your town and see whether you come back in the answer, and
+whether your site is even readable to the thing writing it.
+Your presence in your own town
+Your map listing, your hours, your phone number and your reviews, and
+whether all of them agree with each other. They usually don't, and that
+disagreement is what keeps a shop out of the map result.
+The first 5 seconds
+Whether somebody landing on the site can tell what you do, where you are
+and how to reach you, before they decide to leave. This is the one an owner
+can check without us, and almost nobody does.
+What comes back
+A score out of 100 for each of the 5, with how much of that
+area we were actually able to check printed beside it.
+The gaps, in plain language, each one with what it's costing
+you. If an audit needs a glossary, it was written badly.
+What we'd fix first, in order, with the cheap ones named as
+cheap. A plan, not 60 problems with no priority on them.
+Where you stand next to your competition: the businesses
+that come up when somebody searches for what you sell, and what they're
+doing that you aren't.
+The problems that quietly waste your advertising
+You can pay for the click and still lose the customer on arrival. A page
+that takes 6 seconds to open on a phone. A contact button that goes
+nowhere. 3 different phone numbers spread across the internet, so the map
+shows one and the site shows another.
+None of that shows up in an ads dashboard. It shows up as money spent and
+nobody calling. The audit names it, in the order we would fix it.
+The engine is ours, and it's called Minafy
+We didn't buy the audit off a shelf and put our name on it. Minafy is
+software we wrote. It reads the site, measures it, checks where the
+business ranks and how it appears inside AI assistants, then drafts the
+report. A person reads every one before it goes out.
+It isn't allowed to invent a number. Where something couldn't be measured, a
+listing we couldn't reach or a check the site refused, the report says not
+assessed instead of scoring you zero, and every section prints how much
+of it we could see. A score built on half the evidence should say so.
+What it costs
+Nothing. You keep the PDF whether you hire us or not. If the honest answer
+is that the site is fine and your money belongs somewhere else, that's what
+it'll say.
+Before you send it
+Do I have to give you access to anything?
+No. Just the web address. Everything is measured from outside, the way a
+customer and a search engine see it.
+What if I don't have a website yet?
+Then it becomes a plan for one. What your competitors rank for, what people
+near you are searching for, and what the site would have to say to answer
+them.
+Is this the same as a free score from an online tool?
+No. Those grade one page against a checklist in 20 seconds. This one reads
+the whole site, checks your listings and your competitors, asks the assistants
+about your trade, and is read by a person before it goes out.
+Will somebody ring me afterwards?
+No. The report ends with what we'd do and roughly what that costs. If you
+want to talk it through you write to info@minarankstudio.com,
+not the other way round.
+Updated 5 September 2026
+What we don't need
+No password, no analytics access, and no call first.
+The address is the whole ask.
+Also
+Send us your site
+Custom software
+Where our work is running
 
 ## What the words mean
 https://minarankstudio.com/glossary/

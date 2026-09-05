@@ -48,6 +48,10 @@ KEEP_ENGLISH = [
     "Search Console", "Web3Forms", "llms.txt", "Iglisi Watch",
     "Victoria Boutique", "Intimo Bruna", "ProAffy", "watch.al",
     "Rruga Aleksander Goga", "Henri Sila", "minarank studio",
+    # Our own audit engine. A product name, so it is the same word in all 3
+    # languages for the same reason "Iglisi Watch" is, and check 35 would
+    # otherwise read it on /sq/audit/ as English somebody forgot to translate.
+    "Minafy",
 ]
 
 # (language, pattern, why). Check 39 fails the build on a match. Every entry is
