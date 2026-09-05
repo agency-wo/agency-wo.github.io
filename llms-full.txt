@@ -323,6 +323,8 @@ How to choose a web designer
 How to sell online in Albania
 The website mistakes we see most often
 What to write on your website
+Web design in Milan
+What an Italian website must show
 Who owns your website?
 Also
 SEO and local search
@@ -375,6 +377,8 @@ Facebook ads for estate agents
 Why the fastest reply wins the job
 Google Ads or SEO?
 What Meta ads cost in Albania
+Instagram or the local TV slot
+What Instagram ads cost in Italy
 Also
 Websites
 SEO and local search
@@ -831,10 +835,18 @@ AI search for hotels and guesthouses
 14 August 2026 Your trade
 Search is a smaller front door for hotels than it was, and somebody else is charging you for the guests who use theirs.
 Read it
-Websites 18
+Websites 20
 Who owns your website?
 6 September 2026
 The domain, the hosting and the code are three separate things, and a business should hold all three.
+Read it
+What an Italian website must show
+6 September 2026
+Some of it is the law with an article number. Some of it is a rule you have probably been frightened about wrongly.
+Read it
+Web design in Milan
+6 September 2026
+What a small business in Milan is actually choosing between, and where a studio 900 kilometres away fits.
 Read it
 What to write on your website
 22 August 2026
@@ -904,7 +916,15 @@ A website you update yourself from a phone
 14 August 2026
 New pieces go on the site in about a minute, from a phone, with no licence and no monthly fee.
 Read it
-Meta ads 4
+Meta ads 6
+What Instagram ads cost in Italy
+6 September 2026
+The fee and the budget are different money, and only one of them is a price anybody sets.
+Read it
+Instagram or the local TV slot
+6 September 2026
+Where a small Italian business's advertising money goes now, and how to tell which half is working.
+Read it
 What Meta ads cost in Albania
 22 August 2026
 The fee and the budget are separate things, and an agency that blends them into a percentage is charging you more the better it does.
@@ -921,7 +941,15 @@ Facebook ads for estate agents
 14 August 2026 Your trade
 Buyers are on the portal whatever you do. The listing is what you actually compete for, and it comes from somewhere else.
 Read it
-Custom software 4
+Custom software 6
+What a gestionale costs in Italy
+6 September 2026
+Off the shelf, per seat, per month, forever. Or built once around the way one trade actually works.
+Read it
+Italy's digital transition voucher
+6 September 2026
+The chambers of commerce are running a national voucher for digitalisation, and each one sets its own dates.
+Read it
 When a spreadsheet stops being enough
 27 August 2026
 A spreadsheet holds up until somebody makes a second copy of it.
@@ -1520,8 +1548,8 @@ The difference is that here you know exactly who you have to pass, and there are
 When we are the wrong call
 If you need a national campaign, an operation that can hold several suppliers, or somebody sitting in internal meetings every week. We are not that and we do not pretend to be.
 And if your customers are not from here. Anybody selling across the country, or living off passing tourists, is looking at the wrong lever, and we would rather say so now than after three months of work.
-What we can do that a remote studio cannot
-Turn up. A meeting in Milan is something we arrange rather than a polite phrase. If seeing each other helps, we do it.
+The work happens at a distance
+The studio is in Durres and Milan is reached over WhatsApp, email and a shared screen. Every site we have built ships in Italian alongside Albanian and English, so writing for an Italian reader is the ordinary case here rather than a favour.
 The clients we have are on this site by name, each with a page saying what changed and what did not. That is checkable, which is more than an adjective about experience ever is.
 Questions worth asking
 Can a small business rank in Milan?
@@ -2281,7 +2309,7 @@ AI search
 SEO and local search
 A free audit
 Read next
-AI search in Milan
+What Instagram ads cost in Italy
 Add us as a preferred source on Google
 
 ## AI search in Milan
@@ -2803,6 +2831,89 @@ Read next
 When AI gets your business wrong
 Add us as a preferred source on Google
 
+## What an Italian website must show
+https://minarankstudio.com/blog/what-an-italian-website-must-show/
+
+Six things to check on your own homepage, in about 5 minutes.
+Open your own site while you read this. Most of these take one line to fix.
+By Henri Sila · 6 September 2026
+The VAT number, on the homepage
+Anybody with a partita IVA has to publish it on the site, and the rule names the homepage specifically. It comes from art. 35 of D.P.R. 633/1972, and the sanction reported by practitioners writing about it runs from 258.23 to 2,065.83 euro.
+A footer counts. A contact page on its own does not, because the rule says where.
+An online shop has to say more
+Selling online adds the business name, the registered address, a fast way to reach a human, and the Registro Imprese or REA number, under art. 7 of D.Lgs. 70/2003.
+A contact form on its own is not a fast way to reach a human. An address and a telephone number are.
+The cookie banner rule people get wrong
+Accept, reject and customise have to be equally easy to press. A large coloured Accept beside a small grey link is the exact pattern the Garante's cookie guidelines were written to stop.
+Non-technical cookies stay off until somebody says yes, and a refusal is not a reason to ask again tomorrow.
+The accessibility law probably does not apply to you
+The European Accessibility Act reached Italy as D.Lgs. 82/2022 and started applying in June 2025, and a great many small businesses have been told since then that they must comply.
+Microenterprises providing services are exempt: under 10 people and under 2 million euro of turnover. If that is you, the honest answer is that the law does not reach you, and anybody quoting you to fix it should have said so.
+What to do with all this
+Check the 4 above on your own site now. Then build the accessible version anyway if you sell to the public, because being readable on a bad screen with tired eyes is not a legal question.
+This is where to look and not legal advice, and the person to confirm it with is your commercialista.
+Questions worth asking
+Where exactly does the VAT number have to go?
+The homepage. Most sites put it in the footer, which appears on the homepage and everywhere else at once, and that is the simplest way to stop thinking about it.
+Do I need a cookie banner at all?
+Only if the site loads something that is not strictly necessary, which usually means analytics, embedded video or a chat widget. A site that loads none of those needs no banner, and a banner on a site that needs none is just a thing to click.
+My site was built by somebody who has disappeared.
+Then start with who holds the domain and the hosting, because everything above is unfixable until somebody can edit the pages. That is a different problem and a more urgent one.
+Is an Albanian studio the right people to ask about Italian law?
+For where to look, yes, and we have written the articles down so you can check us. For whether it applies to your business, ask your commercialista, who is the person who answers for it.
+Send us the address and we will list what is missing, with the rule beside each one.
+Get a free audit.
+Updated 6 September 2026
+The service
+Websites
+Also
+Websites
+A free audit
+Read next
+Web design in Milan
+Add us as a preferred source on Google
+
+## Web design in Milan
+https://minarankstudio.com/blog/web-design-milano/
+
+You will not run out of studios here. You will run out of patience comparing them.
+The hard part is not finding somebody. It is telling two quotes apart when both sound reasonable.
+By Henri Sila · 6 September 2026
+Who this is for
+A shop, a studio or a practice with somewhere between one and 20 people, selling to a part of the city rather than to the country. Not a brand with a marketing department, who should hire an agency and will.
+What you are choosing between
+A template filled in cheaply, an agency that will sell you a process, a freelancer who may be excellent and may vanish, or somebody who builds the thing and hands you the keys.
+All 4 produce a website. They differ in what you hold afterwards, which is the part nobody asks about until it matters.
+The work happens at a distance
+We are in Durres and the job reaches Milan over WhatsApp, email and a screen we both look at. Nobody is coming to photograph the shop, and if that is what the job needs, it is the wrong job for us.
+What travels perfectly is the building. Every site we have made ships in Italian alongside Albanian and English, so writing for an Italian reader is what we do rather than a translation bolted on at the end.
+What we would build first
+The page that answers the question somebody typed, a way to reach you that works on a phone in one thumb, and a Google profile that agrees with both. In that order, because the third one often brings the first customers.
+Everything decorative waits until something is arriving to decorate.
+When to hire somebody in the city
+If you want a person in the room, if the work needs photography of your own premises, or if you would simply rather buy from a neighbour. All 3 are good reasons and none of them is about the code.
+Questions worth asking
+Are you based in Milan?
+No. The studio sits in Albania and the whole job is done at a distance. We would rather put that in the first line of the answer than let you discover it three emails in.
+Is it cheaper because you are not here?
+Usually. We would rather say that plainly than pretend the price comes from something mysterious, and it is also why we will not compete on being the cheapest quote you get.
+Who writes the Italian?
+We do, and it is written rather than translated. A page turned into Italian from something else reads like one, and an Italian reader notices in about a sentence.
+What do I own at the end?
+The domain, the hosting account and the code, all registered to your business from the first day. Nothing is held on your behalf and there is no handover to negotiate.
+Send us the address and we will tell you what we would change first, whoever ends up doing it.
+Get a free audit.
+Updated 6 September 2026
+The service
+Websites
+Also
+Websites
+SEO in Milan
+A free audit
+Read next
+What SEO costs in Italy
+Add us as a preferred source on Google
+
 ## What to write on your website
 https://minarankstudio.com/blog/what-to-write-on-your-website/
 
@@ -2980,7 +3091,7 @@ Also
 Websites
 Custom software
 Read next
-How to appear in ChatGPT
+Web design in Milan
 Add us as a preferred source on Google
 
 ## New website, or fix the one I have?
@@ -3076,7 +3187,7 @@ Also
 Websites
 SEO and local search
 Read next
-WordPress or a site built for you
+Web design in Milan
 Add us as a preferred source on Google
 
 ## WordPress or a site built for you
@@ -3545,6 +3656,92 @@ Read next
 Your phone number says 3 different things
 Add us as a preferred source on Google
 
+## What Instagram ads cost in Italy
+https://minarankstudio.com/blog/what-meta-ads-cost-in-italy/
+
+Most of what you spend never reaches us.
+Two amounts leave your account every month. A studio that quotes one number is hiding which.
+By Henri Sila · 6 September 2026
+Why we would start with Instagram
+A boutique, a pasticceria and a b&b all sell something that photographs well, and Instagram is where a photograph is the whole advert. A heating engineer sells a problem being over, which photographs badly and reads well.
+The platform is the same buying system either way. Which surface the money lands on is a judgement about your stock, not about the software.
+The two amounts
+The budget goes to Meta and buys the showing. The fee comes to us and buys the setting up, the writing, the watching and the changing. They arrive on different invoices because they are different purchases.
+Anybody who gives you one figure for both is either guessing at your budget or taking a cut of it.
+What decides the fee
+How many audiences, how many pieces of creative, how often it changes, and whether somebody is answering the messages that come back. A single campaign for one shop that runs all year is not the same work as 4 seasonal ones.
+We charge it flat rather than as a share of the budget, so the advice to spend more is never advice that pays us more.
+What decides the budget
+What you sell it for, how often somebody buys again, and how many people within reach could plausibly want it this month. A 40 euro haircut and a 4,000 euro boiler need completely different arithmetic before a cent is spent.
+Start at a number you would not miss, run it long enough to mean something, and read the enquiries rather than the likes.
+Where the money goes missing here
+An advert in Italian that lands on a page in English. A message on a Saturday that gets read on Monday. A phone number on the profile that rings in a back room nobody sits in.
+None of that is the campaign. All of it is paid for by the campaign, and it is the cheapest part of the whole exercise to fix.
+Questions worth asking
+Can you run it in Italian?
+Yes, and the advert, the page it lands on and the reply all have to be in the same language or the money leaks between them. That is the ordinary case here rather than a special request.
+Do you take a percentage of the spend?
+No. A flat fee, agreed before anything runs. A percentage pays a studio more for telling you to spend more, and we would rather not have that conversation with ourselves.
+How long before we know if it works?
+Long enough for the platform to stop guessing and for enough enquiries to arrive that the number means something. Judging a campaign after 3 days is judging noise.
+What if it does not work for my trade?
+Then we say so and stop. Some things sell on a search and not on a scroll, and a studio that cannot tell you which yours is has not looked.
+Tell us what you sell and what a customer is worth to you, and we will tell you whether ads are the right lever at all.
+Get a free audit.
+Updated 6 September 2026
+The service
+Meta ads
+Also
+Meta ads
+Websites
+A free audit
+Read next
+Web design in Milan
+Add us as a preferred source on Google
+
+## Instagram or the local TV slot
+https://minarankstudio.com/blog/instagram-or-the-local-tv-slot/
+
+The word advertising still means television to a lot of people.
+One of them tells you exactly who came. The other tells you how many might have.
+By Henri Sila · 6 September 2026
+Why the comparison is still live
+Plenty of Italian small businesses still think of advertising as a slot on a screen or a page, because for 30 years that is what it was, and the people selling those slots are still ringing.
+They are not obviously wrong. A local slot reaches people who are not looking for you, which is the one thing search cannot do.
+What each one actually buys
+A broadcast slot buys exposure to a large group defined mostly by when they were watching. A social campaign buys exposure to a smaller group defined by where they live, how old they are and what they have shown interest in.
+Neither is better in the abstract. They are different shapes of the same purchase.
+The difference that matters is what comes back
+After a broadcast slot you know what it cost and roughly how many people could have seen it. After a social campaign you know how many clicked, what they did next, and what each enquiry cost you.
+That is not a claim that one sells more. It is a claim that only one of them can be checked, and an unmeasurable spend is one you renew on a feeling.
+When the old channel still wins
+A shop opening. A trade where the buyer is 70 and the radio is on all day. Anything where being known locally matters more than being found by somebody specific.
+Sponsoring the local team is advertising too, and in a small town it sometimes beats everything on this page.
+How to run the comparison honestly
+Ask every customer who walks in where they heard of you, for one month, and write it down. It is a tedious month and it settles arguments no dashboard can.
+Then put the next budget where the answers were, rather than where the last invoice was.
+Questions worth asking
+Is Instagram cheaper than local television?
+Per person reached, usually. Per customer who actually arrives, it depends entirely on the trade, and anybody who answers that question without asking what you sell is selling you their own service.
+Should I do both?
+If the budget genuinely covers both, yes, and measure the one that can be measured so you can see what the other has to beat. If it covers one, start with the one that reports back.
+Does anybody under 40 watch local channels?
+Some do, and that is the wrong question. The right one is whether your buyers do, which you find out by asking them rather than by asking us.
+What about the free local paper?
+Same arithmetic as broadcast, usually cheaper, and often better targeted than either because it lands in a defined set of letterboxes. Worth pricing before you dismiss it.
+Tell us what you have been spending and where, and we will tell you which part of it can be measured at all.
+Get a free audit.
+Updated 6 September 2026
+The service
+Meta ads
+Also
+Meta ads
+SEO and local search
+A free audit
+Read next
+What Instagram ads cost in Italy
+Add us as a preferred source on Google
+
 ## What Meta ads cost in Albania
 https://minarankstudio.com/blog/what-meta-ads-cost-in-albania/
 
@@ -3714,6 +3911,90 @@ Read next
 A website for a dental clinic
 Add us as a preferred source on Google
 
+## What a gestionale costs in Italy
+https://minarankstudio.com/blog/what-custom-software-costs-in-italy/
+
+The licence you stop paying is not the whole saving.
+A hairdresser, a b&b and a builder are sold the same software with three different labels on it.
+By Henri Sila · 6 September 2026
+What is on the market
+There is a package for hairdressers, one for restaurants, one for gyms, one for beauticians, one for b&bs and one for builders. Underneath a lot of them is the same system with a different word on the login screen.
+That is not a scandal. It is the only way a vendor can sell to 6 trades at once, and for plenty of businesses it is genuinely enough.
+When the package stops fitting
+The moment your actual work needs a field the package does not have, and the answer is to keep that part in a notebook beside it. Now you have 2 systems and only one of them is searchable.
+The second sign is the seat count. Software priced per person per month gets more expensive exactly when the business is doing well.
+What built-once actually costs
+The build is one payment, sized by how many things it has to hold and how many of them talk to each other. Stock, jobs, customers and money in one place is a bigger job than any one of them alone.
+What it does not carry is a monthly licence, a seat price, or a rise every January decided by somebody you have never met.
+What still costs money afterwards
+Somewhere for it to run, a domain, backups, and time when you want it changed. We build on free infrastructure where the free tier is honestly enough, and say plainly when it will not be.
+The system we run for a watch shop in Durres costs nothing a month to keep running. That is a fact about its size, not a promise about yours.
+When renting is the better answer
+If a package covers what you do, buy the package. If you need it working next week, buy the package. If the business is still deciding what it is, buy the package and build later.
+Building is worth it when the way you work is the thing that makes money, and the software is currently fighting it.
+Questions worth asking
+Is it cheaper than a subscription in the end?
+It depends entirely on how long you keep it and how many people log in. A build is one payment against a bill that never stops, so the answer is arithmetic and we will do it with you before you commit.
+Who owns it?
+You do. The code, the accounts and the data are registered to the business from the first day, and it is documented so somebody else could take it over.
+Can it talk to fatturazione elettronica?
+It can be built to, and that is a question for your commercialista before it is a question for us, because the system you already send invoices through decides most of the answer.
+What if we outgrow it?
+Then it gets extended, because you own it. A package cannot be extended, so outgrowing one means starting again somewhere else.
+Tell us the one job that eats an evening every month and we will tell you whether software should touch it.
+Get a free audit.
+Updated 6 September 2026
+The service
+Custom software
+Also
+Custom software
+A free audit
+Read next
+Web design in Milan
+Add us as a preferred source on Google
+
+## Italy's digital transition voucher
+https://minarankstudio.com/blog/voucher-doppia-transizione/
+
+Somebody else pays for part of it, and most businesses miss the window.
+It covers management software. It does not obviously cover a website, and we would rather say so.
+By Henri Sila · 6 September 2026
+What it is
+The first national edition of a voucher run through Punto Impresa Digitale, the digital arm of the chambers of commerce. It is a contributo a fondo perduto, meaning a grant rather than a loan, awarded under de minimis rules.
+The scheme puts 150 million euro behind it across 2026 to 2029, at up to 70% of a project depending on the chamber. Checked on 6 September 2026 against the PID scheme page, and these things move, so read it there before you rely on it.
+The catch is that there is no single deadline
+It is national money handed out locally. Each chamber of commerce opens and closes its own window and sets its own ceiling, so Bergamo and Bari are running different clocks on the same scheme.
+Applications are prepared on ReStart, at restart.infocamere.it. The only date that matters to you is your own chamber's, and it is on your chamber's site rather than anywhere national.
+What it covers
+The eligible list runs to artificial intelligence, cybersecurity, connected devices, cloud, ERP and CRM systems, data analytics, blockchain, robotics, augmented reality, sustainability tools, and the consulting and training around them.
+ERP and CRM is the line that matters to a small business with a stock problem. That is the same category as a management system built around one trade.
+What it does not obviously cover
+A website. Nothing in the published categories names sites, online shops or advertising, and we are not going to read one in because it would suit us. If somebody tells you the voucher pays for a new site, ask them which category.
+Ask your own chamber before you plan around it, and ask in writing.
+What to do this week if it applies to you
+Find your chamber, find whether its window is open, and read the categories against the thing you actually want built. That is an hour of work and it happens before anybody quotes you anything.
+None of this is advice from an accountant, and we are not one. It is where to look.
+Questions worth asking
+Do you handle the application?
+No. That is work for your commercialista or a consultant who does bandi for a living, and doing it badly costs you the window. We can describe the technical side of a project in writing so somebody else can submit it.
+Is it first come first served?
+Each chamber decides, and several run it that way, which is why the opening date matters as much as the closing one. Read your own chamber's rules rather than a summary of somebody else's.
+What if my chamber's window has closed?
+The scheme is funded to 2029, so there is very likely another round. That is a reason to get the project written down now rather than to hurry a bad one out this month.
+Can I use it for training instead?
+Specialist consulting and training are in the eligible list, so often yes. Whether yours qualifies is a question for the chamber, and they answer it.
+Tell us what you would build with it and we will tell you whether it looks like an eligible category or a hopeful one.
+Get a free audit.
+Updated 6 September 2026
+The service
+Custom software
+Also
+Custom software
+A free audit
+Read next
+What a gestionale costs in Italy
+Add us as a preferred source on Google
+
 ## When a spreadsheet stops being enough
 https://minarankstudio.com/blog/when-a-spreadsheet-stops-being-enough/
 
@@ -3744,7 +4025,7 @@ Also
 Custom software
 Websites
 Read next
-What custom software costs to run
+What a gestionale costs in Italy
 Add us as a preferred source on Google
 
 ## What custom software costs to run

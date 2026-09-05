@@ -28,7 +28,7 @@ from gen_pages import Contents, out, strip_tags, write  # noqa: E402
 # Imported straight rather than through i18n.load, because it is slugs and not
 # copy: there is nothing in it for a translator to answer.
 from gen_docs import faq_node, faq_section  # noqa: E402
-from posts import INDUSTRY  # noqa: E402
+from posts import INDUSTRY, LADDER  # noqa: E402
 
 S = shell.SITE
 NL = chr(10)
@@ -92,8 +92,8 @@ def post_url(p):
 
 # ------------------------------------------------------------------- post --
 
-# The 6 posts that are ABOUT a city, and the Wikidata item for each. The same
-# 4 ids gen_pages.py puts on areaServed, so a city page and the service page it
+# Every post that is ABOUT a city, and the Wikidata item for each. The same
+# ids gen_pages.py puts on areaServed, so a city page and the service page it
 # points at name the same place rather than two similar strings. The Q-numbers
 # were looked up against the Wikidata API, because "Durres" on its own also
 # matches a 1926 patrol boat and "Pavia" a genus of plants.
@@ -525,6 +525,14 @@ def check(posts, by_slug):
         f"posts.INDUSTRY names {missing}, which are not posts. A slug there "
         f"must match a record, or the blog index drops it silently")
 
+    # Same for LADDER, and it matters more here: a bad slug on either side
+    # falls back to the date neighbour, which is a working link to the
+    # wrong place. Nothing downstream can tell that from a decision.
+    bad = sorted((set(LADDER) | set(LADDER.values())) - slugs)
+    assert not bad, (
+        f"posts.LADDER names {bad}, which are not posts. Read next would "
+        f"silently fall back to the next post by date and look deliberate")
+
     # Check 11 fails ANY sentence of 9+ words that appears on 2 pages, and 3
     # posts sharing one closing CTA is how this file first failed the gate.
     # Catch it here, where the message says which post and which sentence.
@@ -558,8 +566,12 @@ if __name__ == "__main__":
                  blog_index(posts, idx, lg)):
             changed += 1
         total += 1
+        # Read next is the date neighbour unless LADDER says otherwise.
+        # by_next is built from the LOCALISED list, so the tail carries
+        # the Italian title on the Italian page without a lookup table.
+        by_next = {q["slug"]: q for q in posts}
         for i, (p, en_p) in enumerate(pairs):
-            nxt = posts[(i + 1) % len(posts)]
+            nxt = by_next.get(LADDER.get(p["slug"])) or posts[(i + 1) % len(posts)]
             if write(out(os.path.join("blog", p["slug"], "index.html"), lg),
                      post_page(p, en_p, nxt, by_slug, band, lg)):
                 changed += 1

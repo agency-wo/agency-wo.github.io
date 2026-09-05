@@ -4691,11 +4691,18 @@ POSTS = [
                 "looking at the wrong lever, and we would rather say so now "
                 "than after three months of work.</p>",
             ]),
-            ("What we can do that a remote studio cannot", [
-                "<p>Turn up. A meeting in Milan is something we arrange rather "
-                ""
-                "than a polite phrase. If seeing each other helps, we do "
-                "it.</p>",
+            # This section used to open "Turn up. A meeting in Milan is
+            # something we arrange", under the heading "What we can do that a
+            # remote studio cannot". We ARE a remote studio, and 2 other posts
+            # say so on the record: hiring-a-studio-abroad ("We have no office
+            # in Italy") and seo-bergamo ("everything is remote"). One page was
+            # promising a thing the site refuses twice.
+            ("The work happens at a distance", [
+                "<p>The studio is in Durres and Milan is reached over WhatsApp, "
+                "email and a shared screen. Every site we have built ships in "
+                "Italian alongside Albanian and English, so writing for an "
+                "Italian reader is the ordinary case here rather than a "
+                "favour.</p>",
                 "<p>The clients we have are on this site by name, each with a page "
                 "saying what changed and what did not. That is checkable, which is "
                 "more than an adjective about experience ever is.</p>",
@@ -6291,6 +6298,564 @@ POSTS = [
                     ("/glossary/ai-search/", "AI search"),
                     ("/audit/", "A free audit")],
     },
+    # ------------------------------------------------------------------------
+    # 6 posts for the Italian market, 2026-09-06, arranged as a ladder: 3 that
+    # answer a question and 3 that answer what it costs. posts.LADDER wires the
+    # "Read next" tail from the first kind to the second.
+    #
+    # Every one is work: None. There is no Italian client, hiring-a-studio-abroad
+    # says so on the record, and rule 21 forbids borrowing an Albanian one.
+    # Slugs stay English, per i18n.url_for, except where the thing has an
+    # Italian proper name.
+
+    {
+        "slug": "what-meta-ads-cost-in-italy",
+        "date": "2026-09-06",
+        "updated": "2026-09-06",
+        "topic": "Meta ads",
+        "work": None,
+        "service": ("/meta-ads/", "Meta ads"),
+
+        "title": "What Instagram ads cost in Italy",
+        "h1": "Most of what you spend never reaches us.",
+        "summary": "The fee and the budget are different money, and only one "
+                   "of them is a price anybody sets.",
+        "standfirst": "Two amounts leave your account every month. A studio "
+                      "that quotes one number is hiding which.",
+        "description": "What Instagram and Facebook ads cost a small business "
+                       "in Italy: what decides the fee, what decides the "
+                       "budget, and where the money quietly goes missing.",
+        "og_desc": "Two amounts leave your account. Only one of them is ours.",
+
+        "body": [
+            ("Why we would start with Instagram", [
+                "<p>A boutique, a pasticceria and a b&amp;b all sell something "
+                "that photographs well, and Instagram is where a photograph is "
+                "the whole advert. A heating engineer sells a problem being "
+                "over, which photographs badly and reads well.</p>",
+                "<p>The platform is the same buying system either way. Which "
+                "surface the money lands on is a judgement about your stock, "
+                "not about the software.</p>",
+            ]),
+            ("The two amounts", [
+                "<p>The budget goes to Meta and buys the showing. The fee "
+                "comes to us and buys the setting up, the writing, the "
+                "watching and the changing. They arrive on different invoices "
+                "because they are different purchases.</p>",
+                "<p>Anybody who gives you one figure for both is either "
+                "guessing at your budget or taking a cut of it.</p>",
+            ]),
+            ("What decides the fee", [
+                "<p>How many audiences, how many pieces of creative, how often "
+                "it changes, and whether somebody is answering the messages "
+                "that come back. A single campaign for one shop that runs all "
+                "year is not the same work as 4 seasonal ones.</p>",
+                "<p>We charge it flat rather than as a share of the budget, so "
+                "the advice to spend more is never advice that pays us "
+                "more.</p>",
+            ]),
+            ("What decides the budget", [
+                "<p>What you sell it for, how often somebody buys again, and "
+                "how many people within reach could plausibly want it this "
+                "month. A 40 euro haircut and a 4,000 euro boiler need "
+                "completely different arithmetic before a cent is spent.</p>",
+                "<p>Start at a number you would not miss, run it long enough "
+                "to mean something, and read the enquiries rather than the "
+                "likes.</p>",
+            ]),
+            ("Where the money goes missing here", [
+                "<p>An advert in Italian that lands on a page in English. A "
+                "message on a Saturday that gets read on Monday. A phone "
+                "number on the profile that rings in a back room nobody "
+                "sits in.</p>",
+                "<p>None of that is the campaign. All of it is paid for by the "
+                "campaign, and it is the cheapest part of the whole exercise "
+                "to fix.</p>",
+            ]),
+        ],
+        "payoff": "Tell us what you sell and what a customer is worth to you, "
+                  "and we will tell you whether ads are the right lever at "
+                  "all.",
+        "faq": [
+            ("Can you run it in Italian?",
+             "Yes, and the advert, the page it lands on and the reply all have "
+             "to be in the same language or the money leaks between them. That "
+             "is the ordinary case here rather than a special request."),
+            ("Do you take a percentage of the spend?",
+             "No. A flat fee, agreed before anything runs. A percentage pays a "
+             "studio more for telling you to spend more, and we would rather "
+             "not have that conversation with ourselves."),
+            ("How long before we know if it works?",
+             "Long enough for the platform to stop guessing and for enough "
+             "enquiries to arrive that the number means something. Judging a "
+             "campaign after 3 days is judging noise."),
+            ("What if it does not work for my trade?",
+             "Then we say so and stop. Some things sell on a search and not on "
+             "a scroll, and a studio that cannot tell you which yours is has "
+             "not looked."),
+        ],
+        "related": [("/meta-ads/", "Meta ads"),
+                    ("/web-design/", "Websites"),
+                    ("/audit/", "A free audit")],
+    },
+
+    {
+        "slug": "what-custom-software-costs-in-italy",
+        "date": "2026-09-06",
+        "updated": "2026-09-06",
+        "topic": "Custom software",
+        "work": None,
+        "service": ("/systems/", "Custom software"),
+
+        "title": "What a gestionale costs in Italy",
+        "h1": "The licence you stop paying is not the whole saving.",
+        "summary": "Off the shelf, per seat, per month, forever. Or built "
+                   "once around the way one trade actually works.",
+        "description": "What a management system costs an Italian small "
+                       "business, how a per-seat licence compares with "
+                       "something built once, and what still costs money "
+                       "afterwards.",
+        "standfirst": "A hairdresser, a b&amp;b and a builder are sold the "
+                      "same software with three different labels on it.",
+        "og_desc": "Per seat, per month, forever. Or built once and owned.",
+
+        "body": [
+            ("What is on the market", [
+                "<p>There is a package for hairdressers, one for restaurants, "
+                "one for gyms, one for beauticians, one for b&amp;bs and one for "
+                "builders. Underneath a lot of them is the same system with a "
+                "different word on the login screen.</p>",
+                "<p>That is not a scandal. It is the only way a vendor can sell "
+                "to 6 trades at once, and for plenty of businesses it is "
+                "genuinely enough.</p>",
+            ]),
+            ("When the package stops fitting", [
+                "<p>The moment your actual work needs a field the package does "
+                "not have, and the answer is to keep that part in a notebook "
+                "beside it. Now you have 2 systems and only one of them is "
+                "searchable.</p>",
+                "<p>The second sign is the seat count. Software priced per "
+                "person per month gets more expensive exactly when the "
+                "business is doing well.</p>",
+            ]),
+            ("What built-once actually costs", [
+                "<p>The build is one payment, sized by how many things it has "
+                "to hold and how many of them talk to each other. Stock, jobs, "
+                "customers and money in one place is a bigger job than any one "
+                "of them alone.</p>",
+                "<p>What it does not carry is a monthly licence, a seat price, "
+                "or a rise every January decided by somebody you have never "
+                "met.</p>",
+            ]),
+            ("What still costs money afterwards", [
+                "<p>Somewhere for it to run, a domain, backups, and time when "
+                "you want it changed. We build on free infrastructure where "
+                "the free tier is honestly enough, and say plainly when it will "
+                "not be.</p>",
+                "<p>The system we run for a watch shop in Durres costs nothing "
+                "a month to keep running. That is a fact about its size, not a "
+                "promise about yours.</p>",
+            ]),
+            ("When renting is the better answer", [
+                "<p>If a package covers what you do, buy the package. If you "
+                "need it working next week, buy the package. If the business is "
+                "still deciding what it is, buy the package and build later.</p>",
+                "<p>Building is worth it when the way you work is the thing "
+                "that makes money, and the software is currently fighting "
+                "it.</p>",
+            ]),
+        ],
+        "payoff": "Tell us the one job that eats an evening every month and "
+                  "we will tell you whether software should touch it.",
+        "faq": [
+            ("Is it cheaper than a subscription in the end?",
+             "It depends entirely on how long you keep it and how many people "
+             "log in. A build is one payment against a bill that never stops, "
+             "so the answer is arithmetic and we will do it with you before "
+             "you commit."),
+            ("Who owns it?",
+             "You do. The code, the accounts and the data are registered to "
+             "the business from the first day, and it is documented so "
+             "somebody else could take it over."),
+            ("Can it talk to fatturazione elettronica?",
+             "It can be built to, and that is a question for your "
+             "commercialista before it is a question for us, because the "
+             "system you already send invoices through decides most of the "
+             "answer."),
+            ("What if we outgrow it?",
+             "Then it gets extended, because you own it. A package cannot be "
+             "extended, so outgrowing one means starting again somewhere "
+             "else."),
+        ],
+        "related": [("/systems/", "Custom software"),
+                    ("/audit/", "A free audit")],
+    },
+
+    {
+        "slug": "web-design-milano",
+        "date": "2026-09-06",
+        "updated": "2026-09-06",
+        "topic": "Websites",
+        "work": None,
+        "service": ("/web-design/", "Websites"),
+
+        "title": "Web design in Milan",
+        "h1": "You will not run out of studios here. You will run out of "
+              "patience comparing them.",
+        "summary": "What a small business in Milan is actually choosing "
+                   "between, and where a studio 900 kilometres away fits.",
+        "standfirst": "The hard part is not finding somebody. It is telling "
+                      "two quotes apart when both sound reasonable.",
+        "description": "How a small business in Milan should compare web "
+                       "studios, what distance changes and what it does not, "
+                       "and when to hire somebody in the city instead.",
+        "og_desc": "The hard part is telling two reasonable quotes apart.",
+
+        "body": [
+            ("Who this is for", [
+                "<p>A shop, a studio or a practice with somewhere between one "
+                "and 20 people, selling to a part of the city rather than to "
+                "the country. Not a brand with a marketing department, who "
+                "should hire an agency and will.</p>",
+            ]),
+            ("What you are choosing between", [
+                "<p>A template filled in cheaply, an agency that will sell you "
+                "a process, a freelancer who may be excellent and may vanish, "
+                "or somebody who builds the thing and hands you the keys.</p>",
+                "<p>All 4 produce a website. They differ in what you hold "
+                "afterwards, which is the part nobody asks about until it "
+                "matters.</p>",
+            ]),
+            ("The work happens at a distance", [
+                "<p>We are in Durres and the job reaches Milan over WhatsApp, "
+                "email and a screen we both look at. Nobody is coming to "
+                "photograph the shop, and if that is what the job needs, it is "
+                "the wrong job for us.</p>",
+                "<p>What travels perfectly is the building. Every site we have "
+                "made ships in Italian alongside Albanian and English, so "
+                "writing for an Italian reader is what we do rather than a "
+                "translation bolted on at the end.</p>",
+            ]),
+            ("What we would build first", [
+                "<p>The page that answers the question somebody typed, a way "
+                "to reach you that works on a phone in one thumb, and a Google "
+                "profile that agrees with both. In that order, because the "
+                "third one often brings the first customers.</p>",
+                "<p>Everything decorative waits until something is arriving to "
+                "decorate.</p>",
+            ]),
+            ("When to hire somebody in the city", [
+                "<p>If you want a person in the room, if the work needs "
+                "photography of your own premises, or if you would simply "
+                "rather buy from a neighbour. All 3 are good reasons and none "
+                "of them is about the code.</p>",
+            ]),
+        ],
+        "payoff": "Send us the address and we will tell you what we would "
+                  "change first, whoever ends up doing it.",
+        "faq": [
+            ("Are you based in Milan?",
+             "No. The studio sits in Albania and the whole job is done at a "
+             "distance. We would rather put that in the first line of the answer "
+             "than let you discover it three emails in."),
+            ("Is it cheaper because you are not here?",
+             "Usually. We would rather say that plainly than pretend the price "
+             "comes from something mysterious, and it is also why we will not "
+             "compete on being the cheapest quote you get."),
+            ("Who writes the Italian?",
+             "We do, and it is written rather than translated. A page turned "
+             "into Italian from something else reads like one, and an Italian "
+             "reader notices in about a sentence."),
+            ("What do I own at the end?",
+             "The domain, the hosting account and the code, all registered to "
+             "your business from the first day. Nothing is held on your "
+             "behalf and there is no handover to negotiate."),
+        ],
+        "related": [("/web-design/", "Websites"),
+                    ("/blog/seo-milano/", "SEO in Milan"),
+                    ("/audit/", "A free audit")],
+    },
+
+    {
+        "slug": "voucher-doppia-transizione",
+        "date": "2026-09-06",
+        "updated": "2026-09-06",
+        "topic": "Custom software",
+        "work": None,
+        "service": ("/systems/", "Custom software"),
+
+        "title": "Italy's digital transition voucher",
+        "h1": "Somebody else pays for part of it, and most businesses miss "
+              "the window.",
+        "summary": "The chambers of commerce are running a national voucher "
+                   "for digitalisation, and each one sets its own dates.",
+        "standfirst": "It covers management software. It does not obviously "
+                      "cover a website, and we would rather say so.",
+        "description": "What the Voucher Doppia Transizione covers, who runs "
+                       "it, how to find your own chamber's window, and the "
+                       "part that probably does not include your website.",
+        "og_desc": "A national voucher with 100 local deadlines.",
+
+        "body": [
+            ("What it is", [
+                "<p>The first national edition of a voucher run through Punto "
+                "Impresa Digitale, the digital arm of the chambers of "
+                "commerce. It is a contributo a fondo perduto, meaning a grant "
+                "rather than a loan, awarded under de minimis rules.</p>",
+                "<p>The scheme puts 150 million euro behind it across 2026 to "
+                "2029, at up to 70% of a project depending on the chamber. "
+                "Checked on 6 September 2026 against "
+                "<a href=\"https://www.puntoimpresadigitale.camcom.it/bandi-nazionali/bando-doppia-transizione-2026\" "
+                "target=\"_blank\" rel=\"noopener\">the PID scheme page</a>, "
+                "and these things move, so read it there before you rely on "
+                "it.</p>",
+            ]),
+            ("The catch is that there is no single deadline", [
+                "<p>It is national money handed out locally. Each chamber of "
+                "commerce opens and closes its own window and sets its own "
+                "ceiling, so Bergamo and Bari are running different clocks on "
+                "the same scheme.</p>",
+                "<p>Applications are prepared on ReStart, at "
+                "<a href=\"https://restart.infocamere.it/\" target=\"_blank\" "
+                "rel=\"noopener\">restart.infocamere.it</a>. The only date that "
+                "matters to you is your own chamber's, and it is on your "
+                "chamber's site rather than anywhere national.</p>",
+            ]),
+            ("What it covers", [
+                "<p>The eligible list runs to artificial intelligence, "
+                "cybersecurity, connected devices, cloud, ERP and CRM "
+                "systems, data analytics, blockchain, robotics, augmented "
+                "reality, sustainability tools, and the consulting and "
+                "training around them.</p>",
+                "<p>ERP and CRM is the line that matters to a small business "
+                "with a stock problem. That is the same category as a "
+                "management system built around one trade.</p>",
+            ]),
+            ("What it does not obviously cover", [
+                "<p>A website. Nothing in the published categories names "
+                "sites, online shops or advertising, and we are not going to "
+                "read one in because it would suit us. If somebody tells you "
+                "the voucher pays for a new site, ask them which category.</p>",
+                "<p>Ask your own chamber before you plan around it, and ask in "
+                "writing.</p>",
+            ]),
+            ("What to do this week if it applies to you", [
+                "<p>Find your chamber, find whether its window is open, and "
+                "read the categories against the thing you actually want "
+                "built. That is an hour of work and it happens before "
+                "anybody quotes you anything.</p>",
+                "<p>None of this is advice from an accountant, and we are not "
+                "one. It is where to look.</p>",
+            ]),
+        ],
+        "payoff": "Tell us what you would build with it and we will tell you "
+                  "whether it looks like an eligible category or a hopeful "
+                  "one.",
+        "faq": [
+            ("Do you handle the application?",
+             "No. That is work for your commercialista or a consultant who "
+             "does bandi for a living, and doing it badly costs you the "
+             "window. We can describe the technical side of a project in "
+             "writing so somebody else can submit it."),
+            ("Is it first come first served?",
+             "Each chamber decides, and several run it that way, which is why "
+             "the opening date matters as much as the closing one. Read your "
+             "own chamber's rules rather than a summary of somebody else's."),
+            ("What if my chamber's window has closed?",
+             "The scheme is funded to 2029, so there is very likely another "
+             "round. That is a reason to get the project written down now "
+             "rather than to hurry a bad one out this month."),
+            ("Can I use it for training instead?",
+             "Specialist consulting and training are in the eligible list, so "
+             "often yes. Whether yours qualifies is a question for the "
+             "chamber, and they answer it."),
+        ],
+        "related": [("/systems/", "Custom software"),
+                    ("/audit/", "A free audit")],
+    },
+
+    {
+        "slug": "what-an-italian-website-must-show",
+        "date": "2026-09-06",
+        "updated": "2026-09-06",
+        "topic": "Websites",
+        "work": None,
+        "service": ("/web-design/", "Websites"),
+
+        "title": "What an Italian website must show",
+        "h1": "Six things to check on your own homepage, in about 5 minutes.",
+        "summary": "Some of it is the law with an article number. Some of it "
+                   "is a rule you have probably been frightened about "
+                   "wrongly.",
+        "standfirst": "Open your own site while you read this. Most of these "
+                      "take one line to fix.",
+        "description": "The details an Italian business site has to carry: "
+                       "the VAT number and where it goes, what a shop adds, "
+                       "the cookie rule, and who the accessibility law "
+                       "really applies to.",
+        "og_desc": "Open your own homepage while you read this one.",
+
+        "body": [
+            ("The VAT number, on the homepage", [
+                "<p>Anybody with a partita IVA has to publish it on the site, "
+                "and the rule names the homepage specifically. It comes from "
+                "art. 35 of D.P.R. 633/1972, and the sanction reported by "
+                "<a href=\"https://www.lexdo.it/blog/dati-obbligatori-sito-web/\" "
+                "target=\"_blank\" rel=\"noopener\">practitioners writing about "
+                "it</a> runs from 258.23 to 2,065.83 euro.</p>",
+                "<p>A footer counts. A contact page on its own does not, "
+                "because the rule says where.</p>",
+            ]),
+            ("An online shop has to say more", [
+                "<p>Selling online adds the business name, the registered "
+                "address, a fast way to reach a human, and the Registro "
+                "Imprese or REA number, under art. 7 of D.Lgs. 70/2003.</p>",
+                "<p>A contact form on its own is not a fast way to reach a "
+                "human. An address and a telephone number are.</p>",
+            ]),
+            ("The cookie banner rule people get wrong", [
+                "<p>Accept, reject and customise have to be equally easy to "
+                "press. A large coloured Accept beside a small grey link is "
+                "the exact pattern the "
+                "<a href=\"https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9677876\" "
+                "target=\"_blank\" rel=\"noopener\">Garante's cookie "
+                "guidelines</a> were written to stop.</p>",
+                "<p>Non-technical cookies stay off until somebody says yes, "
+                "and a refusal is not a reason to ask again tomorrow.</p>",
+            ]),
+            ("The accessibility law probably does not apply to you", [
+                "<p>The European Accessibility Act reached Italy as D.Lgs. "
+                "82/2022 and started applying in June 2025, and a great many "
+                "small businesses have been told since then that they must "
+                "comply.</p>",
+                "<p>Microenterprises providing services are exempt: under 10 "
+                "people and under 2 million euro of turnover. If that is you, "
+                "the honest answer is that the law does not reach you, and "
+                "anybody quoting you to fix it should have said so.</p>",
+            ]),
+            ("What to do with all this", [
+                "<p>Check the 4 above on your own site now. Then build the "
+                "accessible version anyway if you sell to the public, because "
+                "being readable on a bad screen with tired eyes is not a legal "
+                "question.</p>",
+                "<p>This is where to look and not legal advice, and the person "
+                "to confirm it with is your commercialista.</p>",
+            ]),
+        ],
+        "payoff": "Send us the address and we will list what is missing, with "
+                  "the rule beside each one.",
+        "faq": [
+            ("Where exactly does the VAT number have to go?",
+             "The homepage. Most sites put it in the footer, which appears on "
+             "the homepage and everywhere else at once, and that is the "
+             "simplest way to stop thinking about it."),
+            ("Do I need a cookie banner at all?",
+             "Only if the site loads something that is not strictly necessary, "
+             "which usually means analytics, embedded video or a chat widget. "
+             "A site that loads none of those needs no banner, and a banner on "
+             "a site that needs none is just a thing to click."),
+            ("My site was built by somebody who has disappeared.",
+             "Then start with who holds the domain and the hosting, because "
+             "everything above is unfixable until somebody can edit the "
+             "pages. That is a different problem and a more urgent one."),
+            ("Is an Albanian studio the right people to ask about Italian law?",
+             "For where to look, yes, and we have written the articles down so "
+             "you can check us. For whether it applies to your business, ask "
+             "your commercialista, who is the person who answers for it."),
+        ],
+        "related": [("/web-design/", "Websites"),
+                    ("/audit/", "A free audit")],
+    },
+
+    {
+        "slug": "instagram-or-the-local-tv-slot",
+        "date": "2026-09-06",
+        "updated": "2026-09-06",
+        "topic": "Meta ads",
+        "work": None,
+        "service": ("/meta-ads/", "Meta ads"),
+
+        "title": "Instagram or the local TV slot",
+        "h1": "The word advertising still means television to a lot of "
+              "people.",
+        "summary": "Where a small Italian business's advertising money goes "
+                   "now, and how to tell which half is working.",
+        "standfirst": "One of them tells you exactly who came. The other "
+                      "tells you how many might have.",
+        "description": "Local television, radio, the free paper or "
+                       "Instagram: what a small business in Italy gets for "
+                       "the same money, and which one can actually be "
+                       "measured.",
+        "og_desc": "One tells you who came. The other tells you how many "
+                   "might have.",
+
+        "body": [
+            ("Why the comparison is still live", [
+                "<p>Plenty of Italian small businesses still think of "
+                "advertising as a slot on a screen or a page, because for 30 "
+                "years that is what it was, and the people selling those slots "
+                "are still ringing.</p>",
+                "<p>They are not obviously wrong. A local slot reaches people "
+                "who are not looking for you, which is the one thing search "
+                "cannot do.</p>",
+            ]),
+            ("What each one actually buys", [
+                "<p>A broadcast slot buys exposure to a large group defined "
+                "mostly by when they were watching. A social campaign buys "
+                "exposure to a smaller group defined by where they live, how "
+                "old they are and what they have shown interest in.</p>",
+                "<p>Neither is better in the abstract. They are different "
+                "shapes of the same purchase.</p>",
+            ]),
+            ("The difference that matters is what comes back", [
+                "<p>After a broadcast slot you know what it cost and roughly "
+                "how many people could have seen it. After a social campaign "
+                "you know how many clicked, what they did next, and what each "
+                "enquiry cost you.</p>",
+                "<p>That is not a claim that one sells more. It is a claim "
+                "that only one of them can be checked, and an unmeasurable "
+                "spend is one you renew on a feeling.</p>",
+            ]),
+            ("When the old channel still wins", [
+                "<p>A shop opening. A trade where the buyer is 70 and the "
+                "radio is on all day. Anything where being known locally "
+                "matters more than being found by somebody specific.</p>",
+                "<p>Sponsoring the local team is advertising too, and in a "
+                "small town it sometimes beats everything on this page.</p>",
+            ]),
+            ("How to run the comparison honestly", [
+                "<p>Ask every customer who walks in where they heard of you, "
+                "for one month, and write it down. It is a tedious month and "
+                "it settles arguments no dashboard can.</p>",
+                "<p>Then put the next budget where the answers were, rather "
+                "than where the last invoice was.</p>",
+            ]),
+        ],
+        "payoff": "Tell us what you have been spending and where, and we "
+                  "will tell you which part of it can be measured at all.",
+        "faq": [
+            ("Is Instagram cheaper than local television?",
+             "Per person reached, usually. Per customer who actually arrives, "
+             "it depends entirely on the trade, and anybody who answers that "
+             "question without asking what you sell is selling you their own "
+             "service."),
+            ("Should I do both?",
+             "If the budget genuinely covers both, yes, and measure the one "
+             "that can be measured so you can see what the other has to beat. "
+             "If it covers one, start with the one that reports back."),
+            ("Does anybody under 40 watch local channels?",
+             "Some do, and that is the wrong question. The right one is "
+             "whether your buyers do, which you find out by asking them "
+             "rather than by asking us."),
+            ("What about the free local paper?",
+             "Same arithmetic as broadcast, usually cheaper, and often better "
+             "targeted than either because it lands in a defined set of "
+             "letterboxes. Worth pricing before you dismiss it."),
+        ],
+        "related": [("/meta-ads/", "Meta ads"),
+                    ("/seo/", "SEO and local search"),
+                    ("/audit/", "A free audit")],
+    },
 ]
 
 
@@ -6318,6 +6883,40 @@ INDUSTRY = {
     "dentists-and-clinics",
     "car-repair-and-garages",
     "estate-agents",
+}
+
+# Where "Read next" goes, for the posts where it is a decision rather than an
+# accident. gen_blog pairs every post with the next one BY DATE, wrapping the
+# oldest round to the newest, which is fine for an archive and useless for a
+# reader who has just worked out what they want. This overrides it.
+#
+# WHY A SLUG MAP AND NOT A KEY ON EACH RECORD, the same answer INDUSTRY gives
+# 20 lines up: slugs are English in all 3 languages, so this needs no
+# translation and adds no key that same_shape would then demand of 68 records
+# in 2 more files. The tail renders the target post's own title, so it carries
+# no string for anybody to translate either.
+#
+# READ IT AS A SENTENCE: somebody who just finished the post on the left is
+# ready for the one on the right. The left-hand posts answer a question; the
+# right-hand posts answer what it costs and who does it. That is the only
+# ordering principle here, and a pair that does not read that way is a pair
+# that should not be in this dict.
+#
+# Every value is asserted to be a real post in gen_blog.check(), because a
+# typo would silently fall back to the date neighbour and look deliberate.
+LADDER = {
+    # -- the Italian ladder ------------------------------------------------
+    "agency-or-freelancer":                "web-design-milano",
+    "how-to-choose-a-web-designer":        "web-design-milano",
+    "what-an-italian-website-must-show":   "web-design-milano",
+    "when-a-spreadsheet-stops-being-enough": "what-custom-software-costs-in-italy",
+    "voucher-doppia-transizione":          "what-custom-software-costs-in-italy",
+    "instagram-or-the-local-tv-slot":      "what-meta-ads-cost-in-italy",
+    # And the money pages hand the reader on rather than ending the road: to
+    # the audit's own explainer, which is where the ask lives.
+    "web-design-milano":                   "what-seo-costs-in-italy",
+    "what-custom-software-costs-in-italy": "web-design-milano",
+    "what-meta-ads-cost-in-italy":         "web-design-milano",
 }
 
 BLOG_INDEX = {

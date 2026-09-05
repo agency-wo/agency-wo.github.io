@@ -4730,7 +4730,7 @@ POSTS = [
 
     {
         "slug": "seo-milano",
-        "src": "e46f298c",
+        "src": "de18f8c6",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Ricerca locale",
@@ -4788,10 +4788,12 @@ POSTS = [
                 "leva sbagliata, e preferiamo dirtelo prima che dopo tre "
                 "mesi di lavoro.</p>",
             ]),
-            ("Cosa possiamo fare che uno studio a distanza non fa", [
-                "<p>Venire. Un incontro a Milano è una cosa che si organizza e "
-                ""
-                "non una formula di cortesia. Se serve vedersi, si fa.</p>",
+            ("Il lavoro si fa a distanza", [
+                "<p>Lo studio è a Durazzo e Milano si raggiunge via WhatsApp, "
+                "email e uno schermo condiviso. Ogni sito che abbiamo costruito "
+                "esce in italiano oltre che in albanese e inglese, quindi "
+                "scrivere per un lettore italiano qui è la norma e non un "
+                "favore.</p>",
                 "<p>I clienti che abbiamo sono su questo sito con nome e cognome, "
                 "ognuno con una pagina che dice cosa è cambiato e cosa no. È "
                 "verificabile, che è più di quanto sia mai un aggettivo "
@@ -6422,6 +6424,581 @@ POSTS = [
         ],
         "related": [("/geo/", "Ricerca AI"),
                     ("/glossary/ai-search/", "Ricerca AI"),
+                    ("/audit/", "Un audit gratuito")],
+    },
+    # 6 post per il mercato italiano, 2026-09-06. Registro tu. Termini da
+    # glossary.TERMS. Mai IA, mai personalizzato, mai impressioni, mai CTR,
+    # mai "analisi del sito", mai Durres senza Durazzo.
+
+    {
+        "slug": "what-meta-ads-cost-in-italy",
+     "src": "4dec08bc",
+        "date": "2026-09-06",
+        "updated": "2026-09-06",
+        "topic": "Meta ads",
+        "work": None,
+        "service": ("/meta-ads/", "Meta ads"),
+
+        "title": "Quanto costa la pubblicità su Instagram",
+        "h1": "Quasi tutto quello che spendi non arriva a noi.",
+        "summary": "Il compenso e il budget sono soldi diversi, e solo uno "
+                   "dei due è un prezzo che qualcuno decide.",
+        "standfirst": "Ogni mese escono due cifre dal tuo conto. Uno studio "
+                      "che te ne dice una sola sta nascondendo quale.",
+        "description": "Quanto costano gli annunci su Instagram e Facebook a "
+                       "una piccola attività italiana: cosa decide il "
+                       "compenso, cosa decide il budget, e dove si perdono i "
+                       "soldi.",
+        "og_desc": "Escono due cifre dal tuo conto. Una sola è la nostra.",
+
+        "body": [
+            ("Perché partiremmo da Instagram", [
+                "<p>Una boutique, una pasticceria e un b&amp;b vendono tutti "
+                "qualcosa che viene bene in foto, e su Instagram la foto è "
+                "tutto l'annuncio. Un termoidraulico vende la fine di un "
+                "problema, che in foto non si vede e per iscritto sì.</p>",
+                "<p>Il sistema di acquisto è lo stesso in entrambi i casi. Su "
+                "quale superficie mandare i soldi è una scelta che riguarda "
+                "la tua merce, non il software.</p>",
+            ]),
+            ("Le due cifre", [
+                "<p>Il budget va a Meta e compra le visualizzazioni. Il "
+                "compenso arriva a noi e compra l'impostazione, i testi, il "
+                "controllo e le modifiche. Sono due fatture perché sono due "
+                "acquisti.</p>",
+                "<p>Chi te ne dà una sola per entrambi o sta indovinando il "
+                "tuo budget o se ne prende una parte.</p>",
+            ]),
+            ("Cosa decide il compenso", [
+                "<p>Quanti pubblici, quante creatività, ogni quanto cambiano, "
+                "e se c'è qualcuno che risponde ai messaggi che arrivano. Una "
+                "campagna sola che gira tutto l'anno non è lo stesso lavoro di "
+                "4 stagionali.</p>",
+                "<p>Lo teniamo fisso invece che a percentuale sul budget, "
+                "così il consiglio di spendere di più non è mai un consiglio "
+                "che ci paga di più.</p>",
+            ]),
+            ("Cosa decide il budget", [
+                "<p>A quanto vendi, ogni quanto un cliente ricompra, e quante "
+                "persone lì attorno potrebbero volerlo davvero questo mese. Un "
+                "taglio da 40 euro e una caldaia da 4.000 euro hanno "
+                "aritmetiche completamente diverse prima di spendere un "
+                "centesimo.</p>",
+                "<p>Parti da una cifra che non ti manca, falla girare "
+                "abbastanza da voler dire qualcosa, e guarda le richieste e "
+                "non i like.</p>",
+            ]),
+            ("Dove si perdono i soldi qui", [
+                "<p>Un annuncio in italiano che porta a una pagina in "
+                "inglese. Un messaggio di sabato letto il lunedì. Un numero "
+                "sul profilo che squilla in un retrobottega dove non c'è "
+                "nessuno.</p>",
+                "<p>Niente di tutto questo è la campagna. Tutto quanto viene "
+                "pagato dalla campagna, ed è la parte più economica di tutto "
+                "il discorso da sistemare.</p>",
+            ]),
+        ],
+        "payoff": "Dicci cosa vendi e quanto vale un cliente per te, e ti "
+                  "diciamo se la pubblicità è la leva giusta oppure no.",
+        "faq": [
+            ("Le fate in italiano?",
+             "Sì, e l'annuncio, la pagina su cui atterra e la risposta devono "
+             "essere nella stessa lingua o i soldi si perdono nel mezzo. Qui è "
+             "la norma e non una richiesta speciale."),
+            ("Prendete una percentuale sulla spesa?",
+             "No. Un compenso fisso, concordato prima che parta qualcosa. La "
+             "percentuale paga di più uno studio che ti dice di spendere di "
+             "più, e preferiamo non fare quella conversazione con noi "
+             "stessi."),
+            ("Dopo quanto si capisce se funziona?",
+             "Dopo abbastanza tempo perché la piattaforma smetta di tirare a "
+             "indovinare e perché arrivino richieste in numero sensato. "
+             "Giudicare una campagna dopo 3 giorni è giudicare il rumore."),
+            ("E se per il mio mestiere non funziona?",
+             "Te lo diciamo e ci fermiamo. Certe cose si vendono su una "
+             "ricerca e non su uno scroll, e uno studio che non sa dirti quale "
+             "sia la tua non ha guardato."),
+        ],
+        "related": [("/meta-ads/", "Meta ads"),
+                    ("/web-design/", "Siti web"),
+                    ("/audit/", "Un audit gratuito")],
+    },
+
+    {
+        "slug": "what-custom-software-costs-in-italy",
+     "src": "3125856f",
+        "date": "2026-09-06",
+        "updated": "2026-09-06",
+        "topic": "Software su misura",
+        "work": None,
+        "service": ("/systems/", "Software su misura"),
+
+        "title": "Quanto costa un gestionale su misura",
+        "h1": "La licenza che smetti di pagare non è tutto il risparmio.",
+        "summary": "Preconfezionato, per postazione, al mese, per sempre. "
+                   "Oppure costruito una volta attorno a un mestiere solo.",
+        "description": "Quanto costa un gestionale a una piccola attività "
+                       "italiana, come si confronta una licenza a postazione "
+                       "con qualcosa costruito una volta, e cosa costa "
+                       "ancora dopo.",
+        "standfirst": "A un parrucchiere, a un b&amp;b e a un'impresa edile "
+                      "vendono lo stesso software con tre etichette diverse.",
+        "og_desc": "Per postazione, al mese, per sempre. Oppure costruito "
+                   "una volta.",
+
+        "body": [
+            ("Cosa c'è sul mercato", [
+                "<p>C'è il pacchetto per parrucchieri, quello per ristoranti, "
+                "quello per palestre, quello per centri estetici, quello per "
+                "b&amp;b e quello per imprese edili. Sotto a parecchi di loro c'è "
+                "lo stesso sistema con una parola diversa sulla schermata di "
+                "accesso.</p>",
+                "<p>Non è uno scandalo. È l'unico modo in cui un fornitore "
+                "può vendere a 6 mestieri insieme, e per tante attività basta "
+                "davvero.</p>",
+            ]),
+            ("Quando il pacchetto smette di andare bene", [
+                "<p>Nel momento in cui il tuo lavoro ha bisogno di un campo "
+                "che il pacchetto non ha, e la soluzione diventa tenere quel "
+                "pezzo su un quaderno lì accanto. Adesso hai 2 sistemi e in "
+                "uno solo si può cercare.</p>",
+                "<p>Il secondo segnale è il conteggio delle postazioni. Un "
+                "software che si paga a persona al mese diventa più caro "
+                "esattamente quando l'attività va bene.</p>",
+            ]),
+            ("Quanto costa davvero costruirlo una volta", [
+                "<p>La costruzione è un pagamento solo, dimensionato su quante "
+                "cose deve tenere insieme e quante di quelle si parlano tra "
+                "loro. Magazzino, lavori, clienti e soldi in un posto solo è "
+                "un lavoro più grande di ognuno di questi da solo.</p>",
+                "<p>Quello che non porta con sé è una licenza mensile, un "
+                "prezzo a postazione, o un aumento ogni gennaio deciso da "
+                "qualcuno che non hai mai visto.</p>",
+            ]),
+            ("Cosa costa ancora dopo", [
+                "<p>Un posto dove farlo girare, un dominio, i backup, e il "
+                "tempo quando vuoi cambiarlo. Costruiamo su infrastruttura "
+                "gratuita dove il piano gratuito basta onestamente, e diciamo "
+                "chiaro quando non basterà.</p>",
+                "<p>Il sistema che gira per un negozio di orologi a Durazzo "
+                "non costa niente al mese. È un fatto sulla sua dimensione, "
+                "non una promessa sulla tua.</p>",
+            ]),
+            ("Quando conviene affittare", [
+                "<p>Se un pacchetto copre quello che fai, compra il "
+                "pacchetto. Se ti serve funzionante la settimana prossima, "
+                "compra il pacchetto. Se l'attività sta ancora decidendo cosa "
+                "è, compra il pacchetto e costruisci dopo.</p>",
+                "<p>Costruire vale la pena quando il modo in cui lavori è la "
+                "cosa che fa i soldi, e il software in questo momento gli va "
+                "contro.</p>",
+            ]),
+        ],
+        "payoff": "Dicci qual è il lavoro che ti porta via una serata al "
+                  "mese e ti diciamo se un software deve toccarlo.",
+        "faq": [
+            ("Alla fine costa meno di un abbonamento?",
+             "Dipende interamente da quanto lo tieni e da quante persone ci "
+             "entrano. Una costruzione è un pagamento solo contro una bolletta "
+             "che non finisce mai, quindi la risposta è aritmetica e la "
+             "facciamo con te prima che ti impegni."),
+            ("Di chi è?",
+             "Tuo. Il codice, gli account e i dati sono intestati "
+             "all'attività dal primo giorno, ed è documentato perché qualcun "
+             "altro possa riprenderlo in mano."),
+            ("Può parlare con la fatturazione elettronica?",
+             "Si può costruire perché lo faccia, ed è una domanda per il tuo "
+             "commercialista prima che per noi, perché il sistema da cui già "
+             "mandi le fatture decide gran parte della risposta."),
+            ("E se ci sta stretto?",
+             "Si allarga, perché è tuo. Un pacchetto non si allarga, quindi "
+             "starci stretti vuol dire ricominciare da un'altra parte."),
+        ],
+        "related": [("/systems/", "Software su misura"),
+                    ("/audit/", "Un audit gratuito")],
+    },
+
+    {
+        "slug": "web-design-milano",
+     "src": "f137ba9d",
+        "date": "2026-09-06",
+        "updated": "2026-09-06",
+        "topic": "Siti web",
+        "work": None,
+        "service": ("/web-design/", "Siti web"),
+
+        "title": "Siti web a Milano",
+        "h1": "Qui non finiscono gli studi. Finisce la pazienza di "
+              "confrontarli.",
+        "summary": "Tra cosa sta scegliendo davvero una piccola attività "
+                   "milanese, e dove entra uno studio a 900 chilometri.",
+        "standfirst": "La parte difficile non è trovare qualcuno. È capire "
+                      "la differenza tra due preventivi che suonano bene "
+                      "uguale.",
+        "description": "Come confrontare gli studi web se hai una piccola "
+                       "attività a Milano, cosa cambia la distanza e cosa "
+                       "no, e quando conviene prendere qualcuno in città.",
+        "og_desc": "Difficile non è trovarli. È distinguere due preventivi "
+                   "ragionevoli.",
+
+        "body": [
+            ("Per chi è", [
+                "<p>Un negozio, uno studio o un ambulatorio con una persona o "
+                "venti, che vende a una parte della città e non al paese "
+                "intero. Non un marchio con un ufficio marketing, che deve "
+                "prendere un'agenzia e la prenderà.</p>",
+            ]),
+            ("Tra cosa stai scegliendo", [
+                "<p>Un template riempito a poco prezzo, un'agenzia che ti "
+                "venderà un processo, un freelance che può essere bravissimo e "
+                "può sparire, oppure qualcuno che costruisce la cosa e ti "
+                "consegna le chiavi.</p>",
+                "<p>Tutti e 4 producono un sito. Cambiano in quello che ti "
+                "resta in mano dopo, che è la parte che nessuno chiede finché "
+                "non serve.</p>",
+            ]),
+            ("Il lavoro si fa a distanza", [
+                "<p>Siamo a Durazzo e il lavoro raggiunge Milano via WhatsApp, "
+                "email e uno schermo che guardiamo insieme. Nessuno viene a "
+                "fotografare il negozio, e se al lavoro serve quello, non è "
+                "un lavoro per noi.</p>",
+                "<p>Quello che viaggia benissimo è la costruzione. Ogni sito "
+                "che abbiamo fatto esce in italiano oltre che in albanese e "
+                "inglese, quindi scrivere per un lettore italiano è quello "
+                "che facciamo e non una traduzione attaccata alla fine.</p>",
+            ]),
+            ("Cosa costruiremmo per primo", [
+                "<p>La pagina che risponde alla domanda che qualcuno ha "
+                "scritto, un modo per raggiungerti che funziona da telefono "
+                "con un pollice, e una scheda Google che dice le stesse cose "
+                "di entrambi. In quest'ordine, perché la terza spesso porta i "
+                "primi clienti.</p>",
+                "<p>Tutto quello che è decorazione aspetta che arrivi "
+                "qualcosa da decorare.</p>",
+            ]),
+            ("Quando prendere qualcuno in città", [
+                "<p>Se vuoi una persona nella stanza, se al lavoro servono "
+                "fotografie fatte nei tuoi locali, o se semplicemente "
+                "preferisci comprare da un vicino. Tutti e 3 sono buoni "
+                "motivi e nessuno riguarda il codice.</p>",
+            ]),
+        ],
+        "payoff": "Mandaci l'indirizzo e ti diciamo cosa cambieremmo per "
+                  "primo, chiunque poi lo faccia.",
+        "faq": [
+            ("Siete a Milano?",
+             "No. Lo studio sta in Albania e tutto il lavoro si fa a distanza. "
+             "Preferiamo metterlo nella prima riga della risposta piuttosto "
+             "che fartelo scoprire dopo tre email."),
+            ("Costa meno perché non siete qui?",
+             "Di solito sì. Preferiamo dirlo chiaramente invece di far finta "
+             "che il prezzo venga da qualcosa di misterioso, ed è anche il "
+             "motivo per cui non gareggeremo per essere il preventivo più "
+             "basso che ricevi."),
+            ("Chi scrive l'italiano?",
+             "Lo scriviamo noi, ed è scritto e non tradotto. Una pagina "
+             "girata in italiano da qualcos'altro si sente, e un lettore "
+             "italiano se ne accorge in una frase."),
+            ("Cosa mi resta alla fine?",
+             "Il dominio, l'account di hosting e il codice, tutti intestati "
+             "alla tua attività dal primo giorno. Non teniamo niente per conto "
+             "tuo e non c'è nessuna consegna da negoziare."),
+        ],
+        "related": [("/web-design/", "Siti web"),
+                    ("/blog/seo-milano/", "SEO a Milano"),
+                    ("/audit/", "Un audit gratuito")],
+    },
+
+    {
+        "slug": "voucher-doppia-transizione",
+     "src": "56cfaec4",
+        "date": "2026-09-06",
+        "updated": "2026-09-06",
+        "topic": "Software su misura",
+        "work": None,
+        "service": ("/systems/", "Software su misura"),
+
+        "title": "Voucher Doppia Transizione 2026",
+        "h1": "Una parte la paga qualcun altro, e quasi tutti si perdono la "
+              "finestra.",
+        "summary": "Le camere di commercio hanno un voucher nazionale per la "
+                   "digitalizzazione, e ognuna decide le proprie date.",
+        "standfirst": "Copre i gestionali. Non copre in modo evidente un "
+                      "sito, e preferiamo dirlo.",
+        "description": "Cosa copre il Voucher Doppia Transizione, chi lo "
+                       "gestisce, come trovare la finestra della tua camera "
+                       "di commercio, e la parte che il tuo sito "
+                       "probabilmente non tocca.",
+        "og_desc": "Un voucher nazionale con cento scadenze locali.",
+
+        "body": [
+            ("Cos'è", [
+                "<p>La prima edizione nazionale di un voucher gestito "
+                "attraverso Punto Impresa Digitale, il braccio digitale delle "
+                "camere di commercio. È un contributo a fondo perduto, quindi "
+                "non un prestito, in regime de minimis.</p>",
+                "<p>Il bando ci mette dietro 150 milioni di euro dal 2026 al "
+                "2029, fino al 70% del progetto a seconda della camera. "
+                "Verificato il 6 settembre 2026 sulla "
+                "<a href=\"https://www.puntoimpresadigitale.camcom.it/bandi-nazionali/bando-doppia-transizione-2026\" "
+                "target=\"_blank\" rel=\"noopener\">pagina del bando</a>, e "
+                "queste cose si muovono, quindi leggila lì prima di "
+                "contarci.</p>",
+            ]),
+            ("Il problema è che non c'è una scadenza sola", [
+                "<p>Sono soldi nazionali distribuiti localmente. Ogni camera "
+                "di commercio apre e chiude la propria finestra e mette il "
+                "proprio tetto, quindi Bergamo e Bari corrono su due orologi "
+                "diversi dentro lo stesso bando.</p>",
+                "<p>Le domande si preparano su ReStart, all'indirizzo "
+                "<a href=\"https://restart.infocamere.it/\" target=\"_blank\" "
+                "rel=\"noopener\">restart.infocamere.it</a>. L'unica data che "
+                "ti riguarda è quella della tua camera, ed è sul sito della "
+                "tua camera e non da qualche parte a livello nazionale.</p>",
+            ]),
+            ("Cosa copre", [
+                "<p>L'elenco ammissibile va dall'intelligenza artificiale "
+                "alla cybersicurezza, ai dispositivi connessi, al cloud, ai "
+                "sistemi ERP e CRM, all'analisi dei dati, alla blockchain, "
+                "alla robotica, alla realtà aumentata, agli strumenti di "
+                "sostenibilità, più la consulenza e la formazione attorno.</p>",
+                "<p>ERP e CRM è la riga che interessa a una piccola attività "
+                "con un problema di magazzino. È la stessa categoria di un "
+                "gestionale costruito attorno a un mestiere solo.</p>",
+            ]),
+            ("Cosa non copre in modo evidente", [
+                "<p>Un sito. Nelle categorie pubblicate non compaiono siti, "
+                "negozi online o pubblicità, e non ce li mettiamo dentro noi "
+                "perché ci farebbe comodo. Se qualcuno ti dice che il voucher "
+                "paga un sito nuovo, chiedigli quale categoria.</p>",
+                "<p>Chiedi alla tua camera prima di farci dei piani, e "
+                "chiediglielo per iscritto.</p>",
+            ]),
+            ("Cosa fare questa settimana se ti riguarda", [
+                "<p>Trova la tua camera, guarda se la finestra è aperta, e "
+                "leggi le categorie accanto alla cosa che vuoi davvero "
+                "costruire. È un'ora di lavoro e viene prima che qualcuno ti "
+                "faccia un preventivo.</p>",
+                "<p>Niente di tutto questo è il parere di un commercialista, "
+                "e noi non lo siamo. È dove guardare.</p>",
+            ]),
+        ],
+        "payoff": "Dicci cosa costruiresti con quei soldi e ti diciamo se "
+                  "somiglia a una categoria ammissibile o a una speranza.",
+        "faq": [
+            ("La domanda la fate voi?",
+             "No. Quello è lavoro per il tuo commercialista o per un "
+             "consulente che fa bandi di mestiere, e farlo male ti costa la "
+             "finestra. Possiamo descrivere per iscritto la parte tecnica di "
+             "un progetto perché la presenti qualcun altro."),
+            ("Vale il chi prima arriva?",
+             "Lo decide ogni camera, e diverse lo fanno così, ed è per questo "
+             "che la data di apertura conta quanto quella di chiusura. Leggi "
+             "il regolamento della tua camera e non il riassunto di "
+             "un'altra."),
+            ("E se la finestra della mia camera è chiusa?",
+             "Il bando è finanziato fino al 2029, quindi molto probabilmente "
+             "ci sarà un altro giro. È un motivo per mettere il progetto per "
+             "iscritto adesso, non per farne uscire uno brutto di corsa "
+             "questo mese."),
+            ("Posso usarlo per la formazione?",
+             "Consulenza specialistica e formazione sono nell'elenco "
+             "ammissibile, quindi spesso sì. Se la tua rientri lo decide la "
+             "camera, e rispondono loro."),
+        ],
+        "related": [("/systems/", "Software su misura"),
+                    ("/audit/", "Un audit gratuito")],
+    },
+
+    {
+        "slug": "what-an-italian-website-must-show",
+     "src": "808de016",
+        "date": "2026-09-06",
+        "updated": "2026-09-06",
+        "topic": "Siti web",
+        "work": None,
+        "service": ("/web-design/", "Siti web"),
+
+        "title": "Cosa deve avere per legge un sito",
+        "h1": "Sei cose da controllare sulla tua home, in circa 5 minuti.",
+        "summary": "Una parte è legge con tanto di articolo. Un'altra è una "
+                   "regola su cui probabilmente ti hanno spaventato a "
+                   "torto.",
+        "standfirst": "Apri il tuo sito mentre leggi. Quasi tutte queste si "
+                      "sistemano con una riga.",
+        "description": "Cosa deve riportare il sito di un'attività italiana: "
+                       "la partita IVA e dove va, cosa aggiunge un negozio "
+                       "online, i cookie, e a chi si applica davvero "
+                       "l'accessibilità.",
+        "og_desc": "Apri la tua home mentre leggi questo.",
+
+        "body": [
+            ("La partita IVA, sulla home", [
+                "<p>Chi ha una partita IVA deve pubblicarla sul sito, e la "
+                "norma dice proprio la home page. Viene dall'art. 35 del "
+                "D.P.R. 633/1972, e la sanzione riportata da "
+                "<a href=\"https://www.lexdo.it/blog/dati-obbligatori-sito-web/\" "
+                "target=\"_blank\" rel=\"noopener\">chi ne scrive per "
+                "mestiere</a> va da 258,23 a 2.065,83 euro.</p>",
+                "<p>Il fondo pagina va bene. Solo la pagina contatti no, "
+                "perché la norma dice dove.</p>",
+            ]),
+            ("Un negozio online deve dire di più", [
+                "<p>Vendere online aggiunge la denominazione, la sede legale, "
+                "un modo rapido per raggiungere una persona, e il numero di "
+                "Registro Imprese o REA, secondo l'art. 7 del D.Lgs. "
+                "70/2003.</p>",
+                "<p>Un modulo di contatto da solo non è un modo rapido per "
+                "raggiungere una persona. Un indirizzo e un telefono sì.</p>",
+            ]),
+            ("La regola sui cookie che quasi tutti sbagliano", [
+                "<p>Accettare, rifiutare e personalizzare devono essere "
+                "ugualmente facili da premere. Un Accetta grande e colorato "
+                "accanto a un link grigio piccolo è esattamente lo schema che "
+                "le "
+                "<a href=\"https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9677876\" "
+                "target=\"_blank\" rel=\"noopener\">linee guida del Garante "
+                "sui cookie</a> sono state scritte per fermare.</p>",
+                "<p>I cookie non tecnici restano spenti finché qualcuno non "
+                "dice di sì, e un rifiuto non è un motivo per richiedere "
+                "domani.</p>",
+            ]),
+            ("La legge sull'accessibilità probabilmente non ti riguarda", [
+                "<p>L'European Accessibility Act è arrivato in Italia come "
+                "D.Lgs. 82/2022 e si applica da giugno 2025, e da allora a "
+                "moltissime piccole attività è stato detto che devono "
+                "adeguarsi.</p>",
+                "<p>Le microimprese che erogano servizi sono escluse: sotto "
+                "le 10 persone e sotto i 2 milioni di euro di fatturato. Se "
+                "sei tu, la risposta onesta è che la legge non ti arriva, e "
+                "chi ti sta facendo un preventivo per adeguarti avrebbe "
+                "dovuto dirtelo.</p>",
+            ]),
+            ("Cosa fartene di tutto questo", [
+                "<p>Controlla le 4 qui sopra sul tuo sito adesso. Poi fallo "
+                "accessibile lo stesso se vendi al pubblico, perché essere "
+                "leggibile su uno schermo brutto con gli occhi stanchi non è "
+                "una questione legale.</p>",
+                "<p>Questo è dove guardare e non un parere legale, e la "
+                "persona con cui confermarlo è il tuo commercialista.</p>",
+            ]),
+        ],
+        "payoff": "Mandaci l'indirizzo e ti elenchiamo cosa manca, con la "
+                  "norma accanto a ciascuna cosa.",
+        "faq": [
+            ("Dove va messa esattamente la partita IVA?",
+             "Sulla home page. Quasi tutti la mettono nel fondo pagina, che "
+             "compare sulla home e ovunque altro insieme, ed è il modo più "
+             "semplice per smettere di pensarci."),
+            ("Mi serve davvero un banner cookie?",
+             "Solo se il sito carica qualcosa che non è strettamente "
+             "necessario, che di solito vuol dire statistiche, video "
+             "incorporati o una chat. Un sito che non carica niente di questo "
+             "non ha bisogno di banner, e un banner su un sito che non ne ha "
+             "bisogno è solo una cosa da cliccare."),
+            ("Il sito me l'ha fatto uno che è sparito.",
+             "Allora parti da chi ha il dominio e l'hosting, perché tutto "
+             "quello qui sopra è impossibile da sistemare finché qualcuno non "
+             "può modificare le pagine. È un altro problema ed è più "
+             "urgente."),
+            ("Uno studio albanese è la persona giusta a cui chiedere di legge italiana?",
+             "Per dove guardare sì, e abbiamo scritto gli articoli perché tu "
+             "possa controllarci. Per sapere se riguarda la tua attività "
+             "chiedi al commercialista, che è la persona che ne risponde."),
+        ],
+        "related": [("/web-design/", "Siti web"),
+                    ("/audit/", "Un audit gratuito")],
+    },
+
+    {
+        "slug": "instagram-or-the-local-tv-slot",
+     "src": "e923f4a2",
+        "date": "2026-09-06",
+        "updated": "2026-09-06",
+        "topic": "Meta ads",
+        "work": None,
+        "service": ("/meta-ads/", "Meta ads"),
+
+        "title": "Instagram o la televisione locale",
+        "h1": "Per molta gente la parola pubblicità vuol ancora dire "
+              "televisione.",
+        "summary": "Dove vanno oggi i soldi della pubblicità di una piccola "
+                   "attività italiana, e come capire quale metà funziona.",
+        "standfirst": "Una ti dice esattamente chi è arrivato. L'altra ti "
+                      "dice quanti forse.",
+        "description": "Televisione locale, radio, il giornale gratuito o "
+                       "Instagram: cosa ottiene una piccola attività "
+                       "italiana con gli stessi soldi, e quale si può "
+                       "davvero misurare.",
+        "og_desc": "Una ti dice chi è arrivato. L'altra quanti forse.",
+
+        "body": [
+            ("Perché il confronto è ancora vivo", [
+                "<p>Tante piccole attività italiane pensano ancora alla "
+                "pubblicità come a uno spazio su uno schermo o su una pagina, "
+                "perché per 30 anni è stata quello, e chi vende quegli spazi "
+                "continua a telefonare.</p>",
+                "<p>Non hanno tutti i torti. Uno spazio locale raggiunge gente "
+                "che non ti sta cercando, che è l'unica cosa che la ricerca "
+                "non sa fare.</p>",
+            ]),
+            ("Cosa compra davvero ognuna", [
+                "<p>Uno spazio in onda compra esposizione a un gruppo grande "
+                "definito soprattutto da quando stava guardando. Una campagna "
+                "social compra esposizione a un gruppo più piccolo definito da "
+                "dove vive, che età ha e cosa ha mostrato di seguire.</p>",
+                "<p>Nessuna delle due è meglio in astratto. Sono due forme "
+                "diverse dello stesso acquisto.</p>",
+            ]),
+            ("La differenza che conta è cosa torna indietro", [
+                "<p>Dopo uno spazio in onda sai quanto è costato e più o meno "
+                "quante persone potevano vederlo. Dopo una campagna social sai "
+                "quanti hanno cliccato, cosa hanno fatto dopo, e quanto ti è "
+                "costata ogni richiesta.</p>",
+                "<p>Non è un'affermazione su quale venda di più. È "
+                "un'affermazione sul fatto che una sola si può controllare, e "
+                "una spesa che non si misura si rinnova a sensazione.</p>",
+            ]),
+            ("Quando il canale vecchio vince ancora", [
+                "<p>L'apertura di un negozio. Un mestiere in cui chi compra ha "
+                "70 anni e la radio accesa tutto il giorno. Tutto quello in "
+                "cui essere conosciuti in zona conta più che essere trovati da "
+                "qualcuno di preciso.</p>",
+                "<p>Anche sponsorizzare la squadra del paese è pubblicità, e "
+                "in un paese piccolo a volte batte tutto quello che c'è su "
+                "questa pagina.</p>",
+            ]),
+            ("Come fare il confronto onestamente", [
+                "<p>Chiedi a ogni cliente che entra dove ti ha sentito "
+                "nominare, per un mese, e segnatelo. È un mese noioso e chiude "
+                "discussioni che nessun pannello chiude.</p>",
+                "<p>Poi metti il budget successivo dove erano le risposte, e "
+                "non dove era l'ultima fattura.</p>",
+            ]),
+        ],
+        "payoff": "Dicci quanto hai speso e dove, e ti diciamo quale parte "
+                  "di quella spesa si può misurare.",
+        "faq": [
+            ("Instagram costa meno della televisione locale?",
+             "A persona raggiunta di solito sì. A cliente che entra davvero "
+             "dipende interamente dal mestiere, e chi risponde senza chiederti "
+             "cosa vendi ti sta vendendo il proprio servizio."),
+            ("Le faccio tutte e due?",
+             "Se il budget copre davvero entrambe sì, e misura quella che si "
+             "misura così vedi cosa deve battere l'altra. Se ne copre una, "
+             "parti da quella che ti risponde."),
+            ("Sotto i 40 anni guarda ancora qualcuno i canali locali?",
+             "Qualcuno sì, ed è la domanda sbagliata. Quella giusta è se li "
+             "guardano i tuoi clienti, e lo scopri chiedendolo a loro invece "
+             "che a noi."),
+            ("E il giornale gratuito di zona?",
+             "Stessa aritmetica della televisione, di solito costa meno, e "
+             "spesso è più mirato di entrambe perché finisce in un insieme "
+             "preciso di cassette. Vale la pena farsi fare un prezzo prima di "
+             "scartarlo."),
+        ],
+        "related": [("/meta-ads/", "Meta ads"),
+                    ("/seo/", "SEO e ricerca locale"),
                     ("/audit/", "Un audit gratuito")],
     },
 ]

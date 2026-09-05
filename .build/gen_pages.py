@@ -255,6 +255,19 @@ def jsonld(svc, lang):
               "sameAs": "https://www.wikidata.org/wiki/Q6259"},
              {"@type": "City", "name": "Milano",
               "sameAs": "https://www.wikidata.org/wiki/Q490"},
+             # The other 4 Lombard provinces the blog already serves. Each has
+             # had a Place node on its own post since it was written, and none
+             # appeared here, so the graph offered the service in half the
+             # region the prose covers. Same Q-numbers as gen_blog.CITY_OF,
+             # which is the point of both lists using the same ids.
+             {"@type": "City", "name": "Bergamo",
+              "sameAs": "https://www.wikidata.org/wiki/Q628"},
+             {"@type": "City", "name": "Brescia",
+              "sameAs": "https://www.wikidata.org/wiki/Q6221"},
+             {"@type": "City", "name": "Como",
+              "sameAs": "https://www.wikidata.org/wiki/Q1308"},
+             {"@type": "City", "name": "Varese",
+              "sameAs": "https://www.wikidata.org/wiki/Q6285"},
              "AL", "IT", "Worldwide"],
          "availableLanguage": ["en", "it", "sq"]},
         # inLanguage goes HERE and not on the Service above it, and that is a

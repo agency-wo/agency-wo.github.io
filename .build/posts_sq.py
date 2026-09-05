@@ -4686,7 +4686,7 @@ POSTS = [
 
     {
         "slug": "seo-milano",
-        "src": "e46f298c",
+        "src": "de18f8c6",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Kërkim lokal",
@@ -4744,11 +4744,12 @@ POSTS = [
                 "levën e gabuar, dhe preferojmë ta themi tani se pas tre "
                 "muajsh pune.</p>",
             ]),
-            ("Çfarë mund të bëjmë që një studio në distancë nuk e bën", [
-                "<p>Të vijmë. Një takim në Milano është diçka që "
-                ""
-                "organizohet dhe jo një shprehje mirësjelljeje. Nëse ndihmon "
-                "të shihemi, e bëjmë.</p>",
+            ("Puna bëhet nga larg", [
+                "<p>Studioja është në Durrës dhe Milano arrihet me WhatsApp, "
+                "email dhe një ekran të përbashkët. Çdo faqe që kemi ndërtuar "
+                "del në italisht përveç shqipes dhe anglishtes, prandaj të "
+                "shkruash për një lexues italian këtu është gjëja e zakonshme "
+                "dhe jo një nder.</p>",
                 "<p>Klientët që kemi janë mbi këtë faqe me emër, secili me një "
                 "faqe që thotë çfarë ndryshoi dhe çfarë jo. Kjo është e "
                 "verifikueshme, që është më shumë se sa është ndonjëherë një "
@@ -6352,6 +6353,563 @@ POSTS = [
         ],
         "related": [("/geo/", "Kërkimi me AI"),
                     ("/glossary/ai-search/", "Kërkimi me AI"),
+                    ("/audit/", "Një auditim falas")],
+    },
+    # 6 shkrime për tregun italian, 2026-09-06. Regjistri ti. Durrës me ë,
+    # Shqipëri me ë. Termat nga glossary.TERMS: software me porosi, profili
+    # në Google, klikime.
+
+    {
+        "slug": "what-meta-ads-cost-in-italy",
+     "src": "4dec08bc",
+        "date": "2026-09-06",
+        "updated": "2026-09-06",
+        "topic": "Meta ads",
+        "work": None,
+        "service": ("/meta-ads/", "Meta ads"),
+
+        "title": "Sa kushton reklama në Instagram",
+        "h1": "Pjesa më e madhe e asaj që shpenzon nuk vjen te ne.",
+        "summary": "Tarifa dhe buxheti janë para të ndryshme, dhe vetëm njëra "
+                   "prej tyre është çmim që e vendos dikush.",
+        "standfirst": "Çdo muaj dalin dy shuma nga llogaria jote. Një studio "
+                      "që të thotë vetëm një po fsheh cilën.",
+        "description": "Sa i kushtojnë reklamat në Instagram dhe Facebook një "
+                       "biznesi të vogël italian: çfarë vendos tarifën, "
+                       "çfarë vendos buxhetin, dhe ku humbasin paratë.",
+        "og_desc": "Dalin dy shuma nga llogaria. Vetëm njëra është jona.",
+
+        "body": [
+            ("Pse do të nisnim nga Instagram", [
+                "<p>Një butik, një pastiçeri dhe një b&amp;b shesin të gjithë "
+                "diçka që del bukur në foto, dhe në Instagram fotoja është e "
+                "gjithë reklama. Një hidraulik shet fundin e një problemi, që "
+                "në foto nuk duket dhe me shkrim po.</p>",
+                "<p>Sistemi i blerjes është i njëjti në të dyja rastet. Se ku "
+                "t'i çosh paratë është një gjykim për mallin tënd, jo për "
+                "software-in.</p>",
+            ]),
+            ("Dy shumat", [
+                "<p>Buxheti shkon te Meta dhe blen shfaqjet. Tarifa vjen te "
+                "ne dhe blen ngritjen, tekstet, mbikëqyrjen dhe ndryshimet. "
+                "Vijnë në dy fatura sepse janë dy blerje.</p>",
+                "<p>Kush të jep një shifër të vetme për të dyja ose po e "
+                "hamendëson buxhetin tënd ose po merr një pjesë prej tij.</p>",
+            ]),
+            ("Çfarë vendos tarifën", [
+                "<p>Sa publikë, sa materiale, sa shpesh ndryshojnë, dhe nëse "
+                "ka dikush që u përgjigjet mesazheve që kthehen. Një fushatë e "
+                "vetme që rri gjithë vitin nuk është e njëjta punë me 4 "
+                "sezonale.</p>",
+                "<p>E mbajmë fikse dhe jo si përqindje mbi buxhetin, kështu "
+                "këshilla për të shpenzuar më shumë nuk është kurrë një "
+                "këshillë që na paguan më shumë.</p>",
+            ]),
+            ("Çfarë vendos buxhetin", [
+                "<p>Me sa e shet, sa shpesh një klient blen sërish, dhe sa "
+                "njerëz aty rreth mund ta duan vërtet këtë muaj. Një prerje "
+                "flokësh 40 euro dhe një kaldajë 4.000 euro kanë aritmetika "
+                "krejt të ndryshme para se të shpenzohet një cent.</p>",
+                "<p>Nis nga një shifër që nuk të mungon, lëre të punojë sa "
+                "duhet që të thotë diçka, dhe lexo kërkesat e jo pëlqimet.</p>",
+            ]),
+            ("Ku humbasin paratë atje", [
+                "<p>Një reklamë në italisht që të çon te një faqe në "
+                "anglisht. Një mesazh të shtunën i lexuar të hënën. Një numër "
+                "në profil që bie në një prapavijë ku nuk rri askush.</p>",
+                "<p>Asnjë nga këto nuk është fushata. Të gjitha paguhen nga "
+                "fushata, dhe janë pjesa më e lirë e gjithë punës për t'u "
+                "rregulluar.</p>",
+            ]),
+        ],
+        "payoff": "Na thuaj çfarë shet dhe sa vlen një klient për ty, dhe të "
+                  "themi nëse reklama është leva e duhur apo jo.",
+        "faq": [
+            ("A i bëni në italisht?",
+             "Po, dhe reklama, faqja ku bie dhe përgjigjja duhet të jenë në "
+             "të njëjtën gjuhë ose paratë humbasin midis tyre. Këtu është "
+             "gjëja e zakonshme dhe jo një kërkesë e veçantë."),
+            ("A merrni përqindje mbi shpenzimin?",
+             "Jo. Një tarifë fikse, e rënë dakord para se të nisë gjë. "
+             "Përqindja e paguan më shumë një studio që të thotë të shpenzosh "
+             "më shumë, dhe preferojmë të mos e bëjmë atë bisedë me veten."),
+            ("Pas sa kohe kuptohet nëse funksionon?",
+             "Pas aq kohe sa platforma të pushojë së hamendësuari dhe sa të "
+             "vijnë kërkesa në numër që ka kuptim. Të gjykosh një fushatë pas "
+             "3 ditësh është të gjykosh zhurmën."),
+            ("Po nëse për zanatin tim nuk funksionon?",
+             "Ta themi dhe ndalojmë. Disa gjëra shiten me një kërkim dhe jo "
+             "me një scroll, dhe një studio që nuk di të të thotë cila është "
+             "e jotja nuk ka parë."),
+        ],
+        "related": [("/meta-ads/", "Meta ads"),
+                    ("/web-design/", "Faqe interneti"),
+                    ("/audit/", "Një auditim falas")],
+    },
+
+    {
+        "slug": "what-custom-software-costs-in-italy",
+     "src": "3125856f",
+        "date": "2026-09-06",
+        "updated": "2026-09-06",
+        "topic": "Software me porosi",
+        "work": None,
+        "service": ("/systems/", "Software me porosi"),
+
+        "title": "Sa kushton një gestionale me porosi",
+        "h1": "Licenca që pushon së paguari nuk është i gjithë kursimi.",
+        "summary": "I gatshëm, për postacion, në muaj, përgjithmonë. Ose "
+                   "ndërtuar një herë rreth një zanati të vetëm.",
+        "description": "Sa i kushton një gestionale një biznesi të vogël "
+                       "italian, si krahasohet një licencë për postacion me "
+                       "diçka të ndërtuar një herë, dhe çfarë kushton ende "
+                       "pas.",
+        "standfirst": "Një parukeri, një b&amp;b dhe një firmë ndërtimi i shesin "
+                      "të njëjtin software me tri etiketa të ndryshme.",
+        "og_desc": "Për postacion, në muaj, përgjithmonë. Ose ndërtuar një "
+                   "herë.",
+
+        "body": [
+            ("Çfarë ka në treg", [
+                "<p>Ka paketën për parukeri, atë për restorante, atë për "
+                "palestra, atë për qendra estetike, atë për b&amp;b dhe atë për "
+                "firma ndërtimi. Poshtë shumë prej tyre është i njëjti sistem "
+                "me një fjalë tjetër në ekranin e hyrjes.</p>",
+                "<p>Nuk është skandal. Është e vetmja mënyrë që një shitës të "
+                "shesë te 6 zanate njëherësh, dhe për shumë biznese mjafton "
+                "vërtet.</p>",
+            ]),
+            ("Kur paketa pushon së shkuari", [
+                "<p>Në çastin kur puna jote ka nevojë për një fushë që paketa "
+                "nuk e ka, dhe zgjidhja bëhet ta mbash atë pjesë në një "
+                "fletore aty pranë. Tani ke 2 sisteme dhe vetëm në njërin "
+                "kërkohet.</p>",
+                "<p>Shenja e dytë është numri i postacioneve. Një software që "
+                "paguhet për person në muaj bëhet më i shtrenjtë pikërisht kur "
+                "biznesi po shkon mirë.</p>",
+            ]),
+            ("Sa kushton vërtet ta ndërtosh një herë", [
+                "<p>Ndërtimi është një pagesë e vetme, e matur sipas sa gjëra "
+                "duhet të mbajë dhe sa prej tyre flasin me njëra-tjetrën. "
+                "Stoku, punët, klientët dhe paratë në një vend të vetëm është "
+                "punë më e madhe se secila prej tyre veç.</p>",
+                "<p>Ajo që nuk e sjell me vete është një licencë mujore, një "
+                "çmim për postacion, ose një rritje çdo janar e vendosur nga "
+                "dikush që nuk e ke parë kurrë.</p>",
+            ]),
+            ("Çfarë kushton ende pas", [
+                "<p>Një vend ku të punojë, një domen, kopjet rezervë, dhe "
+                "koha kur do ta ndryshosh. Ndërtojmë mbi infrastrukturë falas "
+                "aty ku plani falas mjafton ndershmërisht, dhe e themi qartë "
+                "kur nuk do të mjaftojë.</p>",
+                "<p>Sistemi që punon për një dyqan orësh në Durrës nuk "
+                "kushton asgjë në muaj. Është fakt për madhësinë e tij, jo "
+                "premtim për tënden.</p>",
+            ]),
+            ("Kur është më mirë ta marrësh me qira", [
+                "<p>Nëse një paketë mbulon atë që bën, bli paketën. Nëse të "
+                "duhet në punë javën tjetër, bli paketën. Nëse biznesi po "
+                "vendos ende çfarë është, bli paketën dhe ndërto më vonë.</p>",
+                "<p>Ndërtimi ia vlen kur mënyra si punon është ajo që bën "
+                "paratë, dhe software-i për momentin i shkon kundër.</p>",
+            ]),
+        ],
+        "payoff": "Na thuaj cila punë të ha një mbrëmje çdo muaj dhe të themi "
+                  "nëse duhet ta prekë një software.",
+        "faq": [
+            ("Në fund kushton më pak se një abonim?",
+             "Varet plotësisht nga sa gjatë e mban dhe sa njerëz hyjnë. Një "
+             "ndërtim është një pagesë e vetme kundrejt një fature që nuk "
+             "mbaron kurrë, prandaj përgjigjja është aritmetikë dhe e bëjmë "
+             "me ty para se të angazhohesh."),
+            ("I kujt është?",
+             "Yti. Kodi, llogaritë dhe të dhënat janë në emër të biznesit që "
+             "ditën e parë, dhe është i dokumentuar që dikush tjetër ta marrë "
+             "përsipër."),
+            ("A flet me faturimin elektronik italian?",
+             "Mund të ndërtohet që ta bëjë, dhe është pyetje për "
+             "kontabilistin tënd para se të jetë për ne, sepse sistemi nga i "
+             "cili tashmë nis faturat vendos pjesën më të madhe të "
+             "përgjigjes."),
+            ("Po nëse na vjen i vogël?",
+             "Zgjerohet, sepse është yti. Një paketë nuk zgjerohet, prandaj të "
+             "vijë e vogël do të thotë të nisësh nga e para diku tjetër."),
+        ],
+        "related": [("/systems/", "Software me porosi"),
+                    ("/audit/", "Një auditim falas")],
+    },
+
+    {
+        "slug": "web-design-milano",
+     "src": "f137ba9d",
+        "date": "2026-09-06",
+        "updated": "2026-09-06",
+        "topic": "Faqe interneti",
+        "work": None,
+        "service": ("/web-design/", "Faqe interneti"),
+
+        "title": "Faqe interneti në Milano",
+        "h1": "Atje nuk të mbarojnë studiot. Të mbaron durimi për t'i "
+              "krahasuar.",
+        "summary": "Mes çfarësh po zgjedh vërtet një biznes i vogël në "
+                   "Milano, dhe ku hyn një studio 900 kilometra larg.",
+        "standfirst": "Pjesa e vështirë nuk është të gjesh dikë. Është të "
+                      "dallosh dy oferta që tingëllojnë njësoj mirë.",
+        "description": "Si t'i krahasosh studiot e uebit nëse ke një biznes "
+                       "të vogël në Milano, çfarë ndryshon largësia dhe "
+                       "çfarë jo, dhe kur ia vlen të marrësh dikë në qytet.",
+        "og_desc": "E vështira nuk është t'i gjesh. Është t'i dallosh.",
+
+        "body": [
+            ("Për kë është", [
+                "<p>Një dyqan, një studio ose një ambulancë me një person deri "
+                "në njëzet, që shet te një pjesë e qytetit dhe jo te i gjithë "
+                "vendi. Jo një markë me zyrë marketingu, që duhet të marrë "
+                "një agjenci dhe do ta marrë.</p>",
+            ]),
+            ("Mes çfarësh po zgjedh", [
+                "<p>Një shabllon i mbushur lirë, një agjenci që do të të shesë "
+                "një proces, një i pavarur që mund të jetë shumë i mirë dhe "
+                "mund të zhduket, ose dikush që e ndërton gjënë dhe të dorëzon "
+                "çelësat.</p>",
+                "<p>Të 4 prodhojnë një faqe. Ndryshojnë në atë që të mbetet në "
+                "dorë pas, që është pjesa të cilën askush nuk e pyet derisa "
+                "duhet.</p>",
+            ]),
+            ("Puna bëhet nga larg", [
+                "<p>Jemi në Durrës dhe puna arrin Milanon me WhatsApp, email "
+                "dhe një ekran që e shohim bashkë. Askush nuk vjen të "
+                "fotografojë dyqanin, dhe nëse punës i duhet ajo, nuk është "
+                "punë për ne.</p>",
+                "<p>Ajo që udhëton përsosur është ndërtimi. Çdo faqe që kemi "
+                "bërë del në italisht përveç shqipes dhe anglishtes, prandaj "
+                "të shkruash për një lexues italian është ajo që bëjmë dhe jo "
+                "një përkthim i ngjitur në fund.</p>",
+            ]),
+            ("Çfarë do të ndërtonim të parën", [
+                "<p>Faqen që i përgjigjet pyetjes që dikush shkroi, një mënyrë "
+                "për të të gjetur që punon nga telefoni me një gisht, dhe një "
+                "profil në Google që thotë të njëjtat gjëra me të dyja. Me këtë "
+                "radhë, sepse i treti shpesh sjell klientët e parë.</p>",
+                "<p>Çdo gjë zbukuruese pret derisa të vijë diçka për t'u "
+                "zbukuruar.</p>",
+            ]),
+            ("Kur duhet marrë dikush në qytet", [
+                "<p>Nëse do një njeri në dhomë, nëse punës i duhen fotografi "
+                "të bëra në ambientet e tua, ose nëse thjesht preferon të "
+                "blesh nga një fqinj. Të 3 janë arsye të mira dhe asnjëra nuk "
+                "ka të bëjë me kodin.</p>",
+            ]),
+        ],
+        "payoff": "Na dërgo adresën dhe të themi çfarë do të ndryshonim të "
+                  "parën, kushdo qoftë ai që e bën pastaj.",
+        "faq": [
+            ("A jeni në Milano?",
+             "Jo. Studioja rri në Shqipëri dhe e gjithë puna bëhet nga larg. "
+             "Preferojmë ta vëmë në rreshtin e parë të përgjigjes sesa ta "
+             "zbulosh pas tre email-esh."),
+            ("Kushton më pak sepse nuk jeni atje?",
+             "Zakonisht po. Preferojmë ta themi qartë në vend që të bëjmë sikur "
+             "çmimi vjen nga diçka misterioze, dhe është edhe arsyeja pse nuk "
+             "do të garojmë për të qenë oferta më e ulët që merr."),
+            ("Kush e shkruan italishten?",
+             "E shkruajmë ne, dhe është e shkruar e jo e përkthyer. Një faqe e "
+             "kthyer në italisht nga diçka tjetër ndihet, dhe një lexues "
+             "italian e kap brenda një fjalie."),
+            ("Çfarë më mbetet në fund?",
+             "Domeni, llogaria e hostingut dhe kodi, të gjitha në emër të "
+             "biznesit tënd që ditën e parë. Nuk mbajmë asgjë për llogari "
+             "tënde dhe nuk ka asnjë dorëzim për t'u negociuar."),
+        ],
+        "related": [("/web-design/", "Faqe interneti"),
+                    ("/blog/seo-milano/", "SEO në Milano"),
+                    ("/audit/", "Një auditim falas")],
+    },
+
+    {
+        "slug": "voucher-doppia-transizione",
+     "src": "56cfaec4",
+        "date": "2026-09-06",
+        "updated": "2026-09-06",
+        "topic": "Software me porosi",
+        "work": None,
+        "service": ("/systems/", "Software me porosi"),
+
+        "title": "Vauçeri italian për dixhitalizimin",
+        "h1": "Një pjesë e paguan dikush tjetër, dhe shumica e humbasin "
+              "afatin.",
+        "summary": "Dhomat e tregtisë italiane kanë një vauçer kombëtar për "
+                   "dixhitalizimin, dhe secila i vendos vetë datat.",
+        "standfirst": "Mbulon sistemet e menaxhimit. Nuk mbulon qartë një "
+                      "faqe interneti, dhe preferojmë ta themi.",
+        "description": "Çfarë mbulon Voucher Doppia Transizione, kush e "
+                       "drejton, si të gjesh afatin e dhomës sate të "
+                       "tregtisë, dhe pjesa që faqja jote ndoshta nuk e "
+                       "prek.",
+        "og_desc": "Një vauçer kombëtar me njëqind afate vendore.",
+
+        "body": [
+            ("Çfarë është", [
+                "<p>Edicioni i parë kombëtar i një vauçeri që drejtohet "
+                "përmes Punto Impresa Digitale, krahut dixhital të dhomave të "
+                "tregtisë. Është contributo a fondo perduto, pra grant e jo "
+                "hua, në regjimin de minimis.</p>",
+                "<p>Skema vë pas tij 150 milionë euro nga 2026 deri në 2029, "
+                "deri në 70% të projektit sipas dhomës. Verifikuar më 6 "
+                "shtator 2026 te "
+                "<a href=\"https://www.puntoimpresadigitale.camcom.it/bandi-nazionali/bando-doppia-transizione-2026\" "
+                "target=\"_blank\" rel=\"noopener\">faqja e skemës</a>, dhe "
+                "këto gjëra lëvizin, prandaj lexoje atje para se të mbështetesh "
+                "te ajo.</p>",
+            ]),
+            ("Problemi është që s'ka një afat të vetëm", [
+                "<p>Janë para kombëtare të shpërndara vendore. Çdo dhomë "
+                "tregtie hap dhe mbyll afatin e vet dhe vë tavanin e vet, "
+                "prandaj Bergamo dhe Bari ecin me dy orë të ndryshme brenda "
+                "së njëjtës skemë.</p>",
+                "<p>Kërkesat përgatiten në ReStart, te "
+                "<a href=\"https://restart.infocamere.it/\" target=\"_blank\" "
+                "rel=\"noopener\">restart.infocamere.it</a>. E vetmja datë që "
+                "të përket është ajo e dhomës sate, dhe rri në faqen e dhomës "
+                "sate e jo diku në nivel kombëtar.</p>",
+            ]),
+            ("Çfarë mbulon", [
+                "<p>Lista e pranueshme shkon nga inteligjenca artificiale te "
+                "kiberssiguria, te pajisjet e lidhura, te cloud, te sistemet "
+                "ERP dhe CRM, te analiza e të dhënave, te blockchain, te "
+                "robotika, te realiteti i shtuar, te mjetet e "
+                "qëndrueshmërisë, plus konsulenca dhe trajnimi rreth "
+                "tyre.</p>",
+                "<p>ERP dhe CRM është rreshti që i intereson një biznesi të "
+                "vogël me problem stoku. Është e njëjta kategori me një sistem "
+                "menaxhimi të ndërtuar rreth një zanati të vetëm.</p>",
+            ]),
+            ("Çfarë nuk mbulon qartë", [
+                "<p>Një faqe interneti. Në kategoritë e publikuara nuk dalin "
+                "faqe, dyqane online ose reklama, dhe nuk i fusim ne brenda "
+                "sepse do të na leverdiste. Nëse dikush të thotë se vauçeri "
+                "paguan një faqe të re, pyete cilën kategori.</p>",
+                "<p>Pyet dhomën tënde para se të bësh plane, dhe pyete me "
+                "shkrim.</p>",
+            ]),
+            ("Çfarë të bësh këtë javë nëse të përket", [
+                "<p>Gjej dhomën tënde, shih nëse afati është i hapur, dhe "
+                "lexo kategoritë përballë gjësë që do vërtet të ndërtosh. "
+                "Është një orë punë dhe vjen para se dikush të të bëjë një "
+                "ofertë.</p>",
+                "<p>Asgjë nga këto nuk është mendim kontabilisti, dhe ne nuk "
+                "jemi të tillë. Është ku të shohësh.</p>",
+            ]),
+        ],
+        "payoff": "Na thuaj çfarë do të ndërtoje me to dhe të themi nëse i "
+                  "ngjan një kategorie të pranueshme apo një shprese.",
+        "faq": [
+            ("A e bëni ju kërkesën?",
+             "Jo. Ajo është punë për kontabilistin tënd ose për një konsulent "
+             "që merret me bandi si zanat, dhe ta bësh keq të kushton afatin. "
+             "Mund ta përshkruajmë me shkrim pjesën teknike të një projekti që "
+             "ta paraqesë dikush tjetër."),
+            ("A vlen kush vjen i pari?",
+             "E vendos çdo dhomë, dhe disa e bëjnë kështu, prandaj data e "
+             "hapjes vlen sa ajo e mbylljes. Lexo rregulloren e dhomës sate e "
+             "jo përmbledhjen e një tjetre."),
+            ("Po nëse afati i dhomës sime ka mbyllur?",
+             "Skema është e financuar deri në 2029, prandaj shumë mundet të "
+             "ketë një raund tjetër. Është arsye për ta vënë projektin me "
+             "shkrim tani, jo për të nxjerrë me nxitim një të keq këtë muaj."),
+            ("A mund ta përdor për trajnim?",
+             "Konsulenca e specializuar dhe trajnimi janë në listën e "
+             "pranueshme, prandaj shpesh po. Nëse yti hyn e vendos dhoma, dhe "
+             "përgjigjen ata."),
+        ],
+        "related": [("/systems/", "Software me porosi"),
+                    ("/audit/", "Një auditim falas")],
+    },
+
+    {
+        "slug": "what-an-italian-website-must-show",
+     "src": "808de016",
+        "date": "2026-09-06",
+        "updated": "2026-09-06",
+        "topic": "Faqe interneti",
+        "work": None,
+        "service": ("/web-design/", "Faqe interneti"),
+
+        "title": "Çfarë duhet të ketë një faqe italiane",
+        "h1": "Gjashtë gjëra për të kontrolluar te faqja jote, në rreth 5 "
+              "minuta.",
+        "summary": "Një pjesë është ligj me nen të saktë. Një tjetër është "
+                   "rregull për të cilin ndoshta të kanë trembur pa arsye.",
+        "standfirst": "Hape faqen tënde ndërsa lexon. Shumica e këtyre "
+                      "rregullohen me një rresht.",
+        "description": "Çfarë duhet të mbajë faqja e një biznesi italian: "
+                       "partita IVA dhe ku shkon, çfarë shton një dyqan "
+                       "online, rregulli i cookies, dhe kujt i vlen "
+                       "aksesueshmëria.",
+        "og_desc": "Hape faqen tënde ndërsa lexon këtë.",
+
+        "body": [
+            ("Partita IVA, në faqen kryesore", [
+                "<p>Kush ka një partita IVA duhet ta botojë te faqja, dhe "
+                "norma thotë pikërisht faqen kryesore. Vjen nga neni 35 i "
+                "D.P.R. 633/1972, dhe sanksioni i raportuar nga "
+                "<a href=\"https://www.lexdo.it/blog/dati-obbligatori-sito-web/\" "
+                "target=\"_blank\" rel=\"noopener\">ata që shkruajnë për "
+                "të</a> shkon nga 258,23 në 2.065,83 euro.</p>",
+                "<p>Fundi i faqes vlen. Vetëm faqja e kontaktit jo, sepse "
+                "norma thotë ku.</p>",
+            ]),
+            ("Një dyqan online duhet të thotë më shumë", [
+                "<p>Shitja online shton emrin, selinë ligjore, një mënyrë të "
+                "shpejtë për të kapur një njeri, dhe numrin e Registro "
+                "Imprese ose REA, sipas nenit 7 të D.Lgs. 70/2003.</p>",
+                "<p>Një formular kontakti vetëm nuk është mënyrë e shpejtë për "
+                "të kapur një njeri. Një adresë dhe një telefon po.</p>",
+            ]),
+            ("Rregulli i cookies që gabohet më shumë", [
+                "<p>Pranimi, refuzimi dhe personalizimi duhet të jenë njësoj "
+                "të lehta për t'u shtypur. Një Prano i madh me ngjyrë pranë "
+                "një lidhjeje të vogël gri është pikërisht skema që "
+                "<a href=\"https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9677876\" "
+                "target=\"_blank\" rel=\"noopener\">udhëzimet e Garante për "
+                "cookies</a> u shkruan për ta ndalur.</p>",
+                "<p>Cookies jo teknike rrinë të fikura derisa dikush të thotë "
+                "po, dhe një refuzim nuk është arsye për të pyetur sërish "
+                "nesër.</p>",
+            ]),
+            ("Ligji i aksesueshmërisë ndoshta nuk të prek", [
+                "<p>European Accessibility Act mbërriti në Itali si D.Lgs. "
+                "82/2022 dhe zbatohet nga qershori 2025, dhe që atëherë shumë "
+                "bizneseve të vogla u është thënë se duhet të "
+                "përshtaten.</p>",
+                "<p>Mikrondërmarrjet që ofrojnë shërbime janë të përjashtuara: "
+                "nën 10 persona dhe nën 2 milionë euro qarkullim. Nëse je ti, "
+                "përgjigjja e ndershme është që ligji nuk të arrin, dhe kush "
+                "po të bën ofertë për t'u përshtatur duhej të ta kishte "
+                "thënë.</p>",
+            ]),
+            ("Çfarë të bësh me gjithë këtë", [
+                "<p>Kontrollo të 4 më sipër te faqja jote tani. Pastaj bëje "
+                "të aksesueshme sido që të jetë nëse shet te publiku, sepse të "
+                "jesh i lexueshëm në një ekran të keq me sy të lodhur nuk "
+                "është çështje ligjore.</p>",
+                "<p>Kjo është ku të shohësh dhe jo mendim ligjor, dhe personi "
+                "me të cilin ta konfirmosh është kontabilisti yt.</p>",
+            ]),
+        ],
+        "payoff": "Na dërgo adresën dhe të listojmë çfarë mungon, me normën "
+                  "pranë secilës.",
+        "faq": [
+            ("Ku saktësisht duhet vënë partita IVA?",
+             "Te faqja kryesore. Shumica e vënë te fundi i faqes, që shfaqet "
+             "te faqja kryesore dhe kudo tjetër njëherësh, dhe është mënyra më "
+             "e thjeshtë për të pushuar së menduari për të."),
+            ("A më duhet vërtet një banner cookies?",
+             "Vetëm nëse faqja ngarkon diçka që nuk është rreptësisht e "
+             "nevojshme, që zakonisht do të thotë statistika, video të "
+             "ngulitura ose një chat. Një faqe që nuk ngarkon asnjë prej "
+             "tyre nuk ka nevojë për banner, dhe një banner mbi një faqe që "
+             "s'ka nevojë është thjesht diçka për të klikuar."),
+            ("Faqen ma bëri dikush që u zhduk.",
+             "Atëherë nis nga kush e ka domenin dhe hostingun, sepse gjithçka "
+             "më sipër është e parregullueshme derisa dikush të mund t'i "
+             "ndryshojë faqet. Është problem tjetër dhe më i ngutshëm."),
+            ("A është një studio shqiptare vendi i duhur për të pyetur për ligj italian?",
+             "Për ku të shohësh po, dhe i kemi shkruar nenet që të mund të na "
+             "kontrollosh. Për të ditur nëse i përket biznesit tënd pyet "
+             "kontabilistin, që është personi që përgjigjet për të."),
+        ],
+        "related": [("/web-design/", "Faqe interneti"),
+                    ("/audit/", "Një auditim falas")],
+    },
+
+    {
+        "slug": "instagram-or-the-local-tv-slot",
+     "src": "e923f4a2",
+        "date": "2026-09-06",
+        "updated": "2026-09-06",
+        "topic": "Meta ads",
+        "work": None,
+        "service": ("/meta-ads/", "Meta ads"),
+
+        "title": "Instagram apo televizioni vendor",
+        "h1": "Për shumë njerëz fjala reklamë do të thotë ende televizor.",
+        "summary": "Ku shkojnë sot paratë e reklamës së një biznesi të vogël "
+                   "italian, dhe si të kuptosh cila gjysmë punon.",
+        "standfirst": "Njëra të thotë saktësisht kush erdhi. Tjetra të thotë "
+                      "sa veta ndoshta.",
+        "description": "Televizioni vendor, radioja, gazeta falas apo "
+                       "Instagrami: çfarë merr një biznes i vogël italian me "
+                       "të njëjtat para, dhe cila mund të matet vërtet.",
+        "og_desc": "Njëra të thotë kush erdhi. Tjetra sa veta ndoshta.",
+
+        "body": [
+            ("Pse krahasimi është ende i gjallë", [
+                "<p>Shumë biznese të vogla italiane e mendojnë ende reklamën "
+                "si një hapësirë mbi një ekran ose mbi një faqe, sepse për 30 "
+                "vjet ajo ishte, dhe ata që i shesin ato hapësira vazhdojnë të "
+                "marrin në telefon.</p>",
+                "<p>Nuk e kanë krejt gabim. Një hapësirë vendore arrin njerëz "
+                "që nuk po të kërkojnë, që është e vetmja gjë që kërkimi nuk "
+                "di ta bëjë.</p>",
+            ]),
+            ("Çfarë blen vërtet secila", [
+                "<p>Një hapësirë në transmetim blen shfaqje te një grup i madh "
+                "i përcaktuar kryesisht nga koha kur po shihte. Një fushatë në "
+                "rrjete blen shfaqje te një grup më i vogël i përcaktuar nga ku "
+                "jeton, sa vjeç është dhe çfarë ka treguar se ndjek.</p>",
+                "<p>Asnjëra nuk është më e mirë në abstrakt. Janë dy forma të "
+                "ndryshme të së njëjtës blerje.</p>",
+            ]),
+            ("Ndryshimi që ka rëndësi është çfarë kthehet", [
+                "<p>Pas një hapësire në transmetim di sa kushtoi dhe pak a "
+                "shumë sa njerëz mund ta shihnin. Pas një fushate në rrjete di "
+                "sa klikuan, çfarë bënë pastaj, dhe sa të kushtoi çdo "
+                "kërkesë.</p>",
+                "<p>Nuk është pohim se cila shet më shumë. Është pohim se "
+                "vetëm njëra mund të kontrollohet, dhe një shpenzim që nuk "
+                "matet rinovohet me ndjesi.</p>",
+            ]),
+            ("Kur kanali i vjetër fiton ende", [
+                "<p>Hapja e një dyqani. Një zanat ku ai që blen është 70 vjeç "
+                "dhe radion e ka ndezur gjithë ditën. Çdo gjë ku të jesh i "
+                "njohur në zonë vlen më shumë se të gjendesh nga dikush i "
+                "caktuar.</p>",
+                "<p>Edhe sponsorizimi i skuadrës së fshatit është reklamë, dhe "
+                "në një vend të vogël ndonjëherë i mund të gjitha ato që janë "
+                "në këtë faqe.</p>",
+            ]),
+            ("Si ta bësh krahasimin ndershmërisht", [
+                "<p>Pyet çdo klient që hyn se ku dëgjoi për ty, për një muaj, "
+                "dhe shkruaje. Është një muaj i mërzitshëm dhe mbyll debate që "
+                "asnjë panel nuk i mbyll.</p>",
+                "<p>Pastaj vëre buxhetin tjetër aty ku ishin përgjigjet, dhe "
+                "jo aty ku ishte fatura e fundit.</p>",
+            ]),
+        ],
+        "payoff": "Na thuaj sa ke shpenzuar dhe ku, dhe të themi cila pjesë "
+                  "e asaj shpenzimi mund të matet fare.",
+        "faq": [
+            ("Instagrami kushton më pak se televizioni vendor?",
+             "Për person të arritur zakonisht po. Për klient që hyn vërtet "
+             "varet plotësisht nga zanati, dhe kush përgjigjet pa të pyetur "
+             "çfarë shet po të shet shërbimin e vet."),
+            ("T'i bëj të dyja?",
+             "Nëse buxheti i mbulon vërtet të dyja po, dhe mat atë që matet "
+             "që të shohësh çfarë duhet të mundë tjetra. Nëse mbulon një, nis "
+             "nga ajo që të kthen përgjigje."),
+            ("A sheh njeri nën 40 vjeç kanalet vendore?",
+             "Disa po, dhe është pyetja e gabuar. E duhura është nëse i "
+             "shohin klientët e tu, dhe këtë e mëson duke i pyetur ata në vend "
+             "që të pyesësh ne."),
+            ("Po gazeta falas e zonës?",
+             "E njëjta aritmetikë me transmetimin, zakonisht kushton më pak, "
+             "dhe shpesh është më e synuar se të dyja sepse bie në një grup të "
+             "përcaktuar kutish postare. Ia vlen t'i marrësh çmimin para se ta "
+             "hedhësh poshtë."),
+        ],
+        "related": [("/meta-ads/", "Meta ads"),
+                    ("/seo/", "SEO dhe kërkim vendor"),
                     ("/audit/", "Një auditim falas")],
     },
 ]
