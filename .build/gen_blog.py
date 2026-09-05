@@ -108,6 +108,13 @@ CITY_OF = {
     "seo-brescia":       ("Brescia", "Q6221"),
     "seo-como":          ("Como",    "Q1308"),
     "seo-varese":        ("Varese",  "Q6285"),
+    # The AI-search city posts were missing from this table, so 2 of them
+    # shipped naming a city in the prose and no Place in the graph. It is read
+    # with .get(), so nothing failed and nothing said so. Same Q numbers as
+    # their /seo/ twins, because it is the same city.
+    "ai-search-milano":  ("Milano", "Q490"),
+    "ai-search-como":    ("Como",   "Q1308"),
+    "ai-search-pavia":   ("Pavia",  "Q6259"),
 }
 
 

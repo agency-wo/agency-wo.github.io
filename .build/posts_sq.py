@@ -5859,6 +5859,501 @@ POSTS = [
                   "ndershme është se nuk të bëjmë punë, atë merr.",
         "related": [("/work/iglisi-watch/", "Iglisi Watch"), ("/studio/", "Studio")],
     },
+    # 5 shkrime, 2026-09-06. Regjistri ti: faqja jote, biznesi yt, kurrë
+    # "faqja juaj". Termat nga glossary.TERMS: auditim, kërkimi me AI,
+    # profili në Google, klikime. Durrës me ë, Shqipëri me ë.
+
+    {
+        "slug": "who-owns-your-website",
+     "src": "9579addc",
+        "date": "2026-09-06",
+        "updated": "2026-09-06",
+        "topic": "Faqe interneti",
+        "work": "iglisi-watch",
+        "service": ("/web-design/", "Faqe interneti"),
+
+        "title": "Kush e zotëron faqen tënde?",
+        "h1": "Po të ndaloje pagesat nesër, çfarë do të të mbetej?",
+        "summary": "Domeni, hostingu dhe kodi janë 3 gjëra të ndara, dhe një "
+                   "biznes duhet t'i ketë të 3.",
+        "standfirst": "Askush nuk e pyet në fillim. Të gjithë e pyesin në "
+                      "fund, dhe atëherë përgjigja është e vendosur.",
+        "description": "Kush i zotëron domenin, hostingun dhe kodin kur "
+                       "ndalon punën me një agjenci, si ta kontrollosh për 5 "
+                       "minuta, dhe çfarë të pyesësh para se të firmosësh.",
+        "og_desc": "Një faqe janë 3 gjëra për t'u zotëruar, dhe pothuajse "
+                   "askush nuk i ka.",
+
+        "body": [
+            ("Përgjigja e shkurtër", [
+                "<p>Gjithçka duhet të jetë e regjistruar në emër të biznesit: "
+                "domeni, llogaria e hostingut, kodi, profili në Google, "
+                "statistikat. Nëse diçka rri në llogarinë e dikujt tjetër, "
+                "atë pjesë po e merr me qira dhe qiraja nuk ka tavan.</p>",
+                "<p>Nuk është çështje besimi. Është çfarë ndodh kur dikush "
+                "ndërron punë, mbyll, ose pushon së përgjigjuri.</p>",
+            ]),
+            ("Tri gjëra, dhe ndahen nga njëra-tjetra", [
+                "<p><strong>Domeni</strong> është adresa. Kush figuron te "
+                "regjistruesi mund ta zhvendosë, ta shesë ose ta lërë të "
+                "skadojë, dhe askush tjetër nuk bën dot gjë.</p>",
+                "<p><strong>Hostingu</strong> është aty ku rrinë skedarët. "
+                "Një llogari në emër të një studioje do të thotë që faqja "
+                "zhduket ditën që zhduket ajo llogari.</p>",
+                "<p><strong>Kodi</strong> është vetë faqja. Nëse nuk e "
+                "shkarkon dot, nuk e çon dot askund, dhe të mbetet vetëm një "
+                "ofertë për ta rindërtuar.</p>",
+            ]),
+            ("Kontrollohet për 5 minuta", [
+                "<p>Hap një kërkim WHOIS dhe shkruaj domenin tënd. Tregon "
+                "kush e ka regjistruar dhe kur skadon. Shërbimet e privatësisë "
+                "e fshehin emrin, prandaj nëse kthehet privat, pyet kush e "
+                "mban llogarinë.</p>",
+                "<p>Pastaj gjej email-in e rinovimit. Kujt i vjen, ai e "
+                "kontrollon adresën, çfarëdo që të thotë kushdo.</p>",
+                "<p>Pastaj kërko një hyrje te hostingu dhe një kopje të "
+                "skedarëve. Një studio që nuk zotëron asgjë t'i jep të dyja "
+                "po atë pasdite.</p>",
+            ]),
+            ("Si duket kur shkon keq", [
+                "<p>Një dyqan do të ndërrojë dizajnerin dhe zbulon se domeni "
+                "është në emër të të vjetrit. Ndonjëherë zhvendoset për një "
+                "javë. Ndonjëherë bëhet një çmim.</p>",
+                "<p>Ose tarifa e platformës pushon së vleni dhe nuk ka asnjë "
+                "eksport, sepse faqja nuk ka qenë kurrë një grup skedarësh, "
+                "vetëm një abonim me një dyqan të vizatuar sipër.</p>",
+            ]),
+            ("Pyete para se të firmosësh, jo pas", [
+                "<p>Në emër të kujt është domeni. Në emër të kujt hostingu. A "
+                "e marr kodin. Çfarë u ndodh të 3-ave nëse ndalojmë. Katër "
+                "pyetje, dhe përgjigjet duhet të vijnë menjëherë.</p>",
+                "<p>Një ngurrim te njëra është përgjigja për të gjitha.</p>",
+            ]),
+            ("Si janë vendosur tanat", [
+                "<p>Çdo domen, llogari dhe depo kodi ku punojmë është e "
+                "regjistruar në emër të klientit që ditën e parë, jo në tonin. "
+                "Iglisi Watch në Durrës zotëron watch.al, hostingun dhe kodin, "
+                "dhe këtë javë mund t'ia dorëzonte të gjitha dikujt tjetër pa "
+                "na pyetur.</p>",
+                "<p>Duam më mirë të na mbajnë sesa të jemi të vështirë për "
+                "t'u lënë.</p>",
+            ]),
+        ],
+        "payoff": "Na dërgo adresën tënde dhe të themi se kujt i del në emër "
+                  "sipas internetit.",
+        "faq": [
+            ("Dizajneri im thotë se është më lehtë po ta mbajë ai domenin.",
+             "Është më lehtë për të. Ta regjistrosh në emrin tënd do rreth 10 "
+             "minuta dhe një kartë, dhe që nga ai çast njoftimi i rinovimit "
+             "të vjen ty e jo dikujt që s'e ke më në kontakt."),
+            ("Faqja ishte falas me paketën e hostingut. A është imja?",
+             "Zakonisht jo kodi. Platformat me blloqe të lënë të nxjerrësh "
+             "fotot dhe tekstet e pothuajse kurrë faqen që punon, prandaj "
+             "zhvendosja do rindërtim. Kërko një buton eksporti para se të të "
+             "duhet."),
+            ("Po nëse domenin e kam humbur tashmë?",
+             "Varet kush e mban dhe sa afër është skadimi. Nis me një kërkim "
+             "WHOIS, pastaj një kërkesë të shkruar e të sjellshme që emërton "
+             "domenin dhe datën kur do ta zhvendosësh. Regjistruesit kanë një "
+             "procedurë transferimi dhe nuk kërkohet vullnet i mirë."),
+            ("Ta zotërosh do të thotë ta mirëmbash vetë?",
+             "Jo. Të zotërosh llogaritë dhe të paguash dikë që të kujdeset "
+             "për to janë dy vendime të ndara, dhe t'i mbash të ndara është "
+             "gjithë kuptimi."),
+        ],
+        "related": [("/web-design/", "Faqe interneti"),
+                    ("/studio/", "Studio"),
+                    ("/audit/", "Një auditim falas")],
+    },
+
+    {
+        "slug": "your-phone-number-says-three-things",
+     "src": "5fb20f82",
+        "date": "2026-09-06",
+        "updated": "2026-09-06",
+        "topic": "Kërkim vendor",
+        "work": "iglisi-watch",
+        "service": ("/seo/", "SEO dhe kërkim vendor"),
+
+        "title": "Numri yt thotë 3 gjëra të ndryshme",
+        "h1": "Harta ka një numër, faqja ka një tjetër, dhe një listë online "
+              "ka të tretin.",
+        "summary": "Google i lexon të 3, s'e dallon dot cili është i vërteti, "
+                   "dhe në heshtje i beson atij që thotë vetëm një.",
+        "standfirst": "Një nga gjërat më të lira në një auditim, dhe një nga "
+                      "më të shpeshtat.",
+        "description": "Pse i njëjti biznes shfaq numër, adresë ose orare të "
+                       "ndryshme në 3 vende, sa kushton kjo në kërkimin "
+                       "vendor, dhe si të rregullohet me radhë.",
+        "og_desc": "Google lexon çdo kopje të të dhënave të tua që gjen.",
+
+        "body": [
+            ("Përgjigja e shkurtër", [
+                "<p>Emri, adresa dhe telefoni janë shkruar në më shumë vende "
+                "sesa i mban mend: profili në Google, fundi i faqes, "
+                "Facebook, një listë e vjetër online, faqja e një furnitori. "
+                "Kur nuk përputhen, një motor kërkimi duhet ta hamendësojë "
+                "cili është i saktë.</p>",
+                "<p>E hamendëson me kujdes, dhe kështu një dyqan me një "
+                "përgjigje të vetme koherente kalon përpara një dyqani me 3 "
+                "versione.</p>",
+            ]),
+            ("Nga vijnë kopjet", [
+                "<p>Një numër ndryshon, dhe faqja përditësohet sepse faqen e "
+                "sheh dikush. Lista që dikush e plotësoi 4 vjet më parë jo, "
+                "sepse askush nuk mban mend që ekziston.</p>",
+                "<p>Pastaj janë versionet që nuk i shkroi askush: një profil "
+                "i dytë në Google nga pronari i mëparshëm, një adresë e "
+                "shkurtuar në një vend dhe e plotë në një tjetër, një celular "
+                "në hartë dhe një fiks në fund të faqes.</p>",
+            ]),
+            ("Pse hartës i intereson më shumë se faqes", [
+                "<p>Rezultati në hartë vendoset pjesërisht nga sa i sigurt "
+                "është Google që një biznes është real dhe i përditësuar. "
+                "Përputhja mes vendeve që ai nuk i kontrollon është prova më "
+                "e lirë që ka.</p>",
+                "<p>Prandaj 2 dyqane me të njëjtat vlerësime dhe të njëjtën "
+                "largësi nuk dalin gjithmonë njësoj.</p>",
+            ]),
+            ("Rregulloje me këtë radhë", [
+                "<p>Në fillim vendos versionin e vërtetë, me shkrim: një "
+                "emër, një adresë e shkruar në një mënyrë të vetme, një "
+                "numër. Pastaj korrigjo profilin në Google, sepse ai ushqen "
+                "hartën.</p>",
+                "<p>Pastaj fundin e faqes dhe faqen e kontaktit. Pastaj "
+                "Facebook dhe Instagram. Pastaj listat online, nga më e "
+                "vjetra, që është ora e mërzitshme të cilën pothuajse asnjë "
+                "biznes nuk e jep.</p>",
+                "<p>Pastaj kërko dublikatat e profilit tënd dhe mbylli. Një "
+                "profil i dytë i ndan vlerësimet e tua mes 2 dyqaneve.</p>",
+            ]),
+            ("Çfarë ndryshoi për një dyqan", [
+                "<p>Iglisi Watch në Durrës ishte koherent kudo para se faqja "
+                "të ishte gati, dhe prandaj profili punoi para faqeve. Nga 2 "
+                "qershori deri më 30 gusht 2026 faqja mori 900 klikime nga "
+                "Google, dhe javët e para i solli profili vetëm.</p>",
+                "<p>Ato shifra u lexuan në gusht 2026. Kërkimi lëviz, prandaj "
+                "kontrollo të tuat në vend që të marrësh hua tonat.</p>",
+            ]),
+        ],
+        "payoff": "Na dërgo adresën dhe të listojmë çdo version të të dhënave "
+                  "të tua që gjejmë, me ato të çuditshmet të shënuara.",
+        "faq": [
+            ("A ka rëndësi nëse numri ndryshon vetëm pak?",
+             "Një prefiks që mungon ose një hapësirë zakonisht falet. Një "
+             "numër tjetër jo, dhe as një rrugë tjetër. Zgjidh një shkrim dhe "
+             "përdore kudo, bashkë me shenjat e pikësimit."),
+            ("Nuk hyj dot në një listë të vjetër për ta ndryshuar.",
+             "Shumica e listave kanë një lidhje për ta marrë profilin te vetë "
+             "faqja, dhe të tjerat një adresë ku të shkruash. Aty ku s'punon "
+             "as njëra as tjetra, lista është aq e vjetër sa është më lehtë "
+             "të kërkosh heqjen sesa korrigjimin."),
+            ("A duhet të përdor një numër gjurmimi për reklamat?",
+             "Vetëm aty ku platforma lejon të shfaqet numri i vërtetë për të "
+             "gjithë të tjerët. Një numër gjurmimi mbi faqet e tua publike "
+             "është një version i katërt i së vërtetës."),
+            ("Sa kohë duhet para se të ndryshojë diçka?",
+             "Profili përditësohet për pak ditë. Listat marrin aq sa marrin, "
+             "dhe rezultati në hartë lëviz kur mjaftueshëm prej tyre "
+             "përputhen, prandaj radha më sipër nis me ato që i kontrollon "
+             "ti."),
+        ],
+        "related": [("/seo/", "SEO dhe kërkim vendor"),
+                    ("/glossary/map-listing/", "Profili në Google"),
+                    ("/audit/", "Një auditim falas")],
+    },
+
+    {
+        "slug": "why-chatgpt-names-your-competitor",
+     "src": "247055b4",
+        "date": "2026-09-06",
+        "updated": "2026-09-06",
+        "topic": "Kërkimi me AI",
+        "work": None,
+        "service": ("/geo/", "Kërkimi me AI"),
+
+        "title": "Pse ChatGPT përmend konkurrentin tënd",
+        "h1": "Lexo përgjigjen që të dha, pastaj gjej nga vjen çdo pjesë e "
+              "saj.",
+        "summary": "Një metodë në vend të një këshille: pyet, shkruaje, dhe "
+                   "ndiqe çdo pohim deri te faqja nga u mor.",
+        "standfirst": "Arsyeja duket pothuajse gjithmonë në vetë përgjigjen, "
+                      "nëse e lexon si provë.",
+        "description": "Si ta kuptosh pse një asistent rekomandon një biznes "
+                       "tjetër e jo tëndin, duke ndjekur çdo fjali të "
+                       "përgjigjes deri te një burim që e hap dot.",
+        "og_desc": "Përgjigja është provë. Lexoje si provë.",
+
+        "body": [
+            ("Në fillim pyet si duhet", [
+                "<p>Pyet siç do të pyeste një klient, jo siç do të pyeste një "
+                "pronar. Jo emrin e biznesit tënd, me të cilin çdo asistent "
+                "do të jetë i sjellshëm, por punën që i duhet dikujt dhe "
+                "qytetin ku i duhet.</p>",
+                "<p>Pyet 3 asistentë, ruaji përgjigjet me datën, dhe pyet "
+                "sërish pas një muaji. Pa shënimet ke një përshtypje në vend "
+                "të një matjeje.</p>",
+            ]),
+            ("Ndaje përgjigjen në pohime", [
+                "<p>Merr paragrafin për biznesin që përmendi dhe ndaje në "
+                "fjali të veçanta. Ku janë. Çfarë bëjnë. Prej sa kohësh e "
+                "bëjnë. Çfarë thotë bota për ta. Sa kushton.</p>",
+                "<p>Secila prej tyre erdhi nga diku, dhe zakonisht është një "
+                "faqe që e hap dot.</p>",
+            ]),
+            ("Gjej burimin e secilës", [
+                "<p>Kërko fjalinë e saktë në thonjëza. Një fjali e veçantë "
+                "zakonisht të çon te faqja nga u mor, dhe shpesh ajo faqe "
+                "nuk është faqja e konkurrentit: një listë online, një "
+                "vlerësim, një lajm vendor, lista e shitësve e një "
+                "furnitori.</p>",
+                "<p>Asistentët që citojnë burime t'i emërtojnë po t'u kërkosh "
+                "një listë. Ata që nuk e bëjnë, i përgjigjen prapëseprapë "
+                "kërkimit në thonjëza.</p>",
+            ]),
+            ("Tani pyet çfarë mund të kishte thënë për ty", [
+                "<p>Kalo faqen tënde duke kërkuar secilin pohim që bëri për "
+                "ta. Ku e thua çfarë bën, në një fjali? Ku e thua qytetin? Ku "
+                "del një çmim ose një interval çmimi?</p>",
+                "<p>Shumicën e herëve boshllëku nuk është teknik. Fjalia "
+                "thjesht nuk është në faqe, në asnjë formë, dhe s'ka çfarë të "
+                "merret.</p>",
+            ]),
+            ("Pastaj shih jashtë faqeve të tua", [
+                "<p>Numëro vendet ku dikush tjetër e përshkruan biznesin "
+                "tënd. Vlerësime me fjalë brenda, një profil i plotësuar në "
+                "një listë, çdo gjë të botuar nga dikush që nuk punon për "
+                "ty.</p>",
+                "<p>Një biznes me 4 përmendje të jashtme dhe një konkurrent "
+                "me 40 nuk po gjykohen padrejtësisht. Po përshkruhen nga "
+                "sasi të ndryshme provash.</p>",
+            ]),
+            ("Shkruaj çfarë gjete", [
+                "<p>Në fund duhet të kesh një listë të shkurtër: 3 pohime që "
+                "bëri për ta, burimin e secilit, dhe nëse faqja jote e thotë "
+                "të njëjtën gjë diku. Ajo listë është puna, me radhë, dhe "
+                "zakonisht është më e shkurtër se sa frikësohet bota.</p>",
+            ]),
+        ],
+        "payoff": "Na thuaj zanatin tënd dhe qytetin dhe i bëjmë ne pyetjet, "
+                  "pastaj të dërgojmë përgjigjet dhe nga erdhën.",
+        "faq": [
+            ("A ia vlen të ankohesh te asistenti?",
+             "S'ka njeri te kush të ankohesh dhe asnjë radhë ku të futesh. "
+             "Leva e vetme që ka dikush nga jashtë është ajo që botohet për "
+             "biznesin, prandaj pjesa e dobishme është ajo më sipër."),
+            ("Përmendi një biznes që ka mbyllur.",
+             "Ndodh, dhe të thotë diçka të dobishme: ai model punon me "
+             "material të vjetër në vend që të lexojë faqet e gjalla. Bëj të "
+             "njëjtën pyetje te një që citon burime dhe krahaso."),
+            ("Përmendi një listë të madhe online dhe asnjë biznes.",
+             "Atëherë lista është faqja ku duhet të jesh, dhe të jesh aty si "
+             "duhet kushton më pak sesa të përmendesh drejtpërdrejt. "
+             "Kontrollo çfarë thotë profili yt para se ta marrësh të mirëqenë "
+             "që ekziston."),
+            ("A duhet ta bëj më shumë se një herë?",
+             "Po, me një ritëm, sepse përgjigjet ndryshojnë pa paralajmërim "
+             "dhe asgjë nuk të njofton. Një shënim në një skedar çdo muaj "
+             "është gjithë metoda."),
+        ],
+        "related": [("/geo/", "Kërkimi me AI"),
+                    ("/glossary/ai-search/", "Kërkimi me AI"),
+                    ("/audit/", "Një auditim falas")],
+    },
+
+    {
+        "slug": "when-ai-gets-your-business-wrong",
+     "src": "c06b6aa2",
+        "date": "2026-09-06",
+        "updated": "2026-09-06",
+        "topic": "Kërkimi me AI",
+        "work": None,
+        "service": ("/geo/", "Kërkimi me AI"),
+
+        "title": "Kur AI e gabon biznesin tënd",
+        "h1": "Të përmendi, dhe gjysma e asaj që tha është e vjetruar.",
+        "summary": "Të përshkruhesh gabim është një rast i tretë, dhe "
+                   "riparohet ndryshe nga mungesa.",
+        "standfirst": "Një adresë e vjetër, orare të ndryshuara vite më parë, "
+                      "një shërbim që nuk e bën më.",
+        "description": "Çfarë të bësh kur një asistent thotë diçka të "
+                       "pavërtetë për biznesin tënd: ku rri informacioni i "
+                       "vjetër, dhe pse rregullimi i faqes sate nuk mjafton.",
+        "og_desc": "Mungesa është një problem. Prania e gabuar është një "
+                   "tjetër.",
+
+        "body": [
+            ("Përgjigja e shkurtër", [
+                "<p>Korrigjo burimet, jo asistentin. Asgjë nga ajo që i "
+                "shkruan nuk e arrin, dhe as ajo që ndryshon në faqen tënde "
+                "nuk e arrin derisa të ndryshojë edhe materiali nga i cili "
+                "mësoi.</p>",
+                "<p>Pra puna është të gjesh cilën kopje të të dhënës së "
+                "vjetër po lexon, dhe zakonisht janë 2 ose 3.</p>",
+            ]),
+            ("Dy mënyra për të gabuar", [
+                "<p>Disa asistentë i lexojnë faqet ndërsa përgjigjen. Ata "
+                "gabojnë sepse diçka e gjallë është gabim: një profil i "
+                "vjetër, një listë që s'e ka prekur më askush, një faqe e "
+                "jotja që rendit ende shërbimet e vitit të kaluar.</p>",
+                "<p>Të tjerët përgjigjen nga materiali i trajnimit me një "
+                "datë prerjeje. Ata përsërisin atë që ishte e vërtetë kur e "
+                "mësuan, dhe asnjë korrigjim nuk i arrin derisa të "
+                "ritrajnohen.</p>",
+                "<p>Bëj të njëjtën pyetje te të dy llojet dhe ndryshimi mes "
+                "përgjigjeve të thotë cilin problem ke.</p>",
+            ]),
+            ("Gjej kopjen që po lexon", [
+                "<p>Kërko vetë të dhënën e gabuar, në thonjëza. Një adresë e "
+                "vjetër ose një shërbim i braktisur janë vargje të veçanta, "
+                "dhe faqet që i mbajnë ende kthehen të gjitha bashkë.</p>",
+                "<p>Kontrollo në fillim faqen tënde, përfshirë faqet që nuk i "
+                "lidh më askush. Një listë çmimesh e 2 viteve më parë është "
+                "prapë një listë çmimesh e botuar.</p>",
+            ]),
+            ("Rregullo ato që i kontrollon, me radhë", [
+                "<p>Në fillim profilin në Google, sepse e lexojnë më shumë "
+                "gjëra se çdo gjë tjetër tënden. Pastaj faqet e tua, dhe "
+                "fshi në vend që të fshehësh: një faqe pa lidhje mbetet e "
+                "lexueshme.</p>",
+                "<p>Pastaj rrjetet sociale, pastaj listat online. Aty ku një "
+                "profil nuk korrigjohet dot, kërko që të hiqet.</p>",
+            ]),
+            ("Pastaj botoje korrigjimin qartë", [
+                "<p>Vëre të dhënën e tanishme në një fjali, në një faqe, me "
+                "fjalë të zakonshme: ku je tani, çfarë bën tani, kur hap "
+                "tani. Ajo që lexohet si përgjigje përdoret si përgjigje.</p>",
+                "<p>Mos shkruaj një faqe për gabimin. Shkruaj faqen që thotë "
+                "të vërtetën, dhe bëje më të lehtën për t'u gjetur.</p>",
+            ]),
+            ("Prit që të marrë kohë, dhe kontrollo", [
+                "<p>Lloji që lexon faqet mund ta marrë një faqe të korrigjuar "
+                "brenda pak ditësh. Lloji i trajnuar ndjek një kalendar që "
+                "askush nga jashtë nuk e boton, dhe nuk e lëviz asnjë "
+                "kërkesë.</p>",
+                "<p>Bëj të njëjtën pyetje çdo muaj dhe ruaji përgjigjet me "
+                "datën pranë. Ai skedar është i vetmi regjistër që do të "
+                "kesh.</p>",
+            ]),
+        ],
+        "payoff": "Na dërgo emrin e biznesit dhe qytetin dhe pyesim disa "
+                  "asistentë për ty, pastaj të dërgojmë çfarë thanë dhe "
+                  "çfarë është e vjetruar.",
+        "faq": [
+            ("A mund t'i them që e ka gabim?",
+             "Të shkruash një korrigjim në një bisedë ndryshon atë bisedë dhe "
+             "asgjë tjetër. I ardhshmi që pyet merr përgjigjen e vjetër, "
+             "sepse materiali prapa nuk ka lëvizur."),
+            ("Shpiku një çmim që s'e kam bërë kurrë.",
+             "Kontrollo nëse një konkurrent ose një listë online e boton atë "
+             "çmim për një shërbim të ngjashëm, sepse zakonisht prej andej "
+             "vjen. Të botosh intervalin tënd me fjalë të qarta është "
+             "korrigjimi më i shpejtë që ekziston."),
+            ("Thotë që kam mbyllur përgjithmonë.",
+             "Ajo nis pothuajse gjithmonë nga një profil në Google, "
+             "ndonjëherë nga një dublikatë që s'e dije se ekzistonte. Kërko "
+             "emrin e biznesit tënd në hartë dhe shih nëse ka një kopje të "
+             "dytë tënden."),
+            ("Faqet e vjetra t'i heq apo t'i lë?",
+             "Hiqi, ose përditësoji. Një faqe e vjetër e mbajtur nga dashuria "
+             "është një pohim i botuar, dhe kushdo që lexon faqen tënde e "
+             "trajton si të tanishme nëse faqja nuk thotë ndryshe."),
+        ],
+        "related": [("/geo/", "Kërkimi me AI"),
+                    ("/seo/", "SEO dhe kërkim vendor"),
+                    ("/audit/", "Një auditim falas")],
+    },
+
+    {
+        "slug": "ai-search-milano",
+     "src": "78736421",
+        "date": "2026-09-06",
+        "updated": "2026-09-06",
+        "topic": "Kërkimi me AI",
+        "work": None,
+        "service": ("/geo/", "Kërkimi me AI"),
+
+        "title": "Kërkimi me AI në Milano",
+        "h1": "Në një qytet kaq të madh, asistenti duhet të zgjedhë 3.",
+        "summary": "Milano i jep një asistenti më shumë kandidatë se çdo "
+                   "qytet tjetër italian, dhe kjo e bën listën e shkurtër më "
+                   "të vështirë për t'u arritur dhe më të vlefshme.",
+        "standfirst": "Konkurrenca nuk janë bizneset sipër teje. Është "
+                      "gjatësia e përgjigjes.",
+        "description": "Si punon kërkimi me AI në një qytet me mijëra "
+                       "konkurrentë: pse asistentët përmendin 3, çfarë "
+                       "vendos cilët 3, dhe çfarë mund të ndryshojë një "
+                       "biznes i vogël.",
+        "og_desc": "Një faqe rezultatesh ka 10. Një përgjigje ka 3.",
+
+        "body": [
+            ("Pse një qytet i madh e ndryshon problemin", [
+                "<p>Në një qytezë një asistent që përmend biznese vendore "
+                "mund të ketë vetëm një grusht për të përshkruar. Në Milano "
+                "për të njëjtën pyetje ka qindra, dhe prapë përgjigjet me "
+                "3.</p>",
+                "<p>Pra distanca mes të qenit i njohur dhe të qenit i "
+                "përmendur këtu është më e madhe se kudo tjetër në Itali, dhe "
+                "nuk mbyllet duke qenë pak më i mirë.</p>",
+            ]),
+            ("Çfarë e fut një biznes në një listë të shkurtër", [
+                "<p>Diçka duhet ta veçojë në një fjali. Një lagje në vend të "
+                "qytetit. Një shërbim i saktë në vend të zanatit. Një lloj "
+                "klienti, një gjuhë e folur, një orar që nuk e mban askush "
+                "tjetër.</p>",
+                "<p>Asistentët i përshkruajnë bizneset në një rresht a dy. "
+                "Një biznes që nuk përshkruhet dot në një rresht është i "
+                "vështirë për t'u futur fare në një përgjigje.</p>",
+            ]),
+            ("Milano pyet në më shumë se një gjuhë", [
+                "<p>Qyteti punon në italisht dhe një pjesë e mirë e biznesit "
+                "atje bëhet në anglisht. Janë 2 pyetje të ndryshme, dhe "
+                "asistentët i përgjigjen secilës me materialin që lexojnë "
+                "dot në atë gjuhë.</p>",
+                "<p>Një faqe që ekziston vetëm në italisht mungon nga gjysma "
+                "e pyetjes, në të vetmin qytet italian ku ajo gjysmë është e "
+                "madhe.</p>",
+            ]),
+            ("Lagjja është njësia e vërtetë", [
+                "<p>Askush që jeton atje nuk kërkon për gjithë qytetin. Kërkon "
+                "Navigli, Isola, Porta Romana, Lambrate, dhe nënkupton 15 "
+                "minuta në këmbë.</p>",
+                "<p>Një faqe që emërton zonën ku punon i përgjigjet një "
+                "pyetjeje që bëhet vërtet, dhe konkurron me ndonjë dhjetëshe "
+                "biznesesh në vend të ndonjë mijëshe.</p>",
+            ]),
+            ("Kontrolloje para se të shpenzosh", [
+                "<p>Pyet 3 asistentë për një rekomandim në zanatin tënd dhe "
+                "në lagjen tënde. Shkruaj kë përmendin dhe datën pranë.</p>",
+                "<p>Bëje sërish për gjithë qytetin dhe krahaso. Nëse del në "
+                "njërën e jo në tjetrën, e di tashmë cilën faqe të "
+                "shkruash.</p>",
+            ]),
+        ],
+        "payoff": "Na thuaj zanatin tënd dhe zonën tënde të Milanos dhe "
+                  "pyesim ne asistentët, pastaj të dërgojmë përgjigjet.",
+        "faq": [
+            ("Jemi jashtë qendrës. A na dëmton?",
+             "Për një pyetje mbi qytetin, po. Për një pyetje mbi lagjen është "
+             "arsyeja pse do të përmendeshe fare, dhe pyetjet mbi lagjen janë "
+             "ato që bota i bën vërtet."),
+            ("A ndryshon nga SEO në Milano?",
+             "Puna mbivendoset dhe rezultati jo. Kërkimi tregon një listë ku "
+             "mund të dalësh i teti; një përgjigje përmend 3 biznese dhe të "
+             "tjerat nuk i zë në gojë."),
+            ("A na duhet një version anglisht i faqes?",
+             "Në Milano vlen më shumë se në shumicën e qyteteve italiane, "
+             "sepse një pjesë reale e blerjeve bëhet në anglisht. Gjetkë "
+             "zakonisht është punë e mëvonshme."),
+            ("Sa kohë do e gjitha kjo?",
+             "Të botosh një faqe që përgjigjet do një pasdite. Të kapesh "
+             "varet nga asistenti, dhe ata që punojnë me material trajnimi "
+             "ndjekin një kalendar që askush nga jashtë nuk e boton."),
+        ],
+        "related": [("/geo/", "Kërkimi me AI"),
+                    ("/glossary/ai-search/", "Kërkimi me AI"),
+                    ("/audit/", "Një auditim falas")],
+    },
 ]
 
 # /blog/, the index over those records. The soft wraps are placed for this text

@@ -5915,6 +5915,515 @@ POSTS = [
                   "che non facciamo per te, quella ricevi.",
         "related": [("/work/iglisi-watch/", "Iglisi Watch"), ("/studio/", "Studio")],
     },
+    # 5 post, 2026-09-06. Registro tu. Termini da glossary.TERMS: audit,
+    # ricerca AI, scheda Google, clic. Mai IA, mai personalizzato, mai
+    # impressioni, mai "il Suo sito". Durazzo, non Durres.
+
+    {
+        "slug": "who-owns-your-website",
+     "src": "9579addc",
+        "date": "2026-09-06",
+        "updated": "2026-09-06",
+        "topic": "Siti web",
+        "work": "iglisi-watch",
+        "service": ("/web-design/", "Siti web"),
+
+        "title": "Di chi è il tuo sito?",
+        "h1": "Se domani smettessi di pagare, cosa ti resterebbe?",
+        "summary": "Il dominio, l'hosting e il codice sono 3 cose separate, "
+                   "e un'attività dovrebbe averle tutte e 3.",
+        "standfirst": "Nessuno lo chiede all'inizio. Lo chiedono tutti alla "
+                      "fine, e a quel punto la risposta è già scritta.",
+        "description": "Di chi sono il dominio, l'hosting e il codice quando "
+                       "smetti di lavorare con un'agenzia, come controllarlo "
+                       "in 5 minuti, e cosa chiedere prima di firmare.",
+        "og_desc": "Un sito sono 3 cose da possedere, e quasi nessuno le "
+                   "possiede.",
+
+        "body": [
+            ("La risposta breve", [
+                "<p>Deve essere tutto intestato all'attività: il dominio, "
+                "l'account di hosting, il codice, la scheda Google, le "
+                "statistiche. Se qualcosa sta nell'account di un altro, "
+                "quella parte la stai affittando e l'affitto non ha un "
+                "tetto.</p>",
+                "<p>Non è una questione di fiducia. È cosa succede quando "
+                "qualcuno cambia lavoro, chiude, o smette di rispondere.</p>",
+            ]),
+            ("Tre cose, e si separano", [
+                "<p>Il <strong>dominio</strong> è l'indirizzo. Chi risulta al "
+                "registrar può spostarlo, venderlo o lasciarlo scadere, e "
+                "nessun altro può farci niente.</p>",
+                "<p>L'<strong>hosting</strong> è dove stanno i file. Un "
+                "account intestato a uno studio significa che il sito "
+                "sparisce il giorno in cui sparisce quell'account.</p>",
+                "<p>Il <strong>codice</strong> è il sito stesso. Se non puoi "
+                "scaricarlo non puoi portarlo da nessuna parte, e ti resta "
+                "solo un preventivo per rifarlo.</p>",
+            ]),
+            ("Controllalo in 5 minuti", [
+                "<p>Apri una ricerca WHOIS e scrivi il tuo dominio. Mostra "
+                "chi l'ha registrato e quando scade. I servizi di privacy "
+                "nascondono il nome, quindi se torna privato chiedi chi "
+                "tiene l'account.</p>",
+                "<p>Poi cerca l'email di rinnovo. Chi la riceve è chi "
+                "controlla l'indirizzo, qualunque cosa dica chiunque.</p>",
+                "<p>Poi chiedi un accesso all'hosting e una copia dei file. "
+                "Uno studio che non possiede niente te li dà lo stesso "
+                "pomeriggio.</p>",
+            ]),
+            ("Come si vede quando va male", [
+                "<p>Un negozio vuole cambiare designer e scopre che il "
+                "dominio è intestato al vecchio. A volte si sposta in una "
+                "settimana. A volte diventa un prezzo.</p>",
+                "<p>Oppure il canone della piattaforma smette di valere la "
+                "spesa e non c'è nessun export, perché il sito non è mai "
+                "stato un insieme di file, solo un abbonamento con un "
+                "negozio disegnato sopra.</p>",
+            ]),
+            ("Chiedilo prima di firmare, non dopo", [
+                "<p>A chi è intestato il dominio. A chi l'hosting. Il codice "
+                "me lo date. Cosa succede a tutte e 3 le cose se "
+                "smettiamo. Quattro domande, e le risposte devono arrivare "
+                "subito.</p>",
+                "<p>Un'esitazione su una sola è la risposta a tutte.</p>",
+            ]),
+            ("Come sono impostati i nostri", [
+                "<p>Ogni dominio, account e repository su cui lavoriamo è "
+                "intestato al cliente dal primo giorno, non a noi. Iglisi "
+                "Watch a Durazzo possiede watch.al, l'hosting e il codice, e "
+                "questa settimana potrebbe consegnare tutto a qualcun altro "
+                "senza chiedercelo.</p>",
+                "<p>Preferiamo essere tenuti che essere difficili da "
+                "lasciare.</p>",
+            ]),
+        ],
+        "payoff": "Mandaci il tuo indirizzo e ti diciamo di chi risulta "
+                  "essere secondo internet.",
+        "faq": [
+            ("Il mio designer dice che è più comodo se il dominio ce l'ha lui.",
+             "È più comodo per lui. Intestarlo a te richiede una decina di "
+             "minuti e una carta, e da quel momento l'avviso di rinnovo "
+             "arriva a te e non a qualcuno che hai perso di vista."),
+            ("Il sito era incluso nel pacchetto hosting. È mio?",
+             "Di solito non il codice. Le piattaforme a blocchi ti fanno "
+             "esportare foto e testi e quasi mai il sito funzionante, quindi "
+             "spostarsi vuol dire rifarlo. Cerca un pulsante di export prima "
+             "di averne bisogno."),
+            ("E se il dominio l'ho già perso?",
+             "Dipende da chi lo tiene e da quanto manca alla scadenza. Parti "
+             "da una ricerca WHOIS, poi una richiesta scritta e cortese che "
+             "nomini il dominio e la data in cui lo vuoi spostare. I "
+             "registrar hanno una procedura di trasferimento e non serve "
+             "buona volontà."),
+            ("Possederlo vuol dire che devo mantenerlo io?",
+             "No. Possedere gli account e pagare qualcuno che se ne occupi "
+             "sono due decisioni diverse, e tenerle separate è tutto il "
+             "senso del discorso."),
+        ],
+        "related": [("/web-design/", "Siti web"),
+                    ("/studio/", "Studio"),
+                    ("/audit/", "Un audit gratuito")],
+    },
+
+    {
+        "slug": "your-phone-number-says-three-things",
+     "src": "5fb20f82",
+        "date": "2026-09-06",
+        "updated": "2026-09-06",
+        "topic": "Ricerca locale",
+        "work": "iglisi-watch",
+        "service": ("/seo/", "SEO e ricerca locale"),
+
+        "title": "Il tuo numero dice 3 cose diverse",
+        "h1": "La mappa ha un numero, il sito ne ha un altro, e un elenco "
+              "online ne ha un terzo.",
+        "summary": "Google li legge tutti e 3, non sa quale sia vero, e in "
+                   "silenzio si fida di chi ne dice uno solo.",
+        "standfirst": "Una delle cose più economiche in un audit, e una "
+                      "delle più frequenti.",
+        "description": "Perché la stessa attività mostra un numero, un "
+                       "indirizzo o degli orari diversi in 3 posti, quanto "
+                       "costa nella ricerca locale, e come sistemarlo in "
+                       "ordine.",
+        "og_desc": "Google legge ogni copia dei tuoi dati che riesce a "
+                   "trovare.",
+
+        "body": [
+            ("La risposta breve", [
+                "<p>Nome, indirizzo e telefono sono scritti in più posti di "
+                "quanti te ne ricordi: la scheda Google, il fondo pagina del "
+                "sito, Facebook, un vecchio elenco online, la pagina di un "
+                "fornitore. Quando non concordano, un motore di ricerca deve "
+                "indovinare quale sia quello buono.</p>",
+                "<p>Indovina in modo prudente, e così un negozio con una "
+                "sola risposta coerente passa davanti a uno che ne ha 3 "
+                "versioni.</p>",
+            ]),
+            ("Da dove arrivano le copie", [
+                "<p>Un numero cambia, e il sito viene aggiornato perché il "
+                "sito lo guarda qualcuno. L'elenco compilato 4 anni fa no, "
+                "perché nessuno si ricorda che esista.</p>",
+                "<p>Poi ci sono le versioni che non ha scritto nessuno: una "
+                "seconda scheda Google del proprietario precedente, un "
+                "indirizzo abbreviato in un posto e per esteso in un altro, "
+                "un cellulare sulla mappa e un fisso nel fondo pagina.</p>",
+            ]),
+            ("Perché alla mappa importa più che al sito", [
+                "<p>Il risultato sulla mappa si decide anche su quanto "
+                "Google sia sicuro che un'attività esista e sia aggiornata. "
+                "La concordanza tra posti che non controlla è la prova più "
+                "economica che ha.</p>",
+                "<p>È per questo che 2 negozi con le stesse recensioni e la "
+                "stessa distanza non si piazzano sempre uguale.</p>",
+            ]),
+            ("Sistemalo in questo ordine", [
+                "<p>Prima decidi la versione vera, per iscritto: un nome, un "
+                "indirizzo scritto in un modo solo, un numero. Poi correggi "
+                "la scheda Google, perché è quella che alimenta la "
+                "mappa.</p>",
+                "<p>Poi il fondo pagina e la pagina contatti. Poi Facebook e "
+                "Instagram. Poi gli elenchi online, dal più vecchio, che è "
+                "l'ora noiosa che quasi nessuna attività si prende.</p>",
+                "<p>Poi cerca i doppioni della tua stessa scheda e chiudili. "
+                "Una seconda scheda divide le tue recensioni tra 2 "
+                "negozi.</p>",
+            ]),
+            ("Cosa è cambiato per un negozio", [
+                "<p>Iglisi Watch a Durazzo era coerente ovunque prima che il "
+                "sito esistesse, ed è per questo che la scheda funzionava "
+                "prima delle pagine. Dal 2 giugno al 30 agosto 2026 il sito "
+                "ha preso 900 clic da Google, e le prime settimane le ha "
+                "portate la scheda da sola.</p>",
+                "<p>Quei numeri sono stati letti ad agosto 2026. La ricerca "
+                "si muove, quindi controlla i tuoi invece di prendere in "
+                "prestito i nostri.</p>",
+            ]),
+        ],
+        "payoff": "Mandaci l'indirizzo e ti elenchiamo ogni versione dei "
+                  "tuoi dati che riusciamo a trovare, con quelle strane "
+                  "segnate.",
+        "faq": [
+            ("Conta se il numero è diverso solo di poco?",
+             "Un prefisso mancante o uno spazio di solito passa. Un numero "
+             "diverso no, e nemmeno una via diversa. Scegli una grafia e usa "
+             "quella dappertutto, punteggiatura compresa."),
+            ("Non riesco a entrare in un vecchio elenco per correggerlo.",
+             "Quasi tutti gli elenchi hanno un link per rivendicare la "
+             "scheda sulla pagina stessa, e gli altri un indirizzo a cui "
+             "scrivere. Dove non funziona né l'uno né l'altro, la scheda è "
+             "vecchia abbastanza che chiederne la rimozione è più facile che "
+             "chiederne la correzione."),
+            ("Devo usare un numero di tracciamento per le campagne?",
+             "Solo dove la piattaforma permette di mostrare il numero vero a "
+             "tutti gli altri. Un numero di tracciamento sulle tue pagine "
+             "pubbliche è una quarta versione della verità."),
+            ("Quanto ci vuole prima che cambi qualcosa?",
+             "La scheda si aggiorna in pochi giorni. Gli elenchi ci mettono "
+             "quanto ci mettono, e il risultato sulla mappa si sposta quando "
+             "abbastanza di loro concordano, ed è per questo che l'ordine "
+             "qui sopra parte da quelli che controlli tu."),
+        ],
+        "related": [("/seo/", "SEO e ricerca locale"),
+                    ("/glossary/map-listing/", "Scheda Google"),
+                    ("/audit/", "Un audit gratuito")],
+    },
+
+    {
+        "slug": "why-chatgpt-names-your-competitor",
+     "src": "247055b4",
+        "date": "2026-09-06",
+        "updated": "2026-09-06",
+        "topic": "Ricerca AI",
+        "work": None,
+        "service": ("/geo/", "Ricerca AI"),
+
+        "title": "Perché ChatGPT nomina il tuo concorrente",
+        "h1": "Leggi la risposta che ti ha dato, poi trova da dove viene "
+              "ogni pezzo.",
+        "summary": "Un metodo invece di un consiglio: chiedi, mettilo per "
+                   "iscritto, e risali da ogni affermazione alla pagina da "
+                   "cui è stata presa.",
+        "standfirst": "Il motivo è quasi sempre visibile nella risposta "
+                      "stessa, se la leggi come una prova.",
+        "description": "Come capire perché un assistente consiglia un'altra "
+                       "attività e non la tua, risalendo da ogni frase "
+                       "della risposta a una fonte che puoi aprire.",
+        "og_desc": "La risposta è una prova. Leggila come tale.",
+
+        "body": [
+            ("Prima chiedi nel modo giusto", [
+                "<p>Chiedi come chiederebbe un cliente, non come chiederebbe "
+                "un titolare. Non il nome della tua attività, con cui "
+                "qualsiasi assistente sarà gentile, ma il lavoro che serve e "
+                "la città in cui serve.</p>",
+                "<p>Chiedi a 3 assistenti, salva le risposte con la data, e "
+                "richiedi tra un mese. Senza gli appunti hai una sensazione "
+                "al posto di una misura.</p>",
+            ]),
+            ("Spezza la risposta in affermazioni", [
+                "<p>Prendi il paragrafo sull'attività che ha nominato e "
+                "dividilo in singole frasi. Dove sono. Cosa fanno. Da quanto "
+                "lo fanno. Cosa dice la gente di loro. Quanto costa.</p>",
+                "<p>Ognuna di quelle viene da qualche parte, e di solito è "
+                "una pagina che puoi aprire.</p>",
+            ]),
+            ("Trova la fonte di ognuna", [
+                "<p>Cerca la frase esatta tra virgolette. Una frase "
+                "caratteristica di solito porta alla pagina da cui è stata "
+                "presa, e spesso quella pagina non è il sito del "
+                "concorrente: un elenco online, una recensione, una notizia "
+                "locale, la lista rivenditori di un fornitore.</p>",
+                "<p>Gli assistenti che citano le fonti te le nominano se "
+                "chiedi un elenco. Quelli che non lo fanno rispondono "
+                "comunque alla ricerca tra virgolette.</p>",
+            ]),
+            ("Adesso chiediti cosa avrebbe potuto dire di te", [
+                "<p>Passa il tuo sito cercando ognuna delle cose che ha "
+                "detto di loro. Dove dici cosa fai, in una frase? Dove dici "
+                "la città? Dove compare un prezzo o una fascia di "
+                "prezzo?</p>",
+                "<p>Quasi sempre il vuoto non è tecnico. La frase non c'è "
+                "sul sito, in nessuna forma, e non c'è niente da "
+                "prendere.</p>",
+            ]),
+            ("Poi guarda fuori dalle tue pagine", [
+                "<p>Conta i posti in cui qualcun altro descrive la tua "
+                "attività. Recensioni con dentro delle parole, una scheda "
+                "compilata su un elenco, qualsiasi cosa pubblicata da chi "
+                "non lavora per te.</p>",
+                "<p>Un'attività con 4 menzioni esterne e un concorrente con "
+                "40 non sono giudicati ingiustamente. Sono descritti da "
+                "quantità di prove diverse.</p>",
+            ]),
+            ("Scrivi quello che hai trovato", [
+                "<p>Alla fine dovresti avere un elenco corto: 3 cose che ha "
+                "detto di loro, la fonte di ognuna, e se il tuo sito dice la "
+                "stessa cosa da qualche parte. Quell'elenco è il lavoro, in "
+                "ordine, e di solito è più corto di quanto si tema.</p>",
+            ]),
+        ],
+        "payoff": "Dicci il tuo mestiere e la tua città e facciamo noi le "
+                  "domande, poi ti mandiamo le risposte e da dove arrivano.",
+        "faq": [
+            ("Vale la pena lamentarsi con l'assistente?",
+             "Non c'è nessuno con cui lamentarsi e nessuna coda in cui "
+             "mettersi. L'unica leva che ha chi sta fuori è quello che viene "
+             "pubblicato sull'attività, ed è per questo che la parte utile è "
+             "quella qui sopra."),
+            ("Ha nominato un'attività che ha chiuso.",
+             "Capita, e ti dice una cosa utile: quel modello lavora su "
+             "materiale vecchio invece di leggere le pagine dal vivo. Fai la "
+             "stessa domanda a uno che cita le fonti e confronta."),
+            ("Ha nominato un grande elenco online e nessuna attività.",
+             "Allora l'elenco è la pagina su cui stare, ed esserci per bene "
+             "costa meno che farsi nominare direttamente. Controlla cosa "
+             "dice la tua scheda prima di dare per scontato che esista."),
+            ("Devo rifarlo più di una volta?",
+             "Sì, con una cadenza, perché le risposte cambiano senza "
+             "preavviso e niente ti avvisa che è successo. Un appunto in un "
+             "file ogni mese è tutto il metodo."),
+        ],
+        "related": [("/geo/", "Ricerca AI"),
+                    ("/glossary/ai-search/", "Ricerca AI"),
+                    ("/audit/", "Un audit gratuito")],
+    },
+
+    {
+        "slug": "when-ai-gets-your-business-wrong",
+     "src": "c06b6aa2",
+        "date": "2026-09-06",
+        "updated": "2026-09-06",
+        "topic": "Ricerca AI",
+        "work": None,
+        "service": ("/geo/", "Ricerca AI"),
+
+        "title": "Quando l'AI dice il falso su di te",
+        "h1": "Ti ha nominato, e metà di quello che ha detto è vecchio.",
+        "summary": "Essere descritti male è un terzo caso, e si ripara in un "
+                   "modo diverso dall'essere assenti.",
+        "standfirst": "Un vecchio indirizzo, orari cambiati anni fa, un "
+                      "servizio che non fai più.",
+        "description": "Cosa fare quando un assistente dice qualcosa di "
+                       "falso sulla tua attività: dove vive l'informazione "
+                       "vecchia, e perché correggere il tuo sito non basta.",
+        "og_desc": "Assente è un problema. Presente e sbagliato è un altro.",
+
+        "body": [
+            ("La risposta breve", [
+                "<p>Correggi le fonti, non l'assistente. Niente di quello "
+                "che gli scrivi lo raggiunge, e niente di quello che cambi "
+                "sul tuo sito lo raggiunge finché non cambia anche il "
+                "materiale da cui ha imparato.</p>",
+                "<p>Quindi il lavoro è trovare quale copia del dato vecchio "
+                "sta leggendo, e di solito sono 2 o 3.</p>",
+            ]),
+            ("Due modi di sbagliare", [
+                "<p>Alcuni assistenti leggono le pagine mentre rispondono. "
+                "Quelli sbagliano perché qualcosa di vivo è sbagliato: una "
+                "vecchia scheda, un elenco che nessuno ha più toccato, una "
+                "pagina del tuo sito che elenca ancora i servizi dell'anno "
+                "scorso.</p>",
+                "<p>Altri rispondono da materiale di addestramento con una "
+                "data di taglio. Quelli ripetono quello che era vero quando "
+                "l'hanno imparato, e nessuna correzione li raggiunge finché "
+                "non vengono addestrati di nuovo.</p>",
+                "<p>Fai la stessa domanda a entrambi i tipi e la differenza "
+                "tra le risposte ti dice quale dei due problemi hai.</p>",
+            ]),
+            ("Trova la copia che sta leggendo", [
+                "<p>Cerca il dato sbagliato stesso, tra virgolette. Un "
+                "vecchio indirizzo o un servizio abbandonato sono stringhe "
+                "caratteristiche, e le pagine che li portano ancora tornano "
+                "tutte insieme.</p>",
+                "<p>Controlla prima il tuo sito, comprese le pagine che non "
+                "linka più nessuno. Un listino di 2 anni fa è comunque un "
+                "listino pubblicato.</p>",
+            ]),
+            ("Sistema quelle che controlli, in ordine", [
+                "<p>Prima la scheda Google, perché la leggono più cose di "
+                "qualsiasi altra cosa tua. Poi le tue pagine, e cancella "
+                "invece di nascondere: una pagina senza link resta "
+                "leggibile.</p>",
+                "<p>Poi i social, poi gli elenchi online. Dove una scheda "
+                "non si riesce a correggere, chiedi che venga rimossa.</p>",
+            ]),
+            ("Poi pubblica la correzione in chiaro", [
+                "<p>Metti il dato attuale in una frase, su una pagina, con "
+                "parole normali: dove sei adesso, cosa fai adesso, quando "
+                "apri adesso. Quello che si legge come una risposta viene "
+                "usato come risposta.</p>",
+                "<p>Non scrivere una pagina sull'errore. Scrivi la pagina "
+                "che dice la cosa giusta, e falla diventare la più facile da "
+                "trovare.</p>",
+            ]),
+            ("Aspettati che ci voglia, e controlla", [
+                "<p>Il tipo che legge le pagine può raccogliere una pagina "
+                "corretta in pochi giorni. Il tipo addestrato segue un "
+                "calendario che nessuno fuori pubblica, e non lo smuove "
+                "nessuna richiesta.</p>",
+                "<p>Rifai la stessa domanda ogni mese e tieni le risposte "
+                "con la data accanto. Quel file è l'unico registro che "
+                "avrai.</p>",
+            ]),
+        ],
+        "payoff": "Mandaci il nome della tua attività e la città e chiediamo "
+                  "a qualche assistente di te, poi ti mandiamo cosa hanno "
+                  "detto e cosa è vecchio.",
+        "faq": [
+            ("Posso dirgli che si sbaglia?",
+             "Scrivere una correzione in una chat cambia quella "
+             "conversazione e nient'altro. Il prossimo che chiede riceve la "
+             "vecchia risposta, perché il materiale dietro non si è mosso."),
+            ("Si è inventato un prezzo che non ho mai fatto.",
+             "Controlla se un concorrente o un elenco online pubblica quel "
+             "prezzo per un servizio simile, perché di solito viene da lì. "
+             "Pubblicare la tua fascia con parole chiare è la correzione più "
+             "rapida che esista."),
+            ("Dice che ho chiuso definitivamente.",
+             "Quello parte quasi sempre da una scheda Google, a volte da un "
+             "doppione che non sapevi di avere. Cerca il nome della tua "
+             "attività sulla mappa e guarda se c'è una seconda copia di te."),
+            ("Le vecchie pagine le tolgo o le lascio?",
+             "Toglile, o aggiornale. Una vecchia pagina tenuta per affetto è "
+             "una cosa pubblicata, e chi legge il tuo sito la tratta come "
+             "attuale se la pagina non dice il contrario."),
+        ],
+        "related": [("/geo/", "Ricerca AI"),
+                    ("/seo/", "SEO e ricerca locale"),
+                    ("/audit/", "Un audit gratuito")],
+    },
+
+    {
+        "slug": "ai-search-milano",
+     "src": "78736421",
+        "date": "2026-09-06",
+        "updated": "2026-09-06",
+        "topic": "Ricerca AI",
+        "work": None,
+        "service": ("/geo/", "Ricerca AI"),
+
+        "title": "Ricerca AI a Milano",
+        "h1": "In una città così grande, l'assistente deve sceglierne 3.",
+        "summary": "Milano dà a un assistente più candidati di qualsiasi "
+                   "altra città italiana, e questo rende la lista corta più "
+                   "difficile da raggiungere e più preziosa.",
+        "standfirst": "La concorrenza non sono le attività sopra di te. È la "
+                      "lunghezza della risposta.",
+        "description": "Come funziona la ricerca AI in una città con "
+                       "migliaia di concorrenti: perché gli assistenti ne "
+                       "nominano 3, cosa decide quali 3, e cosa può "
+                       "cambiare chi è piccolo.",
+        "og_desc": "Una pagina di risultati ne ha 10. Una risposta ne ha 3.",
+
+        "body": [
+            ("Perché una città grande cambia il problema", [
+                "<p>In un paese un assistente che nomina attività locali può "
+                "averne una manciata da descrivere. A Milano per la stessa "
+                "domanda ne ha centinaia, e risponde lo stesso con 3.</p>",
+                "<p>Quindi la distanza tra essere conosciuti ed essere "
+                "nominati qui è più larga che altrove in Italia, e non si "
+                "chiude essendo appena migliori.</p>",
+            ]),
+            ("Cosa porta un'attività in una lista corta", [
+                "<p>Qualcosa deve distinguerla in una frase. Un quartiere "
+                "invece della città. Un servizio preciso invece del "
+                "mestiere. Un tipo di cliente, una lingua parlata, un orario "
+                "che non tiene nessun altro.</p>",
+                "<p>Gli assistenti descrivono le attività in una riga o due. "
+                "Un'attività che non si riesce a descrivere in una riga è "
+                "difficile da mettere in una risposta.</p>",
+            ]),
+            ("Milano chiede in più di una lingua", [
+                "<p>La città lavora in italiano e una fetta consistente "
+                "degli affari qui si fa in inglese. Sono 2 domande diverse, "
+                "e gli assistenti rispondono a ognuna con il materiale che "
+                "riescono a leggere in quella lingua.</p>",
+                "<p>Un sito che esiste solo in italiano è assente da metà "
+                "della domanda, nell'unica città italiana in cui quella "
+                "metà è grande.</p>",
+            ]),
+            ("Il quartiere è l'unità vera", [
+                "<p>Nessuno che vive qui cerca su tutta la città. Cerca "
+                "Navigli, Isola, Porta Romana, Lambrate, e intende 15 minuti "
+                "a piedi.</p>",
+                "<p>Una pagina che nomina la zona che serve risponde a una "
+                "domanda che viene fatta davvero, e compete con qualche "
+                "decina di attività invece che con qualche migliaio.</p>",
+            ]),
+            ("Controllalo prima di spendere", [
+                "<p>Chiedi a 3 assistenti un consiglio nel tuo mestiere e "
+                "nel tuo quartiere. Scrivi chi nominano e la data "
+                "accanto.</p>",
+                "<p>Rifallo per tutta la città e confronta. Se compari in "
+                "una e non nell'altra, sai già quale pagina scrivere.</p>",
+            ]),
+        ],
+        "payoff": "Dicci il tuo mestiere e la tua zona di Milano e chiediamo "
+                  "noi agli assistenti, poi ti mandiamo le risposte.",
+        "faq": [
+            ("Siamo fuori dal centro. È uno svantaggio?",
+             "Per una domanda sulla città sì. Per una domanda sul quartiere "
+             "è il motivo per cui verresti nominato, e le domande sul "
+             "quartiere sono quelle che la gente fa davvero."),
+            ("È diverso dalla SEO a Milano?",
+             "Il lavoro si sovrappone e il risultato no. La ricerca mostra "
+             "una lista in cui puoi comparire in ottava posizione; una "
+             "risposta nomina 3 attività e le altre non le cita."),
+            ("Serve una versione inglese del sito?",
+             "A Milano vale più che in quasi tutte le altre città italiane, "
+             "perché una fetta reale degli acquisti si fa in inglese. "
+             "Altrove di solito è un lavoro successivo."),
+            ("Quanto ci vuole per tutto questo?",
+             "Pubblicare una pagina che risponde richiede un pomeriggio. "
+             "Farsi raccogliere dipende dall'assistente, e quelli che "
+             "lavorano su materiale di addestramento seguono un calendario "
+             "che nessuno fuori pubblica."),
+        ],
+        "related": [("/geo/", "Ricerca AI"),
+                    ("/glossary/ai-search/", "Ricerca AI"),
+                    ("/audit/", "Un audit gratuito")],
+    },
 ]
 
 # /blog/, the index over those records. The soft wraps are placed for this text

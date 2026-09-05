@@ -114,6 +114,11 @@ IDENTICAL_BY_DESIGN = {
     # a <dt> with nothing around it, and check 35 correctly asked whether a
     # word identical in both languages had ever been translated. It had.
     "audit", "GEO",
+    # Italian took this one whole too. The trade says "hosting" in Milan
+    # and in Durres, and the alternatives ("spazio web") name a product
+    # nobody sells any more. Albanian declines it (hostingu) so only the
+    # Italian pages ever match.
+    "hosting",
     # The nav label, in all 3 languages. Italian and Albanian both take the
     # loanword whole, and it is the word that matches the /blog/ URL, which is
     # why chrome_it.py and chrome_sq.py each reversed a documented decision to

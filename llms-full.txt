@@ -192,6 +192,7 @@ SEO in Brescia
 SEO in Como
 SEO in Varese
 What SEO costs in Italy
+Your phone number says 3 different things
 Also
 AI search
 Websites
@@ -255,6 +256,9 @@ Is your agency doing anything about AI search?
 AI search in Como
 AI search in Pavia
 AIO, AEO and GEO are three names for one job
+AI search in Milan
+When AI gets your business wrong
+Why ChatGPT names your competitor
 Also
 SEO and local search
 Websites
@@ -319,6 +323,7 @@ How to choose a web designer
 How to sell online in Albania
 The website mistakes we see most often
 What to write on your website
+Who owns your website?
 Also
 SEO and local search
 Custom software
@@ -548,6 +553,8 @@ SEO for a brand new business
 The counter and the website should be one thing
 What custom software costs to run
 When a spreadsheet stops being enough
+Who owns your website?
+Your phone number says 3 different things
 Next
 Victoria Boutique
 All four
@@ -654,7 +661,11 @@ mistake we made. If it does not, it is not worth your time.
 Search the writing
 Filters the list as you type.
 Nothing matches that. Clear the search, or pick a topic above.
-SEO and local search 28
+SEO and local search 29
+Your phone number says 3 different things
+6 September 2026
+Google reads all 3, cannot tell which is true, and quietly trusts a shop that only says one thing.
+Read it
 What SEO costs in Italy
 30 August 2026
 What actually moves the price of search work in Italy, and the questions that tell you whether a quote was thought about.
@@ -767,7 +778,19 @@ SEO for a garage: what customers search
 14 August 2026 Your trade
 Drivers describe a symptom, not a service, and the garage that wrote the symptom down is the one they find.
 Read it
-AI search 10
+AI search 13
+Why ChatGPT names your competitor
+6 September 2026
+A method rather than advice: ask, write it down, and trace each claim back to the page it was lifted from.
+Read it
+When AI gets your business wrong
+6 September 2026
+Being described wrongly is a third state, and it needs a different repair from being missing.
+Read it
+AI search in Milan
+6 September 2026
+Milan gives an assistant more candidates than any other Italian city, which makes the shortlist harder to reach and more valuable to be on.
+Read it
 AIO, AEO and GEO are three names for one job
 3 September 2026
 Three labels arrived for the same thing in about a year, and the difference between them is who is doing the naming.
@@ -808,7 +831,11 @@ AI search for hotels and guesthouses
 14 August 2026 Your trade
 Search is a smaller front door for hotels than it was, and somebody else is charging you for the guests who use theirs.
 Read it
-Websites 17
+Websites 18
+Who owns your website?
+6 September 2026
+The domain, the hosting and the code are three separate things, and a business should hold all three.
+Read it
 What to write on your website
 22 August 2026
 A way to get the text out of your head and onto the page, without a copywriter and without a blank screen.
@@ -912,6 +939,52 @@ The money numbers a small shop should track
 A bug that hid inside a chart for a whole phase, and what it says about the software a small business runs on.
 Read it
 Updated 6 September 2026
+
+## Your phone number says 3 different things
+https://minarankstudio.com/blog/your-phone-number-says-three-things/
+
+The map has one number, the site has another, and a directory has a third.
+One of the cheapest things on any audit, and one of the most common.
+By Henri Sila · 6 September 2026
+The short answer
+Your name, address and phone number are printed in more places than you remember: the Google profile, the site footer, Facebook, an old directory, a supplier page. When they disagree, a search engine has to guess which is current.
+It guesses conservatively, which means a shop with one consistent answer outranks a shop with 3 versions of the truth.
+Where the copies come from
+A number changes, and the site gets updated because somebody looks at the site. The directory somebody filled in 4 years ago does not, because nobody remembers it exists.
+Then there are the versions nobody typed: a second Google profile from a previous owner, an address written "Rr." in one place and in full in another, a mobile on the map and a landline in the footer.
+Why the map cares more than the site does
+The map result is decided partly on how confident Google is that a business is real and current. Agreement across places it did not control is the cheapest evidence available to it.
+That is why 2 shops with the same reviews and the same distance do not always place the same.
+Fix it in this order
+Decide the true version first, in writing: one name, one address spelled one way, one number. Then correct the Google profile, because it feeds the map.
+Then the site footer and contact page. Then Facebook and Instagram. Then the directories, oldest first, which is the boring hour that most businesses never spend.
+Then look for duplicates of your own listing and close them. A second profile splits your reviews between 2 shops.
+What it changed for one shop
+Iglisi Watch in Durres was consistent everywhere before the site went live, which is why the map listing worked before the pages did. Across 2 June to 30 August 2026 the site took 900 clicks from Google, and the profile carried the first weeks of that on its own.
+Those figures were read in August 2026. Search moves, so check yours rather than borrowing ours.
+Questions worth asking
+Does it matter if the number is only slightly different?
+A missing prefix or a space is usually forgiven. A different number is not, and neither is a different street. Pick one spelling and use it everywhere, including the punctuation.
+I cannot get into an old listing to change it.
+Most directories have a claim link on the page itself, and the rest have a contact address. Where neither works, the listing is old enough that asking for removal is easier than asking for a correction.
+Should I use a tracking number for ads?
+Only where the platform supports showing the real number to everybody else. A tracking number sitting on your public pages is a fourth version of the truth.
+How long before it makes a difference?
+The profile updates in days. The directories take as long as they take, and the map result moves once enough of them agree, which is why the order above starts with the ones you control.
+Send us the address and we will list every version of your details we can find, with the odd ones marked.
+Get a free audit.
+Updated 6 September 2026
+The service
+SEO and local search
+The business in this post
+Iglisi Watch
+Also
+SEO and local search
+Map listing
+A free audit
+Read next
+Why ChatGPT names your competitor
+Add us as a preferred source on Google
 
 ## What SEO costs in Italy
 https://minarankstudio.com/blog/what-seo-costs-in-italy/
@@ -2119,6 +2192,141 @@ Read next
 A website in Albanian, Italian and English
 Add us as a preferred source on Google
 
+## Why ChatGPT names your competitor
+https://minarankstudio.com/blog/why-chatgpt-names-your-competitor/
+
+Read the answer it gave, then find where every part of it came from.
+The reason is almost always visible in the answer itself, if you read it as evidence.
+By Henri Sila · 6 September 2026
+Ask it properly first
+Ask the way a customer would, not the way an owner would. Not your business name, which any assistant will be polite about, but the job somebody needs doing and the town they need it in.
+Ask 3 assistants, save the answers with the date, and ask again in a month. Without the notes you have an impression instead of a measurement.
+Break the answer into claims
+Take the paragraph about the business it named and split it into single statements. Where they are. What they do. How long they have done it. What people say about them. What it costs.
+Each of those came from somewhere, and it is usually a page you can open.
+Find the source of each one
+Search the exact phrase in quotes. A distinctive sentence usually lands on the page it was taken from, and that page is often not the competitor's own site: a directory, a review, a local news item, a supplier's list of stockists.
+The assistants that cite sources will name them if you ask for a list. The ones that will not still answer the quoted search.
+Now ask what it could have said about you
+Go through your own site looking for each claim it made about them. Where do you say what you do, in a sentence? Where do you say the town? Where does a price or a range appear at all?
+Most of the time the gap is not technical. The sentence simply is not on the site, in any form, for anything to lift.
+Then look outside your own pages
+Count the places somebody else describes your business. Reviews with words in them, a directory entry that is filled in, anything published by somebody who does not work for you.
+A business with 4 outside mentions and a competitor with 40 are not being judged unfairly. They are being described by different amounts of evidence.
+Write down what you found
+By the end you should have a short list: 3 claims it made about them, the source of each, and whether your site makes the same claim anywhere. That list is the work, in order, and it is usually shorter than people fear.
+Questions worth asking
+Is it worth complaining to the assistant?
+There is nobody to complain to and no queue to join. The only lever anybody outside has is what is published about the business, which is why the trace above is the useful part.
+The answer named a business that closed.
+Common, and it tells you something useful: that model is working from older material rather than fetching live pages. Ask the same question in one that cites sources and compare.
+It named a big directory instead of any business.
+Then the directory is the page to be on, and being listed properly there is a cheaper job than being named directly. Check what your entry says before assuming it exists.
+Do I need to do this more than once?
+Yes, on a schedule, because the answers change without warning and nothing tells you they have. A note in a file each month is the whole method.
+Tell us your trade and your town and we will run the questions, then send you the answers and where they came from.
+Get a free audit.
+Updated 6 September 2026
+The service
+AI search
+Also
+AI search
+AI search
+A free audit
+Read next
+Who owns your website?
+Add us as a preferred source on Google
+
+## When AI gets your business wrong
+https://minarankstudio.com/blog/when-ai-gets-your-business-wrong/
+
+It named you, and half of what it said is out of date.
+An old address, hours you changed years ago, a service you stopped offering.
+By Henri Sila · 6 September 2026
+The short answer
+Correct the sources, not the assistant. Nothing you write to an assistant reaches it, and nothing you change on your own site reaches it either until the material it learned from changes too.
+So the job is finding which copy of the old fact it is reading, and there are usually 2 or 3.
+Two ways it can be wrong
+Some assistants fetch pages while they answer. Those go wrong because something live is wrong: an old profile, a directory nobody has touched, a page on your own site that still lists last year's services.
+Others answer from training material with a cut-off date. Those repeat what was true when they learned it, and no correction anywhere reaches them until they are trained again.
+Ask the same question in both kinds and the difference in the answers tells you which problem you have.
+Find the copy it is reading
+Search the wrong fact itself, in quotes. An old address or a dropped service is a distinctive string, and the pages still carrying it come back together.
+Check your own site first, including the pages nobody links to any more. A price list from 2 years ago is still a published price list.
+Fix the ones you control, in order
+The Google profile first, because more things read it than anything else you own. Then your own pages, and delete rather than hide: a page that is unlinked is still fetchable.
+Then the social accounts, then the directories. Where a listing cannot be corrected, ask for it to be removed instead.
+Then publish the correction plainly
+Put the current fact in a sentence, on a page, in ordinary words: where you are now, what you do now, when you open now. Something that reads like an answer gets used as one.
+Do not write a page about the mistake. Write the page that states the truth, and let it be the easiest thing to find.
+Expect it to take a while, and check
+The fetching kind can pick up a corrected page within days. The trained kind is on a schedule nobody outside publishes, and no amount of asking moves it.
+Re-ask the same question every month and keep the answers with the date beside them. That file is the only record you will have.
+Questions worth asking
+Can I tell it that it is wrong?
+Typing a correction into a chat changes that conversation and nothing else. The next person asking gets the old answer, because the material behind it has not moved.
+It invented a price I have never charged.
+Check whether a competitor or a directory publishes that price for a similar service, because that is usually where it came from. Publishing your own range in plain words is the fastest correction available.
+It says I am permanently closed.
+That one almost always starts in a Google profile, sometimes on a duplicate listing you did not know existed. Search your own business name on the map and look for a second copy of yourself.
+Should I remove old pages or leave them?
+Remove them, or update them. An old page kept for sentiment is a published claim, and anything reading your site treats it as current unless the page says otherwise.
+Send us your business name and town and we will ask a few assistants about you, then send you what they said and what is out of date.
+Get a free audit.
+Updated 6 September 2026
+The service
+AI search
+Also
+AI search
+SEO and local search
+A free audit
+Read next
+AI search in Milan
+Add us as a preferred source on Google
+
+## AI search in Milan
+https://minarankstudio.com/blog/ai-search-milano/
+
+In a city this size, the assistant has to choose 3.
+The competition is not the businesses above you. It is the length of the answer.
+By Henri Sila · 6 September 2026
+Why a big city changes the problem
+In a small town an assistant naming local businesses may only have a handful to describe. In Milan it can have hundreds for the same question, and it still answers with 3.
+So the gap between being known and being named is wider here than anywhere else in Italy, and it does not close by being slightly better.
+What gets a business onto a short list
+Something has to separate it in a sentence. A neighbourhood rather than the city. A specific service rather than the trade. A kind of customer, a language spoken, an opening hour nobody else keeps.
+Assistants describe businesses in one or two lines. A business that cannot be described in one line is hard to put in an answer at all.
+Milan asks in more than one language
+The city works in Italian and a lot of business in it happens in English. Those are 2 different questions, and assistants answer them from the material they can read in each.
+A site that exists only in Italian is absent from half the question, in the one Italian city where that half is large.
+The neighbourhood is the real unit
+Nobody who lives here searches for the whole city. They search Navigli, Isola, Porta Romana, Lambrate, and they mean 15 minutes on foot.
+A page that names the area it serves is answering a question that actually gets asked, and it is competing with a few dozen businesses instead of a few thousand.
+Check it before you spend anything
+Ask 3 assistants for a recommendation in your trade and your neighbourhood. Write down who they name and the date beside it.
+Do it again for the whole city and compare. If you appear in one and not the other, you already know which page to write.
+Questions worth asking
+We are outside the centre. Does that hurt?
+For a city question, yes. For a neighbourhood question it is the reason you would be named at all, and neighbourhood questions are the ones people actually ask.
+Is this different from SEO in Milan?
+The work overlaps and the outcome does not. Search shows a list you can appear on at position 8; an answer names 3 businesses and does not mention the rest.
+Do we need an English version of the site?
+In Milan it is worth more than in most Italian cities, because a real share of the buying happens in English. Elsewhere it is usually a later job.
+How long does any of this take?
+Publishing an answerable page takes an afternoon. Being picked up depends on the assistant, and the ones working from training data are on a schedule nobody outside publishes.
+Tell us your trade and your part of Milan and we will ask the assistants, then send you the answers.
+Get a free audit.
+Updated 6 September 2026
+The service
+AI search
+Also
+AI search
+AI search
+A free audit
+Read next
+AIO, AEO and GEO are three names for one job
+Add us as a preferred source on Google
+
 ## AIO, AEO and GEO are three names for one job
 https://minarankstudio.com/blog/aio-aeo-geo/
 
@@ -2543,6 +2751,56 @@ AI search
 Websites
 Read next
 SEO for heating and cooling engineers
+Add us as a preferred source on Google
+
+## Who owns your website?
+https://minarankstudio.com/blog/who-owns-your-website/
+
+If you stopped paying tomorrow, what would you keep?
+Nobody asks this at the beginning. Everybody asks it at the end, and by then the answer is fixed.
+By Henri Sila · 6 September 2026
+The short answer
+Everything should be registered to the business: the domain, the hosting account, the code, the Google profile, the analytics. If any of it sits in somebody else's account, you are renting that part and the rent has no ceiling.
+This is not about trust. It is about what happens when somebody moves on, closes down, or stops answering.
+Three things, and they come apart
+The domain is the address. Whoever the registrar has on file can move it, sell it, or let it lapse, and nobody else can do anything about it.
+The hosting is where the files sit. An account in a studio's name means the site disappears the day that account does.
+The code is the site itself. If you cannot download it, you cannot take it anywhere, and a quote to rebuild is the only option you have left.
+Check it in 5 minutes
+Open a WHOIS lookup and type your domain. It shows who registered it and when it expires. Privacy services hide the name, so if it comes back private, ask who holds the account.
+Then find the renewal email. Whoever it lands on is who controls the address, whatever anybody says.
+Then ask for a login to the hosting, and a copy of the files. A studio that owns nothing hands both over the same afternoon.
+What it looks like when it goes wrong
+A shop wants to change designer and finds the domain is in the old one's name. Sometimes it moves in a week. Sometimes it becomes a price.
+Or the platform charge stops being worth it and there is no export, because the site was never a set of files, only a subscription with a shop drawn on it.
+Ask before you sign, not after
+Whose name is on the domain. Whose name is on the hosting. Do I get the code. What happens to all 3 if we stop. Four questions, and the answers should be immediate.
+Hesitation on any of them is the answer to all of them.
+How ours are set up
+Every domain, account and repository we work on is registered to the client from the first day, not to us. Iglisi Watch in Durres owns watch.al, the hosting and the code, and could hand the lot to somebody else this week without asking us.
+We would rather be kept than be difficult to leave.
+Questions worth asking
+My designer says it is easier if they hold the domain.
+It is easier, for them. Registering it to you takes about 10 minutes and one card, and after that the renewal notice reaches you rather than somebody you have lost touch with.
+The site was free with my hosting package. Do I own it?
+Usually not the code. Builder platforms let you export pictures and text and almost never the working site, so moving means rebuilding. Check for an export button before you need one.
+What if I have already lost the domain?
+It depends who holds it and whether it is expiring. Start with a WHOIS lookup, then a polite written request naming the domain and the date you want it moved. Registrars have a transfer process and it does not need goodwill.
+Does owning it mean I have to maintain it?
+No. Owning the accounts and paying somebody to look after them are separate decisions, and keeping them separate is the whole point.
+Send us your address and we will tell you who the internet thinks owns it.
+Get a free audit.
+Updated 6 September 2026
+The service
+Websites
+The business in this post
+Iglisi Watch
+Also
+Websites
+Studio
+A free audit
+Read next
+When AI gets your business wrong
 Add us as a preferred source on Google
 
 ## What to write on your website
@@ -3284,7 +3542,7 @@ Also
 Websites
 Custom software
 Read next
-AIO, AEO and GEO are three names for one job
+Your phone number says 3 different things
 Add us as a preferred source on Google
 
 ## What Meta ads cost in Albania

@@ -5791,7 +5791,508 @@ POSTS = [
                   "is that we are wrong for you, that is what you get.",
         "related": [("/work/iglisi-watch/", "Iglisi Watch"), ("/studio/", "Studio")],
     },
+    # ------------------------------------------------------------------------
+    # 5 posts, 2026-09-06. Written against what the other 63 already cover:
+    # "who owns" appears inside 5 of them and none is about it; "phone number"
+    # inside 6 and none is about the number disagreeing with the map; and the
+    # 3 AI-search ones each had to be given a boundary against
+    # how-to-appear-in-chatgpt, which is advice, where these are diagnosis.
+
+    {
+        "slug": "who-owns-your-website",
+        "date": "2026-09-06",
+        "updated": "2026-09-06",
+        "topic": "Websites",
+        "work": "iglisi-watch",
+        "service": ("/web-design/", "Websites"),
+
+        "title": "Who owns your website?",
+        "h1": "If you stopped paying tomorrow, what would you keep?",
+        "summary": "The domain, the hosting and the code are three separate "
+                   "things, and a business should hold all three.",
+        "standfirst": "Nobody asks this at the beginning. Everybody asks it "
+                      "at the end, and by then the answer is fixed.",
+        "description": "Who owns the domain, the hosting and the code when "
+                       "you stop working with an agency, how to check in 5 "
+                       "minutes, and what to ask before you sign.",
+        "og_desc": "A website is 3 things to own, and most businesses own "
+                   "none of them.",
+
+        "body": [
+            ("The short answer", [
+                "<p>Everything should be registered to the business: the "
+                "domain, the hosting account, the code, the Google profile, "
+                "the analytics. If any of it sits in somebody else's account, "
+                "you are renting that part and the rent has no ceiling.</p>",
+                "<p>This is not about trust. It is about what happens when "
+                "somebody moves on, closes down, or stops answering.</p>",
+            ]),
+            ("Three things, and they come apart", [
+                "<p>The <strong>domain</strong> is the address. Whoever the "
+                "registrar has on file can move it, sell it, or let it lapse, "
+                "and nobody else can do anything about it.</p>",
+                "<p>The <strong>hosting</strong> is where the files sit. An "
+                "account in a studio's name means the site disappears the day "
+                "that account does.</p>",
+                "<p>The <strong>code</strong> is the site itself. If you "
+                "cannot download it, you cannot take it anywhere, and a "
+                "quote to rebuild is the only option you have left.</p>",
+            ]),
+            ("Check it in 5 minutes", [
+                "<p>Open a WHOIS lookup and type your domain. It shows who "
+                "registered it and when it expires. Privacy services hide the "
+                "name, so if it comes back private, ask who holds the "
+                "account.</p>",
+                "<p>Then find the renewal email. Whoever it lands on is who "
+                "controls the address, whatever anybody says.</p>",
+                "<p>Then ask for a login to the hosting, and a copy of the "
+                "files. A studio that owns nothing hands both over the same "
+                "afternoon.</p>",
+            ]),
+            ("What it looks like when it goes wrong", [
+                "<p>A shop wants to change designer and finds the domain is "
+                "in the old one's name. Sometimes it moves in a week. "
+                "Sometimes it becomes a price.</p>",
+                "<p>Or the platform charge stops being worth it and there is "
+                "no export, because the site was never a set of files, only "
+                "a subscription with a shop drawn on it.</p>",
+            ]),
+            ("Ask before you sign, not after", [
+                "<p>Whose name is on the domain. Whose name is on the "
+                "hosting. Do I get the code. What happens to all 3 if we "
+                "stop. Four questions, and the answers should be immediate.</p>",
+                "<p>Hesitation on any of them is the answer to all of "
+                "them.</p>",
+            ]),
+            ("How ours are set up", [
+                "<p>Every domain, account and repository we work on is "
+                "registered to the client from the first day, not to us. "
+                "Iglisi Watch in Durres owns watch.al, the hosting and the "
+                "code, and could hand the lot to somebody else this week "
+                "without asking us.</p>",
+                "<p>We would rather be kept than be difficult to leave.</p>",
+            ]),
+        ],
+        "payoff": "Send us your address and we will tell you who the "
+                  "internet thinks owns it.",
+        "faq": [
+            ("My designer says it is easier if they hold the domain.",
+             "It is easier, for them. Registering it to you takes about 10 "
+             "minutes and one card, and after that the renewal notice "
+             "reaches you rather than somebody you have lost touch with."),
+            ("The site was free with my hosting package. Do I own it?",
+             "Usually not the code. Builder platforms let you export "
+             "pictures and text and almost never the working site, so moving "
+             "means rebuilding. Check for an export button before you need "
+             "one."),
+            ("What if I have already lost the domain?",
+             "It depends who holds it and whether it is expiring. Start with "
+             "a WHOIS lookup, then a polite written request naming the "
+             "domain and the date you want it moved. Registrars have a "
+             "transfer process and it does not need goodwill."),
+            ("Does owning it mean I have to maintain it?",
+             "No. Owning the accounts and paying somebody to look after them "
+             "are separate decisions, and keeping them separate is the whole "
+             "point."),
+        ],
+        "related": [("/web-design/", "Websites"),
+                    ("/studio/", "Studio"),
+                    ("/audit/", "A free audit")],
+    },
+
+    {
+        "slug": "your-phone-number-says-three-things",
+        "date": "2026-09-06",
+        "updated": "2026-09-06",
+        "topic": "Local search",
+        "work": "iglisi-watch",
+        "service": ("/seo/", "SEO and local search"),
+
+        "title": "Your phone number says 3 different things",
+        "h1": "The map has one number, the site has another, and a "
+              "directory has a third.",
+        "summary": "Google reads all 3, cannot tell which is true, and "
+                   "quietly trusts a shop that only says one thing.",
+        "standfirst": "One of the cheapest things on any audit, and one of "
+                      "the most common.",
+        "description": "Why the same business shows a different phone "
+                       "number, address or opening hours in 3 places, what "
+                       "it costs in local search, and how to fix it in "
+                       "order.",
+        "og_desc": "Google reads every copy of your details it can find.",
+
+        "body": [
+            ("The short answer", [
+                "<p>Your name, address and phone number are printed in more "
+                "places than you remember: the Google profile, the site "
+                "footer, Facebook, an old directory, a supplier page. When "
+                "they disagree, a search engine has to guess which is "
+                "current.</p>",
+                "<p>It guesses conservatively, which means a shop with one "
+                "consistent answer outranks a shop with 3 versions of the "
+                "truth.</p>",
+            ]),
+            ("Where the copies come from", [
+                "<p>A number changes, and the site gets updated because "
+                "somebody looks at the site. The directory somebody filled "
+                "in 4 years ago does not, because nobody remembers it "
+                "exists.</p>",
+                "<p>Then there are the versions nobody typed: a second "
+                "Google profile from a previous owner, an address written "
+                "\"Rr.\" in one place and in full in another, a mobile on "
+                "the map and a landline in the footer.</p>",
+            ]),
+            ("Why the map cares more than the site does", [
+                "<p>The map result is decided partly on how confident Google "
+                "is that a business is real and current. Agreement across "
+                "places it did not control is the cheapest evidence "
+                "available to it.</p>",
+                "<p>That is why 2 shops with the same reviews and the same "
+                "distance do not always place the same.</p>",
+            ]),
+            ("Fix it in this order", [
+                "<p>Decide the true version first, in writing: one name, one "
+                "address spelled one way, one number. Then correct the "
+                "Google profile, because it feeds the map.</p>",
+                "<p>Then the site footer and contact page. Then Facebook and "
+                "Instagram. Then the directories, oldest first, which is the "
+                "boring hour that most businesses never spend.</p>",
+                "<p>Then look for duplicates of your own listing and close "
+                "them. A second profile splits your reviews between 2 "
+                "shops.</p>",
+            ]),
+            ("What it changed for one shop", [
+                "<p>Iglisi Watch in Durres was consistent everywhere before "
+                "the site went live, which is why the map listing worked "
+                "before the pages did. Across 2 June to 30 August 2026 the "
+                "site took 900 clicks from Google, and the profile carried "
+                "the first weeks of that on its own.</p>",
+                "<p>Those figures were read in August 2026. Search moves, so "
+                "check yours rather than borrowing ours.</p>",
+            ]),
+        ],
+        "payoff": "Send us the address and we will list every version of "
+                  "your details we can find, with the odd ones marked.",
+        "faq": [
+            ("Does it matter if the number is only slightly different?",
+             "A missing prefix or a space is usually forgiven. A different "
+             "number is not, and neither is a different street. Pick one "
+             "spelling and use it everywhere, including the punctuation."),
+            ("I cannot get into an old listing to change it.",
+             "Most directories have a claim link on the page itself, and the "
+             "rest have a contact address. Where neither works, the listing "
+             "is old enough that asking for removal is easier than asking "
+             "for a correction."),
+            ("Should I use a tracking number for ads?",
+             "Only where the platform supports showing the real number to "
+             "everybody else. A tracking number sitting on your public pages "
+             "is a fourth version of the truth."),
+            ("How long before it makes a difference?",
+             "The profile updates in days. The directories take as long as "
+             "they take, and the map result moves once enough of them "
+             "agree, which is why the order above starts with the ones you "
+             "control."),
+        ],
+        "related": [("/seo/", "SEO and local search"),
+                    ("/glossary/map-listing/", "Map listing"),
+                    ("/audit/", "A free audit")],
+    },
+
+    {
+        "slug": "why-chatgpt-names-your-competitor",
+        "date": "2026-09-06",
+        "updated": "2026-09-06",
+        "topic": "AI search",
+        "work": None,
+        "service": ("/geo/", "AI search"),
+
+        "title": "Why ChatGPT names your competitor",
+        "h1": "Read the answer it gave, then find where every part of it "
+              "came from.",
+        "summary": "A method rather than advice: ask, write it down, and "
+                   "trace each claim back to the page it was lifted from.",
+        "standfirst": "The reason is almost always visible in the answer "
+                      "itself, if you read it as evidence.",
+        "description": "How to work out why an assistant recommends another "
+                       "business and not yours, by tracing each sentence of "
+                       "its answer back to a source you can look at.",
+        "og_desc": "The answer is evidence. Read it like evidence.",
+
+        "body": [
+            ("Ask it properly first", [
+                "<p>Ask the way a customer would, not the way an owner "
+                "would. Not your business name, which any assistant will be "
+                "polite about, but the job somebody needs doing and the town "
+                "they need it in.</p>",
+                "<p>Ask 3 assistants, save the answers with the date, and "
+                "ask again in a month. Without the notes you have an "
+                "impression instead of a measurement.</p>",
+            ]),
+            ("Break the answer into claims", [
+                "<p>Take the paragraph about the business it named and split "
+                "it into single statements. Where they are. What they do. "
+                "How long they have done it. What people say about them. "
+                "What it costs.</p>",
+                "<p>Each of those came from somewhere, and it is usually a "
+                "page you can open.</p>",
+            ]),
+            ("Find the source of each one", [
+                "<p>Search the exact phrase in quotes. A distinctive "
+                "sentence usually lands on the page it was taken from, and "
+                "that page is often not the competitor's own site: a "
+                "directory, a review, a local news item, a supplier's list "
+                "of stockists.</p>",
+                "<p>The assistants that cite sources will name them if you "
+                "ask for a list. The ones that will not still answer the "
+                "quoted search.</p>",
+            ]),
+            ("Now ask what it could have said about you", [
+                "<p>Go through your own site looking for each claim it made "
+                "about them. Where do you say what you do, in a sentence? "
+                "Where do you say the town? Where does a price or a range "
+                "appear at all?</p>",
+                "<p>Most of the time the gap is not technical. The sentence "
+                "simply is not on the site, in any form, for anything to "
+                "lift.</p>",
+            ]),
+            ("Then look outside your own pages", [
+                "<p>Count the places somebody else describes your business. "
+                "Reviews with words in them, a directory entry that is "
+                "filled in, anything published by somebody who does not work "
+                "for you.</p>",
+                "<p>A business with 4 outside mentions and a competitor with "
+                "40 are not being judged unfairly. They are being described "
+                "by different amounts of evidence.</p>",
+            ]),
+            ("Write down what you found", [
+                "<p>By the end you should have a short list: 3 claims it "
+                "made about them, the source of each, and whether your site "
+                "makes the same claim anywhere. That list is the work, in "
+                "order, and it is usually shorter than people fear.</p>",
+            ]),
+        ],
+        "payoff": "Tell us your trade and your town and we will run the "
+                  "questions, then send you the answers and where they came "
+                  "from.",
+        "faq": [
+            ("Is it worth complaining to the assistant?",
+             "There is nobody to complain to and no queue to join. The only "
+             "lever anybody outside has is what is published about the "
+             "business, which is why the trace above is the useful part."),
+            ("The answer named a business that closed.",
+             "Common, and it tells you something useful: that model is "
+             "working from older material rather than fetching live pages. "
+             "Ask the same question in one that cites sources and compare."),
+            ("It named a big directory instead of any business.",
+             "Then the directory is the page to be on, and being listed "
+             "properly there is a cheaper job than being named directly. "
+             "Check what your entry says before assuming it exists."),
+            ("Do I need to do this more than once?",
+             "Yes, on a schedule, because the answers change without warning "
+             "and nothing tells you they have. A note in a file each month "
+             "is the whole method."),
+        ],
+        "related": [("/geo/", "AI search"),
+                    ("/glossary/ai-search/", "AI search"),
+                    ("/audit/", "A free audit")],
+    },
+
+    {
+        "slug": "when-ai-gets-your-business-wrong",
+        "date": "2026-09-06",
+        "updated": "2026-09-06",
+        "topic": "AI search",
+        "work": None,
+        "service": ("/geo/", "AI search"),
+
+        "title": "When AI gets your business wrong",
+        "h1": "It named you, and half of what it said is out of date.",
+        "summary": "Being described wrongly is a third state, and it needs a "
+                   "different repair from being missing.",
+        "standfirst": "An old address, hours you changed years ago, a "
+                      "service you stopped offering.",
+        "description": "What to do when an assistant states something false "
+                       "about your business: where the old information "
+                       "lives, and why fixing your own site is not enough.",
+        "og_desc": "Absent is one problem. Present and wrong is a different "
+                   "one.",
+
+        "body": [
+            ("The short answer", [
+                "<p>Correct the sources, not the assistant. Nothing you "
+                "write to an assistant reaches it, and nothing you change on "
+                "your own site reaches it either until the material it "
+                "learned from changes too.</p>",
+                "<p>So the job is finding which copy of the old fact it is "
+                "reading, and there are usually 2 or 3.</p>",
+            ]),
+            ("Two ways it can be wrong", [
+                "<p>Some assistants fetch pages while they answer. Those go "
+                "wrong because something live is wrong: an old profile, a "
+                "directory nobody has touched, a page on your own site that "
+                "still lists last year's services.</p>",
+                "<p>Others answer from training material with a cut-off "
+                "date. Those repeat what was true when they learned it, and "
+                "no correction anywhere reaches them until they are trained "
+                "again.</p>",
+                "<p>Ask the same question in both kinds and the difference "
+                "in the answers tells you which problem you have.</p>",
+            ]),
+            ("Find the copy it is reading", [
+                "<p>Search the wrong fact itself, in quotes. An old address "
+                "or a dropped service is a distinctive string, and the pages "
+                "still carrying it come back together.</p>",
+                "<p>Check your own site first, including the pages nobody "
+                "links to any more. A price list from 2 years ago is still a "
+                "published price list.</p>",
+            ]),
+            ("Fix the ones you control, in order", [
+                "<p>The Google profile first, because more things read it "
+                "than anything else you own. Then your own pages, and delete "
+                "rather than hide: a page that is unlinked is still "
+                "fetchable.</p>",
+                "<p>Then the social accounts, then the directories. Where a "
+                "listing cannot be corrected, ask for it to be removed "
+                "instead.</p>",
+            ]),
+            ("Then publish the correction plainly", [
+                "<p>Put the current fact in a sentence, on a page, in "
+                "ordinary words: where you are now, what you do now, when "
+                "you open now. Something that reads like an answer gets used "
+                "as one.</p>",
+                "<p>Do not write a page about the mistake. Write the page "
+                "that states the truth, and let it be the easiest thing to "
+                "find.</p>",
+            ]),
+            ("Expect it to take a while, and check", [
+                "<p>The fetching kind can pick up a corrected page within "
+                "days. The trained kind is on a schedule nobody outside "
+                "publishes, and no amount of asking moves it.</p>",
+                "<p>Re-ask the same question every month and keep the "
+                "answers with the date beside them. That file is the only "
+                "record you will have.</p>",
+            ]),
+        ],
+        "payoff": "Send us your business name and town and we will ask a "
+                  "few assistants about you, then send you what they said "
+                  "and what is out of date.",
+        "faq": [
+            ("Can I tell it that it is wrong?",
+             "Typing a correction into a chat changes that conversation and "
+             "nothing else. The next person asking gets the old answer, "
+             "because the material behind it has not moved."),
+            ("It invented a price I have never charged.",
+             "Check whether a competitor or a directory publishes that price "
+             "for a similar service, because that is usually where it came "
+             "from. Publishing your own range in plain words is the fastest "
+             "correction available."),
+            ("It says I am permanently closed.",
+             "That one almost always starts in a Google profile, sometimes "
+             "on a duplicate listing you did not know existed. Search your "
+             "own business name on the map and look for a second copy of "
+             "yourself."),
+            ("Should I remove old pages or leave them?",
+             "Remove them, or update them. An old page kept for sentiment is "
+             "a published claim, and anything reading your site treats it as "
+             "current unless the page says otherwise."),
+        ],
+        "related": [("/geo/", "AI search"),
+                    ("/seo/", "SEO and local search"),
+                    ("/audit/", "A free audit")],
+    },
+
+    {
+        "slug": "ai-search-milano",
+        "date": "2026-09-06",
+        "updated": "2026-09-06",
+        "topic": "AI search",
+        "work": None,
+        "service": ("/geo/", "AI search"),
+
+        "title": "AI search in Milan",
+        "h1": "In a city this size, the assistant has to choose 3.",
+        "summary": "Milan gives an assistant more candidates than any other "
+                   "Italian city, which makes the shortlist harder to "
+                   "reach and more valuable to be on.",
+        "standfirst": "The competition is not the businesses above you. It "
+                      "is the length of the answer.",
+        "description": "How AI search works in a city with thousands of "
+                       "competitors: why assistants name 3, what decides "
+                       "which 3, and what a small business in Milan can "
+                       "change.",
+        "og_desc": "A search page has 10 results. An answer has 3.",
+
+        "body": [
+            ("Why a big city changes the problem", [
+                "<p>In a small town an assistant naming local businesses "
+                "may only have a handful to describe. In Milan it can have "
+                "hundreds for the same question, and it still answers with "
+                "3.</p>",
+                "<p>So the gap between being known and being named is wider "
+                "here than anywhere else in Italy, and it does not close "
+                "by being slightly better.</p>",
+            ]),
+            ("What gets a business onto a short list", [
+                "<p>Something has to separate it in a sentence. A "
+                "neighbourhood rather than the city. A specific service "
+                "rather than the trade. A kind of customer, a language "
+                "spoken, an opening hour nobody else keeps.</p>",
+                "<p>Assistants describe businesses in one or two lines. A "
+                "business that cannot be described in one line is hard to "
+                "put in an answer at all.</p>",
+            ]),
+            ("Milan asks in more than one language", [
+                "<p>The city works in Italian and a lot of business in it "
+                "happens in English. Those are 2 different questions, and "
+                "assistants answer them from the material they can read in "
+                "each.</p>",
+                "<p>A site that exists only in Italian is absent from half "
+                "the question, in the one Italian city where that half is "
+                "large.</p>",
+            ]),
+            ("The neighbourhood is the real unit", [
+                "<p>Nobody who lives here searches for the whole city. They "
+                "search Navigli, Isola, Porta Romana, Lambrate, and they "
+                "mean 15 minutes on foot.</p>",
+                "<p>A page that names the area it serves is answering a "
+                "question that actually gets asked, and it is competing with "
+                "a few dozen businesses instead of a few thousand.</p>",
+            ]),
+            ("Check it before you spend anything", [
+                "<p>Ask 3 assistants for a recommendation in your trade and "
+                "your neighbourhood. Write down who they name and the date "
+                "beside it.</p>",
+                "<p>Do it again for the whole city and compare. If you "
+                "appear in one and not the other, you already know which "
+                "page to write.</p>",
+            ]),
+        ],
+        "payoff": "Tell us your trade and your part of Milan and we will "
+                  "ask the assistants, then send you the answers.",
+        "faq": [
+            ("We are outside the centre. Does that hurt?",
+             "For a city question, yes. For a neighbourhood question it is "
+             "the reason you would be named at all, and neighbourhood "
+             "questions are the ones people actually ask."),
+            ("Is this different from SEO in Milan?",
+             "The work overlaps and the outcome does not. Search shows a "
+             "list you can appear on at position 8; an answer names 3 "
+             "businesses and does not mention the rest."),
+            ("Do we need an English version of the site?",
+             "In Milan it is worth more than in most Italian cities, "
+             "because a real share of the buying happens in English. "
+             "Elsewhere it is usually a later job."),
+            ("How long does any of this take?",
+             "Publishing an answerable page takes an afternoon. Being "
+             "picked up depends on the assistant, and the ones working from "
+             "training data are on a schedule nobody outside publishes."),
+        ],
+        "related": [("/geo/", "AI search"),
+                    ("/glossary/ai-search/", "AI search"),
+                    ("/audit/", "A free audit")],
+    },
 ]
+
 
 # /blog/, the index over those records. It is a page and a page's copy is copy,
 # so it sits here rather than in gen_blog.py: a headline typed into a generator
