@@ -127,6 +127,12 @@ IDENTICAL_BY_DESIGN = {
     # The directory's name, in the footer trust line on every page. A company
     # name, like Iglisi Watch and ProAffy above it.
     "TechBehemoths",
+    # The anchor text on the footer's LinkedIn link, on every page in all 3
+    # languages. A platform name, so it is spelled the same everywhere, which
+    # is exactly why it needs declaring here rather than translating: check 35
+    # asked whether it had ever been translated, and the honest answer is that
+    # there is nothing to translate.
+    "LinkedIn",
     # The TITLE of a cited study, and titles are not translated. Rule 7 says a
     # figure names its source in the sentence; a reader who wants to check it
     # searches the name we printed, so an Italian rendering of it would send

@@ -118,11 +118,17 @@ def phone_display():
 # ships. Gate check 48 scans this list for exactly that word among others, so
 # the marker is the thing that makes the check work rather than something the
 # check happens to catch.
+# Defined once because it is used TWICE: the sameAs claim below and the visible
+# footer link. Retyping it into the footer would be the same drift DIRECTORIES
+# exists to prevent, one address falling out of step with itself.
+#
+# Confirmed by fetching it: the page's own og:title is "MINA Rank Studio" and
+# its og:description "Web Design/SEO/GEO". The slug was not guessed --
+# minarankstudio, minarank-studio and minarank all 404, this one did not.
+LINKEDIN_URL = "https://www.linkedin.com/company/mina-rank-studio"
+
 SAMEAS = [
-    # Confirmed by fetching it: the page's own og:title is "MINA Rank Studio"
-    # and its og:description "Web Design/SEO/GEO". The slug was not guessed --
-    # minarankstudio, minarank-studio and minarank all 404, this one did not.
-    "https://www.linkedin.com/company/mina-rank-studio",
+    LINKEDIN_URL,
     # The founder named this handle directly. Instagram serves a login wall to
     # anything without a session, so there is no og:url to corroborate it with,
     # and the owner stating their own account is the better authority anyway.
@@ -1026,7 +1032,7 @@ def footer(lang, page_url=None, cta_heading=None, cta_note=None):
         </nav>
         <div class="foot-meta">
           <p>{c.FOOT_META.replace("{brand}", BRAND).replace("{dot}", DOT)}</p>
-          <p class="foot-trust">{trust_line(lang)} {DOT} <a href="{GBP_REVIEW_URL}"\
+          <p class="foot-trust">{trust_line(lang)} {DOT} <a href="{LINKEDIN_URL}" target="_blank" rel="noopener">LinkedIn</a> {DOT} <a href="{GBP_REVIEW_URL}"\
  target="_blank" rel="noopener">{c.REVIEW_CTA}</a></p>
           <p>{c.FOOT_COPYRIGHT.replace("{brand}", BRAND)}</p>
 {switcher(lang, page_url)}        </div>
