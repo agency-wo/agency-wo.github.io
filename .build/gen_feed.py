@@ -9,8 +9,7 @@ ENGLISH ONLY, and deliberately. RSS has no hreflang, so a single feed carrying
 three languages is three duplicates to every consumer that reads it, and three
 per-language feeds would each need their own discovery link to be worth having.
 The English tree is the x-default and the one every alternate points back to,
-so it is the feed. watch.al has no feed at all; Essi has this one, and this
-follows it.
+so it is the feed.
 
 FROM THE RECORDS, not from the built HTML. gen_sitemap harvests from the pages
 on purpose, because it describes the canonical and hreflang tags the pages emit

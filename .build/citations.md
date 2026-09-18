@@ -30,7 +30,7 @@ So: **Durres in every directory field, in every language.** If a form insists on
 spelling, prefer leaving the field blank over writing something the schema does not say. A
 missing field costs nothing; a contradicting one costs the match.
 
-This is the opposite of the rule in Essi's sheet, and deliberately: that site's schema carries
+This is the opposite of the rule in another site's sheet, and deliberately: that site's schema carries
 the diaeresis, this one does not. Copy the schema you have, not the sheet next door.
 
 ## Where to place them, in order of value
