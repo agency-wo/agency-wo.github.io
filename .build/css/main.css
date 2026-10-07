@@ -706,8 +706,18 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
    SUBPAGES
    ========================================================================== */
 .page-head { padding-block: var(--s-8) var(--s-7); }
+/* The content under the white head panel (2026-10-07). The panel ends on its
+   own 48px, and the first paragraph after it started about 15px below the seam,
+   pressed against the change of tone on every subpage. The same 48px on the
+   other side of the seam. The homepage has no .zone-surface, so this is
+   subpages only. */
+.zone-surface + .wrap { padding-top: var(--s-7); }
 .crumbs { display: flex; align-items: center; gap: var(--s-3);
-  font-size: var(--fs-small); color: var(--slate); margin-bottom: var(--s-5); }
+  font-size: var(--fs-small); color: var(--slate); margin-bottom: var(--s-5);
+  /* Wrap whole items, never squeeze them (2026-10-07). Without it a long post
+     title on a phone crushed every crumb into a narrow column: "minarank" over
+     "studio", the title broken over two lines beside it. */
+  flex-wrap: wrap; row-gap: var(--s-2); }
 .crumbs a { color: var(--slate); text-decoration: none; }
 .crumbs a:hover { color: var(--ink); }
 .page-title { font-family: var(--font-display); font-weight: 500;
