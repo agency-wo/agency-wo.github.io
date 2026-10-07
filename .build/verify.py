@@ -2590,6 +2590,22 @@ for _p in all_pages:
                 f"Context: ...{_txt[_a:_b].strip()}...")
 
 
+# 56. no link inside a link ------------------------------------------------
+# A section heading that carries a link puts a link inside a link the moment
+# the contents list copies the heading into its own anchor: invalid HTML, and
+# the jump link can break. Headings are also not localised the way body copy
+# is, so the Italian and Albanian twins of one post linked to the English case
+# page (2026-10-07). A card whose whole title IS the link is fine; only the
+# nesting is the defect.
+_NESTED_A = re.compile(r"(?s)<a\b[^>]*>(?:(?!</a>).)*?<a\b")
+for _p in all_pages:
+    _m = _NESTED_A.search(read(_p))
+    if _m:
+        findings.append(f"[link] {rel(_p)}: a link inside a link near "
+                        f"{re.sub(r'<[^>]+>', ' ', _m.group(0))[-60:].strip()!r}. "
+                        f"Keep links out of headings; link from the paragraph")
+
+
 # 55. rule 27: no person is named, anywhere ---------------------------------
 # The owner asked on 2026-10-07 that the site name nobody and never state the
 # team size. A byline, a schema node or a comment that brings the name back

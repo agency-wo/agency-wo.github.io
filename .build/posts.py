@@ -4834,7 +4834,7 @@ POSTS = [
                 "reply, and that is the worst possible way for it to come out.</p>",
                 "<p>Nobody is being careless. The two systems were never introduced.</p>",
             ]),
-            ("How it works at <a href=\"/work/iglisi-watch/\">Iglisi Watch</a>", [
+            ("How it works at Iglisi Watch", [
                 "<p>A watch sold over the counter stops being offered on the site about a "
                 "minute afterwards, and nobody opens a laptop to make that happen. The sale "
                 "is recorded where the sale is, and the site follows.</p>",
