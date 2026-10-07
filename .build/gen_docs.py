@@ -19,7 +19,7 @@ from urllib.parse import quote
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import i18n  # noqa: E402
 import shell  # noqa: E402
-from gen_pages import (FIGS, Contents, form_source, out, slugify,  # noqa: E402
+from gen_pages import (FIGS, Contents, form_source, form_subject, out, slugify,  # noqa: E402
                        strip_tags, write)
 
 # Which of these 3 pages carries a mark, keyed by URL rather than by a field in
@@ -61,11 +61,6 @@ NO_CONTENTS = ("/start/",)
 # nothing in the mail saying which page was read.
 FORM_LAST = ("/audit/",)
 FORM_SOURCE = {"/start/": "start-audit", "/audit/": "audit-page"}
-
-# The founder's profiles live in shell.py beside the studio's, not here. They
-# are placeholders and the comment there says why they ship as placeholders
-# rather than as an empty list; what matters at this end is that one file
-# decides what this site claims to be the same entity as.
 
 
 # ----------------------------------------------------------- copy, filled ---
@@ -116,7 +111,7 @@ def tokens(lang):
         "{turnaround}": shell.turnaround(lang),
         "{email}": EMAIL_LINK,
         "{email_delete}": delete_link(lang),
-        "{wa_href}": "https://wa.me/" + shell.WHATSAPP,
+        "{wa_href}": shell.wa_audit_href(lang),
         # The directory anchors, label and all. A directory name is a proper
         # noun and is the same word in all 3 languages, which is the case the
         # docstring above describes; the sentence around it is copy and each
@@ -154,6 +149,19 @@ def flat(s, lang):
 # A blank line announces a new movement. Everything else in a prose column
 # runs on without one, which is why this is a list and not a rule about tags.
 BREAK_BEFORE = ("h2", "who")
+
+# The assistants the /audit/ "ask" block links to, each opening with the
+# question already asked. Google's udm=50 is AI Mode; where it is not offered
+# the same URL is an ordinary search, which still answers the question.
+ASK_ENGINES = (("https://chatgpt.com/?q=", "chatgpt"),
+               ("https://www.perplexity.ai/search?q=", "perplexity"),
+               ("https://www.google.com/search?udm=50&amp;q=", "google"))
+
+
+def attr(s):
+    """A string made safe for a double-quoted attribute."""
+    return (s.replace("&", "&amp;").replace('"', "&quot;")
+             .replace("<", "&lt;").replace(">", "&gt;"))
 
 
 def block(indent, b, lang, en=None, toc=None):
@@ -209,6 +217,34 @@ def block(indent, b, lang, en=None, toc=None):
         lines.append(f'{pad}<p><a class="cta" href="{cta_href(lang)[b[2]]}">'
                      f'{fill(b[1], lang)} {shell.ARROW}</a></p>')
         return NL.join(lines)
+    if kind == "ask":
+        # "Ask them yourself" on /audit/ (2026-10-07), class aiq because .ask is
+        # the homepage's closing section. The hrefs are written here
+        # with the default question, so the links work with JS off; js/main.js
+        # rewrites them as the visitor types. Not a <form>: rule 20 keeps one ask
+        # per page, and nothing here takes anything from the visitor.
+        a = b[1]
+        q = fill(a["q"], lang)
+        t0, c0 = fill(a["trade_default"], lang), fill(a["city_default"], lang)
+        enc = quote(q.replace("#T", t0).replace("#C", c0), safe="")
+        rows = [f'{pad}<div class="aiq" data-aiq data-q="{attr(q)}">',
+                f'{pad}  <p>{txt(indent + 4, a["lead"], lang)}</p>',
+                f'{pad}  <div class="af-pair">']
+        for fid, lab, val in (("aiq-t", a["trade_label"], t0), ("aiq-c", a["city_label"], c0)):
+            rows += [f'{pad}    <div class="field">',
+                     f'{pad}      <label for="{fid}">{fill(lab, lang)}</label>',
+                     f'{pad}      <input id="{fid}" type="text" value="{attr(val)}" '
+                     f'autocomplete="off" aria-describedby="aiq-note">',
+                     f'{pad}    </div>']
+        rows.append(f'{pad}  </div>')
+        rows.append(f'{pad}  <p class="aiq-go">')
+        for base, key in ASK_ENGINES:
+            rows.append(f'{pad}    <a href="{base}{enc}" data-base="{base}" '
+                        f'target="_blank" rel="noopener noreferrer">{fill(a[key], lang)}</a>')
+        rows.append(f'{pad}  </p>')
+        rows.append(f'{pad}  <p class="aiq-note" id="aiq-note">{txt(indent + 4, a["after"], lang)}</p>')
+        rows.append(f'{pad}</div>')
+        return NL.join(rows)
     raise AssertionError("no such block kind: " + kind)
 
 
@@ -248,7 +284,7 @@ def cta_href(lang):
                   "?subject=" + enc(subjects["brief"]) +
                   "&amp;body=" + enc(fill(brief, lang).replace(NL, CRLF),
                                      safe=" ,:")),
-        "whatsapp": "https://wa.me/" + shell.WHATSAPP,
+        "whatsapp": shell.wa_audit_href(lang),
         "call": "mailto:" + shell.EMAIL + "?subject=" + enc(subjects["call"]),
     }
 
@@ -387,7 +423,7 @@ def audit_section(rec, lang):
               action="{shell.FORM_ENDPOINT}"
               {shell.form_js(lang)}>
               <input type="hidden" name="access_key" value="{shell.WEB3FORMS_KEY}">
-              <input type="hidden" name="subject" value="{fill(f["subject"], lang)}">
+              <input type="hidden" name="subject" value="{form_subject(FORM_SOURCE[rec["url"]], lang)}">
               <input type="hidden" name="redirect" value="{shell.form_redirect(shell.localise(rec["url"], lang))}">
               <input type="hidden" name="source" value="{form_source(FORM_SOURCE[rec["url"]], lang)}">
               <!-- Filled by js/main.js. Empty without JS, which is correct: an

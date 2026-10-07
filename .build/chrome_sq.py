@@ -102,6 +102,7 @@ SRC = {
     "UPDATED": "c15f9b45",
     "WA_LABEL": "515b82d6",
     "WA_PREFILL": "d28f915d",
+    "WA_AUDIT": "6cc96b64",
     "WHAT_WE_DO": "bc3cba50",
     "WHAT_WE_DONT": "5eba3082",
     "WORK_BUILT": "9ce65dac",
@@ -176,6 +177,7 @@ OG_ALT = ("Logotipi minarank duke u ngjitur mbi 10 rezultate kërkimi të "
 # ads to the same people, so the founder would be reading an ambiguous message
 # on his phone with no way to ask which one until he replies.
 WA_PREFILL = "Përshëndetje {brand}, kam një pyetje për faqen time të internetit."
+WA_AUDIT = "Përshëndetje {brand}, dua auditimin falas. Faqja ime është: "
 
 # -- the ink band and the footer meta --------------------------------------
 # glossary.BANNED fails on "auditim i faqes", so the button names the audit and

@@ -652,6 +652,15 @@ def whatsapp(lang):
             f'</a>' + chr(10))
 
 
+def wa_audit_href(lang):
+    """Every WhatsApp link but the floating button: the chat opens with the
+    audit request already written, in the page's language. Until 2026-10-07
+    these were bare wa.me links, so a visitor who chose WhatsApp over the form
+    landed in an empty chat and had to invent the first line."""
+    text = ch(lang).WA_AUDIT.replace("{brand}", BRAND)
+    return "https://wa.me/%s?text=%s" % (WHATSAPP, urllib.parse.quote(text))
+
+
 def client_mark(c):
     """One business in the homepage logo row.
 
@@ -1016,7 +1025,7 @@ def footer(lang, page_url=None, cta_heading=None, cta_note=None):
     cols = []
     labels = list(c.FOOT_LABELS[:3]) + [FOOT_LAST]
     for title, paths, texts in zip(c.FOOT_HEADINGS, FOOT_PATHS, labels):
-        items = NL.join(f'            <a href="{localise(h, lang)}">{t}</a>'
+        items = NL.join(f'            <a href="{wa_audit_href(lang) if h.startswith("https://wa.me/") else localise(h, lang)}">{t}</a>'
                         for h, t in zip(paths, texts))
         cols.append(f'''          <div class="foot-col">
             <p class="foot-h">{title}</p>
@@ -1035,7 +1044,7 @@ def footer(lang, page_url=None, cta_heading=None, cta_note=None):
           <p class="band-note">{cta_note}</p>
           <p class="band-actions">
             <a class="band-cta" href="{localise(AUDIT_URL, lang)}">{c.BAND_CTA}</a>
-            <span class="band-alt"><a href="mailto:{EMAIL}">{EMAIL}</a> {DOT} <a href="https://wa.me/{WHATSAPP}">WhatsApp</a> {DOT} <a href="tel:+{WHATSAPP}">{phone_display()}</a></span>
+            <span class="band-alt"><a href="mailto:{EMAIL}">{EMAIL}</a> {DOT} <a href="{wa_audit_href(lang)}">WhatsApp</a> {DOT} <a href="tel:+{WHATSAPP}">{phone_display()}</a></span>
           </p>
         </div>
 {clock(lang)}

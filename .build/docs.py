@@ -419,11 +419,6 @@ PAGES = [
             "done_h": "Sent. That's all we needed.",
             "done": "It goes to a person before it goes to you." + NL +
                     "Expect the PDF {turnaround}.",
-            # Reaches us as the email's subject line, so it says which form
-            # sent it. The hidden `source` field says the same thing to a
-            # machine and lives in gen_docs.FORM_SOURCE, because a translator
-            # may not reach the column the inbox is sorted by.
-            "subject": "Free audit request from the audit page of {brand}",
             "url_label": "Your web address",
             "url_placeholder": "yourshop.al",
             "url_title": "Your web address, like yourshop.al",
@@ -455,6 +450,26 @@ PAGES = [
                      "searching for what you sell ever arrives, and whether they "
                      "stay once they" + NL +
                      "do."),
+
+            ("h2", "Ask them yourself first"),
+            # The visitor checks for themselves whether the assistants name them.
+            # #T and #C are the two inputs; the links are navigation the visitor
+            # chooses, so nothing is fetched (rule 30). The defaults are only an
+            # example question, never a claim about any client.
+            ("ask", {
+                "lead": "Type what you sell and your town. Each link opens that assistant with "
+                        "the" + NL + "question already asked, and this page stays open.",
+                "trade_label": "What you sell",
+                "trade_default": "watch repair",
+                "city_label": "Your town",
+                "city_default": "Durres",
+                "q": "Who would you recommend for #T in #C?",
+                "chatgpt": "Ask ChatGPT",
+                "perplexity": "Ask Perplexity",
+                "google": "Ask Google",
+                "after": "Not named, or named after a competitor? The audit shows why," + NL +
+                         "and the form is at the foot of this page.",
+            }),
 
             ("h2", "What we measure"),
             ("ledger", [
@@ -624,8 +639,6 @@ PAGES = [
                     "we'd fix first. The PDF arrives {turnaround}. If it hasn't," + NL +
                     "write to {email} and" + NL +
                     "we'll send it again.",
-            # Reaches us as the email's subject line, so it says which form sent it.
-            "subject": "Free audit request via {brand}",
             "url_label": "Your website",
             "url_placeholder": "yourshop.al",
             "url_title": "Your web address, for example yourshop.al",

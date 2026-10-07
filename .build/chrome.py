@@ -68,6 +68,12 @@ OG_ALT = ("The minarank wordmark climbing 10 numbered search results, above "
 # What actually arrives on the founder's phone. It is a data- attribute read by
 # js/main.js, so nothing that walks the DOM for text will find it.
 WA_PREFILL = "Hello {brand}, I have a question about my website."
+# What every OTHER WhatsApp link opens with: the band, the footer, /start/ and
+# the line under each form. The floating button asks a question; these start the
+# audit in the chat, because an owner on a phone would rather send an address on
+# WhatsApp than fill in a form. It ends in a space so the address goes straight
+# after it. shell.wa_audit_href() puts it in the href; gate check 53 reads it back.
+WA_AUDIT = "Hello {brand}, I would like the free audit. My website is: "
 
 # -- the ink band and the footer meta --------------------------------------
 BAND_CTA = "Get a free website audit"

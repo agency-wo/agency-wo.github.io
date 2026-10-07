@@ -754,6 +754,12 @@ a[href^="tel:"] { white-space: nowrap; }
 .af-hp { display: none; }
 
 .af-pair { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-5); }
+
+.aiq { margin-bottom: var(--s-7); }
+.aiq-go { display: flex; flex-wrap: wrap; gap: 0 var(--s-5); margin: var(--s-5) 0 0;
+  font-weight: 700; }
+.aiq-go a { display: inline-flex; align-items: center; min-height: 44px; }
+.aiq-note { margin: var(--s-3) 0 0; font-size: var(--fs-small); }
 .field { display: block; margin-top: var(--s-5); margin-bottom: 0; }
 .field label { display: block; font-size: var(--fs-small); font-weight: 700;
   margin-bottom: var(--s-2); }

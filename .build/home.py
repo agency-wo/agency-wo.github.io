@@ -73,11 +73,17 @@ PAGE = {
     "hero_claim": "Right now, somebody nearby is searching for what only you offer.",
     "hero_say": "We make sure they find you on Google.",
     "hero_sub": "Google, the map, and the answers ChatGPT and Gemini give" + NL +
-                "when somebody asks for a shop like yours. Then the website itself, "
-                "and the" + NL +
-                "software behind it. We work in English, Italian and Albanian.",
-    "hero_who": "You will not be handed to anybody else." + NL +
-                "<strong>The person who reads your site is the person who builds" + NL +
+                "when somebody asks for a shop like yours. We work in English," + NL +
+                "Italian and Albanian.",
+    # Proof above the fold, 2026-10-07: until then the hero carried no number
+    # at all and the first one sat in the dark band below it. These count what
+    # customers DID (calls, directions), the half an owner can feel. The two
+    # figures are tokens filled from the Iglisi record in clients.py, so they
+    # cannot drift from the case page; the date is the record's "taken" date,
+    # and the link is the self-check rule 23 asks for.
+    "hero_proof": "<a href=\"{proof_href}\">A shop we built for</a>: {proof_calls} calls and" + NL +
+                  "{proof_directions} direction requests from Google, May to 6 October 2026.",
+    "hero_who": "<strong>The person who reads your site is the person who builds" + NL +
                 "the fix.</strong>",
 
     # -- proof --------------------------------------------------------------
@@ -214,8 +220,6 @@ FORM = {
     "done": "The audit lands {turnaround}. Nothing there? One line to" + NL +
             "{email} and we'll" + NL +
             "resend.",
-    # Reaches us as the email's subject line, so it says which form sent it.
-    "subject": "Free audit request from the homepage of {brand}",
     "url_label": "Your website",
     "url_placeholder": "yourshop.al",
     "url_title": "Your web address, for example yourshop.al",

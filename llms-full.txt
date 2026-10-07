@@ -10,10 +10,11 @@ https://minarankstudio.com/
 
 Right now, somebody nearby is searching for what only you offer.
 We make sure they find you on Google.
+A shop we built for: 52 calls and
+461 direction requests from Google, May to 6 October 2026.
 Google, the map, and the answers ChatGPT and Gemini give
-when somebody asks for a shop like yours. Then the website itself, and the
-software behind it. We work in English, Italian and Albanian.
-You will not be handed to anybody else.
+when somebody asks for a shop like yours. We work in English,
+Italian and Albanian.
 The person who reads your site is the person who builds
 the fix.
 Taking on new work now.
@@ -100,7 +101,7 @@ of taking it. If the honest answer is that you need a better offer rather
 than better marketing, that is the answer you get, and it is the one that
 costs us the job most often.
 How we work
-Updated 3 September 2026
+Updated 7 October 2026
 Before you send anything
 What does this cost?
 There is no price list. A shop with 4 pages and a shop with 400 are
@@ -4692,6 +4693,16 @@ It's free and there's nothing attached to it. Most of what it finds
 sits behind the design rather than in it: whether somebody in your town
 searching for what you sell ever arrives, and whether they stay once they
 do.
+Ask them yourself first
+Type what you sell and your town. Each link opens that assistant with the
+question already asked, and this page stays open.
+What you sell
+Your town
+Ask ChatGPT
+Ask Perplexity
+Ask Google
+Not named, or named after a competitor? The audit shows why,
+and the form is at the foot of this page.
 What we measure
 Speed and safety
 Whether the site opens quickly on a phone on mobile data, whether it's

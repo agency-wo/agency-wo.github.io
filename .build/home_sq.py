@@ -100,7 +100,7 @@ STATS = [
 ]
 
 PAGE = {
-    "src": "0b45914c",
+    "src": "d3577b7f",
 
     # 39 characters against the 52 the title budget leaves once gen_home.py has
     # put "minarank studio ·" in front of it.
@@ -126,13 +126,12 @@ PAGE = {
     "hero_claim": "Pikërisht tani, dikush pranë teje po kërkon atë që vetëm ti e ofron.",
     "hero_say": "Ne sigurohemi që të të gjejnë në Google.",
     "hero_sub": "Google, harta dhe përgjigjet që japin ChatGPT dhe Gemini" + NL +
-                "kur dikush kërkon një dyqan si i yti. Pastaj vetë faqja e "
-                "internetit," + NL +
-                "dhe software-i pas saj. Punojmë në shqip, anglisht dhe "
-                "italisht.",
+                "kur dikush kërkon një dyqan si i yti. Punojmë në shqip," + NL +
+                "anglisht dhe italisht.",
+    "hero_proof": "<a href=\"{proof_href}\">Një dyqan që e ndjekim</a>: {proof_calls} telefonata dhe" + NL +
+                  "{proof_directions} kërkesa për rrugën nga Google, nga maji deri më 6 tetor 2026.",
     # It must not name the founder: that was a deliberate edit upstream.
-    "hero_who": "Nuk të kalojmë te dikush tjetër." + NL +
-                "<strong>Personi që lexon faqen tënde është personi që" + NL +
+    "hero_who": "<strong>Personi që lexon faqen tënde është personi që" + NL +
                 "ndërton zgjidhjen.</strong>",
 
     # -- proof --------------------------------------------------------------
@@ -279,7 +278,7 @@ PAGE = {
 # panel is narrow, the 4 error messages are read aloud when a field is invalid,
 # and each one says what to do rather than what went wrong.
 FORM = {
-    "src": "3ef828c9",
+    "src": "39bc7afb",
 
     # "auditim i faqes" is banned, so the audit is named and its object follows
     # separately. This is also NOT chrome_sq.BAND_CTA ("Merr një auditim
@@ -291,9 +290,6 @@ FORM = {
     "done": "Auditimi vjen {turnaround}. S'ka gjë aty? Një rresht te" + NL +
             "{email} dhe ta" + NL +
             "ridërgojmë.",
-    # Reaches us as the email's subject line, so it says which form sent it,
-    # and in which language. "ballina" is chrome_sq.CRUMB_HOME.
-    "subject": "Kërkesë për auditim falas nga ballina e {brand}",
     "url_label": "Faqja jote",
     # The example domain is localised, like the copy. An Albanian reader parses
     # "dyqaniyt.al" as "dyqani yt" and reads it as an example at a glance.

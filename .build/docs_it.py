@@ -386,7 +386,7 @@ PAGES = [
     # inglese: sono nomi propri, elencati in glossary.KEEP_ENGLISH.
     {
         "url": "/audit/",
-     "src": "1da7e500",
+     "src": "fc0f422b",
         "nav": "L'audit",
         # 30 caratteri sui 52 che il budget lascia dopo " · minarank studio".
         "title": "Cosa misura l'audit gratuito",
@@ -418,9 +418,6 @@ PAGES = [
             "done_h": "Inviato. Non serve altro.",
             "done": "Passa da una persona prima di arrivare a te." + NL +
                     "Aspetta il PDF {turnaround}.",
-            # Arriva come oggetto dell'email, cosi dice quale modulo l'ha
-            # mandata. Il campo nascosto `source` sta in gen_docs.FORM_SOURCE.
-            "subject": "Richiesta di audit gratuito dalla pagina audit di {brand}",
             "url_label": "Il tuo indirizzo web",
             "url_placeholder": "iltuonegozio.it",
             "url_title": "Il tuo indirizzo web, tipo iltuonegozio.it",
@@ -451,6 +448,26 @@ PAGES = [
                      "dietro al design e non dentro: se chi nella tua città cerca "
                      "quello che" + NL +
                      "vendi arriva davvero, e se resta una volta arrivato."),
+
+            ("h2", "Chiedilo prima tu"),
+            # The visitor checks for themselves whether the assistants name them.
+            # #T and #C are the two inputs; the links are navigation the visitor
+            # chooses, so nothing is fetched (rule 30). The defaults are only an
+            # example question, never a claim about any client.
+            ("ask", {
+                "lead": "Scrivi cosa vendi e la tua città. Ogni link apre l'assistente con la" + NL +
+                        "domanda già fatta, e questa pagina resta aperta.",
+                "trade_label": "Cosa vendi",
+                "trade_default": "riparazione orologi",
+                "city_label": "La tua città",
+                "city_default": "Durazzo",
+                "q": "Chi mi consigli per #T a #C?",
+                "chatgpt": "Chiedi a ChatGPT",
+                "perplexity": "Chiedi a Perplexity",
+                "google": "Chiedi a Google",
+                "after": "Non ti nomina, o nomina prima un concorrente? L'audit ti dice perché," + NL +
+                         "e il modulo è in fondo alla pagina.",
+            }),
 
             ("h2", "Cosa misuriamo"),
             ("ledger", [
@@ -588,7 +605,7 @@ PAGES = [
     # ---------------------------------------------------------------- START --
     {
         "url": "/start/",
-     "src": "d6e7a3b2",
+     "src": "ec536b5b",
         "nav": "Inizia un progetto",
         "title": "Audit gratuito del sito",
         "description": "Mandaci il tuo sito e ricevi un audit gratuito: cosa ti "
@@ -616,8 +633,6 @@ PAGES = [
                     "con quello che sistemeremmo per primo. Il PDF arriva" + NL +
                     "{turnaround}. Se non è arrivato, scrivi a {email}" + NL +
                     "e te lo mandiamo di nuovo.",
-            # Reaches us as the email's subject line, so it says which form sent it.
-            "subject": "Richiesta di audit gratuito da {brand}",
             "url_label": "Il tuo sito",
             # An example, and read as one: the English "yourshop" is a word, so
             # the Italian is a word too. The .it is the TLD an Italian reader

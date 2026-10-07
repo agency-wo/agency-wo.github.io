@@ -1305,6 +1305,17 @@ a[href^="tel:"] { white-space: nowrap; }
 .af-hp { display: none; }
 
 .af-pair { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-5); }
+
+/* "Ask them yourself" on /audit/ (2026-10-07), .aiq because .ask is the
+   homepage's closing section. It borrows .af-pair and .field
+   so its two boxes read as the same kind of thing as the form further down. The
+   links are plain links, never .btn: check 32 keeps the button look for the one
+   ask on the page. 44px is the tap target, as everywhere else. */
+.aiq { margin-bottom: var(--s-7); }
+.aiq-go { display: flex; flex-wrap: wrap; gap: 0 var(--s-5); margin: var(--s-5) 0 0;
+  font-weight: 700; }
+.aiq-go a { display: inline-flex; align-items: center; min-height: 44px; }
+.aiq-note { margin: var(--s-3) 0 0; font-size: var(--fs-small); }
 .field { display: block; margin-top: var(--s-5); margin-bottom: 0; }
 .field label { display: block; font-size: var(--fs-small); font-weight: 700;
   margin-bottom: var(--s-2); }

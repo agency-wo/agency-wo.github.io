@@ -375,7 +375,7 @@ PAGES = [
     # anglisht: janë emra të përveçëm, në glossary.KEEP_ENGLISH.
     {
         "url": "/audit/",
-     "src": "1da7e500",
+     "src": "fc0f422b",
         "nav": "Auditimi",
         # 25 shkronja nga 52 që lë buxheti pas " · minarank studio".
         "title": "Çfarë mat auditimi falas",
@@ -407,9 +407,6 @@ PAGES = [
             "done_h": "U dërgua. Kaq na duhej.",
             "done": "Kalon nga një njeri para se të vijë te ti." + NL +
                     "Prite PDF-në {turnaround}.",
-            # Vjen si subjekt i email-it, kështu thotë cili formular e dërgoi.
-            # Fusha e fshehur `source` rri te gen_docs.FORM_SOURCE.
-            "subject": "Kërkesë për auditim falas nga faqja e auditimit e {brand}",
             "url_label": "Adresa jote e internetit",
             "url_placeholder": "dyqaniyt.al",
             "url_title": "Adresa jote e internetit, si dyqaniyt.al",
@@ -440,6 +437,26 @@ PAGES = [
                      "gjen rri prapa dizajnit, jo brenda tij: nëse dikush në "
                      "qytetin tënd që" + NL +
                      "kërkon atë që shet arrin vërtet, dhe nëse rri pasi arrin."),
+
+            ("h2", "Pyeti vetë më parë"),
+            # The visitor checks for themselves whether the assistants name them.
+            # #T and #C are the two inputs; the links are navigation the visitor
+            # chooses, so nothing is fetched (rule 30). The defaults are only an
+            # example question, never a claim about any client.
+            ("ask", {
+                "lead": "Shkruaj çfarë shet dhe qytetin tënd. Çdo lidhje hap asistentin me" + NL +
+                        "pyetjen të bërë, dhe kjo faqe mbetet e hapur.",
+                "trade_label": "Çfarë shet",
+                "trade_default": "riparim orësh",
+                "city_label": "Qyteti yt",
+                "city_default": "Durrës",
+                "q": "Kë më rekomandon për #T në #C?",
+                "chatgpt": "Pyet ChatGPT",
+                "perplexity": "Pyet Perplexity",
+                "google": "Pyet Google",
+                "after": "Nuk të përmend, ose përmend më parë një konkurrent? Auditimi të thotë" + NL +
+                         "pse, dhe formulari është në fund të faqes.",
+            }),
 
             ("h2", "Çfarë matim"),
             ("ledger", [
@@ -574,7 +591,7 @@ PAGES = [
     # ---------------------------------------------------------------- START --
     {
         "url": "/start/",
-     "src": "d6e7a3b2",
+     "src": "ec536b5b",
         "nav": "Nis një projekt",
         "title": "Auditim falas",
         "description": "Na dërgo faqen tënde dhe merr një auditim falas: çfarë po "
@@ -604,8 +621,6 @@ PAGES = [
                     "me atë që do të rregullonim të parën. PDF-ja mbërrin" + NL +
                     "{turnaround}. Nëse nuk ka mbërritur, shkruaj te {email}" + NL +
                     "dhe ta dërgojmë sërish.",
-            # Reaches us as the email's subject line, so it says which form sent it.
-            "subject": "Kërkesë për auditim falas nga {brand}",
             "url_label": "Faqja jote",
             # An example, and read as one: the English "yourshop" is a word, so
             # the Albanian is a word too. The .al stays, because it is the TLD

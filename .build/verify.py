@@ -2523,6 +2523,17 @@ for _p in all_pages:
             f"[whatsapp] {rel(_p)}: the button opens WhatsApp with {_got!r}, and "
             f"the {_lg} WA_PREFILL is {_want!r}. A prefill that never reaches the "
             f"href is a translated string no visitor will ever see")
+    # Every OTHER wa.me link (band, footer, /start/, the line under a form)
+    # opens with the audit request, in this page's language (2026-10-07).
+    _want_audit = _WA_CHROME[_lg].WA_AUDIT.replace("{brand}", _shell.BRAND)
+    for _href in re.findall(r'<a(?![^>]*class="wa")[^>]*href="(https://wa\.me/[^"]*)"', read(_p)):
+        _txt = _urlparse.parse_qs(_urlparse.urlparse(_entities.unescape(_href)).query
+                                  ).get("text", [""])[0]
+        if _txt != _want_audit:
+            findings.append(
+                f"[whatsapp] {rel(_p)}: a WhatsApp link opens with {_txt!r}, not "
+                f"the {_lg} WA_AUDIT {_want_audit!r}. Build it with "
+                f"shell.wa_audit_href(lang)")
 
 
 # 54. rule 44: no performed insight ----------------------------------------

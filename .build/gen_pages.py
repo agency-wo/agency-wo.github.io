@@ -441,6 +441,19 @@ def form_source(name, lang):
     return name if lang == "en" else name + "-" + lang
 
 
+def form_subject(name, lang):
+    """The hidden `subject` field: the subject line of the lead email.
+
+    One English prefix in every language, because it is read by the inbox and by
+    the Minafy intake worker, never by a visitor. The worker queues an audit only
+    when the subject matches "free audit request via minarank studio", and until
+    2026-10-07 each form translated its own subject, so 8 of the 9 forms reached
+    the inbox and never the queue. The source after the dot still says which
+    form, in which language, sent it.
+    """
+    return f"Free audit request via {shell.BRAND} \u00b7 {form_source(name, lang)}"
+
+
 def write(path, content):
     assert EM_DASH not in content, "em-dash in " + path
     full = os.path.join(ROOT, path)

@@ -100,6 +100,7 @@ SRC = {
     "UPDATED": "c15f9b45",
     "WA_LABEL": "515b82d6",
     "WA_PREFILL": "d28f915d",
+    "WA_AUDIT": "6cc96b64",
     "WHAT_WE_DO": "bc3cba50",
     "WHAT_WE_DONT": "5eba3082",
     "WORK_BUILT": "9ce65dac",
@@ -167,6 +168,8 @@ OG_ALT = ("Il logotipo minarank che sale su 10 risultati di ricerca numerati, "
 # What actually arrives on the founder's phone. It is a data- attribute read by
 # js/main.js, so nothing that walks the DOM for text will find it.
 WA_PREFILL = "Ciao {brand}, ho una domanda sul mio sito."
+# "Vorrei", not "voglio": the conditional is how you ask for something in a shop.
+WA_AUDIT = "Ciao {brand}, vorrei l'audit gratuito. Il mio sito è: "
 
 # -- the ink band and the footer meta --------------------------------------
 # The band CTA is a filled block set at --fs-lead, so its width is its text and

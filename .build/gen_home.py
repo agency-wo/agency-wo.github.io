@@ -32,7 +32,8 @@ import shell  # noqa: E402
 # language-independent and the English file is where it is decided.
 import clients as client_data  # noqa: E402
 import proof_data  # noqa: E402
-from gen_pages import form_source, out, write  # noqa: E402
+_PROFILE = [c for c in client_data.CLIENTS if c["slug"] == "iglisi-watch"][0]["profile"]
+from gen_pages import form_source, form_subject, out, write  # noqa: E402
 # The question block and its FAQPage, both from gen_docs, so the homepage asks
 # in the same markup the service pages do and the schema is DERIVED from the
 # visible answers rather than retyped beside them. gen_docs.faq_node() carries
@@ -70,10 +71,16 @@ def tokens(lang):
         # number in it. l10n.count() is lower case in all 3, so the one caller
         # keeps it out of sentence-initial position.
         "{clients}": l10n.count(len(client_data.CLIENTS), lang),
+        # The hero proof line's numbers, off the Iglisi record's Business
+        # Profile stats, so the homepage and the case page say one thing.
+        "{proof_calls}": _PROFILE["stats"][0][0],
+        "{proof_directions}": _PROFILE["stats"][1][0],
+        # Unlocalised: copy links get their language prefix when the page is written.
+        "{proof_href}": "/work/iglisi-watch/",
         "{turnaround}": shell.turnaround(lang),
         "{email}": f'<a href="mailto:{shell.EMAIL}">{shell.EMAIL}</a>',
         "{email_href}": "mailto:" + shell.EMAIL,
-        "{wa_href}": "https://wa.me/" + shell.WHATSAPP,
+        "{wa_href}": shell.wa_audit_href(lang),
     }
 
 
@@ -214,7 +221,7 @@ def audit_form(f, lang):
               action="{shell.FORM_ENDPOINT}" aria-labelledby="audit-h"
               {shell.form_js(lang)}>
               <input type="hidden" name="access_key" value="{shell.WEB3FORMS_KEY}">
-              <input type="hidden" name="subject" value="{fill(f["subject"], lang)}">
+              <input type="hidden" name="subject" value="{form_subject("home-hero", lang)}">
               <input type="hidden" name="redirect" value="{shell.form_redirect(shell.localise("/", lang))}">
               <input type="hidden" name="source" value="{form_source("home-hero", lang)}">
               <input class="af-hp" type="checkbox" name="botcheck" tabindex="-1"
@@ -470,6 +477,7 @@ def render(lang):
         <div class="hero-split">
           <div class="hero-rest">
             <p class="hero-say">{txt(14, h["hero_say"], lang)}</p>
+            <p class="hero-proof">{txt(14, h["hero_proof"], lang)}</p>
             <p class="hero-sub">{txt(14, h["hero_sub"], lang)}</p>
             <p class="hero-who">{txt(14, h["hero_who"], lang)}</p>
             <p class="status"><span class="dot" aria-hidden="true"></span>

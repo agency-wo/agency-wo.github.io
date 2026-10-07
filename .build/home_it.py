@@ -101,7 +101,7 @@ STATS = [
 ]
 
 PAGE = {
-    "src": "0b45914c",
+    "src": "d3577b7f",
 
     # 38 characters against the 52 the title budget leaves once gen_home.py has
     # put "minarank studio ·" in front of it.
@@ -129,16 +129,15 @@ PAGE = {
     "hero_claim": "Proprio adesso qualcuno qui vicino sta cercando quello che solo tu offri.",
     "hero_say": "Facciamo in modo che ti trovino su Google.",
     "hero_sub": "Google, la mappa e le risposte che danno ChatGPT e Gemini" + NL +
-                "quando qualcuno chiede un negozio come il tuo. Poi il sito "
-                "stesso, e il" + NL +
-                "software che ci sta dietro. Lavoriamo in italiano, inglese e "
-                "albanese.",
+                "quando qualcuno chiede un negozio come il tuo. Lavoriamo in" + NL +
+                "italiano, inglese e albanese.",
+    "hero_proof": "<a href=\"{proof_href}\">Un negozio che seguiamo</a>: {proof_calls} telefonate e" + NL +
+                  "{proof_directions} richieste di indicazioni da Google, da maggio al 6 ottobre 2026.",
     # It must not name the founder: that was a deliberate edit upstream. The
     # first sentence is active ("non ti passiamo") rather than the English
     # passive, because the Italian passive needs a participle that agrees with
     # the reader's gender and this site does not know it.
-    "hero_who": "Non ti passiamo a nessun altro." + NL +
-                "<strong>La persona che legge il tuo sito è la persona che" + NL +
+    "hero_who": "<strong>La persona che legge il tuo sito è la persona che" + NL +
                 "costruisce la soluzione.</strong>",
 
     # -- proof --------------------------------------------------------------
@@ -286,7 +285,7 @@ PAGE = {
 # panel is narrow, the 4 error messages are read aloud when a field is invalid,
 # and each one says what to do rather than what went wrong.
 FORM = {
-    "src": "3ef828c9",
+    "src": "39bc7afb",
 
     # Not chrome_it.BAND_CTA ("Chiedi un audit gratuito"), which is a different
     # string on the same page, exactly as in English.
@@ -297,9 +296,6 @@ FORM = {
     "done": "L'audit arriva {turnaround}. Non c'è niente? Una riga a" + NL +
             "{email} e te lo" + NL +
             "rimandiamo.",
-    # Reaches us as the email's subject line, so it says which form sent it,
-    # and in which language.
-    "subject": "Richiesta di audit gratuito dalla homepage di {brand}",
     "url_label": "Il tuo sito",
     # The example domain is localised, like the copy. An Italian reader parses
     # "iltuonegozio.it" as an example at a glance; "yourshop.al" would be read
