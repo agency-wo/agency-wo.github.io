@@ -480,7 +480,7 @@ know.
 Do I own it?
 Yes. The code is yours, it runs on your accounts, and it is documented
 so somebody else could take it over.
-Updated 6 September 2026
+Updated 7 October 2026
 Running today
 One full operations system in a Durres watch shop. Two shops publishing
 their own websites from a phone. One till wired to a website. All of it
@@ -795,7 +795,7 @@ The document itself, section by section, so nobody has to hand over an email add
 Read it
 SEO in Tirana
 22 August 2026
-What a small studio is actually up against in the capital, and the ground where it still wins.
+What a studio from Durres is actually up against in the capital, and the ground where it still wins.
 Read it
 SEO in Pavia
 22 August 2026
@@ -1064,7 +1064,7 @@ https://minarankstudio.com/blog/your-phone-number-says-three-things/
 
 The map has one number, the site has another, and a directory has a third.
 One of the cheapest things on any audit, and one of the most common.
-By Henri Sila · 6 September 2026
+By minarank studio · 6 September 2026
 The short answer
 Your name, address and phone number are printed in more places than you remember: the Google profile, the site footer, Facebook, an old directory, a supplier page. When they disagree, a search engine has to guess which is current.
 It guesses conservatively, which means a shop with one consistent answer outranks a shop with 3 versions of the truth.
@@ -1113,7 +1113,7 @@ https://minarankstudio.com/blog/what-seo-costs-in-italy/
 
 Nobody can quote this honestly without looking first.
 Four things decide the number. A studio that names a price before knowing any of them has guessed.
-By Henri Sila · 30 August 2026
+By minarank studio · 30 August 2026
 What actually moves the number
 How many pages your range genuinely needs. How much competition already sits on the words you want. Whether the site you have can be repaired or has to be rebuilt. And how many languages you publish, because each one is a separate piece of writing and a separate thing to keep current.
 Change any of those four and the figure moves a long way. That is why we do not publish a rate card.
@@ -1158,7 +1158,7 @@ https://minarankstudio.com/blog/seo-varese/
 
 Your customer searches from where they work, not where they live.
 Tens of thousands of people leave Varese every morning and search for things while they are gone.
-By Henri Sila · 30 August 2026
+By minarank studio · 30 August 2026
 Near me means near the phone
 A search engine answers a location query from where the device is standing. For somebody who lives in Varese and works in Milano or across the border, that is the wrong place for most of the day, and your business is not in the answer they get.
 They are not lost customers. They are customers being shown somebody else while they are at their desk.
@@ -1203,7 +1203,7 @@ https://minarankstudio.com/blog/seo-como/
 
 In summer your customers search in a language you do not publish.
 In February the searches are Italian and practical. In July they are English, German and booked from somewhere else.
-By Henri Sila · 30 August 2026
+By minarank studio · 30 August 2026
 The year is really two markets
 Out of season the searches come from people who live here, in Italian, about practical things. In season a second audience arrives from outside the country, searching in English or German, often before they have left home.
 They want different things and they phrase them differently. One site written for the first audience is invisible to the second for the months that pay for the year.
@@ -1248,7 +1248,7 @@ https://minarankstudio.com/blog/seo-brescia/
 
 30 searches a month can be the better number.
 Brescia sells to other companies more than it sells to passers by. Search behaves differently when it does.
-By Henri Sila · 30 August 2026
+By minarank studio · 30 August 2026
 Most of the money here moves between companies
 Brescia runs on metalwork, machining, valves and the firms that supply them. A buyer looking for a subcontractor is not browsing. They have a drawing, a tolerance and a deadline, and they type something narrow and technical.
 That query might be searched 30 times in a month across the whole province. Every one of those 30 is somebody with a budget and a reason.
@@ -1293,7 +1293,7 @@ https://minarankstudio.com/blog/seo-bergamo/
 
 Bergamo does not hand its searches to Milano.
 An airport, a hospital, a university and a population that calls itself Bergamasco before it calls itself Lombard.
-By Henri Sila · 30 August 2026
+By minarank studio · 30 August 2026
 The searches stay inside the city
 Somebody in Bergamo who needs a boiler repaired types the trade and the city, or types the trade and lets the phone fill in the city. Widening the search to Milano would not occur to them, because nothing about their week points that way.
 Compare that with a town of similar size inside the Milano commuter belt, where the same query drifts north and the business two streets away never appears in it.
@@ -1338,7 +1338,7 @@ https://minarankstudio.com/blog/hiring-a-studio-abroad/
 
 What you give up, and what you get back for it.
 There are real things a distant studio cannot do. Here they are, before you find them out yourself.
-By Henri Sila · 30 August 2026
+By minarank studio · 30 August 2026
 What we do not have
 We have no office in Italy and no Italian case study yet. We cannot walk into your shop, photograph your stock on a Tuesday, or sit in a meeting with your accountant. If any of those matters more to you than the work itself, hire somebody local and we will say so on the first call.
 What distance stopped costing
@@ -1353,7 +1353,7 @@ When local is simply the better answer
 If your business runs on walking in and shaking hands, if you need somebody physically present to photograph work as it happens, or if you would rather pay more for a face in the room, that is a legitimate choice and not one we will argue you out of.
 Questions worth asking
 Who actually does the work?
-One person, and the same person you speak to. There is no team to hand you down to, which is a limit as much as a promise: it caps how many clients we can take at once.
+The same person you speak to. Nobody hands you on to someone else, which is a limit as much as a promise: it caps how many clients we can take at once.
 Is the Italian written or translated?
 Written. A translated page announces itself by the second line and your customers notice before Google does.
 What about invoicing and tax?
@@ -1382,7 +1382,7 @@ https://minarankstudio.com/blog/why-my-website-gets-no-visitors/
 
 A site nobody was ever told about is a shop with no door.
 Having a website and being findable are separate purchases, and a great many people only made the first one.
-By Henri Sila · 22 August 2026
+By minarank studio · 22 August 2026
 Check first that it can be indexed at all
 A surprising number of sites are quietly telling search engines to stay away, usually a setting left on from when the site was being built and never switched off.
 It costs nothing to rule out and it explains the most extreme cases, the ones where not even the business name finds the site.
@@ -1428,7 +1428,7 @@ https://minarankstudio.com/blog/why-is-my-competitor-above-me/
 
 Usually one of five reasons, and four are fixable.
 The most common question we get, and the one with the most checkable answer.
-By Henri Sila · 22 August 2026
+By minarank studio · 22 August 2026
 They have reviews and you do not
 Open both profiles side by side and count. This is the commonest answer and the least technical one, and it is decided by customers rather than by anything on your site.
 It is also the fastest gap to close, because most of your customers would leave one and have never been asked.
@@ -1476,7 +1476,7 @@ https://minarankstudio.com/blog/what-seo-costs-in-albania/
 
 Nobody publishes a number, so here is how the number is built.
 Written for somebody who has asked two agencies and received two figures with nothing in between to compare.
-By Henri Sila · 22 August 2026
+By minarank studio · 22 August 2026
 Why nobody publishes a price
 Because the work is not one thing. Fixing a shop that already ranks and starting a business that has never been indexed share a name and almost nothing else.
 A published number would be wrong for most readers in one direction or the other, so the industry publishes nothing and everybody assumes the worst.
@@ -1525,7 +1525,7 @@ https://minarankstudio.com/blog/what-a-website-audit-contains/
 
 What is in the free one, and what is not.
 It is offered free on every page of this site, which is a reason to describe it rather than leave it as a word.
-By Henri Sila · 22 August 2026
+By minarank studio · 22 August 2026
 How you compare, which is the part that matters
 Your site on its own is a list of opinions. Your site beside the three businesses currently above you is a plan, because it shows which gaps are real and which are cosmetic.
 So the first section is the comparison, and the ranking of everything after it comes out of that rather than out of a generic checklist.
@@ -1571,14 +1571,14 @@ https://minarankstudio.com/blog/seo-tirana/
 
 In Tirana the broad words are taken. The market is not.
 An honest read of a market where several competitors have a decade of head start.
-By Henri Sila · 22 August 2026
+By minarank studio · 22 August 2026
 What Tirana actually puts in front of you
 Businesses that have been publishing since before you registered a domain, agencies with a budget for this, and a handful of national brands who rank in Tirana without trying because they rank everywhere.
 None of that is fixable with effort this year, and any proposal that does not begin by saying so is asking you to fund an education.
 The widest Tirana term is usually the wrong target
 The single broad term everyone wants is expensive, slow and full of people who are still comparing. Underneath it sit the phrases somebody types when they have already decided, and those are quieter, cheaper and worth more per visit.
 Winning one term nobody talks about, that fifteen people a week type with a wallet open, beats losing the one everybody talks about.
-Where a small studio genuinely has the advantage
+Where we genuinely have the advantage
 Speed and answerability. A page can be rewritten the day you ask for it, because there is no queue, no account manager and no ticket. That sounds small until you have waited three weeks for a price change.
 The larger the agency you are compared with, the more this is the thing they cannot copy.
 Reviews decide it once you are in the running
@@ -1618,7 +1618,7 @@ https://minarankstudio.com/blog/seo-pavia/
 
 Pavia loses its searches to Milan, 35 kilometres north.
 For a Pavia business watching customers search here and then buy somewhere else.
-By Henri Sila · 22 August 2026
+By minarank studio · 22 August 2026
 The demand slides north
 Somebody in Pavia searches for a thing, finds nothing convincing nearby, and buys it in Milan half an hour later. That is not laziness. The local result gave them no reason to stay.
 Meanwhile agencies from the bigger city quote for a market this size at prices set by one several times larger, so a business here is squeezed from both directions at once.
@@ -1665,7 +1665,7 @@ https://minarankstudio.com/blog/seo-milano/
 
 Milan is not one market. It is forty.
 For somebody who serves eight streets and keeps being offered a plan for two million people.
-By Henri Sila · 22 August 2026
+By minarank studio · 22 August 2026
 The city breaks into zones
 Search from Isola and you get Isola. Search from Citta Studi and you get Citta Studi. For a great many businesses the real competition is not all of Milan, it is the six or seven places inside the same walk.
 That changes the arithmetic brutally. Against the whole city your problem is enormous. Against your own radius it is a list of names you can open one by one in an afternoon.
@@ -1712,7 +1712,7 @@ https://minarankstudio.com/blog/seo-for-a-new-business/
 
 Starting from nothing is a position, not a disadvantage.
 Everything here was done for a shop that had no website in May, so the order is the one that was actually used.
-By Henri Sila · 22 August 2026
+By minarank studio · 22 August 2026
 Week one is the listing, not the website
 The map profile is free, it is the fastest thing to move, and most of your competitors have filled in about a third of theirs. That gap is the cheapest advantage available to anybody starting today.
 Categories, every service named, real hours, photographs of the actual place, and the questions people ring to ask, answered there.
@@ -1759,7 +1759,7 @@ https://minarankstudio.com/blog/seo-durres/
 
 In Durres the map is not part of the result. It is the result.
 For a business whose customers are within a few kilometres of the door.
-By Henri Sila · 22 August 2026
+By minarank studio · 22 August 2026
 What a Durres search actually shows
 Type a trade and Durres into a phone and count what appears above the ordinary results. A map, then three businesses. Whatever sits underneath is read by a minority of people and almost none of them in a hurry.
 So the honest goal here is one of those three places, and everything else is either a route to it or a distraction from it.
@@ -1808,7 +1808,7 @@ https://minarankstudio.com/blog/lawyers-and-notaries/
 
 Nobody searches for a lawyer. They search for a document.
 One of the few trades where the standard local search playbook needs rewriting rather than applying.
-By Henri Sila · 22 August 2026
+By minarank studio · 22 August 2026
 What people actually type
 Not the profession. The thing they need done: a sale contract, a power of attorney, an inheritance, a company registration, a translation certified.
 A site organised by practice area answers a question nobody asked. One page per document, named the way a client would name it, answers the question they typed.
@@ -1854,7 +1854,7 @@ https://minarankstudio.com/blog/how-to-get-google-reviews/
 
 Nearly everybody would leave one. Almost nobody is asked.
 This is the part every business knows it should do and almost none of them has a method for.
-By Henri Sila · 22 August 2026
+By minarank studio · 22 August 2026
 Make it one tap before you ask anybody
 Your profile has a short link made for exactly this. Find it, save it, and put it wherever you already talk to customers: the message signature, the invoice, a small card by the till.
 Asking somebody to search for you, find the right listing and scroll to the button loses most people. The link removes four steps.
@@ -1901,7 +1901,7 @@ https://minarankstudio.com/blog/gyms-and-fitness-studios/
 
 The decision is made before anybody walks in.
 Written after looking at what people actually check before choosing where to train.
-By Henri Sila · 22 August 2026
+By minarank studio · 22 August 2026
 Price and timetable, or nothing
 These are the two things every single person checks, and the two things most sites here leave out. A price you have to ask for reads as a price you will not like.
 The timetable is worse to omit, because somebody with a fixed work schedule cannot decide anything without it. They move on to a gym that published theirs.
@@ -1947,7 +1947,7 @@ https://minarankstudio.com/blog/builders-and-contractors/
 
 You are hired on evidence. Most sites publish none.
 The trade where the gap between the good ones and the findable ones is widest.
-By Henri Sila · 22 August 2026
+By minarank studio · 22 August 2026
 Finished work, or nothing
 This is the whole trade. Somebody deciding whether to give you a large sum wants to see rooms you finished, with enough detail to believe you were there.
 Ten jobs, a few photographs each, what it was and roughly how long. That page outperforms every other page you could build, and almost nobody in this trade has one.
@@ -1994,7 +1994,7 @@ https://minarankstudio.com/blog/how-to-come-up-first-on-google/
 
 There are two first places, and one of them is free.
 Everybody asks for first place. On a phone there are two of them, they are won differently, and the one that matters most locally costs nothing to enter.
-By Henri Sila · 21 August 2026
+By minarank studio · 21 August 2026
 Two first places, not one
 Search for something local on a phone and the map comes up before anything else: three businesses, a distance, a star rating. Under it sit the ordinary results, the ones people mean when they say website.
 They are separate competitions. The map runs on your listing, your reviews and how near you are to whoever is searching. The results beneath run on your site. Fixing one does very little for the other.
@@ -2043,7 +2043,7 @@ https://minarankstudio.com/blog/how-long-seo-takes/
 
 Weeks for one half of it, months for the other.
 The listing can move inside a fortnight. The results beneath it take the better part of a year. One number covering both is a guess.
-By Henri Sila · 21 August 2026
+By minarank studio · 21 August 2026
 The quick half
 A properly finished Google Business Profile can change what you see inside a fortnight, sometimes sooner. Not because of any trick, but because most rivals stopped a third of the way through theirs.
 That is precisely why it goes first. It is cheap, it is fast, and the field is weak.
@@ -2089,7 +2089,7 @@ https://minarankstudio.com/blog/google-business-profile-albania/
 
 The free thing almost nobody finishes.
 It costs nothing, it takes an afternoon, and roughly two thirds of the businesses around you have left most of it blank.
-By Henri Sila · 21 August 2026
+By minarank studio · 21 August 2026
 Start with the category, because everything hangs off it
 The primary category is the single strongest signal on the whole listing, and it decides which searches you are even eligible for. Pick the one that names what you mainly do, not the broadest one available.
 Then add the secondary categories for the rest. A garage that also does tyres should say so; a listing with one vague category competes for nothing in particular.
@@ -2136,7 +2136,7 @@ https://minarankstudio.com/blog/watch-shops-and-jewellers/
 
 A watch shop is 2 businesses, and only 1 of them is urgent.
 The customer with a dead battery and the customer saving for a Seiko are not the same person, and nothing you do reaches both at once.
-By Henri Sila · 14 August 2026
+By minarank studio · 14 August 2026
 The short answer
 A watch shop sells 2 things that behave nothing alike. A repair is a problem somebody wants gone this week. A watch is a decision somebody turns over for a month.
 Most shops build for one and wonder why the other never arrives.
@@ -2185,7 +2185,7 @@ https://minarankstudio.com/blog/the-last-4-weeks/
 
 The last 4 weeks of the quarter beat the first 8.
 Search does not pay out evenly. The quarter that averaged position 8.8 put over half its clicks at the end.
-By Henri Sila · 14 August 2026
+By minarank studio · 14 August 2026
 The short answer
 Search work pays at the end, not evenly. In watch.al's first quarter online, Google sent 900 clicks, and 458 of them, over half, arrived between 3 August and 30 August, the final 28 days.
 The window on its own
@@ -2220,7 +2220,7 @@ https://minarankstudio.com/blog/restaurants-and-cafes/
 
 Your menu is a photograph, so nobody can search it.
 The dish you are known for is written down somewhere no machine can read, which is the same as not having written it.
-By Henri Sila · 14 August 2026
+By minarank studio · 14 August 2026
 The short answer
 Somebody hungry types a dish, not a restaurant. If your menu is a photograph or a PDF, the words on it do not exist as far as search is concerned, and neither do you.
 A menu written as text on a page is the cheapest thing on this list and almost nobody does it.
@@ -2266,7 +2266,7 @@ https://minarankstudio.com/blog/map-listing-first/
 
 This is what a new shop's first 3 months on Google look like.
 Position 8.8. A 1.1% click rate. One spike in July that had nothing to do with us.
-By Henri Sila · 14 August 2026
+By minarank studio · 14 August 2026
 The short answer
 If you are starting from no website, expect months, not weeks, and expect the first numbers to look unimpressive. Iglisi Watch went from nothing in May to 900 clicks a quarter by August. Average position 8.8. Click rate 1.1%.
 Those are the numbers of a business Google has started trusting and has not finished trusting. Know both halves before you hire anybody.
@@ -2309,7 +2309,7 @@ https://minarankstudio.com/blog/heating-and-cooling-trades/
 
 Your busiest week decides most of your year.
 You cannot build a listing during the cold snap. By then the searches are already happening and the answer is whatever Google has on file.
-By Henri Sila · 14 August 2026
+By minarank studio · 14 August 2026
 The short answer
 Heating work does not arrive evenly. It arrives in the first genuinely cold week, all at once, from people who were not thinking about you the week before.
 Everything that decides whether they find you had to be in place before that week started.
@@ -2357,7 +2357,7 @@ https://minarankstudio.com/blog/car-repair-and-garages/
 
 They search the noise the car is making.
 A page that says car repair answers a search nobody makes. A page about a knocking sound answers the one they do.
-By Henri Sila · 14 August 2026
+By minarank studio · 14 August 2026
 The short answer
 A driver with a problem does not know what is broken. They know it makes a noise when turning, or a light came on, or there is a smell after a long drive.
 That is what gets typed. The garage that has written those words down somewhere is the one that turns up.
@@ -2403,7 +2403,7 @@ https://minarankstudio.com/blog/why-chatgpt-names-your-competitor/
 
 Read the answer it gave, then find where every part of it came from.
 The reason is almost always visible in the answer itself, if you read it as evidence.
-By Henri Sila · 6 September 2026
+By minarank studio · 6 September 2026
 Ask it properly first
 Ask the way a customer would, not the way an owner would. Not your business name, which any assistant will be polite about, but the job somebody needs doing and the town they need it in.
 Ask 3 assistants, save the answers with the date, and ask again in a month. Without the notes you have an impression instead of a measurement.
@@ -2451,7 +2451,7 @@ https://minarankstudio.com/blog/when-ai-gets-your-business-wrong/
 
 It named you, and half of what it said is out of date.
 An old address, hours you changed years ago, a service you stopped offering.
-By Henri Sila · 6 September 2026
+By minarank studio · 6 September 2026
 The short answer
 Correct the sources, not the assistant. Nothing you write to an assistant reaches it, and nothing you change on your own site reaches it either until the material it learned from changes too.
 So the job is finding which copy of the old fact it is reading, and there are usually 2 or 3.
@@ -2501,7 +2501,7 @@ https://minarankstudio.com/blog/ai-search-milano/
 
 In a city this size, the assistant has to choose 3.
 The competition is not the businesses above you. It is the length of the answer.
-By Henri Sila · 6 September 2026
+By minarank studio · 6 September 2026
 Why a big city changes the problem
 In a small town an assistant naming local businesses may only have a handful to describe. In Milan it can have hundreds for the same question, and it still answers with 3.
 So the gap between being known and being named is wider here than anywhere else in Italy, and it does not close by being slightly better.
@@ -2547,7 +2547,7 @@ https://minarankstudio.com/blog/aio-aeo-geo/
 
 Three acronyms, one piece of work.
 The letters keep changing. What somebody has to do to your site does not.
-By Henri Sila · 3 September 2026
+By minarank studio · 3 September 2026
 What each one stands for
 AIO is AI optimisation. AEO is answer engine optimisation. GEO is generative engine optimisation. All three describe getting named when somebody asks an assistant for a business like yours.
 No standards body handed those out. They were coined separately, mostly by people who needed a word for a service they had started selling, and all three stuck.
@@ -2587,7 +2587,7 @@ https://minarankstudio.com/blog/ai-search-pavia/
 
 An assistant does not know you are standing in Pavia.
 Google shows you Pavia because it knows where the phone is. An assistant answers from what it has read.
-By Henri Sila · 3 September 2026
+By minarank studio · 3 September 2026
 Proximity was the advantage and it does not carry over
 Somebody searching on a phone here is shown this town, because the search knew where the phone was. That was structural, and it belonged to you rather than to anybody who wanted to sell it to you.
 An assistant has no map panel and no radius. It answers out of what it has read, and what has been written about Milan is thicker than what has been written about Pavia by a wide margin.
@@ -2633,7 +2633,7 @@ https://minarankstudio.com/blog/ai-search-como/
 
 An assistant answers your summer visitor from somebody else's page.
 It will not say it does not know. It names three places, and one of them might be you.
-By Henri Sila · 3 September 2026
+By minarank studio · 3 September 2026
 The question changes language and the answer does not wait
 Out of season somebody here asks in Italian about something practical. In July somebody in Munich or Manchester asks a similar thing in German or English, weeks before arriving. Both get an answer.
 What differs is where the answer was built from. When your own pages say nothing in that language, an assistant assembles it out of whatever else mentions the lake, and that is usually a booking platform.
@@ -2679,7 +2679,7 @@ https://minarankstudio.com/blog/does-my-agency-do-ai-search/
 
 Ask them what an assistant says about you today.
 You do not need to understand the mechanics to ask this. You need to hear whether they have an answer at all.
-By Henri Sila · 30 August 2026
+By minarank studio · 30 August 2026
 The short answer
 Ask your agency to show you what ChatGPT, Gemini or Perplexity currently say when somebody asks for your trade in your city. Not a report. The actual answer, on screen.
 If they can show you, ask what they have changed to affect it. If they cannot, they are not working on it, and you are paying them monthly while it does not happen.
@@ -2693,7 +2693,7 @@ What a thin answer sounds like is a promise of a position, or a monthly fee atta
 The part nobody can sell you
 Nothing here is bought. There is no submission form and no paid placement inside an assistant's reply, so the position is earned or it is absent. That cuts both ways: a small studio that is genuinely the right answer to a narrow question can be named beside companies many times its size.
 Where this studio sits
-We are one person working from Durres in Albania, publishing in Albanian, Italian and English. The Search Console figures on this site come from Albanian clients, because those are the ones we have. We have no Italian case study yet and no interest in implying one.
+We work from Durres in Albania and publish in Albanian, Italian and English. The Search Console figures on this site come from Albanian clients, because those are the ones we have. We have no Italian case study yet and no interest in implying one.
 Questions worth asking
 Can anyone guarantee I appear in ChatGPT?
 No, and an offer to do it is the clearest signal you are being sold something else. There is no slot to buy and no queue to join.
@@ -2725,7 +2725,7 @@ https://minarankstudio.com/blog/ai-search-in-italian/
 
 Ask in Italian and you get an Italian shaped answer.
 The same question in two languages returns two different sets of businesses. Only one of them can include you.
-By Henri Sila · 30 August 2026
+By minarank studio · 30 August 2026
 The short answer
 An assistant asked something in Italian answers largely from material written in Italian. Ask the same thing in English and a different set of businesses comes back.
 If everything you publish is in one language, you exist inside one of those answers and are absent from the others, however good your site is.
@@ -2770,7 +2770,7 @@ https://minarankstudio.com/blog/will-ai-replace-google/
 
 Wrong question for a small business. Here is the right one.
 Asked constantly, usually by people with no money riding on the answer.
-By Henri Sila · 22 August 2026
+By minarank studio · 22 August 2026
 What is actually happening
 Google is not being replaced so much as answered over. The results are still there, with a summary above them, and a growing number of people stop at the summary.
 Meanwhile assistants that are not Google at all answer the same questions for a different set of people. Both things are true and neither is a replacement.
@@ -2816,7 +2816,7 @@ https://minarankstudio.com/blog/what-is-ai-search/
 
 Somebody asks a question and gets three names, not ten links.
 Written for somebody who has heard the phrase and reasonably suspects it is mostly noise.
-By Henri Sila · 22 August 2026
+By minarank studio · 22 August 2026
 The change in one sentence
 A search engine hands you a list and lets you choose. An assistant reads the list for you and answers with two or three names.
 Everything else follows from that. Position eleven used to mean a trickle of visitors; in an answer that names three businesses it means nothing at all.
@@ -2863,7 +2863,7 @@ https://minarankstudio.com/blog/how-to-appear-in-chatgpt/
 
 There is no form to fill in. There is a shape to be.
 For somebody who has already asked one and found their competitor named instead.
-By Henri Sila · 22 August 2026
+By minarank studio · 22 August 2026
 First, check what they say now
 Ask three of them what they recommend in your trade and town. Write the answers down with the date. That is your starting position and it takes ten minutes.
 Most people skip this and then cannot tell whether anything changed. A note in a file beats a feeling six months later.
@@ -2911,7 +2911,7 @@ https://minarankstudio.com/blog/what-nobody-can-promise-ai-search/
 
 What nobody can promise you about AI search.
 We sell this service. Here is the evidence against most of what is sold alongside it.
-By Henri Sila · 14 August 2026
+By minarank studio · 14 August 2026
 The short answer
 Nobody can promise you a place in an AI answer, and the published research does not support most of what is sold as GEO. We sell this service. We would still rather you knew which parts are measured and which are repeated.
 The 40% figure does not mean what you were told
@@ -2957,7 +2957,7 @@ https://minarankstudio.com/blog/hotels-and-guesthouses/
 
 The same guest costs you less if they arrive directly.
 Every booking that arrives through an agency is the same guest in the same room, with a share of the rate going somewhere else.
-By Henri Sila · 14 August 2026
+By minarank studio · 14 August 2026
 The short answer
 A guesthouse has 2 ways to be found: somebody searches, or an agency shows you to them and keeps a share of the rate. The second is easier and it is not free.
 Being findable on your own is how you keep the difference on the bookings that would have come anyway.
@@ -3005,7 +3005,7 @@ https://minarankstudio.com/blog/holiday-apartments/
 
 You pay the portal again for a guest who already knows you.
 The commission is not the painful part. Paying it a second time, on somebody who already knows your name, is.
-By Henri Sila · 7 October 2026
+By minarank studio · 7 October 2026
 Vila Flamuri, vilaflamuri.com
 The short answer
 A portal is very good at one job, which is putting you in front of somebody who has never heard of you. It charges the same whether it did that job or not.
@@ -3056,7 +3056,7 @@ https://minarankstudio.com/blog/estate-agency-website/
 
 Every agency shows the same flats. Almost none show the paperwork.
 A buyer here is not short of listings. They are short of a reason to believe any particular one.
-By Henri Sila · 7 October 2026
+By minarank studio · 7 October 2026
 Census Properties, censusproperties.com
 The short answer
 You cannot out-list a portal. It carries every agency in the city, including yours, and a buyer will always start there.
@@ -3106,7 +3106,7 @@ https://minarankstudio.com/blog/who-owns-your-website/
 
 If you stopped paying tomorrow, what would you keep?
 Nobody asks this at the beginning. Everybody asks it at the end, and by then the answer is fixed.
-By Henri Sila · 6 September 2026
+By minarank studio · 6 September 2026
 The short answer
 Everything should be registered to the business: the domain, the hosting account, the code, the Google profile, the analytics. If any of it sits in somebody else's account, you are renting that part and the rent has no ceiling.
 This is not about trust. It is about what happens when somebody moves on, closes down, or stops answering.
@@ -3159,7 +3159,7 @@ https://minarankstudio.com/blog/what-an-italian-website-must-show/
 
 Six things to check on your own homepage, in about 5 minutes.
 Open your own site while you read this. Most of these take one line to fix.
-By Henri Sila · 6 September 2026
+By minarank studio · 6 September 2026
 The VAT number, on the homepage
 Anybody with a partita IVA has to publish it on the site, and the rule names the homepage specifically. It comes from art. 35 of D.P.R. 633/1972, and the sanction reported by practitioners writing about it runs from 258.23 to 2,065.83 euro.
 A footer counts. A contact page on its own does not, because the rule says where.
@@ -3204,7 +3204,7 @@ https://minarankstudio.com/blog/web-design-milano/
 
 You will not run out of studios here. You will run out of patience comparing them.
 The hard part is not finding somebody. It is telling two quotes apart when both sound reasonable.
-By Henri Sila · 6 September 2026
+By minarank studio · 6 September 2026
 Who this is for
 A shop, a studio or a practice with somewhere between one and 20 people, selling to a part of the city rather than to the country. Not a brand with a marketing department, who should hire an agency and will.
 What you are choosing between
@@ -3248,7 +3248,7 @@ https://minarankstudio.com/blog/what-to-write-on-your-website/
 
 You already know the words. You say them all day.
 The stage where most small business sites stall, often for months, with the design already finished.
-By Henri Sila · 22 August 2026
+By minarank studio · 22 August 2026
 Write down the questions first
 For one week, note every question a customer asks you. On the phone, in the shop, in messages. Do not edit them and do not tidy the wording.
 At the end of the week you have your site. Those questions are what people type, in the words they type them in, which is not a coincidence.
@@ -3296,7 +3296,7 @@ https://minarankstudio.com/blog/website-mistakes-albanian-businesses-make/
 
 Eight things, and seven of them cost nothing to fix.
 None of these are exotic. The common faults are common, and most of them are an afternoon of typing.
-By Henri Sila · 22 August 2026
+By minarank studio · 22 August 2026
 Prices and hours that stopped being true
 The commonest fault and the most expensive, because it is the one that makes somebody drive to a closed door. Whatever cannot be updated from a phone will eventually be wrong.
 Text living inside pictures
@@ -3345,7 +3345,7 @@ https://minarankstudio.com/blog/how-to-sell-online-in-albania/
 
 The hard part is not the shop. It is getting paid.
 Written after building shops for clients who all hit the same wall in the same order.
-By Henri Sila · 22 August 2026
+By minarank studio · 22 August 2026
 Start with the part everybody skips
 How does the money reach you. Card payment online is the question that decides the shape of everything else, and it is worth answering before a single product page exists.
 Businesses build the shop first, discover the answer, and rebuild. That order is the most common and the most expensive.
@@ -3392,7 +3392,7 @@ https://minarankstudio.com/blog/how-to-choose-a-web-designer/
 
 Six questions, and what a bad answer sounds like.
 Nearly everybody choosing one is doing it for the first time, against somebody doing it for the four hundredth.
-By Henri Sila · 22 August 2026
+By minarank studio · 22 August 2026
 Ask who will own it
 The domain, the code, the hosting and every account should be in your name from the first day. A good answer is immediate and slightly puzzled that you asked.
 A bad answer explains why it is simpler for them to hold it. Simpler is true and it is simpler for exactly one of you.
@@ -3440,7 +3440,7 @@ https://minarankstudio.com/blog/do-i-need-a-new-website-or-a-fix/
 
 Most sites people want to replace only need repairing.
 Rebuilding is the expensive answer and it is usually the wrong one. Here is how to work out which you are looking at.
-By Henri Sila · 22 August 2026
+By minarank studio · 22 August 2026
 The question nobody asks first
 What is actually wrong. Not what you dislike looking at, but what is failing: nobody finds it, or people find it and leave, or you cannot change a price without ringing somebody.
 Those are three different faults with three different repairs, and only one of them is ever solved by a fresh design.
@@ -3491,7 +3491,7 @@ https://minarankstudio.com/blog/agency-or-freelancer/
 
 The real question is who answers when it breaks.
 Both can build you something good. They fail in different ways, and the failure is what you are really choosing between.
-By Henri Sila · 22 August 2026
+By minarank studio · 22 August 2026
 What an agency is buying you
 Cover. If one person is ill, somebody else picks it up, and that is worth real money when a shop depends on the thing being online.
 You also get specialists, which matters on a big build. What you pay for it is overhead: an office, a manager, a salesperson, and a junior doing the work while a senior signs it off.
@@ -3506,7 +3506,7 @@ What a freelancer is buying you
 The person who read your site is the person who fixes it. Nothing gets explained twice and nothing is lost between a meeting and the work.
 What you risk is a single point of failure. One illness, one better offer, one move abroad, and the person holding everything about your site is gone.
 Where this studio sits
-Closer to the second, and we would rather write that down than let it be discovered. One person reads your site and builds the fix, which is stated on the homepage on purpose.
+Closer to the second, and we would rather write that down than let it be discovered. The person who reads your site builds the fix, which is stated on the homepage on purpose.
 What is done about the risk is ownership: the domain, the code and every account are in your name from the first day, so leaving costs you a conversation rather than a rebuild.
 The questions worth asking either of them
 Who owns the code and the accounts when this ends. Who does the actual typing. What happens in month seven when nobody is excited any more. What the monthly bill is for, itemised.
@@ -3542,7 +3542,7 @@ https://minarankstudio.com/blog/wordpress-or-a-built-site/
 
 One of them you rent, the other you own.
 Both can work. They fail differently, they cost differently over five years, and the choice is mostly about who has to maintain the thing.
-By Henri Sila · 21 August 2026
+By minarank studio · 21 August 2026
 What WordPress is actually good at
 Somebody else has already solved a thousand problems for you, and there is a plugin for nearly anything. If you need a membership area, a forum or a complicated shop next month, that head start is real.
 It is also easy to hand to another developer, because a great many people know it. That matters more than studios like ours usually admit.
@@ -3593,7 +3593,7 @@ https://minarankstudio.com/blog/what-a-website-costs-in-albania/
 
 What a website costs here, and what moves the number.
 Nobody can price a website down the phone. These are the four things that actually move it, so you can work out roughly where you sit before you ask anyone.
-By Henri Sila · 21 August 2026
+By minarank studio · 21 August 2026
 Why nobody quotes down the phone
 A website is not a product with a shelf price. It is a stack of decisions, and until somebody has seen what you sell and who you are up against, a figure is a guess wearing a number.
 Looking before quoting is free, and it is not a sales device. It is the only way to hand you a price that is still true a month later.
@@ -3642,7 +3642,7 @@ https://minarankstudio.com/blog/website-or-just-instagram/
 
 Instagram is where they look. It is not where they search.
 For some businesses a social account really is enough for now. Here is how to tell whether yours is one of them.
-By Henri Sila · 21 August 2026
+By minarank studio · 21 August 2026
 When an account genuinely is enough
 If you sell through conversation, your customers already follow you, and new ones arrive because somebody tagged a friend, then a website would sit there being beautiful and doing nothing.
 That is a real situation and it describes plenty of small shops. Spend the money on stock or on photographs instead.
@@ -3693,7 +3693,7 @@ https://minarankstudio.com/blog/web-design-tirana/
 
 We are not in Tirana, and for this work that changes nothing.
 The honest version: the studio is in Durres, the building is remote, and the only thing that genuinely differs about the capital is who is already there.
-By Henri Sila · 21 August 2026
+By minarank studio · 21 August 2026
 Where the studio actually is
 Durres. There is no address in the capital and there is not going to be a rented one, because the first thing a client discovers about a rented address is that nobody is sitting in it.
 What decides a build is whether the work is any good and whether you can reach the person doing it. Neither improves by being forty minutes nearer to you.
@@ -3737,7 +3737,7 @@ https://minarankstudio.com/blog/web-design-durres/
 
 We are in Durres, and so is everything we have built.
 Nearly everything on this site was made for a business within a few kilometres of here. That changes the work more than most people expect.
-By Henri Sila · 21 August 2026
+By minarank studio · 21 August 2026
 Who this is for
 Shops on a street where the customer is already nearby. Trades who get rung rather than browsed. Clinics that people look up after somebody handed them a name.
 All three get found the same way, and none of them needs the sort of site an agency sells to a company with a marketing department.
@@ -3783,7 +3783,7 @@ https://minarankstudio.com/blog/lingerie-shops/
 
 The checkout is the wrong thing to build here.
 A shop can spend everything on a checkout nobody uses, because the question the customer has cannot be answered by a button.
-By Henri Sila · 14 August 2026
+By minarank studio · 14 August 2026
 The short answer
 Lingerie is bought with 2 doubts attached: will it fit, and who sees that I bought it. A checkout answers neither, which is why so many of them sit unused.
 The shops that do well online here sell in a message instead.
@@ -3830,7 +3830,7 @@ https://minarankstudio.com/blog/hairdressers-and-salons/
 
 Getting found is the easy half. Getting them back is the business.
 One new client who returns every 6 weeks is worth more than 10 who came once, and almost all the advice you are sold is about the 10.
-By Henri Sila · 14 August 2026
+By minarank studio · 14 August 2026
 The short answer
 A salon is a repeat business wearing the clothes of a retail one. The money is in somebody coming back 8 times a year, not in the first appointment.
 So the question is not how to be found. It is what happens in the 6 weeks after somebody sits in your chair.
@@ -3876,7 +3876,7 @@ https://minarankstudio.com/blog/fashion-boutiques/
 
 A boutique's problem is not traffic. It is going stale.
 The clothes are the business. If the website is showing what you sold in March, it is arguing against you.
-By Henri Sila · 14 August 2026
+By minarank studio · 14 August 2026
 The short answer
 A boutique changes stock faster than anybody wants to update a website. So the website falls behind, and a customer who drove over for a piece that sold in March does not come back.
 The fix is not discipline. It is making the update take a minute.
@@ -3924,7 +3924,7 @@ https://minarankstudio.com/blog/dentists-and-clinics/
 
 Somebody gave them your name. The site decides what happens next.
 The page is not competing for a stranger. It is confirming what a friend already said, to somebody who is checking.
-By Henri Sila · 14 August 2026
+By minarank studio · 14 August 2026
 The short answer
 People do not shop for a dentist the way they shop for a restaurant. They ask somebody they trust, get a name, and then look that name up.
 So the website is not there to win an argument. It is there to survive being checked.
@@ -3971,7 +3971,7 @@ https://minarankstudio.com/blog/a-website-in-3-languages/
 
 A website in 3 languages, and nobody retypes anything.
 3 languages is 3 sets of pages, not a widget. The question is what keeps them agreeing.
-By Henri Sila · 14 August 2026
+By minarank studio · 14 August 2026
 The short answer
 A real multilingual site is 3 sets of pages, one per language, each one readable by Google at its own address. watch.al runs that way in Albanian, Italian and English, with 58 watches, and nobody has ever updated the same fact twice.
 Why a translation widget is not this
@@ -4007,7 +4007,7 @@ https://minarankstudio.com/blog/a-shop-that-updates-its-own-site/
 
 She updates the site from her phone, and pays nobody.
 The real cost of a shop site is not the build. It is the licence, the fee and the person you must ring.
-By Henri Sila · 14 August 2026
+By minarank studio · 14 August 2026
 The short answer
 Victoria Boutique in Durres adds, edits and removes pieces from her phone. A new piece is on the site in about a minute, in Albanian, Italian and English. There is no content system to license, no monthly fee, and nobody to call.
 Where the money usually goes
@@ -4041,7 +4041,7 @@ https://minarankstudio.com/blog/what-meta-ads-cost-in-italy/
 
 Most of what you spend never reaches us.
 Two amounts leave your account every month. A studio that quotes one number is hiding which.
-By Henri Sila · 6 September 2026
+By minarank studio · 6 September 2026
 Why we would start with Instagram
 A boutique, a pasticceria and a b&b all sell something that photographs well, and Instagram is where a photograph is the whole advert. A heating engineer sells a problem being over, which photographs badly and reads well.
 The platform is the same buying system either way. Which surface the money lands on is a judgement about your stock, not about the software.
@@ -4087,7 +4087,7 @@ https://minarankstudio.com/blog/instagram-or-the-local-tv-slot/
 
 The word advertising still means television to a lot of people.
 One of them tells you exactly who came. The other tells you how many might have.
-By Henri Sila · 6 September 2026
+By minarank studio · 6 September 2026
 Why the comparison is still live
 Plenty of Italian small businesses still think of advertising as a slot on a screen or a page, because for 30 years that is what it was, and the people selling those slots are still ringing.
 They are not obviously wrong. A local slot reaches people who are not looking for you, which is the one thing search cannot do.
@@ -4133,7 +4133,7 @@ https://minarankstudio.com/blog/what-meta-ads-cost-in-albania/
 
 Two numbers, and only one of them comes to us.
 Most confusion about ad pricing is one confusion: what you pay the person running them is not what you pay Meta.
-By Henri Sila · 22 August 2026
+By minarank studio · 22 August 2026
 The two numbers
 The budget goes to Meta. It buys the impressions, you set it, you can change it on a Tuesday, and none of it passes through anybody else's hands.
 The fee goes to whoever builds and watches the campaigns. It pays for the writing, the targeting, the daily checking and the honest report at the end of the month.
@@ -4180,7 +4180,7 @@ https://minarankstudio.com/blog/google-ads-or-seo/
 
 One buys you today. The other buys you next year.
 The comparison every owner runs before spending, usually with somebody selling one of the two answering it.
-By Henri Sila · 22 August 2026
+By minarank studio · 22 August 2026
 The difference in one line
 Ads put you at the top of a page you have not earned, for as long as you keep paying. Search earns the position and keeps it after the spending stops.
 Everything else is detail, and most arguments about the two are really arguments about which of those two problems you have this quarter.
@@ -4234,7 +4234,7 @@ https://minarankstudio.com/blog/whoever-answers-first/
 
 The job goes to whoever answers first.
 A homeowner with no heating calls 3 numbers and books the one that picks up. The ad is the smaller half.
-By Henri Sila · 14 August 2026
+By minarank studio · 14 August 2026
 The short answer
 In the trades, the ad does not win the job. A homeowner with no heating calls 3 numbers and books the one that picks up. Everything you spend on being found is decided in the minutes after somebody finds you.
 The shape of an emergency customer
@@ -4268,7 +4268,7 @@ https://minarankstudio.com/blog/estate-agents/
 
 The portal already has the buyers. You are competing for the seller.
 Every agent in town advertises the same flats to the same buyers on the same site. None of that decides who gets the next instruction.
-By Henri Sila · 14 August 2026
+By minarank studio · 14 August 2026
 The short answer
 Buyers go to the portal, because that is where every property is. Your listing competes there on price and photographs and very little else.
 The seller is the scarce thing. Winning that is a different job and almost nobody spends money on it.
@@ -4316,7 +4316,7 @@ https://minarankstudio.com/blog/what-custom-software-costs-in-italy/
 
 The licence you stop paying is not the whole saving.
 A hairdresser, a b&b and a builder are sold the same software with three different labels on it.
-By Henri Sila · 6 September 2026
+By minarank studio · 6 September 2026
 What is on the market
 There is a package for hairdressers, one for restaurants, one for gyms, one for beauticians, one for b&bs and one for builders. Underneath a lot of them is the same system with a different word on the login screen.
 That is not a scandal. It is the only way a vendor can sell to 6 trades at once, and for plenty of businesses it is genuinely enough.
@@ -4361,7 +4361,7 @@ https://minarankstudio.com/blog/voucher-doppia-transizione/
 
 Somebody else pays for part of it, and most businesses miss the window.
 It covers management software. It does not obviously cover a website, and we would rather say so.
-By Henri Sila · 6 September 2026
+By minarank studio · 6 September 2026
 What it is
 The first national edition of a voucher run through Punto Impresa Digitale, the digital arm of the chambers of commerce. It is a contributo a fondo perduto, meaning a grant rather than a loan, awarded under de minimis rules.
 The scheme puts 150 million euro behind it across 2026 to 2029, at up to 70% of a project depending on the chamber. Checked on 6 September 2026 against the PID scheme page, and these things move, so read it there before you rely on it.
@@ -4406,7 +4406,7 @@ https://minarankstudio.com/blog/when-a-spreadsheet-stops-being-enough/
 
 A spreadsheet fails the day it has to be in two places.
 One file, one person, one place is fine. The trouble starts at two.
-By Henri Sila · 27 August 2026
+By minarank studio · 27 August 2026
 What a spreadsheet is genuinely good at
 It is the fastest way ever invented to answer a question you only have once. No project, no login, no licence. For most of what a small business counts, that is the right tool and we say so.
 We have talked people out of building software more than once, and the reason is nearly always the same: they had a question, not a process.
@@ -4442,7 +4442,7 @@ https://minarankstudio.com/blog/what-custom-software-costs-to-run/
 
 The bill that does not arrive every month.
 Nobody sends you an invoice in March. People do not believe that until the March after.
-By Henri Sila · 27 August 2026
+By minarank studio · 27 August 2026
 The cost that is missing
 There is no charge per user and no yearly renewal, because there is nobody to pay. Owning and renting part company there, and across 5 years it is usually the largest figure in the comparison.
 What does cost money
@@ -4476,7 +4476,7 @@ https://minarankstudio.com/blog/sold-in-the-shop-gone-from-the-site/
 
 Sold at the counter, and off the website about a minute later.
 Nobody sets out to advertise something they already sold. It happens because the two live apart.
-By Henri Sila · 27 August 2026
+By minarank studio · 27 August 2026
 The failure nobody notices until a customer does
 The website says a thing is available. The shop sold it on Saturday. The first person to find out is somebody who travelled in, or who waited for a reply, and that is the worst possible way for it to come out.
 Nobody is being careless. The two systems were never introduced.
@@ -4510,7 +4510,7 @@ https://minarankstudio.com/blog/four-lines-that-were-five/
 
 The 4 money lines that were really 5.
 A stacked chart has no total of its own to disagree with, so it lied quietly for weeks.
-By Henri Sila · 14 August 2026
+By minarank studio · 14 August 2026
 The short answer
 Software a business runs on does not usually fail loudly. It fails by quietly leaving something out, and the business believes the number because it came off a screen.
 Here is one we found in our own build, what it cost, and why we now check for it differently.
@@ -4588,14 +4588,9 @@ customers are searching in, which for most of our clients is not English.
 You do not have to take our word for any of this. minarank studio is listed
 on TechBehemoths, which somebody else runs, and a profile we do not
 control is worth more than a badge we drew ourselves.
-Written and built by Henri Sila in
+Written and built in
 Durres. Questions go to info@minarankstudio.com.
 Questions we get asked
-Is this one person or a team?
-One person, and you always know which one. Henri Sila writes the
-plan, builds the pages and answers the mail. That is a limit as
-much as a promise: we take fewer clients than an agency can, and
-we would rather say so now than be slow later.
 Do we need to be in Durres?
 No. Most of this happens inside a browser and a document, and several
 clients have never been in the same room as us. If you are near, we
@@ -4606,20 +4601,20 @@ doing is working, you get proof of it in writing. If it is not, you
 get a list they can act on. Neither answer means hiring us.
 What happens if we outgrow you?
 It happens, and it is the good kind of problem. When a business
-needs a team of specialists instead of one person, we say so rather
+needs specialists we do not have, we say so rather
 than stretch and hope. Handing over cleanly is part of the job.
 Can we speak to somebody you have worked with?
 Yes. Ask, and we introduce you to the client whose situation looks
 most like yours. The work is public either way: each of them has a
 page here saying what changed and what did not.
-Updated 6 September 2026
+Updated 7 October 2026
 
 ## Free website audit
 https://minarankstudio.com/start/
 
 Get found for what you offer.
 Start with the free audit, or just write. It all
-reaches the same person, and the audit comes back within 24 hours.
+reaches us, and the audit comes back within 24 hours.
 Send us your site and we'll audit it free.
 You get a PDF: what the site does well, where the gaps are, and
 what we'd fix first, in order. It's yours whether you hire us or
@@ -4675,7 +4670,7 @@ photographs and text already exist. That is why the audit comes first
 and costs nothing. You get the price with the plan, on one page, before
 any work starts. Meta ads are a flat fee rather than a cut of what you
 spend.
-Updated 6 September 2026
+Updated 7 October 2026
 Studio
 minarank studio, Durres, Albania
 info@minarankstudio.com
@@ -4770,7 +4765,7 @@ That's the whole form.
 Sent. That's all we needed.
 It goes to a person before it goes to you.
 Expect the PDF within 24 hours.
-Updated 6 September 2026
+Updated 7 October 2026
 What we don't need
 No password, no analytics access, and no call first.
 The address is the whole ask.

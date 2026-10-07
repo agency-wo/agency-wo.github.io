@@ -6,7 +6,6 @@ and the signals split instead of stacking. These are the values in the site's `#
 copy them rather than retyping them.
 
     Name:     minarank studio          <- lowercase m, one word "minarank", then "studio"
-    Founder:  Henri Sila
     City:     Durres                   <- NO diaeresis. See the note below, it matters
     Country:  Albania
     Phone:    +355 67 571 6090         <- international format everywhere

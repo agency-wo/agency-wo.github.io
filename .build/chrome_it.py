@@ -6,7 +6,7 @@ slips a translator actually makes, but the rule is wider than its patterns.
 
 This is wave 0. These 78 words are pasted into every later Italian brief, so a
 term picked loosely here is a term 17 pages repeat, and the site reads like 7
-people wrote it: exactly what a one-person studio cannot look like.
+people wrote it: exactly what a studio with one voice cannot look like.
 
 THE SHAPE IS NOT NEGOTIABLE. i18n.same_shape() compares this file against
 chrome.py at import, so a nav item merged into its neighbour or a footer link
@@ -226,7 +226,7 @@ SIDE_ON_THIS_PAGE = "In questa pagina"
 READ_NEXT = "Da leggere dopo"
 PREF_SOURCE = "Aggiungici come fonte preferita su Google"
 READ_IT = "Leggilo"
-# "Di Henri Sila". Not "Da", which is the agent of a passive and would read as
+# "Di minarank studio". Not "Da", which is the agent of a passive and would read as
 # "written by" only if a verb were in front of it; a standalone byline in
 # Italian takes di.
 BYLINE = "Di"

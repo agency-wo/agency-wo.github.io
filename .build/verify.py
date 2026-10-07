@@ -610,7 +610,7 @@ for p in all_pages:
 # about the Google Business Profile: rule 26 is a promise about what the site
 # says it does, and a promise kept in one language out of 3 is not kept.
 #
-# Nothing here is a typed word. The founder, the number and the term for the
+# Nothing here is a typed word. The number and the term for the
 # business profile are read from shell.py and glossary.TERMS, so the day the
 # glossary changes its mind about a word this follows it.
 _LG_IDX = {"en": 0, "it": 1, "sq": 2}
@@ -623,7 +623,6 @@ def term(concept, lang):
 
 FACTS = [
     # english page          label                     what must appear
-    ("studio/index.html", "founder name", lambda lg: _shell.FOUNDER),
     ("start/index.html", "whatsapp", lambda lg: "wa.me/" + _shell.WHATSAPP),
     # on-page and off-page are in glossary.KEEP_ENGLISH: they are the trade's
     # own words in Italian and Albanian too, and rule 26 names them.
@@ -1604,7 +1603,7 @@ _NOT_COPY = re.compile(
     r"\b(?:[\w-]+(?:\.[\w-]+)+|" + "|".join(re.escape(w) for w in sorted(
         set(glossary.KEEP_ENGLISH) | set(glossary.IDENTICAL_BY_DESIGN)
         | set(i18n.AUTONYM.values())
-        | {_shell.BRAND, _shell.WORDMARK, _shell.EMAIL, _shell.FOUNDER},
+        | {_shell.BRAND, _shell.WORDMARK, _shell.EMAIL},
         key=len, reverse=True)) + r")\b", re.I)
 
 
@@ -2181,8 +2180,8 @@ for _en_page in SERVICE_EN:
 
 # 48. the business entity is complete, and nothing guesses at a profile ----
 # The ProfessionalService node is what an assistant reads when it decides
-# whether this studio is a real business it can name. Rule 27 pins the founder
-# and the WhatsApp number in the copy and nothing pins anything in the graph,
+# whether this studio is a real business it can name. Rule 27 pins the WhatsApp
+# number in the copy and nothing pins anything in the graph,
 # so the node ships with a name, a URL and an email, and says where we are, how
 # to ring us and where else we exist nowhere at all.
 #
@@ -2199,7 +2198,7 @@ for _en_page in SERVICE_EN:
 # meant to carry would be a finding about the check rather than about the site.
 #
 # sameAs is not a homepage question, and reading it as one was the hole.
-# gen_docs.py hangs shell.FOUNDER_SAMEAS on the Person node on /studio/, in all
+# gen_docs.py used to hang a LinkedIn list on a Person node on /studio/, in all
 # 3 languages, and for as long as this loop walked FAMILY[HOME] that placeholder
 # shipped with nothing failing over it: the founder's LinkedIn was an assertion
 # about a stranger's profile, on 3 pages, under a gate that reported the entity
@@ -2574,6 +2573,38 @@ for _p in all_pages:
             findings.append(
                 f"[voice] {rel(_p)}: {_m.group(0)!r} is rule 44. {_why}. "
                 f"Context: ...{_txt[_a:_b].strip()}...")
+
+
+# 55. rule 27: no person is named, anywhere ---------------------------------
+# The owner asked on 2026-10-07 that the site name nobody and never state the
+# team size. A byline, a schema node or a comment that brings the name back
+# would undo that silently, so every text file in the repo is read, the
+# generator sources included. The name is held as 2 sha1 hashes (the full name
+# and the given name, lowercased) rather than spelled out, because spelling it
+# here would publish it in this public repo, which is the one place the rule
+# exists to keep it out of. Team size has no reliable string, so rule 27 in
+# RULES.md carries that half.
+_NAME_HASHES = {"0085c296a1a3f821f0e1e9b361c48f07bf998432", "297922baedcbce951cc0df3d4ef22af43702d487"}
+_TEXT_EXT = (".html", ".txt", ".xml", ".json", ".py", ".md", ".css", ".js",
+             ".svg", ".webmanifest", ".mjs")
+for _d, _dirs, _files in os.walk(ROOT):
+    _dirs[:] = [x for x in _dirs if x not in (".git", "__pycache__", "node_modules")]
+    for _f in _files:
+        if not _f.endswith(_TEXT_EXT):
+            continue
+        _p = os.path.join(_d, _f)
+        try:
+            _w = re.findall(r"[^\W\d_]+", io.open(_p, encoding="utf-8").read().lower())
+        except (UnicodeDecodeError, OSError):
+            continue
+        _hit = any(
+            (len(a) == 5 and hashlib.sha1(a.encode()).hexdigest() in _NAME_HASHES)
+            or (len(a) == 5 and len(b) == 4 and hashlib.sha1(
+                (a + " " + b).encode()).hexdigest() in _NAME_HASHES)
+            for a, b in zip(_w, _w[1:] + [""]))
+        if _hit:
+            findings.append(f"[content] {rel(_p)}: names the person rule 27 "
+                            f"keeps off this site. Use the studio's name instead.")
 
 
 # ------------------------------------------------------------------- report

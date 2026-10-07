@@ -24,7 +24,7 @@ Two things a copy string may also carry, both filled in by the generator:
 - A newline, which is a soft wrap. It sets where the emitted line breaks and
   nothing more. The generator supplies every leading space, so a translator
   breaks lines wherever the sentence wants and never counts indentation.
-- A {token}: {brand}, {founder}, {turnaround}, {email} and {email_delete}
+- A {token}: {brand}, {turnaround}, {email} and {email_delete}
   (both whole mailto links), and {wa_href} (an address, for a link whose label
   is copy). These stop the studio's name, address and stated turnaround from
   being retyped in three languages and drifting in two of them.
@@ -258,7 +258,6 @@ PAGES = [
                        "costs us the job.",
         "og_desc": "Everything here is written to be argued with.",
         "schema": {
-            "job_title": "Founder",
             "knows_about": ["Search engine optimisation", "Local search",
                             "Generative engine optimisation", "Web design",
                             "Meta advertising", "Custom software development"],
@@ -326,16 +325,11 @@ PAGES = [
                   "profile we do not" + NL +
                   "control is worth more than a badge we drew "
                   "ourselves."),
-            ("who", "Written and built by <strong>{founder}</strong> in" + NL +
+            ("who", "Written and built in" + NL +
                     "Durres. Questions go to {email}."),
         ],
         "faq_h": "Questions we get asked",
         "faq": [
-            ("Is this one person or a team?",
-             "One person, and you always know which one. {founder} writes the" + NL +
-             "plan, builds the pages and answers the mail. That is a limit as" + NL +
-             "much as a promise: we take fewer clients than an agency can, and" + NL +
-             "we would rather say so now than be slow later."),
             ("Do we need to be in Durres?",
              "No. Most of this happens inside a browser and a document, and "
              "several" + NL +
@@ -353,7 +347,7 @@ PAGES = [
              "get a list they can act on. Neither answer means hiring us."),
             ("What happens if we outgrow you?",
              "It happens, and it is the good kind of problem. When a business" + NL +
-             "needs a team of specialists instead of one person, we say so "
+             "needs specialists we do not have, we say so "
              "rather" + NL +
              "than stretch and hope. Handing over cleanly is part of the job."),
             ("Can we speak to somebody you have worked with?",
@@ -609,7 +603,7 @@ PAGES = [
         "og_desc": "We answer with a plan and a straight price.",
         "h1": "Get found for what you offer.",
         "standfirst": "Start with the free audit, or just write. It all" + NL +
-                      "reaches the same person, and the audit comes back {turnaround}.",
+                      "reaches us, and the audit comes back {turnaround}.",
         # The long form, against the homepage hero's four fields. Somebody who
         # got this far will tell us more, so this one asks for more.
         "form": {

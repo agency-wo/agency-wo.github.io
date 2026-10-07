@@ -104,7 +104,10 @@ everything checkable is checked by `verify.py`, which fails the build.
 
 ## Facts
 
-27. Founder: **Henri Sila**. WhatsApp: **355675716090**. Both gated.
+27. **No person is named and the team size is never stated** (owner, 2026-10-07):
+    no name in a byline, no Person node, no "one person", "a team" or "on my own"
+    about us, in any language or file. Gate check 55 fails on the name anywhere in
+    the repo. WhatsApp: **355675716090**, gated.
     The number is now DISPLAYED as well as dialled, as `+355 67 571 6090` in the
     footer and the band on every page. `shell.phone_display()` derives that
     spacing from the same constant, so there is still exactly one number in this

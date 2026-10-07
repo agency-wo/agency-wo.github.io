@@ -6,7 +6,7 @@ line here, and it immediately fails every page that carries it.
 
 The failure this exists to stop: 7 agents translating 7 files independently
 produce 7 words for "audit". Each is defensible on its own and the site reads
-like 7 people wrote it, which is exactly what a one-person studio cannot look
+like 7 people wrote it, which is exactly what a studio with one voice cannot look
 like.
 
 Register is INFORMAL throughout: tu in Italian, ti in Albanian. The English is
@@ -52,7 +52,7 @@ KEEP_ENGLISH = [
     # entry, because _NOT_COPY's first alternative takes any name with a dot
     # in it whole.
     "Census Properties", "Vila Flamuri",
-    "Rruga Aleksander Goga", "Henri Sila", "minarank studio",
+    "Rruga Aleksander Goga", "minarank studio",
     # Our own audit engine. A product name, so it is the same word in all 3
     # languages for the same reason "Iglisi Watch" is, and check 35 would
     # otherwise read it on /sq/audit/ as English somebody forgot to translate.

@@ -15,7 +15,7 @@ has to remember about the markup:
 - A newline is a soft wrap and nothing else. It says where the emitted line
   breaks; gen_docs.py adds every leading space. The wraps below are Albanian
   wraps, not the English ones, because the sentences are different lengths now.
-- A {token} names a fact stated once: {brand}, {founder}, {turnaround},
+- A {token} names a fact stated once: {brand}, {turnaround},
   {email}, {email_delete}, {wa_href}. Written literally, never expanded, never
   moved into a different sentence than the English put it in. {turnaround} in
   particular is how /sq/start/ promises one answer time in one place, and gate
@@ -31,7 +31,7 @@ both forms across 151 files and calls it its worst remaining legacy.
 Terms come from glossary.TERMS and are not re-decided here: auditim (never
 "auditim i faqes"), auditim falas, software me porosi (never "i posaçëm"),
 profili në Google, Durrës, Shqipëri. Where a string also exists in chrome_sq.py
-it is reused word for word, because the site has to read like one person wrote
+it is reused word for word, because the site has to read like one hand wrote
 it: "Në pak fjalë", "Detaje", "Shih edhe", "Pyetjet e duhura", "Faqe interneti",
 "Na shkruaj në WhatsApp", "Ballina".
 """
@@ -249,7 +249,7 @@ PAGES = [
     # --------------------------------------------------------------- STUDIO --
     {
         "url": "/studio/",
-     "src": "91f978b1",
+     "src": "749ad0ae",
         "nav": "Studio",
         "title": "Si punojmë",
         "description": "Si punojmë: prova para mendimeve, një dokument i qartë, i bërë "
@@ -257,7 +257,6 @@ PAGES = [
                        "punën.",
         "og_desc": "Gjithçka këtu është shkruar që të kundërshtohet.",
         "schema": {
-            "job_title": "Themelues",
             "knows_about": ["Optimizim për motorët e kërkimit", "Kërkim lokal",
                             "Optimizim për motorët gjenerativë", "Web design",
                             "Reklamim në Meta", "Zhvillim software-i me porosi"],
@@ -331,18 +330,11 @@ PAGES = [
                   "profil që nuk e" + NL +
                   "kontrollojmë vlen më shumë se një stemë që e "
                   "vizatuam vetë."),
-            ("who", "Shkruar dhe ndërtuar nga <strong>{founder}</strong> në" + NL +
+            ("who", "Shkruar dhe ndërtuar në" + NL +
                     "Durrës. Pyetjet shkojnë te {email}."),
         ],
         "faq_h": "Pyetjet që na bëjnë",
         "faq": [
-            ("Jeni një person apo një ekip?",
-             "Një person, dhe e di gjithmonë cili. {founder} shkruan planin," + NL +
-             "ndërton faqet dhe përgjigjet në postë. Është kufi po aq sa "
-             "premtim:" + NL +
-             "marrim më pak klientë se një agjenci, dhe preferojmë ta themi "
-             "tani" + NL +
-             "se sa të jemi të ngadaltë më vonë."),
             ("A duhet të jemi në Durrës?",
              "Jo. Pjesa më e madhe ndodh brenda një shfletuesi dhe një "
              "dokumenti," + NL +
@@ -361,7 +353,7 @@ PAGES = [
             ("Çfarë ndodh nëse rritemi shumë për ju?",
              "Ndodh, dhe është lloji i mirë i problemit. Kur një biznesi i "
              "duhet" + NL +
-             "një ekip specialistësh në vend të një personi, e themi në vend "
+             "specialistë që ne nuk i kemi, e themi në vend "
              "që" + NL +
              "ta tërheqim litarin dhe të shpresojmë. Dorëzimi me rregull "
              "është" + NL +
@@ -582,7 +574,7 @@ PAGES = [
     # ---------------------------------------------------------------- START --
     {
         "url": "/start/",
-     "src": "9bc5e27f",
+     "src": "d6e7a3b2",
         "nav": "Nis një projekt",
         "title": "Auditim falas",
         "description": "Na dërgo faqen tënde dhe merr një auditim falas: çfarë po "
@@ -593,7 +585,7 @@ PAGES = [
         "h1": "Bëhu i gjetshëm për atë që ofron.",
         # {turnaround} 1 of 3. Gate check 25 counts them.
         "standfirst": "Nis me auditimin falas, ose thjesht shkruaj." + NL +
-                      "Gjithçka mbërrin te i njëjti person, dhe auditimi kthehet "
+                      "Gjithçka mbërrin te ne, dhe auditimi kthehet "
                       "{turnaround}.",
         # The long form, against the homepage hero's four fields. Somebody who
         # got this far will tell us more, so this one asks for more.

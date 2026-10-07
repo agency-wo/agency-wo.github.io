@@ -2542,7 +2542,7 @@ POSTS = [
 
     {
         "slug": "agency-or-freelancer",
-        "src": "5f1ded9e",
+        "src": "ce0e088a",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Siti web",
@@ -2595,7 +2595,7 @@ POSTS = [
             ]),
             ("Dove sta questo studio", [
                 "<p>Più vicino al secondo, e preferiamo scriverlo che "
-                "lasciarlo scoprire. Una persona legge il tuo sito e "
+                "lasciarlo scoprire. Chi legge il tuo sito "
                 "costruisce la riparazione, e sta scritto in home page "
                 "apposta.</p>",
                 "<p>Quello che si fa contro il rischio è la proprietà: il "
@@ -4536,7 +4536,7 @@ POSTS = [
 
     {
         "slug": "seo-tirana",
-        "src": "80bf027a",
+        "src": "e2f56523",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Ricerca locale",
@@ -4545,7 +4545,7 @@ POSTS = [
 
         "title": "SEO a Tirana",
         "h1": "A Tirana le parole larghe sono prese. Il mercato no.",
-        "summary": "Contro cosa si trova davvero uno studio piccolo nella "
+        "summary": "Contro cosa si trova davvero uno studio di Durazzo nella "
                    "capitale, e il terreno dove vince ancora.",
         "standfirst": "Una lettura onesta di un mercato dove diversi "
                       "concorrenti hanno dieci anni di vantaggio.",
@@ -4575,7 +4575,7 @@ POSTS = [
                 "quindici persone a settimana digitano col portafoglio "
                 "aperto, batte perdere quello di cui parlano tutti.</p>",
             ]),
-            ("Dove uno studio piccolo ha davvero il vantaggio", [
+            ("Dove abbiamo davvero il vantaggio", [
                 "<p>Velocità e reperibilità. Una pagina si riscrive il "
                 "giorno che lo chiedi, perché non c'è una coda, un account "
                 "manager o un ticket. Sembra poco finché non hai aspettato "
@@ -5664,7 +5664,7 @@ POSTS = [
     },
     {
         "slug": "does-my-agency-do-ai-search",
-        "src": "fe5a4d3b",
+        "src": "7e996b79",
         "date": "2026-08-30",
         "updated": "2026-08-30",
         "topic": "Ricerca AI",
@@ -5718,7 +5718,7 @@ POSTS = [
                 "accanto ad aziende molto più grandi.</p>",
             ]),
             ("Dove sta questo studio", [
-                "<p>Siamo una persona sola che lavora da Durazzo, in Albania, e pubblica in "
+                "<p>Lavoriamo da Durazzo, in Albania, e pubblichiamo in "
                 "albanese, italiano e inglese. I numeri di Search Console su questo sito "
                 "vengono da clienti albanesi, perché sono quelli che abbiamo. Un caso "
                 "italiano non ce l'abbiamo ancora e non abbiamo interesse a lasciarlo "
@@ -5836,7 +5836,7 @@ POSTS = [
     },
     {
         "slug": "hiring-a-studio-abroad",
-        "src": "3966f9a6",
+        "src": "7c1a3e7a",
         "date": "2026-08-30",
         "updated": "2026-08-30",
         "topic": "Ricerca locale",
@@ -5896,8 +5896,8 @@ POSTS = [
         ],
         "faq": [
             ("Chi fa materialmente il lavoro?",
-             "Una persona sola, la stessa con cui parli. Non c'è una squadra a cui "
-             "passarti, che è un limite oltre che una promessa: mette un tetto a quanti "
+             "La stessa con cui parli. Nessuno ti passa a qualcun altro, "
+             "e questo è un limite oltre che una promessa: mette un tetto a quanti "
              "clienti riusciamo a seguire insieme."),
             ("L'italiano è scritto o tradotto?",
              "Scritto. Una pagina tradotta si annuncia da sola alla seconda riga e i "

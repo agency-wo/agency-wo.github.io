@@ -17,7 +17,7 @@ has to remember about the markup:
   wraps, not the English ones, because the sentences are different lengths now.
   Nothing breaks immediately after an elided apostrophe ("un'" + newline would
   render as "un' officina").
-- A {token} names a fact stated once: {brand}, {founder}, {turnaround},
+- A {token} names a fact stated once: {brand}, {turnaround},
   {email}, {email_delete}, {wa_href}. Written literally, never expanded, never
   moved into a different sentence than the English put it in. {turnaround} in
   particular is how /it/start/ promises one answer time in one place, and gate
@@ -260,7 +260,7 @@ PAGES = [
     # --------------------------------------------------------------- STUDIO --
     {
         "url": "/studio/",
-     "src": "91f978b1",
+     "src": "749ad0ae",
         "nav": "Studio",
         "title": "Come lavoriamo",
         "description": "Come lavoriamo: prove prima delle opinioni, un documento "
@@ -268,7 +268,6 @@ PAGES = [
                        "quando ci costano il lavoro.",
         "og_desc": "Tutto quello che c'è qui è scritto per essere contestato.",
         "schema": {
-            "job_title": "Fondatore",
             "knows_about": ["Ottimizzazione per i motori di ricerca",
                             "Ricerca locale",
                             "Ottimizzazione per i motori generativi", "Web design",
@@ -341,18 +340,11 @@ PAGES = [
                   "che gestisce qualcun altro, e un profilo che non "
                   "controlliamo vale" + NL +
                   "più di un distintivo disegnato da noi."),
-            ("who", "Scritto e costruito da <strong>{founder}</strong> a" + NL +
+            ("who", "Scritto e costruito a" + NL +
                     "Durazzo. Le domande vanno a {email}."),
         ],
         "faq_h": "Le domande che ci fanno",
         "faq": [
-            ("Siete una persona sola o una squadra?",
-             "Una persona sola, e sai sempre quale. {founder} scrive il piano," + NL +
-             "costruisce le pagine e risponde alla posta. È un limite quanto "
-             "una" + NL +
-             "promessa: prendiamo meno clienti di un'agenzia, e preferiamo "
-             "dirtelo" + NL +
-             "adesso invece di essere lenti dopo."),
             ("Dobbiamo essere a Durazzo?",
              "No. Quasi tutto succede dentro un browser e un documento, e "
              "diversi" + NL +
@@ -372,7 +364,7 @@ PAGES = [
             ("Cosa succede se diventiamo troppo grandi per voi?",
              "Succede, ed è il tipo di problema buono. Quando a un'azienda "
              "serve" + NL +
-             "una squadra di specialisti invece di una persona, lo diciamo "
+             "specialisti che noi non abbiamo, lo diciamo "
              "invece" + NL +
              "di tirare la corda e sperare. Passare il lavoro con ordine fa "
              "parte" + NL +
@@ -596,7 +588,7 @@ PAGES = [
     # ---------------------------------------------------------------- START --
     {
         "url": "/start/",
-     "src": "9bc5e27f",
+     "src": "d6e7a3b2",
         "nav": "Inizia un progetto",
         "title": "Audit gratuito del sito",
         "description": "Mandaci il tuo sito e ricevi un audit gratuito: cosa ti "
@@ -606,7 +598,7 @@ PAGES = [
         "h1": "Fatti trovare per quello che offri.",
         # {turnaround} 1 of 3. Gate check 25 counts them.
         "standfirst": "Comincia dall'audit gratuito, o scrivi e basta." + NL +
-                      "Arriva tutto alla stessa persona, e l'audit torna indietro "
+                      "Arriva tutto a noi, e l'audit torna indietro "
                       "{turnaround}.",
         # The long form, against the homepage hero's four fields. Somebody who
         # got this far will tell us more, so this one asks for more.

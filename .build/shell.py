@@ -77,7 +77,10 @@ WORDMARK = "minarank"
 # part is a one-line decision and check 50 holds the rest of the repo to it.
 EMAIL = "info@minarankstudio.com"
 WHATSAPP = "355675716090"
-FOUNDER = "Henri Sila"
+# Rule 27 (owner, 2026-10-07): the site names no person and never states how
+# many people work here. There is no founder constant on purpose: a byline, a
+# Person node or a sentence that needs one is the thing the rule forbids, and
+# gate check 55 fails on the name in any file of this repo.
 
 
 def phone_display():
@@ -159,9 +162,6 @@ DIRECTORIES = [
 # URL pasted here would render a "leave a review" sentence that lands somebody
 # on a map card with no review box, which is a broken promise in 3 languages.
 GBP_REVIEW_URL = "https://g.page/r/CQ8FTD_EyBqyEAE/review"
-FOUNDER_SAMEAS = [
-    "https://www.linkedin.com/in/placeholder-paste-the-founder-profile",
-]
 
 # -- search engine verification ---------------------------------------------
 # EMPTY BY DEFAULT, and deliberately not the placeholder-red pattern the

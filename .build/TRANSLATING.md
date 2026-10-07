@@ -96,7 +96,7 @@ helper and there should not be one.
 ## Proper nouns
 
 **Never change**: Iglisi Watch, Victoria Boutique, Intimo Bruna, ProAffy,
-watch.al, Rruga Aleksander Goga, Search Console, Web3Forms, Henri Sila,
+watch.al, Rruga Aleksander Goga, Search Console, Web3Forms,
 minarank studio, and everything in `glossary.KEEP_ENGLISH`.
 
 **Always change**: Durres is *Durazzo* in Italian and *Durrës* in Albanian.

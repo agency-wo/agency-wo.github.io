@@ -121,8 +121,8 @@ READ_NEXT = "Read next"
 PREF_SOURCE = "Add us as a preferred source on Google"
 READ_IT = "Read it"
 # The post byline. Every BlogPosting node has claimed an author since the posts
-# shipped and no post page ever showed one, so the schema asserted a person the
-# reader could not see. The name itself is shell.FOUNDER and is never typed
+# shipped and no post page ever showed one, so the schema asserted an author the
+# reader could not see. The name itself is shell.BRAND and is never typed
 # here: this is the preposition in front of it, which is the only part of a
 # byline that is a translation problem.
 BYLINE = "By"

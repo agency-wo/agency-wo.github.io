@@ -2522,7 +2522,7 @@ POSTS = [
 
     {
         "slug": "agency-or-freelancer",
-        "src": "5f1ded9e",
+        "src": "ce0e088a",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Faqe interneti",
@@ -2576,7 +2576,7 @@ POSTS = [
             ]),
             ("Ku rri kjo studio", [
                 "<p>Më afër të dytit, dhe preferojmë ta shkruajmë se ta lëmë "
-                "të zbulohet. Një njeri lexon faqen tënde dhe ndërton "
+                "të zbulohet. Ai që lexon faqen tënde ndërton "
                 "rregullimin, dhe kjo qëndron e shkruar në faqen kryesore me "
                 "qëllim.</p>",
                 "<p>Ajo që bëhet kundër rrezikut është pronësia: domeni, "
@@ -4493,7 +4493,7 @@ POSTS = [
 
     {
         "slug": "seo-tirana",
-        "src": "80bf027a",
+        "src": "e2f56523",
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Kërkim lokal",
@@ -4502,7 +4502,7 @@ POSTS = [
 
         "title": "SEO në Tiranë",
         "h1": "Në Tiranë fjalët e gjera janë zënë. Tregu jo.",
-        "summary": "Përballë çfarë ndodhet vërtet një studio e vogël në "
+        "summary": "Përballë çfarë ndodhet vërtet një studio nga Durrësi në "
                    "kryeqytet, dhe terreni ku ende fiton.",
         "standfirst": "Një lexim i ndershëm i një tregu ku disa konkurrentë "
                       "kanë dhjetë vjet avantazh.",
@@ -4532,7 +4532,7 @@ POSTS = [
                 "pesëmbëdhjetë veta në javë e shkruajnë me kuletën hapur, i "
                 "mund humbjen e atij për të cilin flasin të gjithë.</p>",
             ]),
-            ("Ku një studio e vogël e ka vërtet avantazhin", [
+            ("Ku e kemi vërtet avantazhin", [
                 "<p>Shpejtësia dhe të qenit i gjetshëm. Një faqe rishkruhet "
                 "ditën që e kërkon, sepse nuk ka radhë, nuk ka menaxher "
                 "llogarie dhe nuk ka biletë. Duket pak derisa ke pritur tri "
@@ -5611,7 +5611,7 @@ POSTS = [
     },
     {
         "slug": "does-my-agency-do-ai-search",
-        "src": "fe5a4d3b",
+        "src": "7e996b79",
         "date": "2026-08-30",
         "updated": "2026-08-30",
         "topic": "Kërkimi me AI",
@@ -5666,7 +5666,7 @@ POSTS = [
                 "kompanive shumë herë më të mëdha.</p>",
             ]),
             ("Ku qëndron kjo studio", [
-                "<p>Jemi një person i vetëm që punon nga Durrësi, në Shqipëri, dhe boton në "
+                "<p>Punojmë nga Durrësi, në Shqipëri, dhe botojmë në "
                 "shqip, italisht dhe anglisht. Shifrat e Search Console në këtë faqe vijnë "
                 "nga klientë shqiptarë, sepse ata janë ata që kemi. Një rast italian nuk e "
                 "kemi ende dhe nuk kemi interes ta lëmë të kuptohet.</p>",
@@ -5780,7 +5780,7 @@ POSTS = [
     },
     {
         "slug": "hiring-a-studio-abroad",
-        "src": "3966f9a6",
+        "src": "7c1a3e7a",
         "date": "2026-08-30",
         "updated": "2026-08-30",
         "topic": "Kërkim lokal",
@@ -5839,8 +5839,8 @@ POSTS = [
         ],
         "faq": [
             ("Kush e bën materialisht punën?",
-             "Një person i vetëm, i njëjti me të cilin flet. Nuk ka ekip te i cili të të "
-             "kalojnë, gjë që është kufi po aq sa premtim: vë një tavan te sa klientë "
+             "I njëjti me të cilin flet. Askush nuk të kalon te dikush tjetër, "
+             "gjë që është kufi po aq sa premtim: vë një tavan te sa klientë "
              "ndjekim dot njëherësh."),
             ("Italishtja shkruhet apo përkthehet?",
              "Shkruhet. Një faqe e përkthyer tradhtohet vetë që në rreshtin e dytë dhe "

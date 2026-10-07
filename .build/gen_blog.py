@@ -172,7 +172,7 @@ def post_page(p, en_p, nxt, by_slug, band, lang, siblings):
          "wordCount": word_count(p),
          "datePublished": p["date"],
          "dateModified": p.get("updated", p["date"]),
-         "author": {"@id": S + shell.localise("/studio/", lang) + "#founder"},
+         "author": {"@id": home + "#org"},
          "publisher": {"@id": home + "#org"},
          "isPartOf": {"@id": blog + "#blog"},
          "inLanguage": lang,
@@ -211,7 +211,7 @@ def post_page(p, en_p, nxt, by_slug, band, lang, siblings):
             # from the same record, not retyped, so they cannot drift apart.
             "published": p["date"],
             "modified": p.get("updated", p["date"]),
-            "author": shell.FOUNDER,
+            "author": shell.BRAND,
             "jsonld": json.dumps({"@context": "https://schema.org", "@graph": graph},
                                  indent=2, ensure_ascii=False)}
 
@@ -328,7 +328,7 @@ def post_page(p, en_p, nxt, by_slug, band, lang, siblings):
         <h1 class="page-title">{p["h1"]}</h1>
         <p class="standfirst">{shell.localise_html(p["standfirst"], lang)}</p>
         <p class="byline">{c.BYLINE} <a href="{shell.localise("/studio/", lang)}"\
- rel="author">{shell.FOUNDER}</a> {shell.DOT} \
+ rel="author">{shell.BRAND}</a> {shell.DOT} \
 <time datetime="{p["date"]}">{l10n.human(p["date"], lang)}</time></p>
       </header>
 

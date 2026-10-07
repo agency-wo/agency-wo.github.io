@@ -2537,8 +2537,8 @@ POSTS = [
             ]),
             ("Where this studio sits", [
                 "<p>Closer to the second, and we would rather write that "
-                "down than let it be discovered. One person reads your site "
-                "and builds the fix, which is stated on the homepage on "
+                "down than let it be discovered. The person who reads your site "
+                "builds the fix, which is stated on the homepage on "
                 "purpose.</p>",
                 "<p>What is done about the risk is ownership: the domain, "
                 "the code and every account are in your name from the first "
@@ -4446,7 +4446,7 @@ POSTS = [
 
         "title": "SEO in Tirana",
         "h1": "In Tirana the broad words are taken. The market is not.",
-        "summary": "What a small studio is actually up against in the "
+        "summary": "What a studio from Durres is actually up against in the "
                    "capital, and the ground where it still wins.",
         "standfirst": "An honest read of a market where several competitors "
                       "have a decade of head start.",
@@ -4476,7 +4476,7 @@ POSTS = [
                 "a week type with a wallet open, beats losing the one "
                 "everybody talks about.</p>",
             ]),
-            ("Where a small studio genuinely has the advantage", [
+            ("Where we genuinely have the advantage", [
                 "<p>Speed and answerability. A page can be rewritten the day "
                 "you ask for it, because there is no queue, no account "
                 "manager and no ticket. That sounds small until you have "
@@ -5606,7 +5606,7 @@ POSTS = [
                 "size.</p>",
             ]),
             ("Where this studio sits", [
-                "<p>We are one person working from Durres in Albania, publishing in "
+                "<p>We work from Durres in Albania and publish in "
                 "Albanian, Italian and English. The Search Console figures on this site "
                 "come from Albanian clients, because those are the ones we have. We have no "
                 "Italian case study yet and no interest in implying one.</p>",
@@ -5777,8 +5777,8 @@ POSTS = [
         ],
         "faq": [
             ("Who actually does the work?",
-             "One person, and the same person you speak to. There is no team to hand you "
-             "down to, which is a limit as much as a promise: it caps how many clients "
+             "The same person you speak to. Nobody hands you on to someone else, "
+             "which is a limit as much as a promise: it caps how many clients "
              "we can take at once."),
             ("Is the Italian written or translated?",
              "Written. A translated page announces itself by the second line and your "

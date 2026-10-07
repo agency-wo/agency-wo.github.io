@@ -6,7 +6,7 @@ form: shkruaj, kalo, merr, shih, lexo, lexoje, nis, përdor, kthehu.
 
 This is wave 0. These 78 words are pasted into every later Albanian brief, so a
 term picked loosely here is a term 17 pages repeat, and the site reads like 7
-people wrote it: exactly what a one-person studio cannot look like.
+people wrote it: exactly what a studio with one voice cannot look like.
 
 THE SHAPE IS NOT NEGOTIABLE. i18n.same_shape() compares this file against
 chrome.py at import, so a nav item merged into its neighbour or a footer link
@@ -235,7 +235,7 @@ SIDE_ON_THIS_PAGE = "Në këtë faqe"
 READ_NEXT = "Lexo më pas"
 PREF_SOURCE = "Na shto si burim të preferuar në Google"
 READ_IT = "Lexoje"
-# "Nga Henri Sila". Albanian marks the author with nga, the same preposition as
+# "Nga minarank studio". Albanian marks the author with nga, the same preposition as
 # the agent, and it is what a byline on any Albanian publication uses.
 BYLINE = "Nga"
 # "Përditësuar më 13 gusht 2026". Albanian puts "më" in front of a date and the

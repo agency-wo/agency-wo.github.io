@@ -137,11 +137,10 @@ def jsonld(h, services, lang):
         # somebody else's server. Placeholders today, and shell.py says why
         # they ship as placeholders rather than as an absent key.
         "sameAs": shell.SAMEAS,
-        "founder": {"@id": S + shell.localise("/studio/", lang) + "#founder"},
         "areaServed": ["AL", "IT", "Worldwide"],
         "knowsLanguage": ["en", "it", "sq"],
-        # What this studio is ABOUT, as opposed to what it sells. The Person
-        # node on /studio/ has carried these 6 topics since it was written and
+        # What this studio is ABOUT, as opposed to what it sells. The /studio/
+        # record has carried these 6 topics since it was written and
         # the organisation carried none, which is the wrong way round: an
         # assistant deciding whether to name a studio reads the organisation.
         #

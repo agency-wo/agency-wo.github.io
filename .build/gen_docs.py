@@ -1,7 +1,7 @@
 """Emit /systems/, /studio/ and /start/ from docs.py through shell.py.
 
 These three are deliberately unlike each other and unlike the service pages.
-Systems is a story then three ways in. Studio is one person talking, set off
+Systems is a story then three ways in. Studio is the studio talking, set off
 the usual axis. Start is a short instruction sheet with no ledger at all.
 
 Every sentence on them now lives in docs.py, so the site can be translated
@@ -113,7 +113,6 @@ def tokens(lang):
     """
     return {
         "{brand}": shell.BRAND,
-        "{founder}": shell.FOUNDER,
         "{turnaround}": shell.turnaround(lang),
         "{email}": EMAIL_LINK,
         "{email_delete}": delete_link(lang),
@@ -511,28 +510,17 @@ def systems_ld(rec, lang):
 def studio_ld(rec, lang):
     url = S + shell.localise(rec["url"], lang)
     org = S + shell.localise("/", lang) + "#org"
-    person = {"@type": "Person", "@id": url + "#founder", "name": shell.FOUNDER,
-              "jobTitle": rec["schema"]["job_title"],
-              "worksFor": {"@id": org},
-              "knowsLanguage": ["en", "it", "sq"],
-              "knowsAbout": rec["schema"]["knows_about"],
-              "url": url}
-    # The founder's OWN profiles, not the studio's. They are 2 entities and a
-    # graph that hands one entity's accounts to the other says they are the
-    # same person, which is a claim nothing can correct from the outside.
-    if shell.FOUNDER_SAMEAS:
-        person["sameAs"] = shell.FOUNDER_SAMEAS
+    # No Person node (rule 27, owner 2026-10-07): the page is about the studio,
+    # and so is every BlogPosting's author.
     return graph(
         {"@type": "AboutPage", "@id": url + "#page", "url": url,
          "name": rec["nav"], "about": {"@id": org},
          "inLanguage": lang,
-         "mainEntity": {"@id": url + "#founder"}},
-        person,
+         "mainEntity": {"@id": org}},
         # This page renders its questions through the same faq_section() as the
         # other two, so leaving faq_node() out here meant the copy a person
         # reads had 5 answers and the copy a machine reads had none. Asked who
-        # runs this studio, an assistant lands on exactly this page: it holds
-        # the Person node every BlogPosting on the site points its author at.
+        # runs this studio, an assistant lands on exactly this page.
         # Returns None when a record has no faq, so this stays safe if the key
         # is ever removed again.
         faq_node(url, rec, lang),
