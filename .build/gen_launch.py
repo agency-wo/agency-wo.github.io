@@ -58,6 +58,7 @@ Run from the project root:  python .build/gen_launch.py
 """
 import html
 import io
+import json
 import os
 import re
 import sys
@@ -470,19 +471,42 @@ print("llms-full.txt %s (%d KB)"
 # an exit code, and the first failure stops the loop: 150 URLs each waiting
 # out a timeout on a dead network is a 25-minute build, and after one refusal
 # the rest were going to fail the same way.
+#
+# ONE REQUEST, NOT ONE PER URL (2026-10-07). This was a GET per URL, 303 round
+# trips, and it never once finished from this machine: two runs in a row timed
+# out partway, at 113 of 303 after 156 seconds and 199 of 303 after 308. The
+# bail-on-first-refusal above is what kept those from being 25-minute builds,
+# so the guard was working and the approach was the problem.
+#
+# IndexNow takes up to 10,000 URLs in a single POST, so the whole site is one
+# request that either lands or does not. 303 chances to hit a timeout become 1,
+# and a submission that used to take 5 minutes takes a second. The per-URL GET
+# is still a documented part of the protocol; it is just the wrong one for a
+# site that republishes every page whenever the footer changes.
 def indexnow_ping(urls):
-    sent = 0
-    for u in urls:
-        q = urllib.parse.urlencode({"url": u, "key": INDEXNOW_KEY})
-        try:
-            fetch("https://api.indexnow.org/indexnow?" + q)
-            sent += 1
-        except Exception as e:
-            print("IndexNow: stopped after %d of %d (%s). Not a build "
-                  "failure: the pages are built and the ping is a courtesy"
-                  % (sent, len(urls), e))
-            return
-    print("IndexNow: pinged %d URL(s)" % sent)
+    body = json.dumps({
+        "host": shell.SITE.split("//")[1].strip("/"),
+        "key": INDEXNOW_KEY,
+        "keyLocation": "%s/%s.txt" % (shell.SITE, INDEXNOW_KEY),
+        "urlList": list(urls),
+    }).encode("utf-8")
+    req = urllib.request.Request(
+        "https://api.indexnow.org/indexnow", data=body, method="POST",
+        headers={"User-Agent": UA,
+                 "Content-Type": "application/json; charset=utf-8"})
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            code = r.status
+    except Exception as e:
+        print("IndexNow: not submitted (%s). Not a build failure: the pages "
+              "are built and the ping is a courtesy" % e)
+        return
+    # 200 is accepted, 202 means accepted with the key still to be verified.
+    # Anything else is the API telling us something and is worth printing
+    # rather than counting as a success.
+    note = "" if code in (200, 202) else "  <- check this"
+    print("IndexNow: submitted %d URL(s) in 1 request, HTTP %s%s"
+          % (len(urls), code, note))
 
 
 # urllib sends "Python-urllib/3.x" and the proxy in front of this site answers
