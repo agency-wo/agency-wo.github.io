@@ -230,6 +230,25 @@ def stamped(path):
         return path + "?v=" + hashlib.sha1(fh.read()).hexdigest()[:8]
 
 
+def with_720(path, w):
+    """srcset for one image: its 720w rendition, then the original.
+
+    Both go through stamped(), for the reason LAUNCH.md 3c gives about the
+    stylesheet: Cloudflare serves /assets/* with a one year browser cache,
+    which is right for a URL that changes when its bytes do and wrong for one
+    that never changes. A new Search Console screenshot shipped on 2026-08-23
+    and every reader who had seen the old chart kept it, with the figures in
+    the prose beside it already updated.
+
+    It lives here rather than in gen_cases, where it was written, because
+    gen_blog needs it too and a generator may not import another one: those
+    modules do their work at import, and one of them pings IndexNow.
+    """
+    stem, ext = path.rsplit(".", 1)
+    return "%s 720w, %s %dw" % (stamped("%s-720.%s" % (stem, ext)),
+                                stamped(path), w)
+
+
 def asset(path):
     """SITE + a path that has to exist in this repo."""
     assert os.path.exists(os.path.join(ROOT, path.lstrip("/"))), (

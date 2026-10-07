@@ -6912,6 +6912,221 @@ POSTS = [
                     ("/seo/", "SEO dhe kërkim vendor"),
                     ("/audit/", "Një auditim falas")],
     },
+
+    # =============================================== INDUSTRY: HOLIDAY LETS ===
+    {
+        "slug": "holiday-apartments",
+        "src": "031c6f0f",
+        "date": "2026-10-07",
+        "updated": "2026-10-07",
+        "topic": "Faqe interneti",
+        "work": "vila-flamuri",
+        "service": ("/web-design/", "Faqe interneti"),
+
+        "title": "Një faqe për apartamente pushimi",
+        "h1": "Portalin e paguan sërish për një mysafir që të njeh tashmë.",
+        "summary": "Një mysafir që kthehet të kushton të njëjtin komision si "
+                   "një i panjohur. Vetëm një faqe e jotja e ndryshon këtë.",
+        "standfirst": "Komisioni nuk është pjesa që dhemb. Ta paguash dy herë, "
+                      "për dikë që ta di tashmë emrin, po.",
+        "description": "Pse apartamentet dhe vilat e vogla vazhdojnë të "
+                       "paguajnë komision për mysafirë që i kanë tashmë, dhe "
+                       "çfarë duhet të bëjë një faqe për ta fituar mesazhin.",
+        "og_desc": "Portali ta prezantoi një herë. Ti paguan për çdo qëndrim "
+                   "pas asaj.",
+        "image": ("vila-flamuri-home.webp", 900, 625,
+                  "Ballina e një faqeje apartamentesh pushimi, me një "
+                  "fotografi të shtëpisë dhe një shirit që kërkon datat e "
+                  "mbërritjes",
+                  "Vila Flamuri, vilaflamuri.com"),
+
+        "body": [
+            ("Përgjigjja e shkurtër", [
+                "<p>Një portal është shumë i mirë në një punë, që është të të "
+                "nxjerrë para dikujt që nuk ka dëgjuar kurrë për ty. Dhe "
+                "paguhet njësoj, pavarësisht nëse e bëri atë punë apo jo.</p>",
+                "<p>Pra faqja nuk është aty për ta mundur portalin. Është aty "
+                "për të marrë mysafirin që portali e prezantoi tashmë.</p>",
+            ]),
+            ("Portali është i mirë pikërisht në një punë", [
+                "<p>Të të gjejë një i panjohur ia vlen të paguhet. Një familje "
+                "që zgjedh një bregdet ku nuk ka qenë kurrë ka nevojë për një "
+                "vend ku të krahasojë, dhe asnjë faqe e vogël nuk do të jetë "
+                "ajo.</p>",
+                "<p>Problemi nis sapo i panjohuri pushon së qeni i tillë. "
+                "Asgjë në atë marrëveshje nuk e vëren se erdhën në gusht, u "
+                "ndien mirë, dhe do të të kishin shkruar drejtpërdrejt po të "
+                "kishte ku.</p>",
+            ]),
+            ("Qëndrimi i dytë është aty ku janë paratë", [
+                "<p>Kush ka qëndruar tashmë te ti është rezervimi më i lirë që "
+                "do të marrësh ndonjëherë. E di rrugën, plazhin dhe kuzhinën, "
+                "dhe nuk ka nevojë të bindet.</p>",
+                "<p>Nëse e vetmja rrugë për t'u kthyer është shpallja ku të "
+                "gjeti herën e parë, ai rezervim mban të njëjtën pjesë si i "
+                "pari. Mysafiri është yti dhe prezantimin po ta shesin dy "
+                "herë.</p>",
+            ]),
+            ("Çfarë ndërtojmë për një vend të tillë", [
+                "<p>Te <a href=\"/work/vila-flamuri/\">Vila Flamuri</a> "
+                "kërkesa niset si mesazh WhatsApp, me datat, mysafirët dhe "
+                "moshën e çdo fëmije tashmë të shkruara. Përgjigjet vetë "
+                "familja.</p>",
+                "<p>Asgjë nuk zihet vetvetiu. Një shtëpi me 15 apartamente "
+                "përgjigjet më shpejt se sa do të qëndronte i vërtetë një "
+                "sistem disponueshmërie, dhe një kalendar që gënjen një herë "
+                "kushton më shumë se sa ka kursyer ndonjëherë.</p>",
+                "<p>Faqet janë në gjuhët ku mysafirët kërkojnë vërtet, dhe "
+                "faqja nuk i kërkon asgjë asnjë kompanie tjetër që të shfaqet: "
+                "pa harta nga jashtë, pa widget rezervimi, pa skripte të "
+                "huaja.</p>",
+            ]),
+            ("Çfarë do të thotë kjo përtej apartamenteve", [
+                "<p>Çdo biznes që e merr klientin e parë nga një treg online e "
+                "ka të njëjtën llogari për të bërë. Tregu e fiton prezantimin "
+                "dhe pastaj paguhet për marrëdhënien.</p>",
+                "<p>Faqja që ia vlen të ndërtohet është ajo që e merr "
+                "marrëdhënien mbrapsht, dhe këtë e bën duke qenë më e lehtë "
+                "për t'i shkruar se sa është shpallja për t'u rihapur.</p>",
+            ]),
+        ],
+        "payoff": "Na thuaj sa prej mysafirëve të sezonit të kaluar kishin "
+                  "qenë më parë, dhe të themi sa të kushtoi portali për t'i "
+                  "njohur",
+        "faq": [
+            ("A duhet t'i lë fare portalet?",
+             "Jo, dhe pothuajse askush nuk duhet. Ata gjejnë ata që nuk kanë "
+             "dëgjuar kurrë për fshatin tënd, punë që vetë nuk e bën dot. "
+             "Çështja është të pushosh së paguari për mysafirët që ata nuk po "
+             "i gjejnë më."),
+            ("A më duhet disponueshmëria e drejtpërdrejtë në faqe?",
+             "Zakonisht jo, dhe shpesh është më keq. Një vend i vogël i "
+             "përgjigjet një mesazhi brenda pak minutash, dhe një kalendar që "
+             "tregon të lirë një javë që ia ke premtuar dikujt të kushton "
+             "mysafirin dhe emrin e mirë njëherësh."),
+            ("A i besojnë mysafirët një faqeje që nuk e njohin?",
+             "I besojnë asaj që mund ta kontrollojnë: fotografi të vërteta, "
+             "një adresë të vërtetë në hartë, minutat në këmbë deri te plazhi "
+             "të matura e jo të hamendësuara, dhe një njeri që përgjigjet. "
+             "Ata i humb faqja e hollë me foto të blera."),
+            ("Po pagesa?",
+             "Këtu shumica e vendeve të vogla paguhen në mbërritje dhe e "
+             "shkruajnë. Nëse do një kaparr, një transfertë bankare e shënuar "
+             "në konfirmim mjafton për të nisur. Arka me kartë është punë më e "
+             "madhe dhe rrallë është ajo që të ndan nga rezervimi."),
+            ("Sa gjuhë më duhen?",
+             "Ato ku kërkojnë mysafirët e tu, që rrallë janë vetëm e jotja. "
+             "Shiko nga erdhi sezoni i kaluar para se të vendosësh, sepse një "
+             "gjuhë që nuk të sjell asgjë kushton për t'u mbajtur sa një që të "
+             "sjell."),
+        ],
+        "related": [("/web-design/", "Faqe interneti"),
+                    ("/seo/", "SEO dhe kërkim lokal")],
+    },
+
+    # =================================================== INDUSTRY: PROPERTY ===
+    {
+        "slug": "estate-agency-website",
+        "src": "0bd10716",
+        "date": "2026-10-07",
+        "updated": "2026-10-07",
+        "topic": "Faqe interneti",
+        "work": "census-properties",
+        "service": ("/web-design/", "Faqe interneti"),
+
+        "title": "Një faqe për një agjenci imobiliare",
+        "h1": "Çdo agjenci tregon të njëjtat apartamente. Pothuajse asnjë nuk "
+              "tregon letrat.",
+        "summary": "Fotografitë dhe çmimi janë në çdo portal. Ajo që mungon "
+                   "është nëse dokumentet janë në rregull.",
+        "standfirst": "Një blerës këtu nuk ka mungesë shpalljesh. Ka mungesë "
+                      "arsyeje për t'i besuar njërës prej tyre.",
+        "description": "Faqja e një agjencie nuk fiton dot te shpalljet, se "
+                       "portali i ka të gjitha. Mund të botojë çfarë është "
+                       "kontrolluar, dhe çfarë jo.",
+        "og_desc": "Portali i ka shpalljet. Nuk i ka dokumentet.",
+        "image": ("census-properties-home.webp", 900, 625,
+                  "Ballina e një faqeje agjencie imobiliare, me një fotografi "
+                  "në perëndim të gjirit pas një titulli për prona në shitje "
+                  "dhe me qira",
+                  "Census Properties, censusproperties.com"),
+
+        "body": [
+            ("Përgjigjja e shkurtër", [
+                "<p>Një portal nuk e mund dot te shpalljet. Mban çdo agjenci "
+                "të qytetit, përfshirë tënden, dhe një blerës do të nisë "
+                "gjithmonë prej andej.</p>",
+                "<p>Ajo që një portal nuk e mban dot është çfarë ke verifikuar "
+                "ti. Është e vetmja gjë në faqen tënde që askush tjetër nuk e "
+                "kopjon dot brenda mesditës.</p>",
+            ]),
+            ("Portali zotëron kërkimin, jo besimin", [
+                "<p>Një portal është filtër: dhoma, çmim, lagje. Rendit atë që "
+                "ka dhe ndalet aty, sepse nuk është ai që përgjigjet për "
+                "asnjërën.</p>",
+                "<p>Pyetja e vërtetë e blerësit nis pas filtrit. Ka 8 "
+                "apartamente të hapura në 8 skeda dhe asnjë mënyrë për të "
+                "kuptuar se cila i qëndron një avokati.</p>",
+            ]),
+            ("Nga çfarë ka frikë vërtet një blerës", [
+                "<p>Jo nga çmimi. Frika është të lësh kaparr për diçka pronësia "
+                "e së cilës del e ndarë, ose lejet e së cilës nuk u dhanë "
+                "kurrë, dhe të kalosh një vit duke e zbuluar.</p>",
+                "<p>Çdo agjenci thotë se kontrollon. Ta thuash është falas, "
+                "ndaj nuk peshon asgjë. Të shtypësh cilat dokumente u panë, "
+                "dhe cilat mungojnë ende, kushton diçka, dhe pikërisht prandaj "
+                "blerësi e beson.</p>",
+            ]),
+            ("Çfarë ndërtojmë për një agjenci", [
+                "<p>Te <a href=\"/work/census-properties/\">Census Properties</a> "
+                "çdo shpallje boton kontrollin e vet të dokumenteve: çfarë "
+                "është verifikuar dhe çfarë jo. Boshllëqet lexohen po aq lehtë "
+                "sa konfirmimet.</p>",
+                "<p>Përreth saj rri një regjistër i lagjeve, secila me faqen e "
+                "vet, sepse një blerës që nuk e njeh qytetin zgjedh një zonë "
+                "para se të zgjedhë një apartament.</p>",
+                "<p>Shpalljet i mban agjencia dhe jo ne, dhe çdo ndryshim "
+                "mbetet i shënuar, kështu ka gjithmonë një përgjigje se kur "
+                "lëvizi një çmim dhe kush e lëvizi.</p>",
+            ]),
+            ("Çfarë do të thotë kjo përtej pronave", [
+                "<p>Çdo zanat klienti i të cilit ka frikë se mos e hedhin e ka "
+                "të njëjtën hapësirë. Konkurrenti kërkon t'i besohet, dhe "
+                "fiton faqja që boton atë gjë që besimit zakonisht i kërkohet "
+                "ta zëvendësojë.</p>",
+            ]),
+        ],
+        "payoff": "Na dërgo 3 shpalljet e tua më të reja dhe të themi çfarë "
+                  "një blerës i kujdesshëm prapë nuk e merr vesh prej tyre",
+        "faq": [
+            ("A nuk do të më rrijë gjithmonë përpara portali?",
+             "Për vetë apartamentin zakonisht po, dhe nuk është ajo beteja për "
+             "t'u zgjedhur. Mund të jesh përgjigjja e parë për lagjen, për "
+             "çfarë do të thotë një certifikatë, dhe për blerjen nga jashtë, "
+             "ku shikon vërtet kush zgjedh një agjenci."),
+            ("A është rrezik të botosh çfarë NUK është kontrolluar?",
+             "Lexohet e kundërta. Një faqe që pranon një certifikatë që "
+             "mungon është një faqe të cilës blerësi i beson për gjithçka "
+             "tjetër, dhe shitësi mëson çfarë duhet të shkojë e të marrë. "
+             "Alternativa është ta zbulosh te noteri."),
+            ("Kush i mban shpalljet të përditësuara?",
+             "Ti, nga paneli yt. Një agjenci që duhet të na dërgojë një "
+             "ndryshim çmimi është një agjenci me çmime të vjetra, dhe një "
+             "çmim i vjetër është e vetmja ankesë që blerësi ua përsërit të "
+             "tjerëve."),
+            ("A më duhet faqja në gjuhë të tjera?",
+             "Nëse u shet atyre që blejnë nga jashtë, po. Janë ata që nuk "
+             "kalojnë dot të shtunën, nuk lexojnë dot një certifikatë, dhe "
+             "kanë më shumë nevojë që letrat të jenë të shkruara. Janë edhe "
+             "ata të cilëve çmimi u peshon më pak."),
+            ("Nga se varet kostoja e një pune të tillë?",
+             "Sa shpallje, sa gjuhë, nëse i mban vetë, dhe nëse kërkimi për "
+             "lagjet ekziston tashmë apo duhet bërë. Auditimi vjen i pari dhe "
+             "nuk kushton asgjë."),
+        ],
+        "related": [("/web-design/", "Faqe interneti"),
+                    ("/seo/", "SEO dhe kërkim lokal")],
+    },
 ]
 
 # /blog/, the index over those records. The soft wraps are placed for this text

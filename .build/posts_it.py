@@ -7001,6 +7001,223 @@ POSTS = [
                     ("/seo/", "SEO e ricerca locale"),
                     ("/audit/", "Un audit gratuito")],
     },
+
+    # =============================================== INDUSTRY: HOLIDAY LETS ===
+    {
+        "slug": "holiday-apartments",
+        "src": "031c6f0f",
+        "date": "2026-10-07",
+        "updated": "2026-10-07",
+        "topic": "Siti web",
+        "work": "vila-flamuri",
+        "service": ("/web-design/", "Siti web"),
+
+        "title": "Un sito per appartamenti per vacanze",
+        "h1": "Paghi di nuovo il portale per un ospite che ti conosce già.",
+        "summary": "Un ospite che torna costa la stessa commissione di uno "
+                   "sconosciuto. Solo un sito diretto cambia le cose.",
+        "standfirst": "La commissione non è la parte che fa male. Pagarla una "
+                      "seconda volta, per qualcuno che sa già come ti chiami, "
+                      "sì.",
+        "description": "Perché appartamenti e piccole ville continuano a "
+                       "pagare commissioni su ospiti che hanno già, e cosa "
+                       "deve fare un sito per meritarsi il messaggio.",
+        "og_desc": "Il portale te li ha presentati una volta. Tu paghi per "
+                   "ogni soggiorno dopo.",
+        "image": ("vila-flamuri-home.webp", 900, 625,
+                  "La homepage di un sito di appartamenti per vacanze, con "
+                  "una fotografia della casa e una barra che chiede le date "
+                  "di arrivo",
+                  "Vila Flamuri, vilaflamuri.com"),
+
+        "body": [
+            ("La risposta breve", [
+                "<p>Un portale è bravissimo in una cosa, cioè metterti davanti "
+                "a qualcuno che non ti ha mai sentito nominare. E si fa pagare "
+                "uguale, che l'abbia fatto o no.</p>",
+                "<p>Quindi il sito non serve a battere il portale. Serve a "
+                "prendersi l'ospite che il portale ha già presentato.</p>",
+            ]),
+            ("Un portale è bravo esattamente in un lavoro", [
+                "<p>Farsi trovare da uno sconosciuto vale la spesa. Una "
+                "famiglia che sceglie una costa dove non è mai stata ha "
+                "bisogno di un posto dove confrontare, e nessun sito piccolo "
+                "lo sarà mai.</p>",
+                "<p>Il problema comincia quando lo sconosciuto smette di "
+                "esserlo. Niente in quell'accordo si accorge che sono venuti "
+                "ad agosto, si sono trovati bene, e ti avrebbero scritto "
+                "direttamente se ci fosse stato dove.</p>",
+            ]),
+            ("Il secondo soggiorno è dove stanno i soldi", [
+                "<p>Chi è già stato da te è la prenotazione più economica che "
+                "prenderai mai. Conosce la strada, la spiaggia e la cucina, e "
+                "non ha bisogno di essere convinto.</p>",
+                "<p>Se l'unica via per tornare è l'annuncio dove ti ha trovato "
+                "la prima volta, quella prenotazione porta la stessa quota di "
+                "prima. L'ospite è tuo e la presentazione te la vendono due "
+                "volte.</p>",
+            ]),
+            ("Cosa costruiamo per un posto così", [
+                "<p>A <a href=\"/work/vila-flamuri/\">Vila Flamuri</a> la "
+                "richiesta parte come messaggio WhatsApp, con le date, gli "
+                "ospiti e l'età di ogni bambino già scritti. Risponde la "
+                "famiglia di persona.</p>",
+                "<p>Niente viene bloccato da solo. Una casa con 15 "
+                "appartamenti risponde prima di quanto un sistema di "
+                "disponibilità resterebbe sincero, e un calendario che mente "
+                "una volta costa più di quanto abbia mai fatto risparmiare.</p>",
+                "<p>Le pagine sono nelle lingue in cui gli ospiti cercano "
+                "davvero, e il sito non chiede niente a nessun'altra azienda "
+                "per comparire: niente mappe caricate da fuori, niente widget "
+                "di prenotazione, niente script altrui.</p>",
+            ]),
+            ("Cosa vuol dire oltre gli appartamenti", [
+                "<p>Qualunque attività che prende il primo cliente da un "
+                "marketplace ha lo stesso conto da fare. Il marketplace si "
+                "guadagna la presentazione e poi si fa pagare il "
+                "rapporto.</p>",
+                "<p>Il sito che vale la pena costruire è quello che si "
+                "riprende il rapporto, e lo fa essendo più facile da scrivere "
+                "di quanto sia riaprire l'annuncio.</p>",
+            ]),
+        ],
+        "payoff": "Dicci quanti ospiti della scorsa stagione erano già stati "
+                  "da te, e ti diciamo quanto ti ha fatto pagare il portale "
+                  "per conoscerli",
+        "faq": [
+            ("Devo lasciare del tutto i portali?",
+             "No, e quasi nessuno dovrebbe. Trovano chi non ha mai sentito "
+             "nominare il tuo paese, che è un lavoro che da solo non fai. Il "
+             "punto è smettere di pagare per gli ospiti che non stanno più "
+             "trovando loro."),
+            ("Mi serve la disponibilità in tempo reale sul sito?",
+             "Di solito no, e spesso è peggio. Un posto piccolo risponde a un "
+             "messaggio in pochi minuti, e un calendario che mostra libera una "
+             "settimana che hai già promesso ti costa l'ospite e il buon nome "
+             "insieme."),
+            ("Gli ospiti si fidano di un sito che non conoscono?",
+             "Si fidano di quello che possono verificare: fotografie vere, un "
+             "indirizzo vero sulla mappa, i minuti a piedi fino alla spiaggia "
+             "misurati e non immaginati, e una persona che risponde. A "
+             "perderli è la pagina magra con immagini comprate."),
+            ("E il pagamento?",
+             "Qui quasi tutti i posti piccoli incassano all'arrivo e lo "
+             "scrivono. Se vuoi una caparra, un bonifico indicato nella "
+             "conferma basta per cominciare. Il carrello con la carta è un "
+             "lavoro più grande e raramente è quello che ti separa dalla "
+             "prenotazione."),
+            ("Quante lingue mi servono?",
+             "Quelle in cui cercano i tuoi ospiti, che raramente sono solo la "
+             "tua. Guarda da dove è arrivata la scorsa stagione prima di "
+             "decidere, perché una lingua che non ti porta niente costa "
+             "mantenerla quanto una che ti porta qualcosa."),
+        ],
+        "related": [("/web-design/", "Siti web"),
+                    ("/seo/", "SEO e ricerca locale")],
+    },
+
+    # =================================================== INDUSTRY: PROPERTY ===
+    {
+        "slug": "estate-agency-website",
+        "src": "0bd10716",
+        "date": "2026-10-07",
+        "updated": "2026-10-07",
+        "topic": "Siti web",
+        "work": "census-properties",
+        "service": ("/web-design/", "Siti web"),
+
+        "title": "Un sito per un'agenzia immobiliare",
+        "h1": "Ogni agenzia mostra gli stessi appartamenti. Quasi nessuna "
+              "mostra le carte.",
+        "summary": "Le fotografie e il prezzo stanno su ogni portale. Quello "
+                   "che manca è se i documenti sono a posto.",
+        "standfirst": "Qui un compratore non è a corto di annunci. È a corto "
+                      "di un motivo per credere a uno in particolare.",
+        "description": "Il sito di un'agenzia non può vincere sugli annunci, "
+                       "perché il portale li ha tutti. Può invece pubblicare "
+                       "cosa è stato controllato, e cosa no.",
+        "og_desc": "Il portale ha gli annunci. Non ha i documenti.",
+        "image": ("census-properties-home.webp", 900, 625,
+                  "La homepage di un sito di agenzia immobiliare, con una "
+                  "fotografia al tramonto del golfo dietro un titolo su "
+                  "immobili in vendita e in affitto",
+                  "Census Properties, censusproperties.com"),
+
+        "body": [
+            ("La risposta breve", [
+                "<p>Non puoi battere un portale sugli annunci. Porta ogni "
+                "agenzia della città, compresa la tua, e un compratore partirà "
+                "sempre da lì.</p>",
+                "<p>Quello che un portale non può portare è ciò che hai "
+                "verificato tu. È l'unica cosa sulla tua pagina che nessun "
+                "altro può copiare entro mezzogiorno.</p>",
+            ]),
+            ("Il portale possiede la ricerca, non la fiducia", [
+                "<p>Un portale è un filtro: stanze, prezzo, quartiere. Ordina "
+                "quello che c'è e si ferma lì, perché non è lui a risponderne."
+                "</p>",
+                "<p>La vera domanda del compratore comincia dopo il filtro. Ha "
+                "8 appartamenti aperti in 8 schede e nessun modo di capire "
+                "quale regge davanti a un avvocato.</p>",
+            ]),
+            ("Di cosa ha paura davvero chi compra", [
+                "<p>Non del prezzo. La paura è versare una caparra su qualcosa "
+                "la cui proprietà risulta divisa, o il cui permesso non è mai "
+                "stato rilasciato, e passare un anno a scoprirlo.</p>",
+                "<p>Ogni agenzia dice di controllare. Dirlo è gratis, quindi "
+                "non pesa niente. Stampare quali documenti sono stati visti, e "
+                "quali mancano ancora, costa qualcosa, ed è per questo che il "
+                "compratore ci crede.</p>",
+            ]),
+            ("Cosa costruiamo per un'agenzia", [
+                "<p>A <a href=\"/work/census-properties/\">Census Properties</a> "
+                "ogni annuncio pubblica il proprio controllo dei documenti: "
+                "cosa è stato verificato e cosa no. I vuoti si leggono con la "
+                "stessa facilità delle conferme.</p>",
+                "<p>Intorno c'è un registro dei quartieri, ognuno con la sua "
+                "pagina, perché un compratore che non conosce la città sceglie "
+                "una zona prima di scegliere un appartamento.</p>",
+                "<p>Gli annunci li tiene l'agenzia e non noi, e ogni modifica "
+                "resta registrata, così c'è sempre una risposta a quando un "
+                "prezzo si è mosso e chi lo ha mosso.</p>",
+            ]),
+            ("Cosa vuol dire oltre il mattone", [
+                "<p>Qualunque mestiere il cui cliente ha paura di farsi "
+                "fregare ha la stessa apertura. Il concorrente chiede di "
+                "essere creduto, e vince la pagina che pubblica la cosa che "
+                "alla fiducia di solito si chiede di sostituire.</p>",
+            ]),
+        ],
+        "payoff": "Mandaci i tuoi 3 annunci più recenti e ti diciamo cosa un "
+                  "compratore attento continua a non capire da lì",
+        "faq": [
+            ("Il portale non mi starà sempre davanti?",
+             "Sull'appartamento in sé di solito sì, e non è quella la "
+             "battaglia da scegliere. Puoi essere la prima risposta sul "
+             "quartiere, su cosa vuol dire un certificato, e sul comprare "
+             "dall'estero, che è dove guarda davvero chi sceglie un'agenzia."),
+            ("Pubblicare quello che NON è controllato è un rischio?",
+             "Si legge al contrario. Una pagina che ammette un certificato "
+             "mancante è una pagina a cui il compratore crede su tutto il "
+             "resto, e il venditore impara cosa andare a prendere. "
+             "L'alternativa è scoprirlo dal notaio."),
+            ("Chi tiene aggiornati gli annunci?",
+             "Tu, dal tuo pannello. Un'agenzia che deve mandarci una modifica "
+             "di prezzo è un'agenzia con prezzi vecchi, e un prezzo vecchio è "
+             "l'unica lamentela che un compratore ripete agli altri."),
+            ("Mi serve il sito in altre lingue?",
+             "Se vendi a chi compra dall'estero, sì. Sono quelli che non "
+             "possono passare di sabato, non sanno leggere un certificato, e "
+             "hanno più bisogno che le carte siano scritte. Sono anche quelli "
+             "a cui il prezzo pesa di meno."),
+            ("Da cosa dipende il costo di un lavoro così?",
+             "Quanti annunci, quante lingue, se li tieni tu, e se la ricerca "
+             "sui quartieri esiste già o va fatta. L'audit viene prima e non "
+             "costa niente."),
+        ],
+        "related": [("/web-design/", "Siti web"),
+                    ("/seo/", "SEO e ricerca locale")],
+    },
 ]
 
 # /blog/, the index over those records. The soft wraps are placed for this text

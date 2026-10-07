@@ -6856,6 +6856,219 @@ POSTS = [
                     ("/seo/", "SEO and local search"),
                     ("/audit/", "A free audit")],
     },
+
+    # =============================================== INDUSTRY: HOLIDAY LETS ===
+    {
+        "slug": "holiday-apartments",
+        "date": "2026-10-07",
+        "updated": "2026-10-07",
+        "topic": "Websites",
+        "work": "vila-flamuri",
+        "service": ("/web-design/", "Websites"),
+
+        "title": "A website for holiday apartments",
+        "h1": "You pay the portal again for a guest who already knows you.",
+        "summary": "A returning guest costs the same commission as a stranger. "
+                   "Only a direct site changes that.",
+        "standfirst": "The commission is not the painful part. Paying it a "
+                      "second time, on somebody who already knows your name, "
+                      "is.",
+        "description": "Why apartments and small villas keep paying commission "
+                       "on guests they already have, and what a direct booking "
+                       "site has to do to earn the message instead.",
+        "og_desc": "The portal introduced them once. You pay for every stay "
+                   "after that.",
+        "image": ("vila-flamuri-home.webp", 900, 625,
+                  "The home page of a holiday apartment site, with a "
+                  "photograph of the house and a bar asking for arrival dates",
+                  "Vila Flamuri, vilaflamuri.com"),
+
+        "body": [
+            ("The short answer", [
+                "<p>A portal is very good at one job, which is putting you in "
+                "front of somebody who has never heard of you. It charges the "
+                "same whether it did that job or not.</p>",
+                "<p>So the site is not there to beat the portal. It is there "
+                "to take the guest the portal already introduced.</p>",
+            ]),
+            ("A portal is good at exactly one job", [
+                "<p>Being found by a stranger is worth paying for. A family "
+                "choosing a coast they have never visited needs somewhere to "
+                "compare, and no small site will ever be that.</p>",
+                "<p>The trouble starts the moment the stranger stops being "
+                "one. Nothing in the arrangement notices that they came last "
+                "August, liked it, and would have written to you directly if "
+                "there had been anywhere to write.</p>",
+            ]),
+            ("The second stay is where the money is", [
+                "<p>Somebody who has already stayed is the cheapest booking "
+                "you will ever take. They know the road, the beach and the "
+                "kitchen, and they need no persuading.</p>",
+                "<p>If the only route back is the listing they first found, "
+                "that booking carries the same cut as the first one did. The "
+                "guest is yours and the introduction is being sold to you "
+                "twice.</p>",
+            ]),
+            ("What we build for a place like this", [
+                "<p>At <a href=\"/work/vila-flamuri/\">Vila Flamuri</a> the "
+                "booking request is composed as a WhatsApp message, with the "
+                "dates, the guests and the age of each child already written "
+                "out. The family answers it themselves.</p>",
+                "<p>Nothing is held automatically. A house with 15 apartments "
+                "answers faster than an availability system would stay "
+                "truthful, and a calendar that lies once costs more than it "
+                "ever saved.</p>",
+                "<p>The pages are in the languages the guests actually search "
+                "in, and the site asks nothing of any other company in order "
+                "to appear: no map tiles, no booking widget, no script from "
+                "somebody else.</p>",
+            ]),
+            ("What this means beyond apartments", [
+                "<p>Any business that gets its first customer through a "
+                "marketplace has the same arithmetic to do. The marketplace "
+                "earns the introduction and then charges for the "
+                "relationship.</p>",
+                "<p>The site worth building is the one that takes the "
+                "relationship back, and it does that by being easier to write "
+                "to than the listing is to reopen.</p>",
+            ]),
+        ],
+        "payoff": "Tell us how many of last season's guests had stayed before, "
+                  "and we will tell you what the portal charged you for "
+                  "knowing them",
+        "faq": [
+            ("Should I leave the portals altogether?",
+             "No, and almost nobody should. They find the people who have "
+             "never heard of your village, which is work you cannot do "
+             "yourself. The point is to stop paying for the guests they are "
+             "no longer finding."),
+            ("Do I need live availability on the site?",
+             "Usually not, and often it is worse. A small place answers a "
+             "message in minutes, and a calendar showing a free week you have "
+             "already promised somebody costs you the guest and the good name "
+             "at once."),
+            ("Will guests trust a site they have not heard of?",
+             "They trust what they can check: real photographs, a real "
+             "address on a map, the walk to the beach measured rather than "
+             "guessed, and a person who answers. A thin page with bought "
+             "images is what loses them."),
+            ("What about payment?",
+             "Most small places here take payment on arrival and say so. If "
+             "you want a deposit, a bank transfer named in the confirmation is "
+             "enough to begin with. A card checkout is a bigger build and is "
+             "rarely what stands between you and the booking."),
+            ("How many languages do I need?",
+             "The ones your guests search in, which is rarely only your own. "
+             "Look at where last season came from before deciding, because a "
+             "language that brings you nothing costs the same to keep as one "
+             "that does."),
+        ],
+        "related": [("/web-design/", "Websites"),
+                    ("/seo/", "SEO and local search")],
+    },
+
+    # =================================================== INDUSTRY: PROPERTY ===
+    {
+        "slug": "estate-agency-website",
+        "date": "2026-10-07",
+        "updated": "2026-10-07",
+        "topic": "Websites",
+        "work": "census-properties",
+        "service": ("/web-design/", "Websites"),
+
+        "title": "A website for an estate agency",
+        "h1": "Every agency shows the same flats. Almost none show the "
+              "paperwork.",
+        "summary": "The photographs and the price are on every portal. What is "
+                   "missing is whether the papers are in order.",
+        "standfirst": "A buyer here is not short of listings. They are short "
+                      "of a reason to believe any particular one.",
+        "description": "An agency site cannot win on listings, because the "
+                       "portal has them all. What it can do is publish what "
+                       "has been checked, and what has not.",
+        "og_desc": "The portal has the listings. It does not have the "
+                   "documents.",
+        "image": ("census-properties-home.webp", 900, 625,
+                  "The home page of an estate agency site, with a sunset "
+                  "photograph of the bay behind a headline about property for "
+                  "sale and to rent",
+                  "Census Properties, censusproperties.com"),
+
+        "body": [
+            ("The short answer", [
+                "<p>You cannot out-list a portal. It carries every agency in "
+                "the city, including yours, and a buyer will always start "
+                "there.</p>",
+                "<p>What a portal cannot carry is what you have verified. That "
+                "is the one thing on your page nobody else can copy by "
+                "lunchtime.</p>",
+            ]),
+            ("The portal owns the search, not the trust", [
+                "<p>A portal is a filter: rooms, price, neighbourhood. It "
+                "sorts what is available and stops there, because it is not "
+                "the one answering for any of it.</p>",
+                "<p>The buyer's real question begins after the filter. They "
+                "have 8 flats open in 8 tabs and no way to tell which of them "
+                "survives a lawyer.</p>",
+            ]),
+            ("What a buyer is actually afraid of", [
+                "<p>Not the price. The fear is paying a deposit on something "
+                "whose ownership turns out to be shared, or whose permit was "
+                "never issued, and spending a year finding out.</p>",
+                "<p>Every agency says it checks. Saying it is free, so it "
+                "carries no weight. Printing which documents were seen, and "
+                "which are still outstanding, costs something, and that is "
+                "why a buyer believes it.</p>",
+            ]),
+            ("What we build for an agency", [
+                "<p>At <a href=\"/work/census-properties/\">Census "
+                "Properties</a> every listing publishes its own document "
+                "check: what has been verified, and what has not. The gaps "
+                "read as easily as the confirmations.</p>",
+                "<p>Around that sits a register of the neighbourhoods, each "
+                "with its own page, because a buyer who does not know the city "
+                "is choosing an area before choosing a flat.</p>",
+                "<p>The listings are kept by the agency rather than by us, and "
+                "every change is recorded, so there is always an answer to "
+                "when a price moved and who moved it.</p>",
+            ]),
+            ("What this means beyond property", [
+                "<p>Any trade whose customer is afraid of being caught out has "
+                "the same opening. The competitor asks to be trusted, and the "
+                "page that wins is the one publishing the thing trust is "
+                "normally asked to stand in for.</p>",
+            ]),
+        ],
+        "payoff": "Send us your 3 newest listings and we will tell you what a "
+                  "careful buyer still cannot find out from them",
+        "faq": [
+            ("Will the portal not always outrank me?",
+             "For the flat itself, usually, and that is not the fight worth "
+             "picking. You can be the first answer for the neighbourhood, for "
+             "what a certificate means, and for buying from abroad, which is "
+             "where somebody choosing an agency actually looks."),
+            ("Is publishing what is NOT checked a risk?",
+             "It reads as the opposite. A page admitting an outstanding "
+             "certificate is a page a buyer believes about everything else, "
+             "and the seller learns what to go and fetch. The alternative is "
+             "finding out at the notary."),
+            ("Who keeps the listings up to date?",
+             "You do, from your own panel. An agency that has to send us a "
+             "price change is an agency with stale prices, and a stale price "
+             "is the one complaint a buyer repeats to other people."),
+            ("Do I need the site in other languages?",
+             "If you sell to buyers abroad, yes. They are the ones who cannot "
+             "visit on a Saturday, cannot read a certificate, and most need "
+             "the paperwork written out. They are also the least troubled by "
+             "the price."),
+            ("What decides the cost of a build like this?",
+             "How many listings, how many languages, whether you keep them "
+             "yourself, and whether the neighbourhood research exists already "
+             "or has to be done. The audit comes first and costs nothing."),
+        ],
+        "related": [("/web-design/", "Websites"),
+                    ("/seo/", "SEO and local search")],
+    },
 ]
 
 

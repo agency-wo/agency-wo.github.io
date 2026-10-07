@@ -242,6 +242,30 @@ def post_page(p, en_p, nxt, by_slug, band, lang, siblings):
 
     svc_href, svc_name = p["service"]
 
+    # An optional lead photograph, at the head of the prose. No post carried
+    # one before 2026-10-07, and the two that do are the ones arguing a case a
+    # reader can go and look at, so the picture is that client's own home page
+    # and the caption says whose it is.
+    #
+    # 5 fields rather than 4, because the caption is copy and has to be
+    # translated like the alt beside it. Width and height are the real file's,
+    # which check 8 compares against the bytes on disk, and the 720w rendition
+    # has to exist or stamped() stops the build before the gate sees it. The
+    # column is 62ch (main.css .prose), which is about 620px at this body size.
+    figure = ""
+    if p.get("image"):
+        img_src, img_w, img_h, img_alt, img_cap = p["image"]
+        img_path = "/assets/plates/" + img_src
+        figure = ('          <figure class="plate">'
+                  f'<img src="{shell.stamped(img_path)}" '
+                  f'srcset="{shell.with_720(img_path, img_w)}" '
+                  f'sizes="(min-width: 1000px) 620px, 90vw" '
+                  f'width="{img_w}" height="{img_h}" '
+                  f'alt="{shell.localise_html(img_alt, lang)}" '
+                  'loading="lazy" decoding="async">'
+                  f'<figcaption>{shell.localise_html(img_cap, lang)}</figcaption>'
+                  '</figure>' + NL)
+
     # Three more posts on the same service, under the same "see also" heading.
     #
     # Until 2026-10-07 a post linked to exactly ONE other post, the read-next
@@ -310,7 +334,7 @@ def post_page(p, en_p, nxt, by_slug, band, lang, siblings):
 
       <div class="grid">
         <div class="prose">
-{sections}
+{figure}{sections}
 {faq_html}
           <p class="payoff">{shell.TICK}<span>{shell.localise_html(p["payoff"], lang)}
             <a href="{shell.localise(shell.AUDIT_URL, lang)}">{c.AUDIT_LINK}</a>.</span></p>

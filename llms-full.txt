@@ -328,6 +328,8 @@ What to write on your website
 Web design in Milan
 What an Italian website must show
 Who owns your website?
+A website for an estate agency
+A website for holiday apartments
 Also
 SEO and local search
 Custom software
@@ -701,6 +703,7 @@ Websites
 Custom software
 Written about this
 Facebook ads for estate agents
+A website for an estate agency
 Next
 Vila Flamuri
 All the work
@@ -731,6 +734,7 @@ Websites
 SEO and local search
 Written about this
 AI search for hotels and guesthouses
+A website for holiday apartments
 Next
 Iglisi Watch
 All the work
@@ -914,7 +918,15 @@ AI search for hotels and guesthouses
 14 August 2026 Your trade
 Search is a smaller front door for hotels than it was, and somebody else is charging you for the guests who use theirs.
 Read it
-Websites 20
+Websites 22
+A website for holiday apartments
+7 October 2026
+A returning guest costs the same commission as a stranger. Only a direct site changes that.
+Read it
+A website for an estate agency
+7 October 2026
+The photographs and the price are on every portal. What is missing is whether the papers are in order.
+Read it
 Who owns your website?
 6 September 2026
 The domain, the hosting and the code are three separate things, and a business should hold all three.
@@ -2988,6 +3000,107 @@ Read next
 SEO for heating and cooling engineers
 Add us as a preferred source on Google
 
+## A website for holiday apartments
+https://minarankstudio.com/blog/holiday-apartments/
+
+You pay the portal again for a guest who already knows you.
+The commission is not the painful part. Paying it a second time, on somebody who already knows your name, is.
+By Henri Sila · 7 October 2026
+Vila Flamuri, vilaflamuri.com
+The short answer
+A portal is very good at one job, which is putting you in front of somebody who has never heard of you. It charges the same whether it did that job or not.
+So the site is not there to beat the portal. It is there to take the guest the portal already introduced.
+A portal is good at exactly one job
+Being found by a stranger is worth paying for. A family choosing a coast they have never visited needs somewhere to compare, and no small site will ever be that.
+The trouble starts the moment the stranger stops being one. Nothing in the arrangement notices that they came last August, liked it, and would have written to you directly if there had been anywhere to write.
+The second stay is where the money is
+Somebody who has already stayed is the cheapest booking you will ever take. They know the road, the beach and the kitchen, and they need no persuading.
+If the only route back is the listing they first found, that booking carries the same cut as the first one did. The guest is yours and the introduction is being sold to you twice.
+What we build for a place like this
+At Vila Flamuri the booking request is composed as a WhatsApp message, with the dates, the guests and the age of each child already written out. The family answers it themselves.
+Nothing is held automatically. A house with 15 apartments answers faster than an availability system would stay truthful, and a calendar that lies once costs more than it ever saved.
+The pages are in the languages the guests actually search in, and the site asks nothing of any other company in order to appear: no map tiles, no booking widget, no script from somebody else.
+What this means beyond apartments
+Any business that gets its first customer through a marketplace has the same arithmetic to do. The marketplace earns the introduction and then charges for the relationship.
+The site worth building is the one that takes the relationship back, and it does that by being easier to write to than the listing is to reopen.
+Questions worth asking
+Should I leave the portals altogether?
+No, and almost nobody should. They find the people who have never heard of your village, which is work you cannot do yourself. The point is to stop paying for the guests they are no longer finding.
+Do I need live availability on the site?
+Usually not, and often it is worse. A small place answers a message in minutes, and a calendar showing a free week you have already promised somebody costs you the guest and the good name at once.
+Will guests trust a site they have not heard of?
+They trust what they can check: real photographs, a real address on a map, the walk to the beach measured rather than guessed, and a person who answers. A thin page with bought images is what loses them.
+What about payment?
+Most small places here take payment on arrival and say so. If you want a deposit, a bank transfer named in the confirmation is enough to begin with. A card checkout is a bigger build and is rarely what stands between you and the booking.
+How many languages do I need?
+The ones your guests search in, which is rarely only your own. Look at where last season came from before deciding, because a language that brings you nothing costs the same to keep as one that does.
+Tell us how many of last season's guests had stayed before, and we will tell you what the portal charged you for knowing them
+Get a free audit.
+Updated 7 October 2026
+The service
+Websites
+The business in this post
+Vila Flamuri
+Also
+The website mistakes we see most often
+WordPress or a site built for you
+A website for a lingerie shop
+Websites
+SEO and local search
+Read next
+A website for an estate agency
+Add us as a preferred source on Google
+
+## A website for an estate agency
+https://minarankstudio.com/blog/estate-agency-website/
+
+Every agency shows the same flats. Almost none show the paperwork.
+A buyer here is not short of listings. They are short of a reason to believe any particular one.
+By Henri Sila · 7 October 2026
+Census Properties, censusproperties.com
+The short answer
+You cannot out-list a portal. It carries every agency in the city, including yours, and a buyer will always start there.
+What a portal cannot carry is what you have verified. That is the one thing on your page nobody else can copy by lunchtime.
+The portal owns the search, not the trust
+A portal is a filter: rooms, price, neighbourhood. It sorts what is available and stops there, because it is not the one answering for any of it.
+The buyer's real question begins after the filter. They have 8 flats open in 8 tabs and no way to tell which of them survives a lawyer.
+What a buyer is actually afraid of
+Not the price. The fear is paying a deposit on something whose ownership turns out to be shared, or whose permit was never issued, and spending a year finding out.
+Every agency says it checks. Saying it is free, so it carries no weight. Printing which documents were seen, and which are still outstanding, costs something, and that is why a buyer believes it.
+What we build for an agency
+At Census Properties every listing publishes its own document check: what has been verified, and what has not. The gaps read as easily as the confirmations.
+Around that sits a register of the neighbourhoods, each with its own page, because a buyer who does not know the city is choosing an area before choosing a flat.
+The listings are kept by the agency rather than by us, and every change is recorded, so there is always an answer to when a price moved and who moved it.
+What this means beyond property
+Any trade whose customer is afraid of being caught out has the same opening. The competitor asks to be trusted, and the page that wins is the one publishing the thing trust is normally asked to stand in for.
+Questions worth asking
+Will the portal not always outrank me?
+For the flat itself, usually, and that is not the fight worth picking. You can be the first answer for the neighbourhood, for what a certificate means, and for buying from abroad, which is where somebody choosing an agency actually looks.
+Is publishing what is NOT checked a risk?
+It reads as the opposite. A page admitting an outstanding certificate is a page a buyer believes about everything else, and the seller learns what to go and fetch. The alternative is finding out at the notary.
+Who keeps the listings up to date?
+You do, from your own panel. An agency that has to send us a price change is an agency with stale prices, and a stale price is the one complaint a buyer repeats to other people.
+Do I need the site in other languages?
+If you sell to buyers abroad, yes. They are the ones who cannot visit on a Saturday, cannot read a certificate, and most need the paperwork written out. They are also the least troubled by the price.
+What decides the cost of a build like this?
+How many listings, how many languages, whether you keep them yourself, and whether the neighbourhood research exists already or has to be done. The audit comes first and costs nothing.
+Send us your 3 newest listings and we will tell you what a careful buyer still cannot find out from them
+Get a free audit.
+Updated 7 October 2026
+The service
+Websites
+The business in this post
+Census Properties
+Also
+How to sell online in Albania
+What a website costs in Albania
+A website for a hairdresser or salon
+Websites
+SEO and local search
+Read next
+Your phone number says 3 different things
+Add us as a preferred source on Google
+
 ## Who owns your website?
 https://minarankstudio.com/blog/who-owns-your-website/
 
@@ -3031,9 +3144,9 @@ Websites
 The business in this post
 Iglisi Watch
 Also
-How to sell online in Albania
-What a website costs in Albania
-A website for a hairdresser or salon
+How to choose a web designer
+A website, or just Instagram?
+A website for a boutique with changing stock
 Websites
 Studio
 A free audit
@@ -3077,9 +3190,9 @@ Updated 7 October 2026
 The service
 Websites
 Also
-How to choose a web designer
-A website, or just Instagram?
-A website for a boutique with changing stock
+New website, or fix the one I have?
+Web design in Tirana
+A website for a dental clinic
 Websites
 A free audit
 Read next
@@ -3120,9 +3233,9 @@ Updated 7 October 2026
 The service
 Websites
 Also
-New website, or fix the one I have?
-Web design in Tirana
-A website for a dental clinic
+An agency or a freelancer?
+Web design in Durres
+A website in Albanian, Italian and English
 Websites
 SEO in Milan
 A free audit
@@ -3169,9 +3282,9 @@ Updated 7 October 2026
 The service
 Websites
 Also
-An agency or a freelancer?
-Web design in Durres
-A website in Albanian, Italian and English
+WordPress or a site built for you
+A website for a lingerie shop
+A website you update yourself from a phone
 Websites
 SEO and local search
 Read next
@@ -3218,9 +3331,9 @@ Updated 7 October 2026
 The service
 Websites
 Also
-WordPress or a site built for you
-A website for a lingerie shop
-A website you update yourself from a phone
+What a website costs in Albania
+A website for a hairdresser or salon
+A website for holiday apartments
 Websites
 SEO and local search
 Read next
@@ -3265,9 +3378,9 @@ Updated 7 October 2026
 The service
 Websites
 Also
-What a website costs in Albania
-A website for a hairdresser or salon
-Who owns your website?
+A website, or just Instagram?
+A website for a boutique with changing stock
+A website for an estate agency
 Websites
 Custom software
 Read next
@@ -3313,9 +3426,9 @@ Updated 7 October 2026
 The service
 Websites
 Also
-A website, or just Instagram?
-A website for a boutique with changing stock
-What an Italian website must show
+Web design in Tirana
+A website for a dental clinic
+Who owns your website?
 Websites
 Custom software
 Read next
@@ -3364,9 +3477,9 @@ Updated 7 October 2026
 The service
 Websites
 Also
-Web design in Tirana
-A website for a dental clinic
-Web design in Milan
+Web design in Durres
+A website in Albanian, Italian and English
+What an Italian website must show
 Websites
 SEO and local search
 Read next
@@ -3415,8 +3528,8 @@ Updated 7 October 2026
 The service
 Websites
 Also
-Web design in Durres
-A website in Albanian, Italian and English
+A website for a lingerie shop
+A website you update yourself from a phone
 What to write on your website
 Websites
 SEO and local search
@@ -3466,9 +3579,9 @@ Updated 7 October 2026
 The service
 Websites
 Also
-A website for a lingerie shop
-A website you update yourself from a phone
-The website mistakes we see most often
+A website for a hairdresser or salon
+A website for holiday apartments
+What to write on your website
 Websites
 Custom software
 Read next
@@ -3515,9 +3628,9 @@ Updated 7 October 2026
 The service
 Websites
 Also
-A website for a hairdresser or salon
-Who owns your website?
-How to sell online in Albania
+A website for a boutique with changing stock
+A website for an estate agency
+The website mistakes we see most often
 Websites
 SEO and local search
 Read next
@@ -3566,9 +3679,9 @@ Updated 7 October 2026
 The service
 Websites
 Also
-A website for a boutique with changing stock
-What an Italian website must show
-How to choose a web designer
+A website for a dental clinic
+Who owns your website?
+How to sell online in Albania
 Websites
 Meta ads
 Read next
@@ -3610,9 +3723,9 @@ Updated 7 October 2026
 The service
 Websites
 Also
-A website for a dental clinic
-Web design in Milan
-New website, or fix the one I have?
+A website in Albanian, Italian and English
+What an Italian website must show
+How to choose a web designer
 Websites
 SEO and local search
 Read next
@@ -3656,9 +3769,9 @@ Websites
 The business in this post
 Iglisi Watch
 Also
-A website in Albanian, Italian and English
-What to write on your website
-An agency or a freelancer?
+A website you update yourself from a phone
+Web design in Milan
+New website, or fix the one I have?
 Websites
 SEO and local search
 Read next
@@ -3703,9 +3816,9 @@ Websites
 The business in this post
 Intimo Bruna
 Also
-A website you update yourself from a phone
-The website mistakes we see most often
-WordPress or a site built for you
+A website for holiday apartments
+What to write on your website
+An agency or a freelancer?
 Websites
 Meta ads
 Read next
@@ -3749,9 +3862,9 @@ Updated 7 October 2026
 The service
 Websites
 Also
-Who owns your website?
-How to sell online in Albania
-What a website costs in Albania
+A website for an estate agency
+The website mistakes we see most often
+WordPress or a site built for you
 Websites
 SEO and local search
 Read next
@@ -3797,9 +3910,9 @@ Websites
 The business in this post
 Victoria Boutique
 Also
-What an Italian website must show
-How to choose a web designer
-A website, or just Instagram?
+Who owns your website?
+How to sell online in Albania
+What a website costs in Albania
 Websites
 SEO and local search
 Read next
@@ -3844,9 +3957,9 @@ Updated 7 October 2026
 The service
 Websites
 Also
-Web design in Milan
-New website, or fix the one I have?
-Web design in Tirana
+What an Italian website must show
+How to choose a web designer
+A website, or just Instagram?
 Websites
 SEO and local search
 Read next
@@ -3880,9 +3993,9 @@ Websites
 The business in this post
 Iglisi Watch
 Also
-What to write on your website
-An agency or a freelancer?
-Web design in Durres
+Web design in Milan
+New website, or fix the one I have?
+Web design in Tirana
 Websites
 Custom software
 Read next
@@ -3914,13 +4027,13 @@ Websites
 The business in this post
 Victoria Boutique
 Also
-The website mistakes we see most often
-WordPress or a site built for you
-A website for a lingerie shop
+What to write on your website
+An agency or a freelancer?
+Web design in Durres
 Websites
 Custom software
 Read next
-Your phone number says 3 different things
+A website for holiday apartments
 Add us as a preferred source on Google
 
 ## What Instagram ads cost in Italy

@@ -50,21 +50,6 @@ SIZES_CASE = "(min-width: 1000px) 560px, 90vw"
 SIZES_CHART = "(min-width: 1280px) 1152px, 90vw"
 
 
-def with_720(path, w):
-    """srcset for one image: its 720w rendition, then the original.
-
-    Both go through shell.stamped(), for the reason LAUNCH.md 3c gives about
-    the stylesheet: Cloudflare serves /assets/* with a one year browser cache,
-    which is right for a URL that changes when its bytes do and wrong for one
-    that never changes. A new Search Console screenshot shipped on 2026-08-23
-    and every reader who had seen the old chart kept it, with the figures in
-    the prose beside it already updated.
-    """
-    stem, ext = path.rsplit(".", 1)
-    return "%s 720w, %s %dw" % (shell.stamped("%s-720.%s" % (stem, ext)),
-                                shell.stamped(path), w)
-
-
 def plate(c, eager=False):
     src, w, h, alt = c["plate"]
     loading = "" if eager else ' loading="lazy" decoding="async"'
@@ -74,7 +59,7 @@ def plate(c, eager=False):
     sizes = SIZES_SIDE if eager else SIZES_CASE
     return (f'<figure class="plate">'
             f'<img src="{shell.stamped("/assets/plates/" + src)}" '
-            f'srcset="{with_720("/assets/plates/" + src, w)}" '
+            f'srcset="{shell.with_720("/assets/plates/" + src, w)}" '
             f'sizes="{sizes}" width="{w}" height="{h}" '
             f'alt="{alt}"{loading}>'
             f'<figcaption>{c["name"]}, {c["site"]}</figcaption></figure>')
@@ -92,7 +77,7 @@ def gsc_figure(c):
     return "".join(
         f'<figure class="gsc">'
         f'<img src="{shell.stamped("/assets/proof/" + src)}" '
-        f'srcset="{with_720("/assets/proof/" + src, w)}" '
+        f'srcset="{shell.with_720("/assets/proof/" + src, w)}" '
         f'sizes="{SIZES_CHART}" width="{w}" height="{h}" '
         f'alt="{alt}" loading="lazy" decoding="async">'
         f'<figcaption>{cap}</figcaption>'
