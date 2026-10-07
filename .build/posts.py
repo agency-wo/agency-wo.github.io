@@ -7083,6 +7083,100 @@ POSTS = [
         "related": [("/web-design/", "Websites"),
                     ("/seo/", "SEO and local search")],
     },
+    {
+        "slug": "taxis-and-transfers",
+        "ask": ("taxi", "Durres"),
+        "date": "2026-10-07",
+        "updated": "2026-10-07",
+        "topic": "Local search",
+        "work": None,
+        "service": ("/seo/", "SEO and local search"),
+
+        "title": "Taxi and airport transfers: getting booked",
+        "h1": "The car is chosen before the plane lands.",
+        "summary": "Most visitors reach Durres from Tirana airport, 36 km away, and "
+                   "pick their car on a phone before they land. The taxi that shows "
+                   "the route and the price gets the booking.",
+        "standfirst": "A street fare is won at the rank. A transfer is won on a "
+                      "phone, often in another country, the night before.",
+        "description": "How a taxi or transfer business in Durres gets booked: the "
+                       "airport run, a price on the page, the map listing, WhatsApp "
+                       "and the visitor's language.",
+        "og_desc": "The car is chosen on a phone before the plane lands, often in "
+                   "another language.",
+
+        "body": [
+            ("The short answer", [
+                "<p>A taxi in Durres has 2 kinds of customer. The local rings a "
+                "number they already know. The visitor has never been here and picks "
+                "a car on a phone before the flight lands.</p>",
+                "<p>A website can win the second one, and most taxis leave that "
+                "booking to the transfer sites.</p>",
+            ]),
+            ("Most visitors land at Tirana airport", [
+                "<p>Albania counted 12,466,038 foreign arrivals in 2025, 6.6% more "
+                "than in 2024, according to <a href=\"https://www.instat.gov.al/media/1oebcbaa/movements-of-citizens-in-albania-december-2025.pdf\" target=\"_blank\" rel=\"noopener\">INSTAT</a>. Tirana airport handled 11.6 "
+                "million passengers the same year, <a href=\"https://www.ansa.it/nuova_europa/en/news/countries/albania/2026/05/18/naitec-save-group-will-develop-an-it-system-for-tirana-airport_eb27e70b-0695-4632-9363-ebb949319f4e.html\" target=\"_blank\" rel=\"noopener\">ANSA reported</a>.</p>",
+                "<p>Durres is 36 km from the terminal by road, on <a href=\"https://www.openstreetmap.org/directions?engine=fossgis_osrm_car&amp;route=41.4147%2C19.7206%3B41.3231%2C19.4565\" target=\"_blank\" rel=\"noopener\">OpenStreetMap's route</a>. Almost every "
+                "stay on that coast begins with that drive.</p>",
+            ]),
+            ("Put the price of the airport run on the page", [
+                "<p>The first worry in a new country is the fare. A transfer site "
+                "lists the airport to Durres from 61 euro for 4 passengers, on "
+                "<a href=\"https://jamtransfer.com/taxi-transfers-from-tirana+airport-to-durres\" target=\"_blank\" rel=\"noopener\">JamTransfer</a>, and the price is the first thing on the page.</p>",
+                "<p>A taxi that writes its own price for that route answers the same "
+                "worry, and the booking comes straight to you, with no portal between "
+                "you and the passenger.</p>",
+            ]),
+            ("Let the map listing do the dispatching", [
+                "<p>Somebody at the arrivals door, or outside a hotel at midnight, "
+                "searches taxi and picks from the map. Set the category to taxi "
+                "service, give the hours you really answer, a phone and a WhatsApp "
+                "number, and photos of the cars rather than a logo.</p>",
+                "<p>Ask for reviews after the long runs. A review that says airport to "
+                "Golem in 40 minutes is the one the next visitor reads.</p>",
+            ]),
+            ("Answer in the language they plan in", [
+                "<p>In INSTAT's table, 95% of the 2025 foreign arrivals came from "
+                "Europe, and 3 in 4 of those from southern Europe.</p>",
+                "<p>So the page for the airport run wants its price and a WhatsApp "
+                "link in the languages those visitors plan in, Italian and English "
+                "first, beside Albanian.</p>",
+            ]),
+            ("Apps take the city rides, not the bookings from abroad", [
+                "<p>Uber doesn't operate in Albania. Local apps such as Speed Taxi "
+                "take the city rides instead, <a href=\"https://albaniatourguide.com/can-i-use-uber-in-albania-taxi-apps-taxi-prices-transportation/\" target=\"_blank\" rel=\"noopener\">a travel guide explains</a>.</p>",
+                "<p>A family in Milan arranging a car for a 23:40 landing is making a "
+                "different search. They want a name, a price and a reply before they "
+                "board, and that booking is still open to a taxi with a page.</p>",
+            ]),
+        ],
+        "payoff": "Send us the 3 routes you drive most and what you charge for "
+                  "each, and we'll show you who is getting those bookings now.",
+        "faq": [
+            ("Do I need a website if I'm on a taxi app?",
+             "The app brings you city rides at its price. A page is where a "
+             "visitor finds you before they arrive and books you directly, and an "
+             "app has no room for your airport price or your languages."),
+            ("Should I show my prices?",
+             "For the fixed runs, yes: the airport, the port and the coast towns. "
+             "For city rides, say how the fare is worked out. A visitor who sees a "
+             "price can book, and one who has to ask often asks somebody else."),
+            ("WhatsApp or a phone number?",
+             "Both, with WhatsApp first for visitors. Calling an Albanian number "
+             "from abroad costs them money, and a message with the flight number "
+             "and the hotel is exactly what a transfer booking looks like."),
+            ("How do I get reviews that help?",
+             "Ask right after the long runs, with a link sent on WhatsApp while the "
+             "ride is still fresh. A review that names the route does more than 5 "
+             "stars with no words."),
+            ("What decides the price?",
+             "How many routes you list and how many languages. Getting one taxi "
+             "found for the airport run is small."),
+        ],
+        "related": [("/seo/", "SEO and local search"),
+                    ("/web-design/", "Websites")],
+    },
 ]
 
 
@@ -7110,6 +7204,7 @@ INDUSTRY = {
     "dentists-and-clinics",
     "car-repair-and-garages",
     "estate-agents",
+    "taxis-and-transfers",
 }
 
 # Where "Read next" goes, for the posts where it is a decision rather than an

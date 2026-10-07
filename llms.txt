@@ -34,6 +34,7 @@ with its hreflang alternates, is in https://minarankstudio.com/sitemap.xml.
 
 ## Blog
 - [Blog](https://minarankstudio.com/blog/): What we have learned doing search, AI search and custom software for small businesses in Durres, written so you can check it.
+- [Taxi and airport transfers: getting booked](https://minarankstudio.com/blog/taxis-and-transfers/): How a taxi or transfer business in Durres gets booked: the airport run, a price on the page, the map listing, WhatsApp and the visitor's language.
 - [Your phone number says 3 different things](https://minarankstudio.com/blog/your-phone-number-says-three-things/): Why the same business shows a different phone number, address or opening hours in 3 places, what it costs in local search, and how to fix it in order.
 - [What SEO costs in Italy](https://minarankstudio.com/blog/what-seo-costs-in-italy/): What drives the cost of SEO for a small business in Italy, how to read a quote, and which questions a studio should ask you before it names any number at all.
 - [SEO in Varese](https://minarankstudio.com/blog/seo-varese/): Why location based search misfires in a commuter province, what happens to near me queries when the searcher is in another city, and how to be found anyway.

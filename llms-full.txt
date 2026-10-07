@@ -196,6 +196,7 @@ SEO in Como
 SEO in Varese
 What SEO costs in Italy
 Your phone number says 3 different things
+Taxi and airport transfers: getting booked
 Also
 AI search
 Websites
@@ -758,7 +759,11 @@ mistake we made. If it does not, it is not worth your time.
 Search the writing
 Filters the list as you type.
 Nothing matches that. Clear the search, or pick a topic above.
-SEO and local search 29
+SEO and local search 30
+Taxi and airport transfers: getting booked
+7 October 2026 Your trade
+Most visitors reach Durres from Tirana airport, 36 km away, and pick their car on a phone before they land. The taxi that shows the route and the price gets the booking.
+Read it
 Your phone number says 3 different things
 6 September 2026
 Google reads all 3, cannot tell which is true, and quietly trusts a shop that only says one thing.
@@ -1069,6 +1074,65 @@ A bug that hid inside a chart for a whole phase, and what it says about the soft
 Read it
 Updated 7 October 2026
 
+## Taxi and airport transfers: getting booked
+https://minarankstudio.com/blog/taxis-and-transfers/
+
+The car is chosen before the plane lands.
+A street fare is won at the rank. A transfer is won on a phone, often in another country, the night before.
+By minarank studio · 7 October 2026
+The short answer
+A taxi in Durres has 2 kinds of customer. The local rings a number they already know. The visitor has never been here and picks a car on a phone before the flight lands.
+A website can win the second one, and most taxis leave that booking to the transfer sites.
+Most visitors land at Tirana airport
+Albania counted 12,466,038 foreign arrivals in 2025, 6.6% more than in 2024, according to INSTAT. Tirana airport handled 11.6 million passengers the same year, ANSA reported.
+Durres is 36 km from the terminal by road, on OpenStreetMap's route. Almost every stay on that coast begins with that drive.
+Put the price of the airport run on the page
+The first worry in a new country is the fare. A transfer site lists the airport to Durres from 61 euro for 4 passengers, on JamTransfer, and the price is the first thing on the page.
+A taxi that writes its own price for that route answers the same worry, and the booking comes straight to you, with no portal between you and the passenger.
+Let the map listing do the dispatching
+Somebody at the arrivals door, or outside a hotel at midnight, searches taxi and picks from the map. Set the category to taxi service, give the hours you really answer, a phone and a WhatsApp number, and photos of the cars rather than a logo.
+Ask for reviews after the long runs. A review that says airport to Golem in 40 minutes is the one the next visitor reads.
+Answer in the language they plan in
+In INSTAT's table, 95% of the 2025 foreign arrivals came from Europe, and 3 in 4 of those from southern Europe.
+So the page for the airport run wants its price and a WhatsApp link in the languages those visitors plan in, Italian and English first, beside Albanian.
+Apps take the city rides, not the bookings from abroad
+Uber doesn't operate in Albania. Local apps such as Speed Taxi take the city rides instead, a travel guide explains.
+A family in Milan arranging a car for a 23:40 landing is making a different search. They want a name, a price and a reply before they board, and that booking is still open to a taxi with a page.
+Questions worth asking
+Do I need a website if I'm on a taxi app?
+The app brings you city rides at its price. A page is where a visitor finds you before they arrive and books you directly, and an app has no room for your airport price or your languages.
+Should I show my prices?
+For the fixed runs, yes: the airport, the port and the coast towns. For city rides, say how the fare is worked out. A visitor who sees a price can book, and one who has to ask often asks somebody else.
+WhatsApp or a phone number?
+Both, with WhatsApp first for visitors. Calling an Albanian number from abroad costs them money, and a message with the flight number and the hotel is exactly what a transfer booking looks like.
+How do I get reviews that help?
+Ask right after the long runs, with a link sent on WhatsApp while the ride is still fresh. A review that names the route does more than 5 stars with no words.
+What decides the price?
+How many routes you list and how many languages. Getting one taxi found for the airport run is small.
+Is your business in the answer?
+Ask now. Each link opens with the question asked.
+What you sell
+Your town
+Ask ChatGPT
+Ask Perplexity
+Ask Google
+See the map
+Not named? The free audit shows why.
+Send us the 3 routes you drive most and what you charge for each, and we'll show you who is getting those bookings now.
+Get a free audit.
+Updated 7 October 2026
+The service
+SEO and local search
+Also
+Why my website gets no visitors
+SEO for a brand new business
+How long SEO takes to work
+SEO and local search
+Websites
+Read next
+A website for holiday apartments
+Add us as a preferred source on Google
+
 ## Your phone number says 3 different things
 https://minarankstudio.com/blog/your-phone-number-says-three-things/
 
@@ -1108,8 +1172,8 @@ SEO and local search
 The business in this post
 Iglisi Watch
 Also
-Why my website gets no visitors
-SEO for a brand new business
+Why is my competitor above me?
+SEO in Durres
 Google Business Profile in Albania
 SEO and local search
 Map listing
@@ -1154,8 +1218,8 @@ Updated 7 October 2026
 The service
 SEO and local search
 Also
-Why is my competitor above me?
-SEO in Durres
+What SEO costs in Albania
+Lawyers and notaries
 SEO for watch shops and jewellers
 SEO and local search
 What is an audit?
@@ -1199,8 +1263,8 @@ Updated 7 October 2026
 The service
 SEO and local search
 Also
-What SEO costs in Albania
-Lawyers and notaries
+What a website audit contains
+How to get Google reviews
 SEO results: why month 3 beats month 1
 SEO in Pavia
 What is ranking?
@@ -1244,8 +1308,8 @@ Updated 7 October 2026
 The service
 SEO and local search
 Also
-What a website audit contains
-How to get Google reviews
+SEO in Tirana
+Gyms and fitness studios
 SEO for restaurants: the menu Google reads
 SEO in Varese
 What is SEO?
@@ -1289,8 +1353,8 @@ Updated 7 October 2026
 The service
 SEO and local search
 Also
-SEO in Tirana
-Gyms and fitness studios
+SEO in Pavia
+Builders and contractors
 How long a new shop takes to rank on Google
 SEO in Bergamo
 Meta ads
@@ -1334,8 +1398,8 @@ Updated 7 October 2026
 The service
 SEO and local search
 Also
-SEO in Pavia
-Builders and contractors
+SEO in Milan
+How to come up first on Google
 SEO for heating and cooling engineers
 SEO in Milan
 What is a map listing?
@@ -1378,8 +1442,8 @@ Updated 7 October 2026
 The service
 SEO and local search
 Also
-SEO in Milan
-How to come up first on Google
+SEO for a brand new business
+How long SEO takes to work
 SEO for a garage: what customers search
 Iglisi Watch
 Studio
@@ -1424,9 +1488,9 @@ Updated 7 October 2026
 The service
 SEO and local search
 Also
-SEO for a brand new business
-How long SEO takes to work
-Your phone number says 3 different things
+SEO in Durres
+Google Business Profile in Albania
+Taxi and airport transfers: getting booked
 SEO and local search
 Websites
 Read next
@@ -1472,9 +1536,9 @@ Updated 7 October 2026
 The service
 SEO and local search
 Also
-SEO in Durres
-Google Business Profile in Albania
-What SEO costs in Italy
+Lawyers and notaries
+SEO for watch shops and jewellers
+Your phone number says 3 different things
 SEO and local search
 A free audit
 Read next
@@ -1521,9 +1585,9 @@ Updated 7 October 2026
 The service
 SEO and local search
 Also
-Lawyers and notaries
-SEO for watch shops and jewellers
-SEO in Varese
+How to get Google reviews
+SEO results: why month 3 beats month 1
+What SEO costs in Italy
 SEO and local search
 A free audit
 Read next
@@ -1567,9 +1631,9 @@ Updated 7 October 2026
 The service
 SEO and local search
 Also
-How to get Google reviews
-SEO results: why month 3 beats month 1
-SEO in Como
+Gyms and fitness studios
+SEO for restaurants: the menu Google reads
+SEO in Varese
 SEO and local search
 AI search
 Read next
@@ -1614,9 +1678,9 @@ Updated 7 October 2026
 The service
 SEO and local search
 Also
-Gyms and fitness studios
-SEO for restaurants: the menu Google reads
-SEO in Brescia
+Builders and contractors
+How long a new shop takes to rank on Google
+SEO in Como
 SEO and local search
 A free audit
 Read next
@@ -1661,9 +1725,9 @@ Updated 7 October 2026
 The service
 SEO and local search
 Also
-Builders and contractors
-How long a new shop takes to rank on Google
-SEO in Bergamo
+How to come up first on Google
+SEO for heating and cooling engineers
+SEO in Brescia
 SEO and local search
 A free audit
 Read next
@@ -1708,9 +1772,9 @@ Updated 7 October 2026
 The service
 SEO and local search
 Also
-How to come up first on Google
-SEO for heating and cooling engineers
-Hiring a studio in another country
+How long SEO takes to work
+SEO for a garage: what customers search
+SEO in Bergamo
 SEO and local search
 SEO in Pavia
 Read next
@@ -1755,9 +1819,9 @@ SEO and local search
 The business in this post
 Iglisi Watch
 Also
-How long SEO takes to work
-SEO for a garage: what customers search
-Why my website gets no visitors
+Google Business Profile in Albania
+Taxi and airport transfers: getting booked
+Hiring a studio in another country
 SEO and local search
 AI search
 Read next
@@ -1804,9 +1868,9 @@ SEO and local search
 The business in this post
 Iglisi Watch
 Also
-Google Business Profile in Albania
+SEO for watch shops and jewellers
 Your phone number says 3 different things
-Why is my competitor above me?
+Why my website gets no visitors
 SEO and local search
 Iglisi Watch
 Read next
@@ -1859,9 +1923,9 @@ Updated 7 October 2026
 The service
 SEO and local search
 Also
-SEO for watch shops and jewellers
+SEO results: why month 3 beats month 1
 What SEO costs in Italy
-What SEO costs in Albania
+Why is my competitor above me?
 SEO and local search
 Websites
 Read next
@@ -1906,9 +1970,9 @@ Updated 7 October 2026
 The service
 SEO and local search
 Also
-SEO results: why month 3 beats month 1
+SEO for restaurants: the menu Google reads
 SEO in Varese
-What a website audit contains
+What SEO costs in Albania
 SEO and local search
 AI search
 Read next
@@ -1961,9 +2025,9 @@ Updated 7 October 2026
 The service
 SEO and local search
 Also
-SEO for restaurants: the menu Google reads
+How long a new shop takes to rank on Google
 SEO in Como
-SEO in Tirana
+What a website audit contains
 SEO and local search
 Meta ads
 Read next
@@ -2017,9 +2081,9 @@ Updated 7 October 2026
 The service
 SEO and local search
 Also
-How long a new shop takes to rank on Google
+SEO for heating and cooling engineers
 SEO in Brescia
-SEO in Pavia
+SEO in Tirana
 SEO and local search
 Websites
 Read next
@@ -2066,9 +2130,9 @@ SEO and local search
 The business in this post
 Iglisi Watch
 Also
-SEO for heating and cooling engineers
+SEO for a garage: what customers search
 SEO in Bergamo
-SEO in Milan
+SEO in Pavia
 SEO and local search
 AI search
 Read next
@@ -2112,9 +2176,9 @@ SEO and local search
 The business in this post
 Iglisi Watch
 Also
-SEO for a garage: what customers search
+Taxi and airport transfers: getting booked
 Hiring a studio in another country
-SEO for a brand new business
+SEO in Milan
 SEO and local search
 AI search
 Read next
@@ -2161,7 +2225,7 @@ SEO and local search
 Also
 Your phone number says 3 different things
 Why my website gets no visitors
-SEO in Durres
+SEO for a brand new business
 SEO and local search
 AI search
 Read next
@@ -2219,7 +2283,7 @@ Iglisi Watch
 Also
 What SEO costs in Italy
 Why is my competitor above me?
-Lawyers and notaries
+SEO in Durres
 SEO and local search
 Websites
 Read next
@@ -2254,7 +2318,7 @@ Iglisi Watch
 Also
 SEO in Varese
 What SEO costs in Albania
-How to get Google reviews
+Lawyers and notaries
 SEO and local search
 AI search
 Read next
@@ -2309,7 +2373,7 @@ SEO and local search
 Also
 SEO in Como
 What a website audit contains
-Gyms and fitness studios
+How to get Google reviews
 SEO and local search
 Websites
 Read next
@@ -2352,7 +2416,7 @@ Iglisi Watch
 Also
 SEO in Brescia
 SEO in Tirana
-Builders and contractors
+Gyms and fitness studios
 SEO and local search
 AI search
 Read next
@@ -2409,7 +2473,7 @@ ProAffy
 Also
 SEO in Bergamo
 SEO in Pavia
-How to come up first on Google
+Builders and contractors
 SEO and local search
 Meta ads
 Read next
@@ -2464,7 +2528,7 @@ SEO and local search
 Also
 Hiring a studio in another country
 SEO in Milan
-How long SEO takes to work
+How to come up first on Google
 SEO and local search
 Websites
 Read next
@@ -4160,7 +4224,7 @@ Web design in Durres
 Websites
 Custom software
 Read next
-A website for holiday apartments
+Taxi and airport transfers: getting booked
 Add us as a preferred source on Google
 
 ## What Instagram ads cost in Italy

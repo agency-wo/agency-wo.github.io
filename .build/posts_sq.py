@@ -7141,6 +7141,104 @@ POSTS = [
         "related": [("/web-design/", "Faqe interneti"),
                     ("/seo/", "SEO dhe kërkim lokal")],
     },
+    {
+        "slug": "taxis-and-transfers",
+        "src": "442a11b1",
+        "ask": ("taksi", "Durrës"),
+        "date": "2026-10-07",
+        "updated": "2026-10-07",
+        "topic": "Kërkim lokal",
+        "work": None,
+        "service": ("/seo/", "SEO dhe kërkim lokal"),
+
+        "title": "Taksi dhe transferta nga aeroporti: rezervimet",
+        "h1": "Makina zgjidhet para se të ulet avioni.",
+        "summary": "Shumica e vizitorëve vijnë në Durrës nga aeroporti i Tiranës, 36 "
+                   "km larg, dhe e zgjedhin makinën në telefon para se të ulen. "
+                   "Taksia që tregon rrugën dhe çmimin merr rezervimin.",
+        "standfirst": "Një kurs në rrugë fitohet te stacioni. Një transfertë "
+                      "fitohet në telefon, shpesh në një vend tjetër, natën para.",
+        "description": "Si merr rezervime një taksi ose shërbim transferte në "
+                       "Durrës: kursi nga aeroporti, çmimi në faqe, profili në "
+                       "hartë, WhatsApp dhe gjuha e vizitorit.",
+        "og_desc": "Makina zgjidhet në telefon para se të ulet avioni, shpesh në "
+                   "një gjuhë tjetër.",
+
+        "body": [
+            ("Përgjigjja e shkurtër", [
+                "<p>Një taksi në Durrës ka 2 lloje klientësh. Vendasi i bie një "
+                "numri që e njeh. Vizitori s'ka qenë kurrë këtu dhe e zgjedh makinën "
+                "në telefon para se të ulet avioni.</p>",
+                "<p>Një faqe interneti mund ta fitojë të dytin, dhe shumica e "
+                "taksive ia lënë atë rezervim faqeve të transfertave.</p>",
+            ]),
+            ("Shumica zbresin në aeroportin e Tiranës", [
+                "<p>Në vitin 2025 Shqipëria numëroi 12.466.038 hyrje të shtetasve të "
+                "huaj, 6,6% më shumë se në 2024, sipas <a href=\"https://www.instat.gov.al/media/1oebcbaa/movements-of-citizens-in-albania-december-2025.pdf\" target=\"_blank\" rel=\"noopener\">INSTAT</a>. Po atë vit "
+                "aeroporti i Tiranës pati 11,6 milionë pasagjerë, <a href=\"https://www.ansa.it/nuova_europa/en/news/countries/albania/2026/05/18/naitec-save-group-will-develop-an-it-system-for-tirana-airport_eb27e70b-0695-4632-9363-ebb949319f4e.html\" target=\"_blank\" rel=\"noopener\">siç raportoi ANSA</a>.</p>",
+                "<p>Durrësi është 36 km nga terminali me rrugë, sipas <a href=\"https://www.openstreetmap.org/directions?engine=fossgis_osrm_car&amp;route=41.4147%2C19.7206%3B41.3231%2C19.4565\" target=\"_blank\" rel=\"noopener\">rrugës në OpenStreetMap</a>. "
+                "Pothuajse çdo pushim në atë bregdet nis me këtë udhëtim.</p>",
+            ]),
+            ("Vendos në faqe çmimin e kursit nga aeroporti", [
+                "<p>Shqetësimi i parë në një vend të ri është tarifa. Një faqe "
+                "transfertash e jep aeroport-Durrës nga 61 euro për 4 pasagjerë, te "
+                "<a href=\"https://jamtransfer.com/taxi-transfers-from-tirana+airport-to-durres\" target=\"_blank\" rel=\"noopener\">JamTransfer</a>, dhe çmimi është gjëja e parë që shihet.</p>",
+                "<p>Një taksi që shkruan çmimin e vet për atë kurs i përgjigjet të "
+                "njëjtit shqetësim, dhe rezervimi të vjen drejtpërdrejt, pa një "
+                "portal në mes.</p>",
+            ]),
+            ("Lëre profilin në hartë të bëjë punën e centralit", [
+                "<p>Kush është te dalja e mbërritjeve, ose para një hoteli në "
+                "mesnatë, kërkon taksi dhe zgjedh nga harta. Vendos kategorinë "
+                "shërbim taksie, oraret kur përgjigjesh vërtet, një telefon dhe një "
+                "numër WhatsApp, dhe foto të makinave, jo të një logoje.</p>",
+                "<p>Kërko vlerësime pas kurseve të gjata. Një vlerësim që thotë "
+                "aeroport-Golem në 40 minuta është ai që lexon vizitori i radhës.</p>",
+            ]),
+            ("Përgjigju në gjuhën në të cilën planifikojnë", [
+                "<p>Në tabelën e INSTAT, 95% e hyrjeve të huaja të 2025 erdhën nga "
+                "Evropa, dhe 3 në 4 prej tyre nga Evropa Jugore.</p>",
+                "<p>Ndaj faqja e kursit nga aeroporti do çmimin dhe një lidhje "
+                "WhatsApp në gjuhët ku këta vizitorë planifikojnë, italisht dhe "
+                "anglisht së pari, pranë shqipes.</p>",
+            ]),
+            ("Aplikacionet marrin kurset në qytet, jo rezervimet nga jashtë", [
+                "<p>Uber nuk punon në Shqipëri. Kurset në qytet i marrin aplikacione "
+                "vendase si Speed Taxi, <a href=\"https://albaniatourguide.com/can-i-use-uber-in-albania-taxi-apps-taxi-prices-transportation/\" target=\"_blank\" rel=\"noopener\">shpjegon një udhëzues udhëtimi</a>.</p>",
+                "<p>Një familje në Milano që rregullon një makinë për një ulje në "
+                "23:40 bën një kërkim tjetër. Do një emër, një çmim dhe një "
+                "përgjigje para se të hipë, dhe ai rezervim është ende i hapur për "
+                "një taksi me faqe.</p>",
+            ]),
+        ],
+        "payoff": "Na dërgo 3 kurset që bën më shpesh dhe sa merr për secilin, "
+                  "dhe të tregojmë kush po i merr ato rezervime tani.",
+        "faq": [
+            ("Më duhet faqe interneti nëse jam në një aplikacion taksie?",
+             "Aplikacioni të sjell kurse në qytet me çmimin e vet. Një faqe është "
+             "vendi ku një vizitor të gjen para se të mbërrijë dhe të rezervon "
+             "drejtpërdrejt, dhe një aplikacion s'ka vend për çmimin tënd nga "
+             "aeroporti apo për gjuhët e tua."),
+            ("A duhet t'i tregoj çmimet?",
+             "Për kurset fikse po: aeroporti, porti dhe qytetet e bregdetit. Për "
+             "kurset në qytet, shpjego si llogaritet tarifa. Kush sheh një çmim "
+             "mund të rezervojë, dhe kush duhet të pyesë shpesh pyet dikë tjetër."),
+            ("WhatsApp apo numër telefoni?",
+             "Të dyja, me WhatsApp-in të parin për vizitorët. Të telefonosh një "
+             "numër shqiptar nga jashtë kushton, dhe një mesazh me numrin e "
+             "fluturimit dhe hotelin është pikërisht si duket një rezervim "
+             "transferte."),
+            ("Si marr vlerësime që ndihmojnë?",
+             "Kërkoji menjëherë pas kurseve të gjata, me një lidhje të dërguar në "
+             "WhatsApp sa udhëtimi është i freskët. Një vlerësim që përmend rrugën "
+             "bën më shumë se 5 yje pa fjalë."),
+            ("Çfarë e përcakton çmimin?",
+             "Sa kurse rendit dhe sa gjuhë. Ta bësh të gjendet një taksi për kursin "
+             "nga aeroporti është punë e vogël."),
+        ],
+        "related": [("/seo/", "SEO dhe kërkim lokal"),
+                    ("/web-design/", "Faqe interneti")],
+    },
 ]
 
 # /blog/, the index over those records. The soft wraps are placed for this text

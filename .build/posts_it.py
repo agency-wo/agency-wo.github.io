@@ -7232,6 +7232,107 @@ POSTS = [
         "related": [("/web-design/", "Siti web"),
                     ("/seo/", "SEO e ricerca locale")],
     },
+    {
+        "slug": "taxis-and-transfers",
+        "src": "442a11b1",
+        "ask": ("taxi", "Durazzo"),
+        "date": "2026-10-07",
+        "updated": "2026-10-07",
+        "topic": "Ricerca locale",
+        "work": None,
+        "service": ("/seo/", "SEO e ricerca locale"),
+
+        "title": "Taxi e transfer dall'aeroporto: farsi prenotare",
+        "h1": "L'auto si sceglie prima che l'aereo atterri.",
+        "summary": "Quasi tutti i visitatori arrivano a Durazzo dall'aeroporto di "
+                   "Tirana, a 36 km, e scelgono l'auto sul telefono prima di "
+                   "atterrare. Il taxi che mostra il percorso e il prezzo si prende "
+                   "la prenotazione.",
+        "standfirst": "Una corsa in strada si vince al posteggio. Un transfer si "
+                      "vince su un telefono, spesso in un altro paese, la sera prima.",
+        "description": "Come un taxi o un servizio transfer a Durazzo si fa "
+                       "prenotare: la corsa dall'aeroporto, il prezzo sulla pagina, "
+                       "la scheda sulla mappa, WhatsApp e la lingua di chi arriva.",
+        "og_desc": "L'auto si sceglie sul telefono prima che l'aereo atterri, "
+                   "spesso in un'altra lingua.",
+
+        "body": [
+            ("La risposta breve", [
+                "<p>Un taxi a Durazzo ha 2 tipi di cliente. Chi abita qui chiama un "
+                "numero che conosce già. Chi è in vacanza non c'è mai stato e sceglie "
+                "l'auto sul telefono prima che il volo atterri.</p>",
+                "<p>Un sito può vincere il secondo, e quasi tutti i taxi lasciano "
+                "quella prenotazione ai siti di transfer.</p>",
+            ]),
+            ("Quasi tutti arrivano all'aeroporto di Tirana", [
+                "<p>Nel 2025 l'Albania ha contato 12.466.038 arrivi di cittadini "
+                "stranieri, il 6,6% in più del 2024, secondo <a href=\"https://www.instat.gov.al/media/1oebcbaa/movements-of-citizens-in-albania-december-2025.pdf\" target=\"_blank\" rel=\"noopener\">INSTAT</a>. Lo stesso "
+                "anno l'aeroporto di Tirana ha avuto 11,6 milioni di passeggeri, "
+                "<a href=\"https://www.ansa.it/nuova_europa/en/news/countries/albania/2026/05/18/naitec-save-group-will-develop-an-it-system-for-tirana-airport_eb27e70b-0695-4632-9363-ebb949319f4e.html\" target=\"_blank\" rel=\"noopener\">come ha riportato ANSA</a>.</p>",
+                "<p>Durazzo è a 36 km dal terminal su strada, secondo <a href=\"https://www.openstreetmap.org/directions?engine=fossgis_osrm_car&amp;route=41.4147%2C19.7206%3B41.3231%2C19.4565\" target=\"_blank\" rel=\"noopener\">il percorso di OpenStreetMap</a>. Quasi "
+                "ogni soggiorno su quella costa comincia con questo tragitto.</p>",
+            ]),
+            ("Metti sulla pagina il prezzo della corsa dall'aeroporto", [
+                "<p>La prima preoccupazione in un paese nuovo è la tariffa. Un sito di "
+                "transfer indica la tratta aeroporto-Durazzo a partire da 61 euro per "
+                "4 passeggeri, su <a href=\"https://jamtransfer.com/taxi-transfers-from-tirana+airport-to-durres\" target=\"_blank\" rel=\"noopener\">JamTransfer</a>, e il prezzo è la prima cosa che si vede.</p>",
+                "<p>Un taxi che scrive il proprio prezzo per quella corsa risponde "
+                "alla stessa preoccupazione, e la prenotazione arriva diretta a te, "
+                "senza un portale in mezzo.</p>",
+            ]),
+            ("Lascia che la scheda sulla mappa faccia da centralino", [
+                "<p>Chi è all'uscita degli arrivi, o davanti a un hotel a mezzanotte, "
+                "cerca taxi e sceglie dalla mappa. Imposta la categoria su servizio "
+                "taxi, metti gli orari in cui rispondi davvero, un telefono e un "
+                "numero WhatsApp, e le foto delle auto, non di un logo.</p>",
+                "<p>Chiedi le recensioni dopo le corse lunghe. Una recensione che "
+                "dice aeroporto-Golem in 40 minuti è quella che legge il visitatore "
+                "successivo.</p>",
+            ]),
+            ("Rispondi nella lingua in cui organizzano il viaggio", [
+                "<p>Nella tabella di INSTAT, il 95% degli arrivi stranieri del 2025 "
+                "veniva dall'Europa, e 3 su 4 di questi dall'Europa meridionale.</p>",
+                "<p>Quindi la pagina della corsa dall'aeroporto vuole il prezzo e un "
+                "link WhatsApp nelle lingue in cui quei visitatori si organizzano, "
+                "italiano e inglese per primi, accanto all'albanese.</p>",
+            ]),
+            ("Le app prendono le corse in città, non le prenotazioni dall'estero", [
+                "<p>Uber non opera in Albania. Le corse in città le prendono app "
+                "locali come Speed Taxi, <a href=\"https://albaniatourguide.com/can-i-use-uber-in-albania-taxi-apps-taxi-prices-transportation/\" target=\"_blank\" rel=\"noopener\">spiega una guida di viaggio</a>.</p>",
+                "<p>Una famiglia a Milano che organizza un'auto per un atterraggio "
+                "alle 23:40 fa un'altra ricerca. Vuole un nome, un prezzo e una "
+                "risposta prima di imbarcarsi, e quella prenotazione è ancora aperta "
+                "a un taxi con una pagina.</p>",
+            ]),
+        ],
+        "payoff": "Mandaci le 3 corse che fai più spesso e quanto chiedi per "
+                  "ognuna, e ti mostriamo chi si prende quelle prenotazioni adesso.",
+        "faq": [
+            ("Mi serve un sito se sono già su un'app di taxi?",
+             "L'app ti porta corse in città al suo prezzo. Una pagina è dove un "
+             "visitatore ti trova prima di arrivare e ti prenota direttamente, e "
+             "un'app non ha spazio per il tuo prezzo dall'aeroporto o per le tue "
+             "lingue."),
+            ("Devo mostrare i prezzi?",
+             "Per le corse fisse sì: l'aeroporto, il porto e le località della "
+             "costa. Per le corse in città, spiega come si calcola la tariffa. Chi "
+             "vede un prezzo può prenotare, e chi deve chiedere spesso chiede a "
+             "qualcun altro."),
+            ("WhatsApp o numero di telefono?",
+             "Tutti e due, con WhatsApp prima per i visitatori. Chiamare un numero "
+             "albanese dall'estero costa, e un messaggio con il numero del volo e "
+             "l'hotel è proprio com'è fatta una prenotazione di transfer."),
+            ("Come ottengo recensioni che servono?",
+             "Chiedile subito dopo le corse lunghe, con un link mandato su WhatsApp "
+             "mentre il viaggio è fresco. Una recensione che nomina il percorso fa "
+             "più di 5 stelle senza parole."),
+            ("Cosa decide il prezzo?",
+             "Quante corse indichi e quante lingue. Far trovare un taxi per la "
+             "corsa dall'aeroporto è un lavoro piccolo."),
+        ],
+        "related": [("/seo/", "SEO e ricerca locale"),
+                    ("/web-design/", "Siti web")],
+    },
 ]
 
 # /blog/, the index over those records. The soft wraps are placed for this text
