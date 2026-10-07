@@ -4847,7 +4847,7 @@ POSTS = [
     },
     {
         "slug": "sold-in-the-shop-gone-from-the-site",
-        "src": "f0e41580",
+        "src": "bdc8131c",
         "date": "2026-08-27",
         "updated": "2026-08-27",
         "topic": "Software me porosi",
@@ -4871,7 +4871,7 @@ POSTS = [
                 "e keqe e mundshme që të dalë në shesh.</p>",
                 "<p>Askush nuk është i pakujdesshëm. Dy sistemet nuk u njohën kurrë me njëri tjetrin.</p>",
             ]),
-            ("Si funksionon te Iglisi Watch", [
+            ("Si funksionon te <a href=\"/work/iglisi-watch/\">Iglisi Watch</a>", [
                 "<p>Një orë e shitur te arka pushon së ofruari në faqe rreth një minutë më "
                 "pas, dhe askush nuk hap laptop që kjo të ndodhë. Shitja regjistrohet aty ku "
                 "ndodh shitja, dhe faqja ndjek.</p>",

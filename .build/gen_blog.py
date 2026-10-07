@@ -137,7 +137,7 @@ def mentions(p, lang):
     return out
 
 
-def post_page(p, en_p, nxt, by_slug, band, lang):
+def post_page(p, en_p, nxt, by_slug, band, lang, siblings):
     c = shell.ch(lang)
     url = S + shell.localise(post_url(p), lang)
     home = S + shell.localise("/", lang)
@@ -240,9 +240,52 @@ def post_page(p, en_p, nxt, by_slug, band, lang):
     if contents:
         contents += NL
 
-    related = NL.join(f'              <li><a href="{shell.localise(h, lang)}">{t}</a></li>'
-                      for h, t in p["related"])
     svc_href, svc_name = p["service"]
+
+    # Three more posts on the same service, under the same "see also" heading.
+    #
+    # Until 2026-10-07 a post linked to exactly ONE other post, the read-next
+    # at the foot, and `related` pointed only at service and glossary pages. 74
+    # articles in 5 subjects with no path between them: a reader who finished
+    # one had the form or the back button, and the only thing tying a subject
+    # together was a heading on the index.
+    #
+    # Derived rather than listed in the records, so it ships no copy in 3
+    # languages, cannot drift from the posts it names, and a new post joins its
+    # cluster the day it is written. Deterministic because `siblings` keeps POSTS
+    # order: walk forward from this post, wrapping, and take the first 3 that
+    # are neither this post nor the one the foot already sends you to. Walking
+    # forward rather than taking the head of the list is what stops all 29 SEO
+    # posts pointing at the same first 3.
+    # Spread around the cluster rather than taken from just after this post.
+    # Consecutive posts would otherwise share 2 of their 3, and check 11 reads
+    # a list of titles as one run of words: 2 near-identical runs on 2 pages is
+    # a repeated sentence, which is how ai-search-pavia and ai-search-como
+    # failed the gate on the first attempt.
+    cluster = [q for q in siblings.values() if q["service"][0] == svc_href]
+    here = next((k for k, q in enumerate(cluster) if q["slug"] == p["slug"]), 0)
+    n = len(cluster)
+    sibs, seen = [], {p["slug"], nxt["slug"]}
+    for k in (1, 2, 3):
+        step = max(1, round(n * k / 4))
+        for bump in range(n):                  # nearest free slot from there
+            q = cluster[(here + step + bump) % n]
+            if q["slug"] not in seen:
+                seen.add(q["slug"])
+                sibs.append(q)
+                break
+
+    # Siblings FIRST, the hand-listed pages after. The last item in this block
+    # is the last text before the read-next tail, and a title ending in "?" or
+    # "." puts a sentence boundary there, which turns the tail into a sentence
+    # of its own: identical on any 2 posts that share a read-next target, and
+    # check 11 fails the pair. The hand-listed labels never end in punctuation,
+    # so keeping them last leaves that boundary exactly where it was.
+    related = NL.join(
+        [f'              <li><a href="{shell.localise(post_url(q), lang)}">'
+         f'{q["title"]}</a></li>' for q in sibs] +
+        [f'              <li><a href="{shell.localise(h, lang)}">{t}</a></li>'
+         for h, t in p["related"]])
 
     # The sidebar's client block, or nothing. A post about a trade we have not
     # worked in has no business to name, and an empty heading over an empty
@@ -573,7 +616,7 @@ if __name__ == "__main__":
         for i, (p, en_p) in enumerate(pairs):
             nxt = by_next.get(LADDER.get(p["slug"])) or posts[(i + 1) % len(posts)]
             if write(out(os.path.join("blog", p["slug"], "index.html"), lg),
-                     post_page(p, en_p, nxt, by_slug, band, lg)):
+                     post_page(p, en_p, nxt, by_slug, band, lg, by_next)):
                 changed += 1
             total += 1
     print(f"{changed} page(s) changed of {total}")

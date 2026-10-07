@@ -4890,7 +4890,7 @@ POSTS = [
     },
     {
         "slug": "sold-in-the-shop-gone-from-the-site",
-        "src": "f0e41580",
+        "src": "bdc8131c",
         "date": "2026-08-27",
         "updated": "2026-08-27",
         "topic": "Software su misura",
@@ -4914,7 +4914,7 @@ POSTS = [
                 "risposta, ed è il modo peggiore possibile perché venga fuori.</p>",
                 "<p>Nessuno è sciatto. I due sistemi non si sono mai presentati.</p>",
             ]),
-            ("Come funziona da Iglisi Watch", [
+            ("Come funziona da <a href=\"/work/iglisi-watch/\">Iglisi Watch</a>", [
                 "<p>Un orologio venduto in cassa smette di essere offerto sul sito circa un "
                 "minuto dopo, e nessuno apre un portatile perché succeda. La vendita si "
                 "registra dove la vendita avviene, e il sito segue.</p>",
