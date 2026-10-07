@@ -626,6 +626,7 @@ POSTS = [
     # posts arguing the same shape in the same words would share a sentence.
     {
         "slug": "watch-shops-and-jewellers",
+        "ask": ("watch shop", "Durres"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Local search",
@@ -737,6 +738,7 @@ POSTS = [
     # ==================================================== INDUSTRY: FASHION ===
     {
         "slug": "fashion-boutiques",
+        "ask": ("clothing boutique", "Durres"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Websites",
@@ -837,6 +839,7 @@ POSTS = [
     # =================================================== INDUSTRY: LINGERIE ===
     {
         "slug": "lingerie-shops",
+        "ask": ("lingerie shop", "Durres"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Websites",
@@ -932,6 +935,7 @@ POSTS = [
     # ==================================================== INDUSTRY: HEATING ===
     {
         "slug": "heating-and-cooling-trades",
+        "ask": ("air conditioning installer", "Durres"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Local search",
@@ -1028,6 +1032,7 @@ POSTS = [
     # ================================================ INDUSTRY: RESTAURANTS ===
     {
         "slug": "restaurants-and-cafes",
+        "ask": ("restaurant", "Durres"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Local search",
@@ -1128,6 +1133,7 @@ POSTS = [
     # ===================================================== INDUSTRY: HOTELS ===
     {
         "slug": "hotels-and-guesthouses",
+        "ask": ("hotel", "Durres"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "AI search",
@@ -1228,6 +1234,7 @@ POSTS = [
     # ================================================ INDUSTRY: HAIRDRESSERS ===
     {
         "slug": "hairdressers-and-salons",
+        "ask": ("hairdresser", "Durres"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Websites",
@@ -1322,6 +1329,7 @@ POSTS = [
     # ==================================================== INDUSTRY: DENTISTS ===
     {
         "slug": "dentists-and-clinics",
+        "ask": ("dentist", "Durres"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Websites",
@@ -1425,6 +1433,7 @@ POSTS = [
     # ================================================== INDUSTRY: CAR REPAIR ===
     {
         "slug": "car-repair-and-garages",
+        "ask": ("car repair garage", "Durres"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Local search",
@@ -1515,6 +1524,7 @@ POSTS = [
     # =============================================== INDUSTRY: ESTATE AGENTS ===
     {
         "slug": "estate-agents",
+        "ask": ("estate agent", "Durres"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Meta ads",
@@ -4057,6 +4067,7 @@ POSTS = [
 
     {
         "slug": "lawyers-and-notaries",
+        "ask": ("lawyer", "Durres"),
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Local search",
@@ -4153,6 +4164,7 @@ POSTS = [
 
     {
         "slug": "gyms-and-fitness-studios",
+        "ask": ("gym", "Durres"),
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Local search",
@@ -4246,6 +4258,7 @@ POSTS = [
 
     {
         "slug": "builders-and-contractors",
+        "ask": ("builder", "Durres"),
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Local search",
@@ -6860,6 +6873,7 @@ POSTS = [
     # =============================================== INDUSTRY: HOLIDAY LETS ===
     {
         "slug": "holiday-apartments",
+        "ask": ("holiday apartments", "Durres"),
         "date": "2026-10-07",
         "updated": "2026-10-07",
         "topic": "Websites",

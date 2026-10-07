@@ -103,6 +103,18 @@ SRC = {
     "WA_LABEL": "515b82d6",
     "WA_PREFILL": "d28f915d",
     "WA_AUDIT": "6cc96b64",
+    "AIQ_HEAD": "2e3d7113",
+    "AIQ_LEAD": "222295a8",
+    "AIQ_TRADE": "0ba1e0ca",
+    "AIQ_CITY": "a0954198",
+    "AIQ_Q": "77248fc3",
+    "AIQ_CHATGPT": "23f4e884",
+    "AIQ_PERPLEXITY": "eaf87fc2",
+    "AIQ_GOOGLE": "a3dcd07e",
+    "AIQ_MAPS": "b7169848",
+    "AIQ_AFTER": "997d214e",
+    "QR_NOTE": "483afcd8",
+    "QR_ALT": "c8239188",
     "WHAT_WE_DO": "bc3cba50",
     "WHAT_WE_DONT": "5eba3082",
     "WORK_BUILT": "9ce65dac",
@@ -178,6 +190,20 @@ OG_ALT = ("Logotipi minarank duke u ngjitur mbi 10 rezultate kërkimi të "
 # on his phone with no way to ask which one until he replies.
 WA_PREFILL = "Përshëndetje {brand}, kam një pyetje për faqen time të internetit."
 WA_AUDIT = "Përshëndetje {brand}, dua auditimin falas. Faqja ime është: "
+
+AIQ_HEAD = "A je në përgjigje?"
+AIQ_LEAD = "Pyet tani. Çdo lidhje hapet me pyetjen gati."
+AIQ_TRADE = "Çfarë shet"
+AIQ_CITY = "Qyteti yt"
+AIQ_Q = "#T në #C: kë më rekomandon?"
+AIQ_CHATGPT = "Pyet ChatGPT"
+AIQ_PERPLEXITY = "Pyet Perplexity"
+AIQ_GOOGLE = "Pyet Google"
+AIQ_MAPS = "Shih hartën"
+AIQ_AFTER = "Nuk të përmend? Auditimi falas tregon pse."
+
+QR_NOTE = "Je në kompjuter? Skanoje për të vazhduar në WhatsApp."
+QR_ALT = "Kod QR që hap WhatsApp me kërkesën për auditim të shkruar"
 
 # -- the ink band and the footer meta --------------------------------------
 # glossary.BANNED fails on "auditim i faqes", so the button names the audit and

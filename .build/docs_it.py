@@ -386,7 +386,7 @@ PAGES = [
     # inglese: sono nomi propri, elencati in glossary.KEEP_ENGLISH.
     {
         "url": "/audit/",
-     "src": "fc0f422b",
+     "src": "fc7a3e59",
         "nav": "L'audit",
         # 30 caratteri sui 52 che il budget lascia dopo " · minarank studio".
         "title": "Cosa misura l'audit gratuito",
@@ -428,13 +428,12 @@ PAGES = [
             "owner_label": "Il tuo nome",
             "owner_err": "Dicci a chi va" + NL +
                          "intestato.",
-            "email_label": "Email",
-            "email_err": "Qui arriva" + NL +
-                         "il PDF.",
+            "email_label": "Email o WhatsApp",
+            "email_err": "Dove arriva il PDF: email o WhatsApp.",
             "send": "Mandalo",
             "alt": "Preferisci scrivere? {email}," + NL +
                    "oppure <a href=\"{wa_href}\">WhatsApp</a>.",
-            "fine": "Teniamo l'indirizzo, il tuo nome, la tua email e la pagina "
+            "fine": "Teniamo l'indirizzo, il tuo nome, la tua email o il tuo numero e la pagina "
                     "da cui" + NL +
                     "sei arrivato. Servono per fare l'audit e per risponderti, "
                     "e non vanno" + NL +
@@ -465,6 +464,9 @@ PAGES = [
                 "chatgpt": "Chiedi a ChatGPT",
                 "perplexity": "Chiedi a Perplexity",
                 "google": "Chiedi a Google",
+                "maps": "Guarda la mappa",
+                # Dated and self-checked (rule 23): the owner asked all 3 on this date.
+                "proof": "Verificato il 7 ottobre 2026: ChatGPT, Perplexity e Google nominano tutti <a href=\"/work/iglisi-watch/\">Iglisi Watch</a>, un negozio che seguiamo. Provalo.",
                 "after": "Non ti nomina, o nomina prima un concorrente? L'audit ti dice perché," + NL +
                          "e il modulo è in fondo alla pagina.",
             }),
@@ -605,7 +607,7 @@ PAGES = [
     # ---------------------------------------------------------------- START --
     {
         "url": "/start/",
-     "src": "ec536b5b",
+     "src": "7098ce2c",
         "nav": "Inizia un progetto",
         "title": "Audit gratuito del sito",
         "description": "Mandaci il tuo sito e ricevi un audit gratuito: cosa ti "
@@ -659,14 +661,13 @@ PAGES = [
             "owner_label": "Il tuo nome",
             "owner_err": "L'audit lo intestiamo" + NL +
                          "a qualcuno, quindi ci serve un nome.",
-            "email_label": "Email",
-            "email_err": "L'audit arriva a questo" + NL +
-                         "indirizzo, quindi deve essere giusto.",
+            "email_label": "Email o WhatsApp",
+            "email_err": "Email o WhatsApp, così l'audit ti arriva.",
             "send": "Mandalo",
             "alt": "Preferisci non compilare un modulo? Scrivi a" + NL +
                    "{email} oppure" + NL +
                    "<a href=\"{wa_href}\">mandaci un messaggio su WhatsApp</a>.",
-            "fine": "Teniamo nome, email, sito e la pagina da cui arrivi," + NL +
+            "fine": "Teniamo nome, email o numero, sito e la pagina da cui arrivi," + NL +
                     "solo per fare questo audit e risponderti. Il modulo gira su Web3Forms, non passiamo" + NL +
                     "i tuoi dati a nessun altro, e una riga a" + NL +
                     "{email_delete}" + NL +

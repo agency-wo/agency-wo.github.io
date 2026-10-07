@@ -429,13 +429,12 @@ PAGES = [
             "owner_label": "Your name",
             "owner_err": "Tell us who to address" + NL +
                          "it to.",
-            "email_label": "Email",
-            "email_err": "This is where the PDF" + NL +
-                         "lands.",
+            "email_label": "Email or WhatsApp",
+            "email_err": "Where the PDF goes: email or WhatsApp.",
             "send": "Send it",
             "alt": "Rather just write? {email}," + NL +
                    "or <a href=\"{wa_href}\">WhatsApp</a>.",
-            "fine": "We keep the address, your name, your email and the page "
+            "fine": "We keep the address, your name, your email or number and the page "
                     "you came" + NL +
                     "in on. They run the audit and the reply, and go nowhere "
                     "else. The form" + NL +
@@ -467,6 +466,9 @@ PAGES = [
                 "chatgpt": "Ask ChatGPT",
                 "perplexity": "Ask Perplexity",
                 "google": "Ask Google",
+                "maps": "See the map",
+                # Dated and self-checked (rule 23): the owner asked all 3 on this date.
+                "proof": "Checked 7 October 2026: ChatGPT, Perplexity and Google all name <a href=\"/work/iglisi-watch/\">Iglisi Watch</a>, a shop we built for. Try it.",
                 "after": "Not named, or named after a competitor? The audit shows why," + NL +
                          "and the form is at the foot of this page.",
             }),
@@ -660,14 +662,13 @@ PAGES = [
             "owner_label": "Your name",
             "owner_err": "We address the audit" + NL +
                          "to somebody, so we need a name.",
-            "email_label": "Email",
-            "email_err": "The audit goes here," + NL +
-                         "so it has to be right.",
+            "email_label": "Email or WhatsApp",
+            "email_err": "Email or WhatsApp, so the audit reaches you.",
             "send": "Send it",
             "alt": "Rather not fill in a form? Write to" + NL +
                    "{email} or" + NL +
                    "<a href=\"{wa_href}\">message on WhatsApp</a>.",
-            "fine": "We keep your name, email, website and the page you" + NL +
+            "fine": "We keep your name, email or number, website and the page you" + NL +
                     "arrived on, only to run this audit and reply. The form runs on Web3Forms, we pass your" + NL +
                     "details to nobody else, and one line to" + NL +
                     "{email_delete}" + NL +

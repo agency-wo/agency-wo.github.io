@@ -33,7 +33,7 @@ import shell  # noqa: E402
 import clients as client_data  # noqa: E402
 import proof_data  # noqa: E402
 _PROFILE = [c for c in client_data.CLIENTS if c["slug"] == "iglisi-watch"][0]["profile"]
-from gen_pages import form_source, form_subject, out, write  # noqa: E402
+from gen_pages import CONTACT_PATTERN, form_source, form_subject, out, write  # noqa: E402
 # The question block and its FAQPage, both from gen_docs, so the homepage asks
 # in the same markup the service pages do and the schema is DERIVED from the
 # visible answers rather than retyped beside them. gen_docs.faq_node() carries
@@ -254,7 +254,7 @@ def audit_form(f, lang):
 
               <p class="field">
                 <label for="af-email">{fill(f["email_label"], lang)}</label>
-                <input id="af-email" name="email" type="email" inputmode="email"
+                <input id="af-email" name="email" type="text" pattern="{CONTACT_PATTERN}"
                   autocomplete="email" autocapitalize="none" spellcheck="false"
                   required aria-describedby="af-email-err">
                 <span class="field-err" id="af-email-err">{txt(18, f["email_err"], lang)}</span>

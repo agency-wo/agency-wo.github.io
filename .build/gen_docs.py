@@ -19,7 +19,7 @@ from urllib.parse import quote
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import i18n  # noqa: E402
 import shell  # noqa: E402
-from gen_pages import (FIGS, Contents, form_source, form_subject, out, slugify,  # noqa: E402
+from gen_pages import (FIGS, CONTACT_PATTERN, Contents, aiq_block, form_source, form_subject, out, slugify,  # noqa: E402
                        strip_tags, write)
 
 # Which of these 3 pages carries a mark, keyed by URL rather than by a field in
@@ -150,18 +150,6 @@ def flat(s, lang):
 # runs on without one, which is why this is a list and not a rule about tags.
 BREAK_BEFORE = ("h2", "who")
 
-# The assistants the /audit/ "ask" block links to, each opening with the
-# question already asked. Google's udm=50 is AI Mode; where it is not offered
-# the same URL is an ordinary search, which still answers the question.
-ASK_ENGINES = (("https://chatgpt.com/?q=", "chatgpt"),
-               ("https://www.perplexity.ai/search?q=", "perplexity"),
-               ("https://www.google.com/search?udm=50&amp;q=", "google"))
-
-
-def attr(s):
-    """A string made safe for a double-quoted attribute."""
-    return (s.replace("&", "&amp;").replace('"', "&quot;")
-             .replace("<", "&lt;").replace(">", "&gt;"))
 
 
 def block(indent, b, lang, en=None, toc=None):
@@ -224,27 +212,9 @@ def block(indent, b, lang, en=None, toc=None):
         # rewrites them as the visitor types. Not a <form>: rule 20 keeps one ask
         # per page, and nothing here takes anything from the visitor.
         a = b[1]
-        q = fill(a["q"], lang)
-        t0, c0 = fill(a["trade_default"], lang), fill(a["city_default"], lang)
-        enc = quote(q.replace("#T", t0).replace("#C", c0), safe="")
-        rows = [f'{pad}<div class="aiq" data-aiq data-q="{attr(q)}">',
-                f'{pad}  <p>{txt(indent + 4, a["lead"], lang)}</p>',
-                f'{pad}  <div class="af-pair">']
-        for fid, lab, val in (("aiq-t", a["trade_label"], t0), ("aiq-c", a["city_label"], c0)):
-            rows += [f'{pad}    <div class="field">',
-                     f'{pad}      <label for="{fid}">{fill(lab, lang)}</label>',
-                     f'{pad}      <input id="{fid}" type="text" value="{attr(val)}" '
-                     f'autocomplete="off" aria-describedby="aiq-note">',
-                     f'{pad}    </div>']
-        rows.append(f'{pad}  </div>')
-        rows.append(f'{pad}  <p class="aiq-go">')
-        for base, key in ASK_ENGINES:
-            rows.append(f'{pad}    <a href="{base}{enc}" data-base="{base}" '
-                        f'target="_blank" rel="noopener noreferrer">{fill(a[key], lang)}</a>')
-        rows.append(f'{pad}  </p>')
-        rows.append(f'{pad}  <p class="aiq-note" id="aiq-note">{txt(indent + 4, a["after"], lang)}</p>')
-        rows.append(f'{pad}</div>')
-        return NL.join(rows)
+        one = lambda k: " ".join(fill(a[k], lang).split(NL))  # noqa: E731
+        return aiq_block(indent, {k: one(k) for k in a if not k.endswith("_default")},
+                         one("trade_default"), one("city_default"))
     raise AssertionError("no such block kind: " + kind)
 
 
@@ -460,7 +430,7 @@ def audit_section(rec, lang):
                 </p>
                 <p class="field">
                   <label for="af-email">{fill(f["email_label"], lang)}</label>
-                  <input id="af-email" name="email" type="email" inputmode="email"
+                  <input id="af-email" name="email" type="text" pattern="{CONTACT_PATTERN}"
                     autocomplete="email" autocapitalize="none" spellcheck="false"
                     required aria-describedby="af-email-err">
                   <span class="field-err" id="af-email-err">{txt(20, f["email_err"], lang)}</span>
@@ -473,6 +443,7 @@ def audit_section(rec, lang):
               </p>
               <p class="af-say" id="af-say" role="status" aria-live="polite"></p>
               <p class="af-alt">{txt(16, f["alt"], lang)}</p>
+              <p class="af-qr"><img src="{shell.stamped("/assets/qr/wa-audit-" + lang + ".png")}" alt="{shell.ch(lang).QR_ALT}" width="336" height="336" loading="lazy" decoding="async"><span>{shell.ch(lang).QR_NOTE}</span></p>
               <p class="af-fine">{txt(16, f["fine"], lang)}</p>
             </form>
           </section>'''

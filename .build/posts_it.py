@@ -649,7 +649,8 @@ POSTS = [
     # ====================================================== INDUSTRY: WATCH ===
     {
         "slug": "watch-shops-and-jewellers",
-        "src": "c8f4ee6e",
+        "src": "d39af162",
+        "ask": ("negozio di orologi", "Durazzo"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Ricerca locale",
@@ -762,7 +763,8 @@ POSTS = [
     # ==================================================== INDUSTRY: FASHION ===
     {
         "slug": "fashion-boutiques",
-        "src": "14f49fee",
+        "src": "d874270d",
+        "ask": ("boutique di abbigliamento", "Durazzo"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Siti web",
@@ -860,7 +862,8 @@ POSTS = [
     # =================================================== INDUSTRY: LINGERIE ===
     {
         "slug": "lingerie-shops",
-        "src": "0cc3e448",
+        "src": "43afefd6",
+        "ask": ("negozio di intimo", "Durazzo"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Siti web",
@@ -959,7 +962,8 @@ POSTS = [
     # ==================================================== INDUSTRY: HEATING ===
     {
         "slug": "heating-and-cooling-trades",
-        "src": "ae0c53f2",
+        "src": "c1b5e928",
+        "ask": ("installatore di condizionatori", "Durazzo"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Ricerca locale",
@@ -1055,7 +1059,8 @@ POSTS = [
     # ================================================ INDUSTRY: RESTAURANTS ===
     {
         "slug": "restaurants-and-cafes",
-        "src": "447f59b1",
+        "src": "e3dd2f42",
+        "ask": ("ristorante", "Durazzo"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Ricerca locale",
@@ -1154,7 +1159,8 @@ POSTS = [
     # ===================================================== INDUSTRY: HOTELS ===
     {
         "slug": "hotels-and-guesthouses",
-        "src": "6b00692a",
+        "src": "e1917678",
+        "ask": ("hotel", "Durazzo"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Ricerca AI",
@@ -1258,7 +1264,8 @@ POSTS = [
     # ================================================ INDUSTRY: HAIRDRESSERS ===
     {
         "slug": "hairdressers-and-salons",
-        "src": "8b379a7a",
+        "src": "c866592f",
+        "ask": ("parrucchiere", "Durazzo"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Siti web",
@@ -1357,7 +1364,8 @@ POSTS = [
     # ==================================================== INDUSTRY: DENTISTS ===
     {
         "slug": "dentists-and-clinics",
-        "src": "2b196f51",
+        "src": "407370e0",
+        "ask": ("dentista", "Durazzo"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Siti web",
@@ -1462,7 +1470,8 @@ POSTS = [
     # ================================================== INDUSTRY: CAR REPAIR ===
     {
         "slug": "car-repair-and-garages",
-        "src": "8a314480",
+        "src": "6408cae6",
+        "ask": ("officina meccanica", "Durazzo"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Ricerca locale",
@@ -1558,7 +1567,8 @@ POSTS = [
     # =============================================== INDUSTRY: ESTATE AGENTS ===
     {
         "slug": "estate-agents",
-        "src": "a1001896",
+        "src": "db20a696",
+        "ask": ("agenzia immobiliare", "Durazzo"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Meta ads",
@@ -4147,7 +4157,8 @@ POSTS = [
 
     {
         "slug": "lawyers-and-notaries",
-        "src": "82ea5f7d",
+        "src": "f42ba92b",
+        "ask": ("avvocato", "Durazzo"),
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Ricerca locale",
@@ -4247,7 +4258,8 @@ POSTS = [
 
     {
         "slug": "gyms-and-fitness-studios",
-        "src": "e23e88df",
+        "src": "776a4e7a",
+        "ask": ("palestra", "Durazzo"),
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Ricerca locale",
@@ -4341,7 +4353,8 @@ POSTS = [
 
     {
         "slug": "builders-and-contractors",
-        "src": "6e912b22",
+        "src": "93291eab",
+        "ask": ("impresa edile", "Durazzo"),
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Ricerca locale",
@@ -7005,7 +7018,8 @@ POSTS = [
     # =============================================== INDUSTRY: HOLIDAY LETS ===
     {
         "slug": "holiday-apartments",
-        "src": "031c6f0f",
+        "src": "cbe3e935",
+        "ask": ("appartamenti per le vacanze", "Durazzo"),
         "date": "2026-10-07",
         "updated": "2026-10-07",
         "topic": "Siti web",

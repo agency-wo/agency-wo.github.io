@@ -1316,6 +1316,22 @@ a[href^="tel:"] { white-space: nowrap; }
   font-weight: 700; }
 .aiq-go a { display: inline-flex; align-items: center; min-height: 44px; }
 .aiq-note { margin: var(--s-3) 0 0; font-size: var(--fs-small); }
+.aiq-h { margin: 0 0 var(--s-2); font-weight: 700; }
+.aiq-proof { margin: var(--s-4) 0 0; font-size: var(--fs-small); }
+
+/* The WhatsApp QR under the /audit/ and /start/ forms (2026-10-07). A phone
+   cannot scan itself, so it shows only from 1000px; loading="lazy" inside a
+   display:none parent means a phone never downloads it. Ink on white, the
+   palette's own #13161C, because a scanner wants the contrast. Regenerate the
+   3 PNGs (336px, shown at 112px) from shell.wa_audit_href(lang) with any QR
+   encoder (ECC M, margin 2)
+   if that prefill ever changes. */
+.af-qr { display: none; }
+@media (min-width: 1000px) {
+  .af-qr { display: flex; align-items: center; gap: var(--s-4); margin: var(--s-4) 0 0;
+    font-size: var(--fs-small); }
+  .af-qr img { flex: none; inline-size: 112px; block-size: 112px; }
+}
 .field { display: block; margin-top: var(--s-5); margin-bottom: 0; }
 .field label { display: block; font-size: var(--fs-small); font-weight: 700;
   margin-bottom: var(--s-2); }

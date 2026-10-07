@@ -484,21 +484,21 @@
     }
   }
 
-  /* "Ask them yourself" on /audit/: the 3 assistant links follow what the
+  /* "Ask them yourself" (/audit/, the trade posts, the Iglisi case): the links follow what the
      visitor types. Nothing is fetched; each link is navigation the visitor
      chooses. An empty box falls back to its default, so a link never asks
      a question with a hole in it. */
   var ask = document.querySelector("[data-aiq]");
   if (ask) {
-    var askQ = ask.getAttribute("data-q");
     var askT = document.getElementById("aiq-t");
     var askC = document.getElementById("aiq-c");
     var askSet = function () {
       var t = askT.value.trim() || askT.defaultValue;
       var c = askC.value.trim() || askC.defaultValue;
-      var q = encodeURIComponent(askQ.replace("#T", t).replace("#C", c));
+      /* Each link carries its own pattern: the question, or "#T #C" for the map. */
       ask.querySelectorAll("a[data-base]").forEach(function (a) {
-        a.href = a.getAttribute("data-base") + q;
+        a.href = a.getAttribute("data-base") + encodeURIComponent(
+          a.getAttribute("data-pat").replace("#T", t).replace("#C", c));
       });
     };
     askT.addEventListener("input", askSet);

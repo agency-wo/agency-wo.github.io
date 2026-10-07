@@ -75,6 +75,27 @@ WA_PREFILL = "Hello {brand}, I have a question about my website."
 # after it. shell.wa_audit_href() puts it in the href; gate check 53 reads it back.
 WA_AUDIT = "Hello {brand}, I would like the free audit. My website is: "
 
+# The "ask them yourself" block on the trade posts and the Iglisi case page
+# (gen_pages.aiq_block). Every sentence is 8 words or fewer, because the block
+# repeats on 15 pages and rule 14 compares sentences longer than that. #T and
+# #C are the 2 inputs and are never translated.
+AIQ_HEAD = "Is your business in the answer?"
+AIQ_LEAD = "Ask now. Each link opens with the question asked."
+AIQ_TRADE = "What you sell"
+AIQ_CITY = "Your town"
+AIQ_Q = "#T in #C: who would you recommend?"
+AIQ_CHATGPT = "Ask ChatGPT"
+AIQ_PERPLEXITY = "Ask Perplexity"
+AIQ_GOOGLE = "Ask Google"
+AIQ_MAPS = "See the map"
+AIQ_AFTER = "Not named? The free audit shows why."
+
+# The WhatsApp QR under the /audit/ and /start/ forms, desktop only. On a
+# computer wa.me opens WhatsApp Web, which most shop owners never use; the
+# code hands the same prefilled chat (shell.wa_audit_href) to their phone.
+QR_NOTE = "On a computer? Scan it to continue on WhatsApp."
+QR_ALT = "QR code that opens WhatsApp with the audit request written"
+
 # -- the ink band and the footer meta --------------------------------------
 BAND_CTA = "Get a free website audit"
 # The note under the band heading on the 4 service pages. One key rather than

@@ -375,7 +375,7 @@ PAGES = [
     # anglisht: janë emra të përveçëm, në glossary.KEEP_ENGLISH.
     {
         "url": "/audit/",
-     "src": "fc0f422b",
+     "src": "fc7a3e59",
         "nav": "Auditimi",
         # 25 shkronja nga 52 që lë buxheti pas " · minarank studio".
         "title": "Çfarë mat auditimi falas",
@@ -417,13 +417,12 @@ PAGES = [
             "owner_label": "Emri yt",
             "owner_err": "Na thuaj kujt t'ia" + NL +
                          "drejtojmë.",
-            "email_label": "Email",
-            "email_err": "Këtu mbërrin" + NL +
-                         "PDF-ja.",
+            "email_label": "Email ose WhatsApp",
+            "email_err": "Ku vjen PDF-ja: email ose WhatsApp.",
             "send": "Dërgoje",
             "alt": "Do më mirë të shkruash? {email}," + NL +
                    "ose <a href=\"{wa_href}\">WhatsApp</a>.",
-            "fine": "Mbajmë adresën, emrin tënd, email-in tënd dhe faqen nga ku "
+            "fine": "Mbajmë adresën, emrin tënd, email-in ose numrin tënd dhe faqen nga ku "
                     "erdhe." + NL +
                     "Shërbejnë për të bërë auditimin dhe për të të kthyer "
                     "përgjigje, dhe nuk" + NL +
@@ -454,6 +453,9 @@ PAGES = [
                 "chatgpt": "Pyet ChatGPT",
                 "perplexity": "Pyet Perplexity",
                 "google": "Pyet Google",
+                "maps": "Shih hartën",
+                # Dated and self-checked (rule 23): the owner asked all 3 on this date.
+                "proof": "Kontrolluar më 7 tetor 2026: ChatGPT, Perplexity dhe Google e përmendin të gjithë <a href=\"/work/iglisi-watch/\">Iglisi Watch</a>, një dyqan që e ndjekim. Provoje.",
                 "after": "Nuk të përmend, ose përmend më parë një konkurrent? Auditimi të thotë" + NL +
                          "pse, dhe formulari është në fund të faqes.",
             }),
@@ -591,7 +593,7 @@ PAGES = [
     # ---------------------------------------------------------------- START --
     {
         "url": "/start/",
-     "src": "ec536b5b",
+     "src": "7098ce2c",
         "nav": "Nis një projekt",
         "title": "Auditim falas",
         "description": "Na dërgo faqen tënde dhe merr një auditim falas: çfarë po "
@@ -647,14 +649,13 @@ PAGES = [
             "owner_label": "Emri yt",
             "owner_err": "Auditimin ia drejtojmë" + NL +
                          "dikujt, prandaj na duhet një emër.",
-            "email_label": "Email",
-            "email_err": "Auditimi vjen te kjo" + NL +
-                         "adresë, prandaj duhet të jetë e saktë.",
+            "email_label": "Email ose WhatsApp",
+            "email_err": "Email ose WhatsApp, që auditimi të vijë.",
             "send": "Dërgoje",
             "alt": "Nuk të pëlqen të plotësosh formularë? Shkruaj te" + NL +
                    "{email} ose" + NL +
                    "<a href=\"{wa_href}\">na dërgo mesazh në WhatsApp</a>.",
-            "fine": "I mbajmë emrin, email-in, faqen dhe adresën nga ku" + NL +
+            "fine": "I mbajmë emrin, email-in ose numrin, faqen dhe adresën nga ku" + NL +
                     "erdhe, vetëm për të bërë këtë auditim dhe për t'u përgjigjur. Formulari punon me" + NL +
                     "Web3Forms, të dhënat e tua nuk ia japim askujt tjetër, dhe" + NL +
                     "një rresht te {email_delete}" + NL +

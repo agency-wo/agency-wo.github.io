@@ -40,7 +40,8 @@ NL = chr(10)
 CLIENTS = [
     {
         "slug": "iglisi-watch",
-        "src": "5494f449",
+        "src": "33731d5d",
+        "ask": ("riparazione orologi", "Durazzo"),
         # Not copy: the file and its 2 dimensions.
         "mark": [("iglisi-watch.png", 195, 22)],
         "name": "Iglisi Watch",

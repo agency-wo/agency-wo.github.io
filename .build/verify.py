@@ -557,8 +557,12 @@ _HEAD_BLOCK = re.compile(r"(?s)<!-- SHARED:HEADER -->.*?<!-- /SHARED:HEADER -->"
 _FOOT_BLOCK = re.compile(r"(?s)<!-- SHARED:FOOTER -->.*?<!-- /SHARED:FOOTER -->")
 
 
+# The "ask them yourself" block repeats on 16 pages by design, like the band.
+_AIQ = re.compile(r"(?s)<!-- AIQ -->.*?<!-- /AIQ -->")
+
+
 def body_text(html):
-    return text_of(_BAND.sub(" ", html))
+    return text_of(_AIQ.sub(" ", _BAND.sub(" ", html)))
 
 
 def prose_html(html):

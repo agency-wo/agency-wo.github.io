@@ -18,6 +18,7 @@ NL = chr(10)
 CLIENTS = [
     {
         "slug": "iglisi-watch",
+        "ask": ("watch repair", "Durres"),
         "mark": [("iglisi-watch.png", 195, 22)],
         "name": "Iglisi Watch",
         "where": "Durres, Albania",

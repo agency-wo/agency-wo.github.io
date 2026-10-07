@@ -230,9 +230,8 @@ FORM = {
     "owner_label": "Your name",
     "owner_err": "Who should we send it" + NL +
                  "to?",
-    "email_label": "Email",
-    "email_err": "The PDF goes to this" + NL +
-                 "address.",
+    "email_label": "Email or WhatsApp",
+    "email_err": "Email or WhatsApp number.",
     "category_label": "What you do",
     "category_err": "Watches, haircuts," + NL +
                     "heating. One word is enough.",

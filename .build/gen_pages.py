@@ -441,6 +441,73 @@ def form_source(name, lang):
     return name if lang == "en" else name + "-" + lang
 
 
+# The assistants the "ask them yourself" block links to, each opened with the
+# question already asked, and the map searched for the trade in the town. The
+# third field picks the pattern: "q" is the page's question, "map" is "#T #C".
+# Google's udm=50 is AI Mode; where it is not offered it is an ordinary search.
+AIQ_ENGINES = (("https://chatgpt.com/?q=", "chatgpt", "q"),
+               ("https://www.perplexity.ai/search?q=", "perplexity", "q"),
+               ("https://www.google.com/search?udm=50&amp;q=", "google", "q"),
+               ("https://www.google.com/maps/search/", "maps", "map"))
+
+
+def attr(s):
+    """A string made safe for a double-quoted attribute."""
+    return (s.replace("&", "&amp;").replace('"', "&quot;")
+             .replace("<", "&lt;").replace(">", "&gt;"))
+
+
+def aiq_block(indent, s, trade, city):
+    """The "ask them yourself" block: what you sell, your town, and 4 links that
+    put the question to ChatGPT, Perplexity, Google and the map (2026-10-07).
+
+    `s` holds the strings, already filled for the page's language: lead,
+    trade_label, city_label, q (#T and #C are the 2 inputs), chatgpt,
+    perplexity, google, maps, after, and optionally head and proof. The hrefs
+    are written here with the defaults, so every link works with JS off;
+    js/main.js rewrites them as the visitor types. Nothing is fetched (rule 30)
+    and it is not a <form> (rule 20). The AIQ markers let gate check 11 treat
+    it as the shared component it is, like the band, on the 16 pages it sits on.
+    """
+    from urllib.parse import quote
+    pad = " " * indent
+    pats = {"q": s["q"], "map": "#T #C"}
+
+    def enc(p):
+        return quote(p.replace("#T", trade).replace("#C", city), safe="")
+
+    rows = [pad + "<!-- AIQ -->", f'{pad}<div class="aiq" data-aiq>']
+    if s.get("head"):
+        rows.append(f'{pad}  <p class="aiq-h">{s["head"]}</p>')
+    rows += [f'{pad}  <p>{s["lead"]}</p>', f'{pad}  <div class="af-pair">']
+    for fid, lab, val in (("aiq-t", s["trade_label"], trade), ("aiq-c", s["city_label"], city)):
+        rows += [f'{pad}    <div class="field">',
+                 f'{pad}      <label for="{fid}">{lab}</label>',
+                 f'{pad}      <input id="{fid}" type="text" value="{attr(val)}" '
+                 f'autocomplete="off" aria-describedby="aiq-note">',
+                 f'{pad}    </div>']
+    rows += [f'{pad}  </div>', f'{pad}  <p class="aiq-go">']
+    for base, key, pk in AIQ_ENGINES:
+        rows.append(f'{pad}    <a href="{base}{enc(pats[pk])}" data-base="{base}" '
+                    f'data-pat="{attr(pats[pk])}" target="_blank" '
+                    f'rel="noopener noreferrer">{s[key]}</a>')
+    rows.append(f'{pad}  </p>')
+    if s.get("proof"):
+        rows.append(f'{pad}  <p class="aiq-proof">{s["proof"]}</p>')
+    rows += [f'{pad}  <p class="aiq-note" id="aiq-note">{s["after"]}</p>',
+             f'{pad}</div>', pad + "<!-- /AIQ -->"]
+    return NL.join(rows)
+
+
+# The "email" field on every form takes an email address OR a WhatsApp number
+# (2026-10-07): the people this site sells to live on WhatsApp, and a field
+# that demands an email is where some of them stop. Native constraint
+# validation, so it holds with JS off; the field keeps name="email", so check
+# 26, the intake worker and the queue are unchanged. Either an address with an
+# @ and a dot, or 7 to 19 digits and spaces with an optional leading +.
+CONTACT_PATTERN = r"[^@\s]+@[^@\s]+\.[^@\s]+|\+?[0-9][0-9 ]{6,18}"
+
+
 def form_subject(name, lang):
     """The hidden `subject` field: the subject line of the lead email.
 

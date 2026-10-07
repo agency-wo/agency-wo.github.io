@@ -285,7 +285,7 @@ PAGE = {
 # panel is narrow, the 4 error messages are read aloud when a field is invalid,
 # and each one says what to do rather than what went wrong.
 FORM = {
-    "src": "39bc7afb",
+    "src": "15d6451a",
 
     # Not chrome_it.BAND_CTA ("Chiedi un audit gratuito"), which is a different
     # string on the same page, exactly as in English.
@@ -308,9 +308,8 @@ FORM = {
     "no_site_hint": "Allora ne pianifichiamo uno.",
     "owner_label": "Il tuo nome",
     "owner_err": "A chi lo mandiamo?",
-    "email_label": "Email",
-    "email_err": "Il PDF arriva a questo" + NL +
-                 "indirizzo.",
+    "email_label": "Email o WhatsApp",
+    "email_err": "Un'email o un numero WhatsApp.",
     "category_label": "Di cosa ti occupi",
     "category_err": "Orologi, parrucchiere," + NL +
                     "riscaldamento. Basta una parola.",

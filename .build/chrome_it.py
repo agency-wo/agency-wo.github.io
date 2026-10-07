@@ -101,6 +101,18 @@ SRC = {
     "WA_LABEL": "515b82d6",
     "WA_PREFILL": "d28f915d",
     "WA_AUDIT": "6cc96b64",
+    "AIQ_HEAD": "2e3d7113",
+    "AIQ_LEAD": "222295a8",
+    "AIQ_TRADE": "0ba1e0ca",
+    "AIQ_CITY": "a0954198",
+    "AIQ_Q": "77248fc3",
+    "AIQ_CHATGPT": "23f4e884",
+    "AIQ_PERPLEXITY": "eaf87fc2",
+    "AIQ_GOOGLE": "a3dcd07e",
+    "AIQ_MAPS": "b7169848",
+    "AIQ_AFTER": "997d214e",
+    "QR_NOTE": "483afcd8",
+    "QR_ALT": "c8239188",
     "WHAT_WE_DO": "bc3cba50",
     "WHAT_WE_DONT": "5eba3082",
     "WORK_BUILT": "9ce65dac",
@@ -170,6 +182,20 @@ OG_ALT = ("Il logotipo minarank che sale su 10 risultati di ricerca numerati, "
 WA_PREFILL = "Ciao {brand}, ho una domanda sul mio sito."
 # "Vorrei", not "voglio": the conditional is how you ask for something in a shop.
 WA_AUDIT = "Ciao {brand}, vorrei l'audit gratuito. Il mio sito è: "
+
+AIQ_HEAD = "La tua attività è nella risposta?"
+AIQ_LEAD = "Chiedilo ora. Ogni link apre con la domanda pronta."
+AIQ_TRADE = "Cosa vendi"
+AIQ_CITY = "La tua città"
+AIQ_Q = "#T a #C: chi mi consigli?"
+AIQ_CHATGPT = "Chiedi a ChatGPT"
+AIQ_PERPLEXITY = "Chiedi a Perplexity"
+AIQ_GOOGLE = "Chiedi a Google"
+AIQ_MAPS = "Guarda la mappa"
+AIQ_AFTER = "Non ti nomina? L'audit gratuito spiega perché."
+
+QR_NOTE = "Sei al computer? Inquadralo per continuare su WhatsApp."
+QR_ALT = "Codice QR che apre WhatsApp con la richiesta di audit già scritta"
 
 # -- the ink band and the footer meta --------------------------------------
 # The band CTA is a filled block set at --fs-lead, so its width is its text and

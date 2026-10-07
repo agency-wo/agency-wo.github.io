@@ -10,7 +10,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import i18n  # noqa: E402
 import l10n  # noqa: E402
 import shell  # noqa: E402
-from gen_pages import out, write  # noqa: E402
+from gen_pages import aiq_block, out, write  # noqa: E402
 
 S = shell.SITE
 NL = chr(10)
@@ -189,6 +189,10 @@ def client_page(c, nxt, posts, band, lang):
                   stats(pr["stats"], lang) + NL +
                   '          <p class="taken">' +
                   shell.localise_html(pr["taken"], lang) + '</p>' + NL)
+    # Where a claim about the assistants is made, the visitor can check it.
+    if c.get("ask"):
+        c_ = ch
+        proof += aiq_block(10, {"head": c_.AIQ_HEAD, "lead": c_.AIQ_LEAD, "trade_label": c_.AIQ_TRADE, "city_label": c_.AIQ_CITY, "q": c_.AIQ_Q, "chatgpt": c_.AIQ_CHATGPT, "perplexity": c_.AIQ_PERPLEXITY, "google": c_.AIQ_GOOGLE, "maps": c_.AIQ_MAPS, "after": c_.AIQ_AFTER}, *c["ask"]) + NL
 
     body = f'''
       <header class="page-head">

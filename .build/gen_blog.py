@@ -24,7 +24,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import i18n  # noqa: E402
 import l10n  # noqa: E402
 import shell  # noqa: E402
-from gen_pages import Contents, out, strip_tags, write  # noqa: E402
+from gen_pages import Contents, aiq_block, out, strip_tags, write  # noqa: E402
 # Imported straight rather than through i18n.load, because it is slugs and not
 # copy: there is nothing in it for a translator to answer.
 from gen_docs import faq_node, faq_section  # noqa: E402
@@ -322,6 +322,10 @@ def post_page(p, en_p, nxt, by_slug, band, lang, siblings):
           </div>
 '''
 
+    # The trade posts carry the "ask them yourself" block, prefilled with that
+    # trade, just above the payoff link (2026-10-07).
+    aiq = (aiq_block(10, {"head": c.AIQ_HEAD, "lead": c.AIQ_LEAD, "trade_label": c.AIQ_TRADE, "city_label": c.AIQ_CITY, "q": c.AIQ_Q, "chatgpt": c.AIQ_CHATGPT, "perplexity": c.AIQ_PERPLEXITY, "google": c.AIQ_GOOGLE, "maps": c.AIQ_MAPS, "after": c.AIQ_AFTER}, *p["ask"]) + NL) if p.get("ask") else ""
+
     body = f'''
       <header class="page-head">
 {shell.crumbs(lang, (c.CRUMB_WRITING, shell.localise(BLOG, lang)), p["title"])}
@@ -336,7 +340,7 @@ def post_page(p, en_p, nxt, by_slug, band, lang, siblings):
         <div class="prose">
 {figure}{sections}
 {faq_html}
-          <p class="payoff">{shell.TICK}<span>{shell.localise_html(p["payoff"], lang)}
+{aiq}          <p class="payoff">{shell.TICK}<span>{shell.localise_html(p["payoff"], lang)}
             <a href="{shell.localise(shell.AUDIT_URL, lang)}">{c.AUDIT_LINK}</a>.</span></p>
 {shell.updated("posts", lang)}
         </div>

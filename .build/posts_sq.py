@@ -656,7 +656,8 @@ POSTS = [
     # ====================================================== INDUSTRY: WATCH ===
     {
         "slug": "watch-shops-and-jewellers",
-        "src": "c8f4ee6e",
+        "src": "d39af162",
+        "ask": ("dyqan orësh", "Durrës"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Kërkim lokal",
@@ -766,7 +767,8 @@ POSTS = [
     # ==================================================== INDUSTRY: FASHION ===
     {
         "slug": "fashion-boutiques",
-        "src": "14f49fee",
+        "src": "d874270d",
+        "ask": ("butik veshjesh", "Durrës"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Faqe interneti",
@@ -864,7 +866,8 @@ POSTS = [
     # =================================================== INDUSTRY: LINGERIE ===
     {
         "slug": "lingerie-shops",
-        "src": "0cc3e448",
+        "src": "43afefd6",
+        "ask": ("dyqan të brendshmesh", "Durrës"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Faqe interneti",
@@ -959,7 +962,8 @@ POSTS = [
     # ==================================================== INDUSTRY: HEATING ===
     {
         "slug": "heating-and-cooling-trades",
-        "src": "ae0c53f2",
+        "src": "c1b5e928",
+        "ask": ("instalues kondicionerësh", "Durrës"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Kërkim lokal",
@@ -1054,7 +1058,8 @@ POSTS = [
     # ================================================ INDUSTRY: RESTAURANTS ===
     {
         "slug": "restaurants-and-cafes",
-        "src": "447f59b1",
+        "src": "e3dd2f42",
+        "ask": ("restorant", "Durrës"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Kërkim lokal",
@@ -1153,7 +1158,8 @@ POSTS = [
     # ===================================================== INDUSTRY: HOTELS ===
     {
         "slug": "hotels-and-guesthouses",
-        "src": "6b00692a",
+        "src": "e1917678",
+        "ask": ("hotel", "Durrës"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Kërkimi me AI",
@@ -1256,7 +1262,8 @@ POSTS = [
     # ================================================ INDUSTRY: HAIRDRESSERS ===
     {
         "slug": "hairdressers-and-salons",
-        "src": "8b379a7a",
+        "src": "c866592f",
+        "ask": ("parukeri", "Durrës"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Faqe interneti",
@@ -1354,7 +1361,8 @@ POSTS = [
     # ==================================================== INDUSTRY: DENTISTS ===
     {
         "slug": "dentists-and-clinics",
-        "src": "2b196f51",
+        "src": "407370e0",
+        "ask": ("dentist", "Durrës"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Faqe interneti",
@@ -1456,7 +1464,8 @@ POSTS = [
     # ================================================== INDUSTRY: CAR REPAIR ===
     {
         "slug": "car-repair-and-garages",
-        "src": "8a314480",
+        "src": "6408cae6",
+        "ask": ("servis makinash", "Durrës"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Kërkim lokal",
@@ -1548,7 +1557,8 @@ POSTS = [
     # =============================================== INDUSTRY: ESTATE AGENTS ===
     {
         "slug": "estate-agents",
-        "src": "a1001896",
+        "src": "db20a696",
+        "ask": ("agjenci imobiliare", "Durrës"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Meta ads",
@@ -4109,7 +4119,8 @@ POSTS = [
 
     {
         "slug": "lawyers-and-notaries",
-        "src": "82ea5f7d",
+        "src": "f42ba92b",
+        "ask": ("avokat", "Durrës"),
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Kërkim lokal",
@@ -4205,7 +4216,8 @@ POSTS = [
 
     {
         "slug": "gyms-and-fitness-studios",
-        "src": "e23e88df",
+        "src": "776a4e7a",
+        "ask": ("palestër", "Durrës"),
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Kërkim lokal",
@@ -4299,7 +4311,8 @@ POSTS = [
 
     {
         "slug": "builders-and-contractors",
-        "src": "6e912b22",
+        "src": "93291eab",
+        "ask": ("kompani ndërtimi", "Durrës"),
         "date": "2026-08-22",
         "updated": "2026-08-22",
         "topic": "Kërkim lokal",
@@ -6916,7 +6929,8 @@ POSTS = [
     # =============================================== INDUSTRY: HOLIDAY LETS ===
     {
         "slug": "holiday-apartments",
-        "src": "031c6f0f",
+        "src": "cbe3e935",
+        "ask": ("apartamente pushimi", "Durrës"),
         "date": "2026-10-07",
         "updated": "2026-10-07",
         "topic": "Faqe interneti",

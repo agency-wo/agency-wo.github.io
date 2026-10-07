@@ -760,6 +760,15 @@ a[href^="tel:"] { white-space: nowrap; }
   font-weight: 700; }
 .aiq-go a { display: inline-flex; align-items: center; min-height: 44px; }
 .aiq-note { margin: var(--s-3) 0 0; font-size: var(--fs-small); }
+.aiq-h { margin: 0 0 var(--s-2); font-weight: 700; }
+.aiq-proof { margin: var(--s-4) 0 0; font-size: var(--fs-small); }
+
+.af-qr { display: none; }
+@media (min-width: 1000px) {
+  .af-qr { display: flex; align-items: center; gap: var(--s-4); margin: var(--s-4) 0 0;
+    font-size: var(--fs-small); }
+  .af-qr img { flex: none; inline-size: 112px; block-size: 112px; }
+}
 .field { display: block; margin-top: var(--s-5); margin-bottom: 0; }
 .field label { display: block; font-size: var(--fs-small); font-weight: 700;
   margin-bottom: var(--s-2); }
