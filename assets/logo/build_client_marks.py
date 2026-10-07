@@ -217,6 +217,37 @@ def main():
     size, nbytes = save_mask(knockout(affy), "pro-affy.png", 180)
     report.append(("pro-affy.png", f"{size[0]}x{size[1]}", nbytes))
 
+    # Census Properties. Their brand specification is published with the site,
+    # at censusproperties.com/assets/brand/spec.json: fonts.CENSUS is Spectral
+    # 500, and proportions_in_F.census_tracking is 0.20. The large line of the
+    # lockup is the word CENSUS on its own, so that is the mark. The
+    # PROPERTIES and DURRES label beneath it measures 0.247 of a cap height in
+    # the same file, which is about 4px at the size this row renders, and a
+    # label nobody can read is worse than no label. Victoria is the same call:
+    # one word, the one her own nav shows.
+    #
+    # Both faces below are OFL and are subset to the letters their wordmark
+    # uses, 8 and 10 KB instead of 267 and 441. Committed here with their
+    # licences, like Space Grotesk above, rather than read out of a client
+    # checkout, so this script runs for anyone holding only this repo.
+    svg, size = wordmark(
+        os.path.join(SRC, "Spectral-Medium-500-subset.ttf"), 500, "CENSUS", 0.20)
+    io.open(os.path.join(OUT, "census-properties.svg"), "w",
+            encoding="utf-8", newline=NL).write(svg)
+    report.append(("census-properties.svg", f"{size[0]:.0f}x{size[1]:.0f}", len(svg)))
+
+    # Vila Flamuri. The wordmark in their own header, at
+    # vilaflamuri.com/assets/css/styles.css, rule .brand__name: the display
+    # face at weight 600, letter-spacing 0.08em, uppercased by text-transform.
+    # The display face is Newsreader, named two rules above it. Newsreader is
+    # variable, so it is instanced at 600 rather than approximated by the
+    # nearest static cut.
+    svg, size = wordmark(
+        os.path.join(SRC, "Newsreader-VF-subset.ttf"), 600, "VILA FLAMURI", 0.08)
+    io.open(os.path.join(OUT, "vila-flamuri.svg"), "w",
+            encoding="utf-8", newline=NL).write(svg)
+    report.append(("vila-flamuri.svg", f"{size[0]:.0f}x{size[1]:.0f}", len(svg)))
+
     for name, dims, n in report:
         print(f"  {name:28s} {dims:>12s}  {n:>6,} bytes")
 

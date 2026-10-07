@@ -483,7 +483,8 @@ NAV_PATHS = ["/work/", "/#services", "/blog/", "/studio/"]
 FOOT_PATHS = [
     ["/seo/", "/geo/", "/web-design/", "/meta-ads/", "/systems/"],
     ["/work/iglisi-watch/", "/work/victoria-boutique/",
-     "/work/intimo-bruna/", "/work/pro-affy/"],
+     "/work/intimo-bruna/", "/work/pro-affy/",
+     "/work/census-properties/", "/work/vila-flamuri/"],
     ["/studio/", "/blog/", "/start/"],
     # The last column's labels ARE its destinations, so chrome.py holds an
     # empty list for it and this is the one place they are written.

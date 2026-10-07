@@ -89,7 +89,15 @@ BANNED_CLASSES = ["fig-cap", "case-label", "finding-label", "result-stamp",
                   "rank-ghost", "rail-readout", "svc-num", "exhibit-b"]
 
 MAX_LABELS_PER_PAGE = 6      # measured ceiling on respected sites is about 3
-MAX_HOME_WORDS = 1100
+# 1100 until 2026-10-07, and the twin of this number lives in gen_home.check.
+# It counts the WHOLE page, chrome included, so each client costs 4 words that
+# are not copy: its name in the logo row, where it is real text so the row
+# still reads with CSS off, and again in the footer's work column. The 5th and
+# 6th clients spent 8 of them. Raised rather than taken out of the argument,
+# which gen_home.py:614 records refusing once already. It ratchets with every
+# client, and the honest fix when it next bites is to measure the body instead
+# of the chrome rather than to keep nudging the number.
+MAX_HOME_WORDS = 1110
 MAX_HOME_SECTIONS = 8
 
 

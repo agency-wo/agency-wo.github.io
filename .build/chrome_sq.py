@@ -73,7 +73,7 @@ SRC = {
     "ERR_TITLE": "8aa30e6c",
     "FOOT_COPYRIGHT": "387ea80f",
     "FOOT_HEADINGS": "8a193087",
-    "FOOT_LABELS": "967e86a8",
+    "FOOT_LABELS": "75339cac",
     "FOOT_META": "77f25e44",
     "HEAD_CTA": "d17fa7ec",
     "JS_ERROR": "e3741a63",
@@ -89,7 +89,7 @@ SRC = {
     "PREF_SOURCE": "24e56e54",
     "REVIEW_CTA": "915ab013",
     "SERVICE_BAND_NOTE": "4a124f73",
-    "SIDE_ALL_FOUR": "6c234522",
+    "SIDE_ALL_WORK": "c36221d8",
     "SIDE_ALSO": "e4144fc8",
     "SIDE_BUSINESS": "af808825",
     "SIDE_DID": "313785e9",
@@ -122,7 +122,8 @@ FOOT_HEADINGS = ["Çfarë bëjmë", "Punët", "Studio", "Na shkruaj"]
 FOOT_LABELS = [
     ["SEO dhe kërkim lokal", "Kërkimi me AI", "Faqe interneti", "Meta ads",
      "Software me porosi"],
-    ["Iglisi Watch", "Victoria Boutique", "Intimo Bruna", "ProAffy"],
+    ["Iglisi Watch", "Victoria Boutique", "Intimo Bruna", "ProAffy",
+     "Census Properties", "Vila Flamuri"],
     ["Kush jemi", "Blog", "Nis një projekt"],   # Blog matches NAV[2]
     [],   # filled by shell: the email address and WhatsApp are not words
 ]
@@ -223,7 +224,7 @@ SIDE_BUSINESS = "Biznesi në këtë shkrim"
 SIDE_NEXT = "Tjetri"
 # The collective numeral, which is how Albanian says "all four of them" without
 # repeating the noun the column above already listed 4 times.
-SIDE_ALL_FOUR = "Të katërt"
+SIDE_ALL_WORK = "Të gjitha punët"
 # The past tense of WHAT_WE_DO, and a separate string from it for the same
 # reason the English keeps them apart: this one names what happened on one job.
 SIDE_DID = "Çfarë bëmë"

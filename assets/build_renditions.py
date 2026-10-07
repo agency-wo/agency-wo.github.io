@@ -36,6 +36,8 @@ SOURCES = [
     os.path.join("plates", "victoria-home.webp"),
     os.path.join("plates", "bruna-home.webp"),
     os.path.join("plates", "proaffy-home.webp"),
+    os.path.join("plates", "census-properties-home.webp"),
+    os.path.join("plates", "vila-flamuri-home.webp"),
 ]
 
 for rel in SOURCES:

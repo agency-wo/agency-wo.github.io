@@ -1131,7 +1131,7 @@ POSTS = [
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "AI search",
-        "work": None,
+        "work": "vila-flamuri",
         "service": ("/geo/", "AI search"),
 
         "title": "AI search for hotels and guesthouses",
@@ -1518,7 +1518,7 @@ POSTS = [
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Meta ads",
-        "work": None,
+        "work": "census-properties",
         "service": ("/meta-ads/", "Meta ads"),
 
         "title": "Facebook ads for estate agents",

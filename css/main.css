@@ -716,6 +716,11 @@ a[href^="tel:"] { white-space: nowrap; }
 .mark-pro-affy-word     { --mark: url("/assets/logo/clients/pro-affy-word.svg");
                           --mw: 108px; --mh: 28px; }
 
+.mark-census-properties { --mark: url("/assets/logo/clients/census-properties.svg");
+                          --mw: 160px; --mh: 22px; }
+.mark-vila-flamuri      { --mark: url("/assets/logo/clients/vila-flamuri.svg");
+                          --mw: 244px; --mh: 22px; }
+
 @supports not ((-webkit-mask-image: url("/favicon.svg")) or (mask-image: url("/favicon.svg"))) {
   .mark { display: none; }
   .mark-link .sr-only { position: static; width: auto; height: auto; margin: 0;

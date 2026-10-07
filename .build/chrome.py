@@ -30,7 +30,8 @@ FOOT_HEADINGS = ["What we do", "Work", "Studio", "Get in touch"]
 FOOT_LABELS = [
     ["SEO and local search", "AI search", "Websites", "Meta ads",
      "Custom software"],
-    ["Iglisi Watch", "Victoria Boutique", "Intimo Bruna", "ProAffy"],
+    ["Iglisi Watch", "Victoria Boutique", "Intimo Bruna", "ProAffy",
+     "Census Properties", "Vila Flamuri"],
     ["About", "Blog", "Start a project"],   # Blog matches NAV[2]
     [],   # filled by shell: the email address and WhatsApp are not words
 ]
@@ -107,7 +108,7 @@ SIDE_WRITTEN = "Written about this"
 SIDE_SERVICE = "The service"
 SIDE_BUSINESS = "The business in this post"
 SIDE_NEXT = "Next"
-SIDE_ALL_FOUR = "All four"
+SIDE_ALL_WORK = "All the work"
 # The sidebar on a client page, listing the services that client bought. It is
 # the past tense of WHAT_WE_DO and a different string from it: one names the
 # five doors this studio sells, the other names what happened on one job.

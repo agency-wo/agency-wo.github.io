@@ -616,8 +616,20 @@ def check(html, lang):
     # budget moved rather than the block being squeezed in: 5 questions do not
     # fit in 79 words, and cutting the argument to make room would have traded
     # the thing that persuades a reader for the thing that feeds a machine.
-    assert lang != "en" or words <= 1100, (
-        f"the homepage is {words} words, max 1100. The audit form's copy counts, "
+    # 1100 until 2026-10-07, when the 5th and 6th clients were added. This
+    # budget counts the WHOLE page, chrome included, and a client costs 4 words
+    # of chrome: its name in the logo row, where it is real text so the row
+    # still reads with CSS off, and again in the footer's work column. Two
+    # clients, 8 words, none of it argument.
+    #
+    # Raised rather than paid for out of the copy, because the note above
+    # records refusing that same trade in August: cutting the thing that
+    # persuades a reader to make room is how a page ends up shorter and worse.
+    # It is worth knowing that this ratchet moves with every client, and that
+    # the honest fix when it next bites is to measure the body rather than the
+    # chrome, not to keep nudging the number.
+    assert lang != "en" or words <= 1110, (
+        f"the homepage is {words} words, max 1110. The audit form's copy counts, "
         f"and so does the confirmation panel nobody sees until they send")
     assert secs <= 8, (
         f"the homepage has {secs} sections, max 8. The audit form is a <div> "

@@ -40,7 +40,7 @@ NL = chr(10)
 CLIENTS = [
     {
         "slug": "iglisi-watch",
-        "src": "1121a5a1",
+        "src": "aca67572",
         # Not copy: the file and its 2 dimensions.
         "mark": [("iglisi-watch.png", 195, 22)],
         "name": "Iglisi Watch",
@@ -49,7 +49,7 @@ CLIENTS = [
         "where": "Durazzo, Albania",
         "trade": "Vendita e riparazione di orologi",
         "site": "watch.al",
-        "title": "Iglisi Watch",
+        "title": "Sito per un orologiaio, Durazzo",
         # "Tre mesi" is spelt out because the English spells it out here and
         # writes "3 mesi" in og_desc below. The site's rule is digits over
         # words; a translation answers the English rather than tidying it in
@@ -125,6 +125,23 @@ CLIENTS = [
         # pages, and the English keeps the 2 apart for the same reason.
         "taken": "Rilevato ad agosto 2026. Il posizionamento cambia, quindi "
                  "sarà diverso quando controlli.",
+        "profile": {
+            "h": "Cosa sente davvero il negozio",
+            "blocks": [
+                "I numeri qui sopra sono la ricerca. Questi sono la scheda Google "
+                "dello stesso negozio, e contano cosa ha fatto qualcuno invece di "
+                "cosa gli è stato mostrato.",
+                "Fa una telefonata ogni 3 giorni, e 3 persone al giorno che "
+                "chiedono al telefono come arrivare a un negozio di cui a maggio "
+                "non avevano sentito parlare.",
+            ],
+            "stats": [("52", "telefonate dalla scheda"),
+                      ("461", "hanno chiesto la strada"),
+                      ("554", "cose fatte sulla scheda")],
+            "taken": "Rilevato il 6 ottobre 2026, a partire da maggio. L'ultimo "
+                     "mese è parziale, ed è per questo che le linee scendono "
+                     "alla fine, e sarà diverso quando guardi.",
+        },
         "payoff": "Da niente a 900 clic a trimestre.",
         # Only index 3 is copy. The alt says what is in the screenshot: the
         # cards carry a price in euro and the same price in lek beside it.
@@ -138,13 +155,13 @@ CLIENTS = [
     },
     {
         "slug": "victoria-boutique",
-        "src": "9c02b62d",
+        "src": "f4735470",
         "mark": [("victoria-boutique.svg", 204, 22)],
         "name": "Victoria Boutique",
         "where": "Durazzo, Albania",
         "trade": "Moda",
         "site": "victoriaboutique.org",
-        "title": "Victoria Boutique",
+        "title": "Sito di boutique che la titolare aggiorna da sola",
         "description": "Una boutique di Durazzo che porta marchi greci in Albania. "
                        "La proprietaria aggiunge i capi nuovi dal telefono, in tre "
                        "lingue, senza canone mensile e senza chiamare nessuno.",
@@ -196,7 +213,7 @@ CLIENTS = [
     },
     {
         "slug": "intimo-bruna",
-        "src": "17f4477c",
+        "src": "95e51e5f",
         "mark": [("intimo-bruna.svg", 200, 26)],
         "name": "Intimo Bruna",
         "where": "Durazzo, Albania",
@@ -206,7 +223,7 @@ CLIENTS = [
         # retail word for the same category, not English left behind.
         "trade": "Lingerie",
         "site": "intimobruna.com",
-        "title": "Intimo Bruna",
+        "title": "Sito di lingerie, ordini su WhatsApp",
         "description": "Un negozio di lingerie a Durazzo che vende su WhatsApp, in "
                        "albanese, italiano e inglese, su un sito fatto a mano con "
                        "font propri e senza script di terzi.",
@@ -253,7 +270,7 @@ CLIENTS = [
     },
     {
         "slug": "pro-affy",
-        "src": "aaef2713",
+        "src": "2f94ed8d",
         "mark": [("pro-affy.png", 28, 28), ("pro-affy-word.svg", 108, 28)],
         "name": "ProAffy",
         # Not a city. The English uses this field to say the market is the
@@ -261,7 +278,7 @@ CLIENTS = [
         "where": "Lingua inglese",
         "trade": "Riscaldamento e climatizzazione",
         "site": "proaffy.com",
-        "title": "ProAffy",
+        "title": "Sito per generare contatti per termotecnici",
         # "Nuovi contatti" rather than "Generazione di contatti": the longer
         # form puts this string at 184 characters against check 6's ceiling of
         # 175, and the English "lead generation" is jargon rule 9 would make us
@@ -311,30 +328,145 @@ CLIENTS = [
                   "climatizzazione"),
         "services": [("/meta-ads/", "Meta ads"), ("/web-design/", "Siti web")],
     },
+    {
+        "slug": "census-properties",
+        "src": "203b75ce",
+        "mark": [("census-properties.svg", 160, 22)],
+        "name": "Census Properties",
+        "where": "Durazzo, Albania",
+        "trade": "Agenzia immobiliare",
+        "site": "censusproperties.com",
+        "title": "Sito per agenzia immobiliare, Durazzo",
+        "description": "Un'agenzia immobiliare a Durazzo i cui annunci dicono quali "
+                       "documenti di proprietà e permessi sono stati controllati, su "
+                       "24 registri di quartiere in 3 lingue.",
+        "og_desc": "Annunci che mostrano le carte, quartiere per quartiere.",
+        "summary": "Ogni annuncio dice quali documenti sono stati controllati e "
+                   "quali mancano ancora.",
+        "started": [
+            "Un'agenzia nuova in un mercato dove l'annuncio normale è un prezzo, "
+            "una fotografia e un numero di telefono. Niente su chi possiede "
+            "l'immobile, o se i permessi esistono.",
+            "Quindi il compito era rendere le carte il prodotto. Se chi compra vede "
+            "cosa è stato controllato prima di telefonare, la telefonata parte da "
+            "un punto migliore del prezzo richiesto.",
+        ],
+        "built": [
+            "Un registro di 24 quartieri fra Durazzo e Kavaja, ognuno con la sua "
+            "pagina in albanese, italiano e inglese, e due qualsiasi messi a "
+            "confronto.",
+            "Una mappa della baia disegnata dentro il sito invece di chiamare un "
+            "servizio di mappe, così una pagina sugli immobili della zona non deve "
+            "niente a nessun altro per comparire.",
+            "Una ricerca che tiene il suo stato nella barra degli indirizzi, una "
+            "selezione che parte come messaggio WhatsApp, e prezzi leggibili in "
+            "euro, lek o dollari a cambi datati.",
+            "4 calcolatori e 5 guide all'acquisto per lingua, dove ogni cifra o "
+            "porta una fonte datata o è segnata come non confermata e tenuta fuori "
+            "dal totale.",
+            "Un gestionale dove salvare un annuncio scrive un commit, così la "
+            "traccia di chi ha cambiato quale prezzo, e quando, è il repository "
+            "stesso.",
+        ],
+        "changed": "Cosa deve mostrare un annuncio",
+        "changed_blocks": [
+            "Ognuno stampa i documenti che ha dietro: cosa è stato controllato e "
+            "cosa manca ancora. I vuoti si leggono con la stessa facilità delle "
+            "affermazioni, ed è il motivo per cui si pubblicano.",
+            "Fotografie e prezzo sono quello che ogni agenzia in città mostra "
+            "già. Le carte sono quello che quasi nessuna mostra.",
+        ],
+        "gsc": False,
+        "stats": [],
+        "payoff": "Le carte, stampate accanto al prezzo.",
+        "plate": ("census-properties-home.webp", 900, 625,
+                  "La homepage di Census Properties, una fotografia al tramonto "
+                  "del molo di Durazzo dietro un titolo su immobili in vendita e "
+                  "in affitto"),
+        "services": [("/web-design/", "Siti web"),
+                     ("/systems/", "Software su misura")],
+    },
+    {
+        "slug": "vila-flamuri",
+        "src": "b855c017",
+        "mark": [("vila-flamuri.svg", 244, 22)],
+        "name": "Vila Flamuri",
+        "where": "Golem, Albania",
+        "trade": "Appartamenti per vacanze",
+        "site": "vilaflamuri.com",
+        "title": "Sito di prenotazione appartamenti, Golem",
+        "description": "15 appartamenti con cucina vicino alla spiaggia di Golem. La "
+                       "richiesta parte come messaggio WhatsApp, così la famiglia "
+                       "tiene quello che prenderebbe un portale.",
+        "og_desc": "Prenotazioni diritte, senza la commissione.",
+        "summary": "Gli ospiti chiedono le date direttamente, e la famiglia tiene "
+                   "quello che avrebbe preso un portale.",
+        "started": [
+            "Una casa di famiglia con 15 appartamenti a un paio di centinaia di "
+            "metri dal mare, che riempiva le stanze con i grandi portali e pagava "
+            "una quota su ognuna.",
+            "Lo stesso ospite costa meno quando arriva diritto. Quindi il sito "
+            "doveva prima valere la pena di essere trovato, e poi di ricevere un "
+            "messaggio.",
+        ],
+        "built": [
+            "Un sito in inglese, italiano e albanese, dove le parole di ogni "
+            "indirizzo sono in quella lingua invece di un indirizzo inglese con "
+            "una bandiera accanto.",
+            "Un calendario scritto per questo sito invece che preso da una "
+            "libreria, perché il calendario è qualche kilobyte di lavoro e la "
+            "libreria qualche decina.",
+            "Una richiesta che raccoglie le date, gli ospiti e l'età di ogni "
+            "bambino, poi apre WhatsApp con tutto il messaggio già scritto.",
+            "Un percorso a piedi fino alla spiaggia disegnato dai dati delle mappe "
+            "quando il sito si costruisce, e una mappa stradale che non carica "
+            "niente finché qualcuno non la chiede.",
+            "Un tetto di peso che la build si rifiuta di superare, e nemmeno una "
+            "chiamata a nessun altro su nessuna pagina.",
+        ],
+        "changed": "Da dove parte adesso una prenotazione",
+        "changed_blocks": [
+            "Da un messaggio che scrive l'ospite, con le date già dentro. Niente "
+            "viene bloccato da solo, perché una famiglia con 15 appartamenti "
+            "risponde prima di quanto un sistema di disponibilità resterebbe "
+            "sincero.",
+            "Il sito non finge di essere un portale. Dà all'ospite un motivo per "
+            "scrivere diritto, e alla famiglia un motivo per rispondere in fretta.",
+        ],
+        "gsc": False,
+        "stats": [],
+        "payoff": "Una prenotazione su cui nessuno prende una quota.",
+        "plate": ("vila-flamuri-home.webp", 900, 625,
+                  "La homepage di Vila Flamuri, una fotografia della villa dietro "
+                  "cespugli fioriti accanto a una barra che chiede le date di "
+                  "arrivo"),
+        "services": [("/web-design/", "Siti web"),
+                     ("/seo/", "SEO e ricerca locale")],
+    },
 ]
 
 # /work/, the index over those 4 records. The soft wraps are placed for this
 # text and not copied from the English: a newline here says where the emitted
 # line breaks and carries no meaning.
 WORK_INDEX = {
-    "src": "9266bcee",
+    "src": "a37d43ba",
     # "Lavori" is what chrome_it.FOOT_HEADINGS[1] and CRUMB_WORK already call
     # this section, so the tab, the crumb and the footer say one word.
-    "title": "Lavori",
-    "description": "Quattro attività in Albania e altrove, cosa abbiamo "
+    "title": "Siti che abbiamo costruito, e cosa è cambiato",
+    "description": "Sei attività in Albania e altrove, cosa abbiamo "
                    "costruito per ognuna, e l'unico risultato con numeri "
                    "pubblicati dietro.",
-    "og_desc": "Quattro attività, e cosa è cambiato.",
+    "og_desc": "Sei attività, e cosa è cambiato.",
     # The same sentence as og_desc, as in English.
-    "h1": "Quattro attività, e cosa è cambiato.",
+    "h1": "Sei attività, e cosa è cambiato.",
     "standfirst": "Uno è un negozio di orologi a Durazzo che nessuno" + NL +
                   "fuori città riusciva a trovare. Tre mesi dopo il lancio, "
                   "Google gli" + NL +
                   "mandava 900 clic a trimestre.",
-    # "Gli altri tre" spells the number out because the English spells it out.
+    # "Gli altri cinque" spells the number out because the English spells it out.
     # A translation answers the English; tidying it here and nowhere else is
     # how one page ends up disagreeing with its own twin.
-    "proof": "Gli altri tre sono più recenti, quindi lì quello che ottieni "
+    "proof": "Gli altri cinque sono più recenti, quindi lì quello che ottieni "
              "è il sito" + NL +
              "stesso e quello che fa, che puoi andare a guardare. Gli account "
              "pubblicitari" + NL +

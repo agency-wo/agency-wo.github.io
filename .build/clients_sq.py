@@ -41,7 +41,7 @@ NL = chr(10)
 CLIENTS = [
     {
         "slug": "iglisi-watch",
-        "src": "1121a5a1",
+        "src": "aca67572",
         # Not copy: the file and its 2 dimensions.
         "mark": [("iglisi-watch.png", 195, 22)],
         "name": "Iglisi Watch",
@@ -49,7 +49,7 @@ CLIENTS = [
         "where": "Durrës, Shqipëri",
         "trade": "Shitje dhe riparim orësh",
         "site": "watch.al",
-        "title": "Iglisi Watch",
+        "title": "Faqe për orëndreqës, Durrës",
         # "Tre muaj" is spelt out because the English spells it out here and
         # writes "3 muaj" in og_desc below. The site's rule is digits over
         # words; a translation answers the English rather than tidying it in
@@ -124,6 +124,23 @@ CLIENTS = [
         # pages, and the English keeps the 2 apart for the same reason.
         "taken": "Marrë në gusht 2026. Renditja lëviz, ndaj do të duket "
                  "ndryshe kur ta kontrollosh.",
+        "profile": {
+            "h": "Çfarë dëgjon vërtet dyqani",
+            "blocks": [
+                "Numrat më sipër janë kërkimi. Këta janë skeda Google e të njëjtit "
+                "dyqan, dhe numërojnë çfarë bëri dikush në vend të asaj që iu "
+                "shfaq.",
+                "Del një telefonatë çdo 3 ditë, dhe 3 veta në ditë që e pyesin "
+                "telefonin si të arrijnë te një dyqan për të cilin në maj nuk kishin "
+                "dëgjuar.",
+            ],
+            "stats": [("52", "telefonata nga skeda"),
+                      ("461", "kërkuan rrugën"),
+                      ("554", "veprime mbi skedën")],
+            "taken": "Marrë më 6 tetor 2026, duke numëruar nga maji. Muaji i fundit "
+                     "është i pjesshëm, prandaj vijat bien në fund, dhe do të duket "
+                     "ndryshe kur ta shohësh.",
+        },
         "payoff": "Nga asgjë te 900 klikime në tremujor.",
         # Only index 3 is copy. The alt says what is in the screenshot: the
         # cards carry a price in euro and the same price in lek beside it.
@@ -137,13 +154,13 @@ CLIENTS = [
     },
     {
         "slug": "victoria-boutique",
-        "src": "9c02b62d",
+        "src": "f4735470",
         "mark": [("victoria-boutique.svg", 204, 22)],
         "name": "Victoria Boutique",
         "where": "Durrës, Shqipëri",
         "trade": "Modë",
         "site": "victoriaboutique.org",
-        "title": "Victoria Boutique",
+        "title": "Faqe butiku që pronarja e përditëson vetë",
         "description": "Një butik në Durrës që sjell marka greke në Shqipëri. "
                        "Pronarja shton veshjet e reja nga telefoni, në tri gjuhë, "
                        "pa tarifë mujore dhe pa i telefonuar askujt.",
@@ -189,7 +206,7 @@ CLIENTS = [
     },
     {
         "slug": "intimo-bruna",
-        "src": "17f4477c",
+        "src": "95e51e5f",
         "mark": [("intimo-bruna.svg", 200, 26)],
         "name": "Intimo Bruna",
         "where": "Durrës, Shqipëri",
@@ -198,7 +215,7 @@ CLIENTS = [
         # the trade in a word the business itself keeps for one shelf of it.
         "trade": "Të brendshme",
         "site": "intimobruna.com",
-        "title": "Intimo Bruna",
+        "title": "Faqe lingerie, porosi në WhatsApp",
         "description": "Një dyqan të brendshmesh në Durrës që shet përmes "
                        "WhatsApp, në shqip, italisht dhe anglisht, në një faqe të "
                        "bërë me dorë me fontet e veta dhe pa skripte të huaja.",
@@ -247,7 +264,7 @@ CLIENTS = [
     },
     {
         "slug": "pro-affy",
-        "src": "aaef2713",
+        "src": "2f94ed8d",
         "mark": [("pro-affy.png", 28, 28), ("pro-affy-word.svg", 108, 28)],
         "name": "ProAffy",
         # Not a city. The English uses this field to say the market is the
@@ -255,7 +272,7 @@ CLIENTS = [
         "where": "Gjuha angleze",
         "trade": "Ngrohje dhe ftohje",
         "site": "proaffy.com",
-        "title": "ProAffy",
+        "title": "Faqe për kontakte, ngrohje dhe ftohje",
         "description": "Gjenerim kontaktesh për firmat e ngrohjes dhe ftohjes. "
                        "Një faqe e ndërtuar rreth shpejtësisë së përgjigjes dhe "
                        "jo pamjes, sepse është ajo që vendos kush e merr punën.",
@@ -292,30 +309,139 @@ CLIENTS = [
         "services": [("/meta-ads/", "Meta ads"),
                      ("/web-design/", "Faqe interneti")],
     },
+    {
+        "slug": "census-properties",
+        "src": "203b75ce",
+        "mark": [("census-properties.svg", 160, 22)],
+        "name": "Census Properties",
+        "where": "Durrës, Shqipëri",
+        "trade": "Agjenci imobiliare",
+        "site": "censusproperties.com",
+        "title": "Faqe për agjenci imobiliare, Durrës",
+        "description": "Një agjenci imobiliare në Durrës ku çdo shpallje tregon "
+                       "cilat dokumente pronësie dhe lejesh janë kontrolluar, në 24 "
+                       "regjistra lagjesh dhe 3 gjuhë.",
+        "og_desc": "Shpallje që i tregojnë letrat, lagje për lagje.",
+        "summary": "Çdo shpallje thotë cilat dokumente u kontrolluan dhe cilat "
+                   "mungojnë ende.",
+        "started": [
+            "Një agjenci e re në një treg ku shpallja e zakonshme është një çmim, "
+            "një fotografi dhe një numër telefoni. Asgjë për atë që e zotëron "
+            "pronën, ose nëse lejet ekzistojnë.",
+            "Pra detyra ishte t'i bënim letrat produktin. Nëse blerësi sheh çfarë "
+            "është kontrolluar para se të marrë në telefon, biseda nis nga një vend "
+            "më i mirë se çmimi i kërkuar.",
+        ],
+        "built": [
+            "Një regjistër me 24 lagje mes Durrësit dhe Kavajës, secila me faqen e "
+            "vet në shqip, anglisht dhe italisht, dhe dy prej tyre të vëna përballë "
+            "njëra-tjetrës.",
+            "Një hartë e gjirit e vizatuar brenda faqes në vend që të merret nga "
+            "një shërbim hartash, që një faqe për pronat e zonës të mos i detyrohet "
+            "askujt tjetër për t'u shfaqur.",
+            "Një kërkim që e mban gjendjen në shiritin e adresës, një listë e "
+            "shkurtër që niset si mesazh WhatsApp, dhe çmime të lexueshme në euro, "
+            "lekë ose dollarë me kurse të datuara.",
+            "4 llogaritëse dhe 5 udhëzues blerjeje për çdo gjuhë, ku çdo shifër ose "
+            "mban një burim me datë ose shfaqet si e pakonfirmuar dhe mbahet jashtë "
+            "totalit.",
+            "Një sistem zyre ku ruajtja e një shpalljeje shkruan një commit, kështu "
+            "gjurma se kush e ndryshoi cilin çmim, dhe kur, është vetë depoja.",
+        ],
+        "changed": "Çfarë duhet të tregojë një shpallje",
+        "changed_blocks": [
+            "Secila shtyp dokumentet që ka pas: çfarë u kontrollua dhe çfarë "
+            "mungon ende. Boshllëqet lexohen po aq lehtë sa pohimet, dhe pikërisht "
+            "për këtë publikohen.",
+            "Fotografitë dhe çmimi janë ato që çdo agjenci në qytet i tregon "
+            "tashmë. Letrat janë ato që pothuajse asnjë nuk i tregon.",
+        ],
+        "gsc": False,
+        "stats": [],
+        "payoff": "Letrat, të shtypura pranë çmimit.",
+        "plate": ("census-properties-home.webp", 900, 625,
+                  "Ballina e Census Properties, një fotografi në perëndim e molit "
+                  "të Durrësit pas një titulli për prona në shitje dhe me qira"),
+        "services": [("/web-design/", "Faqe interneti"),
+                     ("/systems/", "Software me porosi")],
+    },
+    {
+        "slug": "vila-flamuri",
+        "src": "b855c017",
+        "mark": [("vila-flamuri.svg", 244, 22)],
+        "name": "Vila Flamuri",
+        "where": "Golem, Shqipëri",
+        "trade": "Apartamente pushimi",
+        "site": "vilaflamuri.com",
+        "title": "Faqe rezervimi apartamentesh, Golem",
+        "description": "15 apartamente me kuzhinë pranë plazhit në Golem. Kërkesa "
+                       "niset si mesazh WhatsApp, kështu familja mban atë që do ta "
+                       "merrte një portal.",
+        "og_desc": "Rezervime të drejtpërdrejta, pa komisionin.",
+        "summary": "Mysafirët i kërkojnë datat drejtpërdrejt, dhe familja mban atë "
+                   "që do ta kishte marrë një portal.",
+        "started": [
+            "Një shtëpi familjare me 15 apartamente nja dyqind metra nga deti, që i "
+            "mbushte dhomat me portalet e mëdha dhe paguante një pjesë për secilën.",
+            "I njëjti mysafir kushton më pak kur vjen drejtpërdrejt. Pra faqja "
+            "duhej më parë të ia vlente të gjendej, dhe pastaj të merrte një "
+            "mesazh.",
+        ],
+        "built": [
+            "Një faqe në anglisht, italisht dhe shqip, ku fjalët e çdo adrese janë "
+            "në atë gjuhë në vend të një adrese angleze me një flamur pranë.",
+            "Një kalendar i shkruar për këtë faqe në vend që të merrej nga një "
+            "bibliotekë, sepse kalendari është ca kilobajt punë dhe biblioteka ca "
+            "dhjetëra.",
+            "Një kërkesë që mbledh datat, mysafirët dhe moshën e çdo fëmije, pastaj "
+            "hap WhatsApp me gjithë mesazhin tashmë të shkruar.",
+            "Një shteg në këmbë deri te plazhi i vizatuar nga të dhënat e hartave "
+            "kur faqja ndërtohet, dhe një hartë rrugësh që nuk ngarkon asgjë derisa "
+            "dikush ta kërkojë.",
+            "Një kufi peshe që ndërtimi nuk pranon ta kalojë, dhe asnjë kërkesë te "
+            "askush tjetër në asnjë faqe.",
+        ],
+        "changed": "Nga nis tani një rezervim",
+        "changed_blocks": [
+            "Nga një mesazh që e shkruan vetë mysafiri, me datat tashmë brenda. "
+            "Asgjë nuk zihet vetvetiu, sepse një familje me 15 apartamente përgjigjet "
+            "më shpejt se sa do të qëndronte i vërtetë një sistem disponueshmërie.",
+            "Faqja nuk shtiret si portal. I jep mysafirit një arsye të shkruajë "
+            "drejtpërdrejt, dhe familjes një arsye të përgjigjet shpejt.",
+        ],
+        "gsc": False,
+        "stats": [],
+        "payoff": "Një rezervim nga i cili nuk merr pjesë askush.",
+        "plate": ("vila-flamuri-home.webp", 900, 625,
+                  "Ballina e Vila Flamuri, një fotografi e vilës pas shkurreve me "
+                  "lule pranë një shiriti që kërkon datat e mbërritjes"),
+        "services": [("/web-design/", "Faqe interneti"),
+                     ("/seo/", "SEO dhe kërkim lokal")],
+    },
 ]
 
 # /work/, the index over those 4 records. The soft wraps are placed for this
 # text and not copied from the English: a newline here says where the emitted
 # line breaks and carries no meaning.
 WORK_INDEX = {
-    "src": "9266bcee",
+    "src": "a37d43ba",
     # "Punët" is what chrome_sq.FOOT_HEADINGS[1] and CRUMB_WORK already call
     # this section, so the tab, the crumb and the footer say one word.
-    "title": "Punët",
-    "description": "Katër biznese në Shqipëri e më gjerë, çfarë ndërtuam për "
+    "title": "Faqe që ndërtuam, dhe çfarë ndryshoi",
+    "description": "Gjashtë biznese në Shqipëri e më gjerë, çfarë ndërtuam për "
                    "secilin, dhe i vetmi rezultat me numra të publikuar pas "
                    "tij.",
-    "og_desc": "Katër biznese, dhe çfarë ndryshoi.",
+    "og_desc": "Gjashtë biznese, dhe çfarë ndryshoi.",
     # The same sentence as og_desc, as in English.
-    "h1": "Katër biznese, dhe çfarë ndryshoi.",
+    "h1": "Gjashtë biznese, dhe çfarë ndryshoi.",
     "standfirst": "Njëri është një dyqan orësh në Durrës që askush" + NL +
                   "jashtë qytetit nuk e gjente dot. Tre muaj pas nisjes, "
                   "Google i" + NL +
                   "dërgonte 900 klikime në tremujor.",
-    # "Tre të tjerët" spells the number out because the English spells it out.
+    # "Pesë të tjerët" spells the number out because the English spells it out.
     # A translation answers the English; tidying it here and nowhere else is
     # how one page ends up disagreeing with its own twin.
-    "proof": "Tre të tjerët janë më të rinj, ndaj aty ajo që merr është "
+    "proof": "Pesë të tjerët janë më të rinj, ndaj aty ajo që merr është "
              "vetë faqja" + NL +
              "dhe çfarë bën, të cilën mund të shkosh ta shohësh. Llogaritë e "
              "reklamave" + NL +

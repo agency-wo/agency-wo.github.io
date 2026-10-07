@@ -1154,11 +1154,11 @@ POSTS = [
     # ===================================================== INDUSTRY: HOTELS ===
     {
         "slug": "hotels-and-guesthouses",
-        "src": "5ab75d94",
+        "src": "6b00692a",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Ricerca AI",
-        "work": None,
+        "work": "vila-flamuri",
         "service": ("/geo/", "Ricerca AI"),
 
         "title": "Ricerca AI per hotel e case vacanza",
@@ -1558,11 +1558,11 @@ POSTS = [
     # =============================================== INDUSTRY: ESTATE AGENTS ===
     {
         "slug": "estate-agents",
-        "src": "e5d1621e",
+        "src": "a1001896",
         "date": "2026-08-14",
         "updated": "2026-08-14",
         "topic": "Meta ads",
-        "work": None,
+        "work": "census-properties",
         "service": ("/meta-ads/", "Meta ads"),
 
         "title": "Annunci Facebook per agenzie immobiliari",

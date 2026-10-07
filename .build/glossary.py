@@ -47,6 +47,11 @@ KEEP_ENGLISH = [
     "Google", "ChatGPT", "Gemini", "Perplexity", "Claude", "WhatsApp",
     "Search Console", "Web3Forms", "llms.txt", "Iglisi Watch",
     "Victoria Boutique", "Intimo Bruna", "ProAffy", "watch.al",
+    # The 5th and 6th clients, here for the same reason as the 4 above: a
+    # business name is spelled one way in every language. Their hosts need no
+    # entry, because _NOT_COPY's first alternative takes any name with a dot
+    # in it whole.
+    "Census Properties", "Vila Flamuri",
     "Rruga Aleksander Goga", "Henri Sila", "minarank studio",
     # Our own audit engine. A product name, so it is the same word in all 3
     # languages for the same reason "Iglisi Watch" is, and check 35 would

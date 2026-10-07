@@ -162,7 +162,13 @@ def client_page(c, nxt, posts, band, lang):
               "item": full}]},
     ]
     page = {"url": url,
-            "title": f'{c["name"]} {shell.DOT} {shell.BRAND}',
+            # The record's own title, which says what the JOB was. The client's
+            # name went here until 2026-10-07 and it was the wrong word to spend
+            # the budget on: nobody looking for a studio searches a client's
+            # brand, and ranking for it competes with the client's own site for
+            # the one term they should own outright. `name` still carries the
+            # brand everywhere it belongs, starting with the h1 directly below.
+            "title": f'{c.get("title") or c["name"]} {shell.DOT} {shell.BRAND}',
             "description": c["description"],
             "og_desc": c.get("og_desc", c["description"]),
             "jsonld": json.dumps({"@context": "https://schema.org", "@graph": graph},
@@ -182,6 +188,22 @@ def client_page(c, nxt, posts, band, lang):
         proof = (stats(c["stats"], lang) + NL + "          " + gsc_figure(c) + NL +
                  '          <p class="taken">' +
                  shell.localise_html(c["taken"], lang) + '</p>' + NL)
+
+    # The Business Profile, kept as its own group rather than folded into the
+    # strip above. Search Console measures the WEBSITE and the profile measures
+    # the listing, which is a different asset answering a different question,
+    # and one strip of 7 numbers from 2 sources would invite a reader to add
+    # them up. It also keeps rule 22 honest: the weak numbers up there, an
+    # average position of 8.8 and a click rate of 1.1%, stay where they are
+    # instead of being quietly dropped to make room for better ones.
+    pr = c.get("profile")
+    if pr:
+        proof += ('          <h2>' + shell.localise_html(pr["h"], lang) + '</h2>' + NL +
+                  NL.join(f'          <p>{shell.localise_html(p, lang)}</p>'
+                          for p in pr["blocks"]) + NL +
+                  stats(pr["stats"], lang) + NL +
+                  '          <p class="taken">' +
+                  shell.localise_html(pr["taken"], lang) + '</p>' + NL)
 
     body = f'''
       <header class="page-head">
@@ -221,7 +243,7 @@ def client_page(c, nxt, posts, band, lang):
             <p class="side-h">{ch.SIDE_NEXT}</p>
             <ul class="side-list">
               <li><a href="{shell.localise("/work/" + nxt["slug"] + "/", lang)}">{nxt["name"]}</a></li>
-              <li><a href="{shell.localise("/work/", lang)}">{ch.SIDE_ALL_FOUR}</a></li>
+              <li><a href="{shell.localise("/work/", lang)}">{ch.SIDE_ALL_WORK}</a></li>
             </ul>
           </div>
         </aside>

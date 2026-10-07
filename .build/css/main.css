@@ -1182,9 +1182,11 @@ a[href^="tel:"] { white-space: nowrap; }
   list-style: none; margin: var(--s-9) 0 0; padding: var(--s-8) 0 0;
   border-top: 1px solid var(--edge); display: flex; flex-wrap: wrap;
   align-items: center; justify-content: flex-start; gap: var(--s-4) var(--mgap); }
-/* Below the width where all four fit on one line, go 2 per row rather than
-   letting the wrap strand the last one on a line of its own. Measured: four
-   fit from 1063px up, so 1079 is the last width that needs this. */
+/* Go 2 per row rather than letting the wrap strand one on a line of its own.
+   Written when there were four and 1079 was the last width that needed it;
+   re-measured at six on 2026-10-07 and the number still holds. Six wrap 4 + 2
+   above it, which leaves a pair rather than an orphan, and 2 + 2 + 2 below it
+   all the way down to 390. Nothing overflows at any width between. */
 @media (max-width: 1079px) {
   .marks > li { flex: 0 0 calc(50% - var(--mgap) / 2); }
 }
@@ -1214,6 +1216,12 @@ a[href^="tel:"] { white-space: nowrap; }
                           --mw: 28px;  --mh: 28px; }
 .mark-pro-affy-word     { --mark: url("/assets/logo/clients/pro-affy-word.svg");
                           --mw: 108px; --mh: 28px; }
+/* Both all-caps, so the box height IS the cap height, and 22 matches Victoria
+   instead of measuring taller than her for letters of the same size. */
+.mark-census-properties { --mark: url("/assets/logo/clients/census-properties.svg");
+                          --mw: 160px; --mh: 22px; }
+.mark-vila-flamuri      { --mark: url("/assets/logo/clients/vila-flamuri.svg");
+                          --mw: 244px; --mh: 22px; }
 
 /* With no mask support an unmasked .mark is a solid ink block, which is worse
    than nothing. Drop it and let the name that is already in the link show. */
