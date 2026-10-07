@@ -32,7 +32,7 @@ WIDTH = 720
 SOURCES = [
     os.path.join("proof", "watch-al-3-months.webp"),
     os.path.join("proof", "watch-al-28-days.webp"),
-    os.path.join("plates", "iglisi-shop.webp"),
+    os.path.join("plates", "iglisi-home.webp"),
     os.path.join("plates", "victoria-home.webp"),
     os.path.join("plates", "bruna-home.webp"),
     os.path.join("plates", "proaffy-home.webp"),

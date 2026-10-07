@@ -38,7 +38,7 @@ CLIENTS = [
             "fix, no history in Google to inherit.",
         ],
         "built": [
-            "A shop and repair site in English, Italian and Albanian, with 58 watches "
+            "A shop and repair site in English, Italian and Albanian, with 88 watches "
             "on it and a page for every one.",
             "The site looks after itself. Add a watch and the product pages, the shop "
             "list, the sitemap and every number written into the text all update "
@@ -123,9 +123,9 @@ CLIENTS = [
                      "it will read differently when you look.",
         },
         "payoff": "From nothing to 900 clicks a quarter.",
-        "plate": ("iglisi-shop.webp", 1120, 777,
-                  "The Iglisi Watch shop page, showing watches for sale with prices "
-                  "in euro and lek"),
+        "plate": ("iglisi-home.webp", 1120, 777,
+                  "The Iglisi Watch homepage, a headline on navy beside two watches "
+                  "for sale, one for men and one for women, each priced in euro and lek"),
         "services": [("/seo/", "SEO and local search"), ("/geo/", "AI search"),
                      ("/systems/", "Custom software")],
     },

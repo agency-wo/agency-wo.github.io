@@ -40,7 +40,7 @@ NL = chr(10)
 CLIENTS = [
     {
         "slug": "iglisi-watch",
-        "src": "aca67572",
+        "src": "5494f449",
         # Not copy: the file and its 2 dimensions.
         "mark": [("iglisi-watch.png", 195, 22)],
         "name": "Iglisi Watch",
@@ -71,7 +71,7 @@ CLIENTS = [
         ],
         "built": [
             "Un sito di negozio e riparazioni in inglese, italiano e albanese, con "
-            "58 orologi e una pagina per ognuno.",
+            "88 orologi e una pagina per ognuno.",
             "Il sito si mantiene da solo. Aggiungi un orologio e le pagine "
             "prodotto, l'elenco del negozio, la sitemap e ogni numero scritto nel "
             "testo si aggiornano insieme, in tutte e tre le lingue.",
@@ -145,9 +145,10 @@ CLIENTS = [
         "payoff": "Da niente a 900 clic a trimestre.",
         # Only index 3 is copy. The alt says what is in the screenshot: the
         # cards carry a price in euro and the same price in lek beside it.
-        "plate": ("iglisi-shop.webp", 1120, 777,
-                  "La pagina negozio di Iglisi Watch, con gli orologi in vendita "
-                  "e i prezzi in euro e in lek"),
+        "plate": ("iglisi-home.webp", 1120, 777,
+                  "La homepage di Iglisi Watch, un titolo su fondo blu notte accanto a "
+                  "due orologi in vendita, uno da uomo e uno da donna, ciascuno con il "
+                  "prezzo in euro e in lek"),
         # Labels are the footer's words for the same 3 services, so the sidebar
         # and the footer cannot disagree. The hrefs are never touched.
         "services": [("/seo/", "SEO e ricerca locale"), ("/geo/", "Ricerca AI"),
