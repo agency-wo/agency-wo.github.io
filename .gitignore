@@ -7,3 +7,10 @@ Desktop.ini
 # generated
 __pycache__/
 *.pyc
+
+# internal ops notes: owner notes, outreach drafts and measurement baselines.
+# They stay on disk and out of the repo, per the house rule learned 2026-09-18.
+# RULES.md and TRANSLATING.md stay tracked: they are build documentation.
+.build/citations.md
+.build/baseline.md
+.build/outreach.md
