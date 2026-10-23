@@ -337,19 +337,23 @@ SERVICES = [
     # ---------------------------------------------------------- WEB DESIGN --
     {
         "slug": "web-design",
-        "src": "65e7e462",
+        "src": "dcd7529c",
         "nav": "Faqe interneti",
         "schema_name": "Dizajn dhe zhvillim faqesh interneti",
-        # 50 characters.
-        "title": "Faqe interneti në Shqipëri, për t'u gjetur",
+        # 35 characters. "faqe interneti tirane" is the biggest Albanian query
+        # this site earns, 41 impressions in the three months to 2026-10-23 at
+        # zero clicks, against a title that said Shqiperi. The city goes first.
+        # "dizajn faqe interneti" takes another 21 and is carried by the
+        # description rather than crowding the title.
+        "title": "Faqe interneti në Tiranë dhe Durrës",
         "h1": "Një faqe që hapet para se klienti të heqë dorë.",
         "standfirst": "Je brenda shembullit. Çdo pohim i kësaj faqeje mund të "
                       "kontrollohet në këtë faqe, për rreth 30 sekonda.",
-        # 165 characters.
-        "description": "Faqe interneti për biznese të vogla: të shpejta, të "
-                       "qarta, të lexueshme nga makinat, zakonisht në tri "
-                       "gjuhë. Ndërtuar pa framework dhe pa skripte të palëve "
-                       "të treta.",
+        # 152 characters, down from 165, which overflowed the snippet. Carries
+        # "dizajn faqe interneti" and both cities.
+        "description": "Dizajn faqe interneti për biznese të vogla në Tiranë "
+                       "dhe Durrës: të shpejta, të qarta, të lexueshme nga "
+                       "makinat, zakonisht në tri gjuhë. Pa framework.",
         "og_desc": "Çdo pohim i kësaj faqeje mund të kontrollohet në këtë "
                    "faqe.",
         "lead": "Një faqe ka një punë para çdo tjetre: të hapet, të thotë "

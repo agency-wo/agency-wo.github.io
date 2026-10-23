@@ -276,13 +276,21 @@ SERVICES = [
         "slug": "web-design",
         "nav": "Websites",
         "schema_name": "Web design and development",
-        "title": "Web design in Albania, built to be found",
+        # 33 characters. The city is in the title because every impression this
+        # page earns is a city query: "web designer in durres" took 61 of them in
+        # the three months to 2026-10-23 and "website designer in durres" another
+        # 31, both at zero clicks, against a title that said Albania. Tirana sits
+        # here too, where the Albanian page earns 41 more on "faqe interneti
+        # tirane". Copy may name Tirana; the NAP stays Durres everywhere, per
+        # citations.md, or the entity splits.
+        "title": "Web designer in Durres and Tirana",
         "h1": "A site that loads before your customer gives up.",
         "standfirst": "You're standing inside the example. Every claim on this page "
                       "can be checked on this page, in about 30 seconds.",
-        "description": "Websites for small businesses: fast, clear, readable by "
-                       "machines, usually in three languages. Built without frameworks "
-                       "or third-party scripts.",
+        # 152 characters.
+        "description": "Websites for small businesses in Durres and Tirana: fast, "
+                       "clear, readable by machines, usually in three languages. "
+                       "No frameworks, no third-party scripts.",
         "og_desc": "Every claim on this page can be checked on this page.",
         "lead": "A website has one job before it has any other: load, say what it is, "
                 "and let somebody act. Everything after that is decoration, and the way "

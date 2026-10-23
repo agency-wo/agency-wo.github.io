@@ -357,19 +357,23 @@ SERVICES = [
     # ---------------------------------------------------------- WEB DESIGN --
     {
         "slug": "web-design",
-        "src": "65e7e462",
+        "src": "dcd7529c",
         "nav": "Siti web",
         "schema_name": "Progettazione e sviluppo di siti web",
-        # 42 characters.
-        "title": "Siti web in Italia e Albania, fatti per farsi trovare",
+        # 38 characters, down from 52, which rendered at 70 once shell.head
+        # appended " · minarank studio" and so was cut in the SERP. No Italian
+        # web-design query appears in the 2026-10-23 export, so this one is a
+        # length fix plus the cities, not a rewrite chasing measured demand.
+        "title": "Siti web a Durazzo, Tirana e in Italia",
         "h1": "Un sito che si carica prima che il cliente rinunci.",
         "standfirst": "Sei dentro l'esempio. Ogni affermazione di questa "
                       "pagina si può verificare su questa pagina, in circa 30 "
                       "secondi.",
-        # 148 characters.
-        "description": "Siti per piccole attività: veloci, chiari, leggibili "
-                       "dalle macchine, di solito in tre lingue. Costruiti "
-                       "senza framework e senza script di terze parti.",
+        # 139 characters. Mirrors the English, which gained the cities on
+        # 2026-10-23.
+        "description": "Siti per piccole attività a Durazzo, Tirana e in "
+                       "Italia: veloci, chiari, leggibili dalle macchine, di "
+                       "solito in tre lingue. Senza framework.",
         "og_desc": "Ogni affermazione di questa pagina si può verificare su "
                    "questa pagina.",
         "lead": "Un sito ha un compito prima di ogni altro: caricarsi, dire "
