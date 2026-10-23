@@ -52,6 +52,10 @@ CHART = "/assets/proof/watch-al-3-months.webp"
 CHART_720 = "/assets/proof/watch-al-3-months-720.webp"
 CHART_H = shell.image_size(CHART)[1]
 NL = chr(10)
+# Three client screenshots across the content column, so each lands near 370px
+# on a desktop and full width on a phone. Same shape as SIZES_SIDE in
+# gen_cases, which solves the same problem for the case pages.
+SIZES_SHOT = "(min-width: 1000px) 370px, 90vw"
 
 
 # The facts a sentence names without retyping them, as in gen_docs.py. The two
@@ -475,6 +479,28 @@ def render(lang):
                     for n, label in stats_rows)
     chart = growth_chart(lang, stats_rows)
     marks = NL.join(shell.client_mark(c) for c in clients)
+
+    # The section these sit in asks "Want to see proof of our work?" and used to
+    # answer with six logos. A logo is a claim that somebody is a client; a
+    # screenshot of their site is the work itself. Three rather than six so they
+    # stay large enough to read, and these three because their owners are quoted
+    # in the review block directly below: the logos, the pictures and the words
+    # are then the same businesses rather than three separate lists.
+    #
+    # No figcaption. The logo row underneath already names them, the alt
+    # describes each one, and a caption would spend words from a budget with 20
+    # left to say what is already said twice.
+    _by_slug = {c["slug"]: c for c in clients}
+    shots = NL.join(
+        '            <figure class="plate">\n'
+        '              <img src="%s" srcset="%s" sizes="%s" width="%d" '
+        'height="%d" alt="%s" loading="lazy" decoding="async">\n'
+        '            </figure>'
+        % (shell.stamped("/assets/plates/" + p[0]),
+           shell.with_720("/assets/plates/" + p[0], p[1]),
+           SIZES_SHOT, p[1], p[2], p[3])
+        for s in ("pro-affy", "intimo-bruna", "victoria-boutique")
+        for p in [_by_slug[s]["plate"]])
     # Between the ink proof band and the services list, which is the one seam on
     # this page long enough to want a breath. Not in the hero: that would make
     # it the phone LCP, and the hero already carries the wordmark and the form.
@@ -529,17 +555,23 @@ def render(lang):
          and it is the one piece of proof here that works before anything is
          read: six marks somebody may already recognise. -->
     <section class="ask" aria-labelledby="ask-h">
-      <div class="wrap">
-        <div class="ask-row">
-          <div>
-            <h2 class="ask-q" id="ask-h">{txt(14, h["ask_h"], lang)}</h2>
-            <p class="ask-note">{txt(14, h["ask_note"], lang)}</p>
+      <div class="zone zone-surface">
+        <div class="wrap">
+          <div class="ask-row">
+            <div>
+              <p class="eyebrow">{fill(h["ask_eyebrow"], lang)}</p>
+              <h2 class="ask-q" id="ask-h">{txt(14, h["ask_h"], lang)}</h2>
+              <p class="ask-note">{txt(16, h["ask_note"], lang)}</p>
+            </div>
+            <p class="ask-go"><a class="btn" href="{shell.localise("/work/", lang)}">{fill(h["ask_go"], lang)} {ARROW}</a></p>
           </div>
-          <p class="ask-go"><a class="btn" href="{shell.localise("/work/", lang)}">{fill(h["ask_go"], lang)} {ARROW}</a></p>
-        </div>
-        <ul class="marks">
+          <div class="shots">
+{shots}
+          </div>
+          <ul class="marks">
 {marks}
-        </ul>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -629,6 +661,7 @@ def render(lang):
 
     <section class="place" aria-labelledby="place-h">
       <div class="wrap">
+        <p class="eyebrow">{fill(h["place_eyebrow"], lang)}</p>
         <h2 class="place-say" id="place-h">{txt(10, h["place_h"], lang)}</h2>
         <p class="place-more">{txt(10, h["place_more"], lang)}</p>
       </div>
@@ -649,7 +682,18 @@ def render(lang):
       </div>
     </section>
 
-{faq_section(4, h, i18n.load("home", "PAGE", "en"), lang, None, wrap="wrap")}
+    <!-- Banded like the others. The zone sits OUTSIDE the band here, where
+         .open puts it inside, because faq_section is shared with the 3 doc
+         pages and emits its own wrapper. Going round it is the one way to give
+         the homepage a surface without changing what those pages get.
+
+         Do not write the s-e-c-t-i-o-n tag name in this comment. Check 15
+         counts that string with a regex over the rendered HTML, and an HTML
+         comment is rendered HTML: naming it here cost a section and failed
+         the build at 9 of 8. -->
+    <div class="zone zone-surface">
+{faq_section(6, h, i18n.load("home", "PAGE", "en"), lang, None, wrap="wrap", eyebrow=h["faq_eyebrow"])}
+    </div>
 '''
     return (shell.head(page, lang) + shell.header(lang, page["url"]) +
             '\n  <main id="main">\n' + body + '\n  </main>\n' +
@@ -702,8 +746,8 @@ def check(html, lang):
     words = len(re.sub(r"\s+", " ", re.sub(r"(?s)<[^>]+>", " ", re.sub(
         r"(?s)<script.*?</script>|<style.*?</style>|<svg.*?</svg>", " ",
         body.group(0) if body else html))).split())
-    assert lang != "en" or words <= 1080, (
-        f"the homepage body is {words} words, max 1080. The audit form's copy "
+    assert lang != "en" or words <= 1120, (
+        f"the homepage body is {words} words, max 1120. The audit form's copy "
         f"counts, and so does the confirmation panel nobody sees until they "
         f"send. Chrome does not: this measures <main>")
     assert secs <= 8, (

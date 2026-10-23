@@ -1198,22 +1198,51 @@ a[href^="tel:"] { white-space: nowrap; }
    business and the translation note are slate: the words are the argument and
    the attribution is the footnote that lets you check it. */
 .says { margin-top: var(--s-9); }
+/* TWO columns, stated rather than inferred. This said
+   repeat(auto-fit, minmax(28ch, 1fr)) until 2026-10-23, which resolves to
+   THREE at desktop width, so 4 reviews wrapped 3 + 1 and left the fourth alone
+   on a row of its own. .marks carries a comment about avoiding exactly that
+   orphan and this did not listen to it. A comment claiming two while the code
+   computed three is worse than either: it stops the next reader checking. */
 .say-list { list-style: none; margin: var(--s-8) 0 0; padding: 0;
   display: grid; gap: var(--s-7) var(--s-8);
-  grid-template-columns: repeat(auto-fit, minmax(28ch, 1fr)); }
-.say { border-top: 1px solid var(--edge); padding-top: var(--s-5); }
+  grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 719px) { .say-list { grid-template-columns: 1fr; } }
+/* Column, so the attribution can be pushed to the bottom of its cell. The
+   quotes run 9 to 30 words and ragged names read as a mistake. */
+.say { border-top: 1px solid var(--edge); padding-top: var(--s-5);
+  display: flex; flex-direction: column; }
 .say blockquote { margin: 0; color: var(--ink); max-width: 46ch;
   text-wrap: pretty; }
-.say-who { margin-top: var(--s-4); font-size: var(--fs-small);
-  font-weight: 600; }
+.say-who { margin-top: auto; padding-top: var(--s-4);
+  font-size: var(--fs-small); font-weight: 600; }
 .say-who a { color: var(--ink); text-decoration: none;
   box-shadow: inset 0 -1px 0 0 var(--edge); }
 .say-who a:hover { box-shadow: inset 0 -2px 0 0 var(--ink); }
 /* Both carry a middot before them rather than a line break, so the name and
    what it belongs to read as one line at every width. */
-.say-client::before, .say-tr::before { content: " \00B7 "; color: var(--edge); }
+/* Non-breaking spaces, because the ordinary ones in " \00B7 " collapsed and
+   the line rendered as "Deni Tabaku ·ProAffy" with the middot stuck to the
+   business. \00A0 survives collapsing and also stops the separator wrapping
+   onto a line by itself. */
+.say-client::before, .say-tr::before { content: "\00A0\00B7\00A0";
+  color: var(--edge); }
 .say-client { color: var(--slate); font-weight: 500; }
 .say-tr { color: var(--slate); font-weight: 400; font-style: italic; }
+
+/* The three client sites, above the logo row they belong to. The section asks
+   whether you want to see proof of the work and used to answer with marks,
+   which say a business is a client. These say what was built for them.
+
+   Three columns and not six: at six the screenshots are thumbnails and a
+   homepage is not a contact sheet. The other three live on /work/, which is
+   what the button underneath is for. Below 720 they stack, because a 370px
+   screenshot of a whole homepage is already at the edge of legible. */
+.shots { display: grid; gap: var(--s-6);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: var(--s-7); }
+@media (max-width: 719px) { .shots { grid-template-columns: 1fr;
+  gap: var(--s-7); } }
 
 .marks { --mgap: var(--s-8);
   list-style: none; margin: var(--s-9) 0 0; padding: var(--s-8) 0 0;

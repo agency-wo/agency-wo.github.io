@@ -130,6 +130,7 @@ PAGE = {
     "services_h": "Five ways to be easier to find.",
 
     # -- the businesses -----------------------------------------------------
+    "ask_eyebrow": "The work",
     "ask_h": "Want to see proof of our work?",
     "ask_note": "These are the businesses we build for. Every one of" + NL +
                 "these sites is live, so the logos go to them and the button goes to "
@@ -220,6 +221,7 @@ PAGE = {
                "and every account, in your name from day one.",
 
     # -- the price ----------------------------------------------------------
+    "place_eyebrow": "Price",
     "place_h": "The standard does not move with the" + NL +
                "price.",
     "place_more": "We build to European standards and quote" + NL +
@@ -239,6 +241,7 @@ PAGE = {
     "who_go": "How we work",
 
     # -- the one call to action ---------------------------------------------
+    "faq_eyebrow": "Questions",
     "faq_h": "Before you send anything",
     "faq": [
         ("What does this cost?",

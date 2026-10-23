@@ -288,7 +288,7 @@ CTA_NOTE = {
 # ------------------------------------------------------------- the parts ----
 
 def faq_section(indent, rec, en_rec, lang, toc, heading=None,
-                en_heading=None, wrap=None):
+                en_heading=None, wrap=None, eyebrow=None):
     """The FAQ heading is an h2 like any other and goes into the contents like
     any other. It is emitted from here rather than from the block list, which
     is exactly how a contents list built off rec["blocks"] would have missed
@@ -311,6 +311,13 @@ def faq_section(indent, rec, en_rec, lang, toc, heading=None,
     rows = [pad + '<section class="faq" data-reveal-group>']
     if wrap:
         rows.append(f'{pad}  <div class="{wrap}">')
+    # Optional, and passed only by the homepage. The 3 doc pages carry a page
+    # title and a contents list above their FAQ, so they already say where you
+    # are; the homepage runs seven bands and this was the fourth with no label
+    # on it. Same optional-parameter shape as wrap above, for the same reason:
+    # one caller needs something the others do not.
+    if eyebrow:
+        rows.append(f'{ipad}  <p class="eyebrow">{fill(eyebrow, lang)}</p>')
     rows.append(f'{ipad}  <h2{hid}>{h}</h2>')
     for (q, a), (en_q, _en_a) in zip(rec["faq"], en_rec["faq"]):
         rows.append(ipad + '  <div class="faq-item">')

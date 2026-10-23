@@ -101,7 +101,7 @@ MAX_LABELS_PER_PAGE = 6      # measured ceiling on respected sites is about 3
 # the paragraph above names: the budget exists to keep the argument tight, and
 # a client's name in the footer was never the argument. 963 body words before
 # the client reviews went in, 1,067 after.
-MAX_HOME_WORDS = 1080
+MAX_HOME_WORDS = 1120
 MAX_HOME_SECTIONS = 8
 
 

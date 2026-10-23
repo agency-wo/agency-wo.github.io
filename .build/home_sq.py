@@ -100,7 +100,7 @@ STATS = [
 ]
 
 PAGE = {
-    "src": "e633bf5b",
+    "src": "543c1df5",
 
     # 38 characters against the 52 the title budget leaves once gen_home.py has
     # put "minarank studio ·" in front of it. The old string claimed 39 here and
@@ -192,6 +192,7 @@ PAGE = {
     "services_h": "Pesë mënyra për t'u gjetur më lehtë.",
 
     # -- the businesses -----------------------------------------------------
+    "ask_eyebrow": "Puna",
     "ask_h": "Do të shohësh prova të punës sonë?",
     "ask_note": "Këto janë bizneset për të cilat punojmë. Secila prej" + NL +
                 "këtyre faqeve është online, ndaj logot çojnë tek ato dhe "
@@ -256,6 +257,7 @@ PAGE = {
                "dhe çdo llogari, në emrin tënd që nga dita e parë.",
 
     # -- the price ----------------------------------------------------------
+    "place_eyebrow": "Çmimi",
     "place_h": "Standardi nuk ndryshon me" + NL +
                "çmimin.",
     # "të na besosh në fjalë" is the Albanian idiom for taking somebody's word,
@@ -279,6 +281,7 @@ PAGE = {
     # -- the one call to action ---------------------------------------------
     # Both lines are the brief's own, word for word: they render in the ink
     # band on every Albanian page, and check 27 wants one CTA, not eighteen.
+    "faq_eyebrow": "Pyetje",
     "faq_h": "Para se të dërgosh diçka",
     "faq": [
         ("Sa kushton?",

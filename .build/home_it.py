@@ -101,7 +101,7 @@ STATS = [
 ]
 
 PAGE = {
-    "src": "e633bf5b",
+    "src": "543c1df5",
 
     # 38 characters against the 52 the title budget leaves once gen_home.py has
     # put "minarank studio ·" in front of it. The old string claimed 38 here and
@@ -199,6 +199,7 @@ PAGE = {
     "services_h": "Cinque modi per farti trovare più facilmente.",
 
     # -- the businesses -----------------------------------------------------
+    "ask_eyebrow": "Il lavoro",
     "ask_h": "Vuoi vedere le prove del nostro lavoro?",
     "ask_note": "Queste sono le attività per cui lavoriamo. Ognuno di" + NL +
                 "questi siti è online, quindi i loghi portano a loro e il "
@@ -262,6 +263,7 @@ PAGE = {
                "e ogni account, a tuo nome dal primo giorno.",
 
     # -- the price ----------------------------------------------------------
+    "place_eyebrow": "Prezzo",
     "place_h": "Lo standard non cambia con il" + NL +
                "prezzo.",
     # "crederci sulla parola" is the Italian idiom for taking somebody's word,
@@ -285,6 +287,7 @@ PAGE = {
     # -- the one call to action ---------------------------------------------
     # Both lines are the brief's own, word for word: they render in the ink
     # band on every Italian page, and check 27 wants one CTA, not eighteen.
+    "faq_eyebrow": "Domande",
     "faq_h": "Prima di mandare qualcosa",
     "faq": [
         ("Quanto costa?",
