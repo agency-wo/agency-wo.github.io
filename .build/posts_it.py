@@ -649,7 +649,7 @@ POSTS = [
     # ====================================================== INDUSTRY: WATCH ===
     {
         "slug": "watch-shops-and-jewellers",
-        "src": "d39af162",
+        "src": "c627d7ab",
         "ask": ("negozio di orologi", "Durazzo"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
@@ -657,7 +657,7 @@ POSTS = [
         "work": "iglisi-watch",
         "service": ("/seo/", "SEO e ricerca locale"),
 
-        "title": "SEO per orologiai e gioiellerie",
+        "title": "SEO per orologiai a Durazzo",
         "h1": "Un negozio di orologi sono 2 attività, e solo 1 ha fretta.",
         "summary": "Le riparazioni si cercano di corsa. Gli orologi si "
                    "studiano per settimane. Un negozio solo deve rispondere a "
@@ -763,7 +763,7 @@ POSTS = [
     # ==================================================== INDUSTRY: FASHION ===
     {
         "slug": "fashion-boutiques",
-        "src": "d874270d",
+        "src": "6dfdd1cf",
         "ask": ("boutique di abbigliamento", "Durazzo"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
@@ -771,7 +771,7 @@ POSTS = [
         "work": "victoria-boutique",
         "service": ("/web-design/", "Siti web"),
 
-        "title": "Un sito per una boutique con merce che cambia",
+        "title": "Un sito per una boutique a Durazzo",
         "h1": "Il problema di una boutique non è il traffico. È invecchiare.",
         "summary": "La merce cambia ogni settimana. Un sito che mostra la "
                    "stagione scorsa fa più danno che non averlo.",
@@ -962,7 +962,7 @@ POSTS = [
     # ==================================================== INDUSTRY: HEATING ===
     {
         "slug": "heating-and-cooling-trades",
-        "src": "c1b5e928",
+        "src": "467ba02a",
         "ask": ("installatore di condizionatori", "Durazzo"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
@@ -970,7 +970,7 @@ POSTS = [
         "work": "pro-affy",
         "service": ("/seo/", "SEO e ricerca locale"),
 
-        "title": "SEO per chi installa caldaie e climatizzatori",
+        "title": "SEO per chi installa caldaie a Durazzo",
         "h1": "La tua settimana più piena decide quasi tutto l'anno.",
         "summary": "Il riscaldamento si cerca in pochi giorni di freddo, dal "
                    "telefono, a un'ora che non programma nessuno.",
@@ -1159,7 +1159,7 @@ POSTS = [
     # ===================================================== INDUSTRY: HOTELS ===
     {
         "slug": "hotels-and-guesthouses",
-        "src": "e1917678",
+        "src": "87895a95",
         "ask": ("hotel", "Durazzo"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
@@ -1167,7 +1167,7 @@ POSTS = [
         "work": "vila-flamuri",
         "service": ("/geo/", "Ricerca AI"),
 
-        "title": "Ricerca AI per hotel e case vacanza",
+        "title": "Ricerca AI per hotel a Durazzo",
         "h1": "Lo stesso ospite ti costa meno se arriva direttamente.",
         "summary": "Per gli hotel la ricerca è una porta più stretta di prima, "
                    "e qualcun altro ti fa pagare gli ospiti che passano dalla "
@@ -1264,7 +1264,7 @@ POSTS = [
     # ================================================ INDUSTRY: HAIRDRESSERS ===
     {
         "slug": "hairdressers-and-salons",
-        "src": "c866592f",
+        "src": "af288639",
         "ask": ("parrucchiere", "Durazzo"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
@@ -1272,7 +1272,7 @@ POSTS = [
         "work": None,
         "service": ("/web-design/", "Siti web"),
 
-        "title": "Un sito per un parrucchiere o un salone",
+        "title": "Un sito per un parrucchiere a Durazzo",
         "h1": "Farsi trovare è la metà facile. Farli tornare è il mestiere.",
         "summary": "Un salone non ha un problema di traffico. Ha un vuoto tra "
                    "una visita e l'altra, ed è una cosa diversa da "
@@ -1364,7 +1364,7 @@ POSTS = [
     # ==================================================== INDUSTRY: DENTISTS ===
     {
         "slug": "dentists-and-clinics",
-        "src": "407370e0",
+        "src": "c8ba8a13",
         "ask": ("dentista", "Durazzo"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
@@ -1372,7 +1372,7 @@ POSTS = [
         "work": None,
         "service": ("/web-design/", "Siti web"),
 
-        "title": "Un sito per uno studio dentistico",
+        "title": "Sito per uno studio dentistico a Durazzo",
         "h1": "Qualcuno gli ha dato il tuo nome. Il sito decide cosa succede "
               "dopo.",
         "summary": "Un dentista si sceglie sulla parola di qualcuno molto più "
@@ -1470,7 +1470,7 @@ POSTS = [
     # ================================================== INDUSTRY: CAR REPAIR ===
     {
         "slug": "car-repair-and-garages",
-        "src": "6408cae6",
+        "src": "3b7ddd06",
         "ask": ("officina meccanica", "Durazzo"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
@@ -1478,7 +1478,7 @@ POSTS = [
         "work": None,
         "service": ("/seo/", "SEO e ricerca locale"),
 
-        "title": "SEO per un'officina: cosa cercano i clienti",
+        "title": "SEO per un'officina a Durazzo",
         "h1": "Cercano il rumore che fa la macchina.",
         "summary": "Chi guida descrive un sintomo, non un servizio, e trova "
                    "l'officina che quel sintomo lo ha scritto da qualche "
@@ -4258,7 +4258,7 @@ POSTS = [
 
     {
         "slug": "gyms-and-fitness-studios",
-        "src": "776a4e7a",
+        "src": "a0b5f808",
         "ask": ("palestra", "Durazzo"),
         "date": "2026-08-22",
         "updated": "2026-08-22",
@@ -4266,7 +4266,7 @@ POSTS = [
         "work": None,
         "service": ("/seo/", "SEO e ricerca locale"),
 
-        "title": "Palestre e studi fitness",
+        "title": "Palestre e studi fitness a Durazzo",
         "h1": "La decisione è presa prima che qualcuno entri.",
         "summary": "Due fatti decidono tutto, di solito mancano entrambi, e "
                    "una terza cosa che qui conta più che in ogni altro "
@@ -4353,7 +4353,7 @@ POSTS = [
 
     {
         "slug": "builders-and-contractors",
-        "src": "93291eab",
+        "src": "8eb2ca6f",
         "ask": ("impresa edile", "Durazzo"),
         "date": "2026-08-22",
         "updated": "2026-08-22",
@@ -4361,7 +4361,7 @@ POSTS = [
         "work": None,
         "service": ("/seo/", "SEO e ricerca locale"),
 
-        "title": "Imprese edili e artigiani",
+        "title": "Imprese edili e artigiani a Durazzo",
         "h1": "Ti assumono sulle prove. Quasi nessun sito ne pubblica.",
         "summary": "Cosa cerca chi sta per spendere una cifra seria, e "
                    "perché il telefono conta più del sito.",
@@ -7018,7 +7018,7 @@ POSTS = [
     # =============================================== INDUSTRY: HOLIDAY LETS ===
     {
         "slug": "holiday-apartments",
-        "src": "cbe3e935",
+        "src": "d306bcad",
         "ask": ("appartamenti per le vacanze", "Durazzo"),
         "date": "2026-10-07",
         "updated": "2026-10-07",
@@ -7026,7 +7026,7 @@ POSTS = [
         "work": "vila-flamuri",
         "service": ("/web-design/", "Siti web"),
 
-        "title": "Un sito per appartamenti per vacanze",
+        "title": "Sito per appartamenti vacanze a Durazzo",
         "h1": "Paghi di nuovo il portale per un ospite che ti conosce già.",
         "summary": "Un ospite che torna costa la stessa commissione di uno "
                    "sconosciuto. Solo un sito diretto cambia le cose.",
@@ -7133,14 +7133,14 @@ POSTS = [
     # =================================================== INDUSTRY: PROPERTY ===
     {
         "slug": "estate-agency-website",
-        "src": "0bd10716",
+        "src": "da2ddde3",
         "date": "2026-10-07",
         "updated": "2026-10-07",
         "topic": "Siti web",
         "work": "census-properties",
         "service": ("/web-design/", "Siti web"),
 
-        "title": "Un sito per un'agenzia immobiliare",
+        "title": "Sito per un'agenzia immobiliare in Albania",
         "h1": "Ogni agenzia mostra gli stessi appartamenti. Quasi nessuna "
               "mostra le carte.",
         "summary": "Le fotografie e il prezzo stanno su ogni portale. Quello "

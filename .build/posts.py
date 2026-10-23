@@ -633,7 +633,7 @@ POSTS = [
         "work": "iglisi-watch",
         "service": ("/seo/", "SEO and local search"),
 
-        "title": "SEO for watch shops and jewellers",
+        "title": "SEO for watch shops in Durres",
         "h1": "A watch shop is 2 businesses, and only 1 of them is urgent.",
         "summary": "Repairs get searched in a hurry. Watches get researched "
                    "for weeks. One shop has to answer both, and they do not "
@@ -745,7 +745,7 @@ POSTS = [
         "work": "victoria-boutique",
         "service": ("/web-design/", "Websites"),
 
-        "title": "A website for a boutique with changing stock",
+        "title": "A website for a boutique in Durres",
         "h1": "A boutique's problem is not traffic. It is going stale.",
         "summary": "Stock turns over weekly. A site that shows last season is "
                    "worse for a boutique than no site at all.",
@@ -942,7 +942,7 @@ POSTS = [
         "work": "pro-affy",
         "service": ("/seo/", "SEO and local search"),
 
-        "title": "SEO for heating and cooling engineers",
+        "title": "SEO for heating engineers in Durres",
         "h1": "Your busiest week decides most of your year.",
         "summary": "Heating demand arrives in a few cold days, from people "
                    "searching on a phone at an hour nobody plans for.",
@@ -1140,7 +1140,7 @@ POSTS = [
         "work": "vila-flamuri",
         "service": ("/geo/", "AI search"),
 
-        "title": "AI search for hotels and guesthouses",
+        "title": "AI search for hotels in Durres",
         "h1": "The same guest costs you less if they arrive directly.",
         "summary": "Search is a smaller front door for hotels than it was, and "
                    "somebody else is charging you for the guests who use "
@@ -1241,7 +1241,7 @@ POSTS = [
         "work": None,
         "service": ("/web-design/", "Websites"),
 
-        "title": "A website for a hairdresser or salon",
+        "title": "A website for a salon in Durres",
         "h1": "Getting found is the easy half. Getting them back is the "
               "business.",
         "summary": "A salon does not have a traffic problem. It has a gap "
@@ -1336,7 +1336,7 @@ POSTS = [
         "work": None,
         "service": ("/web-design/", "Websites"),
 
-        "title": "A website for a dental clinic",
+        "title": "A website for a dental clinic in Durres",
         "h1": "Somebody gave them your name. The site decides what happens "
               "next.",
         "summary": "A dentist is chosen on somebody's word far more often than "
@@ -1440,7 +1440,7 @@ POSTS = [
         "work": None,
         "service": ("/seo/", "SEO and local search"),
 
-        "title": "SEO for a garage: what customers search",
+        "title": "SEO for a garage in Durres",
         "h1": "They search the noise the car is making.",
         "summary": "Drivers describe a symptom, not a service, and the garage "
                    "that wrote the symptom down is the one they find.",
@@ -4171,7 +4171,7 @@ POSTS = [
         "work": None,
         "service": ("/seo/", "SEO and local search"),
 
-        "title": "Gyms and fitness studios",
+        "title": "Gyms and fitness studios in Durres",
         "h1": "The decision is made before anybody walks in.",
         "summary": "Two facts decide it, both usually missing, and a third "
                    "thing that matters more here than in any other trade.",
@@ -4265,7 +4265,7 @@ POSTS = [
         "work": None,
         "service": ("/seo/", "SEO and local search"),
 
-        "title": "Builders and contractors",
+        "title": "Builders and contractors in Durres",
         "h1": "You are hired on evidence. Most sites publish none.",
         "summary": "What a person about to spend serious money is looking "
                    "for, and why the phone matters more than the website.",
@@ -6880,7 +6880,7 @@ POSTS = [
         "work": "vila-flamuri",
         "service": ("/web-design/", "Websites"),
 
-        "title": "A website for holiday apartments",
+        "title": "A website for holiday apartments in Durres",
         "h1": "You pay the portal again for a guest who already knows you.",
         "summary": "A returning guest costs the same commission as a stranger. "
                    "Only a direct site changes that.",
@@ -6990,7 +6990,7 @@ POSTS = [
         "work": "census-properties",
         "service": ("/web-design/", "Websites"),
 
-        "title": "A website for an estate agency",
+        "title": "A website for an estate agency in Albania",
         "h1": "Every agency shows the same flats. Almost none show the "
               "paperwork.",
         "summary": "The photographs and the price are on every portal. What is "

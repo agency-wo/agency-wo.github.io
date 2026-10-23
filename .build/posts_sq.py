@@ -656,7 +656,7 @@ POSTS = [
     # ====================================================== INDUSTRY: WATCH ===
     {
         "slug": "watch-shops-and-jewellers",
-        "src": "d39af162",
+        "src": "c627d7ab",
         "ask": ("dyqan orësh", "Durrës"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
@@ -664,7 +664,7 @@ POSTS = [
         "work": "iglisi-watch",
         "service": ("/seo/", "SEO dhe kërkim lokal"),
 
-        "title": "SEO për dyqane orësh dhe argjendari",
+        "title": "SEO për dyqane orësh në Durrës",
         "h1": "Një dyqan orësh janë 2 biznese, dhe vetëm 1 ka ngut.",
         "summary": "Riparimet kërkohen me ngut. Orët studiohen me javë. Një "
                    "dyqan i vetëm duhet t'u përgjigjet të dyjave.",
@@ -767,7 +767,7 @@ POSTS = [
     # ==================================================== INDUSTRY: FASHION ===
     {
         "slug": "fashion-boutiques",
-        "src": "d874270d",
+        "src": "6dfdd1cf",
         "ask": ("butik veshjesh", "Durrës"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
@@ -775,7 +775,7 @@ POSTS = [
         "work": "victoria-boutique",
         "service": ("/web-design/", "Faqe interneti"),
 
-        "title": "Një faqe për një butik me mall që ndryshon",
+        "title": "Faqe për një butik në Durrës",
         "h1": "Halli i një butiku nuk është trafiku. Është vjetërimi.",
         "summary": "Malli ndërrohet çdo javë. Një faqe që tregon sezonin e "
                    "shkuar bën më shumë dëm sesa mos ta kesh fare.",
@@ -962,7 +962,7 @@ POSTS = [
     # ==================================================== INDUSTRY: HEATING ===
     {
         "slug": "heating-and-cooling-trades",
-        "src": "c1b5e928",
+        "src": "467ba02a",
         "ask": ("instalues kondicionerësh", "Durrës"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
@@ -970,7 +970,7 @@ POSTS = [
         "work": "pro-affy",
         "service": ("/seo/", "SEO dhe kërkim lokal"),
 
-        "title": "SEO për instalues ngrohjeje dhe ftohjeje",
+        "title": "SEO për instalues ngrohjeje në Durrës",
         "h1": "Java jote më e ngarkuar vendos pjesën më të madhe të vitit.",
         "summary": "Ngrohja kërkohet brenda pak ditësh të ftohta, nga telefoni, "
                    "në një orë që nuk e planifikon njeri.",
@@ -1158,7 +1158,7 @@ POSTS = [
     # ===================================================== INDUSTRY: HOTELS ===
     {
         "slug": "hotels-and-guesthouses",
-        "src": "e1917678",
+        "src": "87895a95",
         "ask": ("hotel", "Durrës"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
@@ -1166,7 +1166,7 @@ POSTS = [
         "work": "vila-flamuri",
         "service": ("/geo/", "Kërkimi me AI"),
 
-        "title": "Kërkimi me AI për hotele dhe bujtina",
+        "title": "Kërkimi me AI për hotele në Durrës",
         "h1": "I njëjti mysafir të kushton më pak nëse vjen drejtpërdrejt.",
         "summary": "Për hotelet kërkimi është derë më e ngushtë se dikur, dhe "
                    "dikush tjetër po ta faturon mysafirin që kalon nga e tija.",
@@ -1262,7 +1262,7 @@ POSTS = [
     # ================================================ INDUSTRY: HAIRDRESSERS ===
     {
         "slug": "hairdressers-and-salons",
-        "src": "c866592f",
+        "src": "af288639",
         "ask": ("parukeri", "Durrës"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
@@ -1270,7 +1270,7 @@ POSTS = [
         "work": None,
         "service": ("/web-design/", "Faqe interneti"),
 
-        "title": "Një faqe për një parukeri ose sallon",
+        "title": "Faqe për një parukeri në Durrës",
         "h1": "Të gjendesh është gjysma e lehtë. T'i kthesh është zanati.",
         "summary": "Një parukeri nuk ka hall trafiku. Ka një boshllëk mes një "
                    "vizite dhe tjetrës, dhe kjo është punë tjetër për t'u "
@@ -1361,7 +1361,7 @@ POSTS = [
     # ==================================================== INDUSTRY: DENTISTS ===
     {
         "slug": "dentists-and-clinics",
-        "src": "407370e0",
+        "src": "c8ba8a13",
         "ask": ("dentist", "Durrës"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
@@ -1369,7 +1369,7 @@ POSTS = [
         "work": None,
         "service": ("/web-design/", "Faqe interneti"),
 
-        "title": "Një faqe për një klinikë dentare",
+        "title": "Faqe për një klinikë dentare në Durrës",
         "h1": "Dikush ua dha emrin tënd. Faqja vendos se çfarë ndodh më pas.",
         "summary": "Dentisti zgjidhet me fjalën e dikujt shumë më shpesh sesa "
                    "me një kërkim, dhe kjo ndryshon se për çfarë shërben "
@@ -1464,7 +1464,7 @@ POSTS = [
     # ================================================== INDUSTRY: CAR REPAIR ===
     {
         "slug": "car-repair-and-garages",
-        "src": "6408cae6",
+        "src": "3b7ddd06",
         "ask": ("servis makinash", "Durrës"),
         "date": "2026-08-14",
         "updated": "2026-08-14",
@@ -1472,7 +1472,7 @@ POSTS = [
         "work": None,
         "service": ("/seo/", "SEO dhe kërkim lokal"),
 
-        "title": "SEO për një ofiçinë: çfarë kërkojnë klientët",
+        "title": "SEO për një ofiçinë në Durrës",
         "h1": "Kërkojnë zhurmën që bën makina.",
         "summary": "Shoferi përshkruan një shenjë, jo një shërbim, dhe gjen "
                    "atë ofiçinë që atë shenjë e ka shkruar diku.",
@@ -4216,7 +4216,7 @@ POSTS = [
 
     {
         "slug": "gyms-and-fitness-studios",
-        "src": "776a4e7a",
+        "src": "a0b5f808",
         "ask": ("palestër", "Durrës"),
         "date": "2026-08-22",
         "updated": "2026-08-22",
@@ -4224,7 +4224,7 @@ POSTS = [
         "work": None,
         "service": ("/seo/", "SEO dhe kërkim lokal"),
 
-        "title": "Palestra dhe studio fitnesi",
+        "title": "Palestra dhe studio fitnesi në Durrës",
         "h1": "Vendimi merret para se të hyjë njeri brenda.",
         "summary": "Dy fakte vendosin gjithçka, zakonisht mungojnë të dyja, "
                    "dhe një gjë e tretë që këtu peshon më shumë se në çdo "
@@ -4311,7 +4311,7 @@ POSTS = [
 
     {
         "slug": "builders-and-contractors",
-        "src": "93291eab",
+        "src": "8eb2ca6f",
         "ask": ("kompani ndërtimi", "Durrës"),
         "date": "2026-08-22",
         "updated": "2026-08-22",
@@ -4319,7 +4319,7 @@ POSTS = [
         "work": None,
         "service": ("/seo/", "SEO dhe kërkim lokal"),
 
-        "title": "Ndërtues dhe kontraktorë",
+        "title": "Ndërtues dhe kontraktorë në Durrës",
         "h1": "Të marrin në punë me prova. Shumica e faqeve s'kanë asnjë.",
         "summary": "Çfarë kërkon dikush që po shpenzon një shumë serioze, "
                    "dhe pse telefoni peshon më shumë se faqja.",
@@ -6929,7 +6929,7 @@ POSTS = [
     # =============================================== INDUSTRY: HOLIDAY LETS ===
     {
         "slug": "holiday-apartments",
-        "src": "cbe3e935",
+        "src": "d306bcad",
         "ask": ("apartamente pushimi", "Durrës"),
         "date": "2026-10-07",
         "updated": "2026-10-07",
@@ -6937,7 +6937,7 @@ POSTS = [
         "work": "vila-flamuri",
         "service": ("/web-design/", "Faqe interneti"),
 
-        "title": "Një faqe për apartamente pushimi",
+        "title": "Faqe për apartamente pushimi në Durrës",
         "h1": "Portalin e paguan sërish për një mysafir që të njeh tashmë.",
         "summary": "Një mysafir që kthehet të kushton të njëjtin komision si "
                    "një i panjohur. Vetëm një faqe e jotja e ndryshon këtë.",
@@ -7041,14 +7041,14 @@ POSTS = [
     # =================================================== INDUSTRY: PROPERTY ===
     {
         "slug": "estate-agency-website",
-        "src": "0bd10716",
+        "src": "da2ddde3",
         "date": "2026-10-07",
         "updated": "2026-10-07",
         "topic": "Faqe interneti",
         "work": "census-properties",
         "service": ("/web-design/", "Faqe interneti"),
 
-        "title": "Një faqe për një agjenci imobiliare",
+        "title": "Faqe për një agjenci imobiliare në Shqipëri",
         "h1": "Çdo agjenci tregon të njëjtat apartamente. Pothuajse asnjë nuk "
               "tregon letrat.",
         "summary": "Fotografitë dhe çmimi janë në çdo portal. Ajo që mungon "
