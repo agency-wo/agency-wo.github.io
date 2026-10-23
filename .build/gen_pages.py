@@ -360,17 +360,7 @@ def render(svc, en_svc, posts, lang):
             a('            <svg viewBox="0 0 160 160" aria-hidden="true">\n              ')
             a(FIGS[svc["fig"]] + "\n            </svg>\n          </figure>\n\n")
         if i == 1 and svc["slug"] in PHOTOS:
-            name = PHOTOS[svc["slug"]]
-            path = "/assets/photos/%s.webp" % name
-            # Read off the file rather than typed: verify.py check 8 compares
-            # the declared ratio against the real one.
-            pw, ph = shell.image_size(path)
-            a('          <figure class="plate">\n'
-              '            <img src="%s" srcset="%s" sizes="%s" '
-              'width="%d" height="%d" alt="%s" loading="lazy" decoding="async">\n'
-              '          </figure>\n\n'
-              % (shell.stamped(path), shell.with_720(path, pw), SIZES_PHOTO,
-                 pw, ph, c.PHOTO_ALT[name]))
+            a(shell.photo_figure(PHOTOS[svc["slug"]], lang) + "\n\n")
 
     do_id = toc.add(en_c.WHAT_WE_DO, c.WHAT_WE_DO)
     a(f'          <h2 id="{do_id}">{c.WHAT_WE_DO}</h2>\n')

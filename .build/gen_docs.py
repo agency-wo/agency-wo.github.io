@@ -41,7 +41,13 @@ FIG_FOR = {"/systems/": "ledger", "/audit/": "scorecard"}
 # about the drawn mark, and the reason given is that a person talking has no
 # mechanism worth drawing. A photograph is not a diagram of a mechanism, and a
 # page about how the work is done is the one place a quiet workspace belongs.
-PHOTO_FOR = {"/systems/": "workbench-paper", "/studio/": "desk-by-window"}
+#
+# /audit/ takes the stairway. It runs 29 KB of HTML behind a single drawn mark,
+# and the climb is the one motif on this site that is already the identity:
+# rule 4 says ascension equals ranking. /work/ gets none, because it already
+# carries six client plates and a seventh picture there is a gallery.
+PHOTO_FOR = {"/systems/": "workbench-paper", "/studio/": "desk-by-window",
+             "/audit/": "concrete-stairway"}
 SIZES_PHOTO = "(min-width: 1000px) 620px, 90vw"
 
 S = shell.SITE
@@ -647,16 +653,7 @@ def render(rec, en_rec, lang):
     if photo:
         h2s = [n for n, c in enumerate(chunks) if c.lstrip().startswith("<h2")]
         at = h2s[2] if len(h2s) > 2 else len(chunks)
-        path = "/assets/photos/%s.webp" % photo
-        pw, ph = shell.image_size(path)
-        chunks[at:at] = [
-            "",
-            '          <figure class="plate">',
-            '            <img src="%s" srcset="%s" sizes="%s" width="%d" '
-            'height="%d" alt="%s" loading="lazy" decoding="async">'
-            % (shell.stamped(path), shell.with_720(path, pw), SIZES_PHOTO,
-               pw, ph, shell.ch(lang).PHOTO_ALT[photo]),
-            "          </figure>"]
+        chunks[at:at] = ["", shell.photo_figure(photo, lang)]
 
     parts += chunks
     parts.append("        </div>")

@@ -461,6 +461,10 @@ def render(lang):
                     for n, label in stats_rows)
     chart = growth_chart(lang, stats_rows)
     marks = NL.join(shell.client_mark(c) for c in clients)
+    # Between the ink proof band and the services list, which is the one seam on
+    # this page long enough to want a breath. Not in the hero: that would make
+    # it the phone LCP, and the hero already carries the wordmark and the form.
+    photo = shell.photo_figure("town-dawn", lang, indent="      ")
     ARROW = shell.ARROW
     audit = audit_form(i18n.load("home", "FORM", lang), lang)
 
@@ -485,6 +489,29 @@ def render(lang):
           </div>
 {audit}
         </div>
+      </div>
+    </section>
+
+    <!-- The client marks sit directly under the hero, moved there 2026-10-23.
+         They had been at 72% of the document, inside this section where it used
+         to sit between services and open, while check 18 in verify.py describes
+         the row as "the site's only proof above the fold". The comment was the
+         intent and the position was the drift. A logo row earns its keep in the
+         first screen or two, where a visitor is still deciding whether to stay,
+         and it is the one piece of proof here that works before anything is
+         read: six marks somebody may already recognise. -->
+    <section class="ask" aria-labelledby="ask-h">
+      <div class="wrap">
+        <div class="ask-row">
+          <div>
+            <h2 class="ask-q" id="ask-h">{txt(14, h["ask_h"], lang)}</h2>
+            <p class="ask-note">{txt(14, h["ask_note"], lang)}</p>
+          </div>
+          <p class="ask-go"><a class="btn" href="{shell.localise("/work/", lang)}">{fill(h["ask_go"], lang)} {ARROW}</a></p>
+        </div>
+        <ul class="marks">
+{marks}
+        </ul>
       </div>
     </section>
 
@@ -530,6 +557,10 @@ def render(lang):
       </div>
     </section>
 
+    <div class="wrap">
+{photo}
+    </div>
+
     <section class="services" id="services" aria-labelledby="services-h">
       <div class="wrap">
         <div class="sec-head">
@@ -538,21 +569,6 @@ def render(lang):
         </div>
         <ul class="svc-list" data-reveal-group>
 {svc}
-        </ul>
-      </div>
-    </section>
-
-    <section class="ask" aria-labelledby="ask-h">
-      <div class="wrap">
-        <div class="ask-row">
-          <div>
-            <h2 class="ask-q" id="ask-h">{txt(14, h["ask_h"], lang)}</h2>
-            <p class="ask-note">{txt(14, h["ask_note"], lang)}</p>
-          </div>
-          <p class="ask-go"><a class="btn" href="{shell.localise("/work/", lang)}">{fill(h["ask_go"], lang)} {ARROW}</a></p>
-        </div>
-        <ul class="marks">
-{marks}
         </ul>
       </div>
     </section>

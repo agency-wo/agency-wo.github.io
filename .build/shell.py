@@ -230,6 +230,32 @@ def stamped(path):
         return path + "?v=" + hashlib.sha1(fh.read()).hexdigest()[:8]
 
 
+PHOTO_SIZES = "(min-width: 1000px) 620px, 90vw"
+
+
+def photo_figure(slug, lang, indent="          "):
+    """One section photograph, written by .build/make_photos.py.
+
+    Here rather than in a generator because four of them emit one and a
+    generator may not import another, which is the same reason with_720 moved
+    here. It was inline in gen_pages and gen_docs first, and a second copy is a
+    second place for the sizes attribute or the loading hint to drift.
+
+    Always lazy and never the hero: a photograph above the fold becomes the
+    phone LCP, and /web-design/ h1 is a promise about how fast the page loads.
+    The dimensions are read off the file, not typed, because verify.py check 8
+    compares the declared ratio against the real one.
+    """
+    path = "/assets/photos/%s.webp" % slug
+    w, h = image_size(path)
+    return ('%s<figure class="plate">\n'
+            '%s  <img src="%s" srcset="%s" sizes="%s" width="%d" height="%d" '
+            'alt="%s" loading="lazy" decoding="async">\n'
+            '%s</figure>'
+            % (indent, indent, stamped(path), with_720(path, w), PHOTO_SIZES,
+               w, h, ch(lang).PHOTO_ALT[slug], indent))
+
+
 def with_720(path, w):
     """srcset for one image: its 720w rendition, then the original.
 
