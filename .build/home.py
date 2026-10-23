@@ -99,8 +99,16 @@ PAGE = {
                   # reports neither footfall nor nationality, so a walk-in
                   # count would have no source. This phrasing carries the
                   # meaning on the number that can actually be checked.
+                  # "in five months" rather than "May to 6 October 2026",
+                  # 2026-10-24. A date range makes a reader do arithmetic to
+                  # learn the only thing it was there to tell him, which is how
+                  # long it took. Rule 23 still holds: the heading of this line
+                  # links to /work/iglisi-watch/, where clients.py prints the
+                  # same figures with the full date and the self-check beside
+                  # them. The date did not disappear; it moved one click away
+                  # from somebody who has not yet decided to care.
                   "{proof_directions} people asking Google how to get there, "
-                  "May to 6 October 2026.",
+                  "in five months.",
     "hero_who": "<strong>The person who reads your site is the person who builds" + NL +
                 "the fix.</strong>",
 

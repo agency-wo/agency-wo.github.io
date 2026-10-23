@@ -101,7 +101,7 @@ STATS = [
 ]
 
 PAGE = {
-    "src": "83aea7fe",
+    "src": "df71c5d4",
 
     # 38 characters against the 52 the title budget leaves once gen_home.py has
     # put "minarank studio ·" in front of it. The old string claimed 38 here and
@@ -136,8 +136,9 @@ PAGE = {
     "hero_proof": "<a href=\"{proof_href}\">Un negozio che seguiamo</a>: {proof_calls} telefonate e" + NL +
                   # Mirrors the English, which stopped saying "direction
                   # requests" on 2026-10-24 and started saying what they are.
+                  # Mirrors the English, which dropped the date range on 2026-10-24.
                   "{proof_directions} persone che hanno chiesto a Google come "
-                  "arrivare, da maggio al 6 ottobre 2026.",
+                  "arrivare, in cinque mesi.",
     # It must not name the founder: that was a deliberate edit upstream. The
     # first sentence is active ("non ti passiamo") rather than the English
     # passive, because the Italian passive needs a participle that agrees with
