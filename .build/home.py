@@ -87,7 +87,20 @@ PAGE = {
     # cannot drift from the case page; the date is the record's "taken" date,
     # and the link is the self-check rule 23 asks for.
     "hero_proof": "<a href=\"{proof_href}\">A shop we built for</a>: {proof_calls} calls and" + NL +
-                  "{proof_directions} direction requests from Google, May to 6 October 2026.",
+                  # "people asking Google how to get there" rather than
+                  # "direction requests", 2026-10-24. Same number, same source,
+                  # plainer words, and it says what the number is: somebody
+                  # standing in the street working out how to reach the shop.
+                  #
+                  # The owner reads these as foreign walk-ins and wanted them
+                  # named as such. They are not published as a second figure,
+                  # because they ARE this figure: one event counted twice is
+                  # the thing open_p2 complains about two bands below. Google
+                  # reports neither footfall nor nationality, so a walk-in
+                  # count would have no source. This phrasing carries the
+                  # meaning on the number that can actually be checked.
+                  "{proof_directions} people asking Google how to get there, "
+                  "May to 6 October 2026.",
     "hero_who": "<strong>The person who reads your site is the person who builds" + NL +
                 "the fix.</strong>",
 

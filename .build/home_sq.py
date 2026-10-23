@@ -100,7 +100,7 @@ STATS = [
 ]
 
 PAGE = {
-    "src": "543c1df5",
+    "src": "83aea7fe",
 
     # 38 characters against the 52 the title budget leaves once gen_home.py has
     # put "minarank studio ·" in front of it. The old string claimed 39 here and
@@ -131,7 +131,10 @@ PAGE = {
                 "kur dikush kërkon një dyqan si i yti. Punojmë në shqip," + NL +
                 "anglisht dhe italisht.",
     "hero_proof": "<a href=\"{proof_href}\">Një dyqan që e ndjekim</a>: {proof_calls} telefonata dhe" + NL +
-                  "{proof_directions} kërkesa për rrugën nga Google, nga maji deri më 6 tetor 2026.",
+                  # Mirrors the English, which stopped saying "direction
+                  # requests" on 2026-10-24 and started saying what they are.
+                  "{proof_directions} veta që e pyetën Google si të vinin, "
+                  "nga maji deri më 6 tetor 2026.",
     # It must not name the founder: that was a deliberate edit upstream.
     "hero_who": "<strong>Personi që lexon faqen tënde është personi që" + NL +
                 "ndërton zgjidhjen.</strong>",
