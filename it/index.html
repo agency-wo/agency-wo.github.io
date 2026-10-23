@@ -33,7 +33,7 @@
   <link rel="preload" href="/assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/tokens.css?v=96ddd9bd">
   <link rel="stylesheet" href="/css/fonts.css?v=be58daa6">
-  <link rel="stylesheet" href="/css/main.css?v=6de6bbdb">
+  <link rel="stylesheet" href="/css/main.css?v=572e3015">
 
 
   <script type="application/ld+json">
@@ -357,16 +357,84 @@
       </div>
     </section>
 
-    <!-- The client marks sit directly under the hero, moved there 2026-10-23.
-         They had been at 72% of the document, inside this section where it used
-         to sit between services and open, while check 18 in verify.py describes
-         the row as "the site's only proof above the fold". The comment was the
-         intent and the position was the drift. A logo row earns its keep in the
-         first screen or two, where a visitor is still deciding whether to stay,
-         and it is the one piece of proof here that works before anything is
+    <!-- SECOND, as of 2026-10-24. It used to sit fifth, behind three bands of
+         evidence: client screenshots and logos, then four reviews, then the ink
+         band of numbers. A shop owner met three arguments for a studio before
+         anybody told him what it could do for his shop. He was being convinced
+         of something nobody had offered him yet.
+
+         Problem, then offer, then proof. The three proof bands follow this one
+         and are untouched; they just stopped going first. -->
+    <section class="services" id="services" aria-labelledby="services-h">
+      <div class="zone zone-surface">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="eyebrow">Cosa facciamo</p>
+            <h2 id="services-h">Cinque modi per farti trovare più facilmente.</h2>
+          </div>
+          <ul class="svc-list" data-reveal-group>
+            <li>
+              <a href="/it/seo/">
+                <div>
+                  <p class="svc-kind">SEO e ricerca locale</p>
+                  <h3>Sii il negozio che compare quando qualcuno vicino a te cerca quello che vendi.</h3>
+                </div>
+                <p class="svc-go">Sulla pagina dei risultati e sulla mappa. On-page, off-page e il tuo Profilo dell'attività su Google <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></p>
+              </a>
+            </li>
+            <li>
+              <a href="/it/geo/">
+                <div>
+                  <p class="svc-kind">Ricerca AI</p>
+                  <h3>Chiedi a ChatGPT un negozio come il tuo e ne nomina due o tre. Sii uno di quelli.</h3>
+                </div>
+                <p class="svc-go">Come una macchina decide quali attività nominare <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></p>
+              </a>
+            </li>
+            <li>
+              <a href="/it/web-design/">
+                <div>
+                  <p class="svc-kind">Siti web</p>
+                  <h3>Un sito da cui il tuo cliente può comprare, nella lingua in cui ha cercato.</h3>
+                </div>
+                <p class="svc-go">Italiano, inglese e albanese, e veloce sul telefono <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></p>
+              </a>
+            </li>
+            <li>
+              <a href="/it/meta-ads/">
+                <div>
+                  <p class="svc-kind">Meta ads</p>
+                  <h3>Clienti questa settimana, mentre sotto cresce il lavoro lento.</h3>
+                </div>
+                <p class="svc-go">Una tariffa fissa, mai una percentuale su quanto spendi <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></p>
+              </a>
+            </li>
+            <li>
+              <a href="/it/systems/">
+                <div>
+                  <p class="svc-kind">Software su misura</p>
+                  <h3>Il primo del mese, i numeri sono già lì.</h3>
+                </div>
+                <p class="svc-go">Magazzino, lavori, clienti, buste paga e quanto ha reso ogni parte dell'attività <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></p>
+              </a>
+            </li>
+          </ul>
+      <figure class="plate">
+        <img src="/assets/photos/town-dawn.webp?v=d0bbcce3" srcset="/assets/photos/town-dawn-720.webp?v=4e136e2e 720w, /assets/photos/town-dawn.webp?v=d0bbcce3 1440w" sizes="(min-width: 1000px) 620px, 90vw" width="1440" height="810" alt="Una città costiera all'alba sotto un cielo coperto, una vetrina illuminata tra le altre spente" loading="lazy" decoding="async">
+      </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- The client marks sit directly under this band, moved out of position 6
+         on 2026-10-23. They had been at 72% of the document while check 18 in
+         verify.py describes the row as "the site's only proof above the fold".
+         The comment was the intent and the position was the drift. A logo row
+         earns its keep early, where a visitor is still deciding whether to
+         stay, and it is the one piece of proof that works before anything is
          read: six marks somebody may already recognise. -->
     <section class="ask" aria-labelledby="ask-h">
-      <div class="zone zone-surface">
+      <div class="zone">
         <div class="wrap">
           <div class="ask-row">
             <div>
@@ -405,9 +473,10 @@
          was like, and the ink band below says what it did. Three kinds of proof
          in the order a reader can take them. -->
     <div class="says" role="region" aria-labelledby="says-h">
-      <div class="wrap">
-        <h2 id="says-h">Cosa hanno scritto quattro clienti su Google.</h2>
-        <ul class="say-list">
+      <div class="zone zone-surface">
+        <div class="wrap">
+          <h2 id="says-h">Cosa hanno scritto quattro clienti su Google.</h2>
+          <ul class="say-list">
             <li class="say">
               <blockquote>Lavorare con Mina Rank è stata un'esperienza fluida fin dal primo giorno. Hanno gestito sia l'architettura del nostro sito sia l'ottimizzazione per i motori di ricerca con una precisione incredibile</blockquote>
               <p class="say-who"><a href="/it/work/pro-affy/">Deni Tabaku</a><span class="say-client">ProAffy</span><span class="say-tr">Tradotta</span></p>
@@ -424,7 +493,8 @@
               <blockquote>Molto capace sia nel design sia nei motori di ottimizzazione della ricerca!</blockquote>
               <p class="say-who"><a href="/it/work/vila-flamuri/">Klajdi Gjuzi</a><span class="say-client">Vila Flamuri</span><span class="say-tr">Tradotta</span></p>
             </li>
-        </ul>
+          </ul>
+        </div>
       </div>
     </div>
 
@@ -524,68 +594,6 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <div class="wrap">
-      <figure class="plate">
-        <img src="/assets/photos/town-dawn.webp?v=d0bbcce3" srcset="/assets/photos/town-dawn-720.webp?v=4e136e2e 720w, /assets/photos/town-dawn.webp?v=d0bbcce3 1440w" sizes="(min-width: 1000px) 620px, 90vw" width="1440" height="810" alt="Una città costiera all'alba sotto un cielo coperto, una vetrina illuminata tra le altre spente" loading="lazy" decoding="async">
-      </figure>
-    </div>
-
-    <section class="services" id="services" aria-labelledby="services-h">
-      <div class="wrap">
-        <div class="sec-head">
-          <p class="eyebrow">Cosa facciamo</p>
-          <h2 id="services-h">Cinque modi per farti trovare più facilmente.</h2>
-        </div>
-        <ul class="svc-list" data-reveal-group>
-            <li>
-              <a href="/it/seo/">
-                <h3>SEO e ricerca locale</h3>
-                <div>
-                  <p class="svc-say">Sii il negozio che compare quando qualcuno vicino a te cerca quello che vendi.</p>
-                  <p class="svc-go">Sulla pagina dei risultati e sulla mappa. On-page, off-page e il tuo Profilo dell'attività su Google <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="/it/geo/">
-                <h3>Ricerca AI</h3>
-                <div>
-                  <p class="svc-say">Chiedi a ChatGPT un negozio come il tuo e ne nomina due o tre. Sii uno di quelli.</p>
-                  <p class="svc-go">Come una macchina decide quali attività nominare <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="/it/web-design/">
-                <h3>Siti web</h3>
-                <div>
-                  <p class="svc-say">Un sito da cui il tuo cliente può comprare, nella lingua in cui ha cercato.</p>
-                  <p class="svc-go">Italiano, inglese e albanese, e veloce sul telefono <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="/it/meta-ads/">
-                <h3>Meta ads</h3>
-                <div>
-                  <p class="svc-say">Clienti questa settimana, mentre sotto cresce il lavoro lento.</p>
-                  <p class="svc-go">Una tariffa fissa, mai una percentuale su quanto spendi <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="/it/systems/">
-                <h3>Software su misura</h3>
-                <div>
-                  <p class="svc-say">Il primo del mese, i numeri sono già lì.</p>
-                  <p class="svc-go">Magazzino, lavori, clienti, buste paga e quanto ha reso ogni parte dell'attività <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></p>
-                </div>
-              </a>
-            </li>
-        </ul>
       </div>
     </section>
 

@@ -33,7 +33,7 @@
   <link rel="preload" href="/assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/tokens.css?v=96ddd9bd">
   <link rel="stylesheet" href="/css/fonts.css?v=be58daa6">
-  <link rel="stylesheet" href="/css/main.css?v=6de6bbdb">
+  <link rel="stylesheet" href="/css/main.css?v=572e3015">
 
 
   <script type="application/ld+json">
@@ -357,16 +357,84 @@
       </div>
     </section>
 
-    <!-- The client marks sit directly under the hero, moved there 2026-10-23.
-         They had been at 72% of the document, inside this section where it used
-         to sit between services and open, while check 18 in verify.py describes
-         the row as "the site's only proof above the fold". The comment was the
-         intent and the position was the drift. A logo row earns its keep in the
-         first screen or two, where a visitor is still deciding whether to stay,
-         and it is the one piece of proof here that works before anything is
+    <!-- SECOND, as of 2026-10-24. It used to sit fifth, behind three bands of
+         evidence: client screenshots and logos, then four reviews, then the ink
+         band of numbers. A shop owner met three arguments for a studio before
+         anybody told him what it could do for his shop. He was being convinced
+         of something nobody had offered him yet.
+
+         Problem, then offer, then proof. The three proof bands follow this one
+         and are untouched; they just stopped going first. -->
+    <section class="services" id="services" aria-labelledby="services-h">
+      <div class="zone zone-surface">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="eyebrow">Çfarë bëjmë</p>
+            <h2 id="services-h">Pesë mënyra për t'u gjetur më lehtë.</h2>
+          </div>
+          <ul class="svc-list" data-reveal-group>
+            <li>
+              <a href="/sq/seo/">
+                <div>
+                  <p class="svc-kind">SEO dhe kërkim lokal</p>
+                  <h3>Ji dyqani që del kur dikush pranë teje kërkon atë që shet.</h3>
+                </div>
+                <p class="svc-go">Në faqen e rezultateve dhe në hartë. On-page, off-page dhe Profili i Biznesit në Google <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></p>
+              </a>
+            </li>
+            <li>
+              <a href="/sq/geo/">
+                <div>
+                  <p class="svc-kind">Kërkimi me AI</p>
+                  <h3>Pyet ChatGPT për një dyqan si i yti dhe ai përmend dy ose tre. Ji një prej tyre.</h3>
+                </div>
+                <p class="svc-go">Si vendos një makinë cilat biznese të përmendë <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></p>
+              </a>
+            </li>
+            <li>
+              <a href="/sq/web-design/">
+                <div>
+                  <p class="svc-kind">Faqe interneti</p>
+                  <h3>Një faqe interneti nga e cila klienti yt mund të blejë, në gjuhën në të cilën kërkoi.</h3>
+                </div>
+                <p class="svc-go">Shqip, anglisht dhe italisht, dhe e shpejtë në telefon <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></p>
+              </a>
+            </li>
+            <li>
+              <a href="/sq/meta-ads/">
+                <div>
+                  <p class="svc-kind">Meta ads</p>
+                  <h3>Klientë këtë javë, ndërsa poshtë ndërtohet puna e ngadaltë.</h3>
+                </div>
+                <p class="svc-go">Një tarifë fikse, kurrë një përqindje e asaj që shpenzon <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></p>
+              </a>
+            </li>
+            <li>
+              <a href="/sq/systems/">
+                <div>
+                  <p class="svc-kind">Software me porosi</p>
+                  <h3>Më datën 1 të muajit, numrat janë tashmë aty.</h3>
+                </div>
+                <p class="svc-go">Stoku, punët, klientët, pagat dhe sa fitoi secila pjesë e biznesit <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></p>
+              </a>
+            </li>
+          </ul>
+      <figure class="plate">
+        <img src="/assets/photos/town-dawn.webp?v=d0bbcce3" srcset="/assets/photos/town-dawn-720.webp?v=4e136e2e 720w, /assets/photos/town-dawn.webp?v=d0bbcce3 1440w" sizes="(min-width: 1000px) 620px, 90vw" width="1440" height="810" alt="Një qytet bregdetar në agim nën një qiell të vranët, një vitrinë e ndezur mes të tjerave të fikura" loading="lazy" decoding="async">
+      </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- The client marks sit directly under this band, moved out of position 6
+         on 2026-10-23. They had been at 72% of the document while check 18 in
+         verify.py describes the row as "the site's only proof above the fold".
+         The comment was the intent and the position was the drift. A logo row
+         earns its keep early, where a visitor is still deciding whether to
+         stay, and it is the one piece of proof that works before anything is
          read: six marks somebody may already recognise. -->
     <section class="ask" aria-labelledby="ask-h">
-      <div class="zone zone-surface">
+      <div class="zone">
         <div class="wrap">
           <div class="ask-row">
             <div>
@@ -405,9 +473,10 @@
          was like, and the ink band below says what it did. Three kinds of proof
          in the order a reader can take them. -->
     <div class="says" role="region" aria-labelledby="says-h">
-      <div class="wrap">
-        <h2 id="says-h">Çfarë shkruan katër klientë në Google.</h2>
-        <ul class="say-list">
+      <div class="zone zone-surface">
+        <div class="wrap">
+          <h2 id="says-h">Çfarë shkruan katër klientë në Google.</h2>
+          <ul class="say-list">
             <li class="say">
               <blockquote>Puna me Mina Rank ishte një përvojë e qetë që nga dita e parë. Ata trajtuan si arkitekturën e faqes sonë ashtu edhe optimizimin për motorët e kërkimit me një saktësi të jashtëzakonshme</blockquote>
               <p class="say-who"><a href="/sq/work/pro-affy/">Deni Tabaku</a><span class="say-client">ProAffy</span><span class="say-tr">Përkthyer</span></p>
@@ -424,7 +493,8 @@
               <blockquote>Shumë i aftë si në dizajn ashtu edhe në motorët e optimizimit të kërkimit!</blockquote>
               <p class="say-who"><a href="/sq/work/vila-flamuri/">Klajdi Gjuzi</a><span class="say-client">Vila Flamuri</span><span class="say-tr">Përkthyer</span></p>
             </li>
-        </ul>
+          </ul>
+        </div>
       </div>
     </div>
 
@@ -522,68 +592,6 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <div class="wrap">
-      <figure class="plate">
-        <img src="/assets/photos/town-dawn.webp?v=d0bbcce3" srcset="/assets/photos/town-dawn-720.webp?v=4e136e2e 720w, /assets/photos/town-dawn.webp?v=d0bbcce3 1440w" sizes="(min-width: 1000px) 620px, 90vw" width="1440" height="810" alt="Një qytet bregdetar në agim nën një qiell të vranët, një vitrinë e ndezur mes të tjerave të fikura" loading="lazy" decoding="async">
-      </figure>
-    </div>
-
-    <section class="services" id="services" aria-labelledby="services-h">
-      <div class="wrap">
-        <div class="sec-head">
-          <p class="eyebrow">Çfarë bëjmë</p>
-          <h2 id="services-h">Pesë mënyra për t'u gjetur më lehtë.</h2>
-        </div>
-        <ul class="svc-list" data-reveal-group>
-            <li>
-              <a href="/sq/seo/">
-                <h3>SEO dhe kërkim lokal</h3>
-                <div>
-                  <p class="svc-say">Ji dyqani që del kur dikush pranë teje kërkon atë që shet.</p>
-                  <p class="svc-go">Në faqen e rezultateve dhe në hartë. On-page, off-page dhe Profili i Biznesit në Google <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="/sq/geo/">
-                <h3>Kërkimi me AI</h3>
-                <div>
-                  <p class="svc-say">Pyet ChatGPT për një dyqan si i yti dhe ai përmend dy ose tre. Ji një prej tyre.</p>
-                  <p class="svc-go">Si vendos një makinë cilat biznese të përmendë <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="/sq/web-design/">
-                <h3>Faqe interneti</h3>
-                <div>
-                  <p class="svc-say">Një faqe interneti nga e cila klienti yt mund të blejë, në gjuhën në të cilën kërkoi.</p>
-                  <p class="svc-go">Shqip, anglisht dhe italisht, dhe e shpejtë në telefon <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="/sq/meta-ads/">
-                <h3>Meta ads</h3>
-                <div>
-                  <p class="svc-say">Klientë këtë javë, ndërsa poshtë ndërtohet puna e ngadaltë.</p>
-                  <p class="svc-go">Një tarifë fikse, kurrë një përqindje e asaj që shpenzon <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="/sq/systems/">
-                <h3>Software me porosi</h3>
-                <div>
-                  <p class="svc-say">Më datën 1 të muajit, numrat janë tashmë aty.</p>
-                  <p class="svc-go">Stoku, punët, klientët, pagat dhe sa fitoi secila pjesë e biznesit <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></p>
-                </div>
-              </a>
-            </li>
-        </ul>
       </div>
     </section>
 

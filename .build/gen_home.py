@@ -459,14 +459,28 @@ def render(lang):
 
     def svc_row(href, name, outcome, door):
         """The whole row is the link surface. Nothing in the nav points at these
-        five pages, so the list has to look like five doors."""
+        five pages, so the list has to look like five doors.
+
+        The OUTCOME is the heading and the trade name is the label above it.
+        It was the other way round until 2026-10-24, which meant a shop owner
+        chose between "SEO and local search", "AI search", "Meta ads",
+        "Websites" and "Custom software". He knows two of those five. The
+        sentences that say what each one does for his shop were already
+        written, in all 3 languages, sitting underneath in smaller type:
+        "Be the shop that comes up when somebody nearby searches for what you
+        sell." That is the line that sells nothing and offers everything, and
+        it was the small print.
+
+        The name is kept rather than dropped. Somebody who does know the words
+        is looking for them, and the page they lead to is about that term.
+        """
         return (f'            <li>' + NL +
                 f'              <a href="{shell.localise(href, lang)}">' + NL +
-                f'                <h3>{fill(name, lang)}</h3>' + NL +
                 f'                <div>' + NL +
-                f'                  <p class="svc-say">{fill(outcome, lang)}</p>' + NL +
-                f'                  <p class="svc-go">{fill(door, lang)} {shell.ARROW}</p>' + NL +
+                f'                  <p class="svc-kind">{fill(name, lang)}</p>' + NL +
+                f'                  <h3>{fill(outcome, lang)}</h3>' + NL +
                 f'                </div>' + NL +
+                f'                <p class="svc-go">{fill(door, lang)} {shell.ARROW}</p>' + NL +
                 f'              </a>' + NL +
                 '            </li>')
 
@@ -546,16 +560,38 @@ def render(lang):
       </div>
     </section>
 
-    <!-- The client marks sit directly under the hero, moved there 2026-10-23.
-         They had been at 72% of the document, inside this section where it used
-         to sit between services and open, while check 18 in verify.py describes
-         the row as "the site's only proof above the fold". The comment was the
-         intent and the position was the drift. A logo row earns its keep in the
-         first screen or two, where a visitor is still deciding whether to stay,
-         and it is the one piece of proof here that works before anything is
+    <!-- SECOND, as of 2026-10-24. It used to sit fifth, behind three bands of
+         evidence: client screenshots and logos, then four reviews, then the ink
+         band of numbers. A shop owner met three arguments for a studio before
+         anybody told him what it could do for his shop. He was being convinced
+         of something nobody had offered him yet.
+
+         Problem, then offer, then proof. The three proof bands follow this one
+         and are untouched; they just stopped going first. -->
+    <section class="services" id="services" aria-labelledby="services-h">
+      <div class="zone zone-surface">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="eyebrow">{fill(h["services_eyebrow"], lang)}</p>
+            <h2 id="services-h">{txt(12, h["services_h"], lang)}</h2>
+          </div>
+          <ul class="svc-list" data-reveal-group>
+{svc}
+          </ul>
+{photo}
+        </div>
+      </div>
+    </section>
+
+    <!-- The client marks sit directly under this band, moved out of position 6
+         on 2026-10-23. They had been at 72% of the document while check 18 in
+         verify.py describes the row as "the site's only proof above the fold".
+         The comment was the intent and the position was the drift. A logo row
+         earns its keep early, where a visitor is still deciding whether to
+         stay, and it is the one piece of proof that works before anything is
          read: six marks somebody may already recognise. -->
     <section class="ask" aria-labelledby="ask-h">
-      <div class="zone zone-surface">
+      <div class="zone">
         <div class="wrap">
           <div class="ask-row">
             <div>
@@ -579,11 +615,13 @@ def render(lang):
          was like, and the ink band below says what it did. Three kinds of proof
          in the order a reader can take them. -->
     <div class="says" role="region" aria-labelledby="says-h">
-      <div class="wrap">
-        <h2 id="says-h">{txt(12, h["says_h"], lang)}</h2>
-        <ul class="say-list">
+      <div class="zone zone-surface">
+        <div class="wrap">
+          <h2 id="says-h">{txt(14, h["says_h"], lang)}</h2>
+          <ul class="say-list">
 {says}
-        </ul>
+          </ul>
+        </div>
       </div>
     </div>
 
@@ -626,22 +664,6 @@ def render(lang):
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <div class="wrap">
-{photo}
-    </div>
-
-    <section class="services" id="services" aria-labelledby="services-h">
-      <div class="wrap">
-        <div class="sec-head">
-          <p class="eyebrow">{fill(h["services_eyebrow"], lang)}</p>
-          <h2 id="services-h">{txt(10, h["services_h"], lang)}</h2>
-        </div>
-        <ul class="svc-list" data-reveal-group>
-{svc}
-        </ul>
       </div>
     </section>
 

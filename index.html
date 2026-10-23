@@ -34,7 +34,7 @@
   <link rel="preload" href="/assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/tokens.css?v=96ddd9bd">
   <link rel="stylesheet" href="/css/fonts.css?v=be58daa6">
-  <link rel="stylesheet" href="/css/main.css?v=6de6bbdb">
+  <link rel="stylesheet" href="/css/main.css?v=572e3015">
 
 
   <script type="application/ld+json">
@@ -359,16 +359,84 @@
       </div>
     </section>
 
-    <!-- The client marks sit directly under the hero, moved there 2026-10-23.
-         They had been at 72% of the document, inside this section where it used
-         to sit between services and open, while check 18 in verify.py describes
-         the row as "the site's only proof above the fold". The comment was the
-         intent and the position was the drift. A logo row earns its keep in the
-         first screen or two, where a visitor is still deciding whether to stay,
-         and it is the one piece of proof here that works before anything is
+    <!-- SECOND, as of 2026-10-24. It used to sit fifth, behind three bands of
+         evidence: client screenshots and logos, then four reviews, then the ink
+         band of numbers. A shop owner met three arguments for a studio before
+         anybody told him what it could do for his shop. He was being convinced
+         of something nobody had offered him yet.
+
+         Problem, then offer, then proof. The three proof bands follow this one
+         and are untouched; they just stopped going first. -->
+    <section class="services" id="services" aria-labelledby="services-h">
+      <div class="zone zone-surface">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="eyebrow">What we do</p>
+            <h2 id="services-h">Five ways to be easier to find.</h2>
+          </div>
+          <ul class="svc-list" data-reveal-group>
+            <li>
+              <a href="/seo/">
+                <div>
+                  <p class="svc-kind">SEO and local search</p>
+                  <h3>Be the shop that comes up when somebody nearby searches for what you sell.</h3>
+                </div>
+                <p class="svc-go">On the results page and on the map. On-page, off-page, and your Google Business Profile <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></p>
+              </a>
+            </li>
+            <li>
+              <a href="/geo/">
+                <div>
+                  <p class="svc-kind">AI search</p>
+                  <h3>Ask ChatGPT for a shop like yours and it names two or three. Be one of them.</h3>
+                </div>
+                <p class="svc-go">How a machine decides which businesses to name <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></p>
+              </a>
+            </li>
+            <li>
+              <a href="/web-design/">
+                <div>
+                  <p class="svc-kind">Websites</p>
+                  <h3>A site your customer can buy from, in the language they searched in.</h3>
+                </div>
+                <p class="svc-go">English, Italian and Albanian, and quick on a phone <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></p>
+              </a>
+            </li>
+            <li>
+              <a href="/meta-ads/">
+                <div>
+                  <p class="svc-kind">Meta ads</p>
+                  <h3>Customers this week, while the slow work builds underneath.</h3>
+                </div>
+                <p class="svc-go">A flat fee, never a cut of what you spend <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></p>
+              </a>
+            </li>
+            <li>
+              <a href="/systems/">
+                <div>
+                  <p class="svc-kind">Custom software</p>
+                  <h3>On the 1st of the month, the numbers are already there.</h3>
+                </div>
+                <p class="svc-go">Stock, jobs, customers, payroll, and what each part of the business earned <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></p>
+              </a>
+            </li>
+          </ul>
+      <figure class="plate">
+        <img src="/assets/photos/town-dawn.webp?v=d0bbcce3" srcset="/assets/photos/town-dawn-720.webp?v=4e136e2e 720w, /assets/photos/town-dawn.webp?v=d0bbcce3 1440w" sizes="(min-width: 1000px) 620px, 90vw" width="1440" height="810" alt="A coastal town at dawn under an overcast sky, one shopfront lit among dark ones" loading="lazy" decoding="async">
+      </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- The client marks sit directly under this band, moved out of position 6
+         on 2026-10-23. They had been at 72% of the document while check 18 in
+         verify.py describes the row as "the site's only proof above the fold".
+         The comment was the intent and the position was the drift. A logo row
+         earns its keep early, where a visitor is still deciding whether to
+         stay, and it is the one piece of proof that works before anything is
          read: six marks somebody may already recognise. -->
     <section class="ask" aria-labelledby="ask-h">
-      <div class="zone zone-surface">
+      <div class="zone">
         <div class="wrap">
           <div class="ask-row">
             <div>
@@ -407,9 +475,10 @@
          was like, and the ink band below says what it did. Three kinds of proof
          in the order a reader can take them. -->
     <div class="says" role="region" aria-labelledby="says-h">
-      <div class="wrap">
-        <h2 id="says-h">What four clients wrote on Google.</h2>
-        <ul class="say-list">
+      <div class="zone zone-surface">
+        <div class="wrap">
+          <h2 id="says-h">What four clients wrote on Google.</h2>
+          <ul class="say-list">
             <li class="say">
               <blockquote>Working with Mina Rank was a seamless experience from day one. They handled both our website architecture and search engine optimization with incredible precision</blockquote>
               <p class="say-who"><a href="/work/pro-affy/">Deni Tabaku</a><span class="say-client">ProAffy</span></p>
@@ -426,7 +495,8 @@
               <blockquote>Very capable in both design and search optimisation engines!</blockquote>
               <p class="say-who"><a href="/work/vila-flamuri/">Klajdi Gjuzi</a><span class="say-client">Vila Flamuri</span></p>
             </li>
-        </ul>
+          </ul>
+        </div>
       </div>
     </div>
 
@@ -525,68 +595,6 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <div class="wrap">
-      <figure class="plate">
-        <img src="/assets/photos/town-dawn.webp?v=d0bbcce3" srcset="/assets/photos/town-dawn-720.webp?v=4e136e2e 720w, /assets/photos/town-dawn.webp?v=d0bbcce3 1440w" sizes="(min-width: 1000px) 620px, 90vw" width="1440" height="810" alt="A coastal town at dawn under an overcast sky, one shopfront lit among dark ones" loading="lazy" decoding="async">
-      </figure>
-    </div>
-
-    <section class="services" id="services" aria-labelledby="services-h">
-      <div class="wrap">
-        <div class="sec-head">
-          <p class="eyebrow">What we do</p>
-          <h2 id="services-h">Five ways to be easier to find.</h2>
-        </div>
-        <ul class="svc-list" data-reveal-group>
-            <li>
-              <a href="/seo/">
-                <h3>SEO and local search</h3>
-                <div>
-                  <p class="svc-say">Be the shop that comes up when somebody nearby searches for what you sell.</p>
-                  <p class="svc-go">On the results page and on the map. On-page, off-page, and your Google Business Profile <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="/geo/">
-                <h3>AI search</h3>
-                <div>
-                  <p class="svc-say">Ask ChatGPT for a shop like yours and it names two or three. Be one of them.</p>
-                  <p class="svc-go">How a machine decides which businesses to name <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="/web-design/">
-                <h3>Websites</h3>
-                <div>
-                  <p class="svc-say">A site your customer can buy from, in the language they searched in.</p>
-                  <p class="svc-go">English, Italian and Albanian, and quick on a phone <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="/meta-ads/">
-                <h3>Meta ads</h3>
-                <div>
-                  <p class="svc-say">Customers this week, while the slow work builds underneath.</p>
-                  <p class="svc-go">A flat fee, never a cut of what you spend <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="/systems/">
-                <h3>Custom software</h3>
-                <div>
-                  <p class="svc-say">On the 1st of the month, the numbers are already there.</p>
-                  <p class="svc-go">Stock, jobs, customers, payroll, and what each part of the business earned <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></p>
-                </div>
-              </a>
-            </li>
-        </ul>
       </div>
     </section>
 
