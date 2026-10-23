@@ -1245,17 +1245,20 @@ a[href^="tel:"] { white-space: nowrap; }
 .say-client { color: var(--slate); font-weight: 500; }
 .say-tr { color: var(--slate); font-weight: 400; font-style: italic; }
 
-/* The three client sites, above the logo row they belong to. The section asks
-   whether you want to see proof of the work and used to answer with marks,
-   which say a business is a client. These say what was built for them.
+/* All six client sites, above the logo row they belong to. The band asks
+   whether you want to see proof of the work and answered with marks alone,
+   which only say a business is a client. These say what was built for them.
 
-   Three columns and not six: at six the screenshots are thumbnails and a
-   homepage is not a contact sheet. The other three live on /work/, which is
-   what the button underneath is for. Below 720 they stack, because a 370px
-   screenshot of a whole homepage is already at the edge of legible. */
-.shots { display: grid; gap: var(--s-6);
+   Three across and two down. Four would wrap 3 + 1 and strand one, which is
+   the orphan .marks already carries a comment about and which .say-list learnt
+   the hard way. Six fills both rows.
+
+   Two across between 720 and 999, then one below 720: a 370px screenshot of a
+   whole homepage is at the edge of legible and a narrower one is wallpaper. */
+.shots { display: grid; gap: var(--s-6) var(--s-6);
   grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-top: var(--s-7); }
+@media (max-width: 999px) { .shots { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 719px) { .shots { grid-template-columns: 1fr;
   gap: var(--s-7); } }
 

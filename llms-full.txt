@@ -42,12 +42,19 @@ A flat fee, never a cut of what you spend
 Custom software
 On the 1st of the month, the numbers are already there.
 Stock, jobs, customers, payroll, and what each part of the business earned
+A street at opening time. One shop lit, the rest not found yet.
 The work
 Want to see proof of our work?
 These are the businesses we build for. Every one of
 these sites is live, so the logos go to them and the button goes to what
 we built.
 See the work
+Iglisi Watch, watch.al
+Victoria Boutique, victoriaboutique.org
+Intimo Bruna, intimobruna.com
+ProAffy, proaffy.com
+Census Properties, censusproperties.com
+Vila Flamuri, vilaflamuri.com
 Iglisi Watch
 Victoria Boutique
 Intimo Bruna
@@ -146,6 +153,7 @@ The map listing, first
 That listing is a Google Business Profile. It's free, it takes an afternoon to fill in properly, and it decides whether somebody 400 metres away calls you or the shop down the road.
 We fill in all of it: the categories, every service you offer, hours that are still right at Christmas, real photographs of the place rather than stock ones, the description, and the questions people keep ringing up to ask. In Albanian, Italian and English, so the profile answers in the language somebody searched in.
 Then reviews, which is the part everyone finds awkward. There's a way to ask that doesn't feel like begging, and there's a way to reply to a bad one that wins more work than the bad review cost you.
+One pin. The map decides who gets phoned today.
 On the site, and off it
 The trade splits the rest in two and you'll be sold both, so here is which is which.
 On-page is everything on your own website: what each page is about, whether it answers the question somebody actually typed, how it's written, how it's built, how fast it loads on a phone on mobile data. You control all of it, so it's where we start.
@@ -223,6 +231,7 @@ ChatGPT recommends businesses it can read and check somewhere else. Answer the q
 We've done this once already
 Ask ChatGPT, Claude or Perplexity where to get a watch repaired in Durres and they name Iglisi Watch, with the street, the opening hours and the WhatsApp number. That's a client, and you can check it right now.
 They're also the only watch business in Durres with a website that ranks at all. The competition is directory listings and Facebook pages. Most towns and most trades still look like that, which is the useful part of the story.
+An assistant answers from what it can read. This is the shelf.
 What these systems actually read
 An assistant doesn't see your website the way you do. It reads a stripped-down version: the words in the order they appear in the code, your headings, and a few hidden labels. The layout, the colours and anything that only appears when you click are thrown away before it gets there.
 So what survives is:
@@ -290,6 +299,7 @@ Check this page yourself
 This site loads nothing from anybody else. No font service, no analytics, no tag manager, no framework. Open your browser's network tab and count the requests.
 That isn't purism. Every third-party script is somebody else's outage, somebody else's privacy problem, and a slice of your speed rented out permanently. Most sites carry a dozen without anyone having decided to.
 The decisions that make a page fast are the same ones that make it readable by the systems on the AI search page. You don't have to choose between them.
+The half hour before opening, when the website does the work.
 Two shops in Durres run their own websites
 Victoria Boutique brings Greek labels into Albania and changes stock with the season. She photographs a piece, adds it from her phone, and it's on the site in about a minute, in Albanian, Italian and English. Nothing to license and no monthly fee. How that was built.
 Intimo Bruna sells the way her customers already buy, which is by message. Each product page hands off to WhatsApp with the item already named, so the owner isn't asking which one you mean. How that was built.
@@ -358,6 +368,7 @@ Meta ads are worth it for a small shop when the offer already works and somebody
 How we charge, and why it matters to you
 Most agencies take a percentage of what you spend, so every conversation about your budget is also a conversation about their invoice.
 We charge a flat monthly fee for the work. That means advice to spend less this month, or to stop and fix the offer first, costs us nothing to give. Expect to hear it at some point.
+A phone face down. The ad arrived before he went looking.
 WhatsApp and cash on delivery
 Most advice written in English assumes a checkout and a card. Around here the sale usually happens in a WhatsApp conversation and the money changes hands at the door.
 That changes the ad, not just the page it lands on. The picture has to make somebody comfortable starting a conversation, and the message has to arrive with the product already named so the owner isn't asking which one.
@@ -457,6 +468,7 @@ Reports. The month on one page, printable, without
 anybody staying late to build it.
 Your website, connected. Sell something at the counter
 and the site stops offering it. Publish a new product from your phone.
+A blank sheet and a red pencil. Every system starts here.
 The one we built, and which parts are yours
 Iglisi Watch in Durres runs on a system
 we built. It has 50 panels, holds 443 stock sizes grouped into 25 cards,
@@ -4778,6 +4790,7 @@ One document, in plain language
 What we would change, in what order, and why it matters. If it takes a
 glossary to read, it is written badly. You should be able to hand it to
 somebody who does not work in marketing and have them follow it.
+One desk, and nothing handed to a junior.
 We build it ourselves
 Pages, schema, creative, software. Nothing gets handed to a third party
 who loses 3 weeks and half the intent, and nothing gets handed to a junior
@@ -4934,6 +4947,7 @@ The first 5 seconds
 Whether somebody landing on the site can tell what you do, where you are
 and how to reach you, before they decide to leave. This is the one an owner
 can check without us, and almost nobody does.
+The climb is the whole job. The first step is free.
 What comes back
 A score out of 100 for each of the 5, with how much of that
 area we were actually able to check printed beside it.

@@ -116,6 +116,7 @@ SRC = {
     "QR_NOTE": "483afcd8",
     "QR_ALT": "c8239188",
     "PHOTO_ALT": "7c9c9551",
+    "PHOTO_CAPTION": "0fe7d69c",
     "WHAT_WE_DO": "bc3cba50",
     "WHAT_WE_DONT": "5eba3082",
     "WORK_BUILT": "9ce65dac",
@@ -205,6 +206,19 @@ AIQ_AFTER = "Nuk të përmend? Auditimi falas tregon pse."
 
 QR_NOTE = "Je në kompjuter? Skanoje për të vazhduar në WhatsApp."
 QR_ALT = "Kod QR që hap WhatsApp me kërkesën për auditim të shkruar"
+
+PHOTO_CAPTION = {
+    "town-dawn": "Një rrugë në orën e hapjes. Një dyqan i ndezur, të tjerët "
+                 "ende të pagjetur.",
+    "shop-before-opening": "Gjysmë ore para hapjes, kur punon faqja.",
+    "map-pin": "Një gjilpërë. Harta vendos kush e merr telefonatën sot.",
+    "library-study": "Një asistent përgjigjet me atë që arrin të lexojë. Ky "
+                     "është rafti.",
+    "cafe-table": "Një telefon me faqen poshtë. Reklama erdhi para kërkimit.",
+    "workbench-paper": "Një fletë bosh dhe një laps i kuq. Çdo sistem nis këtu.",
+    "concrete-stairway": "Ngjitja është gjithë puna. Shkalla e parë është falas.",
+    "desk-by-window": "Një tavolinë, dhe asgjë e kaluar te një junior.",
+}
 
 PHOTO_ALT = {
     "town-dawn": "Një qytet bregdetar në agim nën një qiell të vranët, një "

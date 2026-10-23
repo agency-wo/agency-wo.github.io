@@ -248,12 +248,20 @@ def photo_figure(slug, lang, indent="          "):
     """
     path = "/assets/photos/%s.webp" % slug
     w, h = image_size(path)
+    # The caption is not optional. These shipped without one until 2026-10-24
+    # and read as decoration dropped between paragraphs, because that is what an
+    # uncaptioned picture beside copy it does not refer to is. The alt says what
+    # is in frame for somebody who cannot see it; the caption says why the page
+    # is showing it. A KeyError here is the right failure: a photograph with
+    # nothing to say should stop the build rather than ship.
     return ('%s<figure class="plate">\n'
             '%s  <img src="%s" srcset="%s" sizes="%s" width="%d" height="%d" '
             'alt="%s" loading="lazy" decoding="async">\n'
+            '%s  <figcaption>%s</figcaption>\n'
             '%s</figure>'
             % (indent, indent, stamped(path), with_720(path, w), PHOTO_SIZES,
-               w, h, ch(lang).PHOTO_ALT[slug], indent))
+               w, h, ch(lang).PHOTO_ALT[slug],
+               indent, ch(lang).PHOTO_CAPTION[slug], indent))
 
 
 def with_720(path, w):

@@ -100,6 +100,26 @@ QR_ALT = "QR code that opens WhatsApp with the audit request written"
 # mood rather than evidence, so the alt describes what is in frame and claims
 # nothing: verify.py check 8 fails an empty alt, and an empty one would be the
 # honest choice for decoration if the gate allowed it.
+# Why each photograph is on the page it is on. The alt below describes what is
+# in frame for somebody who cannot see it; this is the line a reader sees, and
+# it is what stops a picture reading as decoration. Added 2026-10-24: the
+# figures shipped with no caption at all and looked dropped in, which they were.
+#
+# A photograph without one of these does not ship. If it cannot be captioned it
+# has nothing to say.
+PHOTO_CAPTION = {
+    "town-dawn": "A street at opening time. One shop lit, the rest not found yet.",
+    "shop-before-opening": "The half hour before opening, when the website does "
+                           "the work.",
+    "map-pin": "One pin. The map decides who gets phoned today.",
+    "library-study": "An assistant answers from what it can read. This is the "
+                     "shelf.",
+    "cafe-table": "A phone face down. The ad arrived before he went looking.",
+    "workbench-paper": "A blank sheet and a red pencil. Every system starts here.",
+    "concrete-stairway": "The climb is the whole job. The first step is free.",
+    "desk-by-window": "One desk, and nothing handed to a junior.",
+}
+
 PHOTO_ALT = {
     "town-dawn": "A coastal town at dawn under an overcast sky, one shopfront "
                  "lit among dark ones",

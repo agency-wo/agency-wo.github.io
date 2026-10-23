@@ -114,6 +114,7 @@ SRC = {
     "QR_NOTE": "483afcd8",
     "QR_ALT": "c8239188",
     "PHOTO_ALT": "7c9c9551",
+    "PHOTO_CAPTION": "0fe7d69c",
     "WHAT_WE_DO": "bc3cba50",
     "WHAT_WE_DONT": "5eba3082",
     "WORK_BUILT": "9ce65dac",
@@ -197,6 +198,23 @@ AIQ_AFTER = "Non ti nomina? L'audit gratuito spiega perché."
 
 QR_NOTE = "Sei al computer? Inquadralo per continuare su WhatsApp."
 QR_ALT = "Codice QR che apre WhatsApp con la richiesta di audit già scritta"
+
+PHOTO_CAPTION = {
+    "town-dawn": "Una strada all'ora di apertura. Un negozio acceso, gli altri "
+                 "non ancora trovati.",
+    "shop-before-opening": "La mezz'ora prima dell'apertura, quando lavora il "
+                           "sito.",
+    "map-pin": "Uno spillo. La mappa decide chi riceve la telefonata oggi.",
+    "library-study": "Un assistente risponde con quello che riesce a leggere. "
+                     "Questo è lo scaffale.",
+    "cafe-table": "Un telefono a faccia in giù. L'annuncio è arrivato prima "
+                  "della ricerca.",
+    "workbench-paper": "Un foglio bianco e una matita rossa. Ogni sistema "
+                       "inizia qui.",
+    "concrete-stairway": "La salita è tutto il lavoro. Il primo gradino è "
+                         "gratis.",
+    "desk-by-window": "Una scrivania, e niente passato a un junior.",
+}
 
 PHOTO_ALT = {
     "town-dawn": "Una città costiera all'alba sotto un cielo coperto, una "

@@ -504,17 +504,30 @@ def render(lang):
     # No figcaption. The logo row underneath already names them, the alt
     # describes each one, and a caption would spend words from a budget with 20
     # left to say what is already said twice.
-    _by_slug = {c["slug"]: c for c in clients}
+    # ALL SIX, in clients.py order so the pictures and the logo row beneath run
+    # the same way. It showed three until 2026-10-24, chosen on the grounds that
+    # a homepage is not a contact sheet. That was the wrong call for a studio
+    # whose actual problem is that nobody believes it has done the work yet, and
+    # the omission that gave it away was Iglisi Watch: the client this whole
+    # page argues from, 52 calls and 461 people asking the way, and its site was
+    # the one picture missing.
+    #
+    # The logo row stays. A mark is recognised at a glance and a screenshot is
+    # read; they do different jobs for different readers.
+    #
+    # The caption carries the name and the live domain, the way gen_cases does,
+    # which is what makes each one checkable: a reader can go and look.
     shots = NL.join(
         '            <figure class="plate">\n'
         '              <img src="%s" srcset="%s" sizes="%s" width="%d" '
         'height="%d" alt="%s" loading="lazy" decoding="async">\n'
+        '              <figcaption>%s, %s</figcaption>\n'
         '            </figure>'
-        % (shell.stamped("/assets/plates/" + p[0]),
-           shell.with_720("/assets/plates/" + p[0], p[1]),
-           SIZES_SHOT, p[1], p[2], p[3])
-        for s in ("pro-affy", "intimo-bruna", "victoria-boutique")
-        for p in [_by_slug[s]["plate"]])
+        % (shell.stamped("/assets/plates/" + c["plate"][0]),
+           shell.with_720("/assets/plates/" + c["plate"][0], c["plate"][1]),
+           SIZES_SHOT, c["plate"][1], c["plate"][2], c["plate"][3],
+           c["name"], c["site"])
+        for c in clients)
     # Between the ink proof band and the services list, which is the one seam on
     # this page long enough to want a breath. Not in the hero: that would make
     # it the phone LCP, and the hero already carries the wordmark and the form.
