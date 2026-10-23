@@ -114,6 +114,26 @@ def strip_tags(s):
 # id under a heading and the link that names it have to be spelled by the same
 # code or they are two spellings of one thing.
 
+# Section photograph per service, written by .build/make_photos.py and named by
+# the slug it uses. Placed after the SECOND section rather than the first: the
+# first already closes with the svg fig, and two figures in a row read as a
+# gallery instead of a rhythm on a page that runs over 5,000px.
+#
+# Deliberately below the fold and lazy. A photograph in the hero would become
+# the phone LCP, and /web-design/'s own h1 is "A site that loads before your
+# customer gives up", which is a promise the page has to keep about itself.
+#
+# .plate is reused rather than a new class: it already sets width:100%,
+# height:auto and the hairline border, and a second class saying the same thing
+# is a second place to change it.
+PHOTOS = {
+    "seo": "map-pin",
+    "geo": "library-study",
+    "web-design": "shop-before-opening",
+    "meta-ads": "cafe-table",
+}
+SIZES_PHOTO = "(min-width: 1000px) 620px, 90vw"
+
 SLUG_MAX = 40
 
 # Counted in entries, not in <h2> elements on the page: every page that gets
@@ -339,6 +359,18 @@ def render(svc, en_svc, posts, lang):
             a('          <figure class="fig fig-body">\n')
             a('            <svg viewBox="0 0 160 160" aria-hidden="true">\n              ')
             a(FIGS[svc["fig"]] + "\n            </svg>\n          </figure>\n\n")
+        if i == 1 and svc["slug"] in PHOTOS:
+            name = PHOTOS[svc["slug"]]
+            path = "/assets/photos/%s.webp" % name
+            # Read off the file rather than typed: verify.py check 8 compares
+            # the declared ratio against the real one.
+            pw, ph = shell.image_size(path)
+            a('          <figure class="plate">\n'
+              '            <img src="%s" srcset="%s" sizes="%s" '
+              'width="%d" height="%d" alt="%s" loading="lazy" decoding="async">\n'
+              '          </figure>\n\n'
+              % (shell.stamped(path), shell.with_720(path, pw), SIZES_PHOTO,
+                 pw, ph, c.PHOTO_ALT[name]))
 
     do_id = toc.add(en_c.WHAT_WE_DO, c.WHAT_WE_DO)
     a(f'          <h2 id="{do_id}">{c.WHAT_WE_DO}</h2>\n')

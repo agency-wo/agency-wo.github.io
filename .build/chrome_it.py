@@ -113,6 +113,7 @@ SRC = {
     "AIQ_AFTER": "997d214e",
     "QR_NOTE": "483afcd8",
     "QR_ALT": "c8239188",
+    "PHOTO_ALT": "7c9c9551",
     "WHAT_WE_DO": "bc3cba50",
     "WHAT_WE_DONT": "5eba3082",
     "WORK_BUILT": "9ce65dac",
@@ -196,6 +197,24 @@ AIQ_AFTER = "Non ti nomina? L'audit gratuito spiega perché."
 
 QR_NOTE = "Sei al computer? Inquadralo per continuare su WhatsApp."
 QR_ALT = "Codice QR che apre WhatsApp con la richiesta di audit già scritta"
+
+PHOTO_ALT = {
+    "town-dawn": "Una città costiera all'alba sotto un cielo coperto, una "
+                 "vetrina illuminata tra le altre spente",
+    "shop-before-opening": "Un piccolo negozio prima dell'apertura, la "
+                           "serranda sollevata a metà su una piazza vuota",
+    "map-pin": "Una puntina rossa su una mappa chiara di una città costiera",
+    "library-study": "Una lunga sala di lettura con scaffali di libri verso "
+                     "una finestra alta",
+    "cafe-table": "Un tavolino di marmo accanto a una finestra, con un "
+                  "bicchiere d'acqua e un telefono capovolto",
+    "workbench-paper": "Un rotolo di carta bianca e una matita rossa su un "
+                       "banco da lavoro, con trucioli di legno",
+    "concrete-stairway": "Una rampa di scalini di cemento chiaro che sale "
+                         "verso un cielo coperto",
+    "desk-by-window": "Una sedia di legno a un lungo tavolo accanto a una "
+                      "finestra che guarda il mare",
+}
 
 # -- the ink band and the footer meta --------------------------------------
 # The band CTA is a filled block set at --fs-lead, so its width is its text and

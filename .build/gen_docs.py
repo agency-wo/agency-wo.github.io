@@ -32,6 +32,18 @@ from gen_pages import (FIGS, CONTACT_PATTERN, Contents, aiq_block, form_source, 
 # instruction sheet, and neither has a mechanism worth drawing.
 FIG_FOR = {"/systems/": "ledger", "/audit/": "scorecard"}
 
+# The section photograph, keyed by URL for the same reason FIG_FOR is. Only
+# /systems/ takes one: it is the fifth service, and the other four live in
+# content.py and take theirs in gen_pages. It goes before the THIRD h2 so it
+# does not land on top of the mark that FIG_FOR already puts before the second.
+#
+# /studio/ takes one although FIG_FOR deliberately skips it. That exclusion is
+# about the drawn mark, and the reason given is that a person talking has no
+# mechanism worth drawing. A photograph is not a diagram of a mechanism, and a
+# page about how the work is done is the one place a quiet workspace belongs.
+PHOTO_FOR = {"/systems/": "workbench-paper", "/studio/": "desk-by-window"}
+SIZES_PHOTO = "(min-width: 1000px) 620px, 90vw"
+
 S = shell.SITE
 NL = chr(10)
 CRLF = chr(13) + chr(10)
@@ -628,6 +640,23 @@ def render(rec, en_rec, lang):
                          "              " + FIGS[fig],
                          "            </svg>",
                          "          </figure>"]
+
+    # Recomputed, because the block above has just shifted every index after
+    # the second h2 by the six chunks it inserted.
+    photo = PHOTO_FOR.get(rec["url"])
+    if photo:
+        h2s = [n for n, c in enumerate(chunks) if c.lstrip().startswith("<h2")]
+        at = h2s[2] if len(h2s) > 2 else len(chunks)
+        path = "/assets/photos/%s.webp" % photo
+        pw, ph = shell.image_size(path)
+        chunks[at:at] = [
+            "",
+            '          <figure class="plate">',
+            '            <img src="%s" srcset="%s" sizes="%s" width="%d" '
+            'height="%d" alt="%s" loading="lazy" decoding="async">'
+            % (shell.stamped(path), shell.with_720(path, pw), SIZES_PHOTO,
+               pw, ph, shell.ch(lang).PHOTO_ALT[photo]),
+            "          </figure>"]
 
     parts += chunks
     parts.append("        </div>")

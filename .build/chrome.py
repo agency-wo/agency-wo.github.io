@@ -96,6 +96,28 @@ AIQ_AFTER = "Not named? The free audit shows why."
 QR_NOTE = "On a computer? Scan it to continue on WhatsApp."
 QR_ALT = "QR code that opens WhatsApp with the audit request written"
 
+# The section photographs, keyed by the slug make_photos.py writes. They are
+# mood rather than evidence, so the alt describes what is in frame and claims
+# nothing: verify.py check 8 fails an empty alt, and an empty one would be the
+# honest choice for decoration if the gate allowed it.
+PHOTO_ALT = {
+    "town-dawn": "A coastal town at dawn under an overcast sky, one shopfront "
+                 "lit among dark ones",
+    "shop-before-opening": "A small shop before opening, its roller shutter "
+                           "half raised onto an empty square",
+    "map-pin": "A single red pin standing on a pale street map of a coastal town",
+    "library-study": "A long reading room with shelves of books receding "
+                     "toward a tall window",
+    "cafe-table": "A marble cafe table by a window, with a glass of water and "
+                  "a phone face down",
+    "workbench-paper": "A roll of blank paper and a red pencil on a workbench, "
+                       "with wood shavings",
+    "concrete-stairway": "A flight of pale concrete steps rising steeply "
+                         "toward an overcast sky",
+    "desk-by-window": "A plain wooden chair at a long table beside a window "
+                      "looking onto the sea",
+}
+
 # -- the ink band and the footer meta --------------------------------------
 BAND_CTA = "Get a free website audit"
 # The note under the band heading on the 4 service pages. One key rather than

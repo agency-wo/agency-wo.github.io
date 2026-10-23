@@ -115,6 +115,7 @@ SRC = {
     "AIQ_AFTER": "997d214e",
     "QR_NOTE": "483afcd8",
     "QR_ALT": "c8239188",
+    "PHOTO_ALT": "7c9c9551",
     "WHAT_WE_DO": "bc3cba50",
     "WHAT_WE_DONT": "5eba3082",
     "WORK_BUILT": "9ce65dac",
@@ -204,6 +205,25 @@ AIQ_AFTER = "Nuk të përmend? Auditimi falas tregon pse."
 
 QR_NOTE = "Je në kompjuter? Skanoje për të vazhduar në WhatsApp."
 QR_ALT = "Kod QR që hap WhatsApp me kërkesën për auditim të shkruar"
+
+PHOTO_ALT = {
+    "town-dawn": "Një qytet bregdetar në agim nën një qiell të vranët, një "
+                 "vitrinë e ndezur mes të tjerave të fikura",
+    "shop-before-opening": "Një dyqan i vogël para hapjes, qepeni i ngritur "
+                           "përgjysmë mbi një shesh bosh",
+    "map-pin": "Një gjilpërë e kuqe mbi një hartë të çelët të një qyteti "
+               "bregdetar",
+    "library-study": "Një sallë e gjatë leximi me rafte librash drejt një "
+                     "dritareje të lartë",
+    "cafe-table": "Një tavolinë mermeri pranë një dritareje, me një gotë ujë "
+                  "dhe një telefon me faqen poshtë",
+    "workbench-paper": "Një rrotull letre e bardhë dhe një laps i kuq mbi një "
+                       "bangë pune, me ashkla druri",
+    "concrete-stairway": "Një shkallë betoni e çelët që ngjitet drejt një "
+                         "qielli të vranët",
+    "desk-by-window": "Një karrige druri te një tavolinë e gjatë pranë një "
+                      "dritareje që sheh nga deti",
+}
 
 # -- the ink band and the footer meta --------------------------------------
 # glossary.BANNED fails on "auditim i faqes", so the button names the audit and
