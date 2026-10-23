@@ -80,12 +80,11 @@ Custom software
 On the 1st of the month, the numbers are already there.
 Stock, jobs, customers, payroll, and what each part of the business earned
 The studio
-We are new, and we publish what older
-studios hide.
+We publish what older studios hide.
 minarank studio has put six businesses online, each with its
 own page. The first had no website in May; by August Google was
 sending it 900 clicks a quarter.
-Most agencies show a wall of logos. We show the Search Console
+Most agencies stop at a wall of logos. We show the Search Console
 export, including the 8.8 average position and the 1.1% click rate, which
 nobody would choose to publish. A figure you cannot check is worth nothing.
 And whatever we build, you own: the domain, the code

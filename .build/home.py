@@ -149,15 +149,24 @@ PAGE = {
     # formality. Every sentence that survived the cut earns its place, which is
     # the only useful thing about writing to a cap.
     "open_eyebrow": "The studio",
-    "open_h": "We are new, and we publish what older" + NL +
-              "studios hide.",
+    # "We are new" led this heading until 2026-10-23 and was the only thing on
+    # the page doing the trust work. Against a 20+ person firm in the same town
+    # a buyer reads new as risk, and the rest of the sentence was already the
+    # stronger claim. Nothing else in the block changes: the newness is still
+    # plain from "had no website in May", stated rather than advertised.
+    "open_h": "We publish what older studios hide.",
     "open_p1": "{brand} has put {clients} businesses online, each with its" + NL +
                "own page. The first had no website in May; by August Google was" + NL +
                "sending it 900 clicks a quarter.",
     # Rule 22 is the argument here and not merely a constraint the block
     # survives: the weak numbers are the reason to believe the strong one, so
     # this says so rather than leaving a reader to notice.
-    "open_p2": "Most agencies show a wall of logos. We show the Search Console" + NL +
+    # "show" became "stop at" on 2026-10-23, when the client marks moved from
+    # 72% of this page to the second section. The page now shows a wall of logos
+    # four sections above a sentence that dismissed them, which read as an
+    # argument with itself. "Stop at" keeps the point, that the logos are the
+    # floor and the export is the proof, and loses the contradiction.
+    "open_p2": "Most agencies stop at a wall of logos. We show the Search Console" + NL +
                "export, including the 8.8 average position and the 1.1% click rate, "
                "which" + NL +
                "nobody would choose to publish. A figure you cannot check is worth "

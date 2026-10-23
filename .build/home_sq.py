@@ -100,7 +100,7 @@ STATS = [
 ]
 
 PAGE = {
-    "src": "314aa069",
+    "src": "0bc12f46",
 
     # 38 characters against the 52 the title budget leaves once gen_home.py has
     # put "minarank studio ·" in front of it. The old string claimed 39 here and
@@ -206,13 +206,16 @@ PAGE = {
     # glossary.IDENTICAL_BY_DESIGN as the nav label, so the eyebrow keeps it
     # rather than reaching for "studioja" and disagreeing with the nav.
     "open_eyebrow": "Studio",
-    "open_h": "Jemi të rinj, dhe publikojmë atë që studiot" + NL +
-              "më të vjetra e fshehin.",
+    # Mirrors the English, which dropped "Jemi të rinj" on 2026-10-23.
+    "open_h": "Publikojmë atë që studiot më të" + NL +
+              "vjetra e fshehin.",
     "open_p1": "{brand} ka nxjerrë online {clients} biznese, secili me faqen" + NL +
                "e vet. I pari nuk kishte fare faqe interneti në maj; në gusht "
                "Google i" + NL +
                "dërgonte 900 klikime në tremujor.",
-    "open_p2": "Shumica e agjencive tregojnë një mur me logo. Ne tregojmë" + NL +
+    # "ndalen te" rather than "tregojnë": the marks now sit four sections above
+    # this line, so the English stopped dismissing what the page shows.
+    "open_p2": "Shumica e agjencive ndalen te një mur me logo. Ne tregojmë" + NL +
                "eksportin e Search Console, përfshirë pozicionin mesatar 8,8 dhe "
                "përqindjen" + NL +
                "e klikimeve prej 1,1%, që askush nuk do t'i zgjidhte për botim. Një "

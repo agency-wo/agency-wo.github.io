@@ -101,7 +101,7 @@ STATS = [
 ]
 
 PAGE = {
-    "src": "314aa069",
+    "src": "0bc12f46",
 
     # 38 characters against the 52 the title budget leaves once gen_home.py has
     # put "minarank studio ·" in front of it. The old string claimed 38 here and
@@ -213,13 +213,16 @@ PAGE = {
     # the heading keeps the word rather than reaching for "agenzia" -- which is
     # also the thing the next sentence contrasts against.
     "open_eyebrow": "Lo studio",
-    "open_h": "Siamo nuovi, e pubblichiamo quello che gli" + NL +
-              "studi più vecchi nascondono.",
+    # Mirrors the English, which dropped "Siamo nuovi" on 2026-10-23.
+    "open_h": "Pubblichiamo quello che gli studi" + NL +
+              "più vecchi nascondono.",
     "open_p1": "{brand} ha portato online {clients} attività, ognuna con la" + NL +
                "sua pagina. La prima non aveva alcun sito a maggio; ad agosto "
                "Google le" + NL +
                "mandava 900 clic a trimestre.",
-    "open_p2": "Quasi tutte le agenzie mostrano un muro di loghi. Noi mostriamo" + NL +
+    # "si fermano a" rather than "mostrano": the marks now sit four sections
+    # above this line, so the English stopped dismissing what the page shows.
+    "open_p2": "Quasi tutte le agenzie si fermano a un muro di loghi. Noi mostriamo" + NL +
                "l'export di Search Console, compresa la posizione media 8,8 e la "
                "percentuale" + NL +
                "di clic dell'1,1%, che nessuno sceglierebbe di pubblicare. Un dato "

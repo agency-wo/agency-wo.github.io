@@ -135,6 +135,20 @@ def jsonld(h, services, lang):
         # the number cannot come to disagree with itself: rule 27 gates it in
         # shell.py and this reads it rather than retyping it.
         "telephone": "+" + shell.WHATSAPP,
+        # Added 2026-10-23, owner's answer: open 24/7. A ProfessionalService is
+        # a LocalBusiness, and a LocalBusiness with no hours is a gap every
+        # local pack reads. Mo-Su 00:00-23:59 is the schema.org way to say
+        # always open, and 00:00-24:00 is not valid time-of-day.
+        #
+        # This must agree with the Google Business Profile. citations.md's whole
+        # argument is that a second version of a string reads as a second
+        # business, and hours are a string like any other. If the profile says
+        # anything narrower, change the profile or change this, not neither.
+        #
+        # Note what the copy already promises alongside it: chrome.TURNAROUND
+        # says "within 24 hours", which is the commitment a reader acts on. Open
+        # always and answering within a day are different claims and both true.
+        "openingHours": "Mo-Su 00:00-23:59",
         # Both files are checked against the disk by shell.asset(). A logo or
         # an image naming a path that 404s is the cheapest wrong claim on the
         # site to make, because nothing on the page renders differently.
