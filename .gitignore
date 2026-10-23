@@ -14,3 +14,7 @@ __pycache__/
 .build/citations.md
 .build/baseline.md
 .build/outreach.md
+
+# Image originals. _source/ is where bulk-image-processor expects them and
+# nothing here is served: renditions go to assets/ via the encode pipeline.
+_source/
