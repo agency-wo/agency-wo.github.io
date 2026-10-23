@@ -360,14 +360,15 @@ SERVICES = [
     # ---------------------------------------------------------- WEB DESIGN --
     {
         "slug": "web-design",
-        "src": "dcd7529c",
+        "src": "eee791ba",
         "nav": "Siti web",
         "schema_name": "Progettazione e sviluppo di siti web",
-        # 38 characters, down from 52, which rendered at 70 once shell.head
-        # appended " · minarank studio" and so was cut in the SERP. No Italian
-        # web-design query appears in the 2026-10-23 export, so this one is a
-        # length fix plus the cities, not a rewrite chasing measured demand.
-        "title": "Siti web a Durazzo, Tirana e in Italia",
+        # 28 characters. National, for the reason the English gives: Durazzo,
+        # Tirana and Milano each already have their own page under it/blog/, and
+        # this page naming all three competed with all three. The length fix
+        # that prompted the change still holds, the old 52-character title
+        # rendered at 70 and was cut, but the fix is brevity, not cities.
+        "title": "Siti web in Italia e Albania",
         "h1": "Un sito che si carica prima che il cliente rinunci.",
         "standfirst": "Sei dentro l'esempio. Ogni affermazione di questa "
                       "pagina si può verificare su questa pagina, in circa 30 "

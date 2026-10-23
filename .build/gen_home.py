@@ -479,6 +479,20 @@ def render(lang):
     # this page long enough to want a breath. Not in the hero: that would make
     # it the phone LCP, and the hero already carries the wordmark and the form.
     photo = shell.photo_figure("town-dawn", lang, indent="      ")
+
+    # The reviews, verbatim. The name links to that client's own /work/ page,
+    # which is where somebody checking a quote wants to land.
+    says = NL.join(
+        '            <li class="say">\n'
+        '              <blockquote>%s</blockquote>\n'
+        '              <p class="say-who"><a href="%s">%s</a>'
+        '<span class="say-client">%s</span>%s</p>\n'
+        '            </li>'
+        % (shell.localise_html(q["text"], lang),
+           shell.localise("/work/" + q["slug"] + "/", lang),
+           q["name"], q["client"],
+           ('<span class="say-tr">%s</span>' % h["says_tr"]) if q["tr"] else "")
+        for q in h["says"])
     ARROW = shell.ARROW
     audit = audit_form(i18n.load("home", "FORM", lang), lang)
 
@@ -528,6 +542,18 @@ def render(lang):
         </ul>
       </div>
     </section>
+
+    <!-- Marks, then words, then numbers: the logos say who, these say what it
+         was like, and the ink band below says what it did. Three kinds of proof
+         in the order a reader can take them. -->
+    <div class="says" role="region" aria-labelledby="says-h">
+      <div class="wrap">
+        <h2 id="says-h">{txt(12, h["says_h"], lang)}</h2>
+        <ul class="say-list">
+{says}
+        </ul>
+      </div>
+    </div>
 
     <section class="proof" aria-labelledby="proof-h">
       <div class="zone zone-ink on-ink">
@@ -665,9 +691,21 @@ def check(html, lang):
     # It is worth knowing that this ratchet moves with every client, and that
     # the honest fix when it next bites is to measure the body rather than the
     # chrome, not to keep nudging the number.
-    assert lang != "en" or words <= 1110, (
-        f"the homepage is {words} words, max 1110. The audit form's copy counts, "
-        f"and so does the confirmation panel nobody sees until they send")
+    #
+    # 2026-10-23: it bit, and this is that fix rather than another nudge. The
+    # page had 4 words of headroom when 4 client reviews went in, and the
+    # reviews are argument, not chrome, which is the distinction the note above
+    # was drawing. So the budget now measures <main> and the ratchet is gone:
+    # a 7th client costs its 4 words in the header and footer and none of them
+    # here. 963 words of body before the reviews, 1,067 after, cap 1080.
+    body = re.search(r"(?s)<main.*?</main>", html)
+    words = len(re.sub(r"\s+", " ", re.sub(r"(?s)<[^>]+>", " ", re.sub(
+        r"(?s)<script.*?</script>|<style.*?</style>|<svg.*?</svg>", " ",
+        body.group(0) if body else html))).split())
+    assert lang != "en" or words <= 1080, (
+        f"the homepage body is {words} words, max 1080. The audit form's copy "
+        f"counts, and so does the confirmation panel nobody sees until they "
+        f"send. Chrome does not: this measures <main>")
     assert secs <= 8, (
         f"the homepage has {secs} sections, max 8. The audit form is a <div> "
         f"for this reason: wrapping it in a <section> spends the last slot")

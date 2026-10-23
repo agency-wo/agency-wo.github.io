@@ -282,14 +282,18 @@ SERVICES = [
         "slug": "web-design",
         "nav": "Websites",
         "schema_name": "Web design and development",
-        # 33 characters. The city is in the title because every impression this
-        # page earns is a city query: "web designer in durres" took 61 of them in
-        # the three months to 2026-10-23 and "website designer in durres" another
-        # 31, both at zero clicks, against a title that said Albania. Tirana sits
-        # here too, where the Albanian page earns 41 more on "faqe interneti
-        # tirane". Copy may name Tirana; the NAP stays Durres everywhere, per
-        # citations.md, or the entity splits.
-        "title": "Web designer in Durres and Tirana",
+        # 31 characters. This page is national on purpose. It briefly said "Web
+        # designer in Durres and Tirana" (85c826f) and that was a mistake: both
+        # cities already have their own page, blog/web-design-durres and
+        # blog/web-design-tirana, built to win exactly those queries. The service
+        # page claiming them too split the signal between us and us, which is
+        # the problem finding 54 records on watch.al.
+        #
+        # So "web designer in durres", 61 impressions in the three months to
+        # 2026-10-23, belongs to the city page. This one takes the country.
+        # Nothing was being truncated either: the old title rendered at 58
+        # against a 60 budget.
+        "title": "Web design in Albania and Italy",
         "h1": "A site that loads before your customer gives up.",
         "standfirst": "You're standing inside the example. Every claim on this page "
                       "can be checked on this page, in about 30 seconds.",

@@ -340,15 +340,18 @@ SERVICES = [
     # ---------------------------------------------------------- WEB DESIGN --
     {
         "slug": "web-design",
-        "src": "dcd7529c",
+        "src": "eee791ba",
         "nav": "Faqe interneti",
         "schema_name": "Dizajn dhe zhvillim faqesh interneti",
-        # 35 characters. "faqe interneti tirane" is the biggest Albanian query
-        # this site earns, 41 impressions in the three months to 2026-10-23 at
-        # zero clicks, against a title that said Shqiperi. The city goes first.
-        # "dizajn faqe interneti" takes another 21 and is carried by the
-        # description rather than crowding the title.
-        "title": "Faqe interneti në Tiranë dhe Durrës",
+        # 33 characters. National, because sq/blog/web-design-tirana already
+        # holds "Faqe interneti në Tiranë" and sq/blog/web-design-durres holds
+        # Durrës. This page briefly claimed both and competed with both.
+        #
+        # It leads with "Dizajn" to take "dizajn faqe interneti", 21 impressions
+        # to 2026-10-23, which no other page here claims and which the city
+        # pages do not touch. "faqe interneti tirane", the bigger query at 41,
+        # stays with the Tirana page that was written for it.
+        "title": "Dizajn faqe interneti në Shqipëri",
         "h1": "Një faqe që hapet para se klienti të heqë dorë.",
         "standfirst": "Je brenda shembullit. Çdo pohim i kësaj faqeje mund të "
                       "kontrollohet në këtë faqe, për rreth 30 sekonda.",

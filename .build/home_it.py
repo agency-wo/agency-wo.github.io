@@ -101,7 +101,7 @@ STATS = [
 ]
 
 PAGE = {
-    "src": "0bc12f46",
+    "src": "e633bf5b",
 
     # 38 characters against the 52 the title budget leaves once gen_home.py has
     # put "minarank studio ·" in front of it. The old string claimed 38 here and
@@ -207,6 +207,32 @@ PAGE = {
     # 3 words, like the English, and "lavori" is what chrome_it.py calls the
     # section it points at.
     "ask_go": "Vedi i lavori",
+
+    # Nessuna recensione è in italiano, quindi qui sono tutte tradotte e tutte
+    # marcate come tali.
+    "says_h": "Cosa hanno scritto quattro clienti su Google.",
+    "says": [
+        {"name": "Deni Tabaku", "client": "ProAffy", "slug": "pro-affy",
+         "tr": True,
+         "text": "Lavorare con Mina Rank è stata un'esperienza fluida fin dal "
+                 "primo giorno. Hanno gestito sia l'architettura del nostro "
+                 "sito sia l'ottimizzazione per i motori di ricerca con una "
+                 "precisione incredibile"},
+        {"name": "Brunilda Boraj", "client": "Intimo Bruna", "slug": "intimo-bruna",
+         "tr": True,
+         "text": "Ha realizzato per noi un sito trilingue ottimizzato "
+                 "seo/geo, e sta davvero dando i risultati attesi, lo "
+                 "consiglierei per qualsiasi attività locale"},
+        {"name": "Redina Koca", "client": "Victoria Boutique", "slug": "victoria-boutique",
+         "tr": True,
+         "text": "Ha creato un sito per la mia attività e lo ha ottimizzato "
+                 "per la SEO, lo consiglio a tutti!"},
+        {"name": "Klajdi Gjuzi", "client": "Vila Flamuri", "slug": "vila-flamuri",
+         "tr": True,
+         "text": "Molto capace sia nel design sia nei motori di "
+                 "ottimizzazione della ricerca!"},
+    ],
+    "says_tr": "Tradotta",
 
     # -- being new ----------------------------------------------------------
     # "studio" is native Italian and is what the brand already calls itself, so

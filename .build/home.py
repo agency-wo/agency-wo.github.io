@@ -137,6 +137,50 @@ PAGE = {
                 "we built.",
     "ask_go": "See the work",
 
+    # Four of the five reviews on the Google profile, verbatim. The fifth, from
+    # the Census Properties owner, is the longest and best of them and is left
+    # out because it contains an em dash: rule 5 gates U+2014 and the build
+    # would fail on it. It goes in the day he edits it.
+    #
+    # Nothing here is trimmed. A review cut to fit a column stops being a
+    # review, so if one does not fit, the column changes.
+    #
+    # Two of them say "He". Rule 27 stops this SITE from stating team size; it
+    # does not reach what a client wrote on their own account, and editing a
+    # public review to hide the answer would contradict everything /studio/
+    # says. They go up as written.
+    #
+    # "tr" marks a quote that is not in the reviewer's own language. Redina
+    # wrote in Albanian and Google translated it, so it is marked even here.
+    # No link to GBP_REVIEW_URL here. Check 51 only validates its shape, but
+    # its reasoning runs both ways: that URL opens a write-a-review box, and
+    # labelling it "read these" lands a reader who wants to read on a form. The
+    # client name links to its own /work/ page instead, which is where somebody
+    # checking a quote actually wants to arrive. The footer keeps the review
+    # link, with the wording that matches what it does.
+    "says_h": "What four clients wrote on Google.",
+    "says": [
+        {"name": "Deni Tabaku", "client": "ProAffy", "slug": "pro-affy",
+         "tr": False,
+         "text": "Working with Mina Rank was a seamless experience from day "
+                 "one. They handled both our website architecture and search "
+                 "engine optimization with incredible precision"},
+        {"name": "Brunilda Boraj", "client": "Intimo Bruna", "slug": "intimo-bruna",
+         "tr": False,
+         "text": "He made a trilingual seo/geo optimised website for us, and "
+                 "it's actually delivering the expected results, would "
+                 "recommend them for all sort of local business"},
+        {"name": "Redina Koca", "client": "Victoria Boutique", "slug": "victoria-boutique",
+         "tr": True,
+         "text": "He created a website for my business and optimized it for "
+                 "SEO, I recommend him to everyone!"},
+        {"name": "Klajdi Gjuzi", "client": "Vila Flamuri", "slug": "vila-flamuri",
+         "tr": False,
+         "text": "Very capable in both design and search optimisation "
+                 "engines!"},
+    ],
+    "says_tr": "Translated",
+
     # -- being new ----------------------------------------------------------
     # This block sits directly under the 4 client logos, which is where the
     # doubt actually forms: a visitor counts them and thinks "only four". The

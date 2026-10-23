@@ -112,6 +112,10 @@ IDENTICAL_BY_DESIGN = {
     # <th> on their own. A brand is spelled the same in every language and
     # translating one would be an error, not a translation: nobody in Milan
     # or Durres calls it anything else.
+    # The four reviewers quoted on the homepage from 2026-10-23. A person's
+    # name is the same in every language, and translating one would not be a
+    # translation. Check 35 is right to ask: these are the answer.
+    "Klajdi Gjuzi", "Deni Tabaku", "Redina Koca", "Brunilda Boraj",
     "Google Ads", "Instagram", "WordPress",
     "Menu", "Studio", "Home", "404", "Meta ads", "SEO", "AI search",
     # TERMS itself says the Italian for "audit" is "audit": Italian took the

@@ -100,7 +100,7 @@ STATS = [
 ]
 
 PAGE = {
-    "src": "0bc12f46",
+    "src": "e633bf5b",
 
     # 38 characters against the 52 the title budget leaves once gen_home.py has
     # put "minarank studio ·" in front of it. The old string claimed 39 here and
@@ -200,6 +200,33 @@ PAGE = {
     # 2 words, under the English count, and "punët" is what chrome_sq.py calls
     # the section it points at.
     "ask_go": "Shih punët",
+
+    # Tre prej tyre janë shkruar në anglisht dhe janë përkthyer këtu. Redina
+    # shkroi shqip, por profili ruan vetëm përkthimin e Google, kështu që edhe
+    # ajo shënohet si e përkthyer derisa të kemi origjinalin.
+    "says_h": "Çfarë shkruan katër klientë në Google.",
+    "says": [
+        {"name": "Deni Tabaku", "client": "ProAffy", "slug": "pro-affy",
+         "tr": True,
+         "text": "Puna me Mina Rank ishte një përvojë e qetë që nga dita e "
+                 "parë. Ata trajtuan si arkitekturën e faqes sonë ashtu edhe "
+                 "optimizimin për motorët e kërkimit me një saktësi të "
+                 "jashtëzakonshme"},
+        {"name": "Brunilda Boraj", "client": "Intimo Bruna", "slug": "intimo-bruna",
+         "tr": True,
+         "text": "Ai na bëri një faqe interneti tregjuhëshe të optimizuar "
+                 "seo/geo, dhe po jep vërtet rezultatet e pritura, do t'i "
+                 "rekomandoja për çdo biznes lokal"},
+        {"name": "Redina Koca", "client": "Victoria Boutique", "slug": "victoria-boutique",
+         "tr": True,
+         "text": "Ai krijoi një faqe interneti për biznesin tim dhe e "
+                 "optimizoi për SEO, ua rekomandoj të gjithëve!"},
+        {"name": "Klajdi Gjuzi", "client": "Vila Flamuri", "slug": "vila-flamuri",
+         "tr": True,
+         "text": "Shumë i aftë si në dizajn ashtu edhe në motorët e "
+                 "optimizimit të kërkimit!"},
+    ],
+    "says_tr": "Përkthyer",
 
     # -- being new ----------------------------------------------------------
     # "studio" is an accepted loan in Albanian and is already in
