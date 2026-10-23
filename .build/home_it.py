@@ -101,11 +101,13 @@ STATS = [
 ]
 
 PAGE = {
-    "src": "d3577b7f",
+    "src": "314aa069",
 
     # 38 characters against the 52 the title budget leaves once gen_home.py has
-    # put "minarank studio ·" in front of it.
-    "title": "presenza digitale per piccole attività in Italia e Albania",
+    # put "minarank studio ·" in front of it. The old string claimed 38 here and
+    # was 58, so it rendered at 76 and was cut. Mirrors the English, which
+    # dropped "presenza digitale" on 2026-10-23 for the term people search.
+    "title": "agenzia digitale a Durazzo e in Italia",
     "description": "Proprio adesso qualcuno qui vicino cerca quello che solo tu "
                    "offri. Facciamo in modo che ti trovino su Google, sulla mappa "
                    "e su ChatGPT. Durazzo, Albania.",

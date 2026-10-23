@@ -60,7 +60,12 @@ STATS = [
 PAGE = {
     # The brand comes first in this one title, because it is the only page
     # whose job is to say whose site this is.
-    "title": "digital presence for small businesses in Durres",
+    # 34 characters, 52 once the brand is prefixed. "digital presence" is not a
+    # phrase anybody types and earned no query at all in the three months to
+    # 2026-10-23. The agency term is deliberately broader than /web-design/,
+    # which now owns "web designer in Durres": two pages chasing one query is
+    # how both lose it.
+    "title": "digital agency in Durres and Tirana",
     "description": "Right now, somebody nearby is searching for what only you offer. "
                    "We make sure they find you on Google, on the map, and in what "
                    "ChatGPT says. Durres, Albania.",

@@ -100,11 +100,13 @@ STATS = [
 ]
 
 PAGE = {
-    "src": "d3577b7f",
+    "src": "314aa069",
 
-    # 39 characters against the 52 the title budget leaves once gen_home.py has
-    # put "minarank studio ·" in front of it.
-    "title": "prezencë dixhitale për biznese të vogla në Durrës",
+    # 38 characters against the 52 the title budget leaves once gen_home.py has
+    # put "minarank studio ·" in front of it. The old string claimed 39 here and
+    # was 49, so it rendered at 67 and was cut. Mirrors the English, and adds
+    # Tirana, where "faqe interneti tirane" is the biggest Albanian query.
+    "title": "agjenci dixhitale në Durrës dhe Tiranë",
     "description": "Pikërisht tani, dikush pranë teje kërkon atë që "
                    "vetëm ti e ofron. Sigurohemi që të të gjejnë në Google, "
                    "në hartë dhe në ChatGPT. Durrës, Shqipëri.",

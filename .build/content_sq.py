@@ -36,7 +36,7 @@ SERVICES = [
     # ------------------------------------------------------------------ SEO --
     {
         "slug": "seo",
-        "src": "58ebdea2",
+        "src": "1d1e21fa",
         "nav": "SEO",
         "schema_name": "Optimizim për motorët e kërkimit dhe kërkim lokal",
         # 21 characters, 2 fewer than the English.
@@ -186,13 +186,16 @@ SERVICES = [
     # ------------------------------------------------------------------ GEO --
     {
         "slug": "geo",
-        "src": "b0dedcf0",
+        "src": "93eabb3a",
         # glossary.TERMS: AI search -> kërkimi me AI. Matches
         # chrome_sq.FOOT_LABELS[0][1] exactly.
         "nav": "Kërkimi me AI",
         "schema_name": "Optimizim për motorët gjenerativë",
         # 38 characters.
-        "title": "Kërkimi me AI në Shqipëri, GEO ose AIO",
+        # 37 characters. Mirrors the English, which put ChatGPT in the title on
+        # 2026-10-23. No Albanian ChatGPT query shows in the export yet; this is
+        # parity, not measured demand.
+        "title": "ChatGPT dhe kërkimi me AI në Shqipëri",
         "h1": "Bëhu një nga 3 bizneset që përmend përgjigjja.",
         "standfirst": "Pyet ChatGPT për një dyqan riparimi orësh në Durrës dhe "
                       "të përmend dy ose tre. Të jesh një prej tyre nuk është "

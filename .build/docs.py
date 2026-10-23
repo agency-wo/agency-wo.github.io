@@ -67,7 +67,10 @@ PAGES = [
     {
         "url": "/systems/",
         "nav": "Custom software",
-        "title": "Custom software for small businesses in Albania",
+        # 36 characters, 54 rendered. Was 47 and rendered at 65, so the tail was
+        # cut. "software development" earned 9 impressions in the three months to
+        # 2026-10-23, so the term stays; the cities replace the country.
+        "title": "Custom software, Durres and Tirana",
         "description": "Stock, jobs, customers and money in one place. We build the "
                        "software small shops and trades actually run on, in Albania "
                        "and Italy.",
@@ -614,8 +617,9 @@ PAGES = [
         "url": "/start/",
         "nav": "Start a project",
         "title": "Free website audit",
-        "description": "Send us your site and get a free audit back: what is "
-                       "costing you customers, what to fix first, and what it "
+        # 158 characters, down from 163, which overflowed the snippet.
+        "description": "Send us your site and get a free audit back: what "
+                       "costs you customers, what to fix first, and what it "
                        "would cost. Or email, WhatsApp, or ask for a short call.",
         "og_desc": "We answer with a plan and a straight price.",
         "h1": "Get found for what you offer.",

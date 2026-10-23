@@ -34,7 +34,7 @@ SERVICES = [
     # ------------------------------------------------------------------ SEO --
     {
         "slug": "seo",
-        "src": "58ebdea2",
+        "src": "1d1e21fa",
         "nav": "SEO",
         "schema_name": "Ottimizzazione per i motori di ricerca e ricerca locale",
         # 23 characters, the same as the English, and 41 with the suffix
@@ -48,9 +48,10 @@ SERVICES = [
         # 170 characters. Carries all 3 facts gate check 14 looks for on this
         # page: on-page, off-page and the business profile, in the glossary's
         # words.
+        # 159 characters, down from 170, which overflowed the snippet.
         "description": "SEO e ricerca locale per piccole attività: il Profilo "
                        "dell'attività su Google, lavoro on-page sul sito e "
-                       "lavoro off-page ovunque altrove. In inglese, italiano "
+                       "lavoro off-page altrove. Inglese, italiano "
                        "e albanese.",
         "og_desc": "La mappa ti fa squillare il telefono oggi. I risultati ti "
                    "fanno trovare l'anno prossimo.",
@@ -198,14 +199,16 @@ SERVICES = [
     # ------------------------------------------------------------------ GEO --
     {
         "slug": "geo",
-        "src": "b0dedcf0",
+        "src": "93eabb3a",
         # glossary.TERMS: AI search -> ricerca AI, and glossary.BANNED fails on
         # "IA", which reads as a translation artefact to the people who buy
         # this. Matches chrome_it.FOOT_LABELS[0][1] exactly.
         "nav": "Ricerca AI",
         "schema_name": "Ottimizzazione per i motori generativi",
         # 41 characters.
-        "title": "Ricerca AI in Italia e Albania, GEO o AIO",
+        # 39 characters. "come comparire su chatgpt" is the Italian query, 15
+        # impressions at zero clicks, so the title now carries its own words.
+        "title": "Comparire su ChatGPT e nella ricerca AI",
         "h1": "Sii una delle 3 attività che la risposta nomina.",
         "standfirst": "Chiedi a ChatGPT un negozio di riparazione orologi a "
                       "Durazzo e te ne nomina due o tre. Essere uno di quelli "
@@ -498,7 +501,8 @@ SERVICES = [
         "nav": "Meta ads",
         "schema_name": "Pubblicità su Meta",
         # 31 characters.
-        "title": "Annunci Facebook e Instagram in Italia e Albania",
+        # 38 characters, 56 rendered. Was 47 and rendered at 66, so it was cut.
+        "title": "Annunci Facebook e Instagram in Italia",
         "h1": "Prendi clienti questa settimana.",
         "standfirst": "Il social a pagamento è il modo più rapido per scoprire "
                       "se la tua offerta funziona, e il modo più rapido per "

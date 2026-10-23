@@ -71,12 +71,14 @@ PAGES = [
     # -------------------------------------------------------------- SYSTEMS --
     {
         "url": "/systems/",
-     "src": "17cce9f1",
+     "src": "43d74516",
         "nav": "Software me porosi",
         # 38 characters against the 52 the title budget leaves once shell.head
         # appends " · minarank studio".
-        "title": "Software me porosi për biznese në Shqipëri",
-        "description": "Stoku, punët, klientët dhe paratë në një vend të vetëm. "
+        # Mirrors the English, which took the cities on 2026-10-23.
+        "title": "Software me porosi, Durrës dhe Tiranë",
+        # 154 characters, down from 163, which overflowed the snippet.
+        "description": "Stoku, punët, klientët dhe paratë në një vend. "
                        "Ndërtojmë software-in mbi të cilin funksionojnë vërtet "
                        "dyqanet e vogla dhe zejtarët, në Shqipëri dhe Itali.",
         "og_desc": "Tani për tani sistemi është një fletore.",
@@ -593,13 +595,13 @@ PAGES = [
     # ---------------------------------------------------------------- START --
     {
         "url": "/start/",
-     "src": "7098ce2c",
+     "src": "356fb3c0",
         "nav": "Nis një projekt",
         "title": "Auditim falas",
-        "description": "Na dërgo faqen tënde dhe merr një auditim falas: çfarë po "
-                       "të kushton klientë, çfarë të rregullosh e para, dhe sa do "
-                       "të kushtonte. Ose email, WhatsApp, ose një telefonatë e "
-                       "shkurtër.",
+        # 158 characters, down from 181, the worst overflow on the site.
+        "description": "Dërgo faqen tënde dhe merr një auditim falas: çfarë po "
+                       "të kushton klientë, çfarë të rregullosh e para, dhe sa "
+                       "kushton. Ose email, WhatsApp ose një telefonatë.",
         "og_desc": "Të përgjigjemi me një plan dhe një çmim të qartë.",
         "h1": "Bëhu i gjetshëm për atë që ofron.",
         # {turnaround} 1 of 3. Gate check 25 counts them.

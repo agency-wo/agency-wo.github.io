@@ -454,7 +454,8 @@ WORK_INDEX = {
     "src": "a37d43ba",
     # "Lavori" is what chrome_it.FOOT_HEADINGS[1] and CRUMB_WORK already call
     # this section, so the tab, the crumb and the footer say one word.
-    "title": "Siti che abbiamo costruito, e cosa è cambiato",
+    # 26 characters, 44 rendered. Was 45 and rendered at 63, so it was cut.
+    "title": "Siti che abbiamo costruito",
     "description": "Sei attività in Albania e altrove, cosa abbiamo "
                    "costruito per ognuna, e l'unico risultato con numeri "
                    "pubblicati dietro.",

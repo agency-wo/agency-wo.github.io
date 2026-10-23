@@ -71,11 +71,12 @@ PAGES = [
     # -------------------------------------------------------------- SYSTEMS --
     {
         "url": "/systems/",
-     "src": "17cce9f1",
+     "src": "43d74516",
         "nav": "Software su misura",
         # 37 characters against the 52 the title budget leaves once shell.head
         # appends " · minarank studio".
-        "title": "Software su misura per piccole imprese",
+        # Mirrors the English, which took the cities on 2026-10-23.
+        "title": "Software su misura, Durazzo e Italia",
         "description": "Magazzino, lavori, clienti e soldi in un posto solo. "
                        "Costruiamo il software su cui piccoli negozi e artigiani "
                        "lavorano davvero, in Albania e in Italia.",
@@ -607,12 +608,13 @@ PAGES = [
     # ---------------------------------------------------------------- START --
     {
         "url": "/start/",
-     "src": "7098ce2c",
+     "src": "356fb3c0",
         "nav": "Inizia un progetto",
         "title": "Audit gratuito del sito",
-        "description": "Mandaci il tuo sito e ricevi un audit gratuito: cosa ti "
+        # 159 characters, down from 171, which overflowed the snippet.
+        "description": "Mandaci il sito e ricevi un audit gratuito: cosa ti "
                        "sta costando clienti, cosa sistemare per primo, e quanto "
-                       "costerebbe. Oppure email, WhatsApp o una telefonata breve.",
+                       "costerebbe. Oppure email, WhatsApp o una chiamata.",
         "og_desc": "Ti rispondiamo con un piano e un prezzo chiaro.",
         "h1": "Fatti trovare per quello che offri.",
         # {turnaround} 1 of 3. Gate check 25 counts them.

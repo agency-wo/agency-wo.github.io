@@ -28,9 +28,10 @@ SERVICES = [
         "h1": "Get found by people who don't know your name yet.",
         "standfirst": "Two different jobs. The map listing decides who gets phoned "
                       "today. The results underneath decide who gets found next year.",
+        # 158 characters, down from 164, which overflowed the snippet.
         "description": "SEO and local search for small businesses: your Google "
                        "Business Profile, on-page work on the site, and off-page work "
-                       "everywhere else. English, Italian and Albanian.",
+                       "elsewhere. English, Italian and Albanian.",
         "og_desc": "The map gets you phoned today. The results get you found next year.",
         "lead": "Search for a watch repair in Durres and Google shows a map with 3 "
                 "shops on it before it shows a single website. Most small businesses "
@@ -144,7 +145,12 @@ SERVICES = [
         "slug": "geo",
         "nav": "AI search",
         "schema_name": "Generative engine optimisation",
-        "title": "AI search in Albania, sometimes called GEO or AIO",
+        # 39 characters. The old title never said ChatGPT, which is the word
+        # people actually type: "appear chatgpt" and the Italian "come comparire
+        # su chatgpt" brought 28 impressions in the three months to 2026-10-23,
+        # at zero clicks. GEO and AIO stay in the description, where somebody who
+        # already knows the jargon will still find them.
+        "title": "Appear on ChatGPT: AI search in Albania",
         "h1": "Be one of the 3 businesses the answer names.",
         "standfirst": "Ask ChatGPT for a watch repair shop in Durres and it names two "
                       "or three. Being one of them isn't luck.",
