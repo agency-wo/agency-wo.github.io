@@ -288,7 +288,7 @@ CTA_NOTE = {
 # ------------------------------------------------------------- the parts ----
 
 def faq_section(indent, rec, en_rec, lang, toc, heading=None,
-                en_heading=None, wrap=None, eyebrow=None):
+                en_heading=None, wrap=None, eyebrow=None, tail=None):
     """The FAQ heading is an h2 like any other and goes into the contents like
     any other. It is emitted from here rather than from the block list, which
     is exactly how a contents list built off rec["blocks"] would have missed
@@ -325,6 +325,16 @@ def faq_section(indent, rec, en_rec, lang, toc, heading=None,
                     f'{txt(inner + 6, q, lang)}</h3>')
         rows.append(f'{ipad}    <p>{txt(inner + 6, a, lang)}</p>')
         rows.append(ipad + "  </div>")
+    # Optional, like wrap and eyebrow above and for the third time for the same
+    # reason: one caller needs something the others do not. The homepage's FAQ
+    # is the last thing in its <main> and heads itself "Before you send
+    # anything", and <main> held no link to the form it meant. The 3 doc pages
+    # each sit above the shared band with its own CTA and need no second one.
+    #
+    # Markup and not copy: the caller passes the whole anchor, because the
+    # target is this page's own fragment and only the caller knows it.
+    if tail:
+        rows.append(f'{ipad}  <p class="faq-end">{tail}</p>')
     if wrap:
         rows.append(pad + "  </div>")
     rows.append(pad + "</section>")

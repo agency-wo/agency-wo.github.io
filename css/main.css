@@ -562,6 +562,8 @@ a[href^="tel:"] { white-space: nowrap; }
 .faq .faq-q { margin-top: 0; }
 .faq .faq-item > p { margin-bottom: 0; }
 
+.faq-end { margin-top: var(--s-6); }
+
 .payoff { margin-top: var(--s-5); font-weight: 700; display: flex;
   align-items: center; gap: var(--s-3); }
 .tick { width: 12px; height: 12px; flex: none; }
@@ -753,8 +755,7 @@ a[href^="tel:"] { white-space: nowrap; }
   box-shadow: inset 0 -1px 0 0 var(--edge); }
 .say-who a:hover { box-shadow: inset 0 -2px 0 0 var(--ink); }
 
-.say-client::before, .say-tr::before { content: "\00A0-\00A0";
-  color: var(--edge); }
+.say-sep { color: var(--edge); }
 .say-client { color: var(--slate); font-weight: 500; }
 .say-tr { color: var(--slate); font-weight: 400; font-style: italic; }
 
@@ -959,7 +960,8 @@ button.btn:disabled:hover { background: none; color: var(--ink); }
   .af-pair { grid-template-columns: 1fr; gap: 0; }
 
   .hero-af .field input { font-size: 1rem; }
-  .hero { padding-bottom: var(--pad-section); }
+
+  .hero { padding-block: 72px var(--pad-section); }
   .af-done { padding-left: var(--s-4); }
 
   .band-alt a { display: inline-block; padding-block: 4px; }
@@ -1002,6 +1004,6 @@ button.btn:disabled:hover { background: none; color: var(--ink); }
   .chart-tall { display: block; }
 }
 
-.hero-claim { display: block; margin-top: var(--s-8);
+.hero-claim { display: block; margin-top: var(--s-8); font-weight: 500;
   font-size: clamp(1.375rem, 2.4vw, 2rem); line-height: 1.22;
   letter-spacing: -0.012em; max-width: 30ch; text-wrap: balance; }

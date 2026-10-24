@@ -42,8 +42,16 @@ SERVICES = [
     ("/meta-ads/", "Meta ads",
      "Customers this week, while the slow work builds underneath.",
      "A flat fee, never a cut of what you spend"),
+    # The outcome used to be "On the 1st of the month, the numbers are already
+    # there." Read on the page it is the one row of the five whose headline
+    # names no mechanism: the other four say searches, ChatGPT, a site, and
+    # customers this week, and this one could as easily have described hiring a
+    # bookkeeper. "Custom software" sits above it, but .svc-kind is a small
+    # uppercase label and the h3 is what a scanning reader actually reads, so
+    # the headline has to carry the thing as well as the result. The month's
+    # numbers stay, because that half of the line was always the good half.
     ("/systems/", "Custom software",
-     "On the 1st of the month, the numbers are already there.",
+     "One program for the whole shop, so the month's numbers are already there.",
      "Stock, jobs, customers, payroll, and what each part of the business earned"),
 ]
 
@@ -104,16 +112,24 @@ PAGE = {
     # which now owns "web designer in Durres": two pages chasing one query is
     # how both lose it.
     "title": "digital agency in Durres and Tirana",
-    "description": "Right now, somebody nearby is searching for what only you offer. "
+    "description": "Right now, somebody nearby is searching for what you sell. "
                    "We make sure they find you on Google, on the map, and in what "
                    "ChatGPT says. Durres, Albania.",
-    "og_desc": "Right now, somebody nearby is searching for what only you offer.",
+    "og_desc": "Right now, somebody nearby is searching for what you sell.",
     "org_desc": "Digital presence for small businesses: search, AI search, websites, "
                 "ads and custom software. English, Italian and Albanian.",
     "catalogue": "Services",
 
     # -- hero ---------------------------------------------------------------
-    "hero_claim": "Right now, somebody nearby is searching for what only you offer.",
+    # "what only you offer" until 2026-10-24, in this slot and in description
+    # and og_desc with it. It was flattery, and for most of this market it was
+    # also false: a watch shop, a boutique and a garage all sell what three
+    # neighbours sell, and the owner knows it. It was the first sentence a
+    # sceptic read and the one he had grounds to reject, which is an expensive
+    # place to put a claim that cannot be defended. "what you sell" is true of
+    # every reader, and the next line already supplies the argument: they are
+    # searching, and we make sure they find you.
+    "hero_claim": "Right now, somebody nearby is searching for what you sell.",
     "hero_say": "We make sure they find you on Google.",
     "hero_sub": "Google, the map, and the answers ChatGPT and Gemini give" + NL +
                 "when somebody asks for a shop like yours. We work in English," + NL +
@@ -147,19 +163,30 @@ PAGE = {
                   # from somebody who has not yet decided to care.
                   "{proof_directions} people asking Google how to get there, "
                   "in five months.",
-    "hero_who": "<strong>The person who reads your site is the person who builds" + NL +
-                "the fix.</strong>",
+    # "hero_who" was here until 2026-10-24: "The person who reads your site is
+    # the person who builds the fix." Two reasons it went, and either would
+    # have done. It was the only sentence on the page that said "the person"
+    # where every other line says "we", so it read as a different writer; and
+    # it was the element the fixed WhatsApp control landed on top of at 390 and
+    # 360, measured by box intersection, which is the width most of this
+    # market reads on. It also came closest of anything here to stating team
+    # size, which rule 27 does not allow.
 
     # -- proof --------------------------------------------------------------
     "proof_eyebrow": "Proof",
     "proof_h": "Three months ago, Google had never heard of this" + NL +
                "shop.",
-    "proof_lead": "Iglisi Watch repairs watches and sells them, on" + NL +
+    # Trimmed on 2026-10-24, from 40 words to 34. The street stays: it is the
+    # detail that makes the claim checkable, and a reader who wants to verify
+    # this walks there. What went was padding around it. "the starting number
+    # really is zero" became "the zero is real", which says the same thing in
+    # three words instead of six.
+    "proof_lead": "Iglisi Watch repairs and sells watches on" + NL +
                   "Rruga Aleksander Goga in Durres. In May there was no website at "
                   "all," + NL +
-                  "so the starting number really is zero. Everything on this chart "
-                  "came" + NL +
-                  "from search, not from an ad budget.",
+                  "so the zero is real. Everything on this chart came from "
+                  "search," + NL +
+                  "not an ad budget.",
     "stat_note": "Three months, 2 June to 30 August 2026. Search" + NL +
                  "Console reports clicks, which is not the same as people.",
     # Read aloud in place of the chart, so it is copy and describes the shape
@@ -195,11 +222,17 @@ PAGE = {
 
     # -- the businesses -----------------------------------------------------
     "ask_eyebrow": "The work",
-    "ask_h": "Want to see proof of our work?",
-    "ask_note": "These are the businesses we build for. Every one of" + NL +
-                "these sites is live, so the logos go to them and the button goes to "
-                "what" + NL +
-                "we built.",
+    # The heading asked "Want to see proof of our work?" until 2026-10-24 and
+    # then answered itself two lines down, where ask_note opened with "These
+    # are the businesses we build for." A question whose answer is directly
+    # beneath it is not a question, and the eyebrow above already says "The
+    # work", so the page asked, labelled and answered the same thing three
+    # times in four lines. The sentence that was doing the work moved up into
+    # the heading and came out of the note, which costs no words and loses
+    # nothing: the logos, the screenshots and the button are the answer.
+    "ask_h": "These are the businesses we build for.",
+    "ask_note": "Every one is live, so the logos go to them" + NL +
+                "and the button goes to what we built.",
     "ask_go": "See the work",
 
     # Four of the five reviews on the Google profile, verbatim. The fifth, from
@@ -302,18 +335,34 @@ PAGE = {
 
     # -- the refusal --------------------------------------------------------
     "who_h": "We will tell you when the answer is no.",
+    # 51 words to 42 on 2026-10-24, the longest paragraph on the page. Both
+    # arguments stay and so does the last clause, which is the costly signal
+    # and the whole reason the block exists: a studio that says what refusing
+    # work costs it has said something a studio cannot fake. What went was
+    # "the honest answer is that" and "it is the one that", neither of which
+    # carried a fact.
     "who_more": "If your ad budget is too small to be worth managing, we say so "
                 "instead" + NL +
-                "of taking it. If the honest answer is that you need a better offer "
-                "rather" + NL +
-                "than better marketing, that is the answer you get, and it is the one "
-                "that" + NL +
-                "costs us the job most often.",
+                "of taking it. If you need a better offer rather than better "
+                "marketing," + NL +
+                "that is the answer you get, and it costs us the job most often.",
     "who_go": "How we work",
 
     # -- the one call to action ---------------------------------------------
     "faq_eyebrow": "Questions",
     "faq_h": "Before you send anything",
+    # The heading says "Before you send anything" and until 2026-10-24 there
+    # was nothing on the rest of the page to send: <main> held the form in the
+    # hero and not one link to it, so a reader who had just read five answers
+    # ABOUT the form had to scroll back eleven screens to reach it.
+    #
+    # It is a link to #audit, this page's own form, and not to /audit/. The
+    # footer band 240px below already offers that page, and the two asks are
+    # different on purpose: the band sends a reader who wants the longer
+    # six-field version to the page that has it, and this sends the reader who
+    # has just finished reading back to the four fields already in front of
+    # him. The band is why this is a text link and not a second button.
+    "faq_go": "Get your free audit",
     "faq": [
         ("What does this cost?",
          "There is no price list. A shop with 4 pages and a shop with 400 are" + NL +

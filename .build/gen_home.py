@@ -52,6 +52,23 @@ CHART = "/assets/proof/watch-al-3-months.webp"
 CHART_720 = "/assets/proof/watch-al-3-months-720.webp"
 CHART_H = shell.image_size(CHART)[1]
 NL = chr(10)
+# The separator between a reviewer's name and their business, and between that
+# and the translation mark. It was a .say-client::before carrying the character
+# in CSS until 2026-10-24. That renders correctly and is invisible to anything
+# that reads the page as text: a crawler, an assistant, or somebody selecting
+# the line and copying it all got "Deni TabakuProAffy". Generated content is a
+# poor place to keep a word that belongs to the sentence, and this is the site
+# that argues for being read correctly by machines.
+#
+# Non-breaking spaces, so the separator cannot collapse against the business
+# name or wrap onto a line of its own: that was the original bug the CSS was
+# written to fix and it is still the requirement. Built with chr() rather than
+# a backslash escape, which this project has paid for twice.
+#
+# shell.DOT and not a typed hyphen, so the one place that decides this
+# character for titles, the footer and the byline decides it here too.
+NBSP = chr(160)
+SAY_SEP = f'<span class="say-sep">{NBSP}{shell.DOT}{NBSP}</span>'
 # Three client screenshots across the content column, so each lands near 370px
 # on a desktop and full width on a phone. Same shape as SIZES_SIDE in
 # gen_cases, which solves the same problem for the case pages.
@@ -488,8 +505,12 @@ def render(lang):
     # Same 4 figures as the Iglisi Watch page, and localised the same way, so
     # the homepage and /work/iglisi-watch/ cannot print one number 2 ways.
     stats_rows = i18n.load("home", "STATS", lang)
-    stats = NL.join(f'              <li><span class="stat-n">{l10n.dec(n, lang)}</span>'
-                    f'<span class="stat-l">{fill(label, lang)}</span></li>'
+    # The two spans on separate lines, which costs nothing and fixes the text
+    # layer. Both are display:block, so the whitespace between them forms no
+    # box and the rendering is identical; emitted adjacent, the page read as
+    # "900clicks from Google" to everything that strips the tags.
+    stats = NL.join(f'              <li><span class="stat-n">{l10n.dec(n, lang)}</span>' + NL +
+                    f'                <span class="stat-l">{fill(label, lang)}</span></li>'
                     for n, label in stats_rows)
     chart = growth_chart(lang, stats_rows)
     marks = NL.join(shell.client_mark(c) for c in clients)
@@ -567,12 +588,12 @@ def render(lang):
         '              <li class="say">\n'
         '                <blockquote>%s</blockquote>\n'
         '                <p class="say-who"><a href="%s">%s</a>'
-        '<span class="say-client">%s</span>%s</p>\n'
+        '%s<span class="say-client">%s</span>%s</p>\n'
         '              </li>'
         % (shell.localise_html(q["text"], lang),
            shell.localise("/work/" + q["slug"] + "/", lang),
-           q["name"], q["client"],
-           ('<span class="say-tr">%s</span>' % h["says_tr"]) if q["tr"] else "")
+           q["name"], SAY_SEP, q["client"],
+           (SAY_SEP + '<span class="say-tr">%s</span>' % h["says_tr"]) if q["tr"] else "")
         for q in h["says"])
     ARROW = shell.ARROW
     audit = audit_form(i18n.load("home", "FORM", lang), lang)
@@ -580,19 +601,18 @@ def render(lang):
     body = f'''
     <section class="hero">
       <div class="wrap hero-wrap">
-        <h1 class="hero-title">
+        <div class="hero-title">
           <span class="wm-box" aria-hidden="true">
             <span class="serp">{rules}</span>
             <span class="wm">{letters}<span class="wm-studio">studio</span></span>
           </span>
-          <span class="hero-claim">{txt(10, h["hero_claim"], lang)}</span>
-        </h1>
+          <h1 class="hero-claim">{txt(10, h["hero_claim"], lang)}</h1>
+        </div>
         <div class="hero-split">
           <div class="hero-rest">
             <p class="hero-say">{txt(14, h["hero_say"], lang)}</p>
             <p class="hero-proof">{txt(14, h["hero_proof"], lang)}</p>
             <p class="hero-sub">{txt(14, h["hero_sub"], lang)}</p>
-            <p class="hero-who">{txt(14, h["hero_who"], lang)}</p>
             <p class="status"><span class="dot" aria-hidden="true"></span>
               {fill(i18n.load("home", "AVAILABILITY", lang), lang)}</p>
           </div>
@@ -758,7 +778,7 @@ def render(lang):
          comment is rendered HTML: naming it here cost a section and failed
          the build at 9 of 8. -->
     <div class="zone zone-surface">
-{faq_section(6, h, i18n.load("home", "PAGE", "en"), lang, None, wrap="wrap", eyebrow=h["faq_eyebrow"])}
+{faq_section(6, h, i18n.load("home", "PAGE", "en"), lang, None, wrap="wrap", eyebrow=h["faq_eyebrow"], tail=f'<a class="cta" href="#audit">{fill(h["faq_go"], lang)} {ARROW}</a>')}
     </div>
 '''
     return (shell.head(page, lang) + shell.header(lang, page["url"]) +

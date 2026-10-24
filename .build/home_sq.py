@@ -36,7 +36,7 @@ that softens them has edited a claim while appearing to translate one.
 # English list is edited and this is not.
 SRC = {
     "AVAILABILITY": "868c31af",
-    "SERVICES": "b417d875",
+    "SERVICES": "8740d3d2",
     "STATS": "1f77f955",
     "TRADES": "fb762161",
 }
@@ -49,8 +49,11 @@ NL = chr(10)
 AVAILABILITY = "Marrim punë të reja tani."
 
 # (href, name, what you end up with, what the page holds)
-# STAMP: SERVICES is a list of tuples and has nowhere to put "src": "e2792051".
-# It is recorded here instead, and check_stamp does not run on this record.
+# STAMP: SERVICES is a list of tuples and has nowhere to put a "src" key, so
+# it is stamped by name in SRC at the top of this file. This comment used to
+# quote a value of its own, which had not been the live stamp for some time:
+# i18n.load reads SRC and nothing reads a comment, so there is exactly one
+# place to change and it is not here.
 #
 # The 5 names are byte-identical to chrome_sq.FOOT_LABELS[0]: the footer and
 # this list are the same 5 doors, and a service that is called two things is a
@@ -77,12 +80,13 @@ SERVICES = [
      "Klientë këtë javë, ndërsa poshtë ndërtohet puna e ngadaltë.",
      "Një tarifë fikse, kurrë një përqindje e asaj që shpenzon"),
     ("/systems/", "Software me porosi",
-     "Më datën 1 të muajit, numrat janë tashmë aty.",
+     "Një program i vetëm për të gjithë dyqanin, kështu numrat e muajit janë "
+     "tashmë aty.",
      "Stoku, punët, klientët, pagat dhe sa fitoi secila pjesë e biznesit"),
 ]
 
-# STAMP: STATS is a list of tuples too, so "src": "c27b7c6e" lives in this
-# comment for the same reason.
+# STAMP: STATS is a list of tuples too, so it is stamped by name in SRC for
+# the same reason. Not in this comment, which used to quote a stale value.
 #
 # Four figures from one Search Console export. THE FIGURES ARE THE ENGLISH
 # ONES AND THEY STAY THAT WAY: gen_home.py puts every one of them through
@@ -121,7 +125,7 @@ TRADES = [
 ]
 
 PAGE = {
-    "src": "592be2dc",
+    "src": "0614c38d",
 
     # 38 characters against the 52 the title budget leaves once gen_home.py has
     # put "minarank studio ·" in front of it. The old string claimed 39 here and
@@ -129,9 +133,9 @@ PAGE = {
     # Tirana, where "faqe interneti tirane" is the biggest Albanian query.
     "title": "agjenci dixhitale në Durrës dhe Tiranë",
     "description": "Pikërisht tani, dikush pranë teje kërkon atë që "
-                   "vetëm ti e ofron. Sigurohemi që të të gjejnë në Google, "
+                   "shet. Sigurohemi që të të gjejnë në Google, "
                    "në hartë dhe në ChatGPT. Durrës, Shqipëri.",
-    "og_desc": "Pikërisht tani, dikush pranë teje po kërkon atë që vetëm ti e ofron.",
+    "og_desc": "Pikërisht tani, dikush pranë teje po kërkon atë që shet.",
     # The language list leads with Albanian, which is the decision chrome_sq.py
     # already made for FOOT_META: the reader of this page gets his answer in
     # the first word instead of the third.
@@ -146,7 +150,11 @@ PAGE = {
     # attached to "shet", and "what you sell right now" is not the claim. The
     # second half keeps "Ne", which Albanian can drop, because the site says
     # "we" and dropping it would leave the promise with no one making it.
-    "hero_claim": "Pikërisht tani, dikush pranë teje po kërkon atë që vetëm ti e ofron.",
+    # "atë që vetëm ti e ofron" until 2026-10-24. The English dropped "only
+    # you offer" because it was flattery the reader could disprove, and this
+    # carried the same claim. "atë që shet" is the phrase SERVICES row 1
+    # already uses.
+    "hero_claim": "Pikërisht tani, dikush pranë teje po kërkon atë që shet.",
     "hero_say": "Ne sigurohemi që të të gjejnë në Google.",
     "hero_sub": "Google, harta dhe përgjigjet që japin ChatGPT dhe Gemini" + NL +
                 "kur dikush kërkon një dyqan si i yti. Punojmë në shqip," + NL +
@@ -157,9 +165,10 @@ PAGE = {
                   # Mirrors the English, which dropped the date range on 2026-10-24.
                   "{proof_directions} veta që e pyetën Google si të vinin, "
                   "në pesë muaj.",
-    # It must not name the founder: that was a deliberate edit upstream.
-    "hero_who": "<strong>Personi që lexon faqen tënde është personi që" + NL +
-                "ndërton zgjidhjen.</strong>",
+    # "hero_who" was here until 2026-10-24, mirroring the English that is now
+    # gone: the WhatsApp control sat on top of it at 390 and 360, and it came
+    # closest of anything on the page to stating team size, which rule 27 does
+    # not allow in any language.
 
     # -- proof --------------------------------------------------------------
     # Identical to chrome_sq.NAV[0], as in English: the label the reader
@@ -170,12 +179,14 @@ PAGE = {
     # The street name is a proper noun and is not translated or declined, so it
     # stays "Rruga Aleksander Goga" after "në", the way an address line does,
     # and the soft wrap is placed after it rather than inside it.
-    "proof_lead": "Iglisi Watch riparon orë dhe i shet, në Rruga Aleksander "
+    # Trimmed with the English on 2026-10-24. The street stays, for the same
+    # reason: it is what makes the claim checkable.
+    "proof_lead": "Iglisi Watch riparon dhe shet orë në Rruga Aleksander "
                   "Goga" + NL +
                   "në Durrës. Në maj nuk kishte fare faqe interneti, ndaj "
-                  "numri fillestar" + NL +
-                  "është vërtet zero. Gjithçka në këtë grafik erdhi nga "
-                  "kërkimi, jo nga një" + NL +
+                  "zeroja" + NL +
+                  "është reale. Gjithçka në këtë grafik erdhi nga kërkimi, jo "
+                  "nga një" + NL +
                   "buxhet reklamash.",
     "stat_note": "Tre muaj, 2 qershor deri më 30 gusht 2026. Search Console" + NL +
                  "raporton klikime, që nuk janë e njëjta gjë me njerëzit.",
@@ -216,11 +227,13 @@ PAGE = {
 
     # -- the businesses -----------------------------------------------------
     "ask_eyebrow": "Puna",
-    "ask_h": "Do të shohësh prova të punës sonë?",
-    "ask_note": "Këto janë bizneset për të cilat punojmë. Secila prej" + NL +
-                "këtyre faqeve është online, ndaj logot çojnë tek ato dhe "
-                "butoni çon" + NL +
-                "te ajo që ndërtuam.",
+    # The question went with the English, which answered itself two lines
+    # down. The sentence that was already doing the work moved up from
+    # ask_note, so the heading states and the note explains. The eyebrow above
+    # still carries "Prova", which is where the nav's label belongs.
+    "ask_h": "Këto janë bizneset për të cilat punojmë.",
+    "ask_note": "Secila prej këtyre faqeve është online, ndaj logot" + NL +
+                "çojnë tek ato dhe butoni çon te ajo që ndërtuam.",
     # 2 words, under the English count, and "punët" is what chrome_sq.py calls
     # the section it points at.
     "ask_go": "Shih punët",
@@ -290,14 +303,15 @@ PAGE = {
 
     # -- the refusal --------------------------------------------------------
     "who_h": "Ta themi kur përgjigjja është jo.",
+    # Trimmed with the English. The last clause stays: it is the costly signal
+    # the whole block is built on.
     "who_more": "Nëse buxheti yt për reklama është shumë i vogël sa nuk ia "
                 "vlen" + NL +
-                "të menaxhohet, ta themi në vend që ta marrim. Nëse përgjigjja "
-                "e ndershme" + NL +
-                "është se të duhet një ofertë më e mirë dhe jo marketing më i "
-                "mirë, ajo" + NL +
-                "është përgjigjja që merr, dhe është ajo që na kushton punën "
-                "më shpesh.",
+                "të menaxhohet, ta themi në vend që ta marrim. Nëse të duhet "
+                "një ofertë" + NL +
+                "më e mirë dhe jo marketing më i mirë, ajo është përgjigjja "
+                "që merr," + NL +
+                "dhe është ajo që na kushton punën më shpesh.",
     "who_go": "Si punojmë",
 
     # -- the one call to action ---------------------------------------------
@@ -305,6 +319,11 @@ PAGE = {
     # band on every Albanian page, and check 27 wants one CTA, not eighteen.
     "faq_eyebrow": "Pyetje",
     "faq_h": "Para se të dërgosh diçka",
+    # A link to #audit, the form on THIS page, and not to /audit/: the band
+    # below already offers that page and the longer form on it. The heading
+    # promises something to send and until 2026-10-24 nothing in <main> led
+    # back to it.
+    "faq_go": "Merr auditimin tënd falas",
     "faq": [
         ("Sa kushton?",
          "Nuk ka listë çmimesh. Një dyqan me 4 faqe dhe një me 400 nuk janë e" + NL +

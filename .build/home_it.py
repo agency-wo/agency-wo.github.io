@@ -35,7 +35,7 @@ that softens them has edited a claim while appearing to translate one.
 # English list is edited and this is not.
 SRC = {
     "AVAILABILITY": "868c31af",
-    "SERVICES": "b417d875",
+    "SERVICES": "8740d3d2",
     "STATS": "1f77f955",
     "TRADES": "fb762161",
 }
@@ -49,8 +49,11 @@ NL = chr(10)
 AVAILABILITY = "Prendiamo nuovi lavori adesso."
 
 # (href, name, what you end up with, what the page holds)
-# STAMP: SERVICES is a list of tuples and has nowhere to put "src": "e2792051".
-# It is recorded here instead, and check_stamp does not run on this record.
+# STAMP: SERVICES is a list of tuples and has nowhere to put a "src" key, so
+# it is stamped by name in SRC at the top of this file. This comment used to
+# quote a value of its own, which had not been the live stamp for some time:
+# i18n.load reads SRC and nothing reads a comment, so there is exactly one
+# place to change and it is not here.
 #
 # The 5 names are byte-identical to chrome_it.FOOT_LABELS[0]: the footer and
 # this list are the same 5 doors, and a service that is called two things is a
@@ -77,13 +80,14 @@ SERVICES = [
      "Clienti questa settimana, mentre sotto cresce il lavoro lento.",
      "Una tariffa fissa, mai una percentuale su quanto spendi"),
     ("/systems/", "Software su misura",
-     "Il primo del mese, i numeri sono già lì.",
+     "Un unico programma per tutto il negozio, così i numeri del mese sono "
+     "già lì.",
      "Magazzino, lavori, clienti, buste paga e quanto ha reso ogni parte "
      "dell'attività"),
 ]
 
-# STAMP: STATS is a list of tuples too, so "src": "c27b7c6e" lives in this
-# comment for the same reason.
+# STAMP: STATS is a list of tuples too, so it is stamped by name in SRC for
+# the same reason. Not in this comment, which used to quote a stale value.
 #
 # Four figures from one Search Console export. THE FIGURES ARE THE ENGLISH
 # ONES AND THEY STAY THAT WAY: gen_home.py puts every one of them through
@@ -122,17 +126,17 @@ TRADES = [
 ]
 
 PAGE = {
-    "src": "592be2dc",
+    "src": "0614c38d",
 
     # 38 characters against the 52 the title budget leaves once gen_home.py has
     # put "minarank studio ·" in front of it. The old string claimed 38 here and
     # was 58, so it rendered at 76 and was cut. Mirrors the English, which
     # dropped "presenza digitale" on 2026-10-23 for the term people search.
     "title": "agenzia digitale a Durazzo e in Italia",
-    "description": "Proprio adesso qualcuno qui vicino cerca quello che solo tu "
-                   "offri. Facciamo in modo che ti trovino su Google, sulla mappa "
+    "description": "Proprio adesso qualcuno qui vicino cerca quello che "
+                   "vendi. Facciamo in modo che ti trovino su Google, sulla mappa "
                    "e su ChatGPT. Durazzo, Albania.",
-    "og_desc": "Proprio adesso qualcuno qui vicino sta cercando quello che solo tu offri.",
+    "og_desc": "Proprio adesso qualcuno qui vicino sta cercando quello che vendi.",
     # The language list leads with Italian, which is the decision chrome_it.py
     # already made for FOOT_META: the reader of this page gets his answer in
     # the first word instead of the third.
@@ -149,7 +153,11 @@ PAGE = {
     # read as "that YOU find yourself on Google", which is the opposite of the
     # promise. The plural cannot be misread and is what Italian uses for an
     # unnamed somebody anyway.
-    "hero_claim": "Proprio adesso qualcuno qui vicino sta cercando quello che solo tu offri.",
+    # "quello che solo tu offri" until 2026-10-24. The English dropped "only
+    # you offer" because it was flattery the reader could disprove, and the
+    # Italian carried the same claim, so it goes for the same reason. "quello
+    # che vendi" is the phrase SERVICES row 1 already uses.
+    "hero_claim": "Proprio adesso qualcuno qui vicino sta cercando quello che vendi.",
     "hero_say": "Facciamo in modo che ti trovino su Google.",
     "hero_sub": "Google, la mappa e le risposte che danno ChatGPT e Gemini" + NL +
                 "quando qualcuno chiede un negozio come il tuo. Lavoriamo in" + NL +
@@ -160,12 +168,10 @@ PAGE = {
                   # Mirrors the English, which dropped the date range on 2026-10-24.
                   "{proof_directions} persone che hanno chiesto a Google come "
                   "arrivare, in cinque mesi.",
-    # It must not name the founder: that was a deliberate edit upstream. The
-    # first sentence is active ("non ti passiamo") rather than the English
-    # passive, because the Italian passive needs a participle that agrees with
-    # the reader's gender and this site does not know it.
-    "hero_who": "<strong>La persona che legge il tuo sito è la persona che" + NL +
-                "costruisce la soluzione.</strong>",
+    # "hero_who" was here until 2026-10-24, mirroring the English that is now
+    # gone: the WhatsApp control sat on top of it at 390 and 360, and it came
+    # closest of anything on the page to stating team size, which rule 27 does
+    # not allow in any language.
 
     # -- proof --------------------------------------------------------------
     # Identical to chrome_it.NAV[0], as in English: the label the reader
@@ -175,13 +181,15 @@ PAGE = {
                "questo negozio.",
     # The street name is a proper noun and is not translated or declined, so
     # the soft wrap is placed after it rather than inside it.
-    "proof_lead": "Iglisi Watch ripara orologi e li vende, in Rruga Aleksander "
+    # Trimmed with the English on 2026-10-24. The street stays, for the same
+    # reason: it is what makes the claim checkable.
+    "proof_lead": "Iglisi Watch ripara e vende orologi in Rruga Aleksander "
                   "Goga a" + NL +
-                  "Durazzo. A maggio non c'era nessun sito, quindi il numero "
-                  "di partenza è" + NL +
-                  "davvero zero. Tutto quello che c'è in questo grafico viene "
-                  "dalla ricerca," + NL +
-                  "non da un budget pubblicitario.",
+                  "Durazzo. A maggio non c'era nessun sito, quindi lo zero è "
+                  "reale." + NL +
+                  "Tutto in questo grafico viene dalla ricerca, non da un "
+                  "budget" + NL +
+                  "pubblicitario.",
     "stat_note": "Tre mesi, dal 2 giugno al 30 agosto 2026. Search Console" + NL +
                  "riporta i clic, che non sono la stessa cosa delle persone.",
     # Read aloud in place of the chart. "le volte in cui il sito è stato
@@ -223,11 +231,16 @@ PAGE = {
 
     # -- the businesses -----------------------------------------------------
     "ask_eyebrow": "Il lavoro",
-    "ask_h": "Vuoi vedere le prove del nostro lavoro?",
-    "ask_note": "Queste sono le attività per cui lavoriamo. Ognuno di" + NL +
-                "questi siti è online, quindi i loghi portano a loro e il "
-                "pulsante porta" + NL +
-                "a quello che abbiamo costruito.",
+    # The question went with the English, which answered itself two lines
+    # down. The sentence that was already doing the work moved up from
+    # ask_note, so the heading states and the note explains, and the page
+    # stops saying the same thing three times. It costs the reuse of the nav's
+    # "Prove" inside this heading; the eyebrow above it still carries that
+    # word, which is where the label the reader clicked actually belongs.
+    "ask_h": "Queste sono le attività per cui lavoriamo.",
+    "ask_note": "Ognuno di questi siti è online, quindi i loghi" + NL +
+                "portano a loro e il pulsante porta a quello che abbiamo "
+                "costruito.",
     # 3 words, like the English, and "lavori" is what chrome_it.py calls the
     # section it points at.
     "ask_go": "Vedi i lavori",
@@ -297,13 +310,15 @@ PAGE = {
 
     # -- the refusal --------------------------------------------------------
     "who_h": "Te lo diciamo quando la risposta è no.",
+    # Trimmed with the English. The last clause stays: it is the costly signal
+    # the whole block is built on.
     "who_more": "Se il tuo budget pubblicitario è troppo piccolo perché valga "
                 "la pena" + NL +
-                "gestirlo, te lo diciamo invece di prenderlo. Se la risposta "
-                "onesta è che ti" + NL +
-                "serve un'offerta migliore e non un marketing migliore, è "
-                "quella la risposta" + NL +
-                "che ricevi, ed è quella che più spesso ci costa il lavoro.",
+                "gestirlo, te lo diciamo invece di prenderlo. Se ti serve "
+                "un'offerta" + NL +
+                "migliore e non un marketing migliore, è quella la risposta "
+                "che ricevi," + NL +
+                "ed è quella che più spesso ci costa il lavoro.",
     "who_go": "Come lavoriamo",
 
     # -- the one call to action ---------------------------------------------
@@ -311,6 +326,11 @@ PAGE = {
     # band on every Italian page, and check 27 wants one CTA, not eighteen.
     "faq_eyebrow": "Domande",
     "faq_h": "Prima di mandare qualcosa",
+    # A link to #audit, the form on THIS page, and not to /audit/: the band
+    # below already offers that page and the longer form on it. The heading
+    # promises something to send and until 2026-10-24 nothing in <main> led
+    # back to it.
+    "faq_go": "Chiedi il tuo audit gratuito",
     "faq": [
         ("Quanto costa?",
          "Non c'è un listino. Un negozio con 4 pagine e uno con 400 non sono" + NL +

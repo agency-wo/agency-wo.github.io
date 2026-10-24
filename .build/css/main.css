@@ -968,6 +968,13 @@ a[href^="tel:"] { white-space: nowrap; }
    is nicer, and the tighter one is also the one that was designed. */
 .faq .faq-q { margin-top: 0; }
 .faq .faq-item > p { margin-bottom: 0; }
+/* The homepage only, and the one link in <main> that goes to the form in the
+   hero. .faq-item:last-child already draws a bottom rule, so this sits under a
+   closed box and needs the space to read as the answer to the heading rather
+   than as a sixth question. It is .cta, the existing text-link style, and not
+   .btn: the shared band 240px below carries the button, and two buttons that
+   close the same page compete instead of agreeing. */
+.faq-end { margin-top: var(--s-6); }
 
 .payoff { margin-top: var(--s-5); font-weight: 700; display: flex;
   align-items: center; gap: var(--s-3); }
@@ -1304,16 +1311,19 @@ a[href^="tel:"] { white-space: nowrap; }
 .say-who a { color: var(--ink); text-decoration: none;
   box-shadow: inset 0 -1px 0 0 var(--edge); }
 .say-who a:hover { box-shadow: inset 0 -2px 0 0 var(--ink); }
-/* Both carry a middot before them rather than a line break, so the name and
-   what it belongs to read as one line at every width. */
-/* Non-breaking spaces, because the ordinary ones in " \00B7 " collapsed and
-   the line rendered as "Deni Tabaku ·ProAffy" with the middot stuck to the
-   business. \00A0 survives collapsing and also stops the separator wrapping
-   onto a line by itself. */
-/* A hyphen since 2026-10-24, matching shell.DOT. The non-breaking spaces stay:
-   that part of the fix was never about which character sits between them. */
-.say-client::before, .say-tr::before { content: "\00A0-\00A0";
-  color: var(--edge); }
+/* A separator between the name and the business rather than a line break, so
+   the two read as one line at every width.
+
+   This was .say-client::before { content: "\00A0-\00A0" } until 2026-10-24.
+   Both halves of that were right and stay: the character is shell.DOT's
+   hyphen, and the spaces either side are non-breaking, because the ordinary
+   ones collapsed and the line rendered as "Deni Tabaku -ProAffy" with the
+   separator stuck to the business. What was wrong was keeping it in CSS at
+   all. Generated content does not exist for anything reading the page as
+   text, so a crawler, an assistant and a copy-paste all saw
+   "Deni TabakuProAffy". gen_home.py emits the separator as a real element now
+   and this rule only colours it. */
+.say-sep { color: var(--edge); }
 .say-client { color: var(--slate); font-weight: 500; }
 .say-tr { color: var(--slate); font-weight: 400; font-style: italic; }
 
@@ -1632,7 +1642,33 @@ button.btn:disabled:hover { background: none; color: var(--ink); }
      only phone-specific rule the form needs; the rest of its rhythm belongs to
      being stacked, which starts 280px earlier. */
   .hero-af .field input { font-size: 1rem; }
-  .hero { padding-bottom: var(--pad-section); }
+  /* Both halves, where this used to set only the bottom. --pad-hero is
+     clamp(6rem, 12vh, 9rem), which on an 844px phone is 101px of nothing
+     between a 73px sticky header and the wordmark. Measured at 390: the claim
+     did not finish until y 368, so 44% of the first screen went by before the
+     page had made its case, and this padding was the largest single piece of
+     it. The desktop keeps the full 12vh: at 1440 the hero is 1488px tall and
+     the space is composition rather than waste, which is the whole reason the
+     three pad tokens exist.
+
+     72px AND NOT A TOKEN, which is deliberate and is a clearance rather than a
+     rhythm. The fixed WhatsApp control is 50px at 20px from each edge, so it
+     owns the band from y 774 to 824. Swept 48/56/64/72/80/88 against where the
+     text lines actually fall, by Range.getClientRects and not by element box:
+     at 360 everything at or below 64 puts a line of .af-lead under the control
+     and clips a word of it, and 72 is the first value clear at 430, 390 and
+     360 at once. 48px was here first and did exactly that.
+
+     Two things this does not claim. It is tuned to where one line happens to
+     land, so editing the form's lead can move it back: re-run the sweep rather
+     than trusting this number. And it only governs the page AT REST. A fixed
+     control crosses prose at some scroll position on any page that has one,
+     which was true here before any of this and is not worth chasing; what is
+     worth holding is that nothing is obscured on arrival, least of all the
+     form. The structural alternative, a 56px right gutter on the form itself,
+     was rejected: on a 360px screen it leaves the fields 272px wide, which
+     costs more than the defect. */
+  .hero { padding-block: 72px var(--pad-section); }
   .af-done { padding-left: var(--s-4); }
 
   /* The question block, tightened for a thumb. Measured at 390: the section
@@ -1731,6 +1767,18 @@ button.btn:disabled:hover { background: none; color: var(--ink); }
 
    26ch on .hero-say, 30ch here: this one carries a place name in all three
    languages and the Albanian is the longest. */
-.hero-claim { display: block; margin-top: var(--s-8);
+/* THIS element is the h1 since 2026-10-24, and .hero-title is a div. The
+   wordmark used to sit inside the h1, aria-hidden, which kept it out of the
+   accessibility tree and nowhere else: anything that reads the page as text
+   got "minarankstudio Right now, somebody nearby is searching...". A crawler,
+   an assistant and a copy-paste all read it that way, and this is the site
+   that sells being read correctly by assistants. aria-hidden hides from one
+   reader; moving the element hides it from all of them.
+
+   font-weight is declared because of the move and not as decoration. It used
+   to inherit 500 from .hero-title; as an h1 it would take the UA sheet's bold,
+   which is a heavier line than this face is drawn for at 32px. margins need no
+   declaring, tokens.css zeroes h1/h2/h3/p. */
+.hero-claim { display: block; margin-top: var(--s-8); font-weight: 500;
   font-size: clamp(1.375rem, 2.4vw, 2rem); line-height: 1.22;
   letter-spacing: -0.012em; max-width: 30ch; text-wrap: balance; }
