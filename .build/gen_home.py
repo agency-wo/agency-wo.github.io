@@ -57,6 +57,12 @@ NL = chr(10)
 # gen_cases, which solves the same problem for the case pages.
 SIZES_SHOT = "(min-width: 1000px) 370px, 90vw"
 
+# The hero plate sits in the left column of .hero-split, measured at 616px wide
+# from 1280 up. Which client it is: this whole page argues from Iglisi Watch, so
+# its site is the one a reader is most likely to go and check.
+HERO_PLATE = "iglisi-watch"
+SIZES_HERO_PLATE = "(min-width: 1000px) 616px, 90vw"
+
 
 # The facts a sentence names without retyping them, as in gen_docs.py. The two
 # generators keep their own copy of this and of txt() below rather than sharing
@@ -527,7 +533,38 @@ def render(lang):
            shell.with_720("/assets/plates/" + c["plate"][0], c["plate"][1]),
            SIZES_SHOT, c["plate"][1], c["plate"][2], c["plate"][3],
            c["name"], c["site"])
-        for c in clients)
+        for c in clients if c["slug"] != HERO_PLATE)
+
+    # The hero plate, and the reason it is in the hero at all: the left column of
+    # .hero-split measured 398px against a 771px form, so 469px of a 616px column
+    # was empty. More dead space than content, in the one part of the page a
+    # visitor reads while deciding whether to fill the form beside it.
+    #
+    # A logo is a claim that somebody is a client. A screenshot of their site is
+    # the work. That is this file's own argument, 20 lines up, and it is the
+    # answer to what is worth putting there.
+    #
+    # It LEAVES `shots` rather than appearing twice on one page. Five across
+    # three columns is 3 + 2, a pair rather than an orphan, which is the standard
+    # .marks already holds itself to. All six marks stay in the logo row, so no
+    # client is dropped from the proof.
+    #
+    # Safe here where the "town-dawn" photograph was not. LCP measures as
+    # P.hero-sub on both phone and desktop, and this starts at y 1008, below a
+    # 950px fold, so it is scrolled to rather than painted first. On a phone the
+    # columns stack and there is no void, so main.css orders it after the form
+    # and the form keeps its place.
+    hc = next(c for c in clients if c["slug"] == HERO_PLATE)
+    hero_plate = (
+        '          <figure class="plate hero-plate">\n'
+        '            <img src="%s" srcset="%s" sizes="%s" width="%d" height="%d" '
+        'alt="%s" loading="lazy" decoding="async">\n'
+        '            <figcaption>%s, %s</figcaption>\n'
+        '          </figure>'
+        % (shell.stamped("/assets/plates/" + hc["plate"][0]),
+           shell.with_720("/assets/plates/" + hc["plate"][0], hc["plate"][1]),
+           SIZES_HERO_PLATE, hc["plate"][1], hc["plate"][2], hc["plate"][3],
+           hc["name"], hc["site"]))
     # The trade strip, under the five doors inside the same band. A service is
     # an abstraction and a trade is not: a man who fixes boilers does not read
     # "SEO" and see himself, he reads "Heating" and does. Every label is a link
@@ -544,10 +581,16 @@ def render(lang):
         '                <li><a class="pill" href="%s">%s</a></li>'
         % (shell.localise("/blog/" + slug + "/", lang), label)
         for slug, label in i18n.load("home", "TRADES", lang))
-    # Between the ink proof band and the services list, which is the one seam on
-    # this page long enough to want a breath. Not in the hero: that would make
-    # it the phone LCP, and the hero already carries the wordmark and the form.
-    photo = shell.photo_figure("town-dawn", lang, indent="      ")
+    # The "town-dawn" photograph used to close this band. It came off on
+    # 2026-10-24, the second time it was called out as random, and the second
+    # time was right. A caption was the first answer and a caption does not make
+    # a mood shot an argument: a town at dawn beside a list of five services is
+    # decoration on the one page that has to argue. The file and its PHOTO_ALT
+    # and PHOTO_CAPTION entries stay put, nothing fails on an unused photograph,
+    # and the seven on the service pages are untouched. A long page is where a
+    # mood image earns its place.
+    #
+    # The hero plate, which is what went in instead, and not here: see `hero`.
 
     # The reviews, verbatim. The name links to that client's own /work/ page,
     # which is where somebody checking a quote wants to land.
@@ -584,6 +627,7 @@ def render(lang):
             <p class="status"><span class="dot" aria-hidden="true"></span>
               {fill(i18n.load("home", "AVAILABILITY", lang), lang)}</p>
           </div>
+{hero_plate}
 {audit}
         </div>
       </div>
@@ -613,7 +657,6 @@ def render(lang):
 {trades}
             </ul>
           </div>
-{photo}
         </div>
       </div>
     </section>

@@ -124,7 +124,10 @@ CLIENTS = [
                      "it will read differently when you look.",
         },
         "payoff": "From nothing to 900 clicks a quarter.",
-        "plate": ("iglisi-home.webp", 1120, 777,
+        # 568 and not 777 since 2026-10-24: this plate moved from the grid into the
+        # hero, and make_plates.py crops it to the hero band so a quarter of it is
+        # not the white top of the next section. The picture is the same picture.
+        "plate": ("iglisi-home.webp", 1120, 568,
                   "The Iglisi Watch homepage, a headline on navy beside two watches "
                   "for sale, one for men and one for women, each priced in euro and lek"),
         "services": [("/seo/", "SEO and local search"), ("/geo/", "AI search"),
@@ -262,9 +265,14 @@ CLIENTS = [
         "gsc": False,
         "stats": [],
         "payoff": "Written to win the callback.",
+        # Re-shot 2026-10-24. The old plate was from 13 August and showed a purple
+        # gradient over "The ThermoGrowth Engine"; none of that is on the site now.
+        # The alt describes what is in the new picture, which is the whole job of an
+        # alt on a screenshot of somebody else's homepage.
         "plate": ("proaffy-home.webp", 900, 625,
-                  "The ProAffy homepage, a conversion-focused layout for heating "
-                  "and cooling lead generation"),
+                  "The ProAffy homepage, a headline about answering every enquiry in "
+                  "60 seconds over a dusk photograph of an engineer at the open back "
+                  "of a work van"),
         "services": [("/meta-ads/", "Meta ads"), ("/web-design/", "Websites")],
     },
     {
@@ -316,9 +324,14 @@ CLIENTS = [
         "gsc": False,
         "stats": [],
         "payoff": "The paperwork, printed beside the price.",
+        # Re-shot 2026-10-24, and this alt was the reason to check the others. It
+        # said "a sunset photograph of the Durres pier" for weeks after that
+        # photograph had been replaced by a drawn map, which is a factual claim
+        # about a client's own homepage that had quietly stopped being true.
         "plate": ("census-properties-home.webp", 900, 625,
-                  "The Census Properties home page, a sunset photograph of the "
-                  "Durres pier behind a headline about property for sale and to rent"),
+                  "The Census Properties home page, a headline about property for "
+                  "sale and to rent beside a drawn map of Durres and its bay, over a "
+                  "search panel for zone, type and budget"),
         "services": [("/web-design/", "Websites"), ("/systems/", "Custom software")],
     },
     {

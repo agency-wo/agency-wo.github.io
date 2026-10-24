@@ -41,7 +41,7 @@ NL = chr(10)
 CLIENTS = [
     {
         "slug": "iglisi-watch",
-        "src": "33731d5d",
+        "src": "8851bc6c",
         "ask": ("riparim orësh", "Durrës"),
         # Not copy: the file and its 2 dimensions.
         "mark": [("iglisi-watch.png", 195, 22)],
@@ -145,7 +145,7 @@ CLIENTS = [
         "payoff": "Nga asgjë te 900 klikime në tremujor.",
         # Only index 3 is copy. The alt says what is in the screenshot: the
         # cards carry a price in euro and the same price in lek beside it.
-        "plate": ("iglisi-home.webp", 1120, 777,
+        "plate": ("iglisi-home.webp", 1120, 568,
                   "Ballina e Iglisi Watch, një titull mbi sfond blu të errët pranë dy "
                   "orëve në shitje, një për burra dhe një për gra, secila me çmimin në "
                   "euro dhe në lekë"),
@@ -266,7 +266,7 @@ CLIENTS = [
     },
     {
         "slug": "pro-affy",
-        "src": "2f94ed8d",
+        "src": "2ecd74d3",
         "mark": [("pro-affy.png", 28, 28), ("pro-affy-word.svg", 108, 28)],
         "name": "ProAffy",
         # Not a city. The English uses this field to say the market is the
@@ -306,14 +306,15 @@ CLIENTS = [
         "stats": [],
         "payoff": "Shkruar për ta fituar telefonatën e kthimit.",
         "plate": ("proaffy-home.webp", 900, 625,
-                  "Ballina e ProAffy, një faqosje e përqendruar te konvertimi për "
-                  "gjetjen e kontakteve në ngrohje dhe ftohje"),
+                  "Ballina e ProAffy, një titull për t'iu përgjigjur çdo kërkese "
+                  "brenda 60 sekondash mbi një fotografi në muzg të një tekniku te "
+                  "dera e hapur e një furgoni pune"),
         "services": [("/meta-ads/", "Meta ads"),
                      ("/web-design/", "Faqe interneti")],
     },
     {
         "slug": "census-properties",
-        "src": "203b75ce",
+        "src": "5a443b47",
         "mark": [("census-properties.svg", 160, 22)],
         "name": "Census Properties",
         "where": "Durrës, Shqipëri",
@@ -362,8 +363,9 @@ CLIENTS = [
         "stats": [],
         "payoff": "Letrat, të shtypura pranë çmimit.",
         "plate": ("census-properties-home.webp", 900, 625,
-                  "Ballina e Census Properties, një fotografi në perëndim e molit "
-                  "të Durrësit pas një titulli për prona në shitje dhe me qira"),
+                  "Ballina e Census Properties, një titull për prona në shitje dhe "
+                  "me qira pranë një harte të vizatuar të Durrësit dhe gjirit të "
+                  "tij, mbi një panel kërkimi për zonën, tipin dhe buxhetin"),
         "services": [("/web-design/", "Faqe interneti"),
                      ("/systems/", "Software me porosi")],
     },

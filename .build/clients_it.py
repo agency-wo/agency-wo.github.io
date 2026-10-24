@@ -40,7 +40,7 @@ NL = chr(10)
 CLIENTS = [
     {
         "slug": "iglisi-watch",
-        "src": "33731d5d",
+        "src": "8851bc6c",
         "ask": ("riparazione orologi", "Durazzo"),
         # Not copy: the file and its 2 dimensions.
         "mark": [("iglisi-watch.png", 195, 22)],
@@ -146,7 +146,7 @@ CLIENTS = [
         "payoff": "Da niente a 900 clic a trimestre.",
         # Only index 3 is copy. The alt says what is in the screenshot: the
         # cards carry a price in euro and the same price in lek beside it.
-        "plate": ("iglisi-home.webp", 1120, 777,
+        "plate": ("iglisi-home.webp", 1120, 568,
                   "La homepage di Iglisi Watch, un titolo su fondo blu notte accanto a "
                   "due orologi in vendita, uno da uomo e uno da donna, ciascuno con il "
                   "prezzo in euro e in lek"),
@@ -272,7 +272,7 @@ CLIENTS = [
     },
     {
         "slug": "pro-affy",
-        "src": "2f94ed8d",
+        "src": "2ecd74d3",
         "mark": [("pro-affy.png", 28, 28), ("pro-affy-word.svg", 108, 28)],
         "name": "ProAffy",
         # Not a city. The English uses this field to say the market is the
@@ -325,14 +325,14 @@ CLIENTS = [
         "stats": [],
         "payoff": "Scritto per farsi richiamare.",
         "plate": ("proaffy-home.webp", 900, 625,
-                  "La homepage di ProAffy, un impaginato orientato alla "
-                  "conversione per trovare contatti nel riscaldamento e nella "
-                  "climatizzazione"),
+                  "La homepage di ProAffy, un titolo sul rispondere a ogni "
+                  "richiesta in 60 secondi sopra una fotografia al crepuscolo di "
+                  "un tecnico al portellone aperto di un furgone da lavoro"),
         "services": [("/meta-ads/", "Meta ads"), ("/web-design/", "Siti web")],
     },
     {
         "slug": "census-properties",
-        "src": "203b75ce",
+        "src": "5a443b47",
         "mark": [("census-properties.svg", 160, 22)],
         "name": "Census Properties",
         "where": "Durazzo, Albania",
@@ -382,9 +382,10 @@ CLIENTS = [
         "stats": [],
         "payoff": "Le carte, stampate accanto al prezzo.",
         "plate": ("census-properties-home.webp", 900, 625,
-                  "La homepage di Census Properties, una fotografia al tramonto "
-                  "del molo di Durazzo dietro un titolo su immobili in vendita e "
-                  "in affitto"),
+                  "La homepage di Census Properties, un titolo su immobili in "
+                  "vendita e in affitto accanto a una mappa disegnata di Durazzo e "
+                  "del suo golfo, sopra un pannello di ricerca per zona, tipo e "
+                  "budget"),
         "services": [("/web-design/", "Siti web"),
                      ("/systems/", "Software su misura")],
     },

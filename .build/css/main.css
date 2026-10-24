@@ -331,6 +331,26 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
   column-gap: var(--s-9); align-items: start; }
 .hero-split .hero-say { margin-top: 0; }
 
+/* The hero plate fills what was 469px of empty left column against a 771px form.
+   Placed explicitly rather than by auto-flow: it has to sit UNDER the copy in
+   column one, while the form spans both rows in column two. Without the explicit
+   rows, auto-placement puts the plate in column two beside the copy.
+   Measured: 398px of copy + this 312px plate + its caption and margin comes to
+   about 778px against the form's 771px, so the two columns end level. */
+.hero-split > .hero-rest { grid-column: 1; grid-row: 1; }
+.hero-split > .hero-plate { grid-column: 1; grid-row: 2; margin-top: var(--s-7); }
+.hero-split > .audit { grid-column: 2; grid-row: 1 / span 2; }
+/* Stacked, there is no void to fill and the form is what the visitor came for,
+   so the plate goes BELOW it instead of pushing it another 200px down the page.
+   order, not source order, because on a desktop it has to precede the form. */
+@media (max-width: 999px) {
+  .hero-split > .hero-rest,
+  .hero-split > .hero-plate,
+  .hero-split > .audit { grid-column: 1; grid-row: auto; }
+  .hero-split > .audit { order: 2; }
+  .hero-split > .hero-plate { order: 3; margin-top: 0; }
+}
+
 /* The red rule is .check's rule, the same idiom for the same reason: this is
    the one thing on the page that takes something rather than says something.
    No border, no panel, no shadow. The site has no cards and this is not the
