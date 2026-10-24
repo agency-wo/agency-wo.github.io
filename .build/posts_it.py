@@ -7018,7 +7018,7 @@ POSTS = [
     # =============================================== INDUSTRY: HOLIDAY LETS ===
     {
         "slug": "holiday-apartments",
-        "src": "d306bcad",
+        "src": "d4b67d96",
         "ask": ("appartamenti per le vacanze", "Durazzo"),
         "date": "2026-10-07",
         "updated": "2026-10-07",
@@ -7038,7 +7038,7 @@ POSTS = [
                        "deve fare un sito per meritarsi il messaggio.",
         "og_desc": "Il portale te li ha presentati una volta. Tu paghi per "
                    "ogni soggiorno dopo.",
-        "image": ("vila-flamuri-home.webp", 900, 625,
+        "image": ("vila-flamuri-home.webp", 900, 531,
                   "La homepage di un sito di appartamenti per vacanze, con "
                   "una fotografia della casa e una barra che chiede le date "
                   "di arrivo",
@@ -7133,7 +7133,7 @@ POSTS = [
     # =================================================== INDUSTRY: PROPERTY ===
     {
         "slug": "estate-agency-website",
-        "src": "da2ddde3",
+        "src": "61291c04",
         "date": "2026-10-07",
         "updated": "2026-10-07",
         "topic": "Siti web",
@@ -7151,7 +7151,7 @@ POSTS = [
                        "perché il portale li ha tutti. Può invece pubblicare "
                        "cosa è stato controllato, e cosa no.",
         "og_desc": "Il portale ha gli annunci. Non ha i documenti.",
-        "image": ("census-properties-home.webp", 900, 625,
+        "image": ("census-properties-home.webp", 900, 531,
                   "La homepage di un sito di agenzia immobiliare, con una "
                   "fotografia al tramonto del golfo dietro un titolo su "
                   "immobili in vendita e in affitto",

@@ -6892,7 +6892,7 @@ POSTS = [
                        "site has to do to earn the message instead.",
         "og_desc": "The portal introduced them once. You pay for every stay "
                    "after that.",
-        "image": ("vila-flamuri-home.webp", 900, 625,
+        "image": ("vila-flamuri-home.webp", 900, 531,
                   "The home page of a holiday apartment site, with a "
                   "photograph of the house and a bar asking for arrival dates",
                   "Vila Flamuri, vilaflamuri.com"),
@@ -7002,7 +7002,7 @@ POSTS = [
                        "has been checked, and what has not.",
         "og_desc": "The portal has the listings. It does not have the "
                    "documents.",
-        "image": ("census-properties-home.webp", 900, 625,
+        "image": ("census-properties-home.webp", 900, 531,
                   "The home page of an estate agency site, with a sunset "
                   "photograph of the bay behind a headline about property for "
                   "sale and to rent",

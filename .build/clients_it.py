@@ -40,7 +40,7 @@ NL = chr(10)
 CLIENTS = [
     {
         "slug": "iglisi-watch",
-        "src": "98b9c4f2",
+        "src": "9bf7f05a",
         "ask": ("riparazione orologi", "Durazzo"),
         # Not copy: the file and its 2 dimensions.
         "mark": [("iglisi-watch.png", 195, 22)],
@@ -146,7 +146,7 @@ CLIENTS = [
         "payoff": "Da niente a 900 clic a trimestre.",
         # Only index 3 is copy. The alt says what is in the screenshot: the
         # cards carry a price in euro and the same price in lek beside it.
-        "plate": ("iglisi-home.webp", 900, 625,
+        "plate": ("iglisi-home.webp", 900, 531,
                   "La homepage di Iglisi Watch, un titolo su fondo blu notte accanto a "
                   "due orologi in vendita, uno da uomo e uno da donna, ciascuno con il "
                   "prezzo in euro e in lek"),
@@ -157,7 +157,7 @@ CLIENTS = [
     },
     {
         "slug": "victoria-boutique",
-        "src": "f4735470",
+        "src": "63632295",
         "mark": [("victoria-boutique.svg", 204, 22)],
         "name": "Victoria Boutique",
         "where": "Durazzo, Albania",
@@ -207,7 +207,7 @@ CLIENTS = [
         "payoff": "Il negozio aggiorna da solo il sito.",
         # The screenshot is the hero: the wordmark in a serif, a photograph of
         # the shop with the mannequins in the window, and 2 buttons.
-        "plate": ("victoria-home.webp", 900, 625,
+        "plate": ("victoria-home.webp", 900, 531,
                   "La homepage di Victoria Boutique, il marchio su fondo calce accanto a "
                   "una camicetta greca ricamata, con un meandro a separarli"),
         "services": [("/web-design/", "Siti web"),
@@ -215,7 +215,7 @@ CLIENTS = [
     },
     {
         "slug": "intimo-bruna",
-        "src": "95e51e5f",
+        "src": "85d1d86f",
         "mark": [("intimo-bruna.svg", 200, 26)],
         "name": "Intimo Bruna",
         "where": "Durazzo, Albania",
@@ -264,7 +264,7 @@ CLIENTS = [
         # The English used to claim this screenshot showed product categories
         # and it does not. What is in it: a photograph of the inside of the
         # shop, the logo on a dark card over it, and a headline.
-        "plate": ("bruna-home.webp", 900, 625,
+        "plate": ("bruna-home.webp", 900, 531,
                   "La homepage di Intimo Bruna, un titolo su fondo lino accanto alla "
                   "fotografia di reggiseni in tonalita naturali"),
         "services": [("/web-design/", "Siti web"),
@@ -272,7 +272,7 @@ CLIENTS = [
     },
     {
         "slug": "pro-affy",
-        "src": "2ecd74d3",
+        "src": "0bf04868",
         "mark": [("pro-affy.png", 28, 28), ("pro-affy-word.svg", 108, 28)],
         "name": "ProAffy",
         # Not a city. The English uses this field to say the market is the
@@ -324,7 +324,7 @@ CLIENTS = [
         "gsc": False,
         "stats": [],
         "payoff": "Scritto per farsi richiamare.",
-        "plate": ("proaffy-home.webp", 900, 625,
+        "plate": ("proaffy-home.webp", 900, 531,
                   "La homepage di ProAffy, un titolo sul rispondere a ogni "
                   "richiesta in 60 secondi sopra una fotografia al crepuscolo di "
                   "un tecnico al portellone aperto di un furgone da lavoro"),
@@ -332,7 +332,7 @@ CLIENTS = [
     },
     {
         "slug": "census-properties",
-        "src": "5a443b47",
+        "src": "98a1dc71",
         "mark": [("census-properties.svg", 160, 22)],
         "name": "Census Properties",
         "where": "Durazzo, Albania",
@@ -381,7 +381,7 @@ CLIENTS = [
         "gsc": False,
         "stats": [],
         "payoff": "Le carte, stampate accanto al prezzo.",
-        "plate": ("census-properties-home.webp", 900, 625,
+        "plate": ("census-properties-home.webp", 900, 531,
                   "La homepage di Census Properties, un titolo su immobili in "
                   "vendita e in affitto accanto a una mappa disegnata di Durazzo e "
                   "del suo golfo, sopra un pannello di ricerca per zona, tipo e "
@@ -391,7 +391,7 @@ CLIENTS = [
     },
     {
         "slug": "vila-flamuri",
-        "src": "b855c017",
+        "src": "3b91aa53",
         "mark": [("vila-flamuri.svg", 244, 22)],
         "name": "Vila Flamuri",
         "where": "Golem, Albania",
@@ -439,7 +439,7 @@ CLIENTS = [
         "gsc": False,
         "stats": [],
         "payoff": "Una prenotazione su cui nessuno prende una quota.",
-        "plate": ("vila-flamuri-home.webp", 900, 625,
+        "plate": ("vila-flamuri-home.webp", 900, 531,
                   "La homepage di Vila Flamuri, una fotografia della villa dietro "
                   "cespugli fioriti accanto a una barra che chiede le date di "
                   "arrivo"),

@@ -54,23 +54,34 @@ OUT = os.path.join(ROOT, "assets", "plates")
 SMALL = 720
 QUALITY = 82
 
-# slug -> (width of the top rung, how much of the 2000px master to keep)
+# slug -> (width of the top rung, how tall a window of the 2000px master, how far
+# down that window starts)
 #
-# All six keep the whole frame, which at 900 wide is exactly 900x625, the ratio
-# every plate in the grid has. They show the hero and the top edge of whatever
-# follows it, which is what a browser shows.
+# ONE RATIO for all six, because a grid of six wants one, but the window is placed
+# per site because the sites do not agree on where their hero ends. Measured off
+# the masters on 2026-10-24, as the row where the page's background changes:
 #
-# Iglisi was briefly (1120, 1460), cropped to its hero band and wider, for the one
-# day it sat in the homepage hero instead of the grid. It is back in the grid with
-# the other five, and a grid of six wants one ratio, so it is back to the same
-# frame as the rest.
+#     iglisi 1468   census ~1519   bruna 1560   proaffy 1628
+#     victoria: its two buttons reach 1708      vila flamuri 1767
+#
+# The whole frame was shipped until now, and Iglisi's plate was 27% white as a
+# result: its hero ends at 1468 of 2000 and the rest is the top of the next
+# section. A 1700px window cuts that to 14%, which reads as the page continuing
+# rather than as a broken screenshot.
+#
+# 1700 and not tighter because of Victoria. Its clay CTA buttons sit at 1708, so
+# any window short enough to frame Iglisi cleanly cuts Victoria's buttons off,
+# and a plate that loses the client's call to action is worse than one with some
+# white in it. Victoria takes a 20px offset to bring 1708 inside with a margin,
+# which costs 1% off the top of its nav and nothing else.
+WINDOW = 1700
 PLATES = {
-    "iglisi-home": (900, None),
-    "victoria-home": (900, None),
-    "bruna-home": (900, None),
-    "proaffy-home": (900, None),
-    "census-properties-home": (900, None),
-    "vila-flamuri-home": (900, None),
+    "iglisi-home": (900, WINDOW, 0),
+    "victoria-home": (900, WINDOW, 20),
+    "bruna-home": (900, WINDOW, 0),
+    "proaffy-home": (900, WINDOW, 0),
+    "census-properties-home": (900, WINDOW, 0),
+    "vila-flamuri-home": (900, WINDOW, 0),
 }
 
 
@@ -95,7 +106,7 @@ def main(argv):
         return 1
 
     for slug in sorted(PLATES):
-        width, keep = PLATES[slug]
+        width, keep, top = PLATES[slug]
         src = os.path.join(SRC, slug + ".png")
         wide = os.path.join(OUT, slug + ".webp")
         small = os.path.join(OUT, "%s-720.webp" % slug)
@@ -105,7 +116,11 @@ def main(argv):
             continue
         im = Image.open(src).convert("RGB")
         if keep:
-            im = im.crop((0, 0, im.width, keep))
+            if top + keep > im.height:
+                print("  %-24s window %d..%d runs past the %dpx master"
+                      % (slug, top, top + keep, im.height))
+                return 1
+            im = im.crop((0, top, im.width, top + keep))
         a = encode(im.copy(), wide, width)
         b = encode(im.copy(), small, SMALL)
         print("  %-24s %dx%d %d KB  +  %dx%d %d KB"

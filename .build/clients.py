@@ -124,10 +124,11 @@ CLIENTS = [
                      "it will read differently when you look.",
         },
         "payoff": "From nothing to 900 clicks a quarter.",
-        # 900x625, the same frame as the other five. It was 1120x568 for the one day
-        # this plate sat in the homepage hero and wanted a tighter crop; back in the
-        # grid, a grid of six wants one ratio.
-        "plate": ("iglisi-home.webp", 900, 625,
+        # 900x531, the same frame as the other five. This is the plate the window in
+        # make_plates.py exists for: Iglisi's hero ends at 1468 of a 2000px master and
+        # the rest is the white top of the next section, so shipping the whole frame
+        # made a quarter of this picture empty.
+        "plate": ("iglisi-home.webp", 900, 531,
                   "The Iglisi Watch homepage, a headline on navy beside two watches "
                   "for sale, one for men and one for women, each priced in euro and lek"),
         "services": [("/seo/", "SEO and local search"), ("/geo/", "AI search"),
@@ -172,7 +173,7 @@ CLIENTS = [
         "gsc": False,
         "stats": [],
         "payoff": "The shop updates its own website.",
-        "plate": ("victoria-home.webp", 900, 625,
+        "plate": ("victoria-home.webp", 900, 531,
                   "The Victoria Boutique homepage, the wordmark set on limewash beside a "
                   "Greek embroidered blouse, a meander running down between them"),
         "services": [("/web-design/", "Websites"), ("/systems/", "Custom software")],
@@ -222,7 +223,7 @@ CLIENTS = [
         # which is not a thing a visitor with images off needs told. Rule 33
         # asks for real alt text and describing furniture that is not on the
         # page is worse than describing nothing.
-        "plate": ("bruna-home.webp", 900, 625,
+        "plate": ("bruna-home.webp", 900, 531,
                   "The Intimo Bruna homepage, a headline on linen beside a photograph of "
                   "bras in natural tones"),
         "services": [("/web-design/", "Websites"), ("/systems/", "Custom software")],
@@ -269,7 +270,7 @@ CLIENTS = [
         # gradient over "The ThermoGrowth Engine"; none of that is on the site now.
         # The alt describes what is in the new picture, which is the whole job of an
         # alt on a screenshot of somebody else's homepage.
-        "plate": ("proaffy-home.webp", 900, 625,
+        "plate": ("proaffy-home.webp", 900, 531,
                   "The ProAffy homepage, a headline about answering every enquiry in "
                   "60 seconds over a dusk photograph of an engineer at the open back "
                   "of a work van"),
@@ -328,7 +329,7 @@ CLIENTS = [
         # said "a sunset photograph of the Durres pier" for weeks after that
         # photograph had been replaced by a drawn map, which is a factual claim
         # about a client's own homepage that had quietly stopped being true.
-        "plate": ("census-properties-home.webp", 900, 625,
+        "plate": ("census-properties-home.webp", 900, 531,
                   "The Census Properties home page, a headline about property for "
                   "sale and to rent beside a drawn map of Durres and its bay, over a "
                   "search panel for zone, type and budget"),
@@ -381,7 +382,7 @@ CLIENTS = [
         "gsc": False,
         "stats": [],
         "payoff": "A booking nobody takes a cut of.",
-        "plate": ("vila-flamuri-home.webp", 900, 625,
+        "plate": ("vila-flamuri-home.webp", 900, 531,
                   "The Vila Flamuri home page, a photograph of the villa behind "
                   "flowering shrubs beside a bar asking for arrival dates"),
         "services": [("/web-design/", "Websites"), ("/seo/", "SEO and local search")],

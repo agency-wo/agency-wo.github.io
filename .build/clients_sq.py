@@ -41,7 +41,7 @@ NL = chr(10)
 CLIENTS = [
     {
         "slug": "iglisi-watch",
-        "src": "98b9c4f2",
+        "src": "9bf7f05a",
         "ask": ("riparim orësh", "Durrës"),
         # Not copy: the file and its 2 dimensions.
         "mark": [("iglisi-watch.png", 195, 22)],
@@ -145,7 +145,7 @@ CLIENTS = [
         "payoff": "Nga asgjë te 900 klikime në tremujor.",
         # Only index 3 is copy. The alt says what is in the screenshot: the
         # cards carry a price in euro and the same price in lek beside it.
-        "plate": ("iglisi-home.webp", 900, 625,
+        "plate": ("iglisi-home.webp", 900, 531,
                   "Ballina e Iglisi Watch, një titull mbi sfond blu të errët pranë dy "
                   "orëve në shitje, një për burra dhe një për gra, secila me çmimin në "
                   "euro dhe në lekë"),
@@ -156,7 +156,7 @@ CLIENTS = [
     },
     {
         "slug": "victoria-boutique",
-        "src": "f4735470",
+        "src": "63632295",
         "mark": [("victoria-boutique.svg", 204, 22)],
         "name": "Victoria Boutique",
         "where": "Durrës, Shqipëri",
@@ -200,7 +200,7 @@ CLIENTS = [
         "payoff": "Dyqani e përditëson vetë faqen.",
         # The screenshot is the hero: the wordmark in a serif, a photograph of
         # the shop with the mannequins in the window, and 2 buttons.
-        "plate": ("victoria-home.webp", 900, 625,
+        "plate": ("victoria-home.webp", 900, 531,
                   "Ballina e Victoria Boutique, marka mbi sfond gëlqereje pranë një bluze "
                   "greke të qëndisur, me një meandër që i ndan"),
         "services": [("/web-design/", "Faqe interneti"),
@@ -208,7 +208,7 @@ CLIENTS = [
     },
     {
         "slug": "intimo-bruna",
-        "src": "95e51e5f",
+        "src": "85d1d86f",
         "mark": [("intimo-bruna.svg", 200, 26)],
         "name": "Intimo Bruna",
         "where": "Durrës, Shqipëri",
@@ -258,7 +258,7 @@ CLIENTS = [
         # the logo on a dark card over it, and a headline. "brenda dyqanit"
         # rather than "e brendshme", which is this shop's own word for what it
         # sells and would read as a photograph of the underwear.
-        "plate": ("bruna-home.webp", 900, 625,
+        "plate": ("bruna-home.webp", 900, 531,
                   "Ballina e Intimo Bruna, një titull mbi sfond liri pranë fotografisë së "
                   "sytjenave në ngjyra natyrale"),
         "services": [("/web-design/", "Faqe interneti"),
@@ -266,7 +266,7 @@ CLIENTS = [
     },
     {
         "slug": "pro-affy",
-        "src": "2ecd74d3",
+        "src": "0bf04868",
         "mark": [("pro-affy.png", 28, 28), ("pro-affy-word.svg", 108, 28)],
         "name": "ProAffy",
         # Not a city. The English uses this field to say the market is the
@@ -305,7 +305,7 @@ CLIENTS = [
         "gsc": False,
         "stats": [],
         "payoff": "Shkruar për ta fituar telefonatën e kthimit.",
-        "plate": ("proaffy-home.webp", 900, 625,
+        "plate": ("proaffy-home.webp", 900, 531,
                   "Ballina e ProAffy, një titull për t'iu përgjigjur çdo kërkese "
                   "brenda 60 sekondash mbi një fotografi në muzg të një tekniku te "
                   "dera e hapur e një furgoni pune"),
@@ -314,7 +314,7 @@ CLIENTS = [
     },
     {
         "slug": "census-properties",
-        "src": "5a443b47",
+        "src": "98a1dc71",
         "mark": [("census-properties.svg", 160, 22)],
         "name": "Census Properties",
         "where": "Durrës, Shqipëri",
@@ -362,7 +362,7 @@ CLIENTS = [
         "gsc": False,
         "stats": [],
         "payoff": "Letrat, të shtypura pranë çmimit.",
-        "plate": ("census-properties-home.webp", 900, 625,
+        "plate": ("census-properties-home.webp", 900, 531,
                   "Ballina e Census Properties, një titull për prona në shitje dhe "
                   "me qira pranë një harte të vizatuar të Durrësit dhe gjirit të "
                   "tij, mbi një panel kërkimi për zonën, tipin dhe buxhetin"),
@@ -371,7 +371,7 @@ CLIENTS = [
     },
     {
         "slug": "vila-flamuri",
-        "src": "b855c017",
+        "src": "3b91aa53",
         "mark": [("vila-flamuri.svg", 244, 22)],
         "name": "Vila Flamuri",
         "where": "Golem, Shqipëri",
@@ -416,7 +416,7 @@ CLIENTS = [
         "gsc": False,
         "stats": [],
         "payoff": "Një rezervim nga i cili nuk merr pjesë askush.",
-        "plate": ("vila-flamuri-home.webp", 900, 625,
+        "plate": ("vila-flamuri-home.webp", 900, 531,
                   "Ballina e Vila Flamuri, një fotografi e vilës pas shkurreve me "
                   "lule pranë një shiriti që kërkon datat e mbërritjes"),
         "services": [("/web-design/", "Faqe interneti"),
