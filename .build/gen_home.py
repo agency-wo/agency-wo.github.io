@@ -528,6 +528,22 @@ def render(lang):
            SIZES_SHOT, c["plate"][1], c["plate"][2], c["plate"][3],
            c["name"], c["site"])
         for c in clients)
+    # The trade strip, under the five doors inside the same band. A service is
+    # an abstraction and a trade is not: a man who fixes boilers does not read
+    # "SEO" and see himself, he reads "Heating" and does. Every label is a link
+    # to the post written for that trade, so finding himself and reading about
+    # himself are one click, not two.
+    #
+    # Inside `services` and not a section of its own: the page is at its cap of
+    # MAX_HOME_SECTIONS and verify.py also requires all 3 languages to report
+    # the same count, so a 9th here would fail twice.
+    #
+    # The slug is assembled into a path once, here, rather than stored as an
+    # href in 3 files.
+    trades = NL.join(
+        '                <li><a class="pill" href="%s">%s</a></li>'
+        % (shell.localise("/blog/" + slug + "/", lang), label)
+        for slug, label in i18n.load("home", "TRADES", lang))
     # Between the ink proof band and the services list, which is the one seam on
     # this page long enough to want a breath. Not in the hero: that would make
     # it the phone LCP, and the hero already carries the wordmark and the form.
@@ -591,6 +607,12 @@ def render(lang):
           <ul class="svc-list" data-reveal-group>
 {svc}
           </ul>
+          <div class="trades" data-reveal>
+            <p class="trades-lead">{fill(h["trades_lead"], lang)}</p>
+            <ul class="trade-list">
+{trades}
+            </ul>
+          </div>
 {photo}
         </div>
       </div>
@@ -670,7 +692,6 @@ def render(lang):
             </figure>
 
             <p>{txt(12, h["proof_p1"], lang)}</p>
-            <p>{txt(12, h["proof_p2"], lang)}</p>
             <div class="check">
               <p>{txt(14, h["check"], lang)}</p>
               <p class="taken">{txt(14, h["taken"], lang)}</p>

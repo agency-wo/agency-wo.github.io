@@ -37,7 +37,8 @@ that softens them has edited a claim while appearing to translate one.
 SRC = {
     "AVAILABILITY": "868c31af",
     "SERVICES": "b417d875",
-    "STATS": "c27b7c6e",
+    "STATS": "1f77f955",
+    "TRADES": "fb762161",
 }
 
 NL = chr(10)
@@ -95,12 +96,32 @@ SERVICES = [
 STATS = [
     ("900", "klikime nga Google"),
     ("82k", "herë e shfaqur"),
-    ("8.8", "pozicioni mesatar"),
-    ("1.1%", "përqindja e klikimeve"),
+]
+
+# TRADES is a list of tuples, so it is stamped by name in SRC above and not
+# inline. Only the labels are this file's. The slug is the same in all 3 languages, and
+# these are the words a tradesman in Durres uses for his own trade rather than a
+# translation of the English one.
+TRADES = [
+    ("watch-shops-and-jewellers", "Dyqane orësh"),
+    ("fashion-boutiques", "Butike"),
+    ("lingerie-shops", "Të brendshme"),
+    ("hairdressers-and-salons", "Parukeri"),
+    ("restaurants-and-cafes", "Restorante"),
+    ("hotels-and-guesthouses", "Hotele"),
+    ("holiday-apartments", "Apartamente pushimi"),
+    ("dentists-and-clinics", "Dentistë"),
+    ("lawyers-and-notaries", "Avokatë dhe noterë"),
+    ("estate-agents", "Agjenci pasurish"),
+    ("car-repair-and-garages", "Servise makinash"),
+    ("heating-and-cooling-trades", "Ngrohje dhe ftohje"),
+    ("builders-and-contractors", "Ndërtim"),
+    ("gyms-and-fitness-studios", "Palestra"),
+    ("taxis-and-transfers", "Taksi dhe transfer"),
 ]
 
 PAGE = {
-    "src": "df71c5d4",
+    "src": "3aba2cf7",
 
     # 38 characters against the 52 the title budget leaves once gen_home.py has
     # put "minarank studio ·" in front of it. The old string claimed 39 here and
@@ -176,11 +197,8 @@ PAGE = {
     # Rule 22. Both bad numbers stay, and so does the sentence that says a 1,1%
     # click rate is what the bottom of the first page pays. Nothing here is
     # hedged, softened or moved into a subordinate clause.
-    "proof_p2": "Pozicioni 8,8 është fundi i faqes së parë. Në 4 javët e "
-                  "fundit ra" + NL +
-                  "në 9,7 ndërsa përqindja e klikimeve u ngrit në 1,4%. Më "
-                  "shumë kërkime" + NL +
-                  "po e gjejnë dyqanin, jo më pak.",
+    # "proof_p2" answered the English paragraph that came off the page on
+    # 2026-10-24. Both figures it needed are now only on /work/iglisi-watch/.
     # The dare, and it has to be an instruction an Albanian speaker would
     # actually follow, so the two searches are typed the way they get typed:
     # "riparim orësh Durrës" and "dyqan orësh Durrës".
@@ -194,6 +212,7 @@ PAGE = {
     # -- the five doors -----------------------------------------------------
     "services_eyebrow": "Çfarë bëjmë",
     "services_h": "Pesë mënyra për t'u gjetur më lehtë.",
+    "trades_lead": "Gjej zanatin tënd.",
 
     # -- the businesses -----------------------------------------------------
     "ask_eyebrow": "Puna",
@@ -248,11 +267,9 @@ PAGE = {
     # "ndalen te" rather than "tregojnë": the marks now sit four sections above
     # this line, so the English stopped dismissing what the page shows.
     "open_p2": "Shumica e agjencive ndalen te një mur me logo. Ne tregojmë" + NL +
-               "eksportin e Search Console, përfshirë pozicionin mesatar 8,8 dhe "
-               "përqindjen" + NL +
-               "e klikimeve prej 1,1%, që askush nuk do t'i zgjidhte për botim. Një "
-               "shifër" + NL +
-               "që nuk e verifikon dot nuk vlen asgjë.",
+               "eksportin e Search Console, kolonat e dobëta përfshirë, që askush" + NL +
+               "nuk do t'i zgjidhte për botim. Një shifër që nuk e verifikon dot" + NL +
+               "nuk vlen asgjë.",
     # "në emrin tënd" is the phrase an Albanian reader knows from a utility
     # contract or a domain registration: administrative and checkable, which is
     # the register this promise needs.

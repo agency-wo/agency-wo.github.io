@@ -247,6 +247,12 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
 
 .svc-list a:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
 
+.trades { margin-top: var(--s-7); }
+
+.trades-lead { margin: 0 0 var(--s-4); color: var(--slate); font-weight: 500; }
+.trade-list { list-style: none; margin: 0; padding: 0;
+  display: flex; flex-wrap: wrap; gap: var(--s-2); }
+
 .proof { padding-block: 0; }
 .proof-head > p { max-width: 62ch; }
 .proof-head h2 { max-width: 20ch; margin-bottom: var(--s-5); }

@@ -7205,6 +7205,16 @@ INDUSTRY = {
     "car-repair-and-garages",
     "estate-agents",
     "taxis-and-transfers",
+    # The four below were written as trade posts and never added here, so the
+    # blog's own "Your trade" filter returned 11 of the 15 that exist and the
+    # other 4 carried no trade marker. Found on 2026-10-24 while building the
+    # homepage trade strip, which reads this set: a builder, a gym owner, a
+    # landlord and a lawyer each have a page here and none of them could find
+    # it by filtering for his own trade.
+    "builders-and-contractors",
+    "gyms-and-fitness-studios",
+    "holiday-apartments",
+    "lawyers-and-notaries",
 }
 
 # Where "Read next" goes, for the posts where it is a decision rather than an

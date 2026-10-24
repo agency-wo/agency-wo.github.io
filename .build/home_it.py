@@ -36,7 +36,8 @@ that softens them has edited a claim while appearing to translate one.
 SRC = {
     "AVAILABILITY": "868c31af",
     "SERVICES": "b417d875",
-    "STATS": "c27b7c6e",
+    "STATS": "1f77f955",
+    "TRADES": "fb762161",
 }
 
 NL = chr(10)
@@ -96,12 +97,32 @@ SERVICES = [
 STATS = [
     ("900", "clic da Google"),
     ("82k", "volte mostrato"),
-    ("8.8", "posizione media"),
-    ("1.1%", "percentuale di clic"),
+]
+
+# TRADES is a list of tuples, so it is stamped by name in SRC above and not
+# inline. Only the labels are this file's. The slug is the same in all 3 languages, and
+# these are the words a tradesman in Lombardy uses for his own trade rather than
+# a translation of the English one: "Termoidraulica" is the trade, not "heating".
+TRADES = [
+    ("watch-shops-and-jewellers", "Orologerie"),
+    ("fashion-boutiques", "Boutique"),
+    ("lingerie-shops", "Intimo"),
+    ("hairdressers-and-salons", "Parrucchieri"),
+    ("restaurants-and-cafes", "Ristoranti"),
+    ("hotels-and-guesthouses", "Hotel"),
+    ("holiday-apartments", "Case vacanza"),
+    ("dentists-and-clinics", "Dentisti"),
+    ("lawyers-and-notaries", "Avvocati e notai"),
+    ("estate-agents", "Agenzie immobiliari"),
+    ("car-repair-and-garages", "Officine"),
+    ("heating-and-cooling-trades", "Termoidraulica"),
+    ("builders-and-contractors", "Edilizia"),
+    ("gyms-and-fitness-studios", "Palestre"),
+    ("taxis-and-transfers", "Taxi e transfer"),
 ]
 
 PAGE = {
-    "src": "df71c5d4",
+    "src": "3aba2cf7",
 
     # 38 characters against the 52 the title budget leaves once gen_home.py has
     # put "minarank studio ·" in front of it. The old string claimed 38 here and
@@ -183,11 +204,8 @@ PAGE = {
     # Rule 22. Both bad numbers stay, and so does the sentence that says a 1,1%
     # click rate is what the bottom of the first page pays. Nothing here is
     # hedged, softened or moved into a subordinate clause.
-    "proof_p2": "La posizione 8,8 è il fondo della prima pagina. Nelle ultime "
-                  "4 settimane" + NL +
-                  "è scesa a 9,7 mentre la percentuale di clic saliva "
-                  "all'1,4%. Sono più" + NL +
-                  "ricerche a trovare il negozio, non meno.",
+    # "proof_p2" answered the English paragraph that came off the page on
+    # 2026-10-24. Both figures it needed are now only on /work/iglisi-watch/.
     # The dare, and it has to be an instruction an Italian speaker would
     # actually follow, so the two searches are typed the way they get typed:
     # "riparazione orologi Durazzo" and "negozio di orologi Durazzo".
@@ -201,6 +219,7 @@ PAGE = {
     # -- the five doors -----------------------------------------------------
     "services_eyebrow": "Cosa facciamo",
     "services_h": "Cinque modi per farti trovare più facilmente.",
+    "trades_lead": "Trova il tuo settore.",
 
     # -- the businesses -----------------------------------------------------
     "ask_eyebrow": "Il lavoro",
@@ -254,11 +273,9 @@ PAGE = {
     # "si fermano a" rather than "mostrano": the marks now sit four sections
     # above this line, so the English stopped dismissing what the page shows.
     "open_p2": "Quasi tutte le agenzie si fermano a un muro di loghi. Noi mostriamo" + NL +
-               "l'export di Search Console, compresa la posizione media 8,8 e la "
-               "percentuale" + NL +
-               "di clic dell'1,1%, che nessuno sceglierebbe di pubblicare. Un dato "
-               "che non" + NL +
-               "puoi verificare non vale niente.",
+               "l'export di Search Console, colonne deboli comprese, che nessuno" + NL +
+               "sceglierebbe di pubblicare. Un dato che non puoi verificare non vale" + NL +
+               "niente.",
     # "a tuo nome" is the phrase an Italian reader recognises from a utility
     # contract or a domain registration, which is exactly the register this
     # promise needs: administrative and checkable, not reassuring.

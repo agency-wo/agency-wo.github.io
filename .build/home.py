@@ -47,14 +47,52 @@ SERVICES = [
      "Stock, jobs, customers, payroll, and what each part of the business earned"),
 ]
 
-# Four numbers from one Search Console export, with the label each one needs to
+# Two numbers from one Search Console export, with the label each one needs to
 # mean anything. The figures are stated again in the paragraphs underneath, so
 # an edit here is an edit there.
+#
+# Four until 2026-10-24. "8.8 average position" and "1.1% click rate" came off
+# this page, not because they are weak but because they are the two a shop owner
+# has to be taught before they mean anything: one is a rank where lower is
+# better, the other a ratio of two numbers he has not been given. Both still
+# stand in full on /work/iglisi-watch/, with the 28-day view beside them, which
+# is where a reader who wants the fourth column has gone looking for it.
+# Clicks and times-shown need no translating, and they are the two that carry
+# the argument.
 STATS = [
     ("900", "clicks from Google"),
     ("82k", "times shown"),
-    ("8.8", "average position"),
-    ("1.1%", "click rate"),
+]
+
+# The trades, each linking to the post written for it. The homepage says what we
+# offer in five doors, and a door is still an abstraction: a man who fixes boilers
+# does not read "SEO" and see himself, he reads "Heating" and does.
+#
+# Slugs, not hrefs, because the path is assembled once in gen_home and a slug is
+# English in all 3 languages. Every one is in posts.INDUSTRY and gen_blog fails
+# the build if a slug there is not a real post, so this list cannot outlive the
+# pages it points at.
+#
+# The labels are short on purpose. The post titles read "SEO for watch shops in
+# Durres", which is a headline; nobody picks himself out of a list of headlines.
+# Ordered retail, hospitality, professional, motor and trades, so the grid reads
+# in groups rather than alphabetically by accident.
+TRADES = [
+    ("watch-shops-and-jewellers", "Watch shops"),
+    ("fashion-boutiques", "Boutiques"),
+    ("lingerie-shops", "Lingerie"),
+    ("hairdressers-and-salons", "Salons"),
+    ("restaurants-and-cafes", "Restaurants"),
+    ("hotels-and-guesthouses", "Hotels"),
+    ("holiday-apartments", "Holiday lets"),
+    ("dentists-and-clinics", "Dentists"),
+    ("lawyers-and-notaries", "Lawyers"),
+    ("estate-agents", "Estate agents"),
+    ("car-repair-and-garages", "Garages"),
+    ("heating-and-cooling-trades", "Heating"),
+    ("builders-and-contractors", "Builders"),
+    ("gyms-and-fitness-studios", "Gyms"),
+    ("taxis-and-transfers", "Taxis"),
 ]
 
 PAGE = {
@@ -135,11 +173,13 @@ PAGE = {
                 "shop" + NL +
                 "was put on the map once, and search has been sending people ever" + NL +
                 "since.",
-    "proof_p2": "Position 8.8 is the bottom of the first page. In the last 4 "
-                  "weeks it" + NL +
-                  "slipped to 9.7 while the click rate rose to 1.4%. More "
-                  "searches are" + NL +
-                  "finding the shop, not fewer.",
+    # "proof_p2" was here until 2026-10-24: "Position 8.8 is the bottom of the
+    # first page. In the last 4 weeks it slipped to 9.7 while the click rate
+    # rose to 1.4%. More searches are finding the shop, not fewer." It is the
+    # most technical sentence the page had, it needed two of the four stats to
+    # parse, and it asked the reader to understand that a position getting
+    # worse while clicks go up is good news. That argument belongs on the case
+    # page, which makes it with both Search Console views in front of it.
     "check": "Search for watch repair in Durres. Then search for a watch shop in" + NL +
              "Durres. Then ask ChatGPT both questions, and see whose name keeps" + NL +
              "coming back.",
@@ -149,6 +189,9 @@ PAGE = {
     # -- the five doors -----------------------------------------------------
     "services_eyebrow": "What we do",
     "services_h": "Five ways to be easier to find.",
+    # Sits above TRADES. An imperative and not a label, because the strip is
+    # something to do rather than something to read past.
+    "trades_lead": "Find your trade.",
 
     # -- the businesses -----------------------------------------------------
     "ask_eyebrow": "The work",
@@ -232,11 +275,13 @@ PAGE = {
     # four sections above a sentence that dismissed them, which read as an
     # argument with itself. "Stop at" keeps the point, that the logos are the
     # floor and the export is the proof, and loses the contradiction.
+    # 2026-10-24: the two figures it named came off the stat strip, and naming
+    # them here would have been the only place on the page they appeared, which
+    # is the worst of both. "The weak columns included" makes the same rule 22
+    # argument without asking a reader to hold two numbers he was never shown.
     "open_p2": "Most agencies stop at a wall of logos. We show the Search Console" + NL +
-               "export, including the 8.8 average position and the 1.1% click rate, "
-               "which" + NL +
-               "nobody would choose to publish. A figure you cannot check is worth "
-               "nothing.",
+               "export, the weak columns included, which nobody would choose to" + NL +
+               "publish. A figure you cannot check is worth nothing.",
     "open_p3": "<strong>And whatever we build, you own:</strong> the domain, the "
                "code" + NL +
                "and every account, in your name from day one.",

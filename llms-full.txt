@@ -42,6 +42,22 @@ A flat fee, never a cut of what you spend
 Custom software
 On the 1st of the month, the numbers are already there.
 Stock, jobs, customers, payroll, and what each part of the business earned
+Find your trade.
+Watch shops
+Boutiques
+Lingerie
+Salons
+Restaurants
+Hotels
+Holiday lets
+Dentists
+Lawyers
+Estate agents
+Garages
+Heating
+Builders
+Gyms
+Taxis
 A street at opening time. One shop lit, the rest not found yet.
 The work
 Want to see proof of our work?
@@ -79,8 +95,6 @@ so the starting number really is zero. Everything on this chart came
 from search, not from an ad budget.
 900clicks from Google
 82ktimes shown
-8.8average position
-1.1%click rate
 Three months, 2 June to 30 August 2026. Search
 Console reports clicks, which is not the same as people.
 The purple line is how often the shop came up in Google. The
@@ -88,9 +102,6 @@ blue line is how many people clicked.
 Ads stop the day you stop paying for them. This does not: the shop
 was put on the map once, and search has been sending people ever
 since.
-Position 8.8 is the bottom of the first page. In the last 4 weeks it
-slipped to 9.7 while the click rate rose to 1.4%. More searches are
-finding the shop, not fewer.
 Search for watch repair in Durres. Then search for a watch shop in
 Durres. Then ask ChatGPT both questions, and see whose name keeps
 coming back.
@@ -102,8 +113,8 @@ minarank studio has put six businesses online, each with its
 own page. The first had no website in May; by August Google was
 sending it 900 clicks a quarter.
 Most agencies stop at a wall of logos. We show the Search Console
-export, including the 8.8 average position and the 1.1% click rate, which
-nobody would choose to publish. A figure you cannot check is worth nothing.
+export, the weak columns included, which nobody would choose to
+publish. A figure you cannot check is worth nothing.
 And whatever we build, you own: the domain, the code
 and every account, in your name from day one.
 Price
@@ -852,7 +863,7 @@ SEO in Durres
 What actually decides the three businesses shown here, and why the work that wins it is smaller than the industry implies.
 Read it
 Lawyers and notaries
-22 August 2026
+22 August 2026 Your trade
 Why the usual advice fits this trade badly, and what to do instead when asking for reviews is not straightforward.
 Read it
 How to get Google reviews
@@ -860,11 +871,11 @@ How to get Google reviews
 The mechanics: when to ask, the words to use, what you are not allowed to do, and how to make it one tap instead of a chore.
 Read it
 Gyms and fitness studios in Durres
-22 August 2026
+22 August 2026 Your trade
 Two facts decide it, both usually missing, and a third thing that matters more here than in any other trade.
 Read it
 Builders and contractors in Durres
-22 August 2026
+22 August 2026 Your trade
 What a person about to spend serious money is looking for, and why the phone matters more than the website.
 Read it
 How to come up first on Google
@@ -958,7 +969,7 @@ Search is a smaller front door for hotels than it was, and somebody else is char
 Read it
 Websites 22
 A website for holiday apartments in Durres
-7 October 2026
+7 October 2026 Your trade
 A returning guest costs the same commission as a stranger. Only a direct site changes that.
 Read it
 A website for an estate agency in Albania
@@ -1095,7 +1106,7 @@ The money numbers a small shop should track
 14 August 2026
 A bug that hid inside a chart for a whole phase, and what it says about the software a small business runs on.
 Read it
-Updated 23 October 2026
+Updated 24 October 2026
 
 ## Taxi and airport transfers: getting booked
 https://minarankstudio.com/blog/taxis-and-transfers/
@@ -1143,7 +1154,7 @@ See the map
 Not named? The free audit shows why.
 Send us the 3 routes you drive most and what you charge for each, and we'll show you who is getting those bookings now.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 SEO and local search
 Also
@@ -1189,7 +1200,7 @@ How long before it makes a difference?
 The profile updates in days. The directories take as long as they take, and the map result moves once enough of them agree, which is why the order above starts with the ones you control.
 Send us the address and we will list every version of your details we can find, with the odd ones marked.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 SEO and local search
 The business in this post
@@ -1237,7 +1248,7 @@ Will you tell me if I should not spend anything?
 Yes, and it happens. If advertising would serve you better this quarter than search work, that is what the audit will say, even though it is the answer that earns us less.
 Send us the address and the words you wish you appeared for. You get the audit back and no meeting is involved.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 SEO and local search
 Also
@@ -1282,7 +1293,7 @@ What does the free audit cover?
 What the site does well, where the gaps are, and what we would fix first in order. It arrives as a PDF and no meeting is required to get it.
 Search for yourself from your office in another city and see what comes back. Send us the screenshot.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 SEO and local search
 Also
@@ -1327,7 +1338,7 @@ Is the map listing worth the effort for us?
 Yes, and more than in most trades, because it carries the photographs and the reviews together in the place people look first.
 Tell us which months pay for your year. We will tell you what has to be finished before they start.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 SEO and local search
 Also
@@ -1372,7 +1383,7 @@ What does this cost?
 It depends on how many pages your range actually needs, which we can only tell after looking. The audit is free and comes with no meeting attached.
 Tell us the narrowest thing a buyer could type and still need you. That sentence is usually where the work starts.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 SEO and local search
 Also
@@ -1417,7 +1428,7 @@ Where does this start?
 With a free audit of the site you already have. You get a PDF saying what works, what does not, and what we would fix first in order. It is yours whether you hire us or not.
 Search your own trade plus Bergamo and count who shows up. Send us that list and we will tell you what stands between you and it.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 SEO and local search
 Also
@@ -1461,7 +1472,7 @@ What happens if it does not work out?
 You keep the domain, the code and every account, because they were in your name from the beginning. Nothing has to be handed back or asked for.
 Tell us what worries you about hiring at a distance. If the honest answer is that we are wrong for you, that is what you get.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 SEO and local search
 Also
@@ -1507,7 +1518,7 @@ Is my website too small to rank?
 Size is not the measure; answering something is. A five page site that answers five real questions beats a forty page one that answers none, and it is a much easier thing to build.
 Send us the address and we will tell you which of the five is actually happening to you.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 SEO and local search
 Also
@@ -1555,7 +1566,7 @@ What if they are a national chain?
 Then compete where size does not help. A chain cannot be local in your street, cannot answer a question about your town, and usually has one page covering the whole country where you can have one covering your city.
 Send us both addresses, yours and theirs, and we will tell you which of the five is doing the work.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 SEO and local search
 Also
@@ -1604,7 +1615,7 @@ What if we already pay somebody?
 Then the useful spend is a second opinion rather than a second agency. You end up with either proof the money is working or a list the current one can act on, and both are cheaper than switching.
 Send us the address and we will tell you which of the three shapes fits, and roughly what the work would involve.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 SEO and local search
 Also
@@ -1650,7 +1661,7 @@ Will you keep contacting me afterwards?
 No. One reply with the document, and one follow-up if you asked a question in it. There is no sequence and there is no list, which is why the form asks for so little.
 Send the address and you get the document itself, which is a better argument than any description of it.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 SEO and local search
 Also
@@ -1697,7 +1708,7 @@ What can we check before deciding?
 The client pages here, and the site you are reading. Both were built the same way, so if the speed and the structure hold up under a tool, that is the work rather than a description of it.
 Tell us the term you want and we will read who currently holds it and whether it is worth going after.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 SEO and local search
 Also
@@ -1744,7 +1755,7 @@ Where does it start?
 With a free audit of the site you have, saying what we would change and in what order. You do not have to decide anything first and it commits you to nothing.
 Send us the site address and we will read it in Italian, then tell you what we would change and in what order.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 SEO and local search
 Also
@@ -1791,7 +1802,7 @@ How does the cost compare with an agency here?
 Lower, but that is not the reason to choose. The reason is that you talk to whoever does the work. If price is the only thing that matters there are cheaper options than us and you will find them.
 Tell us your zone and who you count as a competitor, and we will tell you how many there really are and what keeps them above you.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 SEO and local search
 Also
@@ -1836,7 +1847,7 @@ Can I do the first steps myself?
 Yes, and you should. The listing is an afternoon and nobody needs to be paid for it. Bring somebody in when the writing and the structure start costing more time than they are worth to you.
 Tell us what you have just started and we will tell you the first thing worth doing, which is usually free.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 SEO and local search
 The business in this post
@@ -1885,7 +1896,7 @@ What if my customers are visitors rather than locals?
 Then the search happens in another language and often before they arrive, which changes what the pages have to say but not how the map works. Say that out loud in the first conversation.
 Send us the trade and we will search it here, on a phone, and tell you who is in the three and why.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 SEO and local search
 The business in this post
@@ -1942,7 +1953,7 @@ See the map
 Not named? The free audit shows why.
 Send us your address and we will tell you which documents you are findable for and which you are not.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 SEO and local search
 Also
@@ -1989,7 +2000,7 @@ Do reviews help anything besides the map?
 They help the decision, which is the part that pays. Somebody comparing two shops is usually reading reviews rather than websites, and they also feed what assistants say about you when somebody asks.
 If you cannot find your review link, send us the business name and we will find it and send it back.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 SEO and local search
 Also
@@ -2044,7 +2055,7 @@ See the map
 Not named? The free audit shows why.
 Send us your address and we will tell you what a person deciding between you and the next place cannot currently find out.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 SEO and local search
 Also
@@ -2100,7 +2111,7 @@ See the map
 Not named? The free audit shows why.
 Send us your address and we will tell you which jobs you could be found for and are not.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 SEO and local search
 Also
@@ -2147,7 +2158,7 @@ Do I need to be in Tirana to rank in Tirana?
 For the map, distance counts, so a Tirana searcher standing in Tirana sees Tirana businesses. For the results underneath, no. We are in Durres and the building is done remotely, which is why we say so plainly rather than renting an address.
 Send us the address and we will tell you which of the two competitions you are actually losing.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 SEO and local search
 The business in this post
@@ -2193,7 +2204,7 @@ My competitor has done this for years. Then what?
 Then you do not take their best phrase this year. You take the ten they never wrote a page for, which is generally where the customers were anyway.
 Send us the address and we will say which half is missing, and roughly what the other half is going to ask of you.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 SEO and local search
 The business in this post
@@ -2242,7 +2253,7 @@ Does posting updates help?
 A little, and much less than the fields above. Do the categories, hours, photographs and reviews first. If posting is the only thing you have energy for, it is the wrong thing to spend it on.
 Send us your listing and we will tell you which fields are empty and which of them is costing you calls.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 SEO and local search
 Also
@@ -2298,7 +2309,7 @@ See the map
 Not named? The free audit shows why.
 Tell us which half of your shop is quiet, the repairs or the sales, and we will tell you which search is missing.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 SEO and local search
 The business in this post
@@ -2333,7 +2344,7 @@ Check it against your own chart
 If you have Search Console, look at your last 90 days and split them in 3. A healthy new site leans the same way: the last third beats the first 2. A flat line for 90 days is the thing to worry about, and worth a conversation.
 Send us your Search Console chart and we will read the curve with you, in plain words.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 SEO and local search
 The business in this post
@@ -2390,7 +2401,7 @@ See the map
 Not named? The free audit shows why.
 Send us your menu the way a customer finds it, and we will tell you which dishes are invisible.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 SEO and local search
 Also
@@ -2431,7 +2442,7 @@ Check it yourself
 Search for watch repair in Durres. Then search for a watch shop in Durres. Do it in Albanian, then in Italian. We would rather you checked than took our word for it, and if the answer has moved since August, that is the honest state of this work rather than a screenshot we chose.
 The audit scores how you stand next to the businesses competing with you, which on a phone means that map. Send us your address and we will look.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 SEO and local search
 The business in this post
@@ -2488,7 +2499,7 @@ See the map
 Not named? The free audit shows why.
 Tell us what your quietest month is, and we will tell you what to have finished before the cold arrives.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 SEO and local search
 The business in this post
@@ -2545,7 +2556,7 @@ See the map
 Not named? The free audit shows why.
 Tell us the 3 complaints you hear most on the phone, word for word, and we will show you what people are typing.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 SEO and local search
 Also
@@ -2592,7 +2603,7 @@ Do I need to do this more than once?
 Yes, on a schedule, because the answers change without warning and nothing tells you they have. A note in a file each month is the whole method.
 Tell us your trade and your town and we will run the questions, then send you the answers and where they came from.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 AI search
 Also
@@ -2642,7 +2653,7 @@ Should I remove old pages or leave them?
 Remove them, or update them. An old page kept for sentiment is a published claim, and anything reading your site treats it as current unless the page says otherwise.
 Send us your business name and town and we will ask a few assistants about you, then send you what they said and what is out of date.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 AI search
 Also
@@ -2688,7 +2699,7 @@ How long does any of this take?
 Publishing an answerable page takes an afternoon. Being picked up depends on the assistant, and the ones working from training data are on a schedule nobody outside publishes.
 Tell us your trade and your part of Milan and we will ask the assistants, then send you the answers.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 AI search
 Also
@@ -2729,7 +2740,7 @@ Will a new acronym replace these?
 Probably, and it will describe the same work again. The test that survives every rename is simple: open an assistant and see whether it names you.
 Send us the address and the town, and we will tell you which of the three your site is already ready for. It is usually the same answer for all three.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 AI search
 Also
@@ -2775,7 +2786,7 @@ How do I check it before paying anybody?
 Open an assistant, ask for your trade in this town the way a customer would, and read the names. If yours is absent you have learned something for nothing.
 Send us your site and the ten words a customer would type. We will tell you whether a machine can answer with your name in them.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 AI search
 Also
@@ -2821,7 +2832,7 @@ Is this instead of the ordinary search work?
 No, and the Como piece on ordinary search is still where to begin. This is the same site read by a different reader.
 Tell us which language your July actually speaks. We will read what an assistant already says about the lake and where it got it.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 AI search
 Also
@@ -2867,7 +2878,7 @@ What if the answer names a competitor?
 Then you have learned something specific and free. Look at what that competitor publishes that you do not, because the assistant read it somewhere.
 Ask an assistant for your trade in your city and send us what it answers. We will tell you where that answer came from.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 AI search
 Also
@@ -2912,7 +2923,7 @@ How do I test this?
 Ask an assistant the same question twice, once in each language, and compare who gets named. The difference is usually immediate.
 Ask an assistant about your trade in two languages and compare the names it returns. Send us both.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 AI search
 Also
@@ -2958,7 +2969,7 @@ What if the whole thing turns out to be a bubble?
 Then you have spent the year writing clear pages, collecting reviews and fixing your listing, which is what you should have been doing anyway. That is the reason to work this way: nothing here is wasted if the prediction is wrong.
 If you want to know where you stand today, ask us and we will check what a few assistants say about your trade.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 AI search
 Also
@@ -3005,7 +3016,7 @@ Is it worth paying for yet?
 As a separate service, for most small businesses, not yet. As a reason to do the ordinary work properly, yes, because that work pays either way and this is one more reason for it.
 Send us your address and we will ask a few assistants what they say about your trade in your town, and send you the answers.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 AI search
 Also
@@ -3053,7 +3064,7 @@ What if my competitor is named and I am not?
 Read what the assistant says about them and you will usually find the reason in the first sentence: reviews, a clear description of the service, or a page answering the exact question. It is a checkable gap, not a mystery.
 Send us your address and trade and we will ask a few assistants about you, then send you what they said.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 AI search
 Also
@@ -3097,7 +3108,7 @@ Try it on a real business
 Ask ChatGPT where to get a watch repaired in Durres, then ask it for a watch shop in Durres. We built watch.al and we would rather you ran that check than believed a screenshot.
 If somebody has quoted you a number about AI search, send it over with your website and we will tell you where that number came from.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 AI search
 The business in this post
@@ -3154,7 +3165,7 @@ See the map
 Not named? The free audit shows why.
 Tell us roughly what share of your bookings arrive through an agency, and we will tell you which of them you were paying for twice.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 AI search
 The business in this post
@@ -3214,7 +3225,7 @@ See the map
 Not named? The free audit shows why.
 Tell us how many of last season's guests had stayed before, and we will tell you what the portal charged you for knowing them
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 Websites
 The business in this post
@@ -3264,7 +3275,7 @@ What decides the cost of a build like this?
 How many listings, how many languages, whether you keep them yourself, and whether the neighbourhood research exists already or has to be done. The audit comes first and costs nothing.
 Send us your 3 newest listings and we will tell you what a careful buyer still cannot find out from them
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 Websites
 The business in this post
@@ -3316,7 +3327,7 @@ Does owning it mean I have to maintain it?
 No. Owning the accounts and paying somebody to look after them are separate decisions, and keeping them separate is the whole point.
 Send us your address and we will tell you who the internet thinks owns it.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 Websites
 The business in this post
@@ -3364,7 +3375,7 @@ Is an Albanian studio the right people to ask about Italian law?
 For where to look, yes, and we have written the articles down so you can check us. For whether it applies to your business, ask your commercialista, who is the person who answers for it.
 Send us the address and we will list what is missing, with the rule beside each one.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 Websites
 Also
@@ -3407,7 +3418,7 @@ What do I own at the end?
 The domain, the hosting account and the code, all registered to your business from the first day. Nothing is held on your behalf and there is no handover to negotiate.
 Send us the address and we will tell you what we would change first, whoever ends up doing it.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 Websites
 Also
@@ -3456,7 +3467,7 @@ Do I need to keep adding pages forever?
 No. You need the questions answered, and then new pages only when new questions arrive. A site that stops growing because it is complete is fine, as long as the hours and prices stay true.
 Send us what you have written, even if it is a list of notes, and we will tell you what is missing.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 Websites
 Also
@@ -3505,7 +3516,7 @@ My site has all eight. Start again?
 Almost certainly not. Seven of the eight are content and settings rather than construction, which means they are repairs to what you already have rather than a reason to throw it away.
 Send us your address and we will tell you which of the eight you have, and which you can fix yourself before we speak.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 Websites
 Also
@@ -3552,7 +3563,7 @@ Is cash on delivery still normal here?
 Yes, and designing as though it were not is how a shop ends up with abandoned carts it does not understand. Offer it, price it honestly, and say so on the page.
 Tell us what you want to sell and we will tell you which of these you actually need to solve first.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 Websites
 Also
@@ -3600,7 +3611,7 @@ Do I need a contract?
 You need something in writing that names who owns what, what is being delivered and what it costs. It does not have to be long. It does have to exist before money moves.
 Send us a quote you have been given and we will tell you which of the six it answers and which it dodges.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 Websites
 Also
@@ -3651,7 +3662,7 @@ What does a repair usually involve?
 Reading what is there, fixing what stops it being found, writing the pages that answer questions nobody answered, and finishing the listing. Almost none of it is visible, which is why it is undersold.
 Send the address and we will tell you which of the three faults you have, and whether it needs a rebuild or a repair.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 Websites
 Also
@@ -3702,7 +3713,7 @@ Do you turn work down?
 Yes, and it is usually for one of two reasons: the budget is too small to do the job properly, or the thing being asked for will not fix the problem described. Both are cheaper to hear now than in month three.
 Send us what you were quoted and what it covers, and we will tell you plainly whether it is a fair price for that work.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 Websites
 Also
@@ -3753,7 +3764,7 @@ Can I edit a built site myself?
 Yes, and that is a requirement rather than an extra. If changing a price means ringing us, the price stops being changed and the site starts lying about your stock.
 Tell us what the site has to do in two years and we will say honestly which of the two you should be buying.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 Websites
 Also
@@ -3802,7 +3813,7 @@ Who owns it when it is finished?
 You do: the domain, the code and every account, in your name from the first day. It is the only arrangement that leaves you free to walk away from us.
 Send us the site you have, or the address you would use, and we will tell you which of the four is driving your number.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 Websites
 Also
@@ -3853,7 +3864,7 @@ I post every day and it is not working. Would a site fix it?
 Probably not on its own. If posting daily is not converting, the problem is usually what you sell, to whom, or at what price, and a website built on top of that question will not answer it either.
 Send us the account and what you sell, and we will tell you honestly whether a site would earn its money yet.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 Websites
 Also
@@ -3897,7 +3908,7 @@ Does the price change?
 No. The same project costs the same wherever it is, because the building is remote either way. What changes is how long the search half takes, and you are told which before agreeing to anything.
 Send the address and the phrase you want, and we will tell you plainly how crowded that phrase already is.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 Websites
 Also
@@ -3941,7 +3952,7 @@ Should it be in Albanian only?
 Only if that is genuinely who buys from you. A good deal of trade on this coast happens in Italian and English, and a shop that exists in one language cannot be found by the other two.
 Tell us the street and what you sell, and we will show you who is sitting above you today and what put them there.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 Websites
 The business in this post
@@ -3997,7 +4008,7 @@ See the map
 Not named? The free audit shows why.
 Tell us how your last 10 orders actually reached you, and we will tell you whether a checkout would have helped.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 Websites
 The business in this post
@@ -4054,7 +4065,7 @@ See the map
 Not named? The free audit shows why.
 Tell us how a regular books with you today, and we will tell you what that arrangement is costing.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 Websites
 Also
@@ -4109,7 +4120,7 @@ See the map
 Not named? The free audit shows why.
 Send us a photograph of something you put in the window this week, and we will tell you how long it would take to get it online.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 Websites
 The business in this post
@@ -4167,7 +4178,7 @@ See the map
 Not named? The free audit shows why.
 Search your own clinic the way a patient would, with the name a friend would have given them, and tell us what you found.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 Websites
 Also
@@ -4201,7 +4212,7 @@ What it means for a shop like yours
 If your customers search in more than one language, the languages are separate doors, and each one either exists or it does not. Our web design work builds all of them from one source, so a second door never means hiring somebody to keep it true.
 Tell us which languages your customers search in, and we will tell you what a site in all of them involves.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 Websites
 The business in this post
@@ -4235,7 +4246,7 @@ Agencies sell subscriptions because subscriptions pay agencies. A site that cost
 Our sites are built this way by default. The running cost is a domain name.
 Ask us what your current site costs a year to keep, and what the same site would cost to own outright.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 Websites
 The business in this post
@@ -4282,7 +4293,7 @@ What if it does not work for my trade?
 Then we say so and stop. Some things sell on a search and not on a scroll, and a studio that cannot tell you which yours is has not looked.
 Tell us what you sell and what a customer is worth to you, and we will tell you whether ads are the right lever at all.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 Meta ads
 Also
@@ -4328,7 +4339,7 @@ What about the free local paper?
 Same arithmetic as broadcast, usually cheaper, and often better targeted than either because it lands in a defined set of letterboxes. Worth pricing before you dismiss it.
 Tell us what you have been spending and where, and we will tell you which part of it can be measured at all.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 Meta ads
 Also
@@ -4376,7 +4387,7 @@ Do I need new photographs?
 Usually yes, and usually not professional ones. Pictures of the real thing in daylight beat bought ones because people can tell, and the difference shows up in the click rate long before it shows up anywhere else.
 Tell us what you sell and who you sell it to, and we will say whether ads are the right thing for you at all yet.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 Meta ads
 Also
@@ -4430,7 +4441,7 @@ If we stop advertising, do we lose everything?
 You lose the traffic immediately, which is the honest cost of renting the position. What you keep is what you learned and whatever the slower work built in the meantime, which is the argument for doing both.
 Tell us what you sell and where, and we will say which of the two we would start with and why.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 Meta ads
 Also
@@ -4462,7 +4473,7 @@ Most of the result is decided in the 90 seconds after somebody taps. Does the pa
 Every step is fixable, and none of them is more ad spend. Which is why we will tell you when the honest fix is your reply time, not your budget.
 Ask us how fast your last enquiry got an answer. If you do not know, that is the answer.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 Meta ads
 The business in this post
@@ -4519,7 +4530,7 @@ See the map
 Not named? The free audit shows why.
 Tell us where your last 3 instructions came from, and we will tell you whether the portal had anything to do with it.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 Meta ads
 The business in this post
@@ -4566,7 +4577,7 @@ What if we outgrow it?
 Then it gets extended, because you own it. A package cannot be extended, so outgrowing one means starting again somewhere else.
 Tell us the one job that eats an evening every month and we will tell you whether software should touch it.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 Custom software
 Also
@@ -4611,7 +4622,7 @@ Can I use it for training instead?
 Specialist consulting and training are in the eligible list, so often yes. Whether yours qualifies is a question for the chamber, and they answer it.
 Tell us what you would build with it and we will tell you whether it looks like an eligible category or a hopeful one.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 Custom software
 Also
@@ -4645,7 +4656,7 @@ If one person owns the file and works in one place, keep it. If the process chan
 We would rather say that now than build something you resent in a year.
 Tell us what you keep in two places, and which copy you trust. That question usually settles it in one message.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 Custom software
 The business in this post
@@ -4679,7 +4690,7 @@ If a tool already does the job for the price of a coffee a month, buy the tool. 
 Building wins when the process is yours and no product fits it, which is rarer than the people selling development would like.
 Tell us what you pay every month and what it does for you. If a tool already covers it we will point you at the tool.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 Custom software
 The business in this post
@@ -4713,7 +4724,7 @@ What it takes to have this
 One place where a sale is recorded, and one rule for which side wins when the two disagree. Most of the work is deciding that rather than writing it.
 If your website and your shop already disagree, tell us where. The answer is often one rule rather than a rebuild.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 Custom software
 The business in this post
@@ -4758,7 +4769,7 @@ The part worth stealing
 If a number on your screen has never disagreed with anything, it has never been checked. Find the place your system adds something up, and go and add it up by hand once. That is a free afternoon and it is how we found ours.
 Tell us what you still count by hand every week. We will tell you whether it is worth building something, and we will say so when it is not.
 Get a free audit.
-Updated 23 October 2026
+Updated 24 October 2026
 The service
 Custom software
 The business in this post

@@ -430,6 +430,20 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
 
 .svc-list a:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
 
+/* The trade strip, under the five doors. It reuses .pill from the blog filters
+   rather than inventing a chip: the two do the same job, let somebody pick the
+   group he belongs to, and a second chip shape would read as a second system.
+   Only the list reset and the lead are new here.
+   The <ul> is the flex container and the <li> are its items, so the list keeps
+   its semantics; display:contents on the li would have dropped them in Safari. */
+.trades { margin-top: var(--s-7); }
+/* Sentence case and not the .eyebrow treatment, though it sits in the same
+   band. An uppercase label here read as a second section opening under the
+   first one; this is an instruction, so it is written as a sentence. */
+.trades-lead { margin: 0 0 var(--s-4); color: var(--slate); font-weight: 500; }
+.trade-list { list-style: none; margin: 0; padding: 0;
+  display: flex; flex-wrap: wrap; gap: var(--s-2); }
+
 /* -- proof ----------------------------------------------------------------- */
 /* the border-top and the padding both moved into the zones. An --edge hairline
    directly above an ink ground is invisible, and padding on the section would
