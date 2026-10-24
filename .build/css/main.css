@@ -1660,8 +1660,14 @@ button.btn:disabled:hover { background: none; color: var(--ink); }
      360 at once. 48px was here first and did exactly that.
 
      Two things this does not claim. It is tuned to where one line happens to
-     land, so editing the form's lead can move it back: re-run the sweep rather
-     than trusting this number. And it only governs the page AT REST. A fixed
+     land, so editing the form's lead can move it back, and this number is not
+     worth trusting on its own. To re-check it: load the page at 360 wide and
+     844 tall, take the fixed control's rect, then walk the text nodes under
+     main and test each Range.getClientRects() box against it. Per LINE, never
+     per element: a paragraph's own box spans the column, so an element test
+     reports a hit whenever the control is anywhere in that band and will send
+     you after defects that are not there. It did exactly that twice here.
+     And it only governs the page AT REST. A fixed
      control crosses prose at some scroll position on any page that has one,
      which was true here before any of this and is not worth chasing; what is
      worth holding is that nothing is obscured on arrival, least of all the
