@@ -41,7 +41,7 @@ NL = chr(10)
 CLIENTS = [
     {
         "slug": "iglisi-watch",
-        "src": "8851bc6c",
+        "src": "98b9c4f2",
         "ask": ("riparim orësh", "Durrës"),
         # Not copy: the file and its 2 dimensions.
         "mark": [("iglisi-watch.png", 195, 22)],
@@ -145,7 +145,7 @@ CLIENTS = [
         "payoff": "Nga asgjë te 900 klikime në tremujor.",
         # Only index 3 is copy. The alt says what is in the screenshot: the
         # cards carry a price in euro and the same price in lek beside it.
-        "plate": ("iglisi-home.webp", 1120, 568,
+        "plate": ("iglisi-home.webp", 900, 625,
                   "Ballina e Iglisi Watch, një titull mbi sfond blu të errët pranë dy "
                   "orëve në shitje, një për burra dhe një për gra, secila me çmimin në "
                   "euro dhe në lekë"),

@@ -245,6 +245,11 @@ PAGE = {
                  "engines!"},
     ],
     "says_tr": "Translated",
+    # The dot controls the rotator builds. js/main.js reads it from a data-
+    # attribute and never carries a word of its own: a string in a .js file
+    # ships in English on 34 translated pages and check 35 cannot see it.
+    # "#N" is which review, "#T" how many.
+    "says_dot": "Review #N of #T",
 
     # -- being new ----------------------------------------------------------
     # This block sits directly under the 4 client logos, which is where the

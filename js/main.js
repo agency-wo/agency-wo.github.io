@@ -504,4 +504,104 @@
     askT.addEventListener("input", askSet);
     askC.addEventListener("input", askSet);
   }
+
+  /* ---- the reviews in the hero -------------------------------------------
+     Upgrades a column that already works. All four reviews ship as a plain
+     list, so with scripting off the hero carries four stacked quotes and
+     nothing is missing or broken. This turns them into one at a time, which
+     is the only part that needs JS, and the dots are therefore the only part
+     that ships hidden.
+
+     NO aria-live. A region that announces itself every few seconds talks over
+     whatever the reader is doing. The dots are real buttons with real names
+     instead, and the rotation stops the moment anything inside is hovered or
+     focused, so a reader who wants the next one asks for it.
+
+     The dot's name comes from data-dot, not from this file. A string written
+     here would ship in English on every translated page and check 35 could
+     not see it, because it reads HTML. */
+  var saysBox = document.querySelector("[data-says]");
+  if (saysBox) {
+    var slides = [].slice.call(saysBox.querySelectorAll(".say"));
+    var dotsBox = saysBox.querySelector(".say-dots");
+    if (slides.length > 1 && dotsBox) {
+      var at = 0;
+      var spin = null;
+      /* Three separate reasons to be stopped, never one boolean. With a single
+         flag the IntersectionObserver firing after a mouseenter restarted a
+         rotator the reader had just paused by hovering it, because each caller
+         was overwriting the other's answer. Each reason owns its own flag and
+         sync() decides. */
+      var inView = false;    /* scrolled to: it starts below the fold */
+      var hovered = false;   /* pointer or keyboard focus is inside it */
+      var picked = false;    /* a dot was pressed: that reader is reading */
+      var tabHidden = false; /* the tab is in the background */
+      var pattern = dotsBox.getAttribute("data-dot") || "";
+
+      var dots = slides.map(function (li, n) {
+        var b = document.createElement("button");
+        b.type = "button";
+        b.setAttribute("aria-label", pattern
+          .replace("#N", n + 1).replace("#T", slides.length));
+        b.addEventListener("click", function () {
+          show(n);
+          /* A reader who picked one is reading it, so stop for good. */
+          picked = true;
+          sync();
+        });
+        dotsBox.appendChild(b);
+        return b;
+      });
+
+      var show = function (i) {
+        at = (i + slides.length) % slides.length;
+        /* data-off, not the hidden attribute: all four keep their place in the
+           grid so the box stays the height of the longest and the form beside
+           it never jumps. main.css turns data-off into visibility: hidden. */
+        slides.forEach(function (li, n) {
+          if (n === at) { li.removeAttribute("data-off"); }
+          else { li.setAttribute("data-off", ""); }
+        });
+        dots.forEach(function (b, n) {
+          b.setAttribute("aria-current", n === at ? "true" : "false");
+        });
+      };
+
+      var sync = function () {
+        var want = inView && !hovered && !picked && !tabHidden && !reduce;
+        if (want && !spin) {
+          spin = setInterval(function () { show(at + 1); }, 7000);
+        }
+        if (!want && spin) { clearInterval(spin); spin = null; }
+      };
+
+      /* Only now, with the script demonstrably running, does the column stop
+         being four stacked quotes and the controls appear. */
+      saysBox.classList.add("is-rotating");
+      dotsBox.hidden = false;
+      show(0);
+
+      saysBox.addEventListener("mouseenter", function () { hovered = true; sync(); });
+      saysBox.addEventListener("mouseleave", function () { hovered = false; sync(); });
+      saysBox.addEventListener("focusin", function () { hovered = true; sync(); });
+      saysBox.addEventListener("focusout", function () { hovered = false; sync(); });
+      /* Same reason the clock stops: a backgrounded tab throttles timers
+         anyway, and stopping means the first thing back is a full 7 seconds
+         rather than whatever was left of one. */
+      document.addEventListener("visibilitychange", function () {
+        tabHidden = document.hidden;
+        sync();
+      });
+
+      if ("IntersectionObserver" in window) {
+        new IntersectionObserver(function (es) {
+          inView = es[0].isIntersecting;
+          sync();
+        }, { threshold: 0 }).observe(saysBox);
+      } else {
+        inView = true;
+        sync();
+      }
+    }
+  }
 })();

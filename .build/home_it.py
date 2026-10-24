@@ -122,7 +122,7 @@ TRADES = [
 ]
 
 PAGE = {
-    "src": "3aba2cf7",
+    "src": "592be2dc",
 
     # 38 characters against the 52 the title budget leaves once gen_home.py has
     # put "minarank studio ·" in front of it. The old string claimed 38 here and
@@ -257,6 +257,7 @@ PAGE = {
                  "ottimizzazione della ricerca!"},
     ],
     "says_tr": "Tradotta",
+    "says_dot": "Recensione #N di #T",
 
     # -- being new ----------------------------------------------------------
     # "studio" is native Italian and is what the brand already calls itself, so

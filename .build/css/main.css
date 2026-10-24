@@ -331,24 +331,60 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
   column-gap: var(--s-9); align-items: start; }
 .hero-split .hero-say { margin-top: 0; }
 
-/* The hero plate fills what was 469px of empty left column against a 771px form.
-   Placed explicitly rather than by auto-flow: it has to sit UNDER the copy in
+/* The reviews fill what was 469px of empty left column against a 771px form.
+   Placed explicitly rather than by auto-flow: they have to sit UNDER the copy in
    column one, while the form spans both rows in column two. Without the explicit
-   rows, auto-placement puts the plate in column two beside the copy.
-   Measured: 398px of copy + this 312px plate + its caption and margin comes to
-   about 778px against the form's 771px, so the two columns end level. */
+   rows, auto-placement puts them in column two beside the copy. */
 .hero-split > .hero-rest { grid-column: 1; grid-row: 1; }
-.hero-split > .hero-plate { grid-column: 1; grid-row: 2; margin-top: var(--s-7); }
+.hero-split > .hero-says { grid-column: 1; grid-row: 2; margin-top: var(--s-7); }
 .hero-split > .audit { grid-column: 2; grid-row: 1 / span 2; }
 /* Stacked, there is no void to fill and the form is what the visitor came for,
-   so the plate goes BELOW it instead of pushing it another 200px down the page.
-   order, not source order, because on a desktop it has to precede the form. */
+   so the reviews go BELOW it instead of pushing it 300px further down the page.
+   order, not source order, because on a desktop they have to precede the form. */
 @media (max-width: 999px) {
   .hero-split > .hero-rest,
-  .hero-split > .hero-plate,
+  .hero-split > .hero-says,
   .hero-split > .audit { grid-column: 1; grid-row: auto; }
   .hero-split > .audit { order: 2; }
-  .hero-split > .hero-plate { order: 3; margin-top: 0; }
+  .hero-split > .hero-says { order: 3; margin-top: 0; }
+}
+
+/* The reviews in the hero. One column, because the column IS one column: the
+   .say-list grid is two across in a full-width band and that is not this. */
+.hero-says-h { margin: 0 0 var(--s-5); font-size: var(--fs-small);
+  letter-spacing: .08em; text-transform: uppercase; color: var(--slate);
+  font-weight: 600; }
+.hero-says .say-list { margin: 0; grid-template-columns: 1fr; gap: var(--s-6); }
+.hero-says .say blockquote { max-width: none; }
+/* Only once the script has taken over: until then all four are on the page,
+   stacked, which is the correct and complete state.
+   ALL FOUR STAY IN THE LAYOUT, stacked in one grid cell, and the one on show is
+   the one that is not visibility:hidden. A first attempt used the hidden
+   attribute and a min-height guessed in em to stop the form beside it jumping
+   by 40px on every turn; this needs no guess, because the box is always exactly
+   as tall as the longest of the four and a longer translation simply makes it
+   taller. visibility also takes the hidden quotes out of the accessibility tree
+   and out of the tab order, which display:none would do but opacity would not. */
+.hero-says.is-rotating .say-list { display: grid; gap: 0; }
+.hero-says.is-rotating .say { grid-area: 1 / 1; border-top: 0; padding-top: 0; }
+.hero-says.is-rotating .say[data-off] { visibility: hidden; }
+.hero-says.is-rotating .say blockquote { font-size: 1.0625rem; line-height: 1.55; }
+/* The dots ship hidden and the script reveals them, the way the blog filters do:
+   a control that cannot work without JavaScript must never be on screen with
+   JavaScript off. */
+.say-dots { display: flex; gap: var(--s-3); margin: var(--s-5) 0 0; }
+.say-dots button { width: 28px; height: 28px; padding: 0; border: 0;
+  background: none; cursor: pointer; display: grid; place-items: center; }
+/* The target is 28px and the mark inside it is 7px, the same dot .status uses.
+   A 7px tap target would fail WCAG 2.5.8; a 7px dot inside a 28px button does
+   not, and looks the same. */
+.say-dots button::before { content: ""; width: 7px; height: 7px; border-radius: 50%;
+  background: var(--edge); transition: background 160ms var(--ease-rise); }
+.say-dots button[aria-current="true"]::before { background: var(--red); }
+.say-dots button:hover::before { background: var(--slate); }
+.say-dots button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) {
+  .say-dots button::before { transition: none; }
 }
 
 /* The red rule is .check's rule, the same idiom for the same reason: this is

@@ -124,10 +124,10 @@ CLIENTS = [
                      "it will read differently when you look.",
         },
         "payoff": "From nothing to 900 clicks a quarter.",
-        # 568 and not 777 since 2026-10-24: this plate moved from the grid into the
-        # hero, and make_plates.py crops it to the hero band so a quarter of it is
-        # not the white top of the next section. The picture is the same picture.
-        "plate": ("iglisi-home.webp", 1120, 568,
+        # 900x625, the same frame as the other five. It was 1120x568 for the one day
+        # this plate sat in the homepage hero and wanted a tighter crop; back in the
+        # grid, a grid of six wants one ratio.
+        "plate": ("iglisi-home.webp", 900, 625,
                   "The Iglisi Watch homepage, a headline on navy beside two watches "
                   "for sale, one for men and one for women, each priced in euro and lek"),
         "services": [("/seo/", "SEO and local search"), ("/geo/", "AI search"),

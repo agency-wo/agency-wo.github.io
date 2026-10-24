@@ -184,15 +184,39 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
 .hero-split .hero-say { margin-top: 0; }
 
 .hero-split > .hero-rest { grid-column: 1; grid-row: 1; }
-.hero-split > .hero-plate { grid-column: 1; grid-row: 2; margin-top: var(--s-7); }
+.hero-split > .hero-says { grid-column: 1; grid-row: 2; margin-top: var(--s-7); }
 .hero-split > .audit { grid-column: 2; grid-row: 1 / span 2; }
 
 @media (max-width: 999px) {
   .hero-split > .hero-rest,
-  .hero-split > .hero-plate,
+  .hero-split > .hero-says,
   .hero-split > .audit { grid-column: 1; grid-row: auto; }
   .hero-split > .audit { order: 2; }
-  .hero-split > .hero-plate { order: 3; margin-top: 0; }
+  .hero-split > .hero-says { order: 3; margin-top: 0; }
+}
+
+.hero-says-h { margin: 0 0 var(--s-5); font-size: var(--fs-small);
+  letter-spacing: .08em; text-transform: uppercase; color: var(--slate);
+  font-weight: 600; }
+.hero-says .say-list { margin: 0; grid-template-columns: 1fr; gap: var(--s-6); }
+.hero-says .say blockquote { max-width: none; }
+
+.hero-says.is-rotating .say-list { display: grid; gap: 0; }
+.hero-says.is-rotating .say { grid-area: 1 / 1; border-top: 0; padding-top: 0; }
+.hero-says.is-rotating .say[data-off] { visibility: hidden; }
+.hero-says.is-rotating .say blockquote { font-size: 1.0625rem; line-height: 1.55; }
+
+.say-dots { display: flex; gap: var(--s-3); margin: var(--s-5) 0 0; }
+.say-dots button { width: 28px; height: 28px; padding: 0; border: 0;
+  background: none; cursor: pointer; display: grid; place-items: center; }
+
+.say-dots button::before { content: ""; width: 7px; height: 7px; border-radius: 50%;
+  background: var(--edge); transition: background 160ms var(--ease-rise); }
+.say-dots button[aria-current="true"]::before { background: var(--red); }
+.say-dots button:hover::before { background: var(--slate); }
+.say-dots button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) {
+  .say-dots button::before { transition: none; }
 }
 
 .hero-af { border-left: 2px solid var(--red); padding-left: var(--s-5); }

@@ -56,17 +56,16 @@ QUALITY = 82
 
 # slug -> (width of the top rung, how much of the 2000px master to keep)
 #
-# Five of the six keep the whole frame, which at 900 wide is exactly 900x625, the
-# ratio every plate in the grid already had. They show the hero and the top edge of
-# whatever follows it, which is what a browser shows and what these plates have
-# always looked like.
+# All six keep the whole frame, which at 900 wide is exactly 900x625, the ratio
+# every plate in the grid has. They show the hero and the top edge of whatever
+# follows it, which is what a browser shows.
 #
-# Iglisi is cropped, and wider, because it is the one that goes in the hero rather
-# than the grid (gen_home.py). Its hero band ends at master y 1460 and the 540px
-# below it are the white top of the next section: a quarter of the picture would
-# have been empty, in the one slot on the page chosen for having nothing in it.
+# Iglisi was briefly (1120, 1460), cropped to its hero band and wider, for the one
+# day it sat in the homepage hero instead of the grid. It is back in the grid with
+# the other five, and a grid of six wants one ratio, so it is back to the same
+# frame as the rest.
 PLATES = {
-    "iglisi-home": (1120, 1460),
+    "iglisi-home": (900, None),
     "victoria-home": (900, None),
     "bruna-home": (900, None),
     "proaffy-home": (900, None),

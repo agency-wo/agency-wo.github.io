@@ -40,7 +40,7 @@ NL = chr(10)
 CLIENTS = [
     {
         "slug": "iglisi-watch",
-        "src": "8851bc6c",
+        "src": "98b9c4f2",
         "ask": ("riparazione orologi", "Durazzo"),
         # Not copy: the file and its 2 dimensions.
         "mark": [("iglisi-watch.png", 195, 22)],
@@ -146,7 +146,7 @@ CLIENTS = [
         "payoff": "Da niente a 900 clic a trimestre.",
         # Only index 3 is copy. The alt says what is in the screenshot: the
         # cards carry a price in euro and the same price in lek beside it.
-        "plate": ("iglisi-home.webp", 1120, 568,
+        "plate": ("iglisi-home.webp", 900, 625,
                   "La homepage di Iglisi Watch, un titolo su fondo blu notte accanto a "
                   "due orologi in vendita, uno da uomo e uno da donna, ciascuno con il "
                   "prezzo in euro e in lek"),

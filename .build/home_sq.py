@@ -121,7 +121,7 @@ TRADES = [
 ]
 
 PAGE = {
-    "src": "3aba2cf7",
+    "src": "592be2dc",
 
     # 38 characters against the 52 the title budget leaves once gen_home.py has
     # put "minarank studio ·" in front of it. The old string claimed 39 here and
@@ -251,6 +251,7 @@ PAGE = {
                  "optimizimit të kërkimit!"},
     ],
     "says_tr": "Përkthyer",
+    "says_dot": "Vlerësimi #N nga #T",
 
     # -- being new ----------------------------------------------------------
     # "studio" is an accepted loan in Albanian and is already in
