@@ -224,8 +224,8 @@ CLIENTS = [
         # asks for real alt text and describing furniture that is not on the
         # page is worse than describing nothing.
         "plate": ("bruna-home.webp", 900, 531,
-                  "The Intimo Bruna homepage, a headline on linen beside a photograph of "
-                  "bras in natural tones"),
+                  "The Intimo Bruna homepage, a headline on linen beside a photograph of a "
+                  "woman in a cotton bra and briefs"),
         "services": [("/web-design/", "Websites"), ("/systems/", "Custom software")],
     },
     {

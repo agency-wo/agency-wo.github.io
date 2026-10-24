@@ -61,7 +61,12 @@ for _lg, _mod in _CHROME.items():
                 f"Re-translate, then re-stamp.")
 
 SITE = "https://minarankstudio.com"
-DOT = "·"
+# A hyphen, not a middot, since 2026-10-24. It separates the parts of a title,
+# the three footer links and the review attribution, and "Klajdi Gjuzi · Vila
+# Flamuri · Tradotta" read as a list of dotted abbreviations rather than as a
+# name, a business and a note. Owner's call. One character wide either way, so
+# check 6's 70-character title budget is unchanged.
+DOT = "-"
 
 # The brand, in one place. The visible climbing wordmark stays the single word
 # "minarank": the final k is red BECAUSE it is last (rule 2) and the climb is

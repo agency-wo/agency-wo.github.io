@@ -215,7 +215,7 @@ CLIENTS = [
     },
     {
         "slug": "intimo-bruna",
-        "src": "85d1d86f",
+        "src": "699a9fb3",
         "mark": [("intimo-bruna.svg", 200, 26)],
         "name": "Intimo Bruna",
         "where": "Durazzo, Albania",
@@ -266,7 +266,7 @@ CLIENTS = [
         # shop, the logo on a dark card over it, and a headline.
         "plate": ("bruna-home.webp", 900, 531,
                   "La homepage di Intimo Bruna, un titolo su fondo lino accanto alla "
-                  "fotografia di reggiseni in tonalita naturali"),
+                  "fotografia di una donna in reggiseno e slip di cotone"),
         "services": [("/web-design/", "Siti web"),
                      ("/systems/", "Software su misura")],
     },

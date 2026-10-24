@@ -208,7 +208,7 @@ CLIENTS = [
     },
     {
         "slug": "intimo-bruna",
-        "src": "85d1d86f",
+        "src": "699a9fb3",
         "mark": [("intimo-bruna.svg", 200, 26)],
         "name": "Intimo Bruna",
         "where": "Durrës, Shqipëri",
@@ -260,7 +260,7 @@ CLIENTS = [
         # sells and would read as a photograph of the underwear.
         "plate": ("bruna-home.webp", 900, 531,
                   "Ballina e Intimo Bruna, një titull mbi sfond liri pranë fotografisë së "
-                  "sytjenave në ngjyra natyrale"),
+                  "një gruaje me sytjena dhe mbathje pambuku"),
         "services": [("/web-design/", "Faqe interneti"),
                      ("/systems/", "Software me porosi")],
     },

@@ -540,7 +540,7 @@ def form_subject(name, lang):
     the inbox and never the queue. The source after the dot still says which
     form, in which language, sent it.
     """
-    return f"Free audit request via {shell.BRAND} \u00b7 {form_source(name, lang)}"
+    return f"Free audit request via {shell.BRAND} {shell.DOT} {form_source(name, lang)}"
 
 
 def write(path, content):

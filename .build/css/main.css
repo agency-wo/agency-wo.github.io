@@ -1310,7 +1310,9 @@ a[href^="tel:"] { white-space: nowrap; }
    the line rendered as "Deni Tabaku ·ProAffy" with the middot stuck to the
    business. \00A0 survives collapsing and also stops the separator wrapping
    onto a line by itself. */
-.say-client::before, .say-tr::before { content: "\00A0\00B7\00A0";
+/* A hyphen since 2026-10-24, matching shell.DOT. The non-breaking spaces stay:
+   that part of the fix was never about which character sits between them. */
+.say-client::before, .say-tr::before { content: "\00A0-\00A0";
   color: var(--edge); }
 .say-client { color: var(--slate); font-weight: 500; }
 .say-tr { color: var(--slate); font-weight: 400; font-style: italic; }

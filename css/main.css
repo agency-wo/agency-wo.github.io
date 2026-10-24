@@ -753,7 +753,7 @@ a[href^="tel:"] { white-space: nowrap; }
   box-shadow: inset 0 -1px 0 0 var(--edge); }
 .say-who a:hover { box-shadow: inset 0 -2px 0 0 var(--ink); }
 
-.say-client::before, .say-tr::before { content: "\00A0\00B7\00A0";
+.say-client::before, .say-tr::before { content: "\00A0-\00A0";
   color: var(--edge); }
 .say-client { color: var(--slate); font-weight: 500; }
 .say-tr { color: var(--slate); font-weight: 400; font-style: italic; }
