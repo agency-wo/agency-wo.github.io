@@ -6929,7 +6929,7 @@ POSTS = [
     # =============================================== INDUSTRY: HOLIDAY LETS ===
     {
         "slug": "holiday-apartments",
-        "src": "d4b67d96",
+        "src": "13fd4a46",
         "ask": ("apartamente pushimi", "Durrës"),
         "date": "2026-10-07",
         "updated": "2026-10-07",
@@ -6948,7 +6948,7 @@ POSTS = [
                        "çfarë duhet të bëjë një faqe për ta fituar mesazhin.",
         "og_desc": "Portali ta prezantoi një herë. Ti paguan për çdo qëndrim "
                    "pas asaj.",
-        "image": ("vila-flamuri-home.webp", 900, 531,
+        "image": ("vila-flamuri-home.webp", 900, 453,
                   "Ballina e një faqeje apartamentesh pushimi, me një "
                   "fotografi të shtëpisë dhe një shirit që kërkon datat e "
                   "mbërritjes",
@@ -7041,7 +7041,7 @@ POSTS = [
     # =================================================== INDUSTRY: PROPERTY ===
     {
         "slug": "estate-agency-website",
-        "src": "61291c04",
+        "src": "e6beb33f",
         "date": "2026-10-07",
         "updated": "2026-10-07",
         "topic": "Faqe interneti",
@@ -7059,7 +7059,7 @@ POSTS = [
                        "portali i ka të gjitha. Mund të botojë çfarë është "
                        "kontrolluar, dhe çfarë jo.",
         "og_desc": "Portali i ka shpalljet. Nuk i ka dokumentet.",
-        "image": ("census-properties-home.webp", 900, 531,
+        "image": ("census-properties-home.webp", 900, 453,
                   "Ballina e një faqeje agjencie imobiliare, me një fotografi "
                   "në perëndim të gjirit pas një titulli për prona në shitje "
                   "dhe me qira",

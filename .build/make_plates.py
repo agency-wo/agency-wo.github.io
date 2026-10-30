@@ -64,20 +64,51 @@ QUALITY = 82
 #     iglisi 1468   census ~1519   bruna 1560   proaffy 1628
 #     victoria: its two buttons reach 1708      vila flamuri 1767
 #
-# The whole frame was shipped until now, and Iglisi's plate was 27% white as a
-# result: its hero ends at 1468 of 2000 and the rest is the top of the next
-# section. A 1700px window cuts that to 14%, which reads as the page continuing
-# rather than as a broken screenshot.
+# The whole frame was shipped at first, and Iglisi's plate was 27% white: its
+# hero ends at 1472 of 2000 and the rest is the top of the next section. 1700
+# cut that to 14% on the argument that it would read as the page continuing.
+# It does not. It reads as a broken screenshot, which is what the owner called
+# it on 2026-10-30, and it was never only Iglisi: at 1700 the window also
+# landed inside a flat gap on ProAffy (8%) and Census (3%).
 #
-# 1700 and not tighter because of Victoria. Its clay CTA buttons sit at 1708, so
-# any window short enough to frame Iglisi cleanly cuts Victoria's buttons off,
-# and a plate that loses the client's call to action is worse than one with some
-# white in it. Victoria takes a 20px offset to bring 1708 inside with a margin,
-# which costs 1% off the top of its nav and nothing else.
-WINDOW = 1700
+# 1450 is MEASURED, not guessed: the tallest window where the last 12 rows of
+# all six masters carry real variation. The gaps that forced it down are
+# iglisi 1472-1810, census 1654-1873, proaffy 1585-1836 and vila 1458-1636,
+# and every value between 1460 and 1940 falls inside at least one of them.
+#
+# The cost is the one the 1700 note named: Victoria's clay CTA buttons sit at
+# 1708 and are now outside the frame. That trade is deliberate. A plate missing
+# a button still reads as the client's site; a plate with a blank seventh at
+# the bottom reads as our mistake, and it was on three of the six.
+#
+# Re-measure with scratch pick_window.py when a client rebuilds, rather than
+# nudging this number until the one plate you are looking at stops being white.
+WINDOW = 1450
+# The offsets stop the cut slicing a line of text in half, which 1450 at
+# offset 0 did to Victoria: the bottom of the plate took the top 40% of
+# "Elegance greke e luksit" and half-letters read as a rendering fault, not as
+# a crop. They are 2 to 62 rows, so 1 to 31 CSS pixels off the top of a nav.
+#
+# Found by measuring the LEFT 52% only, with scratch pick_offsets2.py. A test
+# over the full width finds nothing on 4 of the 6, because those heroes carry
+# a photograph running the whole height and no row is ever flat. Cutting
+# through the photograph is fine and always was. Cutting through the words is
+# the thing that looks broken, and the words are in the left column on all six.
+#
+# Only Victoria takes one. The measurement offers an offset for all six, but
+# it cannot tell "quiet between two lines of text" from "quiet because this is
+# the dead band", and applying all six made Iglisi worse: 32 rows down put its
+# bottom 10 rows PAST the hero, and sliced the gold announcement bar off the
+# top to pay for it. At offset 0 the other five already end on content with no
+# dead rows, so they keep their full nav. Look at the plate before trusting
+# the number; the number cannot see.
 PLATES = {
     "iglisi-home": (900, WINDOW, 0),
-    "victoria-home": (900, WINDOW, 20),
+    # Was 20, to pull Victoria's buttons at 1708 inside a 1700 window, which
+    # the window no longer reaches. 29 is the text-clearance offset: at 0 the
+    # cut takes the top 40% of "Elegance greke e kuruar" and half-letters read
+    # as a rendering fault rather than as a crop.
+    "victoria-home": (900, WINDOW, 29),
     "bruna-home": (900, WINDOW, 0),
     "proaffy-home": (900, WINDOW, 0),
     "census-properties-home": (900, WINDOW, 0),
