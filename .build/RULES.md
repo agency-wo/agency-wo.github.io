@@ -114,6 +114,12 @@ everything checkable is checked by `verify.py`, which fails the build.
     repo and a directory checking NAP consistency finds one answer.
 28. Five services: SEO and local search, AI search, websites, Meta ads,
     custom software.
+    Logos and product catalogues are made alongside a website (owner, 2026-10-31):
+    named on the homepage under the five, in the case pages and in their two posts,
+    never as a sixth door. They get a service page only once a published catalogue
+    exists to link (rule 37). The logos we may claim are Vila Flamuri's, Iglisi
+    Watch's and Census Properties' (owner, 2026-10-31); a mark we only redrew in
+    vector is not ours to claim.
 29. English at the root, Italian at `/it/` and Albanian at `/sq/`, all three live.
 
 ## Engineering

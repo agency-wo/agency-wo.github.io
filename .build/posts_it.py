@@ -1874,9 +1874,9 @@ POSTS = [
 
     {
         "slug": "web-design-durres",
-        "src": "9ccd92d1",
+        "src": "f124b518",
         "date": "2026-08-21",
-        "updated": "2026-08-21",
+        "updated": "2026-10-31",
         "topic": "Siti web",
         "work": "iglisi-watch",
         "service": ("/web-design/", "Siti web"),
@@ -1914,7 +1914,7 @@ POSTS = [
             ]),
             ("Cosa è stato costruito qui", [
                 "<p>Un'orologeria in Rruga Aleksander Goga, una boutique, un "
-                "negozio di intimo e una tipografia. Ognuna ha una pagina su "
+                "negozio di intimo e un'agenzia immobiliare. Ognuna ha una pagina su "
                 "questo sito che dice cosa è stato fatto e cosa è successo "
                 "dopo.</p>",
                 "<p>L'orologeria è quella con i numeri attaccati, perché a "
@@ -7332,6 +7332,129 @@ POSTS = [
         ],
         "related": [("/seo/", "SEO e ricerca locale"),
                     ("/web-design/", "Siti web")],
+    },
+    {
+        "slug": "what-a-small-business-logo-has-to-do",
+        "src": "a842864a",
+        "date": "2026-10-31",
+        "updated": "2026-10-31",
+        "topic": "Siti web",
+        "work": "vila-flamuri",
+        "service": ("/web-design/", "Siti web"),
+
+        "title": "Cosa deve fare il logo di una piccola attività",
+        "h1": "Un logo deve funzionare a 16 pixel prima ancora che su un'insegna.",
+        "summary": "La prima prova di un logo è la più piccola: la scheda del browser.",
+        "standfirst": "Quasi tutti i posti in cui compare il logo di una piccola attività sono "
+                      "piccoli, affollati o a un solo colore. Disegniamo prima di tutto per quelli.",
+        "description": "Cosa deve reggere il logo di una piccola attività, dall'icona del browser "
+                       "a 16 px alla scheda sulla mappa, e quali file ricevere, con tre loghi "
+                       "disegnati da noi in Albania.",
+        "og_desc": "Il posto più piccolo in cui compare un logo è quello che lo giudica.",
+
+        "body": [
+            ("Dove compare davvero un logo", [
+                "<p>Prima di arrivare su un'insegna, il logo di una piccola attività vive "
+                "quasi sempre in piccolo: la scheda del browser, la foto rotonda del profilo "
+                "su Google Maps, l'angolo di una chat WhatsApp, l'intestazione sul "
+                "telefono.</p>",
+                "<p>Per questo disegniamo prima le misure piccole e poi ingrandiamo, mai il "
+                "contrario. Un marchio che funziona solo in grande è la foto di un logo.</p>",
+            ]),
+            ("Tre loghi che abbiamo disegnato", [
+                "<p>Per <a href=\"/work/vila-flamuri/\">Vila Flamuri</a>, una casa di famiglia "
+                "con appartamenti a Golem, il marchio è un tetto sopra la V e un pennone che "
+                "esce dalla F. L'icona del browser toglie il tetto e le onde, perché a 16 px "
+                "diventano rumore.</p>",
+                "<p>Per <a href=\"/work/census-properties/\">Census Properties</a>, "
+                "un'agenzia immobiliare di Durazzo, è un logotipo: il nome in maiuscole "
+                "spaziate sopra un filetto sottile, con la città a un'estremità.</p>",
+                "<p>Per <a href=\"/work/iglisi-watch/\">Iglisi Watch</a>, un negozio di "
+                "orologi a Durazzo, sono due parole in maiuscole con grazie e un rombo dorato "
+                "in mezzo, pensate per stare in bianco su un'intestazione scura.</p>",
+            ]),
+            ("Cosa deve reggere il logo", [
+                "<p>Un solo colore. Un timbro, una fattura stampata in nero, un'incisione su "
+                "un bancone: un logo che ha bisogno della sua sfumatura per farsi riconoscere "
+                "fallisce in tutti e 3.</p>",
+                "<p>Un ritaglio quadrato. Le schede sulla mappa e i profili social tagliano "
+                "l'immagine a cerchio o a quadrato, quindi un logotipo lungo ha bisogno di un "
+                "marchio compatto accanto.</p>",
+                "<p>La distanza. Un'insegna si legge dall'altro lato della strada, e lì "
+                "vincono poche forme spesse sui dettagli sottili.</p>",
+            ]),
+            ("Quali file dovresti avere alla fine", [
+                "<p>Un originale vettoriale, in SVG o PDF, che qualsiasi tipografo o "
+                "insegnista possa scalare. Una versione a un colore, in nero e in bianco. Il "
+                "marchio compatto da solo, per l'icona e la foto del profilo. Le icone del "
+                "browser e un'immagine per la condivisione dei link.</p>",
+                "<p>Sono tutti tuoi, come dovrebbe esserlo <a href=\"/blog/who-owns-your-website/\">"
+                "il tuo sito</a>. Un logo che devi chiedere a un grafico di esportare è un "
+                "logo in affitto.</p>",
+            ]),
+        ],
+        "payoff": "Mandaci il logo che hai adesso, o una foto della tua insegna, e ti diciamo "
+                  "quali di queste prove supera già.",
+        "related": [("/web-design/", "Siti web"), ("/seo/", "SEO e ricerca locale")],
+    },
+    {
+        "slug": "a-product-catalogue-before-print",
+        "src": "9b4744c7",
+        "date": "2026-10-31",
+        "updated": "2026-10-31",
+        "topic": "Siti web",
+        "work": None,
+        "service": ("/web-design/", "Siti web"),
+
+        "title": "Cosa serve a un catalogo prodotti prima della stampa",
+        "h1": "Un catalogo prodotti è un elenco di codici prima di essere un progetto grafico.",
+        "summary": "Quasi tutti i problemi di un catalogo nascono nell'elenco dei prodotti, "
+                   "molto prima che qualcuno inizi a impaginare.",
+        "standfirst": "Un catalogo si stampa per essere conservato un anno. Deve essere corretto "
+                      "il giorno in cui va in stampa, e servire ancora quando i prezzi cambiano.",
+        "description": "Cosa serve a un catalogo prodotti prima di andare in stampa: una voce "
+                       "per codice, i prezzi a parte, un file per la stampa e un PDF leggero, "
+                       "e un elenco condiviso col sito.",
+        "og_desc": "Un catalogo è un elenco di codici prima di essere un progetto grafico.",
+
+        "body": [
+            ("Parti dall'elenco dei prodotti", [
+                "<p>Ogni prodotto ha una sola riga e un solo codice, e il codice è quello che "
+                "il cliente ti detta al telefono. Due prodotti con lo stesso codice, o un "
+                "prodotto con due codici, è l'errore che un lettore trova per primo.</p>",
+                "<p>Controlliamo l'elenco prima di impaginare una sola pagina: i nomi, le "
+                "misure, le confezioni, le foto che ci sono e quelle che mancano ancora.</p>",
+            ]),
+            ("Tieni i prezzi fuori dal catalogo", [
+                "<p>Un catalogo si stampa per durare, i prezzi no. Mettili su un listino a "
+                "parte, con la data, così un prezzo nuovo vuol dire un foglio nuovo e non la "
+                "ristampa di tutte le pagine.</p>",
+            ]),
+            ("Prepara due file, non uno", [
+                "<p>Il tipografo ha bisogno di un file ad alta risoluzione con l'abbondanza, "
+                "preparato secondo le sue specifiche, che gli chiediamo prima di impaginare la "
+                "prima pagina.</p>",
+                "<p>I clienti hanno bisogno di un PDF più leggero, da aprire sul telefono. "
+                "Gmail rifiuta gli allegati oltre i <a href=\"https://support.google.com/mail/answer/6584\" "
+                "target=\"_blank\" rel=\"noopener\">25 MB</a>, quindi la copia che mandi per "
+                "email deve restare sotto quel limite, o viaggiare come link.</p>",
+            ]),
+            ("Usa un solo elenco per sito e catalogo", [
+                "<p>Scritti due volte, il catalogo e il <a href=\"/web-design/\">sito</a> non "
+                "vanno più d'accordo nel giro di una stagione. Un solo elenco che li alimenta "
+                "entrambi, come <a href=\"/systems/\">il nostro software su misura</a> tiene "
+                "allineati il magazzino e il sito di un negozio, fa sì che una correzione "
+                "fatta una volta compaia ovunque.</p>",
+            ]),
+            ("Cosa facciamo noi e cosa fa il tipografo", [
+                "<p>Impaginiamo il catalogo e consegniamo i file pronti per la stampa, in "
+                "italiano, inglese o albanese. La carta, la stampa e la rilegatura restano "
+                "compito del tuo tipografo, che conosce le sue macchine meglio di noi.</p>",
+            ]),
+        ],
+        "payoff": "Mandaci l'elenco dei prodotti così com'è oggi, anche un foglio di calcolo, "
+                  "e ti diciamo cosa gli serve prima di poterne fare un catalogo.",
+        "related": [("/web-design/", "Siti web"), ("/systems/", "Software su misura")],
     },
 ]
 

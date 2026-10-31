@@ -283,6 +283,8 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
 
 .svc-list a:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
 
+.svc-also { margin: var(--s-5) 0 0; max-width: 46rem; text-wrap: pretty; }
+.svc-also a { color: inherit; text-decoration: underline; text-underline-offset: .2em; }
 .trades { margin-top: var(--s-7); }
 
 .trades-lead { margin: 0 0 var(--s-4); color: var(--slate); font-weight: 500; }

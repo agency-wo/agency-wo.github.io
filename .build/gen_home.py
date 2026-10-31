@@ -646,6 +646,7 @@ def render(lang):
           <ul class="svc-list" data-reveal-group>
 {svc}
           </ul>
+          <p class="svc-also">{txt(12, h["services_also"], lang)}</p>
           <div class="trades" data-reveal>
             <p class="trades-lead">{fill(h["trades_lead"], lang)}</p>
             <ul class="trade-list">

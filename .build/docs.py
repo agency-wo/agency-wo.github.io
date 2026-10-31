@@ -263,7 +263,8 @@ PAGES = [
         "schema": {
             "knows_about": ["Search engine optimisation", "Local search",
                             "Generative engine optimisation", "Web design",
-                            "Meta advertising", "Custom software development"],
+                            "Meta advertising", "Custom software development",
+                            "Logo design", "Product catalogue design"],
         },
         "h1": "How we work, and what we will not do.",
         "standfirst": "Everything here is written to be argued with. If you" + NL +

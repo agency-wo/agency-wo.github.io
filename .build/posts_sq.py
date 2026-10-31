@@ -1860,9 +1860,9 @@ POSTS = [
 
     {
         "slug": "web-design-durres",
-        "src": "9ccd92d1",
+        "src": "f124b518",
         "date": "2026-08-21",
-        "updated": "2026-08-21",
+        "updated": "2026-10-31",
         "topic": "Faqe interneti",
         "work": "iglisi-watch",
         "service": ("/web-design/", "Faqe interneti"),
@@ -1901,7 +1901,7 @@ POSTS = [
             ]),
             ("Çfarë është ndërtuar këtu", [
                 "<p>Një dyqan orësh në Rrugën Aleksandër Goga, një butik, "
-                "një dyqan të brendshmesh dhe një shtypshkronjë. Secili ka "
+                "një dyqan të brendshmesh dhe një agjenci imobiliare. Secili ka "
                 "një faqe këtu që thotë çfarë u bë dhe çfarë ndodhi pas.</p>",
                 "<p>Dyqani i orëve është ai me numra bashkëngjitur, sepse në "
                 "maj nisi nga hiçi dhe ka një eksport për ta vënë pranë "
@@ -7238,6 +7238,129 @@ POSTS = [
         ],
         "related": [("/seo/", "SEO dhe kërkim lokal"),
                     ("/web-design/", "Faqe interneti")],
+    },
+    {
+        "slug": "what-a-small-business-logo-has-to-do",
+        "src": "a842864a",
+        "date": "2026-10-31",
+        "updated": "2026-10-31",
+        "topic": "Faqe interneti",
+        "work": "vila-flamuri",
+        "service": ("/web-design/", "Faqe interneti"),
+
+        "title": "Çfarë duhet të bëjë logoja e një biznesi të vogël",
+        "h1": "Një logo duhet të funksionojë në 16 piksel para se të funksionojë në një tabelë.",
+        "summary": "Prova e parë për një logo është më e vogla: skeda e shfletuesit.",
+        "standfirst": "Pothuajse kudo ku shfaqet logoja e një biznesi të vogël, hapësira është "
+                      "e vogël, e mbushur ose me një ngjyrë. Ne vizatojmë së pari për ato vende.",
+        "description": "Çfarë duhet të durojë logoja e një biznesi të vogël, nga ikona 16 px e "
+                       "shfletuesit te profili në hartë, dhe cilët skedarë të marrësh, me tri "
+                       "logo që kemi vizatuar në Shqipëri.",
+        "og_desc": "Vendi më i vogël ku shfaqet një logo është ai që e gjykon.",
+
+        "body": [
+            ("Ku shfaqet vërtet një logo", [
+                "<p>Para se të dalë në një tabelë, logoja e një biznesi të vogël jeton pothuajse "
+                "gjithmonë e vogël: skeda e shfletuesit, fotoja e rrumbullakët e profilit në "
+                "Google Maps, cepi i një bisede në WhatsApp, koka e faqes në telefon.</p>",
+                "<p>Prandaj vizatojmë së pari përmasat e vogla dhe pastaj zmadhojmë, kurrë "
+                "anasjelltas. Një shenjë që funksionon vetëm në përmasa të mëdha është fotoja e "
+                "një logoje.</p>",
+            ]),
+            ("Tri logo që i kemi vizatuar ne", [
+                "<p>Për <a href=\"/work/vila-flamuri/\">Vila Flamurin</a>, një shtëpi familjare "
+                "me apartamente në Golem, shenja është një çati mbi V-në dhe një shtizë flamuri "
+                "që del nga F-ja. Ikona e shfletuesit heq çatinë dhe dallgët, sepse në 16 px "
+                "kthehen në zhurmë.</p>",
+                "<p>Për <a href=\"/work/census-properties/\">Census Properties</a>, një agjenci "
+                "imobiliare në Durrës, është një logo tipografike: emri me kapitale të "
+                "rralluara mbi një vijë të hollë, me qytetin në njërin skaj.</p>",
+                "<p>Për <a href=\"/work/iglisi-watch/\">Iglisi Watch</a>, një dyqan orësh në "
+                "Durrës, janë dy fjalë me kapitale serif dhe një romb i artë mes tyre, të "
+                "vizatuara që të qëndrojnë të bardha mbi një kokë faqeje të errët.</p>",
+            ]),
+            ("Çfarë duhet të durojë logoja", [
+                "<p>Një ngjyrë e vetme. Një vulë, një faturë e shtypur bardhezi, një gdhendje "
+                "në banak: një logo që ka nevojë për gradientin e saj që të njihet dështon në "
+                "të 3.</p>",
+                "<p>Një prerje katrore. Profilet në hartë dhe në rrjetet sociale e presin "
+                "imazhin në rreth ose në katror, ndaj një logo tipografike e gjatë ka nevojë "
+                "për një shenjë të shkurtër pranë saj.</p>",
+                "<p>Largësia. Një tabelë lexohet nga ana tjetër e rrugës, dhe aty fitojnë pak "
+                "forma të trasha mbi detajet e holla.</p>",
+            ]),
+            ("Cilët skedarë duhet të kesh në fund", [
+                "<p>Një origjinal vektorial, në SVG ose PDF, që çdo shtypshkronjë ose punishte "
+                "tabelash mund ta zmadhojë. Një version me një ngjyrë, në të zezë dhe në të "
+                "bardhë. Shenja e shkurtër më vete, për ikonën dhe foton e profilit. Ikonat e "
+                "shfletuesit dhe një imazh për ndarjen e lidhjeve.</p>",
+                "<p>Të gjitha janë të tuat, siç duhet të jetë edhe <a href=\"/blog/who-owns-your-website/\">"
+                "faqja jote</a>. Një logo që duhet t'i kërkosh një grafisti ta eksportojë është "
+                "një logo me qira.</p>",
+            ]),
+        ],
+        "payoff": "Na dërgo logon që ke tani, ose një foto të tabelës sate, dhe të themi cilat "
+                  "nga këto prova i kalon tashmë.",
+        "related": [("/web-design/", "Faqe interneti"), ("/seo/", "SEO dhe kërkim lokal")],
+    },
+    {
+        "slug": "a-product-catalogue-before-print",
+        "src": "9b4744c7",
+        "date": "2026-10-31",
+        "updated": "2026-10-31",
+        "topic": "Faqe interneti",
+        "work": None,
+        "service": ("/web-design/", "Faqe interneti"),
+
+        "title": "Çfarë i duhet një katalogu produktesh para shtypjes",
+        "h1": "Një katalog produktesh është një listë kodesh para se të jetë dizajn.",
+        "summary": "Shumica e problemeve të një katalogu nisin te lista e produkteve, shumë "
+                   "përpara se dikush të nisë faqosjen.",
+        "standfirst": "Një katalog shtypet që të mbahet një vit. Duhet të jetë i saktë ditën që "
+                      "shtypet, dhe ende i dobishëm kur çmimet lëvizin.",
+        "description": "Çfarë i duhet një katalogu produktesh para shtypjes: një rresht për çdo "
+                       "kod, çmimet veçmas, një skedar për shtyp dhe një PDF i lehtë, dhe një "
+                       "listë e përbashkët me faqen.",
+        "og_desc": "Një katalog është një listë kodesh para se të jetë dizajn.",
+
+        "body": [
+            ("Nis nga lista e produkteve", [
+                "<p>Çdo produkt ka vetëm një rresht dhe një kod, dhe kodi është ai që klienti "
+                "ta lexon në telefon. Dy produkte me të njëjtin kod, ose një produkt me dy "
+                "kode, është gabimi që lexuesi e gjen i pari.</p>",
+                "<p>E kontrollojmë listën para se të faqosim qoftë edhe një faqe: emrat, "
+                "përmasat, paketimet, fotot që ekzistojnë dhe ato që mungojnë ende.</p>",
+            ]),
+            ("Mbaji çmimet jashtë katalogut", [
+                "<p>Një katalog shtypet që të zgjasë, çmimet jo. Vendosi në një listë çmimesh "
+                "më vete, me datë, që një çmim i ri të thotë një fletë të re dhe jo "
+                "ristampimin e të gjitha faqeve.</p>",
+            ]),
+            ("Përgatit dy skedarë, jo një", [
+                "<p>Shtypshkronja ka nevojë për një skedar me rezolucion të plotë dhe me "
+                "tejkalim, sipas specifikimeve të saj, që i kërkojmë para se të faqosim faqen "
+                "e parë.</p>",
+                "<p>Klientët kanë nevojë për një PDF më të lehtë, që hapet në telefon. Gmail "
+                "refuzon bashkëngjitjet mbi <a href=\"https://support.google.com/mail/answer/6584\" "
+                "target=\"_blank\" rel=\"noopener\">25 MB</a>, ndaj kopja që dërgon me email "
+                "duhet të qëndrojë nën këtë kufi, ose të shkojë si lidhje.</p>",
+            ]),
+            ("Lëri faqen dhe katalogun të përdorin një listë të vetme", [
+                "<p>Të shkruar dy herë, katalogu dhe <a href=\"/web-design/\">faqja</a> nuk "
+                "përputhen më brenda një stine. Një listë e vetme që i ushqen të dyja, ashtu si "
+                "<a href=\"/systems/\">software-i ynë me porosi</a> mban në përputhje magazinën "
+                "dhe faqen e një dyqani, bën që një korrigjim i bërë një herë të shfaqet "
+                "kudo.</p>",
+            ]),
+            ("Çfarë bëjmë ne dhe çfarë bën shtypshkronja", [
+                "<p>E faqosim katalogun dhe dorëzojmë skedarët gati për shtyp, në shqip, "
+                "anglisht ose italisht. Letra, shtypja dhe lidhja mbeten te shtypshkronja jote, "
+                "që i njeh makineritë e saj më mirë se ne.</p>",
+            ]),
+        ],
+        "payoff": "Na dërgo listën e produkteve siç është sot, edhe një fletë llogaritëse, dhe "
+                  "të themi çfarë i duhet para se të bëhet katalog.",
+        "related": [("/web-design/", "Faqe interneti"), ("/systems/", "Software me porosi")],
     },
 ]
 

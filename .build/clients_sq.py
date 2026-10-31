@@ -41,7 +41,7 @@ NL = chr(10)
 CLIENTS = [
     {
         "slug": "iglisi-watch",
-        "src": "154632b2",
+        "src": "1104badc",
         "ask": ("riparim orësh", "Durrës"),
         # Not copy: the file and its 2 dimensions.
         "mark": [("iglisi-watch.png", 195, 22)],
@@ -83,6 +83,9 @@ CLIENTS = [
             "Një lidhje mes të dyve, kështu që një orë e shitur në banak nuk "
             "ofrohet më në faqe rreth një minutë më vonë, pa e prekur askush një "
             "kompjuter.",
+            "Logoja: IGLISI dhe WATCH me kapitale serif dhe një romb i vogël i artë "
+            "mes tyre, e vizatuar që të lexohet e bardhë mbi kokën e errët të faqes "
+            "së dyqanit.",
         ],
         # A heading with a verb and no comma, as rule 36 requires in all 3.
         "changed": "Ku shfaqet tani dyqani",
@@ -314,7 +317,7 @@ CLIENTS = [
     },
     {
         "slug": "census-properties",
-        "src": "dd88f1b5",
+        "src": "61923e11",
         "mark": [("census-properties.svg", 160, 22)],
         "name": "Census Properties",
         "where": "Durrës, Shqipëri",
@@ -350,6 +353,9 @@ CLIENTS = [
             "totalit.",
             "Një sistem zyre ku ruajtja e një shpalljeje shkruan një commit, kështu "
             "gjurma se kush e ndryshoi cilin çmim, dhe kur, është vetë depoja.",
+            "Logoja: CENSUS me shkronja kapitale të rralluara mbi një vijë të hollë, "
+            "me PROPERTIES dhe DURRËS të vogla në të dy skajet e saj, e ruajtur në "
+            "skedarë vektorialë që në letër të dalë po aq e mprehtë sa në ekran.",
         ],
         "changed": "Çfarë duhet të tregojë një shpallje",
         "changed_blocks": [
@@ -371,7 +377,7 @@ CLIENTS = [
     },
     {
         "slug": "vila-flamuri",
-        "src": "ad6d67b7",
+        "src": "bb0858f2",
         "mark": [("vila-flamuri.svg", 244, 22)],
         "name": "Vila Flamuri",
         "where": "Golem, Shqipëri",
@@ -404,6 +410,9 @@ CLIENTS = [
             "dikush ta kërkojë.",
             "Një kufi peshe që ndërtimi nuk pranon ta kalojë, dhe asnjë kërkesë te "
             "askush tjetër në asnjë faqe.",
+            "Logoja: një çati mbi V-në, shtylla e F-së që zgjatet lart si shtizë "
+            "flamuri, dhe dy dallgë nën emër. Një version më i vogël, pa çati dhe pa "
+            "dallgë, mbetet i lexueshëm si ikonë shfletuesi në 16 px.",
         ],
         "changed": "Nga nis tani një rezervim",
         "changed_blocks": [

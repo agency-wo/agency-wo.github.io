@@ -117,7 +117,8 @@ PAGE = {
                    "ChatGPT says. Durres, Albania.",
     "og_desc": "Right now, somebody nearby is searching for what you sell.",
     "org_desc": "Digital presence for small businesses: search, AI search, websites, "
-                "ads and custom software. English, Italian and Albanian.",
+                "ads, custom software, logos and catalogues. English, Italian and "
+                "Albanian.",
     "catalogue": "Services",
 
     # -- hero ---------------------------------------------------------------
@@ -219,6 +220,10 @@ PAGE = {
     # Sits above TRADES. An imperative and not a label, because the strip is
     # something to do rather than something to read past.
     "trades_lead": "Find your trade.",
+    # Under the five, not a sixth: logos and catalogues come alongside a site, and
+    # rule 28 keeps the services at five until a published catalogue can be linked.
+    "services_also": "We also <a href=\"/blog/what-a-small-business-logo-has-to-do/\">draw logos</a> and <a href=\"/blog/a-product-catalogue-before-print/\">lay out product" + NL +
+                     "catalogues</a>. <a href=\"/work/vila-flamuri/\">The Vila Flamuri mark</a> is one of ours.",
 
     # -- the businesses -----------------------------------------------------
     "ask_eyebrow": "The work",
@@ -380,7 +385,8 @@ PAGE = {
          "rebuild nobody needed throws away whatever ranking the old one had" + NL +
          "earned."),
         ("What do you not do?",
-         "Print, video production, and posting to social media on a schedule." + NL +
+         "Printing, video production, and posting to social media on a schedule." + NL +
+         "A catalogue we lay out goes to your printer as a finished file." + NL +
          "We also do not run campaigns on budgets that cannot carry them." + NL +
          "Hearing that now costs both of us less than hearing it in month 3."),
     ],

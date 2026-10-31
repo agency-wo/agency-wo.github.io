@@ -125,7 +125,7 @@ TRADES = [
 ]
 
 PAGE = {
-    "src": "0614c38d",
+    "src": "a1e5d658",
 
     # 38 characters against the 52 the title budget leaves once gen_home.py has
     # put "minarank studio ·" in front of it. The old string claimed 39 here and
@@ -140,8 +140,8 @@ PAGE = {
     # already made for FOOT_META: the reader of this page gets his answer in
     # the first word instead of the third.
     "org_desc": "Prezencë dixhitale për biznese të vogla: kërkim, kërkimi me "
-                "AI, faqe interneti, reklama dhe software me porosi. Shqip, "
-                "anglisht dhe italisht.",
+                "AI, faqe interneti, reklama, software me porosi, logo dhe katalogë. "
+                "Shqip, anglisht dhe italisht.",
     "catalogue": "Shërbime",
 
     # -- hero ---------------------------------------------------------------
@@ -224,6 +224,8 @@ PAGE = {
     "services_eyebrow": "Çfarë bëjmë",
     "services_h": "Pesë mënyra për t'u gjetur më lehtë.",
     "trades_lead": "Gjej zanatin tënd.",
+    "services_also": "Vizatojmë edhe <a href=\"/blog/what-a-small-business-logo-has-to-do/\">logo</a> dhe <a href=\"/blog/a-product-catalogue-before-print/\">faqosim" + NL +
+                     "katalogë produktesh</a>. <a href=\"/work/vila-flamuri/\">Shenja e Vila Flamurit</a> është punë e jona.",
 
     # -- the businesses -----------------------------------------------------
     "ask_eyebrow": "Puna",
@@ -341,7 +343,8 @@ PAGE = {
          "një faqe të re, dhe një faqe e re që nuk duhej hedh poshtë" + NL +
          "pozicionin që e vjetra kishte fituar."),
         ("Çfarë nuk bëni?",
-         "Shtyp, prodhim videosh, dhe postime në rrjete sociale me kalendar. Nuk" + NL +
+         "Shtypin, prodhimin e videove dhe postimet në rrjete sociale me kalendar." + NL +
+         "Një katalog që faqosim i shkon shtypshkronjës sate si skedar përfundimtar. Nuk" + NL +
          "menaxhojmë as fushata me buxhete që nuk i mbajnë. Ta dish tani" + NL +
          "kushton më pak për të dy se ta dish në muajin e tretë."),
     ],

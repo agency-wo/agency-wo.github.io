@@ -40,7 +40,7 @@ NL = chr(10)
 CLIENTS = [
     {
         "slug": "iglisi-watch",
-        "src": "154632b2",
+        "src": "1104badc",
         "ask": ("riparazione orologi", "Durazzo"),
         # Not copy: the file and its 2 dimensions.
         "mark": [("iglisi-watch.png", 195, 22)],
@@ -82,6 +82,9 @@ CLIENTS = [
             "Un collegamento tra i due, così un orologio venduto al bancone smette "
             "di essere offerto sul sito circa un minuto dopo, senza che nessuno "
             "tocchi un computer.",
+            "Il logo: IGLISI e WATCH in maiuscole con grazie e un piccolo rombo "
+            "dorato tra le due parole, disegnato per leggersi in bianco sull'intestazione "
+            "scura del negozio.",
         ],
         # A heading with a verb and no comma, as rule 36 requires in all 3.
         "changed": "Dove compare ora il negozio",
@@ -332,7 +335,7 @@ CLIENTS = [
     },
     {
         "slug": "census-properties",
-        "src": "dd88f1b5",
+        "src": "61923e11",
         "mark": [("census-properties.svg", 160, 22)],
         "name": "Census Properties",
         "where": "Durazzo, Albania",
@@ -369,6 +372,9 @@ CLIENTS = [
             "Un gestionale dove salvare un annuncio scrive un commit, così la "
             "traccia di chi ha cambiato quale prezzo, e quando, è il repository "
             "stesso.",
+            "Il logo: CENSUS in maiuscole spaziate sopra un filetto sottile, con "
+            "PROPERTIES e DURRËS in piccolo alle due estremità, conservato in file "
+            "vettoriali perché in stampa resti netto come sullo schermo.",
         ],
         "changed": "Cosa deve mostrare un annuncio",
         "changed_blocks": [
@@ -391,7 +397,7 @@ CLIENTS = [
     },
     {
         "slug": "vila-flamuri",
-        "src": "ad6d67b7",
+        "src": "bb0858f2",
         "mark": [("vila-flamuri.svg", 244, 22)],
         "name": "Vila Flamuri",
         "where": "Golem, Albania",
@@ -426,6 +432,9 @@ CLIENTS = [
             "niente finché qualcuno non la chiede.",
             "Un tetto di peso che la build si rifiuta di superare, e nemmeno una "
             "chiamata a nessun altro su nessuna pagina.",
+            "Il logo: un tetto sopra la V, l'asta della F che sale fino a diventare "
+            "un pennone, e due onde sotto il nome. Una versione ridotta, senza tetto né "
+            "onde, resta leggibile come icona del browser a 16 px.",
         ],
         "changed": "Da dove parte adesso una prenotazione",
         "changed_blocks": [

@@ -50,6 +50,8 @@ CLIENTS = [
             "A link between the two, so a watch sold over the counter stops being "
             "offered on the website about a minute later, without anyone touching a "
             "computer.",
+            "The logo: IGLISI and WATCH in serif capitals with a small gold "
+            "diamond between them, drawn to read in white on the shop's dark header.",
         ],
         "changed": "Where the shop shows up now",
         "changed_blocks": [
@@ -315,6 +317,9 @@ CLIENTS = [
             "of the total.",
             "An office system where saving a listing writes a commit, so the record "
             "of who changed which price, and when, is the repository itself.",
+            "The logo: CENSUS in spaced capitals over a thin rule, with PROPERTIES "
+            "and DURRËS set small at either end of it, kept as vector files so it "
+            "prints as sharply as it shows on a screen.",
         ],
         "changed": "What a listing has to show",
         "changed_blocks": [
@@ -372,6 +377,9 @@ CLIENTS = [
             "for it.",
             "A weight budget the build refuses to go over, and not one request to "
             "anybody else on any page.",
+            "The logo: a roof over the V, the F's stem rising into a flagpole, and "
+            "two waves under the name. A smaller version without the roof and the "
+            "waves stays legible as a 16 px browser icon.",
         ],
         "changed": "Where a booking starts now",
         "changed_blocks": [

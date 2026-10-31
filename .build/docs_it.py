@@ -261,7 +261,7 @@ PAGES = [
     # --------------------------------------------------------------- STUDIO --
     {
         "url": "/studio/",
-     "src": "749ad0ae",
+     "src": "95a518a3",
         "nav": "Studio",
         "title": "Come lavoriamo",
         "description": "Come lavoriamo: prove prima delle opinioni, un documento "
@@ -272,7 +272,8 @@ PAGES = [
             "knows_about": ["Ottimizzazione per i motori di ricerca",
                             "Ricerca locale",
                             "Ottimizzazione per i motori generativi", "Web design",
-                            "Pubblicità su Meta", "Sviluppo di software su misura"],
+                            "Pubblicità su Meta", "Sviluppo di software su misura",
+                            "Progettazione di loghi", "Impaginazione di cataloghi prodotti"],
         },
         # The comma the English keeps before "and" is dropped: Italian does not
         # need it, and check 20 has no Italian verb list, so a verbless-looking

@@ -1831,7 +1831,7 @@ POSTS = [
     {
         "slug": "web-design-durres",
         "date": "2026-08-21",
-        "updated": "2026-08-21",
+        "updated": "2026-10-31",
         "topic": "Websites",
         "work": "iglisi-watch",
         "service": ("/web-design/", "Websites"),
@@ -1869,7 +1869,7 @@ POSTS = [
             ]),
             ("What has been built here", [
                 "<p>A watch shop on Rruga Aleksander Goga, a boutique, a "
-                "lingerie shop and a printing business. Each has a page on "
+                "lingerie shop and an estate agency. Each has a page on "
                 "this site saying what was made and what happened "
                 "afterwards.</p>",
                 "<p>The watch shop is the one carrying numbers, because it "
@@ -7176,6 +7176,125 @@ POSTS = [
         ],
         "related": [("/seo/", "SEO and local search"),
                     ("/web-design/", "Websites")],
+    },
+    # Logos and catalogues are made alongside a website (RULES.md rule 28, 2026-10-31),
+    # so both posts sit under Websites. Neither carries a "faq": FAQ rich results
+    # are retired and no new FAQPage node is emitted.
+    {
+        "slug": "what-a-small-business-logo-has-to-do",
+        "date": "2026-10-31",
+        "updated": "2026-10-31",
+        "topic": "Websites",
+        "work": "vila-flamuri",
+        "service": ("/web-design/", "Websites"),
+
+        "title": "What a small business logo has to do",
+        "h1": "A logo has to work at 16 pixels before it works on a sign.",
+        "summary": "The first test a logo meets is the smallest one: the tab in a browser.",
+        "standfirst": "Most of the places a small business logo appears are small, crowded "
+                      "or in one colour. We draw for those places first.",
+        "description": "What a small business logo has to survive, from a 16 px browser icon "
+                       "to a map listing, and which files you should receive, with three "
+                       "logos we drew in Albania.",
+        "og_desc": "The smallest place a logo appears is the one that decides it.",
+
+        "body": [
+            ("Where a logo actually appears", [
+                "<p>Before it reaches a sign, a small business logo spends most of its life "
+                "small: a browser tab, the round photo on a Google map listing, the corner of "
+                "a WhatsApp chat, the header on a phone.</p>",
+                "<p>So we draw the small sizes first and scale up, never the other way round. "
+                "A mark that only works large is a picture of a logo.</p>",
+            ]),
+            ("Three logos we drew", [
+                "<p>For <a href=\"/work/vila-flamuri/\">Vila Flamuri</a>, a family house of "
+                "apartments in Golem, the mark is a roof over the V and a flagpole rising out "
+                "of the F. The browser icon drops the roof and the waves, because at 16 px "
+                "they turn to noise.</p>",
+                "<p>For <a href=\"/work/census-properties/\">Census Properties</a>, an estate "
+                "agency in Durres, it is a wordmark: the name in spaced capitals over a thin "
+                "rule, with the city at one end.</p>",
+                "<p>For <a href=\"/work/iglisi-watch/\">Iglisi Watch</a>, a watch shop in "
+                "Durres, it is two words in serif capitals with a gold diamond between them, "
+                "made to sit white on a dark header.</p>",
+            ]),
+            ("What the logo has to survive", [
+                "<p>One colour. A stamp, an invoice printed in black, an engraving on a "
+                "counter: a logo that needs its gradient to be recognised fails all 3.</p>",
+                "<p>A square crop. Map listings and social profiles cut the picture to a "
+                "circle or a square, so a long wordmark needs a short mark beside it.</p>",
+                "<p>Distance. A sign is read from across a street, which favours a few thick "
+                "shapes over fine detail.</p>",
+            ]),
+            ("Which files you should end up with", [
+                "<p>A vector master, as SVG or PDF, that any printer or sign maker can scale. "
+                "A one-colour version in black and in white. The short mark on its own, for "
+                "the icon and the profile photo. The browser icon set, and a share image for "
+                "links.</p>",
+                "<p>All of them belong to you, the same way <a href=\"/blog/who-owns-your-website/\">"
+                "your website should</a>. A logo you have to ask a designer to export is a "
+                "logo you rent.</p>",
+            ]),
+        ],
+        "payoff": "Send us the logo you have now, or a photo of your sign, and we will tell "
+                  "you which of these tests it already passes.",
+        "related": [("/web-design/", "Websites"), ("/seo/", "SEO and local search")],
+    },
+    {
+        "slug": "a-product-catalogue-before-print",
+        "date": "2026-10-31",
+        "updated": "2026-10-31",
+        "topic": "Websites",
+        "work": None,
+        "service": ("/web-design/", "Websites"),
+
+        "title": "What a product catalogue needs before print",
+        "h1": "A product catalogue is a list of codes before it is a design.",
+        "summary": "Most catalogue problems start in the product list, long before anybody "
+                   "opens a layout.",
+        "standfirst": "A catalogue is printed to be kept for a year. It has to be right on the "
+                      "day it prints, and still useful once the prices move.",
+        "description": "What a product catalogue needs before it goes to print: one entry per "
+                       "code, prices kept apart, a print file and a light PDF, and one list "
+                       "shared with the website.",
+        "og_desc": "A catalogue is a list of codes before it is a design.",
+
+        "body": [
+            ("Start from the product list", [
+                "<p>Every product gets one row and one code, and the code is what a customer "
+                "reads back to you on the phone. Two products under one code, or one product "
+                "under two, is the mistake a reader finds first.</p>",
+                "<p>We check the list before any page is laid out: the names, the sizes, the "
+                "pack, the photos that exist and the ones still missing.</p>",
+            ]),
+            ("Keep the prices out of the book", [
+                "<p>A catalogue is printed to last, and prices do not. Put them on a separate "
+                "price list with a date on it, so a new price means a new sheet and not a "
+                "reprint of every page.</p>",
+            ]),
+            ("Make two files, not one", [
+                "<p>The printer needs a file at full resolution with bleed, built to their own "
+                "specification, which we ask for before the first page.</p>",
+                "<p>Customers need a lighter PDF they can open on a phone. Gmail refuses "
+                "attachments over <a href=\"https://support.google.com/mail/answer/6584\" "
+                "target=\"_blank\" rel=\"noopener\">25 MB</a>, so the copy you email has to "
+                "stay under that, or travel as a link.</p>",
+            ]),
+            ("Let the website and the catalogue share one list", [
+                "<p>Typed twice, the catalogue and the <a href=\"/web-design/\">website</a> "
+                "disagree within a season. One product list that feeds both, the way "
+                "<a href=\"/systems/\">our custom software</a> keeps a shop's stock and its "
+                "site in step, means a correction made once shows everywhere.</p>",
+            ]),
+            ("What we do and what the printer does", [
+                "<p>We lay out the catalogue and hand over files ready to print, in English, "
+                "Italian or Albanian. The paper, the printing and the binding stay with your "
+                "printer, who knows their machines better than we do.</p>",
+            ]),
+        ],
+        "payoff": "Send us your product list as it stands today, even a spreadsheet, and we "
+                  "will tell you what it needs before a catalogue can be made from it.",
+        "related": [("/web-design/", "Websites"), ("/systems/", "Custom software")],
     },
 ]
 

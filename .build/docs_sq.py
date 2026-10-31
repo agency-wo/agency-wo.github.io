@@ -251,7 +251,7 @@ PAGES = [
     # --------------------------------------------------------------- STUDIO --
     {
         "url": "/studio/",
-     "src": "749ad0ae",
+     "src": "95a518a3",
         "nav": "Studio",
         "title": "Si punojmë",
         "description": "Si punojmë: prova para mendimeve, një dokument i qartë, i bërë "
@@ -261,7 +261,8 @@ PAGES = [
         "schema": {
             "knows_about": ["Optimizim për motorët e kërkimit", "Kërkim lokal",
                             "Optimizim për motorët gjenerativë", "Web design",
-                            "Reklamim në Meta", "Zhvillim software-i me porosi"],
+                            "Reklamim në Meta", "Zhvillim software-i me porosi",
+                            "Dizajn logosh", "Faqosje katalogësh produktesh"],
         },
         # The comma the English keeps before "and" is dropped: Albanian does not
         # need it, and check 20 has no Albanian verb list, so a verbless-looking

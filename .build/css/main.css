@@ -492,6 +492,11 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
    Only the list reset and the lead are new here.
    The <ul> is the flex container and the <li> are its items, so the list keeps
    its semantics; display:contents on the li would have dropped them in Safari. */
+/* The line under the five doors: logos and catalogues, made alongside a site and
+   not a sixth door (rule 28). Body copy, so ink; its links are the site's own.
+   It sits on the list's last rule, a step below it. */
+.svc-also { margin: var(--s-5) 0 0; max-width: 46rem; text-wrap: pretty; }
+.svc-also a { color: inherit; text-decoration: underline; text-underline-offset: .2em; }
 .trades { margin-top: var(--s-7); }
 /* Sentence case and not the .eyebrow treatment, though it sits in the same
    band. An uppercase label here read as a second section opening under the

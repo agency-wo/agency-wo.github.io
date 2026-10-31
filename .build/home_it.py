@@ -126,7 +126,7 @@ TRADES = [
 ]
 
 PAGE = {
-    "src": "0614c38d",
+    "src": "a1e5d658",
 
     # 38 characters against the 52 the title budget leaves once gen_home.py has
     # put "minarank studio ·" in front of it. The old string claimed 38 here and
@@ -141,8 +141,8 @@ PAGE = {
     # already made for FOOT_META: the reader of this page gets his answer in
     # the first word instead of the third.
     "org_desc": "Presenza digitale per piccole attività: ricerca, ricerca AI, "
-                "siti, pubblicità e software su misura. Italiano, inglese e "
-                "albanese.",
+                "siti, pubblicità, software su misura, loghi e cataloghi. Italiano, "
+                "inglese e albanese.",
     "catalogue": "Servizi",
 
     # -- hero ---------------------------------------------------------------
@@ -228,6 +228,8 @@ PAGE = {
     "services_eyebrow": "Cosa facciamo",
     "services_h": "Cinque modi per farti trovare più facilmente.",
     "trades_lead": "Trova il tuo settore.",
+    "services_also": "Disegniamo anche <a href=\"/blog/what-a-small-business-logo-has-to-do/\">loghi</a> e <a href=\"/blog/a-product-catalogue-before-print/\">impaginiamo" + NL +
+                     "cataloghi prodotti</a>. <a href=\"/work/vila-flamuri/\">Il marchio di Vila Flamuri</a> è opera nostra.",
 
     # -- the businesses -----------------------------------------------------
     "ask_eyebrow": "Il lavoro",
@@ -348,7 +350,8 @@ PAGE = {
          "di un sito nuovo, e un sito nuovo che non serviva butta via il" + NL +
          "posizionamento che il vecchio si era guadagnato."),
         ("Cosa non fate?",
-         "Stampa, produzione video, e pubblicare sui social a calendario. Non" + NL +
+         "La stampa, la produzione video e la pubblicazione sui social a calendario." + NL +
+         "Un catalogo che impaginiamo arriva al tuo tipografo come file finito. Non" + NL +
          "gestiamo nemmeno campagne con budget che non le reggono. Saperlo" + NL +
          "adesso costa meno a tutti e due che saperlo al terzo mese."),
     ],
