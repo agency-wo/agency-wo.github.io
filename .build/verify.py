@@ -2623,32 +2623,47 @@ for _p in all_pages:
 # The owner asked on 2026-10-07 that the site name nobody and never state the
 # team size. A byline, a schema node or a comment that brings the name back
 # would undo that silently, so every text file in the repo is read, the
-# generator sources included. The name is held as 2 sha1 hashes (the full name
-# and the given name, lowercased) rather than spelled out, because spelling it
-# here would publish it in this public repo, which is the one place the rule
-# exists to keep it out of. Team size has no reliable string, so rule 27 in
-# RULES.md carries that half.
-_NAME_HASHES = {"0085c296a1a3f821f0e1e9b361c48f07bf998432", "297922baedcbce951cc0df3d4ef22af43702d487"}
-_TEXT_EXT = (".html", ".txt", ".xml", ".json", ".py", ".md", ".css", ".js",
-             ".svg", ".webmanifest", ".mjs")
-for _d, _dirs, _files in os.walk(ROOT):
-    _dirs[:] = [x for x in _dirs if x not in (".git", "__pycache__", "node_modules")]
-    for _f in _files:
-        if not _f.endswith(_TEXT_EXT):
-            continue
-        _p = os.path.join(_d, _f)
-        try:
-            _w = re.findall(r"[^\W\d_]+", io.open(_p, encoding="utf-8").read().lower())
-        except (UnicodeDecodeError, OSError):
-            continue
-        _hit = any(
-            (len(a) == 5 and hashlib.sha1(a.encode()).hexdigest() in _NAME_HASHES)
-            or (len(a) == 5 and len(b) == 4 and hashlib.sha1(
-                (a + " " + b).encode()).hexdigest() in _NAME_HASHES)
-            for a, b in zip(_w, _w[1:] + [""]))
-        if _hit:
-            findings.append(f"[content] {rel(_p)}: names the person rule 27 "
-                            f"keeps off this site. Use the studio's name instead.")
+# generator sources included. What to look for lives in the git-ignored
+# .build/private/names.json, as salted hashes: anything this public file held
+# about the name, even an unsalted hash, would publish it. Without that file
+# the check cannot run, and the gate fails rather than pass blind. Team size
+# has no reliable string, so rule 27 in RULES.md carries that half.
+_NAMES_FILE = os.path.join(ROOT, ".build", "private", "names.json")
+try:
+    _names = json.load(io.open(_NAMES_FILE, encoding="utf-8"))
+    _salt = _names["salt"]
+    _words = {(w["len"], w["sha256"]) for w in _names["words"]}
+    _pairs = {(tuple(p["lens"]), p["sha256"]) for p in _names["pairs"]}
+except (OSError, ValueError, KeyError, TypeError):
+    _names = None
+    findings.append("[config] check 55 needs .build/private/names.json (git-ignored, "
+                    "kept on the owner's machine); without it rule 27 is unchecked")
+if _names:
+    _h = lambda s: hashlib.sha256((_salt + s).encode()).hexdigest()
+    _wlens = {n for n, _ in _words}
+    _plens = {n for n, _ in _pairs}
+    _TEXT_EXT = (".html", ".txt", ".xml", ".json", ".py", ".md", ".css", ".js",
+                 ".svg", ".webmanifest", ".mjs")
+    for _d, _dirs, _files in os.walk(ROOT):
+        _dirs[:] = [x for x in _dirs if x not in (".git", "__pycache__", "node_modules")]
+        for _f in _files:
+            if not _f.endswith(_TEXT_EXT):
+                continue
+            _p = os.path.join(_d, _f)
+            if os.path.abspath(_p) == os.path.abspath(_NAMES_FILE):
+                continue
+            try:
+                _w = re.findall(r"[^\W\d_]+", io.open(_p, encoding="utf-8").read().lower())
+            except (UnicodeDecodeError, OSError):
+                continue
+            _hit = any(
+                (len(a) in _wlens and (len(a), _h(a)) in _words)
+                or ((len(a), len(b)) in _plens
+                    and ((len(a), len(b)), _h(a + " " + b)) in _pairs)
+                for a, b in zip(_w, _w[1:] + [""]))
+            if _hit:
+                findings.append(f"[content] {rel(_p)}: names the person rule 27 "
+                                f"keeps off this site. Use the studio's name instead.")
 
 
 # ------------------------------------------------------------------- report
