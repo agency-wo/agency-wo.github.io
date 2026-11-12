@@ -546,13 +546,15 @@ FOOT_PATHS = [
     ["/studio/", "/blog/", "/start/"],
     # The last column's labels ARE its destinations, so chrome.py holds an
     # empty list for it and this is the one place they are written.
-    ["mailto:" + EMAIL, "https://wa.me/" + WHATSAPP, "tel:+" + WHATSAPP],
+    # No tel: link since 2026-11-12: the number takes WhatsApp only, so a call
+    # link would ring a phone nobody answers. The number is shown on the
+    # WhatsApp link instead.
+    ["mailto:" + EMAIL, "https://wa.me/" + WHATSAPP],
 ]
 # The labels ARE the destinations in this column, which is why an address and a
-# proper noun sit here untranslated. A phone number is the third thing that
-# reads the same in all 3 languages, so it needs no chrome string and no
-# re-stamp to join them.
-FOOT_LAST = [EMAIL, "WhatsApp", phone_display()]
+# proper noun sit here untranslated. A phone number reads the same in all 3
+# languages, so it needs no chrome string and no re-stamp to join them.
+FOOT_LAST = [EMAIL, "WhatsApp " + phone_display()]
 
 
 def ch(lang):
@@ -1083,7 +1085,7 @@ def footer(lang, page_url=None, cta_heading=None, cta_note=None):
           <p class="band-note">{cta_note}</p>
           <p class="band-actions">
             <a class="band-cta" href="{localise(AUDIT_URL, lang)}">{c.BAND_CTA}</a>
-            <span class="band-alt"><a href="mailto:{EMAIL}">{EMAIL}</a> {DOT} <a href="{wa_audit_href(lang)}">WhatsApp</a> {DOT} <a href="tel:+{WHATSAPP}">{phone_display()}</a></span>
+            <span class="band-alt"><a href="mailto:{EMAIL}">{EMAIL}</a> {DOT} <a href="{wa_audit_href(lang)}">WhatsApp {phone_display()}</a></span>
           </p>
         </div>
 {clock(lang)}
