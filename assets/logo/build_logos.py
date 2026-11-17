@@ -15,7 +15,7 @@ from fontTools.misc.transform import Transform
 # Font packs are NOT committed. Download Clash Display + Satoshi from fontshare.com,
 # extract, and point MINARANK_FONTS_DIR at the folder holding both family dirs.
 SC = os.environ.get("MINARANK_FONTS_DIR") or os.path.dirname(os.path.abspath(__file__))
-OUT = r"c:\Users\aceto\OneDrive\Desktop\web and apps\MINA RANK\assets\logo"
+OUT = os.path.dirname(os.path.abspath(__file__))
 # These are --ink, --ink-2, --red and --paper from css/tokens.css, and gate
 # check 31 fails the build if any of them stops being a token there. It scans
 # this file's comments too, so do not write a retired value here to explain

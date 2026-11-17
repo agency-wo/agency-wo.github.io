@@ -51,7 +51,9 @@ WORKSPACE = os.path.abspath(os.path.join(HERE, "..", "..", ".."))
 
 
 def rel(*parts):
-    return os.path.join(WORKSPACE, *parts)
+    """A path inside a sibling project; its folder is matched whatever number the workspace puts before it."""
+    top = next((d for d in sorted(os.listdir(WORKSPACE)) if re.sub(r"^\d+ ", "", d) == parts[0]), parts[0])
+    return os.path.join(WORKSPACE, top, *parts[1:])
 
 
 # ---------------------------------------------------------------- outlines --
