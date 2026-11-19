@@ -362,7 +362,7 @@ PAGE = {
 # panel is narrow, the 4 error messages are read aloud when a field is invalid,
 # and each one says what to do rather than what went wrong.
 FORM = {
-    "src": "15d6451a",
+    "src": "aa021ffc",
 
     # Not chrome_it.BAND_CTA ("Chiedi un audit gratuito"), which is a different
     # string on the same page, exactly as in English.
@@ -396,4 +396,5 @@ FORM = {
     "alt": "Oppure <a href=\"{email_href}\">scrivici una email</a>, o" + NL +
            "<a href=\"{wa_href}\">WhatsApp</a>.",
     "fine": "Lo usiamo per l'audit, nient'altro.",
+    "sample": "Guarda una pagina di un audit vero.",
 }

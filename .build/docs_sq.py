@@ -251,7 +251,7 @@ PAGES = [
     # --------------------------------------------------------------- STUDIO --
     {
         "url": "/studio/",
-     "src": "95a518a3",
+     "src": "57bc1ed0",
         "nav": "Studio",
         "title": "Si punojmë",
         "description": "Si punojmë: prova para mendimeve, një dokument i qartë, i bërë "
@@ -301,6 +301,10 @@ PAGES = [
                   "një" + NL +
                   "juniori ndërsa ti vazhdon të paguash tarifa senior."),
 
+            ("fig", {"src": "/assets/plates/vila-flamuri-home.webp", "w": 900, "h": 453,
+                     "id": "",
+                     "alt": "Ballina e Vila Flamuri, një fotografi e vilës pas shkurreve me lule pranë një shiriti që kërkon datat e mbërritjes",
+                     "caption": "Faqja e Vila Flamurit: e projektuar, e shkruar dhe e ndërtuar nga ne, në 3 gjuhë."}),
             ("h2", "Numra që janë të vërtetë"),
             ("p", "Raportojmë çfarë lëvizi dhe çfarë jo. Një muaj ku nuk u përmirësua "
                   "asgjë" + NL +
@@ -338,6 +342,12 @@ PAGES = [
         ],
         "faq_h": "Pyetjet që na bëjnë",
         "faq": [
+            ("A mund të flasim me dikë për të cilin keni punuar?",
+             "Po. Kërko dhe të prezantojmë me klientin situata e të cilit "
+             "ngjan" + NL +
+             "më shumë me tënden. Puna është publike sidoqëftë: secili prej "
+             "tyre" + NL +
+             "ka një faqe këtu që thotë çfarë ndryshoi dhe çfarë jo."),
             ("A duhet të jemi në Durrës?",
              "Jo. Pjesa më e madhe ndodh brenda një shfletuesi dhe një "
              "dokumenti," + NL +
@@ -361,12 +371,6 @@ PAGES = [
              "ta tërheqim litarin dhe të shpresojmë. Dorëzimi me rregull "
              "është" + NL +
              "pjesë e punës."),
-            ("A mund të flasim me dikë për të cilin keni punuar?",
-             "Po. Kërko dhe të prezantojmë me klientin situata e të cilit "
-             "ngjan" + NL +
-             "më shumë me tënden. Puna është publike sidoqëftë: secili prej "
-             "tyre" + NL +
-             "ka një faqe këtu që thotë çfarë ndryshoi dhe çfarë jo."),
         ],
         "cta": "Nis me një bisedë.",
         "cta_note": "Pa slide, pa ofertë derisa ta duash.",
@@ -378,7 +382,7 @@ PAGES = [
     # anglisht: janë emra të përveçëm, në glossary.KEEP_ENGLISH.
     {
         "url": "/audit/",
-     "src": "fc7a3e59",
+     "src": "56a53914",
         "nav": "Auditimi",
         # 25 shkronja nga 52 që lë buxheti pas " · minarank studio".
         "title": "Çfarë mat auditimi falas",
@@ -515,6 +519,10 @@ PAGES = [
                 "dikush kërkon atë që shet, dhe çfarë bëjnë ata që ti nuk e bën.",
             ]),
 
+            ("fig", {"src": "/assets/proof/sample-audit.webp", "w": 1200, "h": 1218,
+                     "id": "sample",
+                     "alt": "Një faqe auditimi me 5 pikë nga 100: shëndeti teknik 80, SEO on-page 90, dukshmëria në AI 90, prania lokale 87, UX dhe konvertimi 66, dhe një tabelë që e krahason secilën me auditimin e mëparshëm",
+                     "caption": "Një faqe nga auditimi i një dyqani që e ndjekim, bërë më 30 gusht 2026: 5 pikët dhe 2 që ranë që nga auditimi i mëparshëm."}),
             ("h2", "Problemet që ta hanë reklamën pa zhurmë"),
             ("p", "Mund ta paguash klikimin dhe prapë ta humbasësh klientin sapo "
                   "mbërrin. Një" + NL +
@@ -596,7 +604,7 @@ PAGES = [
     # ---------------------------------------------------------------- START --
     {
         "url": "/start/",
-     "src": "356fb3c0",
+     "src": "968ed597",
         "nav": "Nis një projekt",
         "title": "Auditim falas",
         # 158 characters, down from 181, the worst overflow on the site.
@@ -616,7 +624,8 @@ PAGES = [
             # {turnaround} 2 of 3.
             "lead": "Merr një PDF: çfarë e bën mirë faqja, ku janë boshllëqet," + NL +
                     "dhe çfarë do të rregullonim të parën, me radhë. Është yti" + NL +
-                    "nëse na merr në punë ose jo, është shkruar në anglisht, dhe" + NL +
+                    "nëse na merr në punë ose jo, është shkruar në anglisht me një" + NL +
+                    "përmbledhje të shkurtër në italisht ose në shqip po ta kërkosh, dhe" + NL +
                     "mbërrin {turnaround}.",
             "done_h": "U dërgua. Auditimi yt është rrugës.",
             # {turnaround} 3 of 3.
@@ -682,8 +691,8 @@ PAGES = [
                   "fjalët e tua. Një paragraf mjafton."),
 
             ("h2", "WhatsApp"),
-            ("p", "Më e lehtë për t'u shkruar se një email, dhe koha e përgjigjes është "
-                  "e njëjta."),
+            ("p", "Më e lehtë për t'u shkruar se një email. Përgjigjemi {turnaround}, nga "
+                  "e hëna në të shtunën."),
             # Word for word chrome_sq.WA_LABEL, which labels the same action in
             # the header on all 51 pages.
             ("cta", "Na shkruaj në WhatsApp", "whatsapp"),

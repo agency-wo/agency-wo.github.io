@@ -261,7 +261,7 @@ PAGES = [
     # --------------------------------------------------------------- STUDIO --
     {
         "url": "/studio/",
-     "src": "95a518a3",
+     "src": "57bc1ed0",
         "nav": "Studio",
         "title": "Come lavoriamo",
         "description": "Come lavoriamo: prove prima delle opinioni, un documento "
@@ -311,6 +311,10 @@ PAGES = [
                   "tu continui" + NL +
                   "a pagare tariffe da senior."),
 
+            ("fig", {"src": "/assets/plates/vila-flamuri-home.webp", "w": 900, "h": 453,
+                     "id": "",
+                     "alt": "La homepage di Vila Flamuri, una fotografia della villa dietro cespugli fioriti accanto a una barra che chiede le date di arrivo",
+                     "caption": "Il sito di Vila Flamuri: progettato, scritto e costruito da noi, in 3 lingue."}),
             ("h2", "Numeri che sono veri"),
             ("p", "Riportiamo cosa si è mosso e cosa no. Un mese in cui non è migliorato "
                   "niente" + NL +
@@ -347,6 +351,12 @@ PAGES = [
         ],
         "faq_h": "Le domande che ci fanno",
         "faq": [
+            ("Possiamo parlare con qualcuno per cui avete lavorato?",
+             "Sì. Chiedi e ti presentiamo il cliente la cui situazione "
+             "somiglia di" + NL +
+             "più alla tua. Il lavoro è pubblico comunque: ognuno di loro ha "
+             "una" + NL +
+             "pagina qui che dice cosa è cambiato e cosa no."),
             ("Dobbiamo essere a Durazzo?",
              "No. Quasi tutto succede dentro un browser e un documento, e "
              "diversi" + NL +
@@ -371,12 +381,6 @@ PAGES = [
              "di tirare la corda e sperare. Passare il lavoro con ordine fa "
              "parte" + NL +
              "del mestiere."),
-            ("Possiamo parlare con qualcuno per cui avete lavorato?",
-             "Sì. Chiedi e ti presentiamo il cliente la cui situazione "
-             "somiglia di" + NL +
-             "più alla tua. Il lavoro è pubblico comunque: ognuno di loro ha "
-             "una" + NL +
-             "pagina qui che dice cosa è cambiato e cosa no."),
         ],
         "cta": "Comincia da una conversazione.",
         "cta_note": "Niente slide, nessuna proposta finché non la vuoi.",
@@ -388,7 +392,7 @@ PAGES = [
     # inglese: sono nomi propri, elencati in glossary.KEEP_ENGLISH.
     {
         "url": "/audit/",
-     "src": "fc7a3e59",
+     "src": "56a53914",
         "nav": "L'audit",
         # 30 caratteri sui 52 che il budget lascia dopo " · minarank studio".
         "title": "Cosa misura l'audit gratuito",
@@ -525,6 +529,10 @@ PAGES = [
                 "non fai.",
             ]),
 
+            ("fig", {"src": "/assets/proof/sample-audit.webp", "w": 1200, "h": 1218,
+                     "id": "sample",
+                     "alt": "Una pagina di audit con 5 punteggi su 100: salute tecnica 80, SEO on-page 90, visibilità AI 90, presenza locale 87, UX e conversione 66, e una tabella che confronta ognuno con l'audit precedente",
+                     "caption": "Una pagina dell'audit di un negozio che seguiamo, fatto il 30 agosto 2026: i 5 punteggi, e i 2 scesi rispetto all'audit precedente."}),
             ("h2", "I problemi che ti bruciano la pubblicità in silenzio"),
             ("p", "Puoi pagare il clic e perdere lo stesso il cliente appena "
                   "arriva. Una pagina" + NL +
@@ -609,7 +617,7 @@ PAGES = [
     # ---------------------------------------------------------------- START --
     {
         "url": "/start/",
-     "src": "356fb3c0",
+     "src": "968ed597",
         "nav": "Inizia un progetto",
         "title": "Audit gratuito del sito",
         # 159 characters, down from 171, which overflowed the snippet.
@@ -629,7 +637,8 @@ PAGES = [
             # {turnaround} 2 of 3.
             "lead": "Ricevi un PDF: cosa fa bene il sito, dove sono i buchi," + NL +
                     "e cosa sistemeremmo per primo, in ordine. È tuo che tu ci" + NL +
-                    "assuma o no, è scritto in inglese, e arriva {turnaround}.",
+                    "assuma o no, è scritto in inglese con un breve riassunto in italiano o" + NL +
+                    "in albanese se lo chiedi, e arriva {turnaround}.",
             "done_h": "Inviato. Il tuo audit è in arrivo.",
             # {turnaround} 3 of 3.
             # 5, perché il motore valuta 5 aree. Vedi la nota nell'inglese.
@@ -694,8 +703,8 @@ PAGES = [
                   "parole tue. Un paragrafo basta e avanza."),
 
             ("h2", "WhatsApp"),
-            ("p", "Più facile da scrivere di un'email, e il tempo di risposta è lo "
-                  "stesso."),
+            ("p", "Più facile da scrivere di un'email. Rispondiamo {turnaround}, dal "
+                  "lunedì al sabato."),
             # Word for word chrome_it.WA_LABEL, which labels the same action in
             # the header on all 51 pages.
             ("cta", "Scrivici su WhatsApp", "whatsapp"),

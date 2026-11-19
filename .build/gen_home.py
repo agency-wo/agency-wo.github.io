@@ -308,6 +308,7 @@ def audit_form(f, lang):
               </p>
               <p class="af-say" id="af-say" role="status" aria-live="polite"></p>
               <p class="af-alt">{txt(16, f["alt"], lang)}</p>
+              <p class="af-alt"><a href="{shell.localise("/audit/#sample", lang)}">{fill(f["sample"], lang)}</a></p>
               <p class="af-fine">{fill(f["fine"], lang)}</p>
               <p class="af-fine">{shell.trust_line(lang)}</p>
             </form>

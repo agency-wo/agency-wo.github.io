@@ -50,6 +50,7 @@ Accented letters are literal too ("attività"), never HTML entities.
 # chrome is imported directly by shell.py. So for a long time these 50 stamps
 # were read by nothing at all. shell.py now checks every one of them.
 SRC = {
+    "CASE_REVIEW_LINK": "47893f45",
     "BAND_CTA_FOR": "382d7dfd",
     "REPLY_NOTE": "a2ac906b",
     "WA_PAGE": "620088c8",
@@ -385,3 +386,5 @@ PAGE_NAMES = {
     "/blog/": "blog",
     "/glossary/": "glossario",
 }
+
+CASE_REVIEW_LINK = "Leggila su Google"

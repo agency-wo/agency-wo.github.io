@@ -563,10 +563,14 @@ _FOOT_BLOCK = re.compile(r"(?s)<!-- SHARED:FOOTER -->.*?<!-- /SHARED:FOOTER -->"
 
 # The "ask them yourself" block repeats on 16 pages by design, like the band.
 _AIQ = re.compile(r"(?s)<!-- AIQ -->.*?<!-- /AIQ -->")
+# A client's own review, quoted on its case page as it is on the homepage
+# (2026-11-19). It is their sentence, shown verbatim twice by design, not copy
+# of ours repeated, so check 11 does not count it.
+_REVIEW = re.compile(r"(?s)<!-- REVIEW -->.*?<!-- /REVIEW -->")
 
 
 def body_text(html):
-    return text_of(_AIQ.sub(" ", _BAND.sub(" ", html)))
+    return text_of(_REVIEW.sub(" ", _AIQ.sub(" ", _BAND.sub(" ", html))))
 
 
 def prose_html(html):

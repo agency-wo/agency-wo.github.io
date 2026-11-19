@@ -126,12 +126,10 @@ def strip_tags(s):
 # .plate is reused rather than a new class: it already sets width:100%,
 # height:auto and the hairline border, and a second class saying the same thing
 # is a second place to change it.
-PHOTOS = {
-    "seo": "map-pin",
-    "geo": "library-study",
-    "web-design": "shop-before-opening",
-    "meta-ads": "cafe-table",
-}
+# Empty since 2026-11-19: all four were generated pictures, not our own (see
+# PHOTO_FOR in gen_docs.py). The mechanism stays for the day a real photograph
+# of the work or the place exists; give it a slug here and a caption in chrome.
+PHOTOS = {}
 SIZES_PHOTO = "(min-width: 1000px) 620px, 90vw"
 
 SLUG_MAX = 40

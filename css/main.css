@@ -1028,3 +1028,17 @@ button.btn:disabled:hover { background: none; color: var(--ink); }
   .hero-rest > .status { order: 5; margin-top: 0; }
   .hero-split > .hero-says { order: 6; margin-top: var(--s-5); }
 }
+
+.case-review { margin: var(--s-6) 0 0; padding-left: var(--s-5);
+  border-left: 2px solid var(--red); }
+.case-review blockquote { margin: 0; font-size: var(--fs-lead); line-height: 1.45; }
+.case-review figcaption { margin-top: var(--s-3); font-size: var(--fs-small); color: var(--slate); }
+
+@media (max-width: 999px) {
+  .case-layout > .side { display: contents; }
+  .case-layout > .side > .side-block { grid-column: 1 / 13; }
+  .case-layout > .side > .side-block:first-child { order: -1; margin-bottom: var(--s-6); }
+  .case-layout > .side > .side-block + .side-block { margin-top: var(--s-6); }
+
+  .js .case-layout > .side[data-reveal-group] > * { opacity: 1; transform: none; }
+}

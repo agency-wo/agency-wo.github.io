@@ -194,6 +194,29 @@ def client_page(c, nxt, posts, band, lang):
         c_ = ch
         proof += aiq_block(10, {"head": c_.AIQ_HEAD, "lead": c_.AIQ_LEAD, "trade_label": c_.AIQ_TRADE, "city_label": c_.AIQ_CITY, "q": c_.AIQ_Q, "chatgpt": c_.AIQ_CHATGPT, "perplexity": c_.AIQ_PERPLEXITY, "google": c_.AIQ_GOOGLE, "maps": c_.AIQ_MAPS, "after": c_.AIQ_AFTER}, *c["ask"]) + NL
 
+    # The business's own Google review, where it left one (2026-11-19, the
+    # conversion research): taken from the homepage's four, never written here,
+    # and never on Iglisi Watch's page, which is our own shop. The link opens the
+    # profile with every review on it. The REVIEW markers let check 11 skip the
+    # quote, which is the client's sentence shown in two places, not ours.
+    h_home = i18n.load("home", "PAGE", lang)
+    q = next((s for s in h_home["says"] if s["slug"] == c["slug"]), None)
+    review = ""
+    if q:
+        tr = f' {shell.DOT} <span class="say-tr">{h_home["says_tr"]}</span>' if q["tr"] else ""
+        review = (f'          <!-- REVIEW -->{NL}'
+                  f'          <figure class="case-review">{NL}'
+                  f'            <blockquote>{shell.localise_html(q["text"], lang)}</blockquote>{NL}'
+                  f'            <figcaption>{q["name"]}{tr} {shell.DOT} '
+                  f'<a href="{shell.GBP_PROFILE_URL}" target="_blank" rel="noopener">{ch.CASE_REVIEW_LINK}</a>'
+                  f'</figcaption>{NL}'
+                  f'          </figure>{NL}'
+                  f'          <!-- /REVIEW -->{NL}')
+
+    # Order since 2026-11-19: what changed first, then the client's own words,
+    # then where it started and what we built. A buyer reads a case for the
+    # result; the build is how, and it now comes after. On phones the
+    # screenshot also rises under the title (.case-layout in main.css).
     body = f'''
       <header class="page-head">
 {shell.crumbs(lang, (ch.CRUMB_WORK, shell.localise("/work/", lang)), c["name"])}
@@ -202,8 +225,12 @@ def client_page(c, nxt, posts, band, lang):
           <a href="https://{c["site"]}" target="_blank" rel="noopener">{c["site"]}</a></p>
       </header>
 
-      <div class="grid">
+      <div class="grid case-layout">
         <div class="prose">
+          <h2>{c["changed"]}</h2>
+{changed}
+          <p class="payoff">{shell.TICK}{shell.localise_html(c["payoff"], lang)}</p>
+{review}
           <h2>{ch.WORK_STARTED}</h2>
 {started}
 
@@ -211,10 +238,6 @@ def client_page(c, nxt, posts, band, lang):
           <ul>
 {built}
           </ul>
-
-          <h2>{c["changed"]}</h2>
-{changed}
-          <p class="payoff">{shell.TICK}{shell.localise_html(c["payoff"], lang)}</p>
 {shell.updated("clients", lang)}
         </div>
 

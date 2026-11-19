@@ -46,8 +46,11 @@ FIG_FOR = {"/systems/": "ledger", "/audit/": "scorecard"}
 # and the climb is the one motif on this site that is already the identity:
 # rule 4 says ascension equals ranking. /work/ gets none, because it already
 # carries six client plates and a seventh picture there is a gallery.
-PHOTO_FOR = {"/systems/": "workbench-paper", "/studio/": "desk-by-window",
-             "/audit/": "concrete-stairway"}
+# Empty since 2026-11-19: these were generated pictures (make_photos.py), and the
+# conversion research found that stock and generated images cost trust, and that
+# /studio/'s read as the studio itself. /studio/ and /audit/ now carry real ones
+# as "fig" blocks in docs.py; /systems/ has none until a real one exists.
+PHOTO_FOR = {}
 SIZES_PHOTO = "(min-width: 1000px) 620px, 90vw"
 
 S = shell.SITE
@@ -233,6 +236,21 @@ def block(indent, b, lang, en=None, toc=None):
         one = lambda k: " ".join(fill(a[k], lang).split(NL))  # noqa: E731
         return aiq_block(indent, {k: one(k) for k in a if not k.endswith("_default")},
                          one("trade_default"), one("city_default"))
+    if kind == "fig":
+        # A real picture inside the column (2026-11-19): a page of a delivered
+        # audit on /audit/, client work on /studio/. Same .plate frame as the
+        # case screenshots; alt and caption are copy and are translated, the
+        # file, its size and its anchor are not. Lazy, because it is never the
+        # first thing on the page.
+        f = b[1]
+        idattr = f' id="{f["id"]}"' if f.get("id") else ""
+        return (f'{pad}<figure class="plate"{idattr}>' + NL
+                + f'{pad}  <img src="{shell.stamped(f["src"])}" '
+                  f'srcset="{shell.with_720(f["src"], f["w"])}" sizes="{SIZES_PHOTO}" '
+                  f'width="{f["w"]}" height="{f["h"]}" alt="{fill(f["alt"], lang)}" '
+                  f'loading="lazy" decoding="async">' + NL
+                + f'{pad}  <figcaption>{fill(f["caption"], lang)}</figcaption>' + NL
+                + f'{pad}</figure>')
     raise AssertionError("no such block kind: " + kind)
 
 

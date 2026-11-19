@@ -443,4 +443,6 @@ FORM = {
     "alt": "Or <a href=\"{email_href}\">email us</a>, or" + NL +
            "<a href=\"{wa_href}\">WhatsApp</a>.",
     "fine": "We use it for the audit, nothing else.",
+    # 2026-11-19: what comes back, shown before it is asked for (/audit/#sample).
+    "sample": "See a page from a real audit.",
 }

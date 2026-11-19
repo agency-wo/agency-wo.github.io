@@ -40,7 +40,9 @@ everything checkable is checked by `verify.py`, which fails the build.
 12. **Contractions on** in body copy.
 13. **Never explain an absence.** If it cannot be shown, one line, no
     paragraph. The gate bans the apology phrases.
-14. **No sentence appears on two pages.** The gate compares every sentence
+14. **No sentence appears on two pages.** (One exception since 2026-11-19: a
+    client's own Google review, quoted on its case page as on the homepage,
+    inside `<!-- REVIEW -->` markers. It is their sentence, not ours.) The gate compares every sentence
     over eight words, ignoring the shared chrome.
 15. **Pages may not share a skeleton.** Each service page fills its middle
     slot differently: SEO has cost and timeline, GEO has the refusal list,

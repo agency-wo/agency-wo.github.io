@@ -356,7 +356,7 @@ PAGE = {
 # panel is narrow, the 4 error messages are read aloud when a field is invalid,
 # and each one says what to do rather than what went wrong.
 FORM = {
-    "src": "15d6451a",
+    "src": "aa021ffc",
 
     # "auditim i faqes" is banned, so the audit is named and its object follows
     # separately. This is also NOT chrome_sq.BAND_CTA ("Merr një auditim
@@ -391,4 +391,5 @@ FORM = {
     "alt": "Ose <a href=\"{email_href}\">na shkruaj një email</a>, ose" + NL +
            "<a href=\"{wa_href}\">WhatsApp</a>.",
     "fine": "E përdorim për auditimin, asgjë tjetër.",
+    "sample": "Shiko një faqe nga një auditim i vërtetë.",
 }

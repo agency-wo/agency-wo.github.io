@@ -166,7 +166,6 @@ The map listing, first
 That listing is a Google Business Profile. It's free, it takes an afternoon to fill in properly, and it decides whether somebody 400 metres away calls you or the shop down the road.
 We fill in all of it: the categories, every service you offer, hours that are still right at Christmas, real photographs of the place rather than stock ones, the description, and the questions people keep ringing up to ask. In Albanian, Italian and English, so the profile answers in the language somebody searched in.
 Then reviews, which is the part everyone finds awkward. There's a way to ask that doesn't feel like begging, and there's a way to reply to a bad one that wins more work than the bad review cost you.
-One pin. The map decides who gets phoned today.
 On the site, and off it
 The trade splits the rest in two and you'll be sold both, so here is which is which.
 On-page is everything on your own website: what each page is about, whether it answers the question somebody actually typed, how it's written, how it's built, how fast it loads on a phone on mobile data. You control all of it, so it's where we start.
@@ -244,7 +243,6 @@ ChatGPT recommends businesses it can read and check somewhere else. Answer the q
 We've done this once already
 Ask ChatGPT, Claude or Perplexity where to get a watch repaired in Durres and they name Iglisi Watch, with the street, the opening hours and the WhatsApp number. That's a client, and you can check it right now.
 They're also the only watch business in Durres with a website that ranks at all. The competition is directory listings and Facebook pages. Most towns and most trades still look like that, which is the useful part of the story.
-An assistant answers from what it can read. This is the shelf.
 What these systems actually read
 An assistant doesn't see your website the way you do. It reads a stripped-down version: the words in the order they appear in the code, your headings, and a few hidden labels. The layout, the colours and anything that only appears when you click are thrown away before it gets there.
 So what survives is:
@@ -312,7 +310,6 @@ Check this page yourself
 This site loads nothing from anybody else. No font service, no analytics, no tag manager, no framework. Open your browser's network tab and count the requests.
 That isn't purism. Every third-party script is somebody else's outage, somebody else's privacy problem, and a slice of your speed rented out permanently. Most sites carry a dozen without anyone having decided to.
 The decisions that make a page fast are the same ones that make it readable by the systems on the AI search page. You don't have to choose between them.
-The half hour before opening, when the website does the work.
 Two shops in Durres run their own websites
 Victoria Boutique brings Greek labels into Albania and changes stock with the season. She photographs a piece, adds it from her phone, and it's on the site in about a minute, in Albanian, Italian and English. Nothing to license and no monthly fee. How that was built.
 Intimo Bruna sells the way her customers already buy, which is by message. Each product page hands off to WhatsApp with the item already named, so the owner isn't asking which one you mean. How that was built.
@@ -383,7 +380,6 @@ Meta ads are worth it for a small shop when the offer already works and somebody
 How we charge, and why it matters to you
 Most agencies take a percentage of what you spend, so every conversation about your budget is also a conversation about their invoice.
 We charge a flat monthly fee for the work. That means advice to spend less this month, or to stop and fix the offer first, costs us nothing to give. Expect to hear it at some point.
-A phone face down. The ad arrived before he went looking.
 WhatsApp and cash on delivery
 Most advice written in English assumes a checkout and a card. Around here the sale usually happens in a WhatsApp conversation and the money changes hands at the door.
 That changes the ad, not just the page it lands on. The picture has to make somebody comfortable starting a conversation, and the message has to arrive with the product already named so the owner isn't asking which one.
@@ -483,7 +479,6 @@ Reports. The month on one page, printable, without
 anybody staying late to build it.
 Your website, connected. Sell something at the counter
 and the site stops offering it. Publish a new product from your phone.
-A blank sheet and a red pencil. Every system starts here.
 The one we built, and which parts are yours
 Iglisi Watch in Durres runs on a system
 we built. It has 50 panels, holds 443 stock sizes grouped into 25 cards,
@@ -520,7 +515,7 @@ know.
 Do I own it?
 Yes. The code is yours, it runs on your accounts, and it is documented
 so somebody else could take it over.
-Updated 31 October 2026
+Updated 19 November 2026
 Running today
 One full operations system in a Durres watch shop. Two shops publishing
 their own websites from a phone. One till wired to a website. All of it
@@ -578,6 +573,10 @@ https://minarankstudio.com/work/iglisi-watch/
 Iglisi Watch
 Durres, Albania. Watch sales and repair.
 watch.al
+Where the shop shows up now
+Search for watch repair in Durres, then for a watch shop in Durres, in English, Albanian or Italian. Then ask ChatGPT the same questions. We would rather you checked than took our word for it.
+The competition here is directory listings and Facebook pages. The opening was there and nobody had taken it.
+From nothing to 900 clicks in the quarter from 2 June to 30 August 2026.
 Where this started
 A family watch shop on Rruga Aleksander Goga. They repair watches, and they sell them. Both halves of that were invisible outside Durres, because there was no website at all.
 So the starting number really is zero. Nothing to migrate, nothing to fix, no history in Google to inherit.
@@ -587,10 +586,6 @@ The site looks after itself. Add a watch and the product pages, the shop list, t
 A system for the workbench and the counter: repair jobs, stock, the money kept in 5 separate lines, and a reference library that works with no signal in a back room.
 A link between the two, so a watch sold over the counter stops being offered on the website about a minute later, without anyone touching a computer.
 The logo: IGLISI and WATCH in serif capitals with a small gold diamond between them, drawn to read in white on the shop's dark header.
-Where the shop shows up now
-Search for watch repair in Durres, then for a watch shop in Durres, in English, Albanian or Italian. Then ask ChatGPT the same questions. We would rather you checked than took our word for it.
-The competition here is directory listings and Facebook pages. The opening was there and nobody had taken it.
-From nothing to 900 clicks in the quarter from 2 June to 30 August 2026.
 Updated 19 November 2026
 Iglisi Watch, watch.al
 What we did
@@ -647,6 +642,12 @@ https://minarankstudio.com/work/victoria-boutique/
 Victoria Boutique
 Durres, Albania. Fashion.
 victoriaboutique.org
+Who runs the website now
+She does. The shop updates its own site, which means the site keeps up with the stock instead of drifting a season behind it.
+This is also the build where a one-off became something we could hand to the next client.
+The shop updates its own website.
+He created a website for my business and optimized it for SEO, I recommend him to everyone!
+Redina Koca - Translated - Read it on Google
 Where this started
 A boutique that brings Greek labels into Albania, changing stock with the season. The clothes were the whole business and none of them were online.
 Anything built here had to survive the owner adding pieces every week without calling us, or it would go stale by the second month.
@@ -654,10 +655,6 @@ What we built
 A site built around the clothes and the shop itself, photographed, rather than around stock imagery.
 Albanian, English and Italian, with a language switch that works even with JavaScript turned off.
 A panel where she adds, edits and removes pieces from her phone. No content system to license, no monthly fee, nobody to call.
-Who runs the website now
-She does. The shop updates its own site, which means the site keeps up with the stock instead of drifting a season behind it.
-This is also the build where a one-off became something we could hand to the next client.
-The shop updates its own website.
 Updated 19 November 2026
 Victoria Boutique, victoriaboutique.org
 What we did
@@ -676,6 +673,12 @@ https://minarankstudio.com/work/intimo-bruna/
 Intimo Bruna
 Durres, Albania. Lingerie.
 intimobruna.com
+Where the sale happens
+In WhatsApp, deliberately. The site's job is to get someone there with the right item already in the message.
+It also loads fast on a phone on mobile data, which is how most of these customers will open it.
+Built for how this market buys.
+He made a trilingual seo/geo optimised website for us, and it's actually delivering the expected results, would recommend them for all sort of local business
+Brunilda Boraj - Read it on Google
 Where this started
 A lingerie shop where customers already messaged rather than filled in forms. Sending them to a checkout would have been designing for a habit they don't have.
 So the site's job was never to take payment. It was to get somebody into a conversation with the right product in front of them.
@@ -683,10 +686,6 @@ What we built
 A hand-built site in Albanian, Italian and English, with the fonts served from its own domain so nothing waits on anybody else.
 Product pages that hand off to WhatsApp with the item already named in the message, so the owner isn't asking which one you mean.
 The same phone panel, so stock and prices stay current.
-Where the sale happens
-In WhatsApp, deliberately. The site's job is to get someone there with the right item already in the message.
-It also loads fast on a phone on mobile data, which is how most of these customers will open it.
-Built for how this market buys.
 Updated 19 November 2026
 Intimo Bruna, intimobruna.com
 What we did
@@ -704,6 +703,12 @@ https://minarankstudio.com/work/pro-affy/
 ProAffy
 English language. Heating and cooling.
 proaffy.com
+What the site argues
+It argues about response time, not about craftsmanship, because that is the thing the customer is actually deciding on.
+This is copy and conversion work rather than design work, and it is here because it shows a different half of what we do.
+Written to win the callback.
+Working with Mina Rank was a seamless experience from day one. They handled both our website architecture and search engine optimization with incredible precision
+Deni Tabaku - Read it on Google
 Where this started
 Heating and cooling is a trade where the job usually goes to whoever replies first. A homeowner with no heating calls three numbers and books the one that picks up.
 That makes it a different problem from the other three here. Nothing on this one is about photography.
@@ -711,10 +716,6 @@ What we built
 A site that sells a system rather than a service, so the firm is not competing on hourly rate.
 A guarantee stated plainly on the page instead of buried in terms.
 A path from enquiry to booked visit that is short enough to survive a customer who is cold and annoyed.
-What the site argues
-It argues about response time, not about craftsmanship, because that is the thing the customer is actually deciding on.
-This is copy and conversion work rather than design work, and it is here because it shows a different half of what we do.
-Written to win the callback.
 Updated 19 November 2026
 ProAffy, proaffy.com
 What we did
@@ -733,6 +734,10 @@ https://minarankstudio.com/work/census-properties/
 Census Properties
 Durres, Albania. Estate agency.
 censusproperties.com
+What a listing has to show
+Each one prints the documents behind it: what was checked, and what is still outstanding. The gaps are as easy to read as the claims, which is the point of publishing them.
+Photographs and a price are what every agency in the town already shows. The paperwork is what almost none of them do.
+The paperwork, printed beside the price.
 Where this started
 A new agency in a market where the usual listing is a price, a photograph and a telephone number. Nothing about who owns the place, or whether the permits exist.
 So the brief was to make the paperwork the product. If a buyer can see what has been checked before they ring, the call starts somewhere better than the asking price.
@@ -743,10 +748,6 @@ Search that keeps its state in the address bar, a shortlist that leaves as a Wha
 4 calculators and 5 buyer guides per language, where every figure either carries a dated source or is shown as unconfirmed and kept out of the total.
 An office system where saving a listing writes a commit, so the record of who changed which price, and when, is the repository itself.
 The logo: CENSUS in spaced capitals over a thin rule, with PROPERTIES and DURRËS set small at either end of it, kept as vector files so it prints as sharply as it shows on a screen.
-What a listing has to show
-Each one prints the documents behind it: what was checked, and what is still outstanding. The gaps are as easy to read as the claims, which is the point of publishing them.
-Photographs and a price are what every agency in the town already shows. The paperwork is what almost none of them do.
-The paperwork, printed beside the price.
 Updated 19 November 2026
 Census Properties, censusproperties.com
 What we did
@@ -765,6 +766,12 @@ https://minarankstudio.com/work/vila-flamuri/
 Vila Flamuri
 Golem, Albania. Holiday apartments.
 vilaflamuri.com
+Where a booking starts now
+In a message the guest writes themselves, with the dates already in it. Nothing is held automatically, because a family with 15 apartments answers faster than an availability system would stay truthful.
+The site does not pretend to be a portal. It gives the guest a reason to write directly, and the family a reason to answer quickly.
+A booking nobody takes a cut of.
+Very capable in both design and search optimisation engines!
+Klajdi Gjuzi - Read it on Google
 Where this started
 A family house of 15 apartments a couple of hundred metres from the sea, filling its rooms through the big booking sites and paying a cut on every one of them.
 The same guest costs less when they arrive directly. So the site had to be worth finding first, and then worth writing to.
@@ -775,10 +782,6 @@ A request that gathers the dates, the guests and the age of each child, then ope
 A walking route to the beach drawn from map data when the site is built, and a street map that loads nothing at all until somebody asks for it.
 A weight budget the build refuses to go over, and not one request to anybody else on any page.
 The logo: a roof over the V, the F's stem rising into a flagpole, and two waves under the name. A smaller version without the roof and the waves stays legible as a 16 px browser icon.
-Where a booking starts now
-In a message the guest writes themselves, with the dates already in it. Nothing is held automatically, because a family with 15 apartments answers faster than an availability system would stay truthful.
-The site does not pretend to be a portal. It gives the guest a reason to write directly, and the family a reason to answer quickly.
-A booking nobody takes a cut of.
 Updated 19 November 2026
 Vila Flamuri, vilaflamuri.com
 What we did
@@ -4887,11 +4890,11 @@ One document, in plain language
 What we would change, in what order, and why it matters. If it takes a
 glossary to read, it is written badly. You should be able to hand it to
 somebody who does not work in marketing and have them follow it.
-One desk, and nothing handed to a junior.
 We build it ourselves
 Pages, schema, creative, software. Nothing gets handed to a third party
 who loses 3 weeks and half the intent, and nothing gets handed to a junior
 while you keep paying senior rates.
+Vila Flamuri's site: designed, written and built by us, in 3 languages.
 Numbers that are true
 We report what moved and what did not. A month where nothing improved gets
 reported as a month where nothing improved, with what we are changing
@@ -4912,6 +4915,10 @@ control is worth more than a badge we drew ourselves.
 Written and built in
 Durres. Questions go to info@minarankstudio.com.
 Questions we get asked
+Can we speak to somebody you have worked with?
+Yes. Ask, and we introduce you to the client whose situation looks
+most like yours. The work is public either way: each of them has a
+page here saying what changed and what did not.
 Do we need to be in Durres?
 No. Most of this happens inside a browser and a document, and several
 clients have never been in the same room as us. If you are near, we
@@ -4924,11 +4931,7 @@ What happens if we outgrow you?
 It happens, and it is the good kind of problem. When a business
 needs specialists we do not have, we say so rather
 than stretch and hope. Handing over cleanly is part of the job.
-Can we speak to somebody you have worked with?
-Yes. Ask, and we introduce you to the client whose situation looks
-most like yours. The work is public either way: each of them has a
-page here saying what changed and what did not.
-Updated 31 October 2026
+Updated 19 November 2026
 
 ## Free website audit
 https://minarankstudio.com/start/
@@ -4939,7 +4942,8 @@ reaches us, and the audit comes back within 24 hours.
 Send us your site and we'll audit it free.
 You get a PDF: what the site does well, where the gaps are, and
 what we'd fix first, in order. It's yours whether you hire us or
-not, it's written in English, and it arrives within 24 hours.
+not, it's written in English with a short summary in Italian or
+Albanian if you ask, and it arrives within 24 hours.
 Sent. Your audit is on its way.
 It scores 5 areas, from the technical basics to how you stand
 next to the businesses competing with you, and it ends with what
@@ -4957,7 +4961,7 @@ Open the brief
 Or just write to info@minarankstudio.com in your
 own words. A paragraph is plenty.
 WhatsApp
-Easier to type than an email, and the reply time is the same.
+Easier to type than an email. We answer within 24 hours, Monday to Saturday.
 Message on WhatsApp
 Twenty minutes on a call
 No slides. Bring the site and the problem. If the honest answer is that you
@@ -4991,7 +4995,7 @@ photographs and text already exist. That is why the audit comes first
 and costs nothing. You get the price with the plan, on one page, before
 any work starts. Meta ads are a flat fee rather than a cut of what you
 spend.
-Updated 31 October 2026
+Updated 19 November 2026
 Studio
 minarank studio, Durres, Albania
 info@minarankstudio.com
@@ -5044,7 +5048,6 @@ The first 5 seconds
 Whether somebody landing on the site can tell what you do, where you are
 and how to reach you, before they decide to leave. This is the one an owner
 can check without us, and almost nobody does.
-The climb is the whole job. The first step is free.
 What comes back
 A score out of 100 for each of the 5, with how much of that
 area we were actually able to check printed beside it.
@@ -5055,6 +5058,7 @@ cheap. A plan, not 60 problems with no priority on them.
 Where you stand next to your competition: the businesses
 that come up when somebody searches for what you sell, and what they're
 doing that you aren't.
+A page from an audit of a shop we built for, run on 30 August 2026: the 5 scores, and the 2 that fell since the audit before.
 The problems that quietly waste your advertising
 You can pay for the click and still lose the customer on arrival. A page
 that takes 6 seconds to open on a phone. A contact button that goes
@@ -5097,7 +5101,7 @@ That's the whole form.
 Sent. That's all we needed.
 It goes to a person before it goes to you.
 Expect the PDF within 24 hours.
-Updated 31 October 2026
+Updated 19 November 2026
 What we don't need
 No password, no analytics access, and no call first.
 The address is the whole ask.

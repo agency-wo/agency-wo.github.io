@@ -296,6 +296,15 @@ PAGES = [
                   "who loses 3 weeks and half the intent, and nothing gets handed to a "
                   "junior" + NL +
                   "while you keep paying senior rates."),
+            # 2026-11-19: work we built, where a generated "workspace by the water"
+            # stood until then. A reader took that picture for the studio itself,
+            # which it was not; this one shows exactly what the section claims.
+            ("fig", {"src": "/assets/plates/vila-flamuri-home.webp", "w": 900, "h": 453,
+                     "id": "",
+                     "alt": "The Vila Flamuri home page, a photograph of the villa behind "
+                            "flowering shrubs beside a bar asking for arrival dates",
+                     "caption": "Vila Flamuri's site: designed, written and built by us, "
+                                "in 3 languages."}),
 
             ("h2", "Numbers that are true"),
             ("p", "We report what moved and what did not. A month where nothing improved "
@@ -334,6 +343,14 @@ PAGES = [
         ],
         "faq_h": "Questions we get asked",
         "faq": [
+            # First since 2026-11-19 (it was last): a buyer checking a studio wants
+            # this answer before the others, and it is the one a stranger can test.
+            ("Can we speak to somebody you have worked with?",
+             "Yes. Ask, and we introduce you to the client whose situation "
+             "looks" + NL +
+             "most like yours. The work is public either way: each of them has "
+             "a" + NL +
+             "page here saying what changed and what did not."),
             ("Do we need to be in Durres?",
              "No. Most of this happens inside a browser and a document, and "
              "several" + NL +
@@ -354,12 +371,6 @@ PAGES = [
              "needs specialists we do not have, we say so "
              "rather" + NL +
              "than stretch and hope. Handing over cleanly is part of the job."),
-            ("Can we speak to somebody you have worked with?",
-             "Yes. Ask, and we introduce you to the client whose situation "
-             "looks" + NL +
-             "most like yours. The work is public either way: each of them has "
-             "a" + NL +
-             "page here saying what changed and what did not."),
         ],
         "cta": "Start with a conversation.",
         "cta_note": "No slides, no proposal until you want one.",
@@ -529,6 +540,21 @@ PAGES = [
                 "they're" + NL +
                 "doing that you aren't.",
             ]),
+            # 2026-11-19: one real page of a delivered audit, so a reader sees what
+            # comes back before giving an address for it. Page 4 of the audit of
+            # Iglisi Watch (the owner's own shop, so nobody's consent is needed),
+            # run on 30 August 2026. That page carries no name and no price; the
+            # cover does, which is why the whole PDF is not offered. Two of its
+            # scores fell since the audit before, and they stay in (rule 22).
+            ("fig", {"src": "/assets/proof/sample-audit.webp", "w": 1200, "h": 1218,
+                     "id": "sample",
+                     "alt": "An audit page with 5 scores out of 100: technical health "
+                            "80, on-page SEO 90, AI visibility 90, local presence 87, "
+                            "UX and conversion 66, and a table comparing each with "
+                            "the audit before",
+                     "caption": "A page from an audit of a shop we built for, run on "
+                                "30 August 2026: the 5 scores, and the 2 that fell "
+                                "since the audit before."}),
 
             ("h2", "The problems that quietly waste your advertising"),
             ("p", "You can pay for the click and still lose the customer on "
@@ -634,7 +660,8 @@ PAGES = [
                     "and" + NL +
                     "what we'd fix first, in order. It's yours whether you hire us "
                     "or" + NL +
-                    "not, it's written in English, and it arrives {turnaround}.",
+                    "not, it's written in English with a short summary in Italian or" + NL +
+                    "Albanian if you ask, and it arrives {turnaround}.",
             "done_h": "Sent. Your audit is on its way.",
             # 5, because the engine scores 5: technical, on-page, AI search,
             # local and the first visit. It said 6 from the day it was written
@@ -701,7 +728,10 @@ PAGES = [
                   "own words. A paragraph is plenty."),
 
             ("h2", "WhatsApp"),
-            ("p", "Easier to type than an email, and the reply time is the same."),
+            # "the reply time is the same" until 2026-11-19, which promised a time
+            # it never stated. It is the site's one turnaround (rule 39).
+            ("p", "Easier to type than an email. We answer {turnaround}, Monday to "
+                  "Saturday."),
             ("cta", "Message on WhatsApp", "whatsapp"),
 
             ("h2", "Twenty minutes on a call"),

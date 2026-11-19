@@ -269,3 +269,6 @@ PAGE_NAMES = {
     "/blog/": "blog",
     "/glossary/": "glossary",
 }
+
+# Under a client's own review on its case page (2026-11-19): opens the profile with every review.
+CASE_REVIEW_LINK = "Read it on Google"
