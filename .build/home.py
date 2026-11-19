@@ -132,9 +132,14 @@ PAGE = {
     # searching, and we make sure they find you.
     "hero_claim": "Right now, somebody nearby is searching for what you sell.",
     "hero_say": "We make sure they find you on Google.",
-    "hero_sub": "Google, the map, and the answers ChatGPT and Gemini give" + NL +
-                "when somebody asks for a shop like yours. We work in English," + NL +
-                "Italian and Albanian.",
+    # Named all five services, the buyers and the market on 2026-11-19 (the
+    # conversion research): until then the first screen said only "find you on
+    # Google", so a visitor who came for a website, an app or Meta ads met those
+    # words about 2,100 px down on a phone. It replaces the line that restated
+    # the search idea, so the hero is no taller.
+    "hero_sub": "Websites, Google search and the map, AI search, Meta ads and" + NL +
+                "custom software, for businesses in Albania and Italy. We work in" + NL +
+                "English, Italian and Albanian.",
     # Proof above the fold, 2026-10-07: until then the hero carried no number
     # at all and the first one sat in the dark band below it. These count what
     # customers DID (calls, directions), the half an owner can feel. The two
@@ -162,8 +167,11 @@ PAGE = {
                   # same figures with the full date and the self-check beside
                   # them. The date did not disappear; it moved one click away
                   # from somebody who has not yet decided to care.
+                  # The months were added on 2026-11-19: "in five months" with no
+                  # dates read as current once watch.al's search traffic fell
+                  # from 7 September. The length still leads; the dates follow.
                   "{proof_directions} people asking Google how to get there, "
-                  "in five months.",
+                  "in five months, May to October 2026.",
     # "hero_who" was here until 2026-10-24: "The person who reads your site is
     # the person who builds the fix." Two reasons it went, and either would
     # have done. It was the only sentence on the page that said "the person"
@@ -175,7 +183,9 @@ PAGE = {
 
     # -- proof --------------------------------------------------------------
     "proof_eyebrow": "Proof",
-    "proof_h": "Three months ago, Google had never heard of this" + NL +
+    # "Three months ago" until 2026-11-19: true in August, false by November.
+    # A relative date on a page nobody re-reads goes wrong on its own.
+    "proof_h": "In May 2026, Google had never heard of this" + NL +
                "shop.",
     # Trimmed on 2026-10-24, from 40 words to 34. The street stays: it is the
     # detail that makes the claim checkable, and a reader who wants to verify
@@ -197,10 +207,13 @@ PAGE = {
                "near zero in early June 2026 and climb through August.",
     "fig_caption": "The purple line is how often the shop came up in Google. The" + NL +
                    "blue line is how many people clicked.",
-    "proof_p1": "Ads stop the day you stop paying for them. This does not: the "
-                "shop" + NL +
-                "was put on the map once, and search has been sending people ever" + NL +
-                "since.",
+    # "This does not: ... search has been sending people ever since" until
+    # 2026-11-19. watch.al lost about 90% of its Google traffic from 7 September
+    # 2026, so the promise that results last was false; rules 21 and 23. The
+    # window it describes is now stated instead.
+    "proof_p1": "Ads stop the day you stop paying for them. From June to August" + NL +
+                "2026, search sent people to the shop every week, with nothing" + NL +
+                "spent on ads.",
     # "proof_p2" was here until 2026-10-24: "Position 8.8 is the bottom of the
     # first page. In the last 4 weeks it slipped to 9.7 while the click rate
     # rose to 1.4%. More searches are finding the shop, not fewer." It is the
@@ -261,7 +274,11 @@ PAGE = {
     # client name links to its own /work/ page instead, which is where somebody
     # checking a quote actually wants to arrive. The footer keeps the review
     # link, with the wording that matches what it does.
+    # 2026-11-19: a READ link now sits under the quotes, to the profile itself
+    # (shell.GBP_PROFILE_URL, which opens the reviews, not the form), because a
+    # buyer checks curated quotes against the full list (the conversion research).
     "says_h": "What four clients wrote on Google.",
+    "says_all": "Read every review on Google.",
     "says": [
         {"name": "Deni Tabaku", "client": "ProAffy", "slug": "pro-affy",
          "tr": False,
@@ -308,8 +325,8 @@ PAGE = {
     # plain from "had no website in May", stated rather than advertised.
     "open_h": "We publish what older studios hide.",
     "open_p1": "{brand} has put {clients} businesses online, each with its" + NL +
-               "own page. The first had no website in May; by August Google was" + NL +
-               "sending it 900 clicks a quarter.",
+               "own page. The first had no website in May; from 2 June to 30" + NL +
+               "August 2026, Google sent it 900 clicks.",
     # Rule 22 is the argument here and not merely a constraint the block
     # survives: the weak numbers are the reason to believe the strong one, so
     # this says so rather than leaving a reader to notice.

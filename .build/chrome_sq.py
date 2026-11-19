@@ -52,6 +52,11 @@ here is the copyright sign in FOOT_COPYRIGHT, which is a symbol and not a word.
 # chrome is imported directly by shell.py. So for a long time these 50 stamps
 # were read by nothing at all. shell.py now checks every one of them.
 SRC = {
+    "BAND_CTA_FOR": "382d7dfd",
+    "REPLY_NOTE": "a2ac906b",
+    "WA_PAGE": "620088c8",
+    "MAIL_SUBJECT": "ab915a6b",
+    "PAGE_NAMES": "abd873b3",
     "ARIA_CRUMBS": "3a789919",
     "ARIA_DETAILS": "e32297d7",
     "ARIA_GLANCE": "0777be04",
@@ -354,3 +359,26 @@ ERR_SAY = "Kjo faqe nuk u rendit kurrë. Nuk ekziston."
 ERR_BACK = "Kthehu në krye"
 ERR_BAND_H = "Po kërkon diçka që e ndërtojmë ne?"
 ERR_BAND_NOTE = "Na dërgo adresën dhe të kthejmë një auditim."
+
+# -- added 2026-11-19 ------------------------------------------------------------
+BAND_CTA_FOR = {
+    "/systems/": "Na thuaj çfarë duhet të bëjë programi",
+    "/meta-ads/": "Kërko një plan për reklamat",
+}
+REPLY_NOTE = "Përgjigjemi në WhatsApp dhe me email {turnaround}, nga e hëna në të shtunën."
+WA_PAGE = "Përshëndetje {brand}, të shkruaj nga faqja: {page}."
+MAIL_SUBJECT = "Kërkesë nga faqja: {page}"
+PAGE_NAMES = {
+    "/": "kryefaqja",
+    "/web-design/": "faqet e internetit",
+    "/seo/": "SEO",
+    "/geo/": "kërkimi me AI",
+    "/systems/": "softueri me porosi",
+    "/meta-ads/": "Meta ads",
+    "/audit/": "auditimi falas",
+    "/start/": "fillo një projekt",
+    "/studio/": "studio",
+    "/work/": "punët",
+    "/blog/": "blogu",
+    "/glossary/": "fjalori",
+}

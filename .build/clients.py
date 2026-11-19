@@ -25,12 +25,15 @@ CLIENTS = [
         "trade": "Watch sales and repair",
         "site": "watch.al",
         "title": "Watch shop website, Durres",
-        "description": "A family watch shop in Durres with no website at all. Three "
-                       "months after launch Google was sending it 900 clicks a "
-                       "quarter, from a standing start.",
-        "og_desc": "From no website to 900 clicks a quarter, in 3 months.",
-        "summary": "No website in May. By August, 900 clicks a quarter from "
-                   "Google, in 3 languages.",
+        # Every 900 carries its window (2026-11-19): the shop's Google traffic
+        # fell about 90% from 7 September 2026, so an undated 900 reads as a
+        # result it is getting now.
+        "description": "A family watch shop in Durres with no website at all. From "
+                       "2 June to 30 August 2026 Google sent it 900 clicks, from a "
+                       "standing start.",
+        "og_desc": "From no website to 900 clicks, from June to August 2026.",
+        "summary": "No website in May. From 2 June to 30 August 2026, 900 clicks "
+                   "from Google, in 3 languages.",
         "started": [
             "A family watch shop on Rruga Aleksander Goga. They repair watches, and "
             "they sell them. Both halves of that were invisible outside Durres, "
@@ -125,7 +128,8 @@ CLIENTS = [
                      "a part month, which is why the lines fall at the end, and "
                      "it will read differently when you look.",
         },
-        "payoff": "From nothing to 900 clicks a quarter.",
+        "payoff": "From nothing to 900 clicks in the quarter from 2 June to 30 "
+                  "August 2026.",
         # 900x453, the same frame as the other five. This is the plate the window in
         # make_plates.py exists for: Iglisi's hero ends at 1472 of a 2000px master and
         # the rest is the white top of the next section, so shipping the whole frame
@@ -415,9 +419,8 @@ WORK_INDEX = {
     # should not promise 2 different things.
     "h1": "Six businesses, and what changed.",
     "standfirst": "One is a watch shop in Durres that nobody outside the" + NL +
-                  "town could find. Three months after launch, Google was "
-                  "sending it 900" + NL +
-                  "clicks a quarter.",
+                  "town could find. In the 3 months from 2 June to 30 August" + NL +
+                  "2026, Google sent it 900 clicks.",
     # Rule 13, in one paragraph: the 5 clients with no published numbers get a
     # line saying what you can check instead, and no apology.
     "proof": "The other five are newer, so what you get there is the site "

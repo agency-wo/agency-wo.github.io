@@ -36,7 +36,7 @@ SERVICES = [
     # ------------------------------------------------------------------ SEO --
     {
         "slug": "seo",
-        "src": "1d1e21fa",
+        "src": "4d1d9b57",
         "nav": "SEO",
         "schema_name": "Optimizim për motorët e kërkimit dhe kërkim lokal",
         # 21 characters, 2 fewer than the English.
@@ -69,8 +69,8 @@ SERVICES = [
                 "<p>Të gjendesh në Google do të thotë dy punë: Profili i "
                 "Biznesit në Google që e vë dyqanin tënd në hartë, dhe një "
                 "faqe që i përgjigjet asaj që shkruajnë njerëzit. watch.al "
-                "nisi pa asnjë faqe dhe arriti 900 klikime në tremujor për 3 "
-                "muaj. <a href=\"/audit/\">Auditimi falas</a> vlerëson 5 fusha "
+                "nisi pa asnjë faqe dhe arriti 900 klikime nga qershori në "
+                "gusht 2026. <a href=\"/audit/\">Auditimi falas</a> vlerëson 5 fusha "
                 "dhe të thotë nga cila punë të fillosh.</p>",
             ]),
             # The English heading is a verbless fragment with a comma in it,
@@ -118,7 +118,7 @@ SERVICES = [
                 # 900 and 3 are typed off Search Console. They move separators
                 # and nothing else; here neither of them even has one.
                 "<p>watch.al kaloi nga asnjë faqe fare në 900 klikime nga "
-                "Google për 3 muaj. Grafikun e sheh te "
+                "Google në 3 muajt nga 2 qershori deri më 30 gusht 2026. Grafikun e sheh te "
                 "<a href=\"/work/iglisi-watch/\">faqja e tyre</a>. Ky është "
                 "një afat i vërtetë për një biznes që niset nga zeroja në një "
                 "qytet ku as konkurrenca nuk ka faqe. Në një treg të mbushur "

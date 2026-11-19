@@ -34,7 +34,7 @@ SERVICES = [
     # ------------------------------------------------------------------ SEO --
     {
         "slug": "seo",
-        "src": "1d1e21fa",
+        "src": "4d1d9b57",
         "nav": "SEO",
         "schema_name": "Ottimizzazione per i motori di ricerca e ricerca locale",
         # 23 characters, the same as the English, and 41 with the suffix
@@ -78,8 +78,8 @@ SERVICES = [
                 "<p>Farsi trovare su Google significa due lavori: il Profilo "
                 "dell'attività su Google che mette il negozio sulla mappa, "
                 "e un sito che risponde a quello che la gente digita. watch.al "
-                "è partito senza sito e ha raggiunto 900 clic a trimestre "
-                "in 3 mesi. L'<a href=\"/start/\">audit gratuito</a> dà un "
+                "è partito senza sito e ha raggiunto 900 clic da giugno "
+                "ad agosto 2026. L'<a href=\"/start/\">audit gratuito</a> dà un "
                 "voto a 5 aree e ti dice da quale lavoro cominciare.</p>",
             ]),
             # The English heading is a verbless fragment with a comma in it,
@@ -128,8 +128,8 @@ SERVICES = [
                 "pagamento.</p>",
                 # 900 and 3 are typed off Search Console. They move separators
                 # and nothing else; here neither of them even has one.
-                "<p>watch.al è passato da nessun sito a 900 clic da Google in "
-                "3 mesi. Il grafico è sulla "
+                "<p>watch.al è passato da nessun sito a 900 clic da Google nei "
+                "3 mesi dal 2 giugno al 30 agosto 2026. Il grafico è sulla "
                 "<a href=\"/work/iglisi-watch/\">loro pagina</a>. Sono tempi "
                 "veri per un'attività che parte da zero in una città dove "
                 "nemmeno i concorrenti hanno un sito. In un mercato affollato "

@@ -50,6 +50,11 @@ Accented letters are literal too ("attività"), never HTML entities.
 # chrome is imported directly by shell.py. So for a long time these 50 stamps
 # were read by nothing at all. shell.py now checks every one of them.
 SRC = {
+    "BAND_CTA_FOR": "382d7dfd",
+    "REPLY_NOTE": "a2ac906b",
+    "WA_PAGE": "620088c8",
+    "MAIL_SUBJECT": "ab915a6b",
+    "PAGE_NAMES": "abd873b3",
     "ARIA_CRUMBS": "3a789919",
     "ARIA_DETAILS": "e32297d7",
     "ARIA_GLANCE": "0777be04",
@@ -357,3 +362,26 @@ ERR_SAY = "Questa pagina non si è mai posizionata. Non esiste."
 ERR_BACK = "Torna in cima"
 ERR_BAND_H = "Cerchi qualcosa che costruiamo?"
 ERR_BAND_NOTE = "Mandaci il tuo indirizzo e ti rispondiamo con un audit."
+
+# -- added 2026-11-19 ------------------------------------------------------------
+BAND_CTA_FOR = {
+    "/systems/": "Dicci cosa deve fare il programma",
+    "/meta-ads/": "Chiedi un piano per le campagne",
+}
+REPLY_NOTE = "Rispondiamo su WhatsApp e per email {turnaround}, dal lunedì al sabato."
+WA_PAGE = "Ciao {brand}, ti scrivo dalla pagina: {page}."
+MAIL_SUBJECT = "Richiesta dalla pagina: {page}"
+PAGE_NAMES = {
+    "/": "home",
+    "/web-design/": "siti web",
+    "/seo/": "SEO",
+    "/geo/": "ricerca AI",
+    "/systems/": "software su misura",
+    "/meta-ads/": "Meta ads",
+    "/audit/": "audit gratuito",
+    "/start/": "inizia un progetto",
+    "/studio/": "studio",
+    "/work/": "lavori",
+    "/blog/": "blog",
+    "/glossary/": "glossario",
+}

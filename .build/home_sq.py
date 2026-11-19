@@ -125,7 +125,7 @@ TRADES = [
 ]
 
 PAGE = {
-    "src": "a1e5d658",
+    "src": "1b6c4759",
 
     # 38 characters against the 52 the title budget leaves once gen_home.py has
     # put "minarank studio ·" in front of it. The old string claimed 39 here and
@@ -156,15 +156,15 @@ PAGE = {
     # already uses.
     "hero_claim": "Pikërisht tani, dikush pranë teje po kërkon atë që shet.",
     "hero_say": "Ne sigurohemi që të të gjejnë në Google.",
-    "hero_sub": "Google, harta dhe përgjigjet që japin ChatGPT dhe Gemini" + NL +
-                "kur dikush kërkon një dyqan si i yti. Punojmë në shqip," + NL +
-                "anglisht dhe italisht.",
+    "hero_sub": "Faqe interneti, kërkim në Google dhe harta, kërkim me AI, Meta" + NL +
+                "ads dhe softuer me porosi, për biznese në Shqipëri dhe Itali." + NL +
+                "Punojmë në shqip, anglisht dhe italisht.",
     "hero_proof": "<a href=\"{proof_href}\">Një dyqan që e ndjekim</a>: {proof_calls} telefonata dhe" + NL +
                   # Mirrors the English, which stopped saying "direction
                   # requests" on 2026-10-24 and started saying what they are.
                   # Mirrors the English, which dropped the date range on 2026-10-24.
                   "{proof_directions} veta që e pyetën Google si të vinin, "
-                  "në pesë muaj.",
+                  "në pesë muaj, nga maji në tetor 2026.",
     # "hero_who" was here until 2026-10-24, mirroring the English that is now
     # gone: the WhatsApp control sat on top of it at 390 and 360, and it came
     # closest of anything on the page to stating team size, which rule 27 does
@@ -174,7 +174,7 @@ PAGE = {
     # Identical to chrome_sq.NAV[0], as in English: the label the reader
     # clicked and the section he lands in.
     "proof_eyebrow": "Prova",
-    "proof_h": "Tre muaj më parë Google nuk kishte dëgjuar kurrë" + NL +
+    "proof_h": "Në maj 2026 Google nuk kishte dëgjuar kurrë" + NL +
                "për këtë dyqan.",
     # The street name is a proper noun and is not translated or declined, so it
     # stays "Rruga Aleksander Goga" after "në", the way an address line does,
@@ -201,10 +201,9 @@ PAGE = {
     "fig_caption": "Vija vjollcë tregon sa herë doli dyqani në Google. "
                    "Vija" + NL +
                    "blu tregon sa njerëz klikuan.",
-    "proof_p1": "Reklamat ndalen ditën që ndalon së paguari. Kjo jo: "
-                "dyqani u" + NL +
-                "vu në hartë një herë dhe që atëherë kërkimi vazhdon të sjellë "
-                "njerëz.",
+    "proof_p1": "Reklamat ndalen ditën që ndalon së paguari. Nga qershori" + NL +
+                "në gusht 2026 kërkimi i solli dyqanit njerëz çdo javë, pa" + NL +
+                "shpenzuar asgjë për reklama.",
     # Rule 22. Both bad numbers stay, and so does the sentence that says a 1,1%
     # click rate is what the bottom of the first page pays. Nothing here is
     # hedged, softened or moved into a subordinate clause.
@@ -244,6 +243,7 @@ PAGE = {
     # shkroi shqip, por profili ruan vetëm përkthimin e Google, kështu që edhe
     # ajo shënohet si e përkthyer derisa të kemi origjinalin.
     "says_h": "Çfarë shkruan katër klientë në Google.",
+    "says_all": "Lexo të gjitha vlerësimet në Google.",
     "says": [
         {"name": "Deni Tabaku", "client": "ProAffy", "slug": "pro-affy",
          "tr": True,
@@ -277,9 +277,8 @@ PAGE = {
     "open_h": "Publikojmë atë që studiot më të" + NL +
               "vjetra e fshehin.",
     "open_p1": "{brand} ka nxjerrë online {clients} biznese, secili me faqen" + NL +
-               "e vet. I pari nuk kishte fare faqe interneti në maj; në gusht "
-               "Google i" + NL +
-               "dërgonte 900 klikime në tremujor.",
+               "e vet. I pari nuk kishte fare faqe interneti në maj; nga 2 qershori" + NL +
+               "deri më 30 gusht 2026 Google i dërgoi 900 klikime.",
     # "ndalen te" rather than "tregojnë": the marks now sit four sections above
     # this line, so the English stopped dismissing what the page shows.
     "open_p2": "Shumica e agjencive ndalen te një mur me logo. Ne tregojmë" + NL +

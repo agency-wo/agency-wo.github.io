@@ -604,4 +604,17 @@
       }
     }
   }
+  /* 2026-11-19: on a phone the home audit form now starts in the first screen,
+     and the floating WhatsApp button sat on its website field. While that form
+     is on screen at phone width, the button steps aside; the form carries its
+     own WhatsApp link right under it. With no script the button simply stays,
+     which is the finished state, and it comes back as soon as the form leaves
+     the screen. */
+  var waForm = document.getElementById("audit-form");
+  var waBtn = document.querySelector(".wa");
+  if (waForm && waBtn && "IntersectionObserver" in window) {
+    new IntersectionObserver(function (es) {
+      waBtn.classList.toggle("wa-away", es[0].isIntersecting && window.innerWidth < 720);
+    }, { threshold: 0 }).observe(waForm);
+  }
 })();

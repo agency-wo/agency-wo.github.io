@@ -622,6 +622,7 @@ def render(lang):
 {says}
             </ul>
             <p class="say-dots" hidden data-dot="{fill(h["says_dot"], lang)}"></p>
+            <p class="say-all"><a href="{shell.GBP_PROFILE_URL}" target="_blank" rel="noopener">{fill(h["says_all"], lang)}</a></p>
           </div>
 {audit}
         </div>

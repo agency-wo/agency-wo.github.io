@@ -40,7 +40,7 @@ NL = chr(10)
 CLIENTS = [
     {
         "slug": "iglisi-watch",
-        "src": "1104badc",
+        "src": "0aa78cde",
         "ask": ("riparazione orologi", "Durazzo"),
         # Not copy: the file and its 2 dimensions.
         "mark": [("iglisi-watch.png", 195, 22)],
@@ -51,16 +51,15 @@ CLIENTS = [
         "trade": "Vendita e riparazione di orologi",
         "site": "watch.al",
         "title": "Sito per un orologiaio, Durazzo",
-        # "Tre mesi" is spelt out because the English spells it out here and
-        # writes "3 mesi" in og_desc below. The site's rule is digits over
-        # words; a translation answers the English rather than tidying it in
-        # one field and not the other.
+        # The window is the English one, 2 June to 30 August 2026, in the
+        # Italian form the chart caption below already uses. Every 900 on the
+        # site carries it, because the shop's traffic fell from September.
         "description": "Un negozio di orologi di famiglia a Durazzo senza nessun "
-                       "sito. Tre mesi dopo il lancio Google gli mandava 900 clic "
-                       "a trimestre, partendo da zero.",
-        "og_desc": "Da nessun sito a 900 clic a trimestre, in 3 mesi.",
-        "summary": "A maggio nessun sito. Ad agosto, 900 clic a trimestre da "
-                   "Google, in 3 lingue.",
+                       "sito. Dal 2 giugno al 30 agosto 2026 Google gli ha mandato "
+                       "900 clic, partendo da zero.",
+        "og_desc": "Da nessun sito a 900 clic, da giugno ad agosto 2026.",
+        "summary": "A maggio nessun sito. Dal 2 giugno al 30 agosto 2026, 900 "
+                   "clic da Google, in 3 lingue.",
         "started": [
             # "Rruga Aleksander Goga" is a street name and stays exactly as it
             # is, after the preposition Italian uses for a street.
@@ -146,7 +145,8 @@ CLIENTS = [
                      "mese è parziale, ed è per questo che le linee scendono "
                      "alla fine, e sarà diverso quando guardi.",
         },
-        "payoff": "Da niente a 900 clic a trimestre.",
+        "payoff": "Da niente a 900 clic nel trimestre dal 2 giugno al 30 agosto "
+                  "2026.",
         # Only index 3 is copy. The alt says what is in the screenshot: the
         # cards carry a price in euro and the same price in lek beside it.
         "plate": ("iglisi-home.webp", 900, 453,
@@ -461,7 +461,7 @@ CLIENTS = [
 # text and not copied from the English: a newline here says where the emitted
 # line breaks and carries no meaning.
 WORK_INDEX = {
-    "src": "a37d43ba",
+    "src": "d31ffaf9",
     # "Lavori" is what chrome_it.FOOT_HEADINGS[1] and CRUMB_WORK already call
     # this section, so the tab, the crumb and the footer say one word.
     # 26 characters, 44 rendered. Was 45 and rendered at 63, so it was cut.
@@ -473,9 +473,8 @@ WORK_INDEX = {
     # The same sentence as og_desc, as in English.
     "h1": "Sei attività, e cosa è cambiato.",
     "standfirst": "Uno è un negozio di orologi a Durazzo che nessuno" + NL +
-                  "fuori città riusciva a trovare. Tre mesi dopo il lancio, "
-                  "Google gli" + NL +
-                  "mandava 900 clic a trimestre.",
+                  "fuori città riusciva a trovare. Nei 3 mesi dal 2 giugno al" + NL +
+                  "30 agosto 2026, Google gli ha mandato 900 clic.",
     # "Gli altri cinque" spells the number out because the English spells it out.
     # A translation answers the English; tidying it here and nowhere else is
     # how one page ends up disagreeing with its own twin.

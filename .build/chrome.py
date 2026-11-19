@@ -237,3 +237,35 @@ ERR_BACK = "Back to the top"
 # offered the audit rather than shown a dead end.
 ERR_BAND_H = "Looking for something we build?"
 ERR_BAND_NOTE = "Send us your address and we will send back an audit."
+
+# -- added 2026-11-19, the conversion research --------------------------------
+# The band's button on the 2 pages whose reader did not come for a website audit.
+# Same place, still the one ask; the wording fits the page and the target is
+# /start/, where a project is described.
+BAND_CTA_FOR = {
+    "/systems/": "Tell us what the program has to do",
+    "/meta-ads/": "Ask for an ads plan",
+}
+# The one reply promise for WhatsApp and email, beside them in the band on
+# every page. It is the audit's own turnaround, filled from TURNAROUND, because
+# rule 39 allows the site one time promise and check 25 fails any rival ("same
+# day" was tried first and failed it on every page).
+REPLY_NOTE = "We answer WhatsApp and email {turnaround}, Monday to Saturday."
+# The floating button and the band's email say which page the visitor wrote
+# from, so enquiries can be counted by page without any tracker.
+WA_PAGE = "Hello {brand}, I'm writing from the {page} page."
+MAIL_SUBJECT = "Enquiry from the {page} page"
+PAGE_NAMES = {
+    "/": "home",
+    "/web-design/": "websites",
+    "/seo/": "SEO",
+    "/geo/": "AI search",
+    "/systems/": "custom software",
+    "/meta-ads/": "Meta ads",
+    "/audit/": "free audit",
+    "/start/": "start a project",
+    "/studio/": "studio",
+    "/work/": "work",
+    "/blog/": "blog",
+    "/glossary/": "glossary",
+}

@@ -41,7 +41,7 @@ NL = chr(10)
 CLIENTS = [
     {
         "slug": "iglisi-watch",
-        "src": "1104badc",
+        "src": "0aa78cde",
         "ask": ("riparim orësh", "Durrës"),
         # Not copy: the file and its 2 dimensions.
         "mark": [("iglisi-watch.png", 195, 22)],
@@ -51,17 +51,15 @@ CLIENTS = [
         "trade": "Shitje dhe riparim orësh",
         "site": "watch.al",
         "title": "Faqe për orëndreqës, Durrës",
-        # "Tre muaj" is spelt out because the English spells it out here and
-        # writes "3 muaj" in og_desc below. The site's rule is digits over
-        # words; a translation answers the English rather than tidying it in
-        # one field and not the other.
+        # The window is the English one, 2 June to 30 August 2026. Every 900 on
+        # the site carries it, because the shop's traffic fell from September.
         "description": "Një dyqan orësh familjar në Durrës pa asnjë faqe "
-                       "interneti. Tre muaj pas nisjes Google i dërgonte 900 "
-                       "klikime në tremujor, nga zero.",
-        "og_desc": "Nga asnjë faqe interneti te 900 klikime në tremujor, në 3 "
-                   "muaj.",
-        "summary": "Në maj asnjë faqe interneti. Në gusht, 900 klikime në "
-                   "tremujor nga Google, në 3 gjuhë.",
+                       "interneti. Nga 2 qershori deri më 30 gusht 2026 Google i "
+                       "dërgoi 900 klikime, nga zero.",
+        "og_desc": "Nga asnjë faqe interneti te 900 klikime, nga qershori në "
+                   "gusht 2026.",
+        "summary": "Në maj asnjë faqe interneti. Nga 2 qershori deri më 30 gusht "
+                   "2026, 900 klikime nga Google, në 3 gjuhë.",
         "started": [
             # "Rruga Aleksander Goga" is a street name and is left exactly as
             # it is, undeclined, rather than becoming "Rrugën Aleksander Goga".
@@ -145,7 +143,8 @@ CLIENTS = [
                      "është i pjesshëm, prandaj vijat bien në fund, dhe do të duket "
                      "ndryshe kur ta shohësh.",
         },
-        "payoff": "Nga asgjë te 900 klikime në tremujor.",
+        "payoff": "Nga asgjë te 900 klikime në tremujorin nga 2 qershori deri më "
+                  "30 gusht 2026.",
         # Only index 3 is copy. The alt says what is in the screenshot: the
         # cards carry a price in euro and the same price in lek beside it.
         "plate": ("iglisi-home.webp", 900, 453,
@@ -437,7 +436,7 @@ CLIENTS = [
 # text and not copied from the English: a newline here says where the emitted
 # line breaks and carries no meaning.
 WORK_INDEX = {
-    "src": "a37d43ba",
+    "src": "d31ffaf9",
     # "Punët" is what chrome_sq.FOOT_HEADINGS[1] and CRUMB_WORK already call
     # this section, so the tab, the crumb and the footer say one word.
     "title": "Faqe që ndërtuam, dhe çfarë ndryshoi",
@@ -448,9 +447,8 @@ WORK_INDEX = {
     # The same sentence as og_desc, as in English.
     "h1": "Gjashtë biznese, dhe çfarë ndryshoi.",
     "standfirst": "Njëri është një dyqan orësh në Durrës që askush" + NL +
-                  "jashtë qytetit nuk e gjente dot. Tre muaj pas nisjes, "
-                  "Google i" + NL +
-                  "dërgonte 900 klikime në tremujor.",
+                  "jashtë qytetit nuk e gjente dot. Në 3 muajt nga 2 qershori" + NL +
+                  "deri më 30 gusht 2026, Google i dërgoi 900 klikime.",
     # "Pesë të tjerët" spells the number out because the English spells it out.
     # A translation answers the English; tidying it here and nowhere else is
     # how one page ends up disagreeing with its own twin.

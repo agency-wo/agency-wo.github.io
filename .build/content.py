@@ -47,7 +47,7 @@ SERVICES = [
                 "<p>Showing up on Google is two jobs: the Google Business "
                 "Profile that puts your shop on the map, and a site that "
                 "answers what people type. watch.al started from no website "
-                "and reached 900 clicks a quarter in 3 months. The "
+                "and reached 900 clicks from June to August 2026. The "
                 "<a href=\"/audit/\">free audit</a> scores 5 areas and says "
                 "which job to do first.</p>",
             ]),
@@ -82,7 +82,7 @@ SERVICES = [
                 "for the phrases people actually buy on is a 6 to 12 month job. Anyone "
                 "promising faster is describing paid ads.</p>",
                 "<p>watch.al went from no website at all to 900 clicks from Google in "
-                "3 months. You can see the chart on "
+                "the 3 months from 2 June to 30 August 2026. You can see the chart on "
                 "<a href=\"/work/iglisi-watch/\">their page</a>. That's a real timeline "
                 "for a business starting from zero in a town where the competition has "
                 "no website either. In a crowded market it's slower, and we'll tell you "

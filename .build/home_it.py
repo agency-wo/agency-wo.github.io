@@ -126,7 +126,7 @@ TRADES = [
 ]
 
 PAGE = {
-    "src": "a1e5d658",
+    "src": "1b6c4759",
 
     # 38 characters against the 52 the title budget leaves once gen_home.py has
     # put "minarank studio ·" in front of it. The old string claimed 38 here and
@@ -159,15 +159,15 @@ PAGE = {
     # che vendi" is the phrase SERVICES row 1 already uses.
     "hero_claim": "Proprio adesso qualcuno qui vicino sta cercando quello che vendi.",
     "hero_say": "Facciamo in modo che ti trovino su Google.",
-    "hero_sub": "Google, la mappa e le risposte che danno ChatGPT e Gemini" + NL +
-                "quando qualcuno chiede un negozio come il tuo. Lavoriamo in" + NL +
-                "italiano, inglese e albanese.",
+    "hero_sub": "Siti web, ricerca Google e mappa, ricerca AI, Meta ads e" + NL +
+                "software su misura, per attività in Albania e in Italia. Lavoriamo" + NL +
+                "in italiano, inglese e albanese.",
     "hero_proof": "<a href=\"{proof_href}\">Un negozio che seguiamo</a>: {proof_calls} telefonate e" + NL +
                   # Mirrors the English, which stopped saying "direction
                   # requests" on 2026-10-24 and started saying what they are.
                   # Mirrors the English, which dropped the date range on 2026-10-24.
                   "{proof_directions} persone che hanno chiesto a Google come "
-                  "arrivare, in cinque mesi.",
+                  "arrivare, in cinque mesi, da maggio a ottobre 2026.",
     # "hero_who" was here until 2026-10-24, mirroring the English that is now
     # gone: the WhatsApp control sat on top of it at 390 and 360, and it came
     # closest of anything on the page to stating team size, which rule 27 does
@@ -177,7 +177,7 @@ PAGE = {
     # Identical to chrome_it.NAV[0], as in English: the label the reader
     # clicked and the section he lands in.
     "proof_eyebrow": "Prove",
-    "proof_h": "Tre mesi fa Google non aveva mai sentito parlare di" + NL +
+    "proof_h": "A maggio 2026 Google non aveva mai sentito parlare di" + NL +
                "questo negozio.",
     # The street name is a proper noun and is not translated or declined, so
     # the soft wrap is placed after it rather than inside it.
@@ -204,11 +204,9 @@ PAGE = {
     "fig_caption": "La linea viola mostra quante volte il negozio è comparso "
                    "su" + NL +
                    "Google. La linea blu mostra quante persone hanno cliccato.",
-    "proof_p1": "La pubblicità si ferma il giorno in cui smetti di pagarla. "
-                "Questo" + NL +
-                "no: il negozio è stato messo sulla mappa una volta, e da "
-                "allora la" + NL +
-                "ricerca continua a mandare persone.",
+    "proof_p1": "La pubblicità si ferma il giorno in cui smetti di pagarla. Da" + NL +
+                "giugno ad agosto 2026 la ricerca ha mandato persone al negozio ogni" + NL +
+                "settimana, senza spendere niente in pubblicità.",
     # Rule 22. Both bad numbers stay, and so does the sentence that says a 1,1%
     # click rate is what the bottom of the first page pays. Nothing here is
     # hedged, softened or moved into a subordinate clause.
@@ -250,6 +248,7 @@ PAGE = {
     # Nessuna recensione è in italiano, quindi qui sono tutte tradotte e tutte
     # marcate come tali.
     "says_h": "Cosa hanno scritto quattro clienti su Google.",
+    "says_all": "Leggi tutte le recensioni su Google.",
     "says": [
         {"name": "Deni Tabaku", "client": "ProAffy", "slug": "pro-affy",
          "tr": True,
@@ -283,9 +282,8 @@ PAGE = {
     "open_h": "Pubblichiamo quello che gli studi" + NL +
               "più vecchi nascondono.",
     "open_p1": "{brand} ha portato online {clients} attività, ognuna con la" + NL +
-               "sua pagina. La prima non aveva alcun sito a maggio; ad agosto "
-               "Google le" + NL +
-               "mandava 900 clic a trimestre.",
+               "sua pagina. La prima non aveva alcun sito a maggio; dal 2 giugno" + NL +
+               "al 30 agosto 2026 Google le ha mandato 900 clic.",
     # "si fermano a" rather than "mostrano": the marks now sit four sections
     # above this line, so the English stopped dismissing what the page shows.
     "open_p2": "Quasi tutte le agenzie si fermano a un muro di loghi. Noi mostriamo" + NL +

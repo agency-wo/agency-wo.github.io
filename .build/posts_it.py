@@ -32,9 +32,9 @@ POSTS = [
     # ================================================================ SEO ===
     {
         "slug": "map-listing-first",
-        "src": "39bafafb",
+        "src": "43333df9",
         "date": "2026-08-14",
-        "updated": "2026-08-14",
+        "updated": "2026-11-19",
         "topic": "Ricerca locale",
         "work": "iglisi-watch",
         "service": ("/seo/", "SEO e ricerca locale"),
@@ -54,13 +54,13 @@ POSTS = [
                        "un negozio di orologi a Durazzo, e cosa deve sistemare "
                        "un'attività locale prima di preoccuparsi del "
                        "posizionamento.",
-        "og_desc": "900 clic, posizione media 8,8 e le parti che nessuno mette nello screenshot.",
+        "og_desc": "900 clic da giugno ad agosto 2026, posizione media 8,8 e le parti che nessuno mette nello screenshot.",
 
         "body": [
             ("La risposta breve", [
                 "<p>Se parti senza sito, aspettati mesi, non settimane, e "
                 "aspettati che i primi numeri sembrino poca cosa. Iglisi Watch "
-                "è passata da zero a maggio a 900 clic a trimestre ad agosto. "
+                "è passata da zero a maggio a 900 clic dal 2 giugno al 30 agosto 2026. "
                 "Posizione media 8,8. Percentuale di clic 1,1%.</p>",
                 "<p>Sono i numeri di un'attività di cui Google ha iniziato a "
                 "fidarsi e non ha finito di fidarsi. Conosci tutte e due le metà prima di assumere qualcuno.</p>",
@@ -441,32 +441,33 @@ POSTS = [
     # ============================================================= COMPOUND ===
     {
         "slug": "the-last-4-weeks",
-        "src": "ddb6a0f6",
+        "src": "7e4dcad8",
         "date": "2026-08-14",
-        "updated": "2026-08-14",
+        "updated": "2026-11-19",
         "topic": "Ricerca locale",
         "work": "iglisi-watch",
         "service": ("/seo/", "SEO e ricerca locale"),
 
         "title": "Risultati SEO: perché il mese 3 batte il primo",
         "h1": "Le ultime 4 settimane del trimestre battono le prime 8.",
-        "summary": "Di 900 clic in un trimestre, 458 sono arrivati negli "
-                   "ultimi 28 giorni. Cosa dice quella curva prima di "
-                   "spendere qualcosa.",
+        "summary": "Di 900 clic dal 2 giugno al 30 agosto 2026, 458 sono "
+                   "arrivati negli ultimi 28 giorni. Cosa dice quella curva "
+                   "prima di spendere qualcosa.",
         "standfirst": "La ricerca non paga in modo uniforme. Il trimestre "
                       "con posizione media 8,8 ha messo oltre metà dei clic "
                       "alla fine.",
-        "description": "Un negozio di Durazzo ha preso 900 clic da Google "
-                       "nel primo trimestre online, e 458 negli ultimi 28 "
-                       "giorni. Perché la ricerca si accumula, con i numeri "
-                       "veri.",
-        "og_desc": "900 clic in un trimestre. 458 negli ultimi 28 giorni.",
+        # 175 characters, the ceiling gen_blog holds every language to.
+        "description": "Il primo trimestre online di un negozio di Durazzo, da "
+                       "giugno ad agosto 2026: 900 clic da Google, 458 negli "
+                       "ultimi 28 giorni. Perché la ricerca si accumula, con i "
+                       "numeri veri.",
+        "og_desc": "900 clic da giugno ad agosto 2026. 458 negli ultimi 28 giorni.",
 
         "body": [
             ("La risposta breve", [
                 "<p>Il lavoro sulla ricerca paga alla fine, non in modo "
                 "uniforme. Nel primo trimestre online di "
-                "<a href=\"/work/iglisi-watch/\">watch.al</a>, Google ha mandato 900 clic, e 458, oltre la metà, sono arrivati tra il 3 agosto e il 30 agosto, gli ultimi 28 giorni.</p>",
+                "<a href=\"/work/iglisi-watch/\">watch.al</a>, dal 2 giugno al 30 agosto 2026, Google ha mandato 900 clic, e 458, oltre la metà, sono arrivati tra il 3 agosto e il 30 agosto, gli ultimi 28 giorni.</p>",
             ]),
             ("La finestra da sola", [
                 "<p>Quei 28 giorni da soli: 458 clic da 33,7k volte mostrato, a una posizione media di 9,7. Il trimestre nel suo insieme faceva 8,8, quindi la posizione è peggiorata mentre i clic acceleravano. La percentuale di clic è andata dall'altra parte, 1,1% sul trimestre e 1,4% in quelle 4 settimane.</p>",
@@ -649,10 +650,10 @@ POSTS = [
     # ====================================================== INDUSTRY: WATCH ===
     {
         "slug": "watch-shops-and-jewellers",
-        "src": "c627d7ab",
+        "src": "9c591945",
         "ask": ("negozio di orologi", "Durazzo"),
         "date": "2026-08-14",
-        "updated": "2026-08-14",
+        "updated": "2026-11-19",
         "topic": "Ricerca locale",
         "work": "iglisi-watch",
         "service": ("/seo/", "SEO e ricerca locale"),
@@ -713,7 +714,7 @@ POSTS = [
                 "aveva nessun sito, quindi nel numero di partenza non c'è "
                 "niente di lusinghiero: era zero. Una pagina per ognuno dei 58 "
                 "orologi, in 3 lingue, più la scheda Google.</p>",
-                "<p>3 mesi dopo Google mandava 900 clic a trimestre, con un "
+                "<p>Dal 2 giugno al 30 agosto 2026 Google ha mandato 900 clic, con un "
                 "posizionamento medio di 8,8 e una percentuale di clic "
                 "dell'1,1%. Questi ultimi 2 numeri sono deboli, e stanno sul "
                 "grafico della <a href=\"/work/iglisi-watch/\">loro "
@@ -1772,9 +1773,9 @@ POSTS = [
 
     {
         "slug": "how-to-come-up-first-on-google",
-        "src": "7a7fdfaf",
+        "src": "706c659c",
         "date": "2026-08-21",
-        "updated": "2026-08-21",
+        "updated": "2026-11-19",
         "topic": "Ricerca locale",
         "work": "iglisi-watch",
         "service": ("/seo/", "SEO e ricerca locale"),
@@ -1823,8 +1824,8 @@ POSTS = [
                 "abbastanza veloce da trovarlo ancora lì quando carica.</p>",
             ]),
             ("Com'è andata a un negozio", [
-                "<p>Un'orologeria a Durazzo a maggio non aveva sito. Ad "
-                "agosto la ricerca le mandava 900 clic a trimestre, con una "
+                "<p>Un'orologeria a Durazzo a maggio non aveva sito. Dal 2 "
+                "giugno al 30 agosto 2026 la ricerca le ha mandato 900 clic, con una "
                 "posizione media di 8,8, che è il fondo della prima pagina e "
                 "non la cima.</p>",
                 "<p>Questa è la forma onesta della cosa: non primo su tutto "
@@ -2053,9 +2054,9 @@ POSTS = [
 
     {
         "slug": "how-long-seo-takes",
-        "src": "a85d036f",
+        "src": "914ee0cc",
         "date": "2026-08-21",
-        "updated": "2026-08-21",
+        "updated": "2026-11-19",
         "topic": "Ricerca locale",
         "work": "iglisi-watch",
         "service": ("/seo/", "SEO e ricerca locale"),
@@ -2092,7 +2093,7 @@ POSTS = [
                 "in più per cui esci, più in basso di quanto vorresti.</p>",
             ]),
             ("Com'è andato un trimestre", [
-                "<p>Iglisi Watch è partita senza nessun sito. Nel trimestre successivo la ricerca ha portato 900 clic, con una posizione media di 8,8 e una percentuale di clic dell'1,1%. Aspettati che la posizione peggiori prima di migliorare: nelle ultime 4 settimane di quel trimestre è scesa a 9,7 mentre la percentuale di clic saliva all'1,4%, perché un sito che inizia a comparire per più ricerche compare per parecchie di esse in fondo.</p>",
+                "<p>Iglisi Watch è partita senza nessun sito. Nel trimestre successivo, dal 2 giugno al 30 agosto 2026, la ricerca ha portato 900 clic, con una posizione media di 8,8 e una percentuale di clic dell'1,1%. Aspettati che la posizione peggiori prima di migliorare: nelle ultime 4 settimane di quel trimestre è scesa a 9,7 mentre la percentuale di clic saliva all'1,4%, perché un sito che inizia a comparire per più ricerche compare per parecchie di esse in fondo.</p>",
                 "<p>Le ultime quattro settimane ne hanno portate più delle "
                 "prime otto, che è la forma di questo lavoro: piatto, "
                 "piatto, poi una salita.</p>",
@@ -3049,9 +3050,9 @@ POSTS = [
 
     {
         "slug": "seo-for-a-new-business",
-        "src": "1b61f990",
+        "src": "cd64cfd2",
         "date": "2026-08-22",
-        "updated": "2026-08-22",
+        "updated": "2026-11-19",
         "topic": "Ricerca locale",
         "work": "iglisi-watch",
         "service": ("/seo/", "SEO e ricerca locale"),
@@ -3067,8 +3068,8 @@ POSTS = [
         "description": "SEO per un'attività appena nata in Albania: cosa "
                        "fare nei primi tre mesi, in ordine, con i numeri "
                        "veri prodotti da un negozio partito da zero.",
-        "og_desc": "Un negozio è passato da nessun sito a 900 clic a "
-                   "trimestre. Questo è l'ordine in cui è stato fatto.",
+        "og_desc": "Un negozio è passato da nessun sito a 900 clic da giugno "
+                   "ad agosto 2026. Questo è l'ordine in cui è stato fatto.",
 
         "body": [
             ("La prima settimana è la scheda, non il sito", [
@@ -3096,7 +3097,7 @@ POSTS = [
             ]),
             ("Aspettati la forma, non una linea dritta", [
                 "<p>Un'orologeria qui a maggio non aveva sito. Nel trimestre "
-                "successivo la ricerca le ha portato 900 clic con una "
+                "successivo, dal 2 giugno al 30 agosto 2026, la ricerca le ha portato 900 clic con una "
                 "posizione media di 8,8, che è il fondo della prima pagina e "
                 "non la cima.</p>",
                 "<p>Le ultime settimane di quel trimestre hanno portato più "
@@ -5849,9 +5850,9 @@ POSTS = [
     },
     {
         "slug": "hiring-a-studio-abroad",
-        "src": "7c1a3e7a",
+        "src": "534be2cf",
         "date": "2026-08-30",
-        "updated": "2026-08-30",
+        "updated": "2026-11-19",
         "topic": "Ricerca locale",
         "work": None,
         "service": ("/seo/", "SEO e ricerca locale"),
@@ -5892,7 +5893,7 @@ POSTS = [
             ]),
             ("Le prove che abbiamo non sono italiane", [
                 "<p>I numeri di Search Console pubblicati su questo sito sono di un negozio "
-                "di orologi a Durazzo: 900 clic e 82k volte mostrato in tre mesi, con una "
+                "di orologi a Durazzo: 900 clic e 82k volte mostrato dal 2 giugno al 30 agosto 2026, con una "
                 "posizione media di 8,8 e una percentuale di clic dell'1,1%. Rilevato ad "
                 "agosto 2026. Le posizioni si spostano, quindi quello che vedi tu oggi non "
                 "coinciderà con il nostro.</p>",

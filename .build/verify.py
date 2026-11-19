@@ -1231,6 +1231,19 @@ for lg in i18n.LANGS:
         findings.append(f"[band] {rel(ref_p)}'s band CTA does not point at "
                         f"{_shell.localise(shell.AUDIT_URL, lg)}")
         continue
+    # Two differences are allowed since 2026-11-19 (the owner's decision 4 on
+    # the conversion research), and nothing else is:
+    #   1. the email link may carry ?subject= naming its page, which is how an
+    #      enquiry says where it came from with no tracker;
+    #   2. the pages in chrome.BAND_CTA_FOR (/systems/, /meta-ads/) carry their
+    #      own button, which must be that page's label pointing at /start/.
+    # Each is checked to be exactly that, then put back to the reference form,
+    # and the rest of the band must still match the reference byte for byte.
+    _SUBJ = re.compile(r'(href="mailto:[^"?]+)\?subject=[^"]*"')
+    _CTA = re.compile(r'<a class="band-cta" href="[^"]*">[^<]*</a>')
+    ref_norm = _SUBJ.sub(r'\1"', ref_band.group(0))
+    ref_cta = _CTA.search(ref_norm).group(0)
+    own = _shell.ch(lg).BAND_CTA_FOR
     for p in in_lang(lg):
         html = read(p)
         if 'class="band' not in html:
@@ -1238,7 +1251,17 @@ for lg in i18n.LANGS:
         got = _BAND.search(html)
         if not got:
             findings.append(f"[band] {rel(p)} has a band with no band-actions")
-        elif got.group(0) != ref_band.group(0):
+            continue
+        norm = _SUBJ.sub(r'\1"', got.group(0))
+        path = "/" + re.sub(r"^(?:it/|sq/)", "", rel(p).replace(chr(92), "/")).replace("index.html", "")
+        if path in own:
+            want = (f'<a class="band-cta" href="{_shell.localise(shell.START_URL, lg)}">'
+                    f'{own[path]}</a>')
+            if want not in norm:
+                findings.append(f"[band] {rel(p)} should carry its own button "
+                                f"{own[path]!r} pointing at /start/")
+            norm = norm.replace(want, ref_cta)
+        if norm != ref_norm:
             findings.append(f"[band] {rel(p)} band-actions differs from "
                             f"{rel(ref_p)}")
 
@@ -2531,7 +2554,14 @@ for _p in all_pages:
     if not _wa:
         continue                  # not every page has to carry the button
     _lg = lang_of(rel(_p))
-    _want = _WA_CHROME[_lg].WA_PREFILL.replace("{brand}", _shell.BRAND)
+    # Since 2026-11-19 the button names the page it was tapped on (WA_PAGE with
+    # shell.page_name), so an enquiry says where it came from; a page with no
+    # name (the 404) keeps WA_PREFILL. The page's own expected text is derived
+    # from its path here, so a page carrying another page's name still fails.
+    _path = "/" + re.sub(r"^(?:it/|sq/)", "", rel(_p).replace(chr(92), "/")).replace("index.html", "")
+    _name = _shell.page_name(_lg, _path)
+    _want = (_WA_CHROME[_lg].WA_PAGE.replace("{page}", _name) if _name
+             else _WA_CHROME[_lg].WA_PREFILL).replace("{brand}", _shell.BRAND)
     _got = _urlparse.parse_qs(
         _urlparse.urlparse(_entities.unescape(_wa.group(1))).query
     ).get("text", [""])[0]

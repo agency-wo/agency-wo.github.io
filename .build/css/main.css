@@ -725,6 +725,10 @@ h1, h2, h3, .page-title, .hero-say, .case-name, .af-h, .check p {
   overflow-wrap: anywhere; }
 .band-alt a { color: var(--ink-mute); text-underline-offset: 4px; }
 .band-alt a:hover { color: var(--paper); }
+/* The reply promise for WhatsApp and email (2026-11-19), under the two routes it
+   covers: muted like them, so it reads as a fact about them, not a second ask. */
+.band-reply { color: var(--ink-mute); font-size: var(--fs-small); margin-top: var(--s-4);
+  max-width: 46ch; }
 
 /* -- footer ---------------------------------------------------------------- */
 .site-foot { margin-top: var(--s-9); border-top: 1px solid var(--ink-2);
@@ -1614,6 +1618,9 @@ button.btn:disabled:hover { background: none; color: var(--ink); }
   transition: transform 200ms ease, box-shadow 200ms ease;
   -webkit-tap-highlight-color: transparent; }
 .wa svg { width: 30px; height: 30px; fill: #fff; }
+/* stepped aside while the home audit form is on a phone screen (js/main.js) */
+.wa.wa-away { opacity: 0; pointer-events: none; transform: translateY(12px);
+  transition: opacity 200ms ease, transform 200ms ease; }
 .wa:hover { transform: translateY(-2px) scale(1.04);
   box-shadow: 0 12px 30px rgba(19, 22, 28, 0.28); }
 .wa:focus-visible { outline: 3px solid var(--paper);
@@ -1725,7 +1732,7 @@ button.btn:disabled:hover { background: none; color: var(--ink); }
      a sheet of paper is toner nobody consented to. */
   .band { background: none; color: var(--ink); margin-top: var(--s-8);
     padding-block: var(--s-6) 0; }
-  .band-note, .band-alt, .band-alt a, .foot-meta { color: var(--slate); }
+  .band-note, .band-alt, .band-alt a, .band-reply, .foot-meta { color: var(--slate); }
   .band-cta { color: var(--ink); border: 0; padding: 0;
     border-bottom: 1px solid var(--ink); }
 
@@ -1793,3 +1800,29 @@ button.btn:disabled:hover { background: none; color: var(--ink); }
 .hero-claim { display: block; margin-top: var(--s-8); font-weight: 500;
   font-size: clamp(1.375rem, 2.4vw, 2rem); line-height: 1.22;
   letter-spacing: -0.012em; max-width: 30ch; text-wrap: balance; }
+
+/* -- the audit form inside a phone's first screen (2026-11-19) ---------------
+   The conversion research measured the website field's bottom at 961px (en),
+   1013 (it) and 984 (sq) at 390x664, the first screen a real phone shows once
+   its bars are drawn. Spacing alone could not recover 300px: the blocks above
+   the field add up to about 620px with no gaps at all. So on phones the hero
+   reorders. The headline and its one line, then the sentence naming the five
+   services, then the form; the shop's proof line, the availability line and the
+   reviews follow it. Nothing leaves the hero and nothing is added: .hero-rest
+   stops being a box (display: contents), so its lines become rows of the same
+   grid as the form and take an order of their own. The motion on .hero-rest
+   was transform only, so with no box it simply does not run.
+   The acceptance test is the website field fully visible at 390x664, measured
+   in all three languages. */
+@media (max-width: 600px) {
+  .hero { padding-top: var(--s-4); }
+  .hero-claim { margin-top: var(--s-4); }
+  .hero-split { margin-top: var(--s-4); row-gap: var(--s-4); }
+  .hero-split > .hero-rest { display: contents; }
+  .hero-rest > .hero-say { order: 1; }
+  .hero-rest > .hero-sub { order: 2; margin-top: 0; }
+  .hero-split > .audit { order: 3; margin-top: var(--s-2); }
+  .hero-rest > .hero-proof { order: 4; margin-top: var(--s-4); }
+  .hero-rest > .status { order: 5; margin-top: 0; }
+  .hero-split > .hero-says { order: 6; margin-top: var(--s-5); }
+}

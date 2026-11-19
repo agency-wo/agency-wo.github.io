@@ -56,7 +56,7 @@ POSTS = [
     {
         "slug": "map-listing-first",
         "date": "2026-08-14",
-        "updated": "2026-08-14",
+        "updated": "2026-11-19",
         "topic": "Local search",
         "work": "iglisi-watch",
         "service": ("/seo/", "SEO and local search"),
@@ -70,14 +70,14 @@ POSTS = [
         "description": "The actual Search Console numbers from a Durres watch "
                        "shop's first 3 months online, and what a local business "
                        "should fix before it worries about rankings.",
-        "og_desc": "900 clicks, 8.8 average position, and the parts nobody screenshots.",
+        "og_desc": "900 clicks from June to August 2026, 8.8 average position, and the parts nobody screenshots.",
 
         "body": [
             ("The short answer", [
                 "<p>If you are starting from no website, expect months, not "
                 "weeks, and expect the first numbers to look unimpressive. "
-                "Iglisi Watch went from nothing in May to 900 clicks a quarter "
-                "by August. Average position 8.8. Click rate 1.1%.</p>",
+                "Iglisi Watch went from nothing in May to 900 clicks from 2 June "
+                "to 30 August 2026. Average position 8.8. Click rate 1.1%.</p>",
                 "<p>Those are the numbers of a business Google has started "
                 "trusting and has not finished trusting. Know both halves before you hire anybody.</p>",
             ]),
@@ -435,28 +435,31 @@ POSTS = [
     {
         "slug": "the-last-4-weeks",
         "date": "2026-08-14",
-        "updated": "2026-08-14",
+        "updated": "2026-11-19",
         "topic": "Local search",
         "work": "iglisi-watch",
         "service": ("/seo/", "SEO and local search"),
 
         "title": "SEO results: why month 3 beats month 1",
         "h1": "The last 4 weeks of the quarter beat the first 8.",
-        "summary": "Of 900 clicks in a quarter, 458 arrived in the final 28 "
-                   "days. What that curve means before you spend anything.",
+        "summary": "Of 900 clicks from 2 June to 30 August 2026, 458 arrived in "
+                   "the final 28 days. What that curve means before you spend "
+                   "anything.",
         "standfirst": "Search does not pay out evenly. The quarter that "
                       "averaged position 8.8 put over half its clicks at "
                       "the end.",
-        "description": "A Durres shop took 900 clicks from Google in its "
-                       "first quarter online, and 458 came in the last 28 "
+        # Reordered around the window on 2026-11-19 so the Italian and the
+        # Albanian still fit gen_blog's 175 characters with it.
+        "description": "A Durres shop's first quarter online, from June to August "
+                       "2026: 900 clicks from Google, 458 of them in the last 28 "
                        "days. Why search compounds, with the real numbers.",
-        "og_desc": "900 clicks in a quarter. 458 of them in the last 28 days.",
+        "og_desc": "900 clicks from June to August 2026. 458 of them in the last 28 days.",
 
         "body": [
             ("The short answer", [
                 "<p>Search work pays at the end, not evenly. In "
                 "<a href=\"/work/iglisi-watch/\">watch.al's</a> first "
-                "quarter online, Google sent 900 clicks, and 458 of them, over half, arrived between 3 August and 30 August, the final 28 days.</p>",
+                "quarter online, from 2 June to 30 August 2026, Google sent 900 clicks, and 458 of them, over half, arrived between 3 August and 30 August, the final 28 days.</p>",
             ]),
             ("The window on its own", [
                 "<p>Those 28 days alone: 458 clicks from 33.7k appearances at an average position of 9.7. The quarter as a whole averaged 8.8, so the position got worse while the clicks accelerated. The click rate went the other way, 1.1% over the quarter and 1.4% in those 4 weeks.</p>",
@@ -628,7 +631,7 @@ POSTS = [
         "slug": "watch-shops-and-jewellers",
         "ask": ("watch shop", "Durres"),
         "date": "2026-08-14",
-        "updated": "2026-08-14",
+        "updated": "2026-11-19",
         "topic": "Local search",
         "work": "iglisi-watch",
         "service": ("/seo/", "SEO and local search"),
@@ -688,7 +691,7 @@ POSTS = [
                 "website at all, so there is nothing flattering in the "
                 "starting number: it was zero. A page for each of 58 watches, "
                 "in 3 languages, plus the map listing.</p>",
-                "<p>3 months later Google was sending 900 clicks a quarter, at "
+                "<p>From 2 June to 30 August 2026 Google sent 900 clicks, at "
                 "an average position of 8.8 and a 1.1% click rate. Both of those "
                 "last 2 numbers are weak, and they are on the chart on "
                 "<a href=\"/work/iglisi-watch/\">their page</a> with the "
@@ -1729,7 +1732,7 @@ POSTS = [
     {
         "slug": "how-to-come-up-first-on-google",
         "date": "2026-08-21",
-        "updated": "2026-08-21",
+        "updated": "2026-11-19",
         "topic": "Local search",
         "work": "iglisi-watch",
         "service": ("/seo/", "SEO and local search"),
@@ -1779,8 +1782,8 @@ POSTS = [
                 "enough that they are still there when it loads.</p>",
             ]),
             ("What it looked like for one shop", [
-                "<p>A watch shop in Durres had no website in May. By August, "
-                "search was sending it 900 clicks a quarter at an average "
+                "<p>A watch shop in Durres had no website in May. From 2 June "
+                "to 30 August 2026, search sent it 900 clicks at an average "
                 "position of 8.8, which is the bottom of the first page "
                 "rather than the top of it.</p>",
                 "<p>That is the honest shape of it: not first for everything "
@@ -2008,7 +2011,7 @@ POSTS = [
     {
         "slug": "how-long-seo-takes",
         "date": "2026-08-21",
-        "updated": "2026-08-21",
+        "updated": "2026-11-19",
         "topic": "Local search",
         "work": "iglisi-watch",
         "service": ("/seo/", "SEO and local search"),
@@ -2046,7 +2049,7 @@ POSTS = [
                 "you show up for, lower down than you would like.</p>",
             ]),
             ("What one quarter looked like", [
-                "<p>Iglisi Watch began with no site at all. Across the quarter that followed, search delivered 900 clicks at an average position of 8.8 and a click rate of 1.1%. Expect the position to get worse before it gets better: in the last 4 weeks of that quarter it fell to 9.7 while the click rate rose to 1.4%, because a site that starts appearing for more searches appears for plenty of them near the bottom.</p>",
+                "<p>Iglisi Watch began with no site at all. Across the quarter that followed, 2 June to 30 August 2026, search delivered 900 clicks at an average position of 8.8 and a click rate of 1.1%. Expect the position to get worse before it gets better: in the last 4 weeks of that quarter it fell to 9.7 while the click rate rose to 1.4%, because a site that starts appearing for more searches appears for plenty of them near the bottom.</p>",
                 "<p>The closing four weeks carried more of that than the "
                 "opening eight, which is the shape of this work: flat, flat, "
                 "then a slope.</p>",
@@ -2982,7 +2985,7 @@ POSTS = [
     {
         "slug": "seo-for-a-new-business",
         "date": "2026-08-22",
-        "updated": "2026-08-22",
+        "updated": "2026-11-19",
         "topic": "Local search",
         "work": "iglisi-watch",
         "service": ("/seo/", "SEO and local search"),
@@ -2998,8 +3001,8 @@ POSTS = [
         "description": "SEO for a brand new business in Albania: what to do "
                        "in the first three months, in order, with the "
                        "numbers a real shop produced starting from nothing.",
-        "og_desc": "One shop went from no website to 900 clicks a quarter. "
-                   "This is the order it was done in.",
+        "og_desc": "One shop went from no website to 900 clicks from June to "
+                   "August 2026. This is the order it was done in.",
 
         "body": [
             ("Week one is the listing, not the website", [
@@ -3027,7 +3030,7 @@ POSTS = [
             ]),
             ("Expect the shape, not a straight line", [
                 "<p>A watch shop here had no site in May. Across the "
-                "following quarter search brought it 900 clicks at an "
+                "following quarter, 2 June to 30 August 2026, search brought it 900 clicks at an "
                 "average position of 8.8, which is the foot of the first "
                 "page rather than the top.</p>",
                 "<p>The closing weeks of that quarter carried more than the "
@@ -5733,7 +5736,7 @@ POSTS = [
     {
         "slug": "hiring-a-studio-abroad",
         "date": "2026-08-30",
-        "updated": "2026-08-30",
+        "updated": "2026-11-19",
         "topic": "Local search",
         "work": None,
         "service": ("/seo/", "SEO and local search"),
@@ -5774,7 +5777,7 @@ POSTS = [
             ]),
             ("The proof we have is not Italian", [
                 "<p>The Search Console figures published on this site belong to a watch "
-                "shop in Durres: 900 clicks and 82k times shown across three months, at "
+                "shop in Durres: 900 clicks and 82k times shown from 2 June to 30 August 2026, at "
                 "an average position of 8.8 and a 1.1% click rate. Taken August 2026. "
                 "Positions drift, so what you see today will not match this.</p>",
                 "<p>We publish the weak numbers next to the good ones on purpose. A "

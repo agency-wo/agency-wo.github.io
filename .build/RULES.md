@@ -76,6 +76,12 @@ everything checkable is checked by `verify.py`, which fails the build.
     of our own pages, which is why the homepage's other button says "See the
     work" and not "Send". The old wording said one CTA in the ink band, was
     false the day it was written, and nothing checked it. Check 32 does now.
+    Since 2026-11-19 (the owner, on the conversion research) the band's one
+    button fits the page on `/systems/` and `/meta-ads/`, whose reader did not
+    come for a website audit: their own wording, pointing at `/start/`
+    (`chrome.BAND_CTA_FOR`). Still one button in the same place, so still one
+    ask. The band's email link names the page it was sent from. Check 27 allows
+    exactly those two differences and nothing else.
 
 ## Claims
 

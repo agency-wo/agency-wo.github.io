@@ -167,6 +167,12 @@ DIRECTORIES = [
 # URL pasted here would render a "leave a review" sentence that lands somebody
 # on a map card with no review box, which is a broken promise in 3 languages.
 GBP_REVIEW_URL = "https://g.page/r/CQ8FTD_EyBqyEAE/review"
+# The same profile WITHOUT /review: it opens Google's panel for the studio with
+# every review on it (checked 2026-11-19: g.page redirects to a Google search for
+# "minarank studio" carrying the profile's ludocid). This is the link a reader
+# who wants to READ the reviews gets, under the four quoted on the homepage;
+# the review link above stays in the footer for clients who want to write one.
+GBP_PROFILE_URL = "https://g.page/r/CQ8FTD_EyBqyEAE"
 
 # -- search engine verification ---------------------------------------------
 # EMPTY BY DEFAULT, and deliberately not the placeholder-red pattern the
@@ -481,6 +487,8 @@ FORM_ENDPOINT = "https://api.web3forms.com/submit"
 # keeps the other reader served, because it jumps a decided visitor straight
 # past the argument to the field.
 AUDIT_URL = "/audit/#audit"
+# Where the band sends the 2 pages whose ask is a project brief, not an audit.
+START_URL = "/start/"
 
 # Stated ONCE PER LANGUAGE, and only in chrome.py. It lived here as well for a
 # while, with the same value and no link between the two, which is precisely
@@ -665,8 +673,25 @@ WA_PATH = ("M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 
            "2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872."
            "118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z")
 
+def page_name(lang, page_url):
+    """What the visitor calls the page they are on, for the WhatsApp opening line
+    and the email subject (2026-11-19): an enquiry then says where it came from,
+    which is how the site counts enquiries by page with no tracker. Exact top-level
+    pages first, then the section a post, case or term page sits in; None when the
+    page is unknown (the 404), which keeps the generic wording."""
+    names = ch(lang).PAGE_NAMES
+    if not page_url:
+        return None
+    if page_url in names:
+        return names[page_url]
+    for section in ("/blog/", "/work/", "/glossary/"):
+        if page_url.startswith(section):
+            return names[section]
+    return None
+
+
 # The href works with JS off; js/main.js upgrades it with a prefilled message.
-def whatsapp(lang):
+def whatsapp(lang, page_url=None):
     """The floating button. Its 3 strings are all attributes, so nothing that
     walks the DOM for text would ever find them untranslated.
 
@@ -683,7 +708,8 @@ def whatsapp(lang):
     percent-encoded and no copy check would recognise it.
     """
     c = ch(lang)
-    prefill = c.WA_PREFILL.replace("{brand}", BRAND)
+    name = page_name(lang, page_url)
+    prefill = (c.WA_PAGE.replace("{page}", name) if name else c.WA_PREFILL).replace("{brand}", BRAND)
     href = "https://wa.me/%s?text=%s" % (WHATSAPP, urllib.parse.quote(prefill))
     return (f'  <a class="wa" href="{href}" target="_blank" '
             f'rel="noopener noreferrer" aria-label="{c.WA_LABEL}" '
@@ -1079,14 +1105,23 @@ def footer(lang, page_url=None, cta_heading=None, cta_note=None):
     # in the fine print was too small to be the thing it was asked to be.
     cta = ""
     if cta_heading:
+        # 2026-11-19: /systems/ and /meta-ads/ ask for a project brief rather
+        # than a website audit (still one button, same place); the email names
+        # the page it was sent from; and the reply promise sits beside the two
+        # routes it covers.
+        cta_label = c.BAND_CTA_FOR.get(page_url, c.BAND_CTA)
+        cta_href = START_URL if page_url in c.BAND_CTA_FOR else AUDIT_URL
+        name = page_name(lang, page_url)
+        mail = f"mailto:{EMAIL}" + (f"?subject={urllib.parse.quote(c.MAIL_SUBJECT.replace('{page}', name))}" if name else "")
         cta = f'''      <div class="band-top">
         <div class="band-say">
           <h2>{cta_heading}</h2>
           <p class="band-note">{cta_note}</p>
           <p class="band-actions">
-            <a class="band-cta" href="{localise(AUDIT_URL, lang)}">{c.BAND_CTA}</a>
-            <span class="band-alt"><a href="mailto:{EMAIL}">{EMAIL}</a> {DOT} <a href="{wa_audit_href(lang)}">WhatsApp {phone_display()}</a></span>
+            <a class="band-cta" href="{localise(cta_href, lang)}">{cta_label}</a>
+            <span class="band-alt"><a href="{mail}">{EMAIL}</a> {DOT} <a href="{wa_audit_href(lang)}">WhatsApp {phone_display()}</a></span>
           </p>
+          <p class="band-reply">{c.REPLY_NOTE.replace("{turnaround}", turnaround(lang))}</p>
         </div>
 {clock(lang)}
       </div>
@@ -1111,7 +1146,7 @@ def footer(lang, page_url=None, cta_heading=None, cta_note=None):
     </div>
   </div>
 
-{whatsapp(lang)}  <script src="{stamped("/js/main.js")}" defer></script>
+{whatsapp(lang, page_url)}  <script src="{stamped("/js/main.js")}" defer></script>
 </body>
 </html>
 '''

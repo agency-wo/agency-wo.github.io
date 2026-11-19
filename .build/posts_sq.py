@@ -32,9 +32,9 @@ POSTS = [
     # ================================================================ SEO ===
     {
         "slug": "map-listing-first",
-        "src": "39bafafb",
+        "src": "43333df9",
         "date": "2026-08-14",
-        "updated": "2026-08-14",
+        "updated": "2026-11-19",
         "topic": "Kërkim lokal",
         "work": "iglisi-watch",
         "service": ("/seo/", "SEO dhe kërkim lokal"),
@@ -49,13 +49,13 @@ POSTS = [
         "description": "Numrat e vërtetë të Search Console nga 3 muajt e parë "
                        "online të një dyqani orësh në Durrës, dhe çfarë duhet "
                        "të rregullojë një biznes lokal para renditjes.",
-        "og_desc": "900 klikime, pozicion mesatar 8,8 dhe pjesët që askush nuk i vë në screenshot.",
+        "og_desc": "900 klikime nga qershori në gusht 2026, pozicion mesatar 8,8 dhe pjesët që askush nuk i vë në screenshot.",
 
         "body": [
             ("Përgjigjja e shkurtër", [
                 "<p>Nëse nis pa faqe interneti, prit muaj, jo javë, dhe prit që "
                 "numrat e parë të duken modestë. Iglisi Watch shkoi nga asgjë "
-                "në maj në 900 klikime në tremujor deri në gusht. Pozicion "
+                "në maj në 900 klikime nga 2 qershori deri më 30 gusht 2026. Pozicion "
                 "mesatar 8,8. Përqindje klikimesh 1,1%.</p>",
                 "<p>Janë numrat e një biznesi që Google ka nisur ta besojë dhe "
                 "nuk ka mbaruar ende së besuari. Njihi të dyja gjysmat para se të punësosh dikë.</p>",
@@ -452,32 +452,33 @@ POSTS = [
     # ============================================================= COMPOUND ===
     {
         "slug": "the-last-4-weeks",
-        "src": "ddb6a0f6",
+        "src": "7e4dcad8",
         "date": "2026-08-14",
-        "updated": "2026-08-14",
+        "updated": "2026-11-19",
         "topic": "Kërkim lokal",
         "work": "iglisi-watch",
         "service": ("/seo/", "SEO dhe kërkimi lokal"),
 
         "title": "Rezultatet SEO: pse muaji 3 ia kalon të parit",
         "h1": "4 javët e fundit të tremujorit mundin 8 të parat.",
-        "summary": "Nga 900 klikime në një tremujor, 458 erdhën në 28 "
-                   "ditët e fundit. Çfarë tregon ajo kurbë para se të "
-                   "shpenzosh gjë.",
+        "summary": "Nga 900 klikime, nga 2 qershori deri më 30 gusht 2026, 458 "
+                   "erdhën në 28 ditët e fundit. Çfarë tregon ajo kurbë para se "
+                   "të shpenzosh gjë.",
         "standfirst": "Kërkimi nuk paguan njëtrajtshëm. Tremujori me "
                       "pozicion mesatar 8,8 i vuri mbi gjysmën e "
                       "klikimeve në fund.",
-        "description": "Një dyqan në Durrës mori 900 klikime nga Google në "
-                       "tremujorin e parë online, dhe 458 erdhën në 28 "
-                       "ditët e fundit. Pse kërkimi grumbullohet, me "
-                       "numrat e vërtetë.",
-        "og_desc": "900 klikime në një tremujor. 458 në 28 ditët e fundit.",
+        # Under the 175 characters gen_blog holds every language to.
+        "description": "Tremujori i parë online i një dyqani në Durrës, nga "
+                       "qershori në gusht 2026: 900 klikime nga Google, 458 në 28 "
+                       "ditët e fundit. Pse kërkimi grumbullohet, me numrat e "
+                       "vërtetë.",
+        "og_desc": "900 klikime nga qershori në gusht 2026. 458 në 28 ditët e fundit.",
 
         "body": [
             ("Përgjigjja e shkurtër", [
                 "<p>Puna me kërkimin paguan në fund, jo njëtrajtshëm. Në "
                 "tremujorin e parë online të "
-                "<a href=\"/work/iglisi-watch/\">watch.al</a>, Google dërgoi 900 klikime, dhe 458 prej tyre, mbi gjysma, erdhën mes 3 gushtit dhe 30 gushtit, 28 ditët e fundit.</p>",
+                "<a href=\"/work/iglisi-watch/\">watch.al</a>, nga 2 qershori deri më 30 gusht 2026, Google dërgoi 900 klikime, dhe 458 prej tyre, mbi gjysma, erdhën mes 3 gushtit dhe 30 gushtit, 28 ditët e fundit.</p>",
             ]),
             ("Dritarja më vete", [
                 "<p>Ato 28 ditë më vete: 458 klikime nga 33,7k herë e shfaqur, me pozicion mesatar 9,7. Tremujori në tërësi bënte 8,8, pra pozicioni u këqesësua ndërsa klikimet shpejtonin. Përqindja e klikimeve shkoi nga ana tjetër, 1,1% për tremujorin dhe 1,4% në ato 4 javë.</p>",
@@ -656,10 +657,10 @@ POSTS = [
     # ====================================================== INDUSTRY: WATCH ===
     {
         "slug": "watch-shops-and-jewellers",
-        "src": "c627d7ab",
+        "src": "9c591945",
         "ask": ("dyqan orësh", "Durrës"),
         "date": "2026-08-14",
-        "updated": "2026-08-14",
+        "updated": "2026-11-19",
         "topic": "Kërkim lokal",
         "work": "iglisi-watch",
         "service": ("/seo/", "SEO dhe kërkim lokal"),
@@ -718,7 +719,7 @@ POSTS = [
                 "kishte fare faqe, prandaj te numri i nisjes nuk ka asgjë për "
                 "t'u mburrur: ishte zero. Një faqe për secilën nga 58 orët, në "
                 "3 gjuhë, plus profili në Google.</p>",
-                "<p>3 muaj më vonë Google sillte 900 klikime në tremujor, me "
+                "<p>Nga 2 qershori deri më 30 gusht 2026 Google solli 900 klikime, me "
                 "renditje mesatare 8,8 dhe përqindje klikimesh 1,1%. Këta 2 "
                 "numrat e fundit janë të dobët, dhe rrinë te grafiku i "
                 "<a href=\"/work/iglisi-watch/\">faqes së tyre</a> bashkë me "
@@ -1758,9 +1759,9 @@ POSTS = [
 
     {
         "slug": "how-to-come-up-first-on-google",
-        "src": "7a7fdfaf",
+        "src": "706c659c",
         "date": "2026-08-21",
-        "updated": "2026-08-21",
+        "updated": "2026-11-19",
         "topic": "Kërkim lokal",
         "work": "iglisi-watch",
         "service": ("/seo/", "SEO dhe kërkimi lokal"),
@@ -1810,8 +1811,8 @@ POSTS = [
                 "sa ai të jetë ende aty kur hapet.</p>",
             ]),
             ("Si doli për një dyqan", [
-                "<p>Një dyqan orësh në Durrës në maj nuk kishte faqe. Në "
-                "gusht kërkimi i dërgonte 900 klikime në tremujor, me "
+                "<p>Një dyqan orësh në Durrës në maj nuk kishte faqe. Nga 2 "
+                "qershori deri më 30 gusht 2026 kërkimi i dërgoi 900 klikime, me "
                 "pozicion mesatar 8,8, që është fundi i faqes së parë dhe jo "
                 "maja e saj.</p>",
                 "<p>Kjo është forma e ndershme e punës: jo i pari për "
@@ -2037,9 +2038,9 @@ POSTS = [
 
     {
         "slug": "how-long-seo-takes",
-        "src": "a85d036f",
+        "src": "914ee0cc",
         "date": "2026-08-21",
-        "updated": "2026-08-21",
+        "updated": "2026-11-19",
         "topic": "Kërkim lokal",
         "work": "iglisi-watch",
         "service": ("/seo/", "SEO dhe kërkimi lokal"),
@@ -2077,7 +2078,7 @@ POSTS = [
                 "cilat del, më poshtë nga sa do të doje.</p>",
             ]),
             ("Si doli një tremujor", [
-                "<p>Iglisi Watch nisi pa asnjë faqe. Në tremujorin që pasoi kërkimi solli 900 klikime, me pozicion mesatar 8,8 dhe përqindje klikimesh 1,1%. Prit që pozicioni të këqesësohet para se të përmirësohet: në 4 javët e fundit të atij tremujori ra në 9,7 ndërsa përqindja e klikimeve u ngrit në 1,4%, sepse një faqe që nis të shfaqet për më shumë kërkime shfaqet për mjaft prej tyre poshtë.</p>",
+                "<p>Iglisi Watch nisi pa asnjë faqe. Në tremujorin që pasoi, nga 2 qershori deri më 30 gusht 2026, kërkimi solli 900 klikime, me pozicion mesatar 8,8 dhe përqindje klikimesh 1,1%. Prit që pozicioni të këqesësohet para se të përmirësohet: në 4 javët e fundit të atij tremujori ra në 9,7 ndërsa përqindja e klikimeve u ngrit në 1,4%, sepse një faqe që nis të shfaqet për më shumë kërkime shfaqet për mjaft prej tyre poshtë.</p>",
                 "<p>Katër javët e fundit sollën më shumë se tetë të parat, "
                 "që është forma e kësaj pune: rrafsh, rrafsh, pastaj një "
                 "ngjitje.</p>",
@@ -3023,9 +3024,9 @@ POSTS = [
 
     {
         "slug": "seo-for-a-new-business",
-        "src": "1b61f990",
+        "src": "cd64cfd2",
         "date": "2026-08-22",
-        "updated": "2026-08-22",
+        "updated": "2026-11-19",
         "topic": "Kërkim lokal",
         "work": "iglisi-watch",
         "service": ("/seo/", "SEO dhe kërkimi lokal"),
@@ -3039,8 +3040,8 @@ POSTS = [
         "description": "SEO për një biznes të porsahapur në Shqipëri: çfarë "
                        "të bësh në tre muajt e parë, me radhë, me numrat e "
                        "vërtetë që nxori një dyqan nga hiçi.",
-        "og_desc": "Një dyqan shkoi nga asnjë faqe në 900 klikime në "
-                   "tremujor. Kjo është radha në të cilën u bë.",
+        "og_desc": "Një dyqan shkoi nga asnjë faqe në 900 klikime nga qershori "
+                   "në gusht 2026. Kjo është radha në të cilën u bë.",
 
         "body": [
             ("Java e parë është skeda, jo faqja", [
@@ -3068,7 +3069,7 @@ POSTS = [
             ]),
             ("Prit formën, jo një vijë të drejtë", [
                 "<p>Një dyqan orësh këtu në maj nuk kishte faqe. Në "
-                "tremujorin që pasoi kërkimi i solli 900 klikime me pozicion "
+                "tremujorin që pasoi, nga 2 qershori deri më 30 gusht 2026, kërkimi i solli 900 klikime me pozicion "
                 "mesatar 8,8, që është fundi i faqes së parë dhe jo "
                 "maja.</p>",
                 "<p>Javët e fundit të atij tremujori sollën më shumë se të "
@@ -5793,9 +5794,9 @@ POSTS = [
     },
     {
         "slug": "hiring-a-studio-abroad",
-        "src": "7c1a3e7a",
+        "src": "534be2cf",
         "date": "2026-08-30",
-        "updated": "2026-08-30",
+        "updated": "2026-11-19",
         "topic": "Kërkim lokal",
         "work": None,
         "service": ("/seo/", "SEO dhe kërkim lokal"),
@@ -5836,7 +5837,7 @@ POSTS = [
             ]),
             ("Provat që kemi nuk janë italiane", [
                 "<p>Shifrat e Search Console të botuara në këtë faqe janë të një dyqani "
-                "orësh në Durrës: 900 klikime dhe 82k herë e shfaqur në tre muaj, me "
+                "orësh në Durrës: 900 klikime dhe 82k herë e shfaqur nga 2 qershori deri më 30 gusht 2026, me "
                 "pozicion mesatar 8,8 dhe përqindje klikimesh 1,1%. Marrë në gusht 2026. "
                 "Pozicionet lëvizin, prandaj ajo që sheh ti sot nuk do të përputhet me "
                 "këtë.</p>",
