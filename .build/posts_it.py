@@ -7462,7 +7462,7 @@ POSTS = [
     # ============================================================ RICERCA ===
     {
         "slug": "lombard-small-business-websites-2026",
-        "src": "3ab73911",
+        "src": "ef607b88",
         "date": "2026-11-22",
         "updated": "2026-11-22",
         "topic": "Ricerca locale",
@@ -7494,7 +7494,7 @@ POSTS = [
                 f"<p>Minafy, il nostro motore di audit, ha misurato tutti i {S.SITES} siti in "
                 f"un'unica tornata il 1° e il 2 novembre. Ogni cifra qui è un conteggio su quei "
                 f"{S.SITES}, o sui siti che un controllo ha potuto leggere, e il "
-                f"<a href=\"{S.CSV_URL}\">foglio di calcolo</a> le contiene tutte.</p>",
+                f"<a href=\"{S.CSV_HREF}\">foglio di calcolo</a> le contiene tutte.</p>",
             ]),
             ("La posta è il punto in cui cedono quasi tutti", [
                 "<p>L'autenticazione della posta sono 3 record nelle impostazioni del dominio, "

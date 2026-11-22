@@ -32,6 +32,10 @@ def _load():
 
 
 ROWS = _load()
+# What the pages link: the file plus the first 8 of its own hash. Cloudflare keys its cache on the query string, and
+# the /assets/ rule keeps whatever it got for a year, a 404 included: on 2026-11-22 a request made before the deploy
+# finished cached a 404 for this very file. A hash-named link can never meet an entry cached before the file existed.
+CSV_HREF = CSV_URL + "?v=" + CSV_SHA256[:8]
 SITES = 50                                   # the population; every share below is k of the n it was assessed on
 CSV_ROWS = len(ROWS)
 PUBLISHED = [s for s, r in ROWS.items() if r["status"] == "published"]

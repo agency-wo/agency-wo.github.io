@@ -7368,7 +7368,7 @@ POSTS = [
     # ============================================================ KËRKIME ===
     {
         "slug": "lombard-small-business-websites-2026",
-        "src": "3ab73911",
+        "src": "ef607b88",
         "date": "2026-11-22",
         "updated": "2026-11-22",
         "topic": "Kërkim lokal",
@@ -7401,7 +7401,7 @@ POSTS = [
                 f"<p>Minafy, motori ynë i auditimit, i mati të {S.SITES} faqet e internetit në "
                 f"një raund të vetëm më 1 dhe 2 nëntor. Çdo shifër këtu është një numërim nga "
                 f"ato {S.SITES}, ose nga faqet që një kontroll mundi t'i lexonte, dhe "
-                f"<a href=\"{S.CSV_URL}\">fleta llogaritëse</a> i mban të gjitha.</p>",
+                f"<a href=\"{S.CSV_HREF}\">fleta llogaritëse</a> i mban të gjitha.</p>",
             ]),
             ("Te email-i ngecin pothuajse të gjithë", [
                 "<p>Autentikimi i email-it janë 3 regjistrime në cilësimet e domenit, SPF, DKIM "

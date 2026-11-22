@@ -7341,7 +7341,7 @@ POSTS = [
                 "business in Lombardy.</p>",
                 f"<p>Minafy, our audit engine, measured all {S.SITES} sites in one batch on 1 "
                 f"and 2 November. Every figure here is a count out of those {S.SITES}, or out "
-                f"of the sites a check could read, and the <a href=\"{S.CSV_URL}\">"
+                f"of the sites a check could read, and the <a href=\"{S.CSV_HREF}\">"
                 "spreadsheet</a> holds all of them.</p>",
             ]),
             ("Email is where most of them fall short", [
