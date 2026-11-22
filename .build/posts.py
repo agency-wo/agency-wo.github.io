@@ -51,6 +51,8 @@ TO ADD A POST: copy a record, change every field, then run
 
 NL = chr(10)
 
+import study_lombardy as S  # the Lombardy study post's figures, read from its published spreadsheet
+
 POSTS = [
     # ================================================================ SEO ===
     {
@@ -7298,6 +7300,196 @@ POSTS = [
         "payoff": "Send us your product list as it stands today, even a spreadsheet, and we "
                   "will tell you what it needs before a catalogue can be made from it.",
         "related": [("/web-design/", "Websites"), ("/systems/", "Custom software")],
+    },
+    # =========================================================== RESEARCH ===
+    # The Lombardy study (2026-11-22). Every figure is read from the published
+    # spreadsheet by study_lombardy.py and never typed, so the page cannot say a
+    # number the file does not hold. The tables are built there too, from the
+    # labels below; posts_it.py and posts_sq.py pass their own labels. The 3
+    # method facts that are not counts in the spreadsheet (2 sites read on their
+    # homepage only, the crawl's limits, the commit) come from the study's run
+    # record and Minafy's code at 56cc3f9.
+    {
+        "slug": "lombard-small-business-websites-2026",
+        "date": "2026-11-22",
+        "updated": "2026-11-22",
+        "topic": "Local search",
+        "work": None,
+        "service": ("/seo/", "SEO and local search"),
+
+        "title": "50 Lombard small business websites, measured",
+        "h1": "How Lombard small businesses show up online",
+        "summary": f"We measured the websites of {S.SITES} small businesses that PagineGialle "
+                   f"lists first in 6 Lombard cities. {S.n('Email authentication', 'full')} of "
+                   "them has email authentication in full.",
+        "standfirst": "6 cities, 8 trades and one batch of measurements on 1 and 2 November "
+                      "2026. We publish totals only and name no business.",
+        "description": f"{S.SITES} small business websites in 6 Lombard cities, measured in "
+                       "November 2026: HTTPS, phone speed, security headers, email "
+                       "authentication and page basics.",
+        "og_desc": f"{S.SITES} Lombard small business websites, measured in November 2026.",
+
+        "body": [
+            ("What we measured and on whom", [
+                "<p>We took the businesses that PagineGialle lists first in Milano, Brescia, "
+                "Bergamo, Como, Varese and Pavia, in 8 trades: hairdressers, restaurants, "
+                "dentists, heating engineers, garages, estate agents, jewellers and "
+                "builders. We read the listings on 1 November 2026, on Tuttocittà, which "
+                "serves the same records.</p>",
+                "<p>PagineGialle shows paying advertisers first. So this is a sample of small "
+                "businesses that pay PagineGialle to be listed first, not of every small "
+                "business in Lombardy.</p>",
+                f"<p>Minafy, our audit engine, measured all {S.SITES} sites in one batch on 1 "
+                f"and 2 November. Every figure here is a count out of those {S.SITES}, or out "
+                f"of the sites a check could read, and the <a href=\"{S.CSV_URL}\">"
+                "spreadsheet</a> holds all of them.</p>",
+            ]),
+            ("Email is where most of them fall short", [
+                "<p>Email authentication is 3 records in a domain's settings, SPF, DKIM and "
+                "DMARC, that let a receiving server check that mail using the business's "
+                "address really came from it. Without them, anybody can send mail that looks "
+                "like the business's own.</p>",
+                f"<p>{S.n('Email authentication', 'full')} of "
+                f"{S.n('Email authentication', 'assessed')} sites has it in full: an SPF "
+                "record, DMARC set to quarantine or reject rather than only to report, and a "
+                f"DKIM key if the check found one. {S.n('Email authentication', 'partial')} "
+                f"have part of it, and {S.n('Email authentication', 'zero')} have none of the "
+                "3.</p>",
+            ]),
+            ("HTTPS is nearly universal and security headers are not", [
+                f"<p>{S.n('Valid TLS certificate', 'full')} of "
+                f"{S.n('Valid TLS certificate', 'assessed')} sites serve a valid HTTPS "
+                f"certificate, and {S.n('Valid TLS certificate', 'zero')} don't serve HTTPS at "
+                f"all. Of the {S.n('HTTP→HTTPS redirect', 'assessed')} where we could test it, "
+                f"{S.n('HTTP→HTTPS redirect', 'full')} send a visitor who types http:// on to "
+                "https://.</p>",
+                "<p>Security headers are instructions a server sends with every page, telling "
+                "the browser what it may load and when to refuse. Minafy looks for 6 of them: "
+                f"{S.n('Security headers', 'full')} of {S.n('Security headers', 'assessed')} "
+                f"sites send all 6 and {S.n('Security headers', 'zero')} send none.</p>",
+            ]),
+            ("A phone score is a single reading", [
+                "<p>Google's Lighthouse scores a page from 0 to 100 on a simulated phone. "
+                f"{S.n('Mobile performance', 'lighthouse_0_49')} sites scored 0 to 49, "
+                f"{S.n('Mobile performance', 'lighthouse_50_89')} scored 50 to 89 and "
+                f"{S.n('Mobile performance', 'lighthouse_90_100')} scored 90 to 100. For "
+                f"{S.n('Mobile performance', 'lighthouse_not_assessed')} it returned no "
+                "score.</p>",
+                "<p>It is one lab run per site, and a score moves between runs, so the bands "
+                "say more than any single number.</p>",
+                S.bands("Lighthouse score on a simulated phone, one run per site",
+                        ["Score", "Sites"],
+                        ["0 to 49", "50 to 89", "90 to 100", "No score returned"]),
+                "<p>Google publishes speed measured on real visitors only for sites with "
+                "enough of them. It had that data for "
+                f"{S.n('Core Web Vitals (field)', 'assessed')} of the {S.SITES}, and "
+                f"{S.n('Core Web Vitals (field)', 'full')} of those were fast on every "
+                "measure.</p>",
+            ]),
+            ("Most pages have the basics and few have all of them", [
+                f"<p>{S.n('Title coverage', 'full')} sites have a title on every page we read, "
+                f"and {S.n('Unique titles', 'full')} have no 2 pages with the same one. A meta "
+                "description, the line under the title in search results, is on every page "
+                f"of {S.n('Meta descriptions', 'full')} sites and on none of "
+                f"{S.n('Meta descriptions', 'zero')}.</p>",
+                "<p>Alt text, which describes a picture to someone who can't see it, is on "
+                f"every image of {S.n('Image alt text', 'full')} sites. On the 4 pages the "
+                "accessibility check loaded, "
+                f"{S.n('Accessibility violations', 'assessed') - S.n('Accessibility violations', 'full')} "
+                f"of {S.n('Accessibility violations', 'assessed')} sites had at least one issue "
+                "rated moderate or worse.</p>",
+            ]),
+            ("What search engines and assistants can read", [
+                f"<p>{S.n('Structured data', 'full')} of the {S.SITES} carry structured data, "
+                "code that tells search engines and AI assistants what a page is. Of the "
+                f"{S.n('Business entity schema', 'assessed')} where it could be read, "
+                f"{S.n('Business entity schema', 'full')} describe the business itself.</p>",
+                f"<p>{S.n('sameAs entity links', 'full')} site links that data to 4 or more of "
+                "its profiles elsewhere, the links that tell a machine which Google listing "
+                "and which social pages are the same business. "
+                f"{S.n('sameAs entity links', 'zero')} link none.</p>",
+                f"<p>{S.n('Prices in crawlable HTML', 'full')} sites show a price with a "
+                "currency sign in the first 6,000 characters of a page's text, which is where "
+                f"the check reads. None of the {S.n('AI crawler access', 'assessed')} shuts out "
+                "GPTBot, ClaudeBot, PerplexityBot or the 3 other crawlers the check names in "
+                "its robots.txt.</p>",
+            ]),
+            ("Every count fits in one table", [
+                S.table(f"{len(S.PUBLISHED) - 1} checks on {S.SITES} sites: how many sites met "
+                        "each check fully, partly or not at all, and on how many it got no "
+                        "reading.",
+                        ["Check", "Fully", "Partly", "Not at all", "Not assessed"], [
+                    ("Security and email", [
+                        ("Valid TLS certificate", "A valid HTTPS certificate"),
+                        ("HTTP→HTTPS redirect", "http:// redirects to https://"),
+                        ("Security headers", "All 6 security headers"),
+                        ("Email authentication", "Email authentication in full"),
+                    ]),
+                    ("Speed", [
+                        ("Desktop performance", "Desktop speed: 100 out of 100"),
+                        ("Core Web Vitals (field)", "Real-visitor speed: all fast"),
+                        ("Compression", "Homepage sent compressed"),
+                    ]),
+                    ("Every page", [
+                        ("Title coverage", "A title on every page"),
+                        ("Unique titles", "No duplicate titles"),
+                        ("Meta descriptions", "A meta description on every page"),
+                        ("H1 coverage", "An H1 heading on every page"),
+                        ("Image alt text", "Alt text on every image"),
+                        ("Content depth", "No page under 300 words"),
+                        ("Broken links", "No broken link found"),
+                        ("Mobile viewport meta", "A viewport tag on every page"),
+                        ("Accessibility violations", "No accessibility issue above minor"),
+                    ]),
+                    ("What machines read", [
+                        ("Structured data", "Any structured data"),
+                        ("Business entity schema", "Organization or LocalBusiness data"),
+                        ("LocalBusiness schema", "LocalBusiness data"),
+                        ("Required properties", "LocalBusiness: name, address, URL"),
+                        ("Recommended properties", "LocalBusiness: all 6 recommended"),
+                        ("sameAs entity links", "4 or more sameAs links"),
+                        ("Prices in crawlable HTML", "A price with a currency sign"),
+                        ("City mentioned", "The city named on the site"),
+                        ("AI crawler access", "No AI crawler barred by robots.txt"),
+                    ]),
+                ]),
+                "<p>The Minafy version that ran, rubric 8 at commit 56cc3f9, scored 3 empty "
+                "readings as 0, and the table counts those sites as not assessed. So 3 counts "
+                "differ from Minafy's own: it put "
+                f"{S.n('Mobile performance', 'minafy_lighthouse_0_49')} sites in the lowest "
+                f"phone band, {S.n('Desktop performance', 'minafy_zero')} at zero for desktop "
+                f"speed and {S.n('HTTP→HTTPS redirect', 'minafy_zero')} without a redirect. One "
+                f"of the {S.n('Image alt text', 'zero')} sites with no alt text had no image on "
+                "the pages read, which Minafy scores as 0.</p>",
+            ]),
+            ("How the numbers were taken", [
+                "<p>For each site, Minafy loaded up to 12 pages in a desktop browser, 0.8 "
+                "seconds apart, then 6 at phone size for screenshots and 4 for the "
+                "accessibility check. robots.txt, read as the rules for every crawler, decided "
+                "which 12 pages it read. For 2 sites the crawl read only the homepage.</p>",
+                "<p>It also checked up to 150 of each site's own links and 30 outside links, "
+                "asking for the headers only where it could, and made a handful of single "
+                "requests: the homepage, robots.txt, the sitemap, llms.txt, the headers and the "
+                "http:// address. Those did not consult robots.txt. Every request carried a "
+                "Chrome user agent ending in Minafy-study and our address, and Google's "
+                "Lighthouse loaded each homepage twice for the speed scores.</p>",
+                "<p>Each check gives a site full points, part of them or none, and the table "
+                "counts the sites in each. A check that got no reading counts as not assessed, "
+                "never as a fail. The 6 security headers are Strict-Transport-Security, "
+                "Content-Security-Policy, X-Frame-Options, X-Content-Type-Options, "
+                "Referrer-Policy and Permissions-Policy.</p>",
+                "<p>The study gives no figure per city or per trade: with 8 or 9 sites a city "
+                "and 6 or 7 a trade, the groups are too small to compare. Of the "
+                f"{S.CSV_ROWS} readings in the spreadsheet, {S.counted('ai-judged')} are a "
+                f"model's judgement, {S.counted('retired-tactic')} are tactics we no longer "
+                f"treat as levers, {S.counted('search-visibility')} depend on the day's search "
+                f"results and {S.counted('instrument-not-valid-here')} the tool can't read on "
+                "Italian sites, so none of those is published as a figure.</p>",
+            ]),
+        ],
+        "payoff": "Send us your address and we will tell you which of these checks your "
+                  "site passes, in the same terms.",
+        "related": [("/seo/", "SEO and local search"), ("/audit/", "A free audit")],
     },
 ]
 

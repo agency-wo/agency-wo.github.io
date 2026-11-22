@@ -582,6 +582,10 @@ def localise(path, lang):
     """
     if not path.startswith("/"):
         return path                      # mailto:, https://, tel:
+    if path.startswith("/assets/"):
+        # one file serves all 3 languages: /it/assets/... does not exist, and
+        # check 2 would read it as a missing page (first met on a study's CSV)
+        return path
     if path.startswith("/#"):
         # "/#services" is the homepage plus a fragment, so the prefix lands
         # before the slash: /it/#services, never /it#services.

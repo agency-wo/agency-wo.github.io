@@ -389,12 +389,19 @@ class _Prose(HTMLParser):
 
     SKIP = {"script", "style", "svg", "form", "nav"}
     BREAK = {"p", "h1", "h2", "h3", "h4", "h5", "h6", "li", "section",
-             "article", "figcaption", "tr"}
+             "article", "figcaption", "tr", "caption"}
     VOID = {"br", "img", "meta", "link", "input", "hr", "source", "col"}
+    # A table row is one line, and its cells are joined by " | ". Until
+    # 2026-11-22 the cells ran together: the comparison tables read "hosting
+    # onlydecided at build", and the first table of numbers turned 100, 3, 46,
+    # 0 and 1 into "10034601", which check 51 then failed as a figure no page
+    # states. It was right to: that number is on no page.
+    CELL = {"td", "th"}
 
     def __init__(self):
         super().__init__(convert_charrefs=True)
         self.parts, self.open, self.skip_at = [], [], None
+        self.first_cell = True
 
     def handle_starttag(self, tag, attrs):
         if tag in self.VOID:
@@ -407,6 +414,12 @@ class _Prose(HTMLParser):
                 self.skip_at = len(self.open) - 1
             elif tag in self.BREAK:
                 self.parts.append("\n")
+                if tag == "tr":
+                    self.first_cell = True
+            elif tag in self.CELL:
+                if not self.first_cell:
+                    self.parts.append(" | ")
+                self.first_cell = False
 
     def handle_endtag(self, tag):
         if tag in self.VOID:

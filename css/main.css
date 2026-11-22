@@ -555,6 +555,13 @@ a[href^="tel:"] { white-space: nowrap; }
 
 .cmp tbody tr:last-child td, .cmp tbody tr:last-child th { border-bottom: 0; }
 
+.cmp.study tbody th[scope="row"] { white-space: normal; color: var(--ink); }
+.cmp.study td { text-align: right; font-variant-numeric: tabular-nums;
+  white-space: nowrap; }
+.cmp.study thead th:not(:first-child) { text-align: right; }
+.cmp.study tbody th[scope="rowgroup"] { font-weight: 700; color: var(--ink);
+  padding-top: var(--s-6); white-space: normal; }
+
 .faq { margin-top: var(--s-9); padding-block: 0; }
 
 .faq:has(> .wrap) { margin-top: 0; padding-block: var(--pad-section); }

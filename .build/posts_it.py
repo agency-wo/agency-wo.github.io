@@ -28,6 +28,8 @@ wraps below were placed for this text rather than copied from the English.
 
 NL = chr(10)
 
+import study_lombardy as S  # the Lombardy study post's figures, read from its published spreadsheet
+
 POSTS = [
     # ================================================================ SEO ===
     {
@@ -7456,6 +7458,198 @@ POSTS = [
         "payoff": "Mandaci l'elenco dei prodotti così com'è oggi, anche un foglio di calcolo, "
                   "e ti diciamo cosa gli serve prima di poterne fare un catalogo.",
         "related": [("/web-design/", "Siti web"), ("/systems/", "Software su misura")],
+    },
+    # ============================================================ RICERCA ===
+    {
+        "slug": "lombard-small-business-websites-2026",
+        "src": "3ab73911",
+        "date": "2026-11-22",
+        "updated": "2026-11-22",
+        "topic": "Ricerca locale",
+        "work": None,
+        "service": ("/seo/", "SEO e ricerca locale"),
+
+        "title": "50 siti di piccole imprese lombarde, misurati",
+        "h1": "Come si presentano online le piccole imprese lombarde",
+        "summary": f"Abbiamo misurato i siti di {S.SITES} piccole imprese che PagineGialle elenca "
+                   f"per prime in 6 città lombarde. {S.n('Email authentication', 'full')} di loro "
+                   "ha l'autenticazione della posta completa.",
+        "standfirst": "6 città, 8 settori e un'unica tornata di misure il 1° e il 2 novembre "
+                      "2026. Pubblichiamo solo totali e non nominiamo nessuna impresa.",
+        "description": f"{S.SITES} siti di piccole imprese in 6 città lombarde, misurati a novembre "
+                       "2026: HTTPS, velocità da telefono, sicurezza, autenticazione della posta e "
+                       "basi delle pagine.",
+        "og_desc": f"{S.SITES} siti di piccole imprese lombarde, misurati a novembre 2026.",
+
+        "body": [
+            ("Cosa abbiamo misurato e su chi", [
+                "<p>Abbiamo preso le imprese che PagineGialle elenca per prime a Milano, "
+                "Brescia, Bergamo, Como, Varese e Pavia, in 8 settori: parrucchieri, "
+                "ristoranti, dentisti, termoidraulici, autofficine, agenzie immobiliari, "
+                "gioiellerie e imprese edili. Abbiamo letto gli elenchi il 1° novembre 2026 "
+                "su Tuttocittà, che mostra le stesse schede.</p>",
+                "<p>PagineGialle mostra per primi gli inserzionisti a pagamento. Il campione è "
+                "quindi fatto di piccole imprese che pagano PagineGialle per comparire per "
+                "prime, non di tutte le piccole imprese lombarde.</p>",
+                f"<p>Minafy, il nostro motore di audit, ha misurato tutti i {S.SITES} siti in "
+                f"un'unica tornata il 1° e il 2 novembre. Ogni cifra qui è un conteggio su quei "
+                f"{S.SITES}, o sui siti che un controllo ha potuto leggere, e il "
+                f"<a href=\"{S.CSV_URL}\">foglio di calcolo</a> le contiene tutte.</p>",
+            ]),
+            ("La posta è il punto in cui cedono quasi tutti", [
+                "<p>L'autenticazione della posta sono 3 record nelle impostazioni del dominio, "
+                "SPF, DKIM e DMARC, con cui il server che riceve verifica che un messaggio con "
+                "l'indirizzo dell'impresa venga davvero da lei. Senza, chiunque può mandare "
+                "posta che sembra dell'impresa.</p>",
+                f"<p>{S.n('Email authentication', 'full')} sito su "
+                f"{S.n('Email authentication', 'assessed')} ce l'ha completa: un record SPF, "
+                "DMARC impostato su quarantine o reject e non solo sul monitoraggio, e una "
+                f"chiave DKIM se il controllo ne ha trovata una. "
+                f"{S.n('Email authentication', 'partial')} ne hanno una parte e "
+                f"{S.n('Email authentication', 'zero')} nessuno dei 3.</p>",
+            ]),
+            ("L'HTTPS c'è quasi ovunque e le intestazioni di sicurezza no", [
+                f"<p>{S.n('Valid TLS certificate', 'full')} siti su "
+                f"{S.n('Valid TLS certificate', 'assessed')} hanno un certificato HTTPS valido "
+                f"e {S.n('Valid TLS certificate', 'zero')} non usano affatto HTTPS. Dei "
+                f"{S.n('HTTP→HTTPS redirect', 'assessed')} in cui abbiamo potuto verificarlo, "
+                f"{S.n('HTTP→HTTPS redirect', 'full')} portano su https:// chi digita "
+                "http://.</p>",
+                "<p>Le intestazioni di sicurezza sono istruzioni che il server invia con ogni "
+                "pagina, per dire al browser cosa può caricare e quando rifiutare. Minafy ne "
+                f"cerca 6: {S.n('Security headers', 'full')} siti su "
+                f"{S.n('Security headers', 'assessed')} le inviano tutte e 6 e "
+                f"{S.n('Security headers', 'zero')} nessuna.</p>",
+            ]),
+            ("Il punteggio da telefono è una lettura sola", [
+                "<p>Lighthouse, lo strumento di Google, dà a una pagina un punteggio da 0 a 100 "
+                f"su un telefono simulato. {S.n('Mobile performance', 'lighthouse_0_49')} siti "
+                f"hanno preso da 0 a 49, {S.n('Mobile performance', 'lighthouse_50_89')} da 50 a "
+                f"89 e {S.n('Mobile performance', 'lighthouse_90_100')} da 90 a 100. Per "
+                f"{S.n('Mobile performance', 'lighthouse_not_assessed')} non ha restituito un "
+                "punteggio.</p>",
+                "<p>È una sola misura di laboratorio per sito, e il punteggio cambia tra una "
+                "misura e l'altra: le fasce dicono più di un singolo numero.</p>",
+                S.bands("Punteggio Lighthouse su un telefono simulato, una misura per sito",
+                        ["Punteggio", "Siti"],
+                        ["da 0 a 49", "da 50 a 89", "da 90 a 100", "Nessun punteggio"]),
+                "<p>Google pubblica la velocità misurata sui visitatori reali solo per i siti "
+                "che ne hanno abbastanza. Aveva quei dati per "
+                f"{S.n('Core Web Vitals (field)', 'assessed')} dei {S.SITES}, e "
+                f"{S.n('Core Web Vitals (field)', 'full')} di questi erano veloci su ogni "
+                "misura.</p>",
+            ]),
+            ("Quasi tutte le pagine hanno le basi e poche le hanno tutte", [
+                f"<p>{S.n('Title coverage', 'full')} siti hanno un titolo su ogni pagina che "
+                f"abbiamo letto, e {S.n('Unique titles', 'full')} non hanno 2 pagine con lo "
+                "stesso. La meta description, la riga sotto il titolo nei risultati di "
+                f"ricerca, c'è su ogni pagina di {S.n('Meta descriptions', 'full')} siti e su "
+                f"nessuna di {S.n('Meta descriptions', 'zero')}.</p>",
+                "<p>Il testo alternativo, che descrive un'immagine a chi non può vederla, c'è "
+                f"su ogni immagine di {S.n('Image alt text', 'full')} siti. Sulle 4 pagine "
+                f"caricate dal controllo di accessibilità, "
+                f"{S.n('Accessibility violations', 'assessed') - S.n('Accessibility violations', 'full')} "
+                f"siti su {S.n('Accessibility violations', 'assessed')} avevano almeno un problema "
+                "di gravità moderata o superiore.</p>",
+            ]),
+            ("Cosa leggono i motori di ricerca e gli assistenti", [
+                f"<p>{S.n('Structured data', 'full')} dei {S.SITES} hanno dati strutturati, "
+                "codice che dice ai motori di ricerca e agli assistenti AI che cos'è una "
+                f"pagina. Dei {S.n('Business entity schema', 'assessed')} in cui si potevano "
+                f"leggere, {S.n('Business entity schema', 'full')} descrivono l'impresa "
+                "stessa.</p>",
+                f"<p>{S.n('sameAs entity links', 'full')} sito collega quei dati a 4 o più dei "
+                "suoi profili altrove, i link che dicono a una macchina quale scheda Google e "
+                "quali pagine social sono la stessa impresa. "
+                f"{S.n('sameAs entity links', 'zero')} non ne collegano nessuno.</p>",
+                f"<p>{S.n('Prices in crawlable HTML', 'full')} siti mostrano un prezzo con il "
+                "simbolo della valuta nei primi 6.000 caratteri del testo di una pagina, che è "
+                f"dove il controllo legge. Nessuno dei {S.n('AI crawler access', 'assessed')} "
+                "esclude nel suo robots.txt GPTBot, ClaudeBot, PerplexityBot o gli altri 3 "
+                "crawler che il controllo nomina.</p>",
+            ]),
+            ("Ogni conteggio sta in una tabella", [
+                S.table(f"{len(S.PUBLISHED) - 1} controlli su {S.SITES} siti: quanti siti hanno "
+                        "superato ciascun controllo del tutto, in parte o per niente, e su "
+                        "quanti non ha ottenuto una lettura.",
+                        ["Controllo", "Del tutto", "In parte", "Per niente", "Non valutato"], [
+                    ("Sicurezza e posta", [
+                        ("Valid TLS certificate", "Un certificato HTTPS valido"),
+                        ("HTTP→HTTPS redirect", "http:// rimanda a https://"),
+                        ("Security headers", "Tutte e 6 le intestazioni di sicurezza"),
+                        ("Email authentication", "Autenticazione della posta completa"),
+                    ]),
+                    ("Velocità", [
+                        ("Desktop performance", "Velocità da computer: 100 su 100"),
+                        ("Core Web Vitals (field)", "Velocità sui visitatori reali: tutto veloce"),
+                        ("Compression", "Home page inviata compressa"),
+                    ]),
+                    ("Ogni pagina", [
+                        ("Title coverage", "Un titolo su ogni pagina"),
+                        ("Unique titles", "Nessun titolo duplicato"),
+                        ("Meta descriptions", "Una meta description su ogni pagina"),
+                        ("H1 coverage", "Un titolo H1 su ogni pagina"),
+                        ("Image alt text", "Testo alternativo su ogni immagine"),
+                        ("Content depth", "Nessuna pagina sotto le 300 parole"),
+                        ("Broken links", "Nessun link rotto trovato"),
+                        ("Mobile viewport meta", "Un tag viewport su ogni pagina"),
+                        ("Accessibility violations",
+                         "Nessun problema di accessibilità oltre il lieve"),
+                    ]),
+                    ("Cosa leggono le macchine", [
+                        ("Structured data", "Dati strutturati di qualsiasi tipo"),
+                        ("Business entity schema", "Dati Organization o LocalBusiness"),
+                        ("LocalBusiness schema", "Dati LocalBusiness"),
+                        ("Required properties", "LocalBusiness: nome, indirizzo, URL"),
+                        ("Recommended properties", "LocalBusiness: tutti e 6 i consigliati"),
+                        ("sameAs entity links", "4 o più link sameAs"),
+                        ("Prices in crawlable HTML", "Un prezzo con il simbolo della valuta"),
+                        ("City mentioned", "La città nominata sul sito"),
+                        ("AI crawler access", "Nessun crawler AI escluso da robots.txt"),
+                    ]),
+                ]),
+                "<p>La versione di Minafy usata, la rubrica 8 al commit 56cc3f9, ha contato "
+                "come 0 le 3 letture vuote, e la tabella conta quei siti come non valutati. "
+                "Così 3 conteggi differiscono da quelli di Minafy: ha messo "
+                f"{S.n('Mobile performance', 'minafy_lighthouse_0_49')} siti nella fascia più "
+                f"bassa da telefono, {S.n('Desktop performance', 'minafy_zero')} a zero per la "
+                f"velocità da computer e {S.n('HTTP→HTTPS redirect', 'minafy_zero')} senza "
+                f"reindirizzamento. Uno dei {S.n('Image alt text', 'zero')} siti senza testo "
+                "alternativo non aveva immagini nelle pagine lette, e Minafy lo conta come "
+                "0.</p>",
+            ]),
+            ("Come sono stati presi i numeri", [
+                "<p>Per ogni sito Minafy ha caricato fino a 12 pagine in un browser da "
+                "computer, a 0,8 secondi l'una dall'altra, poi 6 in formato telefono per gli "
+                "screenshot e 4 per il controllo di accessibilità. Il robots.txt, letto come le "
+                "regole per tutti i crawler, ha deciso quali 12 pagine leggere. Per 2 siti il "
+                "crawler ha letto solo la home page.</p>",
+                "<p>Ha anche controllato fino a 150 link interni e 30 esterni per sito, "
+                "chiedendo solo le intestazioni dove poteva, e ha fatto qualche richiesta "
+                "singola: la home page, il robots.txt, la sitemap, il llms.txt, le intestazioni "
+                "e l'indirizzo http://. Queste non hanno consultato il robots.txt. Ogni "
+                "richiesta portava uno user agent di Chrome che termina con Minafy-study e "
+                "il nostro indirizzo, e il Lighthouse di Google ha caricato ogni home page 2 "
+                "volte per i punteggi di velocità.</p>",
+                "<p>Ogni controllo dà a un sito tutti i punti, una parte o nessuno, e la "
+                "tabella conta i siti in ciascun caso. Un controllo che non ha ottenuto una "
+                "lettura conta come non valutato, mai come un errore. Le 6 intestazioni di "
+                "sicurezza sono Strict-Transport-Security, Content-Security-Policy, "
+                "X-Frame-Options, X-Content-Type-Options, Referrer-Policy e "
+                "Permissions-Policy.</p>",
+                "<p>Lo studio non dà cifre per città o per settore: con 8 o 9 siti per città e "
+                "6 o 7 per settore, i gruppi sono troppo piccoli per un confronto. Delle "
+                f"{S.CSV_ROWS} letture del foglio di calcolo, {S.counted('ai-judged')} sono il "
+                f"giudizio di un modello, {S.counted('retired-tactic')} sono tattiche che non "
+                f"trattiamo più come leve, {S.counted('search-visibility')} dipendono dai "
+                f"risultati di ricerca del giorno e {S.counted('instrument-not-valid-here')} lo "
+                "strumento non le legge bene sui siti italiani, quindi nessuna di queste è "
+                "pubblicata come cifra.</p>",
+            ]),
+        ],
+        "payoff": "Mandaci l'indirizzo e ti diciamo quali di questi controlli supera il tuo "
+                  "sito, negli stessi termini.",
+        "related": [("/seo/", "SEO e ricerca locale"), ("/audit/", "Un audit gratuito")],
     },
 ]
 

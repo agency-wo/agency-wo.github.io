@@ -950,6 +950,23 @@ a[href^="tel:"] { white-space: nowrap; }
    column headings while appearing to work everywhere else. */
 .cmp tbody tr:last-child td, .cmp tbody tr:last-child th { border-bottom: 0; }
 
+/* The Lombardy study's tables (2026-11-22): 25 checks in 4 groups, 4 counts
+   each, and the phone-speed bands. Three differences from the comparison
+   tables, each for a reason. The labels wrap, because these run to 6 words
+   where theirs are 2, and nowrap would push the table past the 62ch column on
+   a desktop. The labels are ink, because here they are what the reader came
+   to read rather than metadata beside it. The counts sit right-aligned in
+   tabular figures, so a column reads down. The group row is a heading inside
+   the table: no capitals, no colour, so it costs nothing from the label
+   budget. The last-child rule above still applies per tbody, which is right:
+   each group ends without a hairline and the next group's heading opens it. */
+.cmp.study tbody th[scope="row"] { white-space: normal; color: var(--ink); }
+.cmp.study td { text-align: right; font-variant-numeric: tabular-nums;
+  white-space: nowrap; }
+.cmp.study thead th:not(:first-child) { text-align: right; }
+.cmp.study tbody th[scope="rowgroup"] { font-weight: 700; color: var(--ink);
+  padding-top: var(--s-6); white-space: normal; }
+
 
 .faq { margin-top: var(--s-9); padding-block: 0; }
 /* Except on the homepage, where it is a SECTION among sections rather than a

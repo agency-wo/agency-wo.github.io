@@ -28,6 +28,8 @@ wraps below were placed for this text rather than copied from the English.
 
 NL = chr(10)
 
+import study_lombardy as S  # the Lombardy study post's figures, read from its published spreadsheet
+
 POSTS = [
     # ================================================================ SEO ===
     {
@@ -7362,6 +7364,200 @@ POSTS = [
         "payoff": "Na dërgo listën e produkteve siç është sot, edhe një fletë llogaritëse, dhe "
                   "të themi çfarë i duhet para se të bëhet katalog.",
         "related": [("/web-design/", "Faqe interneti"), ("/systems/", "Software me porosi")],
+    },
+    # ============================================================ KËRKIME ===
+    {
+        "slug": "lombard-small-business-websites-2026",
+        "src": "3ab73911",
+        "date": "2026-11-22",
+        "updated": "2026-11-22",
+        "topic": "Kërkim lokal",
+        "work": None,
+        "service": ("/seo/", "SEO dhe kërkim lokal"),
+
+        "title": "50 faqe interneti biznesesh të vogla në Lombardi",
+        "h1": "Si paraqiten në internet bizneset e vogla të Lombardisë",
+        "summary": f"Matëm faqet e internetit të {S.SITES} bizneseve të vogla që PagineGialle i "
+                   f"rendit të parat në 6 qytete të Lombardisë. {S.n('Email authentication', 'full')} "
+                   "prej tyre ka autentikim të plotë të email-it.",
+        "standfirst": "6 qytete, 8 profesione dhe një raund matjesh më 1 dhe 2 nëntor 2026. "
+                      "Botojmë vetëm totale dhe nuk përmendim asnjë biznes.",
+        "description": f"{S.SITES} faqe interneti biznesesh të vogla në 6 qytete të Lombardisë, "
+                       "të matura në nëntor 2026: HTTPS, shpejtësia, siguria, autentikimi i "
+                       "email-it dhe bazat e faqeve.",
+        "og_desc": f"{S.SITES} faqe interneti biznesesh të vogla në Lombardi, të matura në nëntor "
+                   "2026.",
+
+        "body": [
+            ("Çfarë matëm dhe mbi kë", [
+                "<p>Morëm bizneset që PagineGialle i rendit të parat në Milano, Brescia, "
+                "Bergamo, Como, Varese dhe Pavia, në 8 profesione: parukierë, restorante, "
+                "dentistë, hidraulikë ngrohjeje, servise makinash, agjenci imobiliare, "
+                "argjendari dhe ndërtues. Listat i lexuam më 1 nëntor 2026 në Tuttocittà, që "
+                "shfaq të njëjtat regjistrime.</p>",
+                "<p>PagineGialle shfaq të parët reklamuesit që paguajnë. Pra, kjo është një "
+                "mostër biznesesh të vogla që i paguajnë PagineGialle për t'u shfaqur të parat, "
+                "jo e të gjitha bizneseve të vogla në Lombardi.</p>",
+                f"<p>Minafy, motori ynë i auditimit, i mati të {S.SITES} faqet e internetit në "
+                f"një raund të vetëm më 1 dhe 2 nëntor. Çdo shifër këtu është një numërim nga "
+                f"ato {S.SITES}, ose nga faqet që një kontroll mundi t'i lexonte, dhe "
+                f"<a href=\"{S.CSV_URL}\">fleta llogaritëse</a> i mban të gjitha.</p>",
+            ]),
+            ("Te email-i ngecin pothuajse të gjithë", [
+                "<p>Autentikimi i email-it janë 3 regjistrime në cilësimet e domenit, SPF, DKIM "
+                "dhe DMARC, me të cilat serveri që merr postën kontrollon se një mesazh me "
+                "adresën e biznesit vjen vërtet prej tij. Pa to, kushdo mund të dërgojë email "
+                "që duket si i biznesit.</p>",
+                f"<p>{S.n('Email authentication', 'full')} faqe interneti nga "
+                f"{S.n('Email authentication', 'assessed')} e ka të plotë: një regjistrim SPF, "
+                "DMARC të vendosur në quarantine ose reject e jo vetëm në monitorim, dhe një "
+                f"çelës DKIM nëse kontrolli gjeti një. {S.n('Email authentication', 'partial')} "
+                f"kanë një pjesë dhe {S.n('Email authentication', 'zero')} nuk kanë asnjë nga "
+                "të 3-t.</p>",
+            ]),
+            ("HTTPS-ja është pothuajse kudo dhe header-at e sigurisë jo", [
+                f"<p>{S.n('Valid TLS certificate', 'full')} faqe interneti nga "
+                f"{S.n('Valid TLS certificate', 'assessed')} kanë certifikatë HTTPS të vlefshme "
+                f"dhe {S.n('Valid TLS certificate', 'zero')} nuk përdorin fare HTTPS. Nga "
+                f"{S.n('HTTP→HTTPS redirect', 'assessed')} ku mundëm ta provonim, "
+                f"{S.n('HTTP→HTTPS redirect', 'full')} e çojnë te https:// atë që shkruan "
+                "http://.</p>",
+                "<p>Header-at e sigurisë janë udhëzime që serveri dërgon me çdo faqe, për t'i "
+                "thënë shfletuesit çfarë mund të ngarkojë dhe kur të refuzojë. Minafy kërkon 6 "
+                f"prej tyre: {S.n('Security headers', 'full')} faqe interneti nga "
+                f"{S.n('Security headers', 'assessed')} i dërgojnë të 6-t dhe "
+                f"{S.n('Security headers', 'zero')} asnjë.</p>",
+            ]),
+            ("Pikët në telefon janë një matje e vetme", [
+                "<p>Lighthouse, mjeti i Google, i jep një faqeje pikë nga 0 në 100 në një "
+                f"telefon të simuluar. {S.n('Mobile performance', 'lighthouse_0_49')} faqe "
+                f"interneti morën nga 0 në 49, {S.n('Mobile performance', 'lighthouse_50_89')} "
+                f"nga 50 në 89 dhe {S.n('Mobile performance', 'lighthouse_90_100')} nga 90 në "
+                f"100. Për {S.n('Mobile performance', 'lighthouse_not_assessed')} nuk ktheu "
+                "pikë.</p>",
+                "<p>Është një matje laboratori për faqe interneti, dhe pikët ndryshojnë nga një "
+                "matje te tjetra, prandaj brezat thonë më shumë se një numër i vetëm.</p>",
+                S.bands("Pikët e Lighthouse në një telefon të simuluar, një matje për faqe "
+                        "interneti",
+                        ["Pikët", "Faqe interneti"],
+                        ["nga 0 në 49", "nga 50 në 89", "nga 90 në 100", "Pa pikë"]),
+                "<p>Google publikon shpejtësinë e matur te vizitorët realë vetëm për faqet që "
+                "kanë mjaftueshëm prej tyre. Këto të dhëna i kishte për "
+                f"{S.n('Core Web Vitals (field)', 'assessed')} nga {S.SITES}, dhe "
+                f"{S.n('Core Web Vitals (field)', 'full')} prej tyre ishin të shpejta në çdo "
+                "matje.</p>",
+            ]),
+            ("Shumica kanë bazat dhe pak i kanë të gjitha", [
+                f"<p>{S.n('Title coverage', 'full')} faqe interneti kanë titull në çdo faqe që "
+                f"lexuam, dhe {S.n('Unique titles', 'full')} nuk kanë 2 faqe me të njëjtin "
+                "titull. Meta description, rreshti nën titull në rezultatet e kërkimit, është "
+                f"në çdo faqe të {S.n('Meta descriptions', 'full')} faqeve të internetit dhe "
+                f"në asnjë faqe të {S.n('Meta descriptions', 'zero')} të tjerave.</p>",
+                "<p>Teksti alternativ, që i përshkruan një figurë atij që nuk e sheh, është në "
+                f"çdo figurë të {S.n('Image alt text', 'full')} faqeve të internetit. Në 4 "
+                f"faqet që ngarkoi kontrolli i aksesueshmërisë, "
+                f"{S.n('Accessibility violations', 'assessed') - S.n('Accessibility violations', 'full')} "
+                f"faqe interneti nga {S.n('Accessibility violations', 'assessed')} kishin të paktën "
+                "një problem të rëndësisë mesatare ose më të madhe.</p>",
+            ]),
+            ("Çfarë lexojnë motorët e kërkimit dhe asistentët", [
+                f"<p>{S.n('Structured data', 'full')} nga {S.SITES} kanë të dhëna të "
+                "strukturuara, kod që u thotë motorëve të kërkimit dhe asistentëve AI se "
+                f"çfarë është një faqe. Nga {S.n('Business entity schema', 'assessed')} ku "
+                f"mund të lexoheshin, {S.n('Business entity schema', 'full')} përshkruajnë "
+                "vetë biznesin.</p>",
+                f"<p>{S.n('sameAs entity links', 'full')} faqe interneti i lidh këto të dhëna me "
+                "4 ose më shumë profile të saj diku tjetër, lidhjet që i tregojnë një makine "
+                "cili profil në Google dhe cilat faqe sociale janë i njëjti biznes. "
+                f"{S.n('sameAs entity links', 'zero')} nuk lidhin asnjë.</p>",
+                f"<p>{S.n('Prices in crawlable HTML', 'full')} faqe interneti shfaqin një çmim "
+                "me simbolin e monedhës në 6.000 karakteret e para të tekstit të një faqeje, "
+                f"aty ku lexon kontrolli. Asnjë nga {S.n('AI crawler access', 'assessed')} "
+                "faqet e internetit nuk përjashton në robots.txt GPTBot, ClaudeBot, "
+                "PerplexityBot ose 3 crawler-at e tjerë që përmend kontrolli.</p>",
+            ]),
+            ("Çdo numërim hyn në një tabelë", [
+                S.table(f"{len(S.PUBLISHED) - 1} kontrolle në {S.SITES} faqe interneti: sa e "
+                        "kaluan secilin kontroll plotësisht, pjesërisht ose aspak, dhe për sa "
+                        "nuk mori lexim.",
+                        ["Kontrolli", "Plotësisht", "Pjesërisht", "Aspak", "Pa vlerësuar"], [
+                    ("Siguria dhe email-i", [
+                        ("Valid TLS certificate", "Certifikatë HTTPS e vlefshme"),
+                        ("HTTP→HTTPS redirect", "http:// kalon te https://"),
+                        ("Security headers", "Të 6 header-at e sigurisë"),
+                        ("Email authentication", "Autentikim i plotë i email-it"),
+                    ]),
+                    ("Shpejtësia", [
+                        ("Desktop performance", "Shpejtësia në kompjuter: 100 nga 100"),
+                        ("Core Web Vitals (field)",
+                         "Shpejtësia te vizitorët realë: gjithçka e shpejtë"),
+                        ("Compression", "Faqja kryesore dërgohet e ngjeshur"),
+                    ]),
+                    ("Çdo faqe", [
+                        ("Title coverage", "Titull në çdo faqe"),
+                        ("Unique titles", "Asnjë titull i përsëritur"),
+                        ("Meta descriptions", "Meta description në çdo faqe"),
+                        ("H1 coverage", "Titull H1 në çdo faqe"),
+                        ("Image alt text", "Tekst alternativ në çdo figurë"),
+                        ("Content depth", "Asnjë faqe nën 300 fjalë"),
+                        ("Broken links", "Asnjë lidhje e prishur"),
+                        ("Mobile viewport meta", "Etiketë viewport në çdo faqe"),
+                        ("Accessibility violations",
+                         "Asnjë problem aksesueshmërie përtej të lehtit"),
+                    ]),
+                    ("Çfarë lexojnë makinat", [
+                        ("Structured data", "Të dhëna të strukturuara të çdo lloji"),
+                        ("Business entity schema", "Të dhëna Organization ose LocalBusiness"),
+                        ("LocalBusiness schema", "Të dhëna LocalBusiness"),
+                        ("Required properties", "LocalBusiness: emri, adresa, URL"),
+                        ("Recommended properties", "LocalBusiness: të 6 të rekomanduarat"),
+                        ("sameAs entity links", "4 ose më shumë lidhje sameAs"),
+                        ("Prices in crawlable HTML", "Çmim me simbolin e monedhës"),
+                        ("City mentioned", "Qyteti i përmendur në faqe"),
+                        ("AI crawler access", "Asnjë crawler AI i përjashtuar nga robots.txt"),
+                    ]),
+                ]),
+                "<p>Versioni i Minafy që u përdor, rubrika 8 në commit-in 56cc3f9, 3 lexime "
+                "bosh i vlerësoi me 0, dhe tabela i numëron ato faqe si të pavlerësuara. "
+                "Kështu 3 numërime ndryshojnë nga ato të Minafy: vuri "
+                f"{S.n('Mobile performance', 'minafy_lighthouse_0_49')} faqe interneti në "
+                f"brezin më të ulët në telefon, {S.n('Desktop performance', 'minafy_zero')} në "
+                f"zero për shpejtësinë në kompjuter dhe {S.n('HTTP→HTTPS redirect', 'minafy_zero')} "
+                f"pa ridrejtim. Një nga {S.n('Image alt text', 'zero')} faqet pa tekst "
+                "alternativ nuk kishte figura në faqet e lexuara, dhe Minafy e numëron si "
+                "0.</p>",
+            ]),
+            ("Si u morën numrat", [
+                "<p>Për çdo faqe interneti, Minafy ngarkoi deri në 12 faqe në një shfletues "
+                "kompjuteri, me 0,8 sekonda midis tyre, pastaj 6 në madhësi telefoni për pamjet "
+                "dhe 4 për kontrollin e aksesueshmërisë. Robots.txt, i lexuar si rregullat për "
+                "të gjithë crawler-at, vendosi cilat 12 faqe të lexonte. Për 2 faqe interneti, "
+                "crawler-i lexoi vetëm faqen kryesore.</p>",
+                "<p>Kontrolloi gjithashtu deri në 150 lidhje të brendshme dhe 30 të jashtme për "
+                "faqe interneti, duke kërkuar vetëm header-at aty ku mundi, dhe bëri disa "
+                "kërkesa të veçanta: faqen kryesore, robots.txt, sitemap-in, llms.txt, "
+                "header-at dhe adresën http://. Këto nuk e konsultuan robots.txt. Çdo kërkesë "
+                "mbante një user agent të Chrome që mbaron me Minafy-study dhe adresën "
+                "tonë, dhe Lighthouse i Google ngarkoi çdo faqe kryesore 2 herë për pikët e "
+                "shpejtësisë.</p>",
+                "<p>Çdo kontroll i jep një faqeje interneti të gjitha pikët, një pjesë ose "
+                "asnjë, dhe tabela numëron faqet në secilin rast. Një kontroll që nuk mori "
+                "lexim llogaritet si i pavlerësuar, kurrë si dështim. 6 header-at e sigurisë "
+                "janë Strict-Transport-Security, Content-Security-Policy, X-Frame-Options, "
+                "X-Content-Type-Options, Referrer-Policy dhe Permissions-Policy.</p>",
+                "<p>Studimi nuk jep shifra për qytet ose për profesion: me 8 ose 9 faqe "
+                "interneti për qytet dhe 6 ose 7 për profesion, grupet janë shumë të vogla për "
+                f"t'u krahasuar. Nga {S.CSV_ROWS} leximet në fletën llogaritëse, "
+                f"{S.counted('ai-judged')} janë gjykim i një modeli, "
+                f"{S.counted('retired-tactic')} janë taktika që nuk i trajtojmë më si leva, "
+                f"{S.counted('search-visibility')} varen nga rezultatet e kërkimit të ditës dhe "
+                f"{S.counted('instrument-not-valid-here')} mjeti nuk i lexon mirë në faqet "
+                "italiane, prandaj asnjë prej tyre nuk botohet si shifër.</p>",
+            ]),
+        ],
+        "payoff": "Na dërgo adresën dhe të themi cilat nga këto kontrolle i kalon faqja jote, "
+                  "me të njëjtat terma.",
+        "related": [("/seo/", "SEO dhe kërkim lokal"), ("/audit/", "Një auditim falas")],
     },
 ]
 
