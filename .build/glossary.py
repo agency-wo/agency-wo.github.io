@@ -133,9 +133,9 @@ IDENTICAL_BY_DESIGN = {
     # why chrome_it.py and chrome_sq.py each reversed a documented decision to
     # get here. Without this, check 35 fails 3 correct files.
     "Blog",
-    # The directory's name, in the footer trust line on every page. A company
-    # name, like Iglisi Watch and ProAffy above it.
-    "TechBehemoths",
+    # The directories' names, in the footer trust line on every page. Company
+    # names, like Iglisi Watch and ProAffy above them.
+    "TechBehemoths", "GoodFirms",
     # Two sources the taxi post links by name: Albania's statistics office and
     # a transfer company. Proper names, the same in every language.
     "INSTAT", "JamTransfer",

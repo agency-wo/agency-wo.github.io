@@ -333,7 +333,7 @@ PAGES = [
 
             ("p", "Nuk ke pse të na besosh në fjalë. {brand} është i "
                   "listuar në" + NL +
-                  "{listings}, që e mban dikush tjetër, dhe një "
+                  "{listings}, që i mban dikush tjetër, dhe një "
                   "profil që nuk e" + NL +
                   "kontrollojmë vlen më shumë se një stemë që e "
                   "vizatuam vetë."),

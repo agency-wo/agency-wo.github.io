@@ -147,6 +147,10 @@ SAMEAS = [
     # about ourselves. Verified before it shipped -- 200, and the page's own
     # title is "minarank studio Company Profile - TechBehemoths".
     "https://techbehemoths.com/company/mina-rank-studio",
+    # The same kind of third-party profile. Out of GoodFirms' review queue by
+    # 2026-11-17 (the extension read the public page); checked again 2026-11-22:
+    # 200, and the page's own title is "minarank studio Reviews & Services".
+    "https://www.goodfirms.co/company/minarank-studio",
 ]
 
 # The directories the site SHOWS, footer and hero form both. A separate list
@@ -154,12 +158,11 @@ SAMEAS = [
 # identity, this is a visible trust line, and the day one of them earns a place
 # in one list but not the other, sharing the list would force the wrong call.
 #
-# Only listings that are LIVE AND VERIFIED go here (rule 21). The GoodFirms
-# profile exists but is still in their review queue and has no public URL:
-# paste it in the day it goes live, and nothing else needs touching.
+# Only listings that are LIVE AND VERIFIED go here (rule 21). GoodFirms left
+# its review queue by 2026-11-17 and was checked live on 2026-11-22.
 DIRECTORIES = [
     ("TechBehemoths", "https://techbehemoths.com/company/mina-rank-studio"),
-    # ("GoodFirms", "https://www.goodfirms.co/company/..."),
+    ("GoodFirms", "https://www.goodfirms.co/company/minarank-studio"),
 ]
 
 # The Google review link, minted by Google when GBP verification completed and
@@ -1040,7 +1043,7 @@ def trust_line(lang):
     return f"{ch(lang).LISTED_ON} {directory_links()}"
 
 
-def directory_links():
+def directory_links(last=None):
     """The directory links WITHOUT the label in front of them.
 
     Split out so a sentence somewhere else can wrap its own words around the
@@ -1048,10 +1051,17 @@ def directory_links():
     the point of the split is that the address still lives in DIRECTORIES and
     nowhere else. A URL retyped into a copy file is a URL that goes stale in
     one language and not the other two.
+
+    `last` is the word that joins the final pair inside a sentence ("and" in the
+    page's language), so 2 directories read "TechBehemoths and GoodFirms" in
+    prose. Without it the links are a comma list, which is right for the footer's
+    trust line. Added 2026-11-22 when GoodFirms made the list two long.
     """
-    return ", ".join(
-        f'<a href="{u}" target="_blank" rel="noopener">{n}</a>'
-        for n, u in DIRECTORIES)
+    links = [f'<a href="{u}" target="_blank" rel="noopener">{n}</a>'
+             for n, u in DIRECTORIES]
+    if last and len(links) > 1:
+        return ", ".join(links[:-1]) + f" {last} " + links[-1]
+    return ", ".join(links)
 
 
 def main_block(body):

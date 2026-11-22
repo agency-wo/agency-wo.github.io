@@ -137,8 +137,14 @@ def tokens(lang):
         # noun and is the same word in all 3 languages, which is the case the
         # docstring above describes; the sentence around it is copy and each
         # translation writes its own. The address stays in shell.DIRECTORIES.
-        "{listings}": shell.directory_links(),
+        # The last pair is joined by the language's "and" (LIST_AND below).
+        "{listings}": shell.directory_links(LIST_AND[lang]),
     }
+
+
+# The word that joins the last two directories inside the /studio/ sentence.
+# Grammar, not copy: the sentences around {listings} stay in docs*.py.
+LIST_AND = {"en": "and", "it": "e", "sq": "dhe"}
 
 
 def fill(s, lang):
