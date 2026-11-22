@@ -106,12 +106,17 @@ TRADES = [
 PAGE = {
     # The brand comes first in this one title, because it is the only page
     # whose job is to say whose site this is.
-    # 34 characters, 52 once the brand is prefixed. "digital presence" is not a
+    # 41 characters, 59 once the brand is prefixed. "digital presence" is not a
     # phrase anybody types and earned no query at all in the three months to
-    # 2026-10-23. The agency term is deliberately broader than /web-design/,
-    # which now owns "web designer in Durres": two pages chasing one query is
-    # how both lose it.
-    "title": "digital agency in Durres and Tirana",
+    # 2026-10-23, so it became "digital agency in Durres and Tirana", meant to
+    # leave "web designer in Durres" to /web-design/. Google did not follow:
+    # Search Console for 21 Aug to 20 Nov 2026 (read 2026-11-22) shows the HOME
+    # for "web designer in durres", 61 times at 4.1, and "website designer in
+    # durres", 33 at 1.0, with no click on either, while /web-design/ showed once
+    # at 15. /web-design/ is now "Web design in Albania and Italy", so the home
+    # takes the words Google already ranks it for, after the brand, and no other
+    # title opens with them.
+    "title": "web designer in Durres, SEO and AI search",
     "description": "Right now, somebody nearby is searching for what you sell. "
                    "We make sure they find you on Google, on the map, and in what "
                    "ChatGPT says. Durres, Albania.",

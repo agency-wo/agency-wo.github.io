@@ -125,13 +125,14 @@ TRADES = [
 ]
 
 PAGE = {
-    "src": "1b6c4759",
+    "src": "048ea086",
 
-    # 38 characters against the 52 the title budget leaves once gen_home.py has
-    # put "minarank studio ·" in front of it. The old string claimed 39 here and
-    # was 49, so it rendered at 67 and was cut. Mirrors the English, and adds
-    # Tirana, where "faqe interneti tirane" is the biggest Albanian query.
-    "title": "agjenci dixhitale në Durrës dhe Tiranë",
+    # 43 characters against the 52 the title budget leaves once gen_home.py has
+    # put "minarank studio ·" in front of it. Follows the English (2026-11-22:
+    # the words people search, after the brand) in this market's words: "faqe
+    # interneti tirane" (58 times shown) and "dizajn faqe interneti" (25) are
+    # the Albanian queries in Search Console's top 10, and Tirana stays.
+    "title": "faqe interneti dhe SEO në Durrës dhe Tiranë",
     "description": "Pikërisht tani, dikush pranë teje kërkon atë që "
                    "shet. Sigurohemi që të të gjejnë në Google, "
                    "në hartë dhe në ChatGPT. Durrës, Shqipëri.",
